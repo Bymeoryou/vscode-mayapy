@@ -1,6 +1,6 @@
 def addMetadata(q=1,cn="string",cht="string",idt="string",scn=1,stn="string",str="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/addMetadata.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/addMetadata.html
 
 
 
@@ -120,7 +120,7 @@ str   : structure       [string]
 
 def applyMetadata(fmt="string",scn=1,v="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/applyMetadata.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/applyMetadata.html
 
 
 
@@ -183,7 +183,7 @@ v     : value           [string]
 
 def blindDataType(dt="string",ldn="string",ln=1,query=1,sdn="string",sn=1,id="int",tn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/blindDataType.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/blindDataType.html
 
 
 
@@ -262,7 +262,7 @@ tn    : typeNames       [boolean]
 
 def dataStructure(q=1,af="string",asString="string",dt=1,fmt="string",lmn="string",n="string",rem=1,ral=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dataStructure.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dataStructure.html
 
 
 
@@ -381,7 +381,7 @@ ral   : removeAll       [boolean]
 
 def editMetadata(mn="string",rem=1,sv="string",v="float",cn="string",cht="string",eix="string",idx="string",idt="string",scn=1,six="string",stn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/editMetadata.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/editMetadata.html
 
 
 
@@ -521,7 +521,7 @@ stn   : streamName      [string]
 
 def geomToBBox(ba=1,cm=1,et="time",ko=1,n="string",ns="string",sb="time",sc="[float, float, float]",s=1,st="time"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/geomToBBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/geomToBBox.html
 
 
 
@@ -600,7 +600,7 @@ st    : startTime       [time]
 
 def getMetadata(dt=1,lcn=1,lmn=1,lsn=1,mn="string",cn="string",cht="string",eix="string",idx="string",idt="string",scn=1,six="string",stn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getMetadata.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getMetadata.html
 
 
 
@@ -741,7 +741,7 @@ stn   : streamName      [string]
 
 def hasMetadata(al=1,id=1,mn="string",cn="string",cht="string",eix="string",idx="string",idt="string",scn=1,six="string",stn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hasMetadata.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hasMetadata.html
 
 
 
@@ -850,7 +850,7 @@ stn   : streamName      [string]
 
 def manipOptions(q=1,esd=1,ese=1,fr=1,hs="float",hmc=1,hms=1,hsc=1,lp="float",ls="float",mm=1,pro="int",pho="int",ps="float",psh=1,rm="int",r=1,rah=1,rhs=1,s="float",ses=1,spr=1,sph=1,sdt="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/manipOptions.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/manipOptions.html
 
 
 
@@ -995,7 +995,7 @@ sdt   : smartDuplicateType [int]
 
 def manipPivot(q=1,mto="int",o="[float, float, float]",ov=1,pin=1,p="[float, float, float]",pv=1,r=1,ro=1,rp=1,rto="int",sto="int",so=1,sp=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/manipPivot.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/manipPivot.html
 
 
 
@@ -1095,7 +1095,7 @@ v     : valid           [boolean]
 
 def polyAppend(q=1,e=1,a="[[, float, float, float, ]]",ch=1,ed="int",hl=1,n="string",p="[float, float, float]",s="int",tx="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyAppend.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyAppend.html
 
 
 
@@ -1167,7 +1167,7 @@ tx    : texture         [int]
 
 def polyAppendVertex(q=1,e=1,a="[[, float, float, float, ]]",ch=1,h=1,n="string",p="[float, float, float]",tx="int",v="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyAppendVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyAppendVertex.html
 
 
 
@@ -1236,7 +1236,7 @@ v     : vertex          [int]
 
 def polyAutoProjection(q=1,e=1,lm="int",pvt="[linear, linear, linear]",pvx="linear",pvy="linear",pvz="linear",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",s="[float, float, float]",sx="float",sy="float",sz="float",t="[linear, linear, linear]",tx="linear",ty="linear",tz="linear",cch=1,ch=1,cm=1,ibd=1,l="int",n="string",nds="int",o="int",ps="float",p="int",pb=1,sc="int",si=1,uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyAutoProjection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyAutoProjection.html
 
 
 
@@ -1427,7 +1427,7 @@ ws    : worldSpace      [boolean]
 
 def polyAverageNormal(azn=1,d="float",pon=1,prn=1,xyz="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyAverageNormal.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyAverageNormal.html
 
 
 
@@ -1488,7 +1488,7 @@ xyz   : replaceNormalXYZ [[float, float, float]]
 
 def polyAverageVertex(q=1,e=1,cch=1,ch=1,i="int",n="string",nds="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyAverageVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyAverageVertex.html
 
 
 
@@ -1549,7 +1549,7 @@ ws    : worldSpace      [boolean]
 
 def polyBevel(q=1,e=1,at="float",af=1,cch=1,ch=1,mvt="linear",mv=1,ma="float",n="string",nds="int",o="linear",oaf=1,r="float",sg="int",sa="float",sn=1,com=1,ua="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyBevel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyBevel.html
 
 
 
@@ -1669,7 +1669,7 @@ ws    : worldSpace      [boolean]
 
 def polyBevel3(q=1,e=1,at="float",af=1,cch=1,c=1,ch=1,d="float",fn=1,mvt="linear",mv=1,mia="int",m="int",ma="float",n="string",nds="int",o="linear",oaf=1,r="float",sg="int",sa="float",ua="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyBevel3.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyBevel3.html
 
 
 
@@ -1804,7 +1804,7 @@ ws    : worldSpace      [boolean]
 
 def polyBlendColor(q=1,e=1,bcn="string",bfn="int",bwa="float",bwb="float",bwc="float",bwd="float",cch=1,ch=1,dst="string",n="string",nds="int",src="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyBlendColor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyBlendColor.html
 
 
 
@@ -1895,7 +1895,7 @@ src   : srcColorName    [string]
 
 def polyBlindData(e=1,at="string",bnd="string",bd=1,delete=1,dbd="float",lid="int64",ind="int",ldn="string",res=1,rst=1,sh=1,sdn="string",sd="string",id="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyBlindData.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyBlindData.html
 
 
 
@@ -2005,7 +2005,7 @@ id    : typeId          [int]
 
 def polyBoolOp(q=1,e=1,fat="linear",op="int",pcr=1,uth=1,vdt="linear",cch=1,muv="int",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyBoolOp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyBoolOp.html
 
 
 
@@ -2080,7 +2080,7 @@ nds   : nodeState       [int]
 
 def polyBridgeEdge(q=1,e=1,bo="int",cch=1,ch=1,ctp="int",dv="int",inc="name",n="string",nds="int",sma="angle",sv1="int",sv2="int",tp="float",cfv="float",ci="int",cp="float",twt="angle",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyBridgeEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyBridgeEdge.html
 
 
 
@@ -2195,7 +2195,7 @@ ws    : worldSpace      [boolean]
 
 def polyCacheMonitor(chv=1,nm="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCacheMonitor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCacheMonitor.html
 
 
 
@@ -2235,7 +2235,7 @@ nm    : nodeName        [string]
 
 def polyCanBridgeEdge():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCanBridgeEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCanBridgeEdge.html
 
 
 
@@ -2256,7 +2256,7 @@ boolean  Success or Failure.
 
 def polyCBoolOp(q=1,e=1,cls="int",fat="linear",op="int",pcr=1,ucb=1,uth=1,vdt="linear",cch=1,muv="int",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCBoolOp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCBoolOp.html
 
 
 
@@ -2341,7 +2341,7 @@ nds   : nodeState       [int]
 
 def polyCheck(edge=1,f=1,fo=1,of="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCheck.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCheck.html
 
 
 
@@ -2393,7 +2393,7 @@ of    : openFile        [string]
 
 def polyChipOff(q=1,e=1,att="float",cch=1,ch=1,dup=1,ga="float",g="[linear, linear, linear]",gx="linear",gy="linear",gz="linear",kft=1,xft=1,lc="int",ld="[linear, linear, linear]",ldx="linear",ldy="linear",ldz="linear",lr="[angle, angle, angle]",lrx="angle",lry="angle",lrz="angle",ls="[float, float, float]",lsx="float",lsy="float",lsz="float",lt="[linear, linear, linear]",ltx="linear",lty="linear",ltz="linear",mx="linear",my="linear",mz="linear",m="[linear, linear, linear]",n="string",nds="int",off="float",pvt="[linear, linear, linear]",pvx="linear",pvy="linear",pvz="linear",ran="float",s="[float, float, float]",sx="float",sy="float",sz="float",t="[linear, linear, linear]",tx="linear",ty="linear",tz="linear",w="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyChipOff.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyChipOff.html
 
 
 
@@ -2674,7 +2674,7 @@ ws    : worldSpace      [boolean]
 
 def polyCircularize(q=1,e=1,al="int",cch=1,ch=1,cc=1,ed=1,inc="name",n="string",nds="int",nor="int",ro="float",sa="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCircularize.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCircularize.html
 
 
 
@@ -2764,7 +2764,7 @@ ws    : worldSpace      [boolean]
 
 def polyCircularizeEdge(q=1,e=1,al="int",cch=1,ch=1,cc=1,ed=1,inc="name",n="string",nds="int",nor="int",ro="float",sa="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCircularizeEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCircularizeEdge.html
 
 
 
@@ -2854,7 +2854,7 @@ ws    : worldSpace      [boolean]
 
 def polyCircularizeFace(q=1,e=1,al="int",cch=1,ch=1,cc=1,ed=1,inc="name",n="string",nds="int",nor="int",ro="float",sa="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCircularizeFace.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCircularizeFace.html
 
 
 
@@ -2944,7 +2944,7 @@ ws    : worldSpace      [boolean]
 
 def polyClean(q=1,e=1,cch=1,ce=1,cpm=1,cuv=1,cv=1,ch=1,fzn=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyClean.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyClean.html
 
 
 
@@ -3020,7 +3020,7 @@ nds   : nodeState       [int]
 
 def polyClipboard(cl=1,clr=1,cp=1,ps=1,sh=1,uv=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyClipboard.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyClipboard.html
 
 
 
@@ -3089,7 +3089,7 @@ uv    : uvCoordinates   [boolean]
 
 def polyCloseBorder(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCloseBorder.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCloseBorder.html
 
 
 
@@ -3140,7 +3140,7 @@ nds   : nodeState       [int]
 
 def polyCollapseEdge(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCollapseEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCollapseEdge.html
 
 
 
@@ -3190,7 +3190,7 @@ nds   : nodeState       [int]
 
 def polyCollapseFacet(q=1,e=1,at="float",cch=1,ch=1,n="string",nds="int",uat=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCollapseFacet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCollapseFacet.html
 
 
 
@@ -3250,7 +3250,7 @@ uat   : useAreaThreshold [boolean]
 
 def polyCollapseTweaks(q=1,hvt=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCollapseTweaks.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCollapseTweaks.html
 
 
 
@@ -3292,7 +3292,7 @@ hvt   : hasVertexTweaks [boolean]
 
 def polyColorBlindData(amb="float",amg="float",amr="float",n="string",bmb="float",bmg="float",bmr="float",ccb="float",ccg="float",ccr="float",cb="float",cg="float",cr="float",dt="string",efc=1,mxb="float",mxg="float",mxr="float",mxv="float",mnb="float",mng="float",mnr="float",mnv="float",m="int",ncb="float",ncg="float",ncr="float",num="int",queryMode=1,id="int",umx=1,umn=1,v="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyColorBlindData.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyColorBlindData.html
 
 
 
@@ -3493,7 +3493,7 @@ v     : value           [string]
 
 def polyColorDel(q=1,e=1,cch=1,cls="string",ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyColorDel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyColorDel.html
 
 
 
@@ -3548,7 +3548,7 @@ nds   : nodeState       [int]
 
 def polyColorMod(q=1,e=1,afv="float",ai="int",ap="float",bcn="string",bfv="float",bi="int",bp="float",cch=1,ch=1,gfv="float",gi="int",gp="float",h="float",nfv="float",ni="int",np="float",n="string",nds="int",rfv="float",ri="int",rp="float",s="float",v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyColorMod.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyColorMod.html
 
 
 
@@ -3693,7 +3693,7 @@ v     : value           [float]
 
 def polyColorPerVertex(q=1,e=1,a="float",cla=1,b="float",cdo=1,g="float",r="float",rgb="[float, float, float]",nun=1,rel=1,rem=1,rpt="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyColorPerVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyColorPerVertex.html
 
 
 
@@ -3780,7 +3780,7 @@ rpt   : representation  [int]
 
 def polyColorSet(q=1,e=1,acs=1,cla=1,cs="string",cp=1,cr=1,ccs=1,cpi=1,d=1,nc="string",pi=1,rn=1,rpt="string",si=1,us=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyColorSet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyColorSet.html
 
 
 
@@ -3886,7 +3886,7 @@ us    : unshared        [boolean]
 
 def polyCompare(ic=1,c=1,edges=1,fd=1,un=1,iuv=1,uv=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCompare.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCompare.html
 
 
 
@@ -3972,7 +3972,7 @@ v     : vertices        [boolean]
 
 def polyCone(q=1,e=1,ax="[linear, linear, linear]",cch=1,ch=1,cuv="int",h="linear",n="string",nds="int",o=1,r="linear",rcp=1,sa="int",sc="int",sh="int",sx="int",sy="int",sz="int",tx=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCone.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCone.html
 
 
 
@@ -4087,7 +4087,7 @@ tx    : texture         [boolean]
 
 def polyConnectComponents(q=1,e=1,aef="float",cch=1,ch=1,ief=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyConnectComponents.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyConnectComponents.html
 
 
 
@@ -4156,7 +4156,7 @@ nds   : nodeState       [int]
 
 def polyContourProjection(q=1,e=1,cch=1,ch=1,cm=1,fr=1,ibd=1,m="int",n="string",nds="int",o0="linear",o1="linear",o2="linear",o3="linear",rs="float",s0="float",s1="float",s2="float",s3="float",udc=1,uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyContourProjection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyContourProjection.html
 
 
 
@@ -4286,7 +4286,7 @@ ws    : worldSpace      [boolean]
 
 def polyCopyUV(q=1,e=1,cch=1,ch=1,cm=1,n="string",nds="int",uvs="string",uvi="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCopyUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCopyUV.html
 
 
 
@@ -4356,7 +4356,7 @@ ws    : worldSpace      [boolean]
 
 def polyCrease(q=1,e=1,ch=1,op="uint",rv="float",v="float",vv="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCrease.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCrease.html
 
 
 
@@ -4412,7 +4412,7 @@ vv    : vertexValue     [float]
 
 def polyCreateFacet(q=1,e=1,ch=1,hl=1,n="string",p="[[, float, float, float, ]]",s="int",tx="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCreateFacet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCreateFacet.html
 
 
 
@@ -4473,7 +4473,7 @@ tx    : texture         [int]
 
 def polyCube(q=1,e=1,ax="[linear, linear, linear]",cch=1,ch=1,cuv="int",d="linear",h="linear",n="string",nds="int",o=1,sd="int",sh="int",sw="int",sx="int",sy="int",sz="int",tx="int",w="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCube.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCube.html
 
 
 
@@ -4588,7 +4588,7 @@ w     : width           [linear]
 
 def polyCut(q=1,e=1,cch=1,ch=1,pc="[linear, linear, linear]",pcx="linear",pcy="linear",pcz="linear",ph="linear",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",ps="[linear, linear]",pw="linear",cd="string",df=1,ef=1,eo="[linear, linear, linear]",eox="linear",eoy="linear",eoz="linear",n="string",nds="int",oo=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCut.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCut.html
 
 
 
@@ -4742,7 +4742,7 @@ ws    : worldSpace      [boolean]
 
 def polyCylinder(q=1,e=1,ax="[linear, linear, linear]",cch=1,ch=1,cuv="int",h="linear",n="string",nds="int",o=1,r="linear",rcp=1,sa="int",sc="int",sh="int",sx="int",sy="int",sz="int",tx="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCylinder.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCylinder.html
 
 
 
@@ -4857,7 +4857,7 @@ tx    : texture         [int]
 
 def polyCylindricalProjection(q=1,e=1,cch=1,ch=1,cm=1,ic="[float, float]",icx="float",icy="float",imageScale="[float, float]",isu="float",isv="float",ibd=1,kir=1,md="string",n="string",nds="int",pi=1,pc="[linear, linear, linear]",pcx="linear",pcy="linear",pcz="linear",ph="linear",phs="linear",ps="[linear, linear]",psu="linear",psv="linear",r="linear",ra="angle",sc=1,sf=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyCylindricalProjection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyCylindricalProjection.html
 
 
 
@@ -5033,7 +5033,7 @@ ws    : worldSpace      [boolean]
 
 def polyDelEdge(q=1,e=1,cch=1,cv=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyDelEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyDelEdge.html
 
 
 
@@ -5090,7 +5090,7 @@ nds   : nodeState       [int]
 
 def polyDelFacet(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyDelFacet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyDelFacet.html
 
 
 
@@ -5142,7 +5142,7 @@ nds   : nodeState       [int]
 
 def polyDelVertex(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyDelVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyDelVertex.html
 
 
 
@@ -5193,7 +5193,7 @@ nds   : nodeState       [int]
 
 def polyDuplicateAndConnect(ros=1,rc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyDuplicateAndConnect.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyDuplicateAndConnect.html
 
 
 
@@ -5237,7 +5237,7 @@ rc    : renameChildren  [boolean]
 
 def polyDuplicateEdge(q=1,e=1,aef="float",de=1,evo="float",ief=1,of="float",sma="angle",stp="int",svo="float",cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyDuplicateEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyDuplicateEdge.html
 
 
 
@@ -5327,7 +5327,7 @@ nds   : nodeState       [int]
 
 def polyEditEdgeFlow(q=1,e=1,aef="float",cch=1,ch=1,ef=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyEditEdgeFlow.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyEditEdgeFlow.html
 
 
 
@@ -5387,7 +5387,7 @@ nds   : nodeState       [int]
 
 def polyEditUV(q=1,a="float",pu="float",pv="float",r=1,rr="float",rot=1,s=1,su="float",sv="float",u="float",uvs="string",v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyEditUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyEditUV.html
 
 
 
@@ -5478,7 +5478,7 @@ v     : vValue          [float]
 
 def polyEditUVShell(q=1,a="float",pu="float",pv="float",r=1,rr="float",rot=1,s=1,su="float",sv="float",u="float",uvs="string",v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyEditUVShell.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyEditUVShell.html
 
 
 
@@ -5569,7 +5569,7 @@ v     : vValue          [float]
 
 def polyEvaluate(ae=1,activeShells=1,aus=1,a=1,b=1,b2=1,bc=1,bc2=1,ds=1,edge=1,ec=1,f=1,fa=1,fc=1,fmt=1,s=1,t=1,tc=1,uva=1,uvc=1,uep=1,ufa=1,uvs="string",us=1,usi=1,uv=1,uis="int",v=1,vc=1,wa=1,wfa=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyEvaluate.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyEvaluate.html
 
 
 
@@ -5770,7 +5770,7 @@ wfa   : worldFaceArea   [boolean]
 
 def polyExtrudeEdge(q=1,e=1,cch=1,ch=1,cc=1,d="int",ga="float",inc="name",kft=1,lc="int",ld="[linear, linear, linear]",ldx="linear",ldy="linear",ldz="linear",lr="[angle, angle, angle]",lrx="angle",lry="angle",lrz="angle",ls="[float, float, float]",lsx="float",lsy="float",lsz="float",lt="[linear, linear, linear]",ltx="linear",lty="linear",ltz="linear",n="string",nds="int",off="float",pvt="[linear, linear, linear]",pvx="linear",pvy="linear",pvz="linear",ran="float",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",s="[float, float, float]",sx="float",sy="float",sz="float",sma="angle",tp="float",cfv="float",ci="int",cp="float",tk="float",t="[linear, linear, linear]",tx="linear",ty="linear",tz="linear",twt="angle",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyExtrudeEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyExtrudeEdge.html
 
 
 
@@ -6060,7 +6060,7 @@ ws    : worldSpace      [boolean]
 
 def polyExtrudeFacet(q=1,e=1,att="float",cch=1,ch=1,cc=1,d="int",ga="float",g="[linear, linear, linear]",gx="linear",gy="linear",gz="linear",inc="name",kft=1,xft=1,lc="int",ld="[linear, linear, linear]",ldx="linear",ldy="linear",ldz="linear",lr="[angle, angle, angle]",lrx="angle",lry="angle",lrz="angle",ls="[float, float, float]",lsx="float",lsy="float",lsz="float",lt="[linear, linear, linear]",ltx="linear",lty="linear",ltz="linear",mx="linear",my="linear",mz="linear",m="[linear, linear, linear]",n="string",nds="int",off="float",pvt="[linear, linear, linear]",pvx="linear",pvy="linear",pvz="linear",ran="float",raf=1,ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",s="[float, float, float]",sx="float",sy="float",sz="float",sma="angle",tp="float",cfv="float",ci="int",cp="float",tk="float",t="[linear, linear, linear]",tx="linear",ty="linear",tz="linear",twt="angle",w="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyExtrudeFacet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyExtrudeFacet.html
 
 
 
@@ -6411,7 +6411,7 @@ ws    : worldSpace      [boolean]
 
 def polyExtrudeVertex(q=1,e=1,cch=1,ch=1,d="int",l="float",n="string",nds="int",w="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyExtrudeVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyExtrudeVertex.html
 
 
 
@@ -6481,7 +6481,7 @@ ws    : worldSpace      [boolean]
 
 def polyFlipEdge(q=1,e=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyFlipEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyFlipEdge.html
 
 
 
@@ -6506,7 +6506,7 @@ In query mode, return type is based on queried flag.
 
 def polyFlipUV(q=1,e=1,cch=1,ch=1,cm=1,cut=1,ft="int",ibd=1,l=1,n="string",nds="int",pu="float",pv="float",up=1,uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyFlipUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyFlipUV.html
 
 
 
@@ -6607,7 +6607,7 @@ ws    : worldSpace      [boolean]
 
 def polyForceUV(cp=1,cm=1,fh=1,fv=1,g=1,l=1,nor="string",ni="uint",par=1,uni=1,u=1,uvs="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyForceUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyForceUV.html
 
 
 
@@ -6712,7 +6712,7 @@ uvs   : uvSetName       [string]
 
 def polyGeoSampler(e=1,abl="string",ac=1,amx="float",amn="float",cmx="[float, float, float]",cmn="[float, float, float]",cbl="string",cdo=1,cs=1,dg=1,fs=1,ids=1,lo=1,rs=1,bf=1,sf="float",su=1,ul=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyGeoSampler.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyGeoSampler.html
 
 
 
@@ -6867,7 +6867,7 @@ ul    : useLightShadows [boolean]
 
 def polyHelix(q=1,e=1,cch=1,c="float",ch=1,cuv="int",d="int",h="linear",n="string",nds="int",o=1,r="linear",rcp=1,sa="int",sc="int",sco="int",tx="int",oib=1,w="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyHelix.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyHelix.html
 
 
 
@@ -6982,7 +6982,7 @@ w     : width           [linear]
 
 def polyHole(q=1,e=1,ah=1,ch=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyHole.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyHole.html
 
 
 
@@ -7022,7 +7022,7 @@ ch    : createHistory   [boolean]
 
 def polyInfo(ef=1,ev=1,fn=1,fe=1,fv=1,ie=1,iv=1,lf=1,nme=1,nue=1,nuv=1,nmv=1,ve=1,vf=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyInfo.html
 
 
 
@@ -7122,7 +7122,7 @@ vf    : vertexToFace    [boolean]
 
 def polyInstallAction(q=1,cn=1,cs=1,ic=1,id=1,ki=1,uc=1,ud=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyInstallAction.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyInstallAction.html
 
 
 
@@ -7193,7 +7193,7 @@ ud    : uninstallDisplay [boolean]
 
 def polyLayoutUV(q=1,e=1,cch=1,ch=1,fr=1,l="int",lm="int",n="string",nds="int",ps="float",rbf="int",sc="int",se="int",uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyLayoutUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyLayoutUV.html
 
 
 
@@ -7288,7 +7288,7 @@ ws    : worldSpace      [boolean]
 
 def polyListComponentConversion(bo=1,fe=1,ff=1,fuv=1,fv=1,fvf=1,internal=1,te=1,tf=1,tuv=1,tv=1,tvf=1,uvs=1,vfa=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyListComponentConversion.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyListComponentConversion.html
 
 
 
@@ -7388,7 +7388,7 @@ vfa   : vertexFaceAllEdges [boolean]
 
 def polyMapCut(q=1,e=1,cch=1,ch=1,mvr="float",n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMapCut.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMapCut.html
 
 
 
@@ -7443,7 +7443,7 @@ nds   : nodeState       [int]
 
 def polyMapDel(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMapDel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMapDel.html
 
 
 
@@ -7493,7 +7493,7 @@ nds   : nodeState       [int]
 
 def polyMapSew(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMapSew.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMapSew.html
 
 
 
@@ -7543,7 +7543,7 @@ nds   : nodeState       [int]
 
 def polyMapSewMove(q=1,e=1,cch=1,ch=1,lps=1,n="string",nds="int",nf="int",uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMapSewMove.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMapSewMove.html
 
 
 
@@ -7615,7 +7615,7 @@ ws    : worldSpace      [boolean]
 
 def polyMergeEdge(q=1,e=1,cch=1,ch=1,fe="int",mm="int",mt=1,n="string",nds="int",se="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMergeEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMergeEdge.html
 
 
 
@@ -7691,7 +7691,7 @@ se    : secondEdge      [int]
 
 def polyMergeFacet(q=1,e=1,cch=1,ch=1,ff="int",mm="int",n="string",nds="int",sf="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMergeFacet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMergeFacet.html
 
 
 
@@ -7761,7 +7761,7 @@ sf    : secondFacet     [int]
 
 def polyMergeUV(q=1,e=1,cch=1,ch=1,d="float",n="string",nds="int",uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMergeUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMergeUV.html
 
 
 
@@ -7827,7 +7827,7 @@ ws    : worldSpace      [boolean]
 
 def polyMergeVertex(q=1,e=1,am=1,cch=1,ch=1,d="linear",mtc="string",n="string",nds="int",tx=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMergeVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMergeVertex.html
 
 
 
@@ -7920,7 +7920,7 @@ ws    : worldSpace      [boolean]
 
 def polyMirrorFace(q=1,e=1,a="int",ad="int",cch=1,ch=1,d="int",mm="int",mt="linear",mtt="int",ma="int",mps="linear",n="string",nds="int",p="[linear, linear, linear]",px="linear",py="linear",pz="linear",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMirrorFace.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMirrorFace.html
 
 
 
@@ -8035,7 +8035,7 @@ ws    : worldSpace      [boolean]
 
 def polyMoveEdge(q=1,e=1,cch=1,ch=1,ga="float",lc="int",ld="[linear, linear, linear]",ldx="linear",ldy="linear",ldz="linear",lr="[angle, angle, angle]",lrx="angle",lry="angle",lrz="angle",ls="[float, float, float]",lsx="float",lsy="float",lsz="float",lt="[linear, linear, linear]",ltx="linear",lty="linear",ltz="linear",n="string",nds="int",pvt="[linear, linear, linear]",pvx="linear",pvy="linear",pvz="linear",ran="float",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",s="[float, float, float]",sx="float",sy="float",sz="float",t="[linear, linear, linear]",tx="linear",ty="linear",tz="linear",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMoveEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMoveEdge.html
 
 
 
@@ -8265,7 +8265,7 @@ ws    : worldSpace      [boolean]
 
 def polyMoveFacet(q=1,e=1,att="float",cch=1,ch=1,ga="float",g="[linear, linear, linear]",gx="linear",gy="linear",gz="linear",lc="int",ld="[linear, linear, linear]",ldx="linear",ldy="linear",ldz="linear",lr="[angle, angle, angle]",lrx="angle",lry="angle",lrz="angle",ls="[float, float, float]",lsx="float",lsy="float",lsz="float",lt="[linear, linear, linear]",ltx="linear",lty="linear",ltz="linear",mx="linear",my="linear",mz="linear",m="[linear, linear, linear]",n="string",nds="int",off="float",pvt="[linear, linear, linear]",pvx="linear",pvy="linear",pvz="linear",ran="float",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",s="[float, float, float]",sx="float",sy="float",sz="float",t="[linear, linear, linear]",tx="linear",ty="linear",tz="linear",w="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMoveFacet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMoveFacet.html
 
 
 
@@ -8550,7 +8550,7 @@ ws    : worldSpace      [boolean]
 
 def polyMoveFacetUV(q=1,e=1,l="[float, float]",lx="float",ly="float",cch=1,ch=1,n="string",nds="int",pvt="[float, float]",pvu="float",pvv="float",ran="float",ra="angle",s="[float, float]",su="float",sv="float",t="[float, float]",tu="float",tv="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMoveFacetUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMoveFacetUV.html
 
 
 
@@ -8673,7 +8673,7 @@ tv    : translateV      [float]
 
 def polyMoveUV(q=1,e=1,l="[float, float]",lx="float",ly="float",cch=1,ch=1,n="string",nds="int",pvt="[float, float]",pvu="float",pvv="float",ran="float",ra="angle",s="[float, float]",su="float",sv="float",t="[float, float]",tu="float",tv="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMoveUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMoveUV.html
 
 
 
@@ -8795,7 +8795,7 @@ tv    : translateV      [float]
 
 def polyMoveVertex(q=1,e=1,cch=1,ch=1,ga="float",ld="[linear, linear, linear]",ldx="linear",ldy="linear",ldz="linear",lt="[linear, linear, linear]",ltx="linear",lty="linear",ltz="linear",n="string",nds="int",pvt="[linear, linear, linear]",pvx="linear",pvy="linear",pvz="linear",ran="float",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",s="[float, float, float]",sx="float",sy="float",sz="float",t="[linear, linear, linear]",tx="linear",ty="linear",tz="linear",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMoveVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMoveVertex.html
 
 
 
@@ -8981,7 +8981,7 @@ ws    : worldSpace      [boolean]
 
 def polyMultiLayoutUV(fr=1,gu="int",gv="int",l="int",lm="int",ou="float",ov="float",ps="float",psc="int",rbf="int",sc="int",su="float",sv="float",uvs="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyMultiLayoutUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyMultiLayoutUV.html
 
 
 
@@ -9079,7 +9079,7 @@ uvs   : uvSetName       [string]
 
 def polyNormal(q=1,e=1,cch=1,ch=1,n="string",nds="int",nm="int",unm=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyNormal.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyNormal.html
 
 
 
@@ -9140,7 +9140,7 @@ unm   : userNormalMode  [boolean]
 
 def polyNormalizeUV(q=1,e=1,cot=1,nd="int",nt="int",pa=1,cch=1,ch=1,cm=1,ibd=1,n="string",nds="int",uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyNormalizeUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyNormalizeUV.html
 
 
 
@@ -9231,7 +9231,7 @@ ws    : worldSpace      [boolean]
 
 def polyNormalPerVertex(q=1,e=1,al=1,deformable=1,fn=1,x="float",xyz="[float, float, float]",y="float",z="float",rel=1,ufn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyNormalPerVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyNormalPerVertex.html
 
 
 
@@ -9310,7 +9310,7 @@ ufn   : unFreezeNormal  [boolean]
 
 def polyOptions(q=1,ao=1,ae=1,bcv=1,bc=1,cm="string",cs=1,dal=1,db=1,dc=1,dce=1,dcv=1,dg=1,dif=1,din="[boolean, boolean, boolean, boolean]",dmb=1,dmt="[boolean, boolean, boolean]",dn=1,dsc=1,dtn=1,dt=1,uvt=1,duv=1,dv=1,dw=1,f=1,fb=1,gl=1,hb=1,he=1,hec=1,mb="string",np=1,pt=1,pf=1,r=1,rt=1,sb="float",sn="float",suv="float",sv="float",sdt="int",se=1,vnm="int",wbc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyOptions.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyOptions.html
 
 
 
@@ -9560,7 +9560,7 @@ wbc   : wireBackCulling [boolean]
 
 def polyOptUvs(q=1,e=1,applyToShell=1,aw="float",cch=1,ch=1,gb="float",gmb="float",i="int",n="string",nds="int",oa="int",ps=1,pub=1,s="float",ss="float",us=1,uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyOptUvs.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyOptUvs.html
 
 
 
@@ -9675,7 +9675,7 @@ ws    : worldSpace      [boolean]
 
 def polyOutput(a=1,c=1,cd=1,edge=1,ef=1,f=1,fn=1,fo=1,g=1,no=1,nd=1,of="string",t=1,uvd=1,uv=1,v=1,ve=1,vn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyOutput.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyOutput.html
 
 
 
@@ -9798,7 +9798,7 @@ vn    : vertNorm        [boolean]
 
 def polyPinUV(q=1,e=1,ch=1,op="uint",unp=1,uvs="string",v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPinUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPinUV.html
 
 
 
@@ -9862,7 +9862,7 @@ v     : value           [float]
 
 def polyPipe(q=1,e=1,ax="[linear, linear, linear]",cch=1,ch=1,cuv=1,h="linear",n="string",nds="int",o=1,r="linear",rcp=1,sa="int",sc="int",sh="int",tx=1,t="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPipe.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPipe.html
 
 
 
@@ -9967,7 +9967,7 @@ t     : thickness       [linear]
 
 def polyPlanarProjection(q=1,e=1,phs="linear",sc=1,cch=1,ch=1,cm=1,ic="[float, float]",icx="float",icy="float",imageScale="[float, float]",isu="float",isv="float",ibd=1,kir=1,md="string",n="string",nds="int",pi=1,pc="[linear, linear, linear]",pcx="linear",pcy="linear",pcz="linear",ph="linear",ps="[linear, linear]",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",ra="angle",sf=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPlanarProjection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPlanarProjection.html
 
 
 
@@ -10150,7 +10150,7 @@ ws    : worldSpace      [boolean]
 
 def polyPlane(q=1,e=1,ax="[linear, linear, linear]",cuv="int",h="linear",sh="int",sw="int",sx="int",sy="int",tx="int",w="linear",cch=1,ch=1,n="string",nds="int",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPlane.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPlane.html
 
 
 
@@ -10250,7 +10250,7 @@ o     : object          [boolean]
 
 def polyPlatonicSolid(q=1,e=1,ax="[linear, linear, linear]",cch=1,ch=1,cuv="int",n="string",nds="int",o=1,r="linear",l="linear",st="int",tx="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPlatonicSolid.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPlatonicSolid.html
 
 
 
@@ -10335,7 +10335,7 @@ tx    : texture         [int]
 
 def polyPoke(q=1,e=1,cch=1,ch=1,lt="[linear, linear, linear]",ltx="linear",lty="linear",ltz="linear",n="string",nds="int",t="[linear, linear, linear]",tx="linear",ty="linear",tz="linear",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPoke.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPoke.html
 
 
 
@@ -10431,7 +10431,7 @@ ws    : worldSpace      [boolean]
 
 def polyPrimitive(q=1,e=1,ax="[linear, linear, linear]",cuv="int",pt="int",r="linear",l="linear",tx="int",cch=1,ch=1,n="string",nds="int",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPrimitive.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPrimitive.html
 
 
 
@@ -10516,7 +10516,7 @@ o     : object          [boolean]
 
 def polyPrism(q=1,e=1,ax="[linear, linear, linear]",cch=1,ch=1,cuv="int",l="linear",n="string",nds="int",ns="int",nsi="int",o=1,w="linear",sc="int",sh="int",tx="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPrism.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPrism.html
 
 
 
@@ -10616,7 +10616,7 @@ tx    : texture         [int]
 
 def polyProjectCurve(q=1,e=1,aut=1,cch=1,d="[linear, linear, linear]",dx="linear",dy="linear",dz="linear",nds="int",tol="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyProjectCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyProjectCurve.html
 
 
 
@@ -10689,7 +10689,7 @@ tol   : tolerance       [linear]
 
 def polyProjection(ch=1,cm=1,icx="float",icy="float",isu="float",isv="float",ibd=1,kir=1,md="string",pcx="float",pcy="float",pcz="float",psu="float",psv="float",rx="float",ry="float",rz="float",ra="float",sc=1,sf=1,t="string",uvs="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyProjection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyProjection.html
 
 
 
@@ -10829,7 +10829,7 @@ uvs   : uvSetName       [string]
 
 def polyPyramid(q=1,e=1,ax="[linear, linear, linear]",cch=1,ch=1,cuv="int",n="string",nds="int",ns="int",nsi="int",o=1,w="linear",sc="int",sh="int",tx=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyPyramid.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyPyramid.html
 
 
 
@@ -10924,7 +10924,7 @@ tx    : texture         [boolean]
 
 def polyQuad(q=1,e=1,a="angle",cch=1,ch=1,kgb=1,khe=1,ktb=1,n="string",nds="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyQuad.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyQuad.html
 
 
 
@@ -10999,7 +10999,7 @@ ws    : worldSpace      [boolean]
 
 def polyQueryBlindData(at="string",bnd="string",bd=1,dbd="float",ind="int",ldn="string",max="float",min="float",sdn="string",sc=1,sd="string",ss="string",id="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyQueryBlindData.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyQueryBlindData.html
 
 
 
@@ -11098,7 +11098,7 @@ id    : typeId          [int]
 
 def polyReduce(q=1,e=1,cch=1,cr=1,cwt="float",com="float",ch=1,gwt="float",iwt=1,kb=1,kbw="float",kcb=1,kcw="float",kce=1,cew="float",kfb=1,kfw="float",khe=1,khw="float",kmb=1,kmw="float",kev=1,kqw="float",n="string",nds="int",p="float",pl=1,top=1,rpo=1,shp="float",sw="float",sx="float",sy="float",sz="float",stl="float",trm="int",tct="int",t=1,uvs="int",uwt="float",ver="int",vct="int",vmp="string",vwc="float",wc="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyReduce.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyReduce.html
 
 
 
@@ -11351,7 +11351,7 @@ wc    : weightCoefficient [float]
 
 def polyRemesh(q=1,e=1,cch=1,ch=1,ipt="int",n="string",nds="int",rdt="float",rft="float",smt="float",tsb=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyRemesh.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyRemesh.html
 
 
 
@@ -11428,7 +11428,7 @@ tsb   : tessellateBorders [boolean]
 
 def polyRetopo(q=1,e=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyRetopo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyRetopo.html
 
 
 
@@ -11451,7 +11451,7 @@ In query mode, return type is based on queried flag.
 
 def polyRetopoCtx(q=1,e=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyRetopoCtx.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyRetopoCtx.html
 
 
 
@@ -11474,7 +11474,7 @@ In query mode, return type is based on queried flag.
 
 def polySelect(q=1,add=1,af=1,ass=1,d=1,eb="uint",ebp="[int, int]",bpt="[int, int]",el="uint",elb="uint",lbp="[int, int]",elp="[int, int]",lpt="[int, int]",er="uint",erp="[int, int]",rpt="[int, int]",euv="uint",en="uint",ets="uint",ns=1,r=1,sep="[int, int]",spu="[int, int]",sfp="[int, int]",tgl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySelect.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySelect.html
 
 
 
@@ -11628,7 +11628,7 @@ tgl   : toggle          [boolean]
 
 def polySelectConstraint(q=1,a="int",ap=1,at="float",ab="[angle, angle]",bo=1,bp=1,c="int",cr=1,dis=1,d="int",da="[float, float, float]",db="[float, float]",dp="[float, float, float]",ed="uint",ga="int",gab="[float, float]",h="int",l="int",lb="[float, float]",lp=1,m2a="float",m3a="float",m="int",nm="int",oe=1,order="int",orb="[int, int]",o="int",oa="[float, float, float]",ob="[float, float]",p="int",pp="int",r="int",rr="float",rs=1,rp=1,sh=1,sz="int",sm="int",sts=1,tx="int",ta="int",tab="[float, float]",ts="int",tp="int",t="int",ubs=1,uvc=1,ulp=1,urp=1,ufo="int",uv=1,v="int",va="angle",vp="[float, float, float]",w="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySelectConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySelectConstraint.html
 
 
 
@@ -11943,7 +11943,7 @@ ws    : wholeSensitive  [boolean]
 
 def polySelectConstraintMonitor(cc="[string, string]",c=1,d=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySelectConstraintMonitor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySelectConstraintMonitor.html
 
 
 
@@ -11987,7 +11987,7 @@ d     : delete          [boolean]
 
 def polySeparate(q=1,e=1,cch=1,nds="int",rs=1,sss="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySeparate.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySeparate.html
 
 
 
@@ -12040,7 +12040,7 @@ sss   : separateSpecificShell [int]
 
 def polySetToFaceNormal(su=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySetToFaceNormal.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySetToFaceNormal.html
 
 
 
@@ -12076,7 +12076,7 @@ su    : setUserNormal   [boolean]
 
 def polySewEdge(q=1,e=1,cch=1,ch=1,n="string",nds="int",tx=1,t="linear",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySewEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySewEdge.html
 
 
 
@@ -12151,7 +12151,7 @@ ws    : worldSpace      [boolean]
 
 def polySlideEdge(a=1,d="uint",ed="float",sym=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySlideEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySlideEdge.html
 
 
 
@@ -12200,7 +12200,7 @@ sym   : symmetry        [boolean]
 
 def polySmooth(q=1,e=1,cch=1,ch=1,n="string",nds="int",c="float",deg="int",dv="int",dpe="int",kb=1,khe=1,kmb="int",ksb=1,xkt=1,kt=1,mth="int",ocr="int",ofb="int",ofc=1,ost=1,ovb="int",peh=1,ps="float",ro="float",suv=1,sl="int",sdt="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySmooth.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySmooth.html
 
 
 
@@ -12360,7 +12360,7 @@ sdt   : subdivisionType [int]
 
 def polySoftEdge(q=1,e=1,a="angle",cch=1,ch=1,n="string",nds="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySoftEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySoftEdge.html
 
 
 
@@ -12426,7 +12426,7 @@ ws    : worldSpace      [boolean]
 
 def polySphere(q=1,e=1,ax="[linear, linear, linear]",cuv="int",r="linear",sa="int",sh="int",sx="int",sy="int",tx="int",cch=1,ch=1,n="string",nds="int",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySphere.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySphere.html
 
 
 
@@ -12521,7 +12521,7 @@ o     : object          [boolean]
 
 def polySphericalProjection(q=1,e=1,ic="[float, float]",icx="float",icy="float",imageScale="[float, float]",isu="float",isv="float",pc="[linear, linear, linear]",pcx="linear",pcy="linear",pcz="linear",phs="linear",ps="[linear, linear]",psu="linear",psv="linear",r="linear",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",ra="angle",sc=1,cch=1,ch=1,cm=1,ibd=1,kir=1,md="string",n="string",nds="int",pi=1,sf=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySphericalProjection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySphericalProjection.html
 
 
 
@@ -12712,7 +12712,7 @@ ws    : worldSpace      [boolean]
 
 def polySplit(q=1,e=1,aef="float",de=1,ep="[int, float]",fp="[int, float, float, float]",ief=1,ip="[int, float, [, float, float, ]]",pc="name",pct="float",sma="angle",s="int",ch=1,n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySplit.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySplit.html
 
 
 
@@ -12805,7 +12805,7 @@ n     : name            [string]
 
 def polySplitEdge(q=1,e=1,op="int",cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySplitEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySplitEdge.html
 
 
 
@@ -12874,7 +12874,7 @@ nds   : nodeState       [int]
 
 def polySplitRing(q=1,e=1,aef="float",cch=1,ch=1,dr=1,div="int",epc=1,fq=1,ief=1,n="string",nds="int",pio="float",pis="float",pfv="float",pi="int",pp="float",re="int",sma="angle",stp="int",uem=1,fne=1,wt="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySplitRing.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySplitRing.html
 
 
 
@@ -13015,7 +13015,7 @@ ws    : worldSpace      [boolean]
 
 def polySplitVertex(q=1,e=1,cch=1,ch=1,n="string",nds="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySplitVertex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySplitVertex.html
 
 
 
@@ -13103,7 +13103,7 @@ ws    : worldSpace      [boolean]
 
 def polyStraightenUVBorder(q=1,e=1,bo="float",cch=1,ch=1,c="float",gt="int",n="string",nds="int",pl="float",uvs="string",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyStraightenUVBorder.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyStraightenUVBorder.html
 
 
 
@@ -13183,7 +13183,7 @@ ws    : worldSpace      [boolean]
 
 def polySubdivideEdge(q=1,e=1,cch=1,ch=1,dv="int",n="string",nds="int",s="linear",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySubdivideEdge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySubdivideEdge.html
 
 
 
@@ -13251,7 +13251,7 @@ ws    : worldSpace      [boolean]
 
 def polySubdivideFacet(q=1,e=1,dv="int",duv="int",dvv="int",m="int",sbm="int",cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polySubdivideFacet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polySubdivideFacet.html
 
 
 
@@ -13336,7 +13336,7 @@ nds   : nodeState       [int]
 
 def polyTorus(q=1,e=1,ax="[linear, linear, linear]",cch=1,ch=1,cuv=1,n="string",nds="int",o=1,r="linear",sr="linear",sa="int",sh="int",sx="int",sy="int",tx=1,tw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyTorus.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyTorus.html
 
 
 
@@ -13441,7 +13441,7 @@ tw    : twist           [angle]
 
 def polyTransfer(q=1,e=1,ao="string",cch=1,ch=1,n="string",nds="int",uv=1,vc=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyTransfer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyTransfer.html
 
 
 
@@ -13514,7 +13514,7 @@ v     : vertices        [boolean]
 
 def polyTriangulate(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyTriangulate.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyTriangulate.html
 
 
 
@@ -13565,7 +13565,7 @@ nds   : nodeState       [int]
 
 def polyUnite(q=1,e=1,cch=1,muv="int",nds="int",cp=1,op=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyUnite.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyUnite.html
 
 
 
@@ -13622,7 +13622,7 @@ op    : objectPivot     [boolean]
 
 def polyUVCoverage(ur="[float, float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyUVCoverage.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyUVCoverage.html
 
 
 
@@ -13657,7 +13657,7 @@ ur    : uvRange         [[float, float, float, float]]
 
 def polyUVOverlap(noc=1,oc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyUVOverlap.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyUVOverlap.html
 
 
 
@@ -13697,7 +13697,7 @@ oc    : overlappingComponents [boolean]
 
 def polyUVRectangle(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyUVRectangle.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyUVRectangle.html
 
 
 
@@ -13752,7 +13752,7 @@ nds   : nodeState       [int]
 
 def polyUVSet(q=1,e=1,auv=1,uvn=1,awc=1,cp=1,cr=1,luv=1,cpi=1,cuv=1,d=1,gen=1,nuv="string",pi=1,pr=1,rn=1,ro=1,si=1,us=1,uvs="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyUVSet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyUVSet.html
 
 
 
@@ -13878,7 +13878,7 @@ uvs   : uvSet           [string]
 
 def polyUVStackSimilarShells(om=1,to="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyUVStackSimilarShells.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyUVStackSimilarShells.html
 
 
 
@@ -13916,7 +13916,7 @@ to    : tolerance       [float]
 
 def polyWedgeFace(q=1,e=1,ax="[float, float, float]",cch=1,cen="[float, float, float]",ch=1,d="int",ed="int",n="string",nds="int",wa="angle",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyWedgeFace.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyWedgeFace.html
 
 
 
@@ -13999,7 +13999,7 @@ ws    : worldSpace      [boolean]
 
 def setXformManip(q=1,su=1,s=1,urp=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setXformManip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setXformManip.html
 
 
 
@@ -14050,7 +14050,7 @@ ws    : worldSpace      [boolean]
 
 def showMetadata(q=1,a=1,dt="string",i=1,ia=1,las=1,lm=1,lvm=1,lvs=1,mb="string",m="string",off=1,r="[float, float]",rs="float",s="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/showMetadata.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/showMetadata.html
 
 
 
@@ -14178,7 +14178,7 @@ s     : stream          [string]
 
 def transferAttributes(q=1,e=1,af=1,ar=1,bf=1,clb="uint",dt=1,ex="string",fuv="uint",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,mch="uint",n="string",par=1,pr=1,rm=1,spa="uint",sm="uint",ssx="float",ssy="float",ssz="float",scs="string",suv="string",sus="string",sp=1,tcs="string",tuv="string",tus="string",col="uint",nml="uint",pos="uint",uvs="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/transferAttributes.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/transferAttributes.html
 
 
 
@@ -14374,7 +14374,7 @@ uvs   : transferUVs     [uint]
 
 def transferShadingSets(q=1,e=1,spa="uint",sm="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/transferShadingSets.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/transferShadingSets.html
 
 
 
@@ -14415,7 +14415,7 @@ sm    : searchMethod    [uint]
 
 def unfold(applyToShell=1,aw="float",gb="float",gmb="float",i="int",oa="int",ps=1,pub=1,s="float",ss="float",us=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/unfold.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/unfold.html
 
 
 
@@ -14498,7 +14498,7 @@ us    : useScale        [boolean]
 
 def untangleUV(mb="string",mri="int",pb=1,ps=1,pu=1,r="string",rt="float",sd="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/untangleUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/untangleUV.html
 
 
 
@@ -14573,7 +14573,7 @@ sd    : shapeDetail     [float]
 
 def uvSnapshot(aa=1,b="int",euv=1,ff="string",g="int",n="string",o=1,r="int",umx="float",umn="float",uvs="string",vmx="float",vmn="float",xr="int",yr="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/uvSnapshot.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/uvSnapshot.html
 
 
 
@@ -14676,7 +14676,7 @@ yr    : yResolution     [int]
 
 def alignSurface(q=1,e=1,cch=1,cc=1,cs1="float",cs2="float",du=1,jnp="float",nds="int",pc=1,pct="int",rv1=1,rv2=1,sw1=1,sw2=1,tc=1,tct="int",ts1="float",ts2="float",tw=1,at=1,ch=1,kmk=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/alignSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/alignSurface.html
 
 
 
@@ -14843,7 +14843,7 @@ rpo   : replaceOriginal [boolean]
 
 def angleBetween(cch=1,ch=1,er=1,nds="int",v1="[linear, linear, linear]",v1x="linear",v1y="linear",v1z="linear",v2="[linear, linear, linear]",v2x="linear",v2y="linear",v2z="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/angleBetween.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/angleBetween.html
 
 
 
@@ -14934,7 +14934,7 @@ v2z   : vector2Z        [linear]
 
 def arubaNurbsToPoly(q=1,e=1,cch=1,ch=1,ls=1,n="string",nds="int",o=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/arubaNurbsToPoly.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/arubaNurbsToPoly.html
 
 
 
@@ -15001,7 +15001,7 @@ ws    : worldSpace      [boolean]
 
 def attachSurface(q=1,e=1,bb="float",bki=1,cch=1,du=1,kmk=1,m="int",nds="int",p="float",rv1=1,rv2=1,sw1=1,sw2=1,tw=1,ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attachSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attachSurface.html
 
 
 
@@ -15125,7 +15125,7 @@ rpo   : replaceOriginal [boolean]
 
 def bevel(q=1,e=1,bst="int",cch=1,ct="int",d="linear",ed="linear",nds="int",tol="linear",w="linear",ch=1,js=1,n="string",ns="int",o=1,po="int",rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bevel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bevel.html
 
 
 
@@ -15231,7 +15231,7 @@ rn    : range           [boolean]
 
 def bevelPlus(q=1,e=1,bin=1,cap="int",ch=1,innerStyle="int",js=1,n="string",no=1,ns="int",os="int",po="int",rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bevelPlus.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bevelPlus.html
 
 
 
@@ -15319,7 +15319,7 @@ rn    : range           [boolean]
 
 def bezierAnchorPreset(p="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bezierAnchorPreset.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bezierAnchorPreset.html
 
 
 
@@ -15352,7 +15352,7 @@ p     : preset          [int]
 
 def bezierAnchorState(ev=1,sm=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bezierAnchorState.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bezierAnchorState.html
 
 
 
@@ -15393,7 +15393,7 @@ sm    : smooth          [boolean]
 
 def bezierCurveToNurbs():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bezierCurveToNurbs.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bezierCurveToNurbs.html
 
 
 
@@ -15415,7 +15415,7 @@ string[]  (object name and node name)
 
 def bezierInfo(afc="int",cfa="int",ias=1,its=1,oas=1,ots=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bezierInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bezierInfo.html
 
 
 
@@ -15473,7 +15473,7 @@ ots   : onlyTangentsSelected [boolean]
 
 def blend2(q=1,e=1,aa=1,an=1,cch=1,fln=1,frn=1,la="float",le="float",ls="float",mk=1,nds="int",pt="float",rvl=1,rvr=1,ra="float",re="float",rs="float",tt="float",ch=1,cfr="int",n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/blend2.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/blend2.html
 
 
 
@@ -15614,7 +15614,7 @@ po    : polygon         [int]
 
 def boundary(q=1,e=1,cch=1,ep=1,ept="linear",nds="int",order=1,ch=1,n="string",o=1,po="int",rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/boundary.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/boundary.html
 
 
 
@@ -15703,7 +15703,7 @@ rn    : range           [boolean]
 
 def canCreateManip():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/canCreateManip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/canCreateManip.html
 
 
 
@@ -15725,7 +15725,7 @@ boolean  Command result
 
 def circularFillet(q=1,e=1,cch=1,nds="int",pt="float",pr="linear",sr="linear",tt="float",ch=1,cos=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/circularFillet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/circularFillet.html
 
 
 
@@ -15807,7 +15807,7 @@ o     : object          [boolean]
 
 def closeSurface(q=1,e=1,bb="float",bki=1,cch=1,d="int",nds="int",p="float",ps="int",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/closeSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/closeSurface.html
 
 
 
@@ -15902,7 +15902,7 @@ rpo   : replaceOriginal [boolean]
 
 def cone(q=1,e=1,ax="[linear, linear, linear]",cch=1,d="int",esw="angle",hr="float",nds="int",p="[linear, linear, linear]",r="linear",s="int",nsp="int",ssw="angle",tol="linear",oib=1,ut=1,ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cone.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cone.html
 
 
 
@@ -16023,7 +16023,7 @@ po    : polygon         [int]
 
 def constructionHistory(q=1,tgl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/constructionHistory.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/constructionHistory.html
 
 
 
@@ -16058,7 +16058,7 @@ tgl   : toggle          [boolean]
 
 def cylinder(q=1,e=1,ax="[linear, linear, linear]",cch=1,d="int",esw="angle",hr="float",nds="int",p="[linear, linear, linear]",r="linear",s="int",nsp="int",ssw="angle",tol="linear",ut=1,ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cylinder.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cylinder.html
 
 
 
@@ -16174,7 +16174,7 @@ po    : polygon         [int]
 
 def detachSurface(q=1,e=1,cch=1,d="int",k=1,nds="int",p="float",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/detachSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/detachSurface.html
 
 
 
@@ -16263,7 +16263,7 @@ rpo   : replaceOriginal [boolean]
 
 def doubleProfileBirailSurface(q=1,e=1,bl="float",cch=1,nds="int",tp1=1,tp2=1,tm="int",ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/doubleProfileBirailSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/doubleProfileBirailSurface.html
 
 
 
@@ -16353,7 +16353,7 @@ po    : polygon         [int]
 
 def duplicateSurface(q=1,e=1,cch=1,ch=1,fcu="int",fcv="int",ffu="int",ffv="int",l=1,mi=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/duplicateSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/duplicateSurface.html
 
 
 
@@ -16434,7 +16434,7 @@ nds   : nodeState       [int]
 
 def extendSurface(q=1,e=1,cch=1,d="linear",ed="int",em="int",es="int",et="int",jn=1,nds="int",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/extendSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/extendSurface.html
 
 
 
@@ -16524,7 +16524,7 @@ rpo   : replaceOriginal [boolean]
 
 def extrude(q=1,e=1,cch=1,dl="int",d="[linear, linear, linear]",dx="linear",dy="linear",dz="linear",et="int",fpt=1,l="linear",nds="int",p="[linear, linear, linear]",rsp=1,ro="angle",sc="float",scs=1,ucp="int",upn=1,ch=1,mi=1,n="string",o=1,po="int",rn=1,rb=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/extrude.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/extrude.html
 
 
 
@@ -16682,7 +16682,7 @@ rb    : rebuild         [boolean]
 
 def filterExpand(ex=1,fp=1,sm="int",sma=1,smn=1,smp=1,sms=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/filterExpand.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/filterExpand.html
 
 
 
@@ -16784,7 +16784,7 @@ sms   : symSeam         [boolean]
 
 def freeFormFillet(q=1,e=1,b="float",cch=1,d="float",nds="int",pt="float",tt="float",ch=1,n="string",o=1,po="int",rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/freeFormFillet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/freeFormFillet.html
 
 
 
@@ -16874,7 +16874,7 @@ rn    : range           [boolean]
 
 def globalStitch(q=1,e=1,cch=1,lk=1,ms="linear",mr="float",nds="int",sam="int",sc="int",se="int",spe=1,ss="int",ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/globalStitch.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/globalStitch.html
 
 
 
@@ -16970,7 +16970,7 @@ o     : object          [boolean]
 
 def grid(q=1,df=1,da=1,dab=1,ddl=1,dgl=1,dol=1,dpl=1,d="uint",olp="string",plp="string",r=1,s="linear",sp="linear",st="uint",tgl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/grid.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/grid.html
 
 
 
@@ -17079,7 +17079,7 @@ tgl   : toggle          [boolean]
 
 def insertKnotSurface(q=1,e=1,add=1,cch=1,d="int",ib=1,nds="int",nk="int",p="float",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/insertKnotSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/insertKnotSurface.html
 
 
 
@@ -17184,7 +17184,7 @@ rpo   : replaceOriginal [boolean]
 
 def intersect(q=1,e=1,cch=1,fs=1,nds="int",tol="linear",ch=1,cos=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/intersect.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/intersect.html
 
 
 
@@ -17258,7 +17258,7 @@ o     : object          [boolean]
 
 def loft(q=1,e=1,ar=1,cch=1,c=1,cc=1,d="int",nds="int",r=1,rsn=1,ss="int",u=1,ch=1,n="string",o=1,po="int",rn=1,rb=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/loft.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/loft.html
 
 
 
@@ -17370,7 +17370,7 @@ rb    : rebuild         [boolean]
 
 def makeSingleSurface(q=1,e=1,cch=1,ch=1,n="string",nds="int",o=1,st="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/makeSingleSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/makeSingleSurface.html
 
 
 
@@ -17430,7 +17430,7 @@ st    : stitchTolerance [float]
 
 def moveVertexAlongDirection(d="[float, float, float]",m="linear",n="linear",u="linear",uvn="[linear, linear, linear]",v="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/moveVertexAlongDirection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/moveVertexAlongDirection.html
 
 
 
@@ -17493,7 +17493,7 @@ v     : vDirection      [linear]
 
 def multiProfileBirailSurface(q=1,e=1,cch=1,nds="int",tp1=1,tp2=1,tm="int",ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/multiProfileBirailSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/multiProfileBirailSurface.html
 
 
 
@@ -17579,7 +17579,7 @@ po    : polygon         [int]
 
 def nurbsBoolean(q=1,e=1,cch=1,nds="int",op="int",tlb="linear",ch=1,n="string",nsf="int",o=1,sc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsBoolean.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsBoolean.html
 
 
 
@@ -17654,7 +17654,7 @@ sc    : smartConnection [boolean]
 
 def nurbsCopyUVSet(q=1,e=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsCopyUVSet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsCopyUVSet.html
 
 
 
@@ -17679,7 +17679,7 @@ In query mode, return type is based on queried flag.
 
 def nurbsCube(q=1,e=1,ax="[linear, linear, linear]",cch=1,d="int",hr="float",lr="float",nds="int",u="int",v="int",p="[linear, linear, linear]",w="linear",ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsCube.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsCube.html
 
 
 
@@ -17780,7 +17780,7 @@ po    : polygon         [int]
 
 def nurbsCurveToBezier():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsCurveToBezier.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsCurveToBezier.html
 
 
 
@@ -17802,7 +17802,7 @@ string[]  (object name and node name)
 
 def nurbsEditUV(q=1,a="float",pu="float",pv="float",r=1,rr="float",rot=1,s=1,su="float",sv="float",u="float",v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsEditUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsEditUV.html
 
 
 
@@ -17888,7 +17888,7 @@ v     : vValue          [float]
 
 def nurbsPlane(q=1,e=1,ax="[linear, linear, linear]",cch=1,d="int",lr="float",nds="int",u="int",v="int",p="[linear, linear, linear]",w="linear",ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsPlane.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsPlane.html
 
 
 
@@ -17984,7 +17984,7 @@ po    : polygon         [int]
 
 def nurbsSelect(bs=1,bb=1,gs="int",lb=1,rb=1,ss="int",tb=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsSelect.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsSelect.html
 
 
 
@@ -18054,7 +18054,7 @@ tb    : topBorder       [boolean]
 
 def nurbsToPoly(q=1,e=1,cch=1,ch=1,cvt="int",eta=1,n="string",nds="int",o=1,ues=1,esr="float",nuf="float",nvf="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsToPoly.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsToPoly.html
 
 
 
@@ -18141,7 +18141,7 @@ nvf   : vDivisionsFactor [float]
 
 def nurbsToPolygonsPref(q=1,cht="float",chr="float",d="float",es=1,f="uint",ft="float",mrt="uint",m="uint",mt="float",mel="float",pc="uint",pt="uint",un="uint",ut="uint",uch=1,ucr=1,vn="uint",vt="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsToPolygonsPref.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsToPolygonsPref.html
 
 
 
@@ -18265,7 +18265,7 @@ vt    : vType           [uint]
 
 def nurbsUVSet(q=1,e=1,c=1,ue=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsUVSet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsUVSet.html
 
 
 
@@ -18313,7 +18313,7 @@ ue    : useExplicit     [boolean]
 
 def offsetSurface(q=1,e=1,cch=1,d="linear",m="int",nds="int",ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/offsetSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/offsetSurface.html
 
 
 
@@ -18383,7 +18383,7 @@ o     : object          [boolean]
 
 def planarSrf(q=1,e=1,cch=1,d="int",ko=1,nds="int",tol="linear",ch=1,n="string",o=1,po="int",rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/planarSrf.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/planarSrf.html
 
 
 
@@ -18464,7 +18464,7 @@ rn    : range           [boolean]
 
 def plane(l="linear",n="string",p="[linear, linear, linear]",r="[angle, angle, angle]",s="linear",w="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/plane.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/plane.html
 
 
 
@@ -18525,7 +18525,7 @@ w     : width           [linear]
 
 def pointOnSurface(q=1,e=1,cch=1,ch=1,nds="int",no=1,nn=1,ntu=1,ntv=1,u="float",v="float",p=1,tu=1,tv=1,top=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pointOnSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pointOnSurface.html
 
 
 
@@ -18623,7 +18623,7 @@ top   : turnOnPercentage [boolean]
 
 def pointPosition(l=1,w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pointPosition.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pointPosition.html
 
 
 
@@ -18668,7 +18668,7 @@ w     : world           [boolean]
 
 def projectCurve(q=1,e=1,cch=1,d="[linear, linear, linear]",dx="linear",dy="linear",dz="linear",nds="int",tol="linear",un=1,ch=1,n="string",o=1,rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/projectCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/projectCurve.html
 
 
 
@@ -18762,7 +18762,7 @@ rn    : range           [boolean]
 
 def propMove(p="float",px="float",py="float",pz="float",pi="[float, float, float]",r="[angle, angle, angle]",s="[float, float, float]",t="[linear, linear, linear]",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/propMove.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/propMove.html
 
 
 
@@ -18839,7 +18839,7 @@ ws    : worldSpace      [boolean]
 
 def rebuildSurface(q=1,e=1,cch=1,du="int",dv="int",dir="int",end="int",fr="int",kcp=1,kc=1,kr="int",nds="int",rt="int",su="int",sv="int",tol="linear",ch=1,n="string",o=1,po="int",rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rebuildSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rebuildSurface.html
 
 
 
@@ -18969,7 +18969,7 @@ rpo   : replaceOriginal [boolean]
 
 def reverseSurface(q=1,e=1,cch=1,d="int",nds="int",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/reverseSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/reverseSurface.html
 
 
 
@@ -19042,7 +19042,7 @@ rpo   : replaceOriginal [boolean]
 
 def revolve(q=1,e=1,acn=1,ax="[linear, linear, linear]",aco="int",axx="linear",axy="linear",axz="linear",br=1,cch=1,cpa="int",d="int",esw="angle",nds="int",p="[linear, linear, linear]",px="linear",py="linear",pz="linear",r="linear",ra="float",s="int",ssw="angle",tol="linear",ut=1,ch=1,n="string",o=1,po="int",rn=1,rb=1,ulp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/revolve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/revolve.html
 
 
 
@@ -19219,7 +19219,7 @@ ulp   : useLocalPivot   [boolean]
 
 def roundConstantRadius(q=1,e=1,a=1,ch=1,n="string",o=1,rad="linear",s="[string, int]",sa="int",sb="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/roundConstantRadius.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/roundConstantRadius.html
 
 
 
@@ -19312,7 +19312,7 @@ sb    : sideb           [int]
 
 def singleProfileBirailSurface(q=1,e=1,cch=1,nds="int",tp1=1,tm="int",ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/singleProfileBirailSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/singleProfileBirailSurface.html
 
 
 
@@ -19389,7 +19389,7 @@ po    : polygon         [int]
 
 def smoothTangentSurface(q=1,e=1,cch=1,d="int",nds="int",p="float",s="int",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/smoothTangentSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/smoothTangentSurface.html
 
 
 
@@ -19486,7 +19486,7 @@ rpo   : replaceOriginal [boolean]
 
 def sphere(q=1,e=1,ax="[linear, linear, linear]",cch=1,d="int",esw="angle",hr="float",nds="int",p="[linear, linear, linear]",r="linear",s="int",nsp="int",ssw="angle",tol="linear",ut=1,ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sphere.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sphere.html
 
 
 
@@ -19604,7 +19604,7 @@ po    : polygon         [int]
 
 def squareSurface(q=1,e=1,cch=1,ct1="int",ct2="int",ct3="int",ct4="int",cfc="int",ept="linear",nds="int",rc1=1,rc2=1,rc3=1,rc4=1,ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/squareSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/squareSurface.html
 
 
 
@@ -19721,7 +19721,7 @@ po    : polygon         [int]
 
 def stitchSurface(q=1,e=1,b="float",cch=1,ci="int",cj="int",fb=1,nds="int",u="float",v="float",pc=1,sc="int",tc=1,tpn=1,tpp=1,tt=1,tol="linear",c=1,ch=1,kg0=1,kg1=1,n="string",ns="int",o=1,rpo=1,wt0="float",wt1="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/stitchSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/stitchSurface.html
 
 
 
@@ -19881,7 +19881,7 @@ wt1   : weight1         [float]
 
 def stitchSurfacePoints(q=1,e=1,b="float",cch=1,ci="int",cj="int",fb=1,nds="int",u="float",v="float",pc=1,sc="int",tc=1,tpn=1,tpp=1,tt=1,tol="linear",c=1,ch=1,ewt=1,kg0=1,kg1=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/stitchSurfacePoints.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/stitchSurfacePoints.html
 
 
 
@@ -20032,7 +20032,7 @@ rpo   : replaceOriginal [boolean]
 
 def surface(du="int",dv="int",fu="string",fv="string",ku="float",kv="float",n="string",ob=1,p="[linear, linear, linear]",pw="[linear, linear, linear, linear]",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/surface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/surface.html
 
 
 
@@ -20118,7 +20118,7 @@ ws    : worldSpace      [boolean]
 
 def tolerance(q=1,a="angle",l="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/tolerance.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/tolerance.html
 
 
 
@@ -20161,7 +20161,7 @@ l     : linear          [linear]
 
 def torus(q=1,e=1,ax="[linear, linear, linear]",cch=1,d="int",esw="angle",hr="float",msw="angle",nds="int",p="[linear, linear, linear]",r="linear",s="int",nsp="int",ssw="angle",tol="linear",ut=1,ch=1,n="string",o=1,po="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/torus.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/torus.html
 
 
 
@@ -20282,7 +20282,7 @@ po    : polygon         [int]
 
 def trim(q=1,e=1,cch=1,lu="float",lv="float",nds="int",sl="int",sh=1,tol="linear",ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/trim.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/trim.html
 
 
 
@@ -20363,7 +20363,7 @@ o     : object          [boolean]
 
 def untrim(q=1,e=1,cch=1,nds="int",ch=1,cos=1,n="string",nc=1,o=1,rpo=1,all=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/untrim.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/untrim.html
 
 
 
@@ -20438,7 +20438,7 @@ all   : untrimAll       [boolean]
 
 def alignCurve(q=1,e=1,cch=1,cc=1,cs1="float",cs2="float",jnp="float",nds="int",pc=1,pct="int",rv1=1,rv2=1,tc=1,tct="int",ts1="float",ts2="float",at=1,ch=1,kmk=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/alignCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/alignCurve.html
 
 
 
@@ -20583,7 +20583,7 @@ rpo   : replaceOriginal [boolean]
 
 def arclen(q=1,e=1,cch=1,ch=1,nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/arclen.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/arclen.html
 
 
 
@@ -20632,7 +20632,7 @@ nds   : nodeState       [int]
 
 def arcLengthDimension():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/arcLengthDimension.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/arcLengthDimension.html
 
 
 
@@ -20654,7 +20654,7 @@ string  Name of the arcLengthDimension node created
 
 def attachCurve(q=1,e=1,bb="float",bki=1,cch=1,kmk=1,m="int",nds="int",p="float",rv1=1,rv2=1,ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attachCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attachCurve.html
 
 
 
@@ -20759,7 +20759,7 @@ rpo   : replaceOriginal [boolean]
 
 def circle(q=1,e=1,cch=1,c="[linear, linear, linear]",cx="linear",cy="linear",cz="linear",d="int",fp="[linear, linear, linear]",fpx="linear",fpy="linear",fpz="linear",fc=1,nds="int",nr="[linear, linear, linear]",nrx="linear",nry="linear",nrz="linear",r="linear",s="int",sw="angle",tol="linear",ut=1,ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/circle.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/circle.html
 
 
 
@@ -20909,7 +20909,7 @@ o     : object          [boolean]
 
 def closeCurve(q=1,e=1,bb="float",bki=1,cch=1,nds="int",p="float",ps="int",ch=1,cos=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/closeCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/closeCurve.html
 
 
 
@@ -20997,7 +20997,7 @@ rpo   : replaceOriginal [boolean]
 
 def curve(a=1,bez=1,d="float",ep="[linear, linear, linear]",k="float",n="string",os=1,per=1,p="[linear, linear, linear]",pw="[linear, linear, linear, float]",r=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/curve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/curve.html
 
 
 
@@ -21096,7 +21096,7 @@ ws    : worldSpace      [boolean]
 
 def curveIntersect(q=1,e=1,cch=1,ch=1,d="[linear, linear, linear]",dx="linear",dy="linear",dz="linear",nds="int",tol="linear",ud=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/curveIntersect.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/curveIntersect.html
 
 
 
@@ -21176,7 +21176,7 @@ ud    : useDirection    [boolean]
 
 def curveOnSurface(a=1,d="float",k="float",n="string",per=1,uv="[float, float]",r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/curveOnSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/curveOnSurface.html
 
 
 
@@ -21258,7 +21258,7 @@ r     : replace         [boolean]
 
 def detachCurve(q=1,e=1,cch=1,k=1,nds="int",p="float",ch=1,cos=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/detachCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/detachCurve.html
 
 
 
@@ -21344,7 +21344,7 @@ rpo   : replaceOriginal [boolean]
 
 def duplicateCurve(q=1,e=1,cch=1,ch=1,l=1,max="float",mi=1,min="float",n="string",nds="int",rn=1,r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/duplicateCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/duplicateCurve.html
 
 
 
@@ -21426,7 +21426,7 @@ r     : relative        [boolean]
 
 def extendCurve(q=1,e=1,cch=1,d="linear",em="int",et="int",ip="[linear, linear, linear]",jn=1,nds="int",px="linear",py="linear",pz="linear",rmk=1,s="int",ch=1,cos=1,n="string",nc=1,o=1,rn=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/extendCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/extendCurve.html
 
 
 
@@ -21551,7 +21551,7 @@ rpo   : replaceOriginal [boolean]
 
 def filletCurve(q=1,e=1,b="linear",bc=1,cch=1,cir=1,cp1="float",cp2="float",d="linear",fb=1,nds="int",r="linear",ch=1,jn=1,n="string",o=1,rpo=1,t=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/filletCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/filletCurve.html
 
 
 
@@ -21664,7 +21664,7 @@ t     : trim            [boolean]
 
 def fitBspline(q=1,e=1,cch=1,nds="int",tol="linear",ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fitBspline.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fitBspline.html
 
 
 
@@ -21725,7 +21725,7 @@ o     : object          [boolean]
 
 def hardenPointCurve(q=1,e=1,cch=1,m="int",nds="int",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hardenPointCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hardenPointCurve.html
 
 
 
@@ -21801,7 +21801,7 @@ rpo   : replaceOriginal [boolean]
 
 def illustratorCurves(q=1,e=1,cch=1,ch=1,ifn="string",nds="int",o=1,tl="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/illustratorCurves.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/illustratorCurves.html
 
 
 
@@ -21862,7 +21862,7 @@ tl    : tolerance       [float]
 
 def insertKnotCurve(q=1,e=1,add=1,cch=1,ib=1,nds="int",nk="int",p="float",ch=1,cos=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/insertKnotCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/insertKnotCurve.html
 
 
 
@@ -21960,7 +21960,7 @@ rpo   : replaceOriginal [boolean]
 
 def nurbsSquare(q=1,e=1,cch=1,c="[linear, linear, linear]",cx="linear",cy="linear",cz="linear",d="int",nds="int",nr="[linear, linear, linear]",nrx="linear",nry="linear",nrz="linear",sl1="linear",sl2="linear",sps="int",ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsSquare.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsSquare.html
 
 
 
@@ -22075,7 +22075,7 @@ o     : object          [boolean]
 
 def offsetCurve(q=1,e=1,cch=1,cb="int",cl=1,cr="linear",d="linear",nds="int",nr="[linear, linear, linear]",rp=1,st=1,sd="int",tol="linear",ugn=1,ch=1,n="string",o=1,rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/offsetCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/offsetCurve.html
 
 
 
@@ -22199,7 +22199,7 @@ rn    : range           [boolean]
 
 def offsetCurveOnSurface(q=1,e=1,cch=1,cp="int",cb="int",cl=1,d="linear",nds="int",st=1,sd="int",tol="linear",ch=1,n="string",o=1,rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/offsetCurveOnSurface.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/offsetCurveOnSurface.html
 
 
 
@@ -22306,7 +22306,7 @@ rn    : range           [boolean]
 
 def pointCurveConstraint(q=1,e=1,cch=1,nds="int",puv="[float, float, float]",pw="float",p="[float, float, float]",w="float",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pointCurveConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pointCurveConstraint.html
 
 
 
@@ -22394,7 +22394,7 @@ rpo   : replaceOriginal [boolean]
 
 def pointOnCurve(q=1,e=1,cch=1,ch=1,cc=1,cr=1,nds="int",no=1,nn=1,nt=1,pr="float",p=1,t=1,top=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pointOnCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pointOnCurve.html
 
 
 
@@ -22487,7 +22487,7 @@ top   : turnOnPercentage [boolean]
 
 def projectTangent(q=1,e=1,cch=1,c=1,cs="linear",ie=1,nds="int",rt=1,ro="angle",td="int",ts="linear",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/projectTangent.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/projectTangent.html
 
 
 
@@ -22595,7 +22595,7 @@ rpo   : replaceOriginal [boolean]
 
 def rebuildCurve(q=1,e=1,cch=1,d="int",end="int",fr=1,kcp=1,kep=1,kr="int",kt=1,nds="int",rt="int",scr=1,s="int",tol="linear",ch=1,n="string",o=1,rn=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rebuildCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rebuildCurve.html
 
 
 
@@ -22719,7 +22719,7 @@ rpo   : replaceOriginal [boolean]
 
 def reverseCurve(q=1,e=1,cch=1,nds="int",ch=1,cos=1,n="string",o=1,rn=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/reverseCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/reverseCurve.html
 
 
 
@@ -22792,7 +22792,7 @@ rpo   : replaceOriginal [boolean]
 
 def smoothCurve(q=1,e=1,cch=1,nds="int",s="float",ch=1,n="string",o=1,rpo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/smoothCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/smoothCurve.html
 
 
 
@@ -22857,7 +22857,7 @@ rpo   : replaceOriginal [boolean]
 
 def textCurves(q=1,e=1,f="string",n="string",o=1,t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/textCurves.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/textCurves.html
 
 
 
@@ -22911,7 +22911,7 @@ t     : text            [string]
 
 def changeSubdivComponentDisplayLevel(q=1,l="int",r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/changeSubdivComponentDisplayLevel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/changeSubdivComponentDisplayLevel.html
 
 
 
@@ -22952,7 +22952,7 @@ r     : relative        [boolean]
 
 def changeSubdivRegion(a="int",l="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/changeSubdivRegion.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/changeSubdivRegion.html
 
 
 
@@ -22991,7 +22991,7 @@ l     : level           [int]
 
 def coarsenSubdivSelectionList():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/coarsenSubdivSelectionList.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/coarsenSubdivSelectionList.html
 
 
 
@@ -23013,7 +23013,7 @@ boolean  Command result
 
 def createSubdivRegion():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/createSubdivRegion.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/createSubdivRegion.html
 
 
 
@@ -23037,7 +23037,7 @@ boolean  Command result
 
 def nurbsToSubdiv(q=1,e=1,aut=1,cch=1,cp=1,ch=1,mp=1,mpc="int",n="string",nds="int",o=1,rn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsToSubdiv.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsToSubdiv.html
 
 
 
@@ -23119,7 +23119,7 @@ rn    : reverseNormal   [boolean]
 
 def nurbsToSubdivPref(q=1,br="int",ct="int",cp=1,mp=1,mpc="int",o="linear",rn=1,st="int",t00="float",t01="float",t02="float",t10="float",t11="float",t12="float",t20="float",t21="float",t22="float",t30="float",t31="float",t32="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nurbsToSubdivPref.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nurbsToSubdivPref.html
 
 
 
@@ -23256,7 +23256,7 @@ t32   : trans32         [float]
 
 def polyToSubdiv(q=1,e=1,ap=1,amr=1,cch=1,me="int",mpc="int",nds="int",pvo=1,qc=1,uvp="[float, float]",uvu="float",uvv="float",uvt="int",aut=1,ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyToSubdiv.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyToSubdiv.html
 
 
 
@@ -23368,7 +23368,7 @@ o     : object          [boolean]
 
 def querySubdiv(a="int",l="int",r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/querySubdiv.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/querySubdiv.html
 
 
 
@@ -23412,7 +23412,7 @@ r     : relative        [boolean]
 
 def refineSubdivSelectionList():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/refineSubdivSelectionList.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/refineSubdivSelectionList.html
 
 
 
@@ -23435,7 +23435,7 @@ boolean  Command result
 
 def subdAutoProjection(q=1,e=1,cch=1,nds="int",ch=1,l="int",lm="int",n="string",o="int",ps="float",p="int",sc="int",si=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdAutoProjection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdAutoProjection.html
 
 
 
@@ -23528,7 +23528,7 @@ ws    : worldSpace      [boolean]
 
 def subdCleanTopology():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdCleanTopology.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdCleanTopology.html
 
 
 
@@ -23551,7 +23551,7 @@ boolean  Success or Failure.
 
 def subdCollapse(q=1,e=1,cch=1,l="int",nds="int",ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdCollapse.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdCollapse.html
 
 
 
@@ -23614,7 +23614,7 @@ o     : object          [boolean]
 
 def subdDuplicateAndConnect():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdDuplicateAndConnect.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdDuplicateAndConnect.html
 
 
 
@@ -23641,7 +23641,7 @@ None
 
 def subdEditUV(q=1,a="float",pu="float",pv="float",r=1,rr="float",rot=1,s=1,su="float",sv="float",u="float",uvs="string",v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdEditUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdEditUV.html
 
 
 
@@ -23732,7 +23732,7 @@ v     : vValue          [float]
 
 def subdiv(q=1,cl=1,csl=1,dl="int",dsl=1,est=1,fst=1,mpl="int",pm="int",so=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdiv.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdiv.html
 
 
 
@@ -23809,7 +23809,7 @@ so    : smallOffsets    [boolean]
 
 def subdivCrease(sh=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdivCrease.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdivCrease.html
 
 
 
@@ -23843,7 +23843,7 @@ sh    : sharpness       [boolean]
 
 def subdivDisplaySmoothness(q=1,all=1,s="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdivDisplaySmoothness.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdivDisplaySmoothness.html
 
 
 
@@ -23885,7 +23885,7 @@ s     : smoothness      [int]
 
 def subdLayoutUV(q=1,e=1,cch=1,nds="int",ch=1,fr=1,l="int",lm="int",n="string",ps="float",rbf="int",sc="int",se="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdLayoutUV.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdLayoutUV.html
 
 
 
@@ -23975,7 +23975,7 @@ ws    : worldSpace      [boolean]
 
 def subdListComponentConversion(bo=1,fe=1,ff=1,fuv=1,fv=1,internal=1,te=1,tf=1,tuv=1,tv=1,uvs=1,uvb=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdListComponentConversion.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdListComponentConversion.html
 
 
 
@@ -24072,7 +24072,7 @@ uvb   : uvShellBorder   [boolean]
 
 def subdMapCut(q=1,e=1,cch=1,ch=1,n="string",nds="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdMapCut.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdMapCut.html
 
 
 
@@ -24122,7 +24122,7 @@ nds   : nodeState       [int]
 
 def subdMapSewMove(q=1,e=1,cch=1,nds="int",ch=1,lps=1,n="string",nf="int",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdMapSewMove.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdMapSewMove.html
 
 
 
@@ -24192,7 +24192,7 @@ ws    : worldSpace      [boolean]
 
 def subdMatchTopology(foc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdMatchTopology.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdMatchTopology.html
 
 
 
@@ -24225,7 +24225,7 @@ foc   : frontOfChain    [boolean]
 
 def subdMirror(q=1,e=1,cch=1,nds="int",xm=1,ym=1,zm=1,ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdMirror.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdMirror.html
 
 
 
@@ -24297,7 +24297,7 @@ o     : object          [boolean]
 
 def subdPlanarProjection(q=1,e=1,cch=1,nds="int",ch=1,cm=1,ic2="[float, float]",icx="float",icy="float",is2="[float, float]",isu="float",isv="float",ibd=1,kir=1,md="string",n="string",pc="[linear, linear, linear]",pcx="linear",pcy="linear",pcz="linear",ph="linear",ps="[linear, linear]",pw="linear",ro="[angle, angle, angle]",rx="angle",ry="angle",rz="angle",ra="angle",sf=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdPlanarProjection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdPlanarProjection.html
 
 
 
@@ -24470,7 +24470,7 @@ ws    : worldSpace      [boolean]
 
 def subdToBlind(ap=1,ic=1,izo=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdToBlind.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdToBlind.html
 
 
 
@@ -24520,7 +24520,7 @@ izo   : includeZeroOffsets [boolean]
 
 def subdToPoly(q=1,e=1,amr=1,cch=1,cut=1,d="int",epp=1,f="int",inSubdCVId="[int, int]",isl="int",isr="int",mp="int",nds="int",os="[int, int]",osl="int",osr="int",ov="int",pvo=1,sc="int",suv=1,un=1,aut=1,cs=1,ch=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdToPoly.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdToPoly.html
 
 
 
@@ -24672,7 +24672,7 @@ o     : object          [boolean]
 
 def subdTransferUVsToCache():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/subdTransferUVsToCache.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/subdTransferUVsToCache.html
 
 
 

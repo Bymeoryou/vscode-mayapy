@@ -1,6 +1,6 @@
 def colorEditor(q=1,a="float",hsv="[float, float, float]",m=1,p="string",pos="[int, int]",r=1,rgb="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/colorEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/colorEditor.html
 
 
 
@@ -77,7 +77,7 @@ rgb   : rgbValue        [[float, float, float]]
 
 def confirmDialog(ann="string",bgc="[float, float, float]",b="string",cb="string",db="string",ds="string",icn="string",m="string",ma="string",p="string",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/confirmDialog.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/confirmDialog.html
 
 
 
@@ -170,7 +170,7 @@ t     : title           [string]
 
 def createEditor(nc=1,qfd=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/createEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/createEditor.html
 
 
 
@@ -213,7 +213,7 @@ qfd   : queueForDelete  [boolean]
 
 def defaultNavigation(ce=1,cn=1,da=1,dtv=1,dwn=1,delete=1,d="name",dis=1,f=1,i=1,nds="string",qt=1,ren=1,s="name",u=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/defaultNavigation.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/defaultNavigation.html
 
 
 
@@ -318,7 +318,7 @@ u     : unignore        [boolean]
 
 def editor(q=1,e=1,ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",lck=1,mlc="string",pnl="string",p="string",slc="string",sts=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/editor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/editor.html
 
 
 
@@ -433,7 +433,7 @@ ut    : useTemplate     [string]
 
 def editorTemplate(aac=1,acp=1,ac=1,adc=1,aec=1,addSeparator=1,afo=1,ann="string",bl="string",bn=1,bsl=1,ccu=1,cl=1,dbm=1,dc="[string, string, boolean]",el=1,en=1,esl=1,ecl="string",io=1,l="string",lea="string",po=1,qc="[string, string]",ql="[string, string]",qn="[string, string]",rc="[string, string]",s="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/editorTemplate.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/editorTemplate.html
 
 
 
@@ -604,7 +604,7 @@ s     : suppress        [string]
 
 def fontDialog(fl=1,sc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fontDialog.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fontDialog.html
 
 
 
@@ -646,7 +646,7 @@ sc    : scalable        [boolean]
 
 def layoutDialog(bgc="[float, float, float]",dis="string",p="string",t="string",ui="script"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/layoutDialog.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/layoutDialog.html
 
 
 
@@ -707,7 +707,7 @@ ui    : uiScript        [script]
 
 def minimizeApp():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/minimizeApp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/minimizeApp.html
 
 
 
@@ -729,7 +729,7 @@ None
 
 def progressWindow(q=1,e=1,ep=1,ic=1,ii=1,max="int",min="int",pr="int",st="string",s="int",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/progressWindow.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/progressWindow.html
 
 
 
@@ -810,7 +810,7 @@ t     : title           [string]
 
 def promptDialog(q=1,bgc="[float, float, float]",b="string",cb="string",db="string",ds="string",m="string",ma="string",p="string",sf=1,st="string",tx="string",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/promptDialog.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/promptDialog.html
 
 
 
@@ -913,7 +913,7 @@ t     : title           [string]
 
 def refreshEditorTemplates():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/refreshEditorTemplates.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/refreshEditorTemplates.html
 
 
 
@@ -937,7 +937,7 @@ None
 
 def scriptEditorInfo(q=1,e=1,ch=1,chf=1,hfn="string",i="string",se=1,si=1,sr=1,ssw=1,sw=1,wh=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scriptEditorInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scriptEditorInfo.html
 
 
 
@@ -1024,7 +1024,7 @@ wh    : writeHistory    [boolean]
 
 def showSelectionInTitle():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/showSelectionInTitle.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/showSelectionInTitle.html
 
 
 
@@ -1048,7 +1048,7 @@ None
 
 def showWindow():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/showWindow.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/showWindow.html
 
 
 
@@ -1072,7 +1072,7 @@ None
 
 def toggleWindowVisibility():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/toggleWindowVisibility.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/toggleWindowVisibility.html
 
 
 
@@ -1095,7 +1095,7 @@ None
 
 def window(q=1,e=1,bgc="[float, float, float]",cc="script",dt="string",dtg="string",dc="[string, string]",ds=1,dl="string",ex=1,fw=1,h="int",iconName="string",i=1,ip=1,le="int",mm=1,mw=1,mxb=1,ma=1,mb=1,mcw="[string, string]",mbr=1,mbv=1,mi="[string, uint]",mnb=1,mnc="script",nde=1,nm=1,p="string",rtf=1,rc="script",ret=1,s=1,st="string",t="string",tb=1,tbm=1,tlb=1,te="int",tlc="[int, int]",ut="string",vis=1,w="int",wh="[int, int]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/window.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/window.html
 
 
 
@@ -1351,7 +1351,7 @@ wh    : widthHeight     [[int, int]]
 
 def windowPref(q=1,e=1,ea=1,ex=1,h="int",le="int",la=1,max=1,pm=1,r=1,ra=1,rms="string",sa=1,sms="string",te="int",tlc="[int, int]",w="int",wh="[int, int]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/windowPref.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/windowPref.html
 
 
 
@@ -1467,7 +1467,7 @@ wh    : widthHeight     [[int, int]]
 
 def workspaceControlState(q=1,e=1,dc="[int, int]",dwh="[int, int]",ex=1,h="int",le="int",max=1,r=1,te="int",tlc="[int, int]",w="int",wh="[int, int]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/workspaceControlState.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/workspaceControlState.html
 
 
 
@@ -1558,7 +1558,7 @@ wh    : widthHeight     [[int, int]]
 
 def workspacePanel(q=1,e=1,dt="string",ex=1,mw=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/workspacePanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/workspacePanel.html
 
 
 
@@ -1608,7 +1608,7 @@ ut    : useTemplate     [string]
 
 def canCreateCaddyManip():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/canCreateCaddyManip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/canCreateCaddyManip.html
 
 
 
@@ -1630,7 +1630,7 @@ boolean  The queried value
 
 def componentEditor(q=1,e=1,ctl=1,dt="string",dtg="string",ex=1,f="string",ff="string",fs="string",fmc="string",hpn=1,hzc=1,hlc="string",li=1,lck=1,mlc="string",nt="[string, string, string]",oc=1,ol=1,ot="int",pnl="string",p="string",pre="int",rt="string",sl=1,slc="string",sol="[int, string]",so=1,ss=1,sa=1,sts=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/componentEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/componentEditor.html
 
 
 
@@ -1825,7 +1825,7 @@ ut    : useTemplate     [string]
 
 def contentBrowser(q=1,e=1,acp="string",ctx="[string, [, string, ], [, string, ]]",ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",loc="string",lck=1,mlc="string",pnl="string",p="string",pv=1,rtv=1,rcp="string",scc=1,slc="string",sts=1,th=1,tr=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/contentBrowser.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/contentBrowser.html
 
 
 
@@ -1987,7 +1987,7 @@ ut    : useTemplate     [string]
 
 def getPanel(ac=1,all=1,ast=1,at=1,ap="[int, int]",cwl="string",c="string",inv=1,sty="string",typ="string",to="string",up=1,vis=1,wf=1,wl="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getPanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getPanel.html
 
 
 
@@ -2090,7 +2090,7 @@ wl    : withLabel       [string]
 
 def hardwareRenderPanel(q=1,e=1,cam="string",ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,gre=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,p="string",pmp="script",rp="string",to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hardwareRenderPanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hardwareRenderPanel.html
 
 
 
@@ -2236,7 +2236,7 @@ ut    : useTemplate     [string]
 
 def hotkeyEditorPanel(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hotkeyEditorPanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hotkeyEditorPanel.html
 
 
 
@@ -2393,7 +2393,7 @@ w     : width           [int]
 
 def hyperGraph(q=1,e=1,abk=1,adg="name",adn="name",atr=1,ae="string",bak=1,bn=1,bco="string",clr=1,cc=1,cds="string",ctl=1,ced="string",cno="string",deb="string",dt="string",dbk="string",dg=1,dn="string",dp="string",dtg="string",do=1,ds=1,ddc="string",dr="string",drt="string",edc="string",edd="string",edr="string",ep="string",er="string",eal=1,ex=1,ec=1,fbg="string",fbn="string",f="string",fd="[string, boolean]",fih=1,fiw=1,fc="string",fo=1,fmc="string",frf=1,fow=1,fr=1,frb=1,fg=1,fgn=1,frh=1,fre=1,fat="string",frn="string",gnl=1,gnp="string",gd=1,gls="string",gt="string",hmd=1,hlc="string",ics="string",img="string",ime=1,ifc=1,imp="[float, float]",ims="float",ini="string",iht=1,lay=1,lsl="string",lgt="int",lck=1,loo="[float, float]",mlc="string",mc=1,hom=1,nu=1,nin="string",nou="string",nvw=1,nco="string",ndc="string",ndr="string",nm="string",np="string",nr="string",opc=1,orientation="string",pan="[float, float]",pnl="string",p="string",pms="string",pvw=1,rg="[float, float]",rb=1,rmn="string",rn=1,rf=1,rbk="string",snz=1,slc="string",snp="[string, float, float]",scc=1,scf=1,sct=1,scl=1,shc=1,shd=1,shx=1,shi=1,shr=1,shs=1,shu=1,sts=1,tat="string",ton="string",tfr="int",up=1,uf=1,ua=1,uas=1,ufh=1,ulk=1,upd=1,una=1,us=1,ups=1,drc=1,ufl=1,ut="string",vo="string",vis=1,zm="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hyperGraph.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hyperGraph.html
 
 
 
@@ -3126,7 +3126,7 @@ zm    : zoom            [float]
 
 def hyperPanel(q=1,e=1,ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,he=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,p="string",pmp="script",rp="string",to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hyperPanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hyperPanel.html
 
 
 
@@ -3267,7 +3267,7 @@ ut    : useTemplate     [string]
 
 def hyperShade(a="string",cwa=1,clp="string",rcn="string",dg=1,ds=1,dup=1,fix=1,inc=1,ldn="name",lds="name",lun="name",n="string",net=1,nsg=1,ns=1,nt=1,o="string",rcd="string",rst=1,rsg=1,rss=1,sar=1,swa="string",sn="string",sns=1,smn=1,snp=1,ucl="string",ups=1,udl=1,waa="string",wad="string",was="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hyperShade.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hyperShade.html
 
 
 
@@ -3465,7 +3465,7 @@ was   : workAreaSelectCmd [string]
 
 def inViewEditor(q=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/inViewEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/inViewEditor.html
 
 
 
@@ -3502,7 +3502,7 @@ v     : visible         [boolean]
 
 def modelEditor(q=1,e=1,acx=1,ace="string",acg="string",acl="string",aog="string",acr="string",ao=1,asg="string",av=1,aob="string",addSelected=1,aso=1,alo=1,bfc=1,bm="string",brz="[uint, uint]",cam="string",cn="string",cst="string",cs=1,ca=1,cpt="string",csn="int",cg=1,cme=1,cm=1,crz="[uint, uint]",ctl=1,cv=1,cov="string",d=1,dt="string",df=1,dim=1,da="string",dl="string",dtx=1,dtg="string",dc=1,dy=1,ec="script",ex=1,exp="float",f="string",fol=1,fl=1,fcl="[float, float, float, float]",fdn="float",fen="float",fmd="string",fsc="string",fst="float",fg=1,fo=1,fmc="string",ga="float",gp=1,gr=1,hs=1,ha=1,hud=1,h=1,hlc="string",hu=1,ipz=1,ikh=1,imp=1,i=1,ibc=1,dis=1,isFiltered=1,jx=1,j=1,lt=1,lw="float",lc=1,lck=1,lql=1,mlc="string",m=1,mct="float",mhl=1,mp="string",mt=1,ncl=1,npa=1,nr=1,nud=1,nc=1,ns=1,obf="script",ofl="script",ofu="script",ofs=1,obu="script",ocl=1,pnl="string",p="string",pi=1,pv=1,pl=1,po="[string, boolean]",ps=1,pm=1,qpo="string",rs=1,rdn=1,rls=1,rlu=1,rnm="string",rol=1,rou=1,rom="string",rcc=1,srf="string",slc="string",sel=1,ss=1,sml="int",sdw=1,soc=1,sot="float",swf=1,st=1,sts=1,sdm=1,str=1,sds=1,ta=1,tcp=1,td="string",tem=1,th=1,tms="int",tmu=1,ts="int",tx=1,tge=1,tgg=1,tis=1,tal="string",tsl=1,up=1,ulk=1,ucm=1,upd=1,ubr=1,uci=1,udm=1,ui=1,ip=1,urr=1,ut="string",un="string",vo=1,vs=1,vtn="string",vt=1,w=1,wbs=1,wos=1,xr=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/modelEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/modelEditor.html
 
 
 
@@ -4348,7 +4348,7 @@ xr    : xray            [boolean]
 
 def modelPanel(q=1,e=1,bl=1,cam="string",ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,init=1,iu=1,l="string",mrl=1,mbv=1,me=1,ni=1,p="string",pmp="script",rp="string",to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/modelPanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/modelPanel.html
 
 
 
@@ -4499,7 +4499,7 @@ ut    : useTemplate     [string]
 
 def nodeEditor(q=1,e=1,at="int",ann=1,an="string",agm=1,ala=1,aln=1,ant=1,att=1,asn=1,bcn=1,bnc="string",bsc=1,cat=1,clt="int",csn=1,csm="float",cso="float",csr="float",cs="string",cst="int",cns=1,cc="script",ctl=1,ci="string",cnc="script",ct="[int, [, string, ]]",ced=1,cal="[string, [, string, ]]",ch=1,dps=1,dt="string",deleteSelected=1,dtg="string",dot="string",ds=1,dpt="[int, [, int, ]]",egl=1,ex=1,ets=1,fbc=1,fbn=1,fbp=1,fbi=1,fbt=1,f="string",fcn="script",fc="script",fmc="string",fa=1,fms=1,fs=1,gnl=1,gsc=1,gsl=1,gs=1,gv=1,hw=1,hlc="string",hc="[string, boolean]",hm="[string, int, float]",ia=1,isl=1,kpc="script",krc="script",lay=1,lc="script",lck=1,mlc="string",nss="string",ntm="string",nvm="string",onp="[float, float]",pv="[float, float]",pnl="string",p="string",psn=1,pms="script",pr=1,rdt=1,rd=1,rem="string",run=1,ru=1,ren="string",rt="[int, [, string, ]]",ri="string",rlt=1,rn="string",rfs=1,sv="float",sa=1,scn=1,sd=1,sfc=1,sln="string",su=1,slc="string",sw=1,scc="script",sns=1,saa="string",sn=1,ssg=1,ss=1,tab=1,st=1,sts=1,ssl=1,tcc="script",taf=1,tsp=1,tss="string",ttc="script",tdl="int",up=1,ulk=1,upd=1,ups=1,ua=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nodeEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nodeEditor.html
 
 
 
@@ -5130,7 +5130,7 @@ ut    : useTemplate     [string]
 
 def nodeOutliner(q=1,e=1,ac="script",a="name",ann="string",aao="string",bgc="[float, float, float]",c="name",cs=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,lcn=1,lmc="string",ln=1,m=1,mc="script",mmo=1,ms=1,nn=1,nbg=1,nc=1,nd=1,npm=1,p="string",pma=1,phu=1,po=1,r=1,rr=1,rm="string",rma=1,rpl="name",sc="script",sco=1,sh=1,si=1,snc=1,snk=1,so=1,sp=1,sro=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nodeOutliner.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nodeOutliner.html
 
 
 
@@ -5444,7 +5444,7 @@ w     : width           [int]
 
 def outlinerEditor(q=1,e=1,ams=1,ats=1,alf="string",aao="string",af="string",xpd=1,ael=1,autoSelectNewObjects=1,cif=1,ctl=1,dt="string",ds=1,dm="string",dns=1,dtg="string",dip=1,ean=1,ex=1,eai=1,eas=1,att=1,xc=1,eo=1,fbn=1,fbr=1,f="string",fmc="string",gcs="int",ha=1,hlc="string",hs=1,hir=1,iha=1,ioc=1,ics="name",isSet="int",ism="int",lck=1,ln=1,mlc="string",mmt=1,mst="string",nn=1,obj="name",obc=1,obl=1,pnl="string",p="string",po=1,pin="name",rfs=1,rcs="int",rni="int",rsi=1,rfa=1,rfi="int",rfv=1,sec="script",slc="string",sod="string",sf="string",sif=1,aco=1,saw=1,a=1,sam=1,av=1,atr=1,cmp=1,con=1,sco=1,scc=1,dag=1,laf=1,smi=1,sn=1,num=1,spa=1,spi=1,spc=1,rm=1,rn=1,sc=1,ssm=1,shp=1,tno=1,ste=1,uv=1,su=1,suc=1,so="string",sts=1,tf=1,up=1,ulk=1,unp="name",upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/outlinerEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/outlinerEditor.html
 
 
 
@@ -5968,7 +5968,7 @@ ut    : useTemplate     [string]
 
 def outlinerPanel(q=1,e=1,ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,oe=1,p="string",pmp="script",rp="string",to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/outlinerPanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/outlinerPanel.html
 
 
 
@@ -6109,7 +6109,7 @@ ut    : useTemplate     [string]
 
 def panel(q=1,e=1,ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,p="string",pmp="script",rp="string",to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/panel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/panel.html
 
 
 
@@ -6248,7 +6248,7 @@ ut    : useTemplate     [string]
 
 def panelConfiguration(q=1,e=1,ap="[boolean, string, string, string, string]",cfs="string",cs=1,di="string",dt="string",es=1,ex=1,i="string",isFixedState=1,l="string",ls=1,np=1,rap=1,rlp=1,rcs="[int, string]",res="[int, string]",rfs="[int, boolean]",rl="[int, string]",rp="[int, boolean, string, string, string, string]",rts="[int, string]",sc=1,ts=1,ut="string",uc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/panelConfiguration.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/panelConfiguration.html
 
 
 
@@ -6402,7 +6402,7 @@ uc    : userCreated     [boolean]
 
 def panelHistory(q=1,e=1,b=1,cl=1,dt="string",ex=1,f=1,hd="int",ie=1,s=1,tp="string",ut="string",w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/panelHistory.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/panelHistory.html
 
 
 
@@ -6490,7 +6490,7 @@ w     : wrap            [boolean]
 
 def saveViewportSettings():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/saveViewportSettings.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/saveViewportSettings.html
 
 
 
@@ -6512,7 +6512,7 @@ None
 
 def scriptedPanel(q=1,e=1,ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,p="string",pmp="script",rp="string",to=1,toc="string",tor=1,typ="string",up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scriptedPanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scriptedPanel.html
 
 
 
@@ -6658,7 +6658,7 @@ ut    : useTemplate     [string]
 
 def scriptedPanelType(q=1,e=1,acb="string",ocb="string",ccb="string",cv=1,dt="string",dcb="string",ex=1,hkc="string",icb="string",l="string",o=1,rcb="string",rfo=1,scb="string",u=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scriptedPanelType.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scriptedPanelType.html
 
 
 
@@ -6770,7 +6770,7 @@ ut    : useTemplate     [string]
 
 def setFocus():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setFocus.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setFocus.html
 
 
 
@@ -6791,7 +6791,7 @@ None
 
 def spreadSheetEditor(q=1,e=1,aa=1,are="string",ctl=1,dt="string",dtg="string",exe="string",ex=1,f="string",fal="string[]",fmc="string",hlc="string",ko=1,lck=1,ln=1,mlc="string",nn=1,pnl="string",p="string",pre="int",sla=1,slc="string",ss=1,sts=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/spreadSheetEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/spreadSheetEditor.html
 
 
 
@@ -6956,7 +6956,7 @@ ut    : useTemplate     [string]
 
 def viewManip(q=1,bl=1,br=1,ca="float",ds=1,dc=1,ftv=1,fp="string",gd=1,gh=1,hp="string",lc=1,mo="float",ns="string",p="string",pr="string",psu=1,rf=1,rh=1,rc=1,slp="string",sf=1,sh=1,s="string",tsl=1,tl=1,tr=1,v=1,zf=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/viewManip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/viewManip.html
 
 
 
@@ -7126,7 +7126,7 @@ zf    : zoomToFitScene  [boolean]
 
 def visor(q=1,add=1,adn="string",apx=1,apy=1,az=1,cmd="string",deleteFolder="string",edf="string",fl="string",mn="string",n="string",ntp="string",opd=1,opf=1,p="string",pth="string",pms="string",re=1,ras=1,rss=1,rs="string",rst=1,rpz=1,ss=1,sb="string",sp="float",sg="string",sd=1,sfi=1,sfo=1,sn=1,sts=1,stl="string",trn="string",typ="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/visor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/visor.html
 
 
 
@@ -7334,7 +7334,7 @@ typ   : type            [string]
 
 def webBrowser(q=1,e=1,ann="string",bk=1,bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,f="string",fwd=1,fpn=1,h="int",hlc="[float, float, float]",hm=1,io=1,m=1,mc=1,mww=1,nbg=1,npm=1,url="string",p="string",pma=1,po=1,rl=1,sf=1,sbm="string",st=1,ucc="string",ut="string",vis=1,vcc="script",w="int",wr=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/webBrowser.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/webBrowser.html
 
 
 
@@ -7552,7 +7552,7 @@ wr    : wrap            [boolean]
 
 def attrColorSliderGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",attrNavDecision="[name, string]",at="string",bgc="[float, float, float]",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hsv="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,rgb="[float, float, float]",rat="[int, string, int]",sb=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attrColorSliderGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attrColorSliderGrp.html
 
 
 
@@ -7901,7 +7901,7 @@ w     : width           [int]
 
 def attrControlGrp(q=1,e=1,ann="string",a="name",cc="script",en=1,ex=1,ha="name",hmb=1,l="string",po=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attrControlGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attrControlGrp.html
 
 
 
@@ -7980,7 +7980,7 @@ po    : preventOverride [boolean]
 
 def attrFieldGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",at="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,eb=1,ebc="script",ebi="string",el="string",fmb=1,fpn=1,h="int",hmb=1,hlc="[float, float, float]",io=1,l="string",m=1,max="float",min="float",nbg=1,nf="int",npm=1,p="string",pma=1,pre="int",po=1,rat="[int, string, int]",sbm="string",s="float",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attrFieldGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attrFieldGrp.html
 
 
 
@@ -8377,7 +8377,7 @@ w     : width           [int]
 
 def attrFieldSliderGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",at="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,eb=1,ebc="script",ebi="string",fmx="float",fmn="float",fs="float",fmb=1,fpn=1,h="int",hmb=1,hlc="[float, float, float]",io=1,l="string",m=1,max="float",min="float",nbg=1,npm=1,p="string",pma=1,pre="int",po=1,rat="[int, string, int]",smx="float",smn="float",ss="float",sbm="string",s="float",ut="string",vr=1,vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attrFieldSliderGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attrFieldSliderGrp.html
 
 
 
@@ -8804,7 +8804,7 @@ w     : width           [int]
 
 def attrNavigationControlGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",attrNavDecision="[name, string]",at="name",bgc="[float, float, float]",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",cad="script",cnd="script",ce="script",cn="script",dtv="script",dt="string",delete="string",d="script",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,eb=1,ebc="script",ebi="string",fpn=1,h="int",hlc="[float, float, float]",i="script",ins=1,io=1,l="string",m=1,nbg=1,nim=1,nkm=1,npm=1,p="string",pma=1,po=1,ren="script",rat="[int, string, int]",sbm="string",u="script",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attrNavigationControlGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attrNavigationControlGrp.html
 
 
 
@@ -9229,7 +9229,7 @@ w     : width           [int]
 
 def button(q=1,e=1,aop=1,ais=1,al="string",ann="string",bgc="[float, float, float]",c="script",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,rs=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/button.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/button.html
 
 
 
@@ -9415,7 +9415,7 @@ w     : width           [int]
 
 def canvas(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hsv="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,pc="script",po=1,rgb="[float, float, float]",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/canvas.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/canvas.html
 
 
 
@@ -9589,7 +9589,7 @@ w     : width           [int]
 
 def channelBox(q=1,e=1,ann="string",bc="[float, float, float]",ac="[float, float, float]",af="string",ar="string",aem=1,bgc="[float, float, float]",cat=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,els=1,exe="[string, boolean]",ex=1,fw="int",fal="string[]",fpn=1,h="int",hlc="[float, float, float]",hol=1,hyp=1,inputs=1,io=1,lw="int",ln=1,mlc="string",mol=1,m=1,mh="int",mw="int",nn=1,nbg=1,nr="string",npm=1,ool=1,out=1,p="string",pma=1,pre="int",po=1,s="string",sha=1,sma=1,soa=1,ssa=1,sol=1,shp=1,sn=1,st=1,spd="float",sbm="string",tf=1,u=1,mnp="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/channelBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/channelBox.html
 
 
 
@@ -9937,7 +9937,7 @@ w     : width           [int]
 
 def checkBox(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,ofc="script",onc="script",p="string",pma=1,po=1,rs=1,sbm="string",ut="string",v=1,vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/checkBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/checkBox.html
 
 
 
@@ -10135,7 +10135,7 @@ w     : width           [int]
 
 def checkBoxGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cc1="script",cc2="script",cc3="script",cc4="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",ed=1,en=1,en1=1,en2=1,en3=1,en4=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",l1="string",l2="string",l3="string",l4="string",la2="[string, string]",la3="[string, string, string]",la4="[string, string, string, string]",m=1,nbg=1,ncb="int",npm=1,ofc="script",of1="script",of2="script",of3="script",of4="script",onc="script",on1="script",on2="script",on3="script",on4="script",p="string",pma=1,po=1,rat="[int, string, int]",sbm="string",ut="string",v1=1,v2=1,v3=1,v4=1,va2="[boolean, boolean]",va3="[boolean, boolean, boolean]",va4="[boolean, boolean, boolean, boolean]",vr=1,vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/checkBoxGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/checkBoxGrp.html
 
 
 
@@ -10640,7 +10640,7 @@ w     : width           [int]
 
 def cmdScrollFieldExecuter(q=1,e=1,ann="string",at="string",acb=1,bgc="[float, float, float]",clr=1,cco=1,cp=1,cl="uint",ct=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,exc=1,exa=1,ex=1,fcc="script",fn=1,fkp="script",fpn=1,hf=1,hsl=1,h="int",hlc="[float, float, float]",it="string",io=1,ld=1,ldc="string",ldf="string",m=1,mcc="script",mod=1,nbg=1,nl="uint",npm=1,opc=1,p="string",pst=1,pma=1,po=1,rd=1,rsc="string",rpa="[string, string]",svf="string",sv="string",svs=1,sas=1,sd=1,smc=1,ss="string",sw=1,sl="[uint, uint]",sla=1,slt=1,sln=1,sth=1,src=1,st="string",spt="uint",sbm="string",stc="string",tfi=1,t="string",tl=1,ud=1,ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cmdScrollFieldExecuter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cmdScrollFieldExecuter.html
 
 
 
@@ -11030,7 +11030,7 @@ w     : width           [int]
 
 def cmdScrollFieldReporter(q=1,e=1,ann="string",bgc="[float, float, float]",clr=1,cp=1,ct=1,dt="string",dtg="string",dgc="script",dpc="script",eac=1,en=1,ebg=1,ekf=1,ex=1,fst="string",fpn=1,hf=1,h="int",hlc="[float, float, float]",io=1,ln=1,m=1,nbg=1,npm=1,p="string",pst=1,pma=1,po=1,rfc="script",sv="string",svs=1,sl="[uint, uint]",sla=1,st=1,sbm="string",se=1,si=1,sr=1,sst=1,sw=1,t="string",tl=1,ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cmdScrollFieldReporter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cmdScrollFieldReporter.html
 
 
 
@@ -11291,7 +11291,7 @@ w     : width           [int]
 
 def cmdShell(q=1,e=1,ann="string",bgc="[float, float, float]",cl=1,c="string",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nhl="int",npm=1,nsl="int",p="string",pma=1,po=1,pr="string",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cmdShell.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cmdShell.html
 
 
 
@@ -11476,7 +11476,7 @@ w     : width           [int]
 
 def colorIndexSliderGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,el="string",fdr=1,fpn=1,h="int",hlc="[float, float, float]",inv="int",io=1,l="string",m=1,max="int",min="int",nbg=1,npm=1,p="string",pma=1,po=1,rat="[int, string, int]",sbm="string",ut="string",v="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/colorIndexSliderGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/colorIndexSliderGrp.html
 
 
 
@@ -11840,7 +11840,7 @@ w     : width           [int]
 
 def colorInputWidgetGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fdr=1,fpn=1,h="int",hlc="[float, float, float]",hsv="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,rgb="[float, float, float]",rat="[int, string, int]",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/colorInputWidgetGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/colorInputWidgetGrp.html
 
 
 
@@ -12183,7 +12183,7 @@ w     : width           [int]
 
 def colorSliderButtonGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",bc="script",bl="string",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fdr=1,fpn=1,h="int",hlc="[float, float, float]",hsv="[float, float, float]",i="string",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,rgb="[float, float, float]",rat="[int, string, int]",sbm="string",sbc="script",sbd=1,ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/colorSliderButtonGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/colorSliderButtonGrp.html
 
 
 
@@ -12560,7 +12560,7 @@ w     : width           [int]
 
 def colorSliderGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fdr=1,fpn=1,h="int",hlc="[float, float, float]",hsv="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,rgb="[float, float, float]",rat="[int, string, int]",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/colorSliderGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/colorSliderGrp.html
 
 
 
@@ -12909,7 +12909,7 @@ w     : width           [int]
 
 def commandLine(q=1,e=1,ann="string",bgc="[float, float, float]",c="script",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ec="script",ex=1,fpn=1,h="int",hlc="[float, float, float]",hf=1,ian="string",io=1,m=1,nbg=1,nhl="int",npm=1,oan="string",p="string",pma=1,po=1,st="string",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/commandLine.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/commandLine.html
 
 
 
@@ -13100,7 +13100,7 @@ w     : width           [int]
 
 def componentBox(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,exe="[string, boolean]",ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,lw="int",m=1,mh="int",mw="int",nbg=1,npm=1,p="string",pma=1,pre="int",po=1,rh="int",sla=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/componentBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/componentBox.html
 
 
 
@@ -13292,7 +13292,7 @@ w     : width           [int]
 
 def control(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/control.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/control.html
 
 
 
@@ -13447,7 +13447,7 @@ w     : width           [int]
 
 def falloffCurve(q=1,e=1,acv="string",ann="string",asString="string",bgc="[float, float, float]",cc="script",ck="int",ckv="[float, float]",ccw=1,dt="string",dcv="int",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,ov="string",p="string",pma=1,po=1,ro=1,stg=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/falloffCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/falloffCurve.html
 
 
 
@@ -13654,7 +13654,7 @@ w     : width           [int]
 
 def falloffCurveAttr(q=1,e=1,acv="string",ann="string",asString="string",at="name",bgc="[float, float, float]",cc="script",ck="int",ckv="[float, float]",ccw="int",dt="string",dcv="int",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,ro="int",spc="string",svc="string",stg="int",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/falloffCurveAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/falloffCurveAttr.html
 
 
 
@@ -13877,7 +13877,7 @@ w     : width           [int]
 
 def floatField(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,ec="script",ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,max="float",min="float",nbg=1,npm=1,p="string",pma=1,pre="int",po=1,rfc="script",tze=1,sbm="string",s="float",ut="string",v="float",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/floatField.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/floatField.html
 
 
 
@@ -14093,7 +14093,7 @@ w     : width           [int]
 
 def floatFieldGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,en1=1,en2=1,en3=1,en4=1,ebg=1,ekf=1,ex=1,el="string",fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,nf="int",npm=1,p="string",pma=1,pre="int",po=1,rat="[int, string, int]",tze=1,sbm="string",s="float",ut="string",v="[float, float, float, float]",v1="float",v2="float",v3="float",v4="float",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/floatFieldGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/floatFieldGrp.html
 
 
 
@@ -14497,7 +14497,7 @@ w     : width           [int]
 
 def floatScrollBar(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hr=1,io=1,ls="float",m=1,max="float",min="float",nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",s="float",ut="string",v="float",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/floatScrollBar.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/floatScrollBar.html
 
 
 
@@ -14696,7 +14696,7 @@ w     : width           [int]
 
 def floatSlider(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hr=1,io=1,m=1,max="float",min="float",nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",s="float",ut="string",v="float",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/floatSlider.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/floatSlider.html
 
 
 
@@ -14889,7 +14889,7 @@ w     : width           [int]
 
 def floatSlider2(q=1,e=1,ann="string",bgc="[float, float, float]",cc1="string",cc2="string",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,max="float",min="float",nbg=1,npm=1,p="string",pol="int",pma=1,pc1="string",pc2="string",po=1,sbm="string",ut="string",v1="float",v2="float",vs="[float, float]",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/floatSlider2.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/floatSlider2.html
 
 
 
@@ -15103,7 +15103,7 @@ w     : width           [int]
 
 def floatSliderButtonGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",bc="script",bl="string",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,el="string",f=1,fmx="float",fmn="float",fs="float",fpn=1,h="int",hlc="[float, float, float]",i="string",io=1,l="string",m=1,max="float",min="float",nbg=1,npm=1,p="string",pma=1,pre="int",po=1,rat="[int, string, int]",ss="float",sbm="string",s="float",sbc="script",sbd=1,ut="string",v="float",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/floatSliderButtonGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/floatSliderButtonGrp.html
 
 
 
@@ -15518,7 +15518,7 @@ w     : width           [int]
 
 def floatSliderGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,el="string",f=1,fmx="float",fmn="float",fs="float",fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,max="float",min="float",nbg=1,npm=1,p="string",pma=1,pre="int",po=1,rat="[int, string, int]",ss="float",sbm="string",s="float",ut="string",v="float",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/floatSliderGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/floatSliderGrp.html
 
 
 
@@ -15937,7 +15937,7 @@ w     : width           [int]
 
 def gradientControl(q=1,e=1,adaptiveScaling=1,ann="string",at="name",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nc="uint",npm=1,p="string",pma=1,po=1,ror="uint",scc="string",sic="string",spc="string",snc=1,sp=1,sbm="string",ulc="string",ut="string",vl=1,vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/gradientControl.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/gradientControl.html
 
 
 
@@ -16158,7 +16158,7 @@ w     : width           [int]
 
 def gradientControlNoAttr(q=1,e=1,ann="string",asString="string",bgc="[float, float, float]",cc="script",ck="int",ckc="script",clv="[float, float, float]",cvv=1,civ="int",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,ov="string",p="string",pma=1,po=1,rac=1,sbm="string",ut="string",vap="float",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/gradientControlNoAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/gradientControlNoAttr.html
 
 
 
@@ -16370,7 +16370,7 @@ w     : width           [int]
 
 def helpLine(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/helpLine.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/helpLine.html
 
 
 
@@ -16525,7 +16525,7 @@ w     : width           [int]
 
 def hudButton(q=1,e=1,ao=1,b="int",ba="string",bs="string",bsh="string",bw="int",l="string",lfs="string",p="int",pc="script",rc="script",s="int",vis=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hudButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hudButton.html
 
 
 
@@ -16641,7 +16641,7 @@ vis   : visible         [boolean]
 
 def hudSlider(q=1,e=1,ao=1,b="int",ba="string",bs="string",dp="int",dc="script",ip="int",l="string",lfs="string",lw="int",max="float",min="float",p="int",pc="script",rc="script",s="int",si="float",sl="int",t="string",v="float",va="string",vfs="string",vw="int",vis=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hudSlider.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hudSlider.html
 
 
 
@@ -16812,7 +16812,7 @@ vis   : visible         [boolean]
 
 def hudSliderButton(q=1,e=1,ao=1,b="int",ba="string",bs="string",bl="string",bfs="string",bpc="script",brc="script",bsh="string",bw="int",dp="int",ip="int",max="float",min="float",p="int",s="int",sdc="script",si="float",sl="string",sfs="string",slw="int",sln="int",spc="script",src="script",t="string",v="float",va="string",vfs="string",vw="int",vis=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hudSliderButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hudSliderButton.html
 
 
 
@@ -17014,7 +17014,7 @@ vis   : visible         [boolean]
 
 def iconTextButton(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",c="script",rpt=1,dt="string",di="string",dtg="string",dcc="script",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fla=1,fx=1,fy=1,fn="string",fpn=1,hnd="script",h="int",hlc="[float, float, float]",hi="string",i="string",i1="string",i2="string",i3="string",iol="string",io=1,l="string",lec="script",lo="int",lt="string",m=1,mh="uint",mw="uint",nbg=1,npm=1,olb="[float, float, float, float]",olc="[float, float, float]",p="string",pma=1,po=1,rot="float",sic=1,si="string",stp="string",sbm="string",st="string",ua=1,ut="string",ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/iconTextButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/iconTextButton.html
 
 
 
@@ -17330,7 +17330,7 @@ w     : width           [int]
 
 def iconTextCheckBox(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",cc="script",dt="string",di="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fla=1,fx=1,fy=1,fn="string",fpn=1,h="int",hlc="[float, float, float]",hi="string",i="string",i1="string",i2="string",i3="string",iol="string",io=1,l="string",lo="int",lt="string",m=1,mh="uint",mw="uint",nbg=1,npm=1,ofc="script",onc="script",olb="[float, float, float, float]",olc="[float, float, float]",p="string",pma=1,po=1,rot="float",shi="string",si="string",sbm="string",st="string",ua=1,ut="string",v=1,ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/iconTextCheckBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/iconTextCheckBox.html
 
 
 
@@ -17634,7 +17634,7 @@ w     : width           [int]
 
 def iconTextRadioButton(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",cc="script",cl="string",dt="string",di="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fla=1,fx=1,fy=1,fn="string",fpn=1,h="int",hlc="[float, float, float]",hi="string",i="string",i1="string",i2="string",i3="string",iol="string",io=1,l="string",lo="int",lt="string",m=1,mh="uint",mw="uint",nbg=1,npm=1,ofc="script",onc="script",olb="[float, float, float, float]",olc="[float, float, float]",p="string",pma=1,po=1,rot="float",sl=1,shi="string",si="string",sbm="string",st="string",ua=1,ut="string",ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/iconTextRadioButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/iconTextRadioButton.html
 
 
 
@@ -17944,7 +17944,7 @@ w     : width           [int]
 
 def iconTextRadioCollection(q=1,e=1,cia=1,dt="string",dcm=1,ex=1,gl=1,nci=1,p="string",sl="string",ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/iconTextRadioCollection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/iconTextRadioCollection.html
 
 
 
@@ -18024,7 +18024,7 @@ ut    : useTemplate     [string]
 
 def iconTextScrollList(q=1,e=1,ams=1,ann="string",a="string",bgc="[float, float, float]",cc="script",dt="string",da=1,dtg="string",dcc="script",dgc="script",dfv=1,dpc="script",drc="script",ei="uint",ed=1,en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,ia="[int, int]",itc="[int, float, float, float]",m=1,nbg=1,nic="uint",npm=1,nr=1,p="string",pma=1,po=1,ra=1,sc="script",sii="int",si="string",sbm="string",ut="string",vis=1,vcc="script",vra="[int, int]",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/iconTextScrollList.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/iconTextScrollList.html
 
 
 
@@ -18271,7 +18271,7 @@ w     : width           [int]
 
 def iconTextStaticLabel(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",dt="string",di="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fx=1,fy=1,fn="string",fpn=1,h="int",hlc="[float, float, float]",i="string",i1="string",i2="string",i3="string",iol="string",io=1,l="string",lo="int",lt="string",m=1,mh="uint",mw="uint",nbg=1,npm=1,olb="[float, float, float, float]",olc="[float, float, float]",p="string",pma=1,po=1,rot="float",sbm="string",st="string",ua=1,ut="string",ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/iconTextStaticLabel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/iconTextStaticLabel.html
 
 
 
@@ -18535,7 +18535,7 @@ w     : width           [int]
 
 def image(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",i="string",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/image.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/image.html
 
 
 
@@ -18696,7 +18696,7 @@ w     : width           [int]
 
 def intField(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,ec="script",ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,max="int",min="int",nbg=1,npm=1,p="string",pma=1,po=1,rfc="script",sbm="string",s="int",ut="string",v="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/intField.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/intField.html
 
 
 
@@ -18902,7 +18902,7 @@ w     : width           [int]
 
 def intFieldGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,en1=1,en2=1,en3=1,en4=1,ebg=1,ekf=1,ex=1,el="string",fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,nf="int",npm=1,p="string",pma=1,po=1,rat="[int, string, int]",sbm="string",ut="string",v="[int, int, int, int]",v1="int",v2="int",v3="int",v4="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/intFieldGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/intFieldGrp.html
 
 
 
@@ -19291,7 +19291,7 @@ w     : width           [int]
 
 def intScrollBar(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hr=1,io=1,ls="int",m=1,max="int",min="int",nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",s="int",ut="string",v="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/intScrollBar.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/intScrollBar.html
 
 
 
@@ -19490,7 +19490,7 @@ w     : width           [int]
 
 def intSlider(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hr=1,io=1,m=1,max="int",min="int",nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",s="int",ut="string",v="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/intSlider.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/intSlider.html
 
 
 
@@ -19683,7 +19683,7 @@ w     : width           [int]
 
 def intSliderGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,el="string",f=1,fmx="int",fmn="int",fs="int",fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,max="int",min="int",nbg=1,npm=1,p="string",pma=1,po=1,rat="[int, string, int]",ss="int",sbm="string",s="int",ut="string",v="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/intSliderGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/intSliderGrp.html
 
 
 
@@ -20099,7 +20099,7 @@ w     : width           [int]
 
 def layerButton(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",cl="[float, float, float]",c="script",cr=1,dt="string",dtg="string",dcc="script",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hpc="script",hlc="[float, float, float]",id="int",io=1,l="string",lw=1,hp=1,ls="string",lv=1,m=1,n="string",nbg=1,npm=1,p="string",pma=1,po=1,rc="string",s=1,sbm="string",t=1,tc="script",ut="string",vis=1,vcc="script",vc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/layerButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/layerButton.html
 
 
 
@@ -20347,7 +20347,7 @@ w     : width           [int]
 
 def messageLine(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/messageLine.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/messageLine.html
 
 
 
@@ -20502,7 +20502,7 @@ w     : width           [int]
 
 def nameField(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dif=1,dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,ncc="script",nbg=1,npm=1,o="string",p="string",pma=1,po=1,rfc="script",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nameField.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nameField.html
 
 
 
@@ -20683,7 +20683,7 @@ w     : width           [int]
 
 def nodeTreeLister(q=1,e=1,af="string",add="[string, string, script]",avi="[string, string, string, string]",ann="string",bgc="[float, float, float]",clr=1,cp="string",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ei="string",ex=1,ep="string",etd="int",fcb="script",fl=1,fpn=1,h="int",hlc="[float, float, float]",io=1,isc="string",m=1,nbg=1,nl="string",npm=1,p="string",pma=1,po=1,rc="script",rf="string",rem="string",ruc=1,sp="string",sbm="string",ut="string",vis=1,vcc="script",vnn=1,w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nodeTreeLister.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nodeTreeLister.html
 
 
 
@@ -20932,7 +20932,7 @@ w     : width           [int]
 
 def palettePort(q=1,e=1,at="int",ann="string",bgc="[float, float, float]",cc="script",ced=1,ce="script",dt="string",dim="[int, int]",dtg="string",dgc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hsv="[int, int, float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,r=1,rgb="[int, float, float, float]",scc="int",sbm="string",td=1,t="int",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/palettePort.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/palettePort.html
 
 
 
@@ -21148,7 +21148,7 @@ w     : width           [int]
 
 def picture(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",i="string",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",tl=1,ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/picture.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/picture.html
 
 
 
@@ -21313,7 +21313,7 @@ w     : width           [int]
 
 def progressBar(q=1,e=1,ann="string",bgc="[float, float, float]",bp=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ep=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",ic=1,ii=1,imp=1,io=1,m=1,max="int",min="int",nbg=1,npm=1,p="string",pma=1,po=1,pr="int",st="string",sbm="string",s="int",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/progressBar.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/progressBar.html
 
 
 
@@ -21519,7 +21519,7 @@ w     : width           [int]
 
 def radioButton(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",cc="script",cl="string",da="int",dt="string",dtg="string",dgc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,ofc="script",onc="script",p="string",pma=1,po=1,rs=1,sl=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/radioButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/radioButton.html
 
 
 
@@ -21725,7 +21725,7 @@ w     : width           [int]
 
 def radioButtonGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",an1="string",an2="string",an3="string",an4="string",bgc="[float, float, float]",cc="script",cc1="script",cc2="script",cc3="script",cc4="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",da1="int",da2="int",da3="int",da4="int",dt="string",dtg="string",dgc="script",dpc="script",ed=1,en=1,en1=1,en2=1,en3=1,en4=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",l1="string",l2="string",l3="string",l4="string",la="string",la2="[string, string]",la3="[string, string, string]",la4="[string, string, string, string]",m=1,nbg=1,npm=1,nrb="int",ofc="script",of1="script",of2="script",of3="script",of4="script",onc="script",on1="script",on2="script",on3="script",on4="script",p="string",pma=1,po=1,rat="[int, string, int]",sl="int",scl="string",sbm="string",ut="string",vr=1,vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/radioButtonGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/radioButtonGrp.html
 
 
 
@@ -22250,7 +22250,7 @@ w     : width           [int]
 
 def radioCollection(q=1,e=1,cia=1,dt="string",ex=1,gl=1,nci=1,p="string",sl="string",ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/radioCollection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/radioCollection.html
 
 
 
@@ -22325,7 +22325,7 @@ ut    : useTemplate     [string]
 
 def rangeControl(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,max="time",min="time",nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int",wh="[int, int]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rangeControl.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rangeControl.html
 
 
 
@@ -22503,7 +22503,7 @@ wh    : widthHeight     [[int, int]]
 
 def scriptTable(q=1,e=1,acc="script",ann="string",bgc="[float, float, float]",cbc="script",ccc="script",cfc="script",ci="[int, int]",cv="string",cr="int",ct=1,cf="[int, string]",cw="[int, int]",c="int",dt="string",dr="int",dtg="string",dgc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,eh=1,ex=1,fpn=1,gcc="script",h="int",hlc="[float, float, float]",ir="int",io=1,l="[int, string]",m=1,mee=1,nbg=1,npm=1,p="string",pma=1,po=1,rh="int",r="int",rrc="script",rtc="script",sc="int[]",scs="int[]",sr=1,srs="int[]",sb="int",scc="script",sm="int",se=1,sbm="string",upc=1,upr=1,udc=1,ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scriptTable.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scriptTable.html
 
 
 
@@ -22823,7 +22823,7 @@ w     : width           [int]
 
 def scrollField(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",cl=1,c="string",dt="string",dtg="string",dgc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,ec="script",ex=1,fn="string",fns="int",fpn=1,h="int",hlc="[float, float, float]",it="string",ip="int",io=1,kpc="script",m=1,nbg=1,nl="int",npm=1,p="string",pma=1,po=1,qfn="string",sl=1,sbm="string",tx="string",ut="string",vis=1,vcc="script",w="int",ww=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scrollField.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scrollField.html
 
 
 
@@ -23053,7 +23053,7 @@ ww    : wordWrap        [boolean]
 
 def separator(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hr=1,io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",st="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/separator.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/separator.html
 
 
 
@@ -23218,7 +23218,7 @@ w     : width           [int]
 
 def shelfButton(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",c="script",rpt=1,dt="string",di="string",dtg="string",dcc="script",dgc="script",dpc="script",en=1,ebg=1,ecr=1,ekf=1,ex=1,fla=1,fwt="int",fwv="int",fx=1,fy=1,fn="string",fpn=1,hnd="script",h="int",hlc="[float, float, float]",hi="string",i="string",i1="string",i2="string",i3="string",iol="string",io=1,l="string",lec="script",lo="int",lt="string",m=1,mh="uint",mw="uint",mi="[string, string]",mip="int",nbg=1,ndp=1,npm=1,olb="[float, float, float, float]",olc="[float, float, float]",p="string",pma=1,po=1,rot="float",sic=1,si="string",stp="string",sbm="string",st="string",ua=1,ut="string",ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shelfButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shelfButton.html
 
 
 
@@ -23563,7 +23563,7 @@ w     : width           [int]
 
 def soundControl(q=1,e=1,ann="string",bgc="[float, float, float]",bs=1,dt="string",ds=1,dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,es=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,max="time",min="time",nbg=1,npm=1,p="string",pma=1,pc="string",po=1,rc="string",rcs="float",roh=1,r=1,s="string",sbm="string",ut="string",vis=1,vcc="script",wf="string",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/soundControl.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/soundControl.html
 
 
 
@@ -23779,7 +23779,7 @@ w     : width           [int]
 
 def swatchDisplayPort(q=1,e=1,ann="string",bgc="[float, float, float]",bc="[float, float, float]",bw="int",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,pc="script",po=1,rp="int",rs="int",sn="name",sbm="string",ut="string",vis=1,vcc="script",w="int",wh="[int, int]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/swatchDisplayPort.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/swatchDisplayPort.html
 
 
 
@@ -23972,7 +23972,7 @@ wh    : widthHeight     [[int, int]]
 
 def switchTable(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l1="string",l2="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,sr=1,sbm="string",sn="name",upr=1,ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/switchTable.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/switchTable.html
 
 
 
@@ -24154,7 +24154,7 @@ w     : width           [int]
 
 def symbolButton(q=1,e=1,ann="string",bgc="[float, float, float]",c="script",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",i="string",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/symbolButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/symbolButton.html
 
 
 
@@ -24322,7 +24322,7 @@ w     : width           [int]
 
 def symbolCheckBox(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dfi="string",dni="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",i="string",im=1,io=1,lt="string",m=1,nbg=1,npm=1,ofc="script",ofi="string",onc="script",oni="string",p="string",pma=1,po=1,sbm="string",ut="string",v=1,ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/symbolCheckBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/symbolCheckBox.html
 
 
 
@@ -24540,7 +24540,7 @@ w     : width           [int]
 
 def text(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",drc="script",en=1,ebg=1,ekf=1,ex=1,fn="string",fpn=1,h="int",hlc="[float, float, float]",hl=1,io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,rs=1,sbm="string",ut="string",vis=1,vcc="script",w="int",ww=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/text.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/text.html
 
 
 
@@ -24730,7 +24730,7 @@ ww    : wordWrap        [boolean]
 
 def textField(q=1,e=1,aie=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",db=1,dcb=1,dhb=1,dtg="string",dgc="script",dif=1,dpc="script",ed=1,en=1,ebg=1,ekf=1,ec="script",ex=1,fi="string",fn="string",fpn=1,h="int",hlc="[float, float, float]",it="string",ip="int",io=1,m=1,nbg=1,npm=1,p="string",pht="string",pma=1,po=1,rfc="script",sf=1,sbm="string",tx="string",tcc="script",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/textField.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/textField.html
 
 
 
@@ -24970,7 +24970,7 @@ w     : width           [int]
 
 def textFieldButtonGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",bc="script",bl="string",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",ed=1,en=1,ebg=1,eb=1,ekf=1,ex=1,fi="string",fcc=1,fpn=1,h="int",hlc="[float, float, float]",it="string",ip="int",io=1,l="string",m=1,nbg=1,npm=1,p="string",pht="string",pma=1,po=1,rat="[int, string, int]",sbm="string",tx="string",tcc="script",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/textFieldButtonGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/textFieldButtonGrp.html
 
 
 
@@ -25352,7 +25352,7 @@ w     : width           [int]
 
 def textFieldGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,ex=1,fi="string",fcc=1,fpn=1,h="int",hlc="[float, float, float]",it="string",ip="int",io=1,l="string",m=1,nbg=1,npm=1,p="string",pht="string",pma=1,po=1,rat="[int, string, int]",sbm="string",tx="string",tcc="script",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/textFieldGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/textFieldGrp.html
 
 
 
@@ -25720,7 +25720,7 @@ w     : width           [int]
 
 def textScrollList(q=1,e=1,ai=1,aas=1,ams=1,ann="string",a="string",ap="[int, string]",bgc="[float, float, float]",dt="string",dkc="script",da=1,dii="int",di="string",dtg="string",dcc="script",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fn="string",fpn=1,h="int",hlc="[float, float, float]",io=1,lf="[int, string]",m=1,nbg=1,ni=1,npm=1,nr="int",nsi=1,p="string",pma=1,po=1,ra=1,rii="int",ri="string",sc="script",sii="int",si="string",sut="string",shi="int",sbm="string",utg="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/textScrollList.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/textScrollList.html
 
 
 
@@ -25999,7 +25999,7 @@ w     : width           [int]
 
 def timeControl(q=1,e=1,acn=1,alf="string",asw=1,ann="string",bgc="[float, float, float]",bs=1,cfc="[float, float, float, float]",dt="string",ds=1,dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,es=1,ex=1,fd=1,fr=1,fgc="[float, float, float]",fpn=1,gt=1,gn=1,h="int",hlc="[float, float, float]",io=1,mlc="string",m=1,nbg=1,npm=1,p="string",pma=1,pc="script",po=1,rng=1,ra=1,rv=1,rc="script",rcs="float",roh=1,r=1,sg="string",sk="string",skc=1,sn=1,s="string",sbm="string",ts="int",tsp="int",ut="string",vis=1,vcc="script",wf="string",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeControl.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeControl.html
 
 
 
@@ -26303,7 +26303,7 @@ w     : width           [int]
 
 def timeField(q=1,e=1,ann="string",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dc="script",dpc="script",ed=1,en=1,ebg=1,ekf=1,ec="script",ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,pre="int",po=1,rfc="script",sbm="string",s="time",ut="string",v="time",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeField.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeField.html
 
 
 
@@ -26504,7 +26504,7 @@ w     : width           [int]
 
 def timeFieldGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dc="script",dpc="script",en=1,en1=1,en2=1,en3=1,en4=1,ebg=1,ekf=1,ex=1,el="string",fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,nf="int",npm=1,p="string",pma=1,pre="int",po=1,rat="[int, string, int]",sbm="string",s="time",ut="string",v="[time, time, time, time]",v1="time",v2="time",v3="time",v4="time",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeFieldGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeFieldGrp.html
 
 
 
@@ -26902,7 +26902,7 @@ w     : width           [int]
 
 def timePort(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,gt=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sn=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timePort.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timePort.html
 
 
 
@@ -27068,7 +27068,7 @@ w     : width           [int]
 
 def toolButton(q=1,e=1,amt=1,ann="string",bgc="[float, float, float]",cc="script",cl="string",dt="string",dtg="string",dcc="script",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",i1="string",i2="string",i3="string",iol="string",io=1,lt="string",m=1,nbg=1,npm=1,ofc="script",onc="script",p="string",piv=1,pma=1,po=1,sl=1,sbm="string",st="string",t="string",ta=1,tc=1,ti1="[string, string]",ti2="[string, string]",ti3="[string, string]",ut="string",ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/toolButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/toolButton.html
 
 
 
@@ -27339,7 +27339,7 @@ w     : width           [int]
 
 def toolCollection(q=1,e=1,cia=1,dt="string",ex=1,gl=1,nci=1,p="string",sl="string",ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/toolCollection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/toolCollection.html
 
 
 
@@ -27414,7 +27414,7 @@ ut    : useTemplate     [string]
 
 def treeLister(q=1,e=1,af="string",add="[string, string, script]",avi="[string, string, string, string]",ann="string",bgc="[float, float, float]",clr=1,cp="string",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ei="string",ex=1,ep="string",etd="int",fcb="script",fl=1,fpn=1,h="int",hlc="[float, float, float]",io=1,isc="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,rc="script",rf="string",rem="string",ruc=1,sp="string",sbm="string",ut="string",vis=1,vcc="script",vnn=1,w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/treeLister.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/treeLister.html
 
 
 
@@ -27655,7 +27655,7 @@ w     : width           [int]
 
 def treeView(q=1,e=1,ai="[string, string]",adr=1,ahp=1,ams=1,arp=1,ann="string",abr="int",bgc="[float, float, float]",bh="[string, boolean]",bcl="[string, float, float, float]",bef="[string, boolean]",bst="[string, int, string]",bs="[string, int, string]",bti="[string, int, string]",btp="[string, int, string]",btc="[string, int, float, float, float]",bto="[string, int, boolean]",bvf="[string, int, boolean]",ch="string",cs=1,cmc="script",dt="string",dl="[string, string]",dls="[string, string]",dtg="string",dad="script",dgc="script",dpc="script",elc="script",en=1,ebg=1,eb="[string, int, int]",ekf=1,enk=1,enl="[string, int]",ex=1,ecc="script",ei="[string, boolean]",fb="int",fn="[string, string]",ff="[string, int]",fpn=1,h="int",hb=1,hlc="[float, float, float]",hl="[string, boolean]",hc="[string, float, float, float]",ibc="[string, int, int]",i="[string, int, string]",ii="[string, string, int]",iie="string",il="string",io=1,it="string",ia="[string, string]",idc="script",dc2="script",iex="string",idx="string",ip="string",irc="script",isl="string",iv="[string, boolean]",lbc="[string, float, float, float]",m=1,nbg=1,nb="int",npm=1,ornament="[string, int, int, int]",orc="[string, float, float, float]",p="string",pma=1,pc="[int, script]",po=1,ra=1,ri="string",rto=1,rpc="[int, script]",sl="[string, int]",sc="script",si="[string, boolean]",scc="script",scl="[string, float, float, float]",shi="string",sbm="string",tc="[string, float, float, float]",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/treeView.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/treeView.html
 
 
 
@@ -28135,7 +28135,7 @@ w     : width           [int]
 
 def columnLayout(q=1,e=1,adj=1,ann="string",bgc="[float, float, float]",ca=1,cal="string",cat="[string, int]",co="[string, int]",cw="int",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nch=1,npm=1,p="string",pma=1,po=1,rs="int",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/columnLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/columnLayout.html
 
 
 
@@ -28330,7 +28330,7 @@ w     : width           [int]
 
 def dockControl(q=1,e=1,aa="string",ann="string",a="string",bgc="[float, float, float]",cc="script",con="string",dt="string",dtg="string",ds="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,epo=1,ex=1,fh=1,fw=1,fcc="script",fl=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,mov=1,nbg=1,npm=1,p="string",pma=1,po=1,r=1,ret=1,s=1,sl="string",st="string",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dockControl.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dockControl.html
 
 
 
@@ -28577,7 +28577,7 @@ w     : width           [int]
 
 def flowLayout(q=1,e=1,ann="string",bgc="[float, float, float]",ca=1,cs="int",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hr=1,io=1,m=1,nbg=1,nch=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",v=1,vis=1,vcc="script",w="int",wr=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/flowLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/flowLayout.html
 
 
 
@@ -28765,7 +28765,7 @@ wr    : wrap            [boolean]
 
 def formLayout(q=1,e=1,ann="string",ac="[string, string, int, string]",af="[string, string, int]",an="[string, string]",aoc="[string, string, int, string]",aof="[string, string, int]",ap="[string, string, int, int]",bgc="[float, float, float]",ca=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nch=1,nd="int",npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/formLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/formLayout.html
 
 
 
@@ -29032,7 +29032,7 @@ w     : width           [int]
 
 def frameLayout(q=1,e=1,ann="string",bgc="[float, float, float]",bgs=1,bs="string",bv=1,ca=1,cll=1,cl=1,cc="script",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,ec="script",fn="string",fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",la="string",li="int",lv=1,lw="int",m=1,mh="int",mw="int",nbg=1,nch=1,npm=1,p="string",pma=1,pcc="script",pec="script",po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/frameLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/frameLayout.html
 
 
 
@@ -29289,7 +29289,7 @@ w     : width           [int]
 
 def gridLayout(q=1,e=1,aec=1,ann="string",ag=1,bgc="[float, float, float]",ch="int",cw="int",cwh="[int, int]",ca=1,cr=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,go=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nch=1,nc="int",npm=1,nr="int",nrc="[int, int]",p="string",pma=1,pos="[string, int]",po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/gridLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/gridLayout.html
 
 
 
@@ -29511,7 +29511,7 @@ w     : width           [int]
 
 def layout(q=1,e=1,ann="string",bgc="[float, float, float]",ca=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nch=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/layout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/layout.html
 
 
 
@@ -29677,7 +29677,7 @@ w     : width           [int]
 
 def menuBarLayout(q=1,e=1,ann="string",bgc="[float, float, float]",ca=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,ma=1,mbv=1,mi="[string, uint]",nbg=1,nch=1,nm=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/menuBarLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/menuBarLayout.html
 
 
 
@@ -29866,7 +29866,7 @@ w     : width           [int]
 
 def paneLayout(q=1,e=1,aft="int",ap="string",api="int",ann="string",bgc="[float, float, float]",ca=1,cn="string",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nch=1,npm=1,nvp=1,p1=1,p2=1,p3=1,p4=1,ps="[int, int, int]",pup=1,p="string",pma=1,po=1,smc="script",st="int",sp="[string, int]",shp="int",swp="int",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/paneLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/paneLayout.html
 
 
 
@@ -30117,7 +30117,7 @@ w     : width           [int]
 
 def rowColumnLayout(q=1,e=1,adj="int",ann="string",bgc="[float, float, float]",ca=1,cal="[int, string]",cat="[int, string, int]",co="[int, string, int]",cs="[int, int]",cw="[int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nch=1,nc="int",npm=1,nr="int",p="string",pma=1,po=1,ral="[int, string]",rat="[int, string, int]",rh="[int, int]",ro="[int, string, int]",rs="[int, int]",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rowColumnLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rowColumnLayout.html
 
 
 
@@ -30360,7 +30360,7 @@ w     : width           [int]
 
 def rowLayout(q=1,e=1,adj="int",ad1="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",ca=1,cal="[int, string]",cl1="string",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct1="string",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co1="int",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,nch=1,nc="int",npm=1,p="string",pma=1,po=1,rat="[int, string, int]",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rowLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rowLayout.html
 
 
 
@@ -30706,7 +30706,7 @@ w     : width           [int]
 
 def scrollLayout(q=1,e=1,ann="string",bgc="[float, float, float]",bv=1,ca=1,cr=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hst="int",io=1,m=1,mcw="int",nbg=1,nch=1,npm=1,pe=1,p="string",pma=1,po=1,rc="script",sah=1,sav=1,saw=1,sbp="[string, int]",sp="string",sbm="string",ut="string",vsb=1,vst="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scrollLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scrollLayout.html
 
 
 
@@ -30941,7 +30941,7 @@ w     : width           [int]
 
 def shelfLayout(q=1,e=1,aln="string",ann="string",bgc="[float, float, float]",ch="int",cw="int",cwh="[int, int]",ca=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hr=1,io=1,lt="string",m=1,nbg=1,nch=1,npm=1,p="string",pma=1,pos="[string, int]",po=1,spa="int",sbm="string",st="string",ut="string",ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shelfLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shelfLayout.html
 
 
 
@@ -31158,7 +31158,7 @@ w     : width           [int]
 
 def shelfTabLayout(q=1,e=1,ann="string",bgc="[float, float, float]",bs="string",cc="script",ca=1,cr=1,dt="string",dtg="string",dcc="script",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hst="int",i="string",iv=1,imh="int",imw="int",io=1,m=1,mcw="int",mt="[int, int]",ntc="script",nbg=1,nch=1,npm=1,p="string",pma=1,psc="script",po=1,scr=1,stb=1,sc="script",st="string",sti="int",snt=1,sbm="string",tl="[string, string]",tli="[int, string]",tp="string",tt="[string, string]",tti="[int, string]",tc=1,tv=1,ut="string",vst="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shelfTabLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shelfTabLayout.html
 
 
 
@@ -31461,7 +31461,7 @@ w     : width           [int]
 
 def tabLayout(q=1,e=1,ann="string",bgc="[float, float, float]",bs="string",cc="script",ca=1,cr=1,dt="string",dtg="string",dcc="script",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",hst="int",i="string",iv=1,imh="int",imw="int",io=1,m=1,mcw="int",mt="[int, int]",ntc="script",nbg=1,nch=1,npm=1,p="string",pma=1,psc="script",po=1,scr=1,stb=1,sc="script",st="string",sti="int",snt=1,sbm="string",tl="[string, string]",tli="[int, string]",tp="string",tt="[string, string]",tti="[int, string]",tc=1,tv=1,ut="string",vst="int",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/tabLayout.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/tabLayout.html
 
 
 
@@ -31765,7 +31765,7 @@ w     : width           [int]
 
 def toolBar(q=1,e=1,aa="string",ann="string",a="string",bgc="[float, float, float]",con="string",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/toolBar.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/toolBar.html
 
 
 
@@ -31943,7 +31943,7 @@ w     : width           [int]
 
 def workspaceControl(q=1,e=1,cp=1,cl=1,cc="script",clp=1,dt="string",dtc="[string, string]",dtm="[string, boolean]",dtp="[string, string, boolean]",dup=1,ex=1,fl=1,h=1,hp="string",hr=1,ic="string",ih="int",iw="int",l="string",li=1,mh="int",mw="int",r=1,rc="string",rp="string",rsh="int",rsw="int",rs=1,rt=1,ss="string",tp="[string, boolean]",ttc="[string, int]",ui="script",ut="string",vis=1,vcc="script",w=1,wp="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/workspaceControl.html
 
 
 
@@ -32159,7 +32159,7 @@ wp    : widthProperty   [string]
 
 def workspaceLayoutManager(q=1,e=1,cmw="[string, boolean]",cu=1,d="string",i="string",ll=1,lml=1,lul=1,m="string",pwc="string",rs=1,rmw=1,s=1,sa="string",sc="string",scc="string",smc="string",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/workspaceLayoutManager.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/workspaceLayoutManager.html
 
 
 
@@ -32276,7 +32276,7 @@ t     : type            [string]
 
 def artBuildPaintMenu():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/artBuildPaintMenu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/artBuildPaintMenu.html
 
 
 
@@ -32297,7 +32297,7 @@ None
 
 def attrEnumOptionMenu(q=1,e=1,ann="string",at="name",bgc="[float, float, float]",cc="script",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ei="[int, string]",ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attrEnumOptionMenu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attrEnumOptionMenu.html
 
 
 
@@ -32473,7 +32473,7 @@ w     : width           [int]
 
 def attrEnumOptionMenuGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",at="name",bgc="[float, float, float]",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ei="[int, string]",ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,rat="[int, string, int]",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attrEnumOptionMenuGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attrEnumOptionMenuGrp.html
 
 
 
@@ -32812,7 +32812,7 @@ w     : width           [int]
 
 def attributeMenu(beg=1,edt="string",fsh=1,inp=1,p="name",rpm="string",upm="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attributeMenu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attributeMenu.html
 
 
 
@@ -32876,7 +32876,7 @@ upm   : unregPulldownMenuCommand [int]
 
 def hotBox(q=1,po=1,pt=1,ao=1,at=1,clo=1,clt=1,co=1,ct=1,cst=1,dco=1,dh=1,ds=1,dzo=1,do=1,dt=1,lo=1,lt=1,mso="string",mst="[string, boolean]",mdo=1,mdt=1,ncc="script",ncd="float",ncp=1,nkp=1,plo=1,plt=1,pos="[uint, uint]",rl=1,ro=1,rt=1,rgo=1,rgt=1,rmb=1,a=1,so=1,st=1,tr="int",um=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hotBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hotBox.html
 
 
 
@@ -33102,7 +33102,7 @@ um    : updateMenus     [boolean]
 
 def menu(q=1,e=1,aob=1,dt="string",dai=1,dtg="string",en=1,ex=1,fi="string",hm=1,ia=1,l="string",lt="string",mn="string",ni=1,p="string",pmc="script",pmo=1,srb=1,to=1,ut="string",ver="string",vis=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/menu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/menu.html
 
 
 
@@ -33240,7 +33240,7 @@ vis   : visible         [boolean]
 
 def menuEditor(q=1,e=1,ann="string",bgc="[float, float, float]",ch="int",cw="int",cwh="[int, int]",cbp="[boolean, string, int]",cbs="[boolean, string, int]",ca=1,c="[string, string, int]",dt="string",d="[string, int]",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",imc="string",i="[string, string, int]",io=1,l="[string, string, int]",m=1,mit=1,nbg=1,nch=1,npm=1,obc="[string, string, int]",obp="[boolean, string, int]",p="string",pma=1,po=1,rbp="[boolean, string, int]",rbs="[boolean, string, int]",sp="[string, int]",sbm="string",st="string",sma="[string, int]",sew="string",seo=1,smo="[string, string, int]",tlm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/menuEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/menuEditor.html
 
 
 
@@ -33541,7 +33541,7 @@ w     : width           [int]
 
 def menuItem(q=1,e=1,aob=1,ann="string",bld=1,cb=1,cl="string",c="script",da="int",dt="string",d=1,dl="string",dtg="string",ddc="script",dmc="script",ec=1,en=1,ecr=1,ex=1,fi="string",i="string",iol="string",ia="string",icb=1,iob=1,irb=1,itl=1,l="string",ld=1,lt="string",ob=1,obi="string",p="string",pmc="script",pmo=1,rp="string",rb=1,rtc="string",stp="string",sm=1,to=1,ut="string",ver="string",vis=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/menuItem.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/menuItem.html
 
 
 
@@ -33781,7 +33781,7 @@ vis   : visible         [boolean]
 
 def menuSet(q=1,e=1,am="string",ams=1,cms="string",ex="string",hbv=1,im="[string, uint]",l="string",ma="string[]",mm="[string, uint]",mms="[string, uint]",nms=1,nm=1,p=1,rm="string",rms="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/menuSet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/menuSet.html
 
 
 
@@ -33888,7 +33888,7 @@ rms   : removeMenuSet   [string]
 
 def menuSetPref(q=1,e=1,exists=1,f=1,la=1,ra=1,sa=1,sb=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/menuSetPref.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/menuSetPref.html
 
 
 
@@ -33954,7 +33954,7 @@ v     : version         [boolean]
 
 def optionMenu(q=1,e=1,acc=1,ann="string",bgc="[float, float, float]",bsp="script",cc="script",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,ill=1,ils=1,l="string",m=1,mvi="int",nbg=1,ni=1,npm=1,p="string",pma=1,po=1,sl="int",sbm="string",ut="string",v="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/optionMenu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/optionMenu.html
 
 
 
@@ -34162,7 +34162,7 @@ w     : width           [int]
 
 def optionMenuGrp(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ann="string",bgc="[float, float, float]",cc="script",cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,el="string",fpn=1,h="int",hlc="[float, float, float]",io=1,ill=1,ils=1,l="string",m=1,nbg=1,ni=1,npm=1,p="string",pma=1,po=1,rat="[int, string, int]",sl="int",sbm="string",ut="string",v="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/optionMenuGrp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/optionMenuGrp.html
 
 
 
@@ -34526,7 +34526,7 @@ w     : width           [int]
 
 def popupMenu(q=1,e=1,aob=1,alt=1,b="int",ctl=1,dt="string",dai=1,ex=1,ia=1,mm=1,ni=1,p="string",pmc="script",pmo=1,sh=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/popupMenu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/popupMenu.html
 
 
 
@@ -34640,7 +34640,7 @@ ut    : useTemplate     [string]
 
 def radioMenuItemCollection(q=1,e=1,dt="string",ex=1,gl=1,p="string",ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/radioMenuItemCollection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/radioMenuItemCollection.html
 
 
 
@@ -34702,7 +34702,7 @@ ut    : useTemplate     [string]
 
 def saveMenu():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/saveMenu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/saveMenu.html
 
 
 
@@ -34737,7 +34737,7 @@ string  The name of the saved file.
 
 def annotate(p="[linear, linear, linear]",tx="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/annotate.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/annotate.html
 
 
 
@@ -34776,7 +34776,7 @@ tx    : text            [string]
 
 def autoPlace(um=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/autoPlace.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/autoPlace.html
 
 
 
@@ -34812,7 +34812,7 @@ um    : useMouse        [boolean]
 
 def buttonManip(i="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/buttonManip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/buttonManip.html
 
 
 
@@ -34854,7 +34854,7 @@ i     : icon            [string]
 
 def callbacks(ac="script",cac=1,cc=1,dh=1,dc=1,ec=1,h="string",lc=1,o="string",rc="script"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/callbacks.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/callbacks.html
 
 
 
@@ -34936,7 +34936,7 @@ rc    : removeCallback  [script]
 
 def disableIncorrectNameWarning():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/disableIncorrectNameWarning.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/disableIncorrectNameWarning.html
 
 
 
@@ -34958,7 +34958,7 @@ None
 
 def grabColor(hsv=1,rgb=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/grabColor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/grabColor.html
 
 
 
@@ -35002,7 +35002,7 @@ rgb   : rgbValue        [boolean]
 
 def headsUpDisplay(q=1,e=1,ad=1,ao=1,atr=1,ac="string",b="int",ba="string",bs="string",c="script",cc="string",cf="string",ct="string",con="string",da="string",dfs="string",dw="int",dp="int",di=1,ev="string",ex=1,op="string",gco="int",l="string",lfs="string",lw="int",lob="int",lv=1,lc=1,le=1,lh=1,lnc=1,lp=1,n="string",nfb="int",nc="string",p="int",pre="string",r=1,rem=1,rid="int",rp="[int, int]",rnc="string",sr=1,s="int",so="[string, string]",sg=1,vis=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/headsUpDisplay.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/headsUpDisplay.html
 
 
 
@@ -35276,7 +35276,7 @@ vis   : visible         [boolean]
 
 def headsUpMessage(ho="int",o="string",s=1,t="float",uve=1,vo="int",vp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/headsUpMessage.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/headsUpMessage.html
 
 
 
@@ -35340,7 +35340,7 @@ vp    : viewport        [boolean]
 
 def hotkey(q=1,alt=1,autoSave=1,cmd=1,ctl=1,cc="string",dp=1,fs=1,mod=1,k="string",n="string",pcr=1,rcr=1,rn="string",sht=1,suh=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hotkey.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hotkey.html
 
 
 
@@ -35445,7 +35445,7 @@ suh   : sourceUserHotkeys [boolean]
 
 def hotkeyCheck(alt=1,cmd=1,ctl=1,ir=1,k="string",kup=1,opt=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hotkeyCheck.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hotkeyCheck.html
 
 
 
@@ -35511,7 +35511,7 @@ opt   : optionModifier  [boolean]
 
 def hotkeyCtx(q=1,ac="string",ca=1,cc="string",ita="[string, string]",rac=1,rc="string",rt="string",t="string",ta=1,te="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hotkeyCtx.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hotkeyCtx.html
 
 
 
@@ -35591,7 +35591,7 @@ te    : typeExists      [string]
 
 def hotkeySet(q=1,e=1,cu=1,delete=1,ex=1,ep="string",hsa=1,ip="string",re="string",src="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hotkeySet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hotkeySet.html
 
 
 
@@ -35668,7 +35668,7 @@ src   : source          [string]
 
 def inViewMessage(a="float",amg="string",bkc="uint",cl="string",ck=1,dk=1,f=1,fit="uint",fot="uint",fst="uint",ft="string",fts="uint",fof="uint",hd=1,msg="string",min=1,pos="string",res=1,sh=1,smg="string",ta="float",tof="uint",uv=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/inViewMessage.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/inViewMessage.html
 
 
 
@@ -35818,7 +35818,7 @@ uv    : uvEditor        [boolean]
 
 def linearPrecision(q=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/linearPrecision.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/linearPrecision.html
 
 
 
@@ -35844,7 +35844,7 @@ In query mode, return type is based on queried flag.
 
 def loadPrefObjects():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/loadPrefObjects.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/loadPrefObjects.html
 
 
 
@@ -35866,7 +35866,7 @@ boolean  True if successful.
 
 def loadUI(lt=1,f="string",s="string",v=1,wd="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/loadUI.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/loadUI.html
 
 
 
@@ -35926,7 +35926,7 @@ wd    : workingDirectory [string]
 
 def mayaDpiSetting(q=1,m="uint",rsv=1,sv="float",sd=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/mayaDpiSetting.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/mayaDpiSetting.html
 
 
 
@@ -35979,7 +35979,7 @@ sd    : systemDpi       [boolean]
 
 def multiTouch(q=1,g=1,t="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/multiTouch.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/multiTouch.html
 
 
 
@@ -36019,7 +36019,7 @@ t     : trackpad        [uint]
 
 def nameCommand(ann="string",c="script",da1="string",da2="string",da3="string",d=1,stp="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nameCommand.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nameCommand.html
 
 
 
@@ -36085,7 +36085,7 @@ stp   : sourceType      [string]
 
 def overrideModifier(cl=1,p="string",r="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/overrideModifier.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/overrideModifier.html
 
 
 
@@ -36135,7 +36135,7 @@ r     : release         [string]
 
 def saveAllShelves():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/saveAllShelves.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/saveAllShelves.html
 
 
 
@@ -36158,7 +36158,7 @@ false.
 
 def savePrefObjects():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/savePrefObjects.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/savePrefObjects.html
 
 
 
@@ -36180,7 +36180,7 @@ boolean  True if successful.
 
 def savePrefs(c=1,g=1,hk=1,ms=1,pl=1,ui=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/savePrefs.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/savePrefs.html
 
 
 
@@ -36239,7 +36239,7 @@ ui    : uiLayout        [boolean]
 
 def saveShelf():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/saveShelf.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/saveShelf.html
 
 
 
@@ -36265,7 +36265,7 @@ boolean  True if successful.
 
 def scmh(a=1,i="uint",quiet=1,r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scmh.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scmh.html
 
 
 
@@ -36315,7 +36315,7 @@ r     : relative        [boolean]
 
 def setMenuMode():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setMenuMode.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setMenuMode.html
 
 
 
@@ -36340,7 +36340,7 @@ string  The current Menu Mode for the menu bar in the main Maya window.
 
 def setNodeTypeFlag(q=1,dsp=1,ts=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setNodeTypeFlag.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setNodeTypeFlag.html
 
 
 
@@ -36383,7 +36383,7 @@ ts    : threadSafe      [boolean]
 
 def setStartupMessage():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setStartupMessage.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setStartupMessage.html
 
 
 
@@ -36405,7 +36405,7 @@ None
 
 def textManip(q=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/textManip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/textManip.html
 
 
 
@@ -36440,7 +36440,7 @@ v     : visible         [boolean]
 
 def thumbnailCaptureComponent(q=1,c=1,cfc=1,ccs=1,d=1,ef="int",fdc="string",iso=1,lfo=1,pp=1,rpt="string",s="string",sf="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/thumbnailCaptureComponent.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/thumbnailCaptureComponent.html
 
 
 

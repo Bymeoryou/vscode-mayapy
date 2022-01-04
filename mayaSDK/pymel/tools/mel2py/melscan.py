@@ -1,23 +1,47 @@
 from pymel.util.common import unescape
 
-def p_function_arg_list_opt(t):
-    """
-    function_arg_list_opt : function_arg_list
-    |  empty
-    """
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def p_translation_unit(t):
+    """
+    translation_unit : external_declaration
+    | translation_unit external_declaration
+    """
     pass
-
-
-def p_external_declaration(t):
+def p_type_specifier(t):
     """
-    external_declaration : function_definition
+    type_specifier : INT
+    | FLOAT
+    | STRING
+    | VECTOR
+    | MATRIX
+    """
+    pass
+def p_declaration_specifiers(t):
+    """
+    declaration_specifiers : type_specifier
+    | GLOBAL type_specifier
+    """
+    pass
+def p_group_list(t):
+    """
+    group_list : group_list group
     | group
     """
-
     pass
-
-
+def p_empty(t):
+    """
+    empty :
+    """
+    pass
+def p_group(t):
+    """
+    group : element
+    | LBRACE group_list_opt RBRACE
+    """
+    pass
 def p_element(t):
     """
     element : declaration_specifiers
@@ -84,119 +108,55 @@ def p_element(t):
     | COMMENT_BLOCK
     | ELLIPSIS
     """
-
     pass
-
-
-def p_group(t):
-    """
-    group : element
-    | LBRACE group_list_opt RBRACE
-    """
-
-    pass
-
-
-def p_declaration_specifiers(t):
-    """
-    declaration_specifiers : type_specifier
-    | GLOBAL type_specifier
-    """
-
-    pass
-
-
-def p_function_definition(t):
-    """
-    function_definition :  function_declarator function_specifiers_opt ID LPAREN function_arg_list_opt RPAREN group
-    """
-
-    pass
-
-
-def p_function_arg_list(t):
-    """
-    function_arg_list : function_arg
-    | function_arg_list COMMA function_arg
-    """
-
-    pass
-
-
 def p_function_arg(t):
     """
     function_arg : type_specifier VAR
     | type_specifier VAR LBRACKET RBRACKET
     """
-
     pass
-
-
-def p_group_list_opt(t):
+def p_function_declarator(t):
     """
-    group_list_opt : group_list
-    | empty
+    function_declarator : GLOBAL PROC
+    | PROC
     """
-
     pass
-
-
-def p_empty(t):
-    """
-    empty :
-    """
-
-    pass
-
-
 def p_function_specifiers_opt(t):
     """
     function_specifiers_opt : type_specifier
     | type_specifier LBRACKET RBRACKET
     | empty
     """
-
     pass
-
-
-def p_type_specifier(t):
+def p_function_arg_list_opt(t):
     """
-    type_specifier : INT
-    | FLOAT
-    | STRING
-    | VECTOR
-    | MATRIX
+    function_arg_list_opt : function_arg_list
+    |  empty
     """
-
     pass
-
-
-def p_translation_unit(t):
+def p_group_list_opt(t):
     """
-    translation_unit : external_declaration
-    | translation_unit external_declaration
+    group_list_opt : group_list
+    | empty
     """
-
     pass
-
-
-def p_group_list(t):
+def p_function_arg_list(t):
     """
-    group_list : group_list group
+    function_arg_list : function_arg
+    | function_arg_list COMMA function_arg
+    """
+    pass
+def p_external_declaration(t):
+    """
+    external_declaration : function_definition
     | group
     """
-
     pass
-
-
-def p_function_declarator(t):
+def p_function_definition(t):
     """
-    function_declarator : GLOBAL PROC
-    | PROC
+    function_definition :  function_declarator function_specifiers_opt ID LPAREN function_arg_list_opt RPAREN group
     """
-
     pass
-
 
 
 tokens = ()

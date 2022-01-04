@@ -1,6 +1,6 @@
 def addDynamic():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/addDynamic.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/addDynamic.html
 
 
 
@@ -39,7 +39,7 @@ attached to it.
 
 def addPP(atr="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/addPP.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/addPP.html
 
 
 
@@ -108,7 +108,7 @@ atr   : attribute       [string]
 
 def air(q=1,e=1,att="float",dx="float",dy="float",dz="float",es=1,fs=1,iro=1,iv="float",m="float",mxd="linear",n="string",pv=1,pos="[linear, linear, linear]",s="float",sp="float",tsr="linear",vco=1,vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle",wks=1,wns=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/air.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/air.html
 
 
 
@@ -290,7 +290,7 @@ wns   : windSetup       [boolean]
 
 def arrayMapper(da="string",iu="string",iv="string",mt="string",t="string",ty="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/arrayMapper.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/arrayMapper.html
 
 
 
@@ -353,7 +353,7 @@ ty    : type            [string]
 
 def collision(q=1,e=1,f="float",n="string",o="float",r="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/collision.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/collision.html
 
 
 
@@ -441,7 +441,7 @@ r     : resilience      [float]
 
 def connectDynamic(ash="script",c="string",d=1,em="string",f="string",rsh="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/connectDynamic.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/connectDynamic.html
 
 
 
@@ -518,7 +518,7 @@ rsh   : removeScriptHandler [int]
 
 def constrain(q=1,e=1,br=1,d="float",dhi=1,hi=1,i=1,na=1,n="string",o="[float, float, float]",pin=1,p="[float, float, float]",rl="float",s=1,st="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/constrain.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/constrain.html
 
 
 
@@ -613,7 +613,7 @@ st    : stiffness       [float]
 
 def drag(q=1,e=1,att="float",dx="float",dy="float",dz="float",m="float",mxd="linear",n="string",pv=1,pos="[linear, linear, linear]",tsr="linear",ud=1,vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/drag.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/drag.html
 
 
 
@@ -749,7 +749,7 @@ vsw   : volumeSweep     [angle]
 
 def dynCache():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dynCache.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dynCache.html
 
 
 
@@ -770,7 +770,7 @@ None
 
 def dynExport(all=1,atr="string",f="string",mxf="time",mnf="time",oup=1,os="int",p="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dynExport.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dynExport.html
 
 
 
@@ -884,7 +884,7 @@ p     : path            [string]
 
 def dynExpression(q=1,e=1,c=1,n="string",r=1,rad=1,rbd=1,s="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dynExpression.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dynExpression.html
 
 
 
@@ -972,7 +972,7 @@ s     : string          [string]
 
 def dynGlobals(q=1,e=1,a=1,la=1,os="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dynGlobals.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dynGlobals.html
 
 
 
@@ -1022,7 +1022,7 @@ os    : overSampling    [int]
 
 def dynPref(q=1,ac=1,ec=1,rf="int",rt=1,sq=1,sr=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dynPref.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dynPref.html
 
 
 
@@ -1084,7 +1084,7 @@ sr    : saveRuntimeState [boolean]
 
 def emit(at="string",fv="float",o="string",pos="[float, float, float]",vv="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/emit.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/emit.html
 
 
 
@@ -1163,7 +1163,7 @@ vv    : vectorValue     [[float, float, float]]
 
 def emitter(q=1,e=1,alx="float",arx="float",afx="float",afc="float",cye="string",cyi="int",dx="linear",dy="linear",dz="linear",drs="float",mxd="linear",mnd="linear",n="string",nuv=1,nsp="float",pos="[linear, linear, linear]",rnd="float",r="float",sro=1,ssz=1,spd="float",srn="float",sp="float",tsp="float",tsr="linear",typ="string",vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/emitter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/emitter.html
 
 
 
@@ -1349,7 +1349,7 @@ vsw   : volumeSweep     [angle]
 
 def event(q=1,e=1,ct="uint",d=1,die=1,em="uint",ls=1,n="string",pr="script",r=1,re="string",s=1,spl="uint",sp="float",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/event.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/event.html
 
 
 
@@ -1446,7 +1446,7 @@ t     : target          [string]
 
 def expression(q=1,e=1,ae="uint",an="uint",a="string",n="string",o="string",sf=1,sn=1,s="string",td=1,uc="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/expression.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/expression.html
 
 
 
@@ -1544,7 +1544,7 @@ uc    : unitConversion  [string]
 
 def expressionEditorListen(lf="string",la="string",le="string",ln="string",sla="string",sle="string",sln="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/expressionEditorListen.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/expressionEditorListen.html
 
 
 
@@ -1610,7 +1610,7 @@ sln   : stopListenForName [string]
 
 def getParticleAttr(a=1,at="string",o="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getParticleAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getParticleAttr.html
 
 
 
@@ -1663,7 +1663,7 @@ o     : object          [string]
 
 def goal(q=1,g="string",i=1,utr=1,w="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/goal.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/goal.html
 
 
 
@@ -1723,7 +1723,7 @@ w     : weight          [float]
 
 def gravity(q=1,e=1,att="float",dx="float",dy="float",dz="float",m="float",mxd="linear",n="string",pv=1,pos="[linear, linear, linear]",tsr="linear",vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/gravity.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/gravity.html
 
 
 
@@ -1860,7 +1860,7 @@ vsw   : volumeSweep     [angle]
 
 def newton(q=1,e=1,att="float",m="float",mxd="linear",mnd="float",n="string",pv=1,pos="[linear, linear, linear]",tsr="linear",vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/newton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/newton.html
 
 
 
@@ -1978,7 +1978,7 @@ vsw   : volumeSweep     [angle]
 
 def particle(q=1,e=1,at="string",ch=1,c="float",ct=1,dc=1,dal=1,fv="float",grs="linear",i="float",jbp="[linear, linear, linear]",jr="linear",ll="[linear, linear, linear]",n="string",nj="uint",order="int",id="int",ppd=1,ppv=1,p="[linear, linear, linear]",sn="string",ur="[linear, linear, linear]",vv="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/particle.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/particle.html
 
 
 
@@ -2123,7 +2123,7 @@ vv    : vectorValue     [[float, float, float]]
 
 def particleExists():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/particleExists.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/particleExists.html
 
 
 
@@ -2147,7 +2147,7 @@ false otherwise.
 
 def particleFill(cp=1,dw=1,mxx="float",mxy="float",mxz="float",mnx="float",mny="float",mnz="float",pd="float",rs="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/particleFill.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/particleFill.html
 
 
 
@@ -2226,7 +2226,7 @@ rs    : resolution      [int]
 
 def particleInstancer(q=1,e=1,a=1,aa="string",ad="string",ap="string",aua="string",awu="string",am=1,c="string",sto="string",cs="float",csu="string",i="int",id="string",lod="string",n="string",obj="string",oi="string",age="string",p="string",rm=1,r="string",ro="string",rt="string",ru="string",sc="string",sh="string",vis="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/particleInstancer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/particleInstancer.html
 
 
 
@@ -2394,7 +2394,7 @@ vis   : visibility      [string]
 
 def particleRenderInfo(q=1,al="int",ala=1,n="int",rtc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/particleRenderInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/particleRenderInfo.html
 
 
 
@@ -2446,7 +2446,7 @@ rtc   : renderTypeCount [boolean]
 
 def radial(q=1,e=1,att="float",m="float",mxd="linear",n="string",pv=1,pos="[linear, linear, linear]",tsr="linear",typ="float",vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/radial.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/radial.html
 
 
 
@@ -2563,7 +2563,7 @@ vsw   : volumeSweep     [angle]
 
 def rigidBody(q=1,e=1,act=1,av=1,afa="string",b="float",c=1,com="[float, float, float]",cl=1,cc=1,cn=1,cp=1,dp="float",dc=1,df="float",f=1,ig=1,i="[float, float, float]",imp="[float, float, float]",iav="[float, float, float]",iv="[float, float, float]",l="int",lcm=1,m="float",n="string",o="[float, float, float]",pc=1,pas=1,p="[float, float, float]",rs="string",slv="string",si="[float, float, float]",sio="string",sf="float",tf="int",vel=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rigidBody.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rigidBody.html
 
 
 
@@ -2763,7 +2763,7 @@ vel   : velocity        [boolean]
 
 def rigidSolver(q=1,e=1,at=1,b=1,cd=1,c=1,ct="float",ctd=1,cr=1,cu=1,deleteCache=1,dcm=1,dc=1,dv=1,d=1,f=1,i=1,ic=1,n="string",rb=1,rbc=1,sc=1,si=1,sm="int",stt="float",st=1,sta=1,s="float",vs="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rigidSolver.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rigidSolver.html
 
 
 
@@ -2928,7 +2928,7 @@ vs    : velocityVectorScale [float]
 
 def runup(cch=1,fpf=1,fsf=1,mxf="time",st=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/runup.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/runup.html
 
 
 
@@ -2983,7 +2983,7 @@ st    : state           [boolean]
 
 def saveInitialState(atr="string",all=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/saveInitialState.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/saveInitialState.html
 
 
 
@@ -3025,7 +3025,7 @@ all   : saveall         [boolean]
 
 def setDynamic(awr=1,dwr=1,all=1,off=1,on=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setDynamic.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setDynamic.html
 
 
 
@@ -3085,7 +3085,7 @@ on    : setOn           [boolean]
 
 def setParticleAttr(at="string",fv="float",o="string",rf="float",rv="[float, float, float]",r=1,vv="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setParticleAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setParticleAttr.html
 
 
 
@@ -3159,7 +3159,7 @@ vv    : vectorValue     [[float, float, float]]
 
 def soft(q=1,c=1,d=1,dh=1,g="float",h=1,n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/soft.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/soft.html
 
 
 
@@ -3263,7 +3263,7 @@ n     : name            [string]
 
 def spring(q=1,e=1,add=1,all=1,ct=1,d="float",dPS="float",efw="float",exc=1,l="float",mxd="float",mnd="float",mm=1,n="string",nd=1,rl="float",rPS="float",sfw="float",s="float",sPS="float",udp=1,urp=1,usp=1,wl="uint",wf=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/spring.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/spring.html
 
 
 
@@ -3437,7 +3437,7 @@ wf    : wireframe       [boolean]
 
 def turbulence(q=1,e=1,att="float",f="float",m="float",mxd="linear",n="string",nsl="int",nsr="float",pv=1,p="float",px="float",py="float",pz="float",pos="[linear, linear, linear]",tsr="linear",vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/turbulence.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/turbulence.html
 
 
 
@@ -3584,7 +3584,7 @@ vsw   : volumeSweep     [angle]
 
 def uniform(q=1,e=1,att="float",dx="float",dy="float",dz="float",m="float",mxd="linear",n="string",pv=1,pos="[linear, linear, linear]",tsr="linear",vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/uniform.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/uniform.html
 
 
 
@@ -3712,7 +3712,7 @@ vsw   : volumeSweep     [angle]
 
 def volumeAxis(q=1,e=1,alx="float",arx="float",att="float",afx="float",afc="float",dtr="float",dx="float",dy="float",dz="float",drs="float",ia=1,m="float",mxd="linear",n="string",pv=1,pos="[linear, linear, linear]",tsr="linear",trb="float",tfx="float",tfy="float",tfz="float",tox="float",toy="float",toz="float",trs="float",vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/volumeAxis.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/volumeAxis.html
 
 
 
@@ -3920,7 +3920,7 @@ vsw   : volumeSweep     [angle]
 
 def vortex(q=1,e=1,att="float",ax="float",ay="float",az="float",m="float",mxd="linear",n="string",pv=1,pos="[linear, linear, linear]",tsr="linear",vex=1,vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/vortex.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/vortex.html
 
 
 
@@ -4048,7 +4048,7 @@ vsw   : volumeSweep     [angle]
 
 def nBase(q=1,e=1,cct="string",cs=1,ss=1,ttv="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nBase.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nBase.html
 
 
 
@@ -4100,7 +4100,7 @@ ttv   : textureToVertex [string]
 
 def nParticle(q=1,e=1,at="string",ch=1,c="float",ct=1,dc=1,dal=1,fv="float",grs="linear",i="float",jbp="[linear, linear, linear]",jr="linear",ll="[linear, linear, linear]",n="string",nj="uint",order="int",id="int",ppd=1,ppv=1,p="[linear, linear, linear]",sn="string",ur="[linear, linear, linear]",vv="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nParticle.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nParticle.html
 
 
 
@@ -4245,7 +4245,7 @@ vv    : vectorValue     [[float, float, float]]
 
 def nSoft(q=1,c=1,d=1,dh=1,g="float",h=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nSoft.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nSoft.html
 
 
 
@@ -4344,7 +4344,7 @@ h     : hideOriginal    [boolean]
 
 def dynPaintEditor(q=1,e=1,ao=1,autoSave=1,cam="string",cm=1,cu=1,cc="[string, string, string, string]",cl="[float, float, float]",ctl=1,ccs=1,dt="string",dsa="string",dfg=1,di="int",dsl="string",dst="string",dtx=1,dtg="string",dbf=1,da=1,drc=1,ex=1,fu="int",fil="string",f="string",fmc="string",hlc="string",ig=1,li="string",lck=1,mlc="string",mn="string",nim=1,ni="[int, int, float, float, float]",pa="float",pnl="string",p="string",rl=1,ref=1,rmd="int",ra=1,ri=1,rig="[float, float]",sa=1,sbm="string",si=1,sb="float",sg="float",sr="float",slc="string",sbf=1,snp=1,sts=1,swp="int",ts="int",up=1,uc=1,ulk=1,upd=1,ut="string",wr="[boolean, boolean]",wi="string",zm="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dynPaintEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dynPaintEditor.html
 
 
 
@@ -4684,7 +4684,7 @@ zm    : zoom            [float]
 
 def getDefaultBrush():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getDefaultBrush.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getDefaultBrush.html
 
 
 
@@ -4705,7 +4705,7 @@ string  Name of the default brush node
 
 def paintEffectsDisplay(q=1,me=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/paintEffectsDisplay.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/paintEffectsDisplay.html
 
 
 
@@ -4740,7 +4740,7 @@ me    : meshDrawEnable  [boolean]
 
 def pfxstrokes(fn="string",pc=1,sl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pfxstrokes.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pfxstrokes.html
 
 
 
@@ -4810,7 +4810,7 @@ sl    : selected        [boolean]
 
 def stroke(n="string",pr=1,s="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/stroke.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/stroke.html
 
 
 
@@ -4853,7 +4853,7 @@ s     : seed            [int]
 
 def colorAtPoint(u="float",v="float",xu="float",xv="float",mu="float",mv="float",o="string",su="uint",sv="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/colorAtPoint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/colorAtPoint.html
 
 
 
@@ -4946,7 +4946,7 @@ sv    : samplesV        [uint]
 
 def fluidCacheInfo(q=1,e=1,at="string",t="time",ef=1,hc=1,hd=1,ic=1,pb=1,re=1,sf=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fluidCacheInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fluidCacheInfo.html
 
 
 
@@ -5024,7 +5024,7 @@ sf    : startFrame      [boolean]
 
 def fluidEmitter(q=1,e=1,cye="string",cyi="int",der="float",fdr="float",fer="float",her="float",mxd="linear",mnd="linear",n="string",pos="[linear, linear, linear]",r="float",tsr="linear",typ="string",vof="[linear, linear, linear]",vsh="string",vsw="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fluidEmitter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fluidEmitter.html
 
 
 
@@ -5142,7 +5142,7 @@ vsw   : volumeSweep     [angle]
 
 def fluidVoxelInfo(cb=1,ib="[int, int, int]",os=1,r="float",v="[float, float, float]",vc=1,xi="int",yi="int",zi="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fluidVoxelInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fluidVoxelInfo.html
 
 
 
@@ -5217,7 +5217,7 @@ zi    : zIndex          [int]
 
 def getFluidAttr(at="string",lf=1,xi="int",x=1,yi="int",y=1,zi="int",z=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getFluidAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getFluidAttr.html
 
 
 
@@ -5286,7 +5286,7 @@ z     : zvalue          [boolean]
 
 def loadFluid(q=1,e=1,ct=1,f="float",ic=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/loadFluid.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/loadFluid.html
 
 
 
@@ -5332,7 +5332,7 @@ ic    : initialConditions [boolean]
 
 def resampleFluid(q=1,e=1,rd="int",rh="int",rw="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/resampleFluid.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/resampleFluid.html
 
 
 
@@ -5379,7 +5379,7 @@ rw    : resampleWidth   [int]
 
 def saveFluid(q=1,e=1,ct="int",et="int",st="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/saveFluid.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/saveFluid.html
 
 
 
@@ -5427,7 +5427,7 @@ st    : startTime       [int]
 
 def setFluidAttr(ad=1,at="string",cl=1,fr="float",fv="float",lf=1,re=1,vr="[float, float, float]",vv="[float, float, float]",xi="int",x=1,yi="int",y=1,zi="int",z=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setFluidAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setFluidAttr.html
 
 
 
@@ -5531,7 +5531,7 @@ z     : zvalue          [boolean]
 
 def truncateFluidCache(q=1,e=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/truncateFluidCache.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/truncateFluidCache.html
 
 
 
@@ -5557,7 +5557,7 @@ In query mode, return type is based on queried flag.
 
 def truncateHairCache(q=1,e=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/truncateHairCache.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/truncateHairCache.html
 
 
 

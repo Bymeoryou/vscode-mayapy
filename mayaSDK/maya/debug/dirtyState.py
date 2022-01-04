@@ -17,6 +17,10 @@ Allows you to produce a comparision of two sets of state information.
     stateBefore.compare(stateAfter)
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class dirtyState(object):
     """
     Provides access and manipulation of dirty state data that has been
@@ -46,20 +50,14 @@ class dirtyState(object):
             _data[]        : List of data values that are dirty
             _connections[] : List of connections that are dirty
         """
-    
         pass
-    
-    
     def __str__(self):
         """
         Return a stringified version of the saved dirty state information.
         Uses a JSON format for easy parsing of return values, but indents
         it so that it is already human readable.
         """
-    
         pass
-    
-    
     def compare(self, other):
         """
         Compare this dirty state against another one and generate a
@@ -76,10 +74,7 @@ class dirtyState(object):
             connection dirty S D    Connection was dirty in other but not in self
             connection clean S D    Connection was dirty in self but not in other
         """
-    
         pass
-    
-    
     def compare_one_type(self, other, request_type, made_dirty):
         """
         Compare this dirty state against another one and return the values
@@ -91,10 +86,7 @@ class dirtyState(object):
         
         Nothing is returned for items that did not change.
         """
-    
         pass
-    
-    
     def write(self, fileName='None'):
         """
         Dump the states in the .dirty format it uses for reading. Useful for
@@ -103,14 +95,7 @@ class dirtyState(object):
         specified then the output is sent to that file, otherwise it goes
         to stdout.
         """
-    
         pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-    
     CLEAN_TYPE = 'clean'
     
     
@@ -133,6 +118,13 @@ class dirtyState(object):
     
     
     RE_PLUG = None
+    
+    
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
 
 
 
@@ -141,9 +133,7 @@ def checkMaya():
     Returns True if this script is running from inside Maya, which it
     needs to be in order to work.
     """
-
     pass
-
 
 
 MAYA_IS_AVAILABLE = True

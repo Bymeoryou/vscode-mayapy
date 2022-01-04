@@ -4,8 +4,13 @@ wait cursor guard mechanism.  It ensures that the wait cursor is started
 and stopped at expected time.
 """
 
-from PySide2.QtCore import Qt
+
 from PySide2.QtWidgets import QApplication
+from PySide2.QtCore import Qt
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class WaitCursorMgr(object):
     """
@@ -18,17 +23,13 @@ class WaitCursorMgr(object):
     
     
     
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, type, value, traceback):
-        pass
-    
-    
+    def __enter__(self): pass
+    def __exit__(self, type, value, traceback): pass
     __dict__ = None
     
+    
     __weakref__ = None
+
 
 
 
@@ -40,8 +41,5 @@ def waitCursor():
         @waitCursor()
         def doSomeHeavyOperation():
     """
-
     pass
-
-
 

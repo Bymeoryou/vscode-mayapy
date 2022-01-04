@@ -1,12 +1,11 @@
 from maya.app.renderSetup.views.renderSetupPreferences import addRenderSetupPreferences
 
-def initialize(mplugin):
-    pass
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-def uninitialize(mplugin):
-    pass
-
+def initialize(mplugin): pass
+def uninitialize(mplugin): pass
 
 
 _initializeModules = []

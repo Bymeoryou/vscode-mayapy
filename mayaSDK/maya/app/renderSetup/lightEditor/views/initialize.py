@@ -1,13 +1,12 @@
-from maya.app.renderSetup.lightEditor.model.group import LightEditorGroup
-from maya.app.renderSetup.lightEditor.model.light import LightEditorLight
-
-def initialize(mplugin):
-    pass
+from maya.app.renderSetup.lightEditor.model.light import LightItem
+from maya.app.renderSetup.lightEditor.model.group import LightGroup
 
 
-def uninitialize(mplugin):
-    pass
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
+def uninitialize(mplugin): pass
+def initialize(mplugin): pass
 
 
 proxyEntries = {}

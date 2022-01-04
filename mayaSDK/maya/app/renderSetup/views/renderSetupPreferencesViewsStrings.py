@@ -4,36 +4,40 @@
 # strings have unique names.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+kSelectUserPresetsLocation = []
+
 kCancel = []
-
-kSelectUserTemplatesLocation = []
-
-kSelectGlobalTemplatesLocation = []
-
-kDeletePreset = []
-
-kDeletePresetMsg = []
-
-kSavePreset = []
-
-kGlobalPresetsLocation = []
 
 kInvalidPresetFound = []
 
-kRenderSettingsPresetsTitle = []
+kDeleteUserRenderSettingsMsg = []
+
+kDelete = []
+
+kSelectGlobalPresetsLocation = []
+
+kDeleteUserRenderSettings = []
+
+kExportRenderSettings = []
 
 kRenderSetupTemplatesTitle = []
+
+kRenderSettingsPresetsTitle = []
+
+kGlobalPresetsLocation = []
 
 kUserTemplatesLocation = []
 
 kGlobalTemplatesLocation = []
 
-kSelectGlobalPresetsLocation = []
+kSelectUserTemplatesLocation = []
+
+kSelectGlobalTemplatesLocation = []
 
 kUserPresetsLocation = []
-
-kSelectUserPresetsLocation = []
-
-kDelete = []
 
 

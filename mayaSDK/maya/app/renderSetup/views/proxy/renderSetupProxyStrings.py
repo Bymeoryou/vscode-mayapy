@@ -4,94 +4,100 @@
 # strings have unique names.
 """
 
-kShaderType = []
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+kOverrideWarningStr = []
+
+kAOVs = []
+
+kRelative = []
+
+kFilterShaders = []
 
 kCollectionWarningStr = []
 
-kFiltersMenu = []
+kFilterSets = []
 
-kCreateAbsoluteOverrideAction = []
-
-kCameras = []
-
-kDeleteAction = []
+kSetRenderableAction = []
 
 kCreateRenderSettingsChildCollectionAction = []
 
-kFilterTransforms = []
+kCreateConnectionOverrideAction = []
+
+kSelectionTypeError = []
+
+kExpandCollapseAction = []
+
+kConnectionType = []
+
+kRenderSettings = []
+
+kRenameAction = []
+
+kCameras = []
+
+kNewFilter = []
+
+kRenderLayerWarningStr = []
 
 kCreateCollectionAction = []
 
-kDragAndDropFailed = []
+kCreateAbsoluteOverrideAction = []
+
+kFilterTransformsAndShapes = []
+
+kFilterCustom = []
+
+kCreateShaderOverrideAction = []
+
+kDragAndDrop = []
+
+kMaterialType = []
+
+kFilterAll = []
+
+kNoOverride = []
+
+kLights = []
+
+kFilterCameras = []
+
+kFullyExpandCollapseAction = []
+
+kSetLocalRender = []
+
+kAbsoluteType = []
+
+kFilterLights = []
+
+kFilterTransformsShapesShaders = []
 
 kCreateMaterialOverrideAction = []
+
+kCreateRelativeOverrideAction = []
+
+kShaderType = []
+
+kDeleteAction = []
+
+kFiltersMenu = []
+
+kAbsolute = []
+
+kSetVisibilityAction = []
+
+kDragAndDropFailed = []
+
+kFilterTransforms = []
+
+kFilterGeometry = []
+
+kSetEnabledAction = []
 
 kRelativeType = []
 
 kSetIsolateSelectedAction = []
-
-kOverrideWarningStr = []
-
-kExpandCollapseAction = []
-
-kFilterAll = []
-
-kRelative = []
-
-kLights = []
-
-kFilterShaders = []
-
-kSetVisibilityAction = []
-
-kFilterSets = []
-
-kFilterCustom = []
-
-kSelectionTypeError = []
-
-kFilterTransformsAndShapes = []
-
-kSetEnabledAction = []
-
-kRenameAction = []
-
-kConnectionType = []
-
-kCreateRelativeOverrideAction = []
-
-kRenderLayerWarningStr = []
-
-kAOVs = []
-
-kSetRenderableAction = []
-
-kFilterLights = []
-
-kCreateConnectionOverrideAction = []
-
-kDragAndDrop = []
-
-kRenderSettings = []
-
-kMaterialType = []
-
-kAbsolute = []
-
-kNoOverride = []
-
-kAbsoluteType = []
-
-kFilterCameras = []
-
-kSetLocalRender = []
-
-kNewFilter = []
-
-kFilterGeometry = []
-
-kFilterTransformsShapesShaders = []
-
-kCreateShaderOverrideAction = []
 
 

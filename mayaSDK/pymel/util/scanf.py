@@ -1,5 +1,6 @@
 import exceptions
 
+
 """
 Danny Yoo (dyoo@hkn.eecs.berkeley.edu)
 
@@ -138,93 +139,25 @@ possible for something to pass in a huge string without spaces.  So use
 an explicit width instead if you can help it.
 """
 
-import unittest
 
-class ScanfTests(unittest.TestCase):
-    def bufferFromString(self, s):
-        pass
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class FormatError(exceptions.ValueError):
+    """
+    A FormatError is raised if we run into errors while scanning
+    for input.
+    """
     
     
-    def testBufferFromString(self):
-        pass
     
-    
-    def testCappedBuffer(self):
-        pass
-    
-    
-    def testCharacter(self):
-        pass
-    
-    
-    def testCharacterSetScanning(self):
-        pass
-    
-    
-    def testDecimalDigitScanning(self):
-        pass
-    
-    
-    def testErroneousFormats(self):
-        pass
-    
-    
-    def testFloats(self):
-        pass
-    
-    
-    def testFscanf(self):
-        pass
-    
-    
-    def testIntegerScanning(self):
-        pass
-    
-    
-    def testMoreSimpleScanningExamples(self):
-        pass
-    
-    
-    def testPredicateScanning(self):
-        pass
-    
-    
-    def testRepeatedGetchOnEmptyStreamIsOk(self):
-        pass
-    
-    
-    def testSkipLeadingSpaceOnScanning(self):
-        """
-        Ralph Heinkel reported a bug where floats weren't being
-        parsed properly if there were leading whitespace for %f.
-        This case checks that
-        """
-    
-        pass
-    
-    
-    def testString(self):
-        pass
-    
-    
-    def testSuppression(self):
-        pass
-    
-    
-    def testUngetch(self):
-        pass
-    
-    
-    def testWhitespaceScanning(self):
-        pass
-    
-    
-    def testWidth(self):
-        pass
-    
-    
-    def testWordScanning(self):
-        pass
+    __weakref__ = None
+
+
+class CompiledPattern:
+    def __call__(self, buffer): pass
+    def __init__(self, handlers, formatString): pass
+    def __repr__(self): pass
 
 
 class CharacterBuffer(object):
@@ -240,64 +173,29 @@ class CharacterBuffer(object):
         Returns the next character.  If there are no more characters
         left in the stream, returns the empty string.
         """
-    
         pass
-    
-    
     def scanCharacterSet(self, characterSet, maxChars='0'):
         """
         Support function that scans across a buffer till we hit
         something outside the allowable characterSet.
         """
-    
         pass
-    
-    
     def scanPredicate(self, predicate, maxChars='0'):
         """
         Support function that scans across a buffer till we hit
         something outside what's allowable by the predicate.
         """
-    
         pass
-    
-    
     def ungetch(self, ch):
         """
         Tries to put back a character.  Can be called at most once
         between calls to getch().
         """
-    
         pass
-    
-    
     __dict__ = None
     
-    __weakref__ = None
-
-
-class FormatError(exceptions.ValueError):
-    """
-    A FormatError is raised if we run into errors while scanning
-    for input.
-    """
-    
-    
     
     __weakref__ = None
-
-
-class CompiledPattern:
-    def __call__(self, buffer):
-        pass
-    
-    
-    def __init__(self, handlers, formatString):
-        pass
-    
-    
-    def __repr__(self):
-        pass
 
 
 class IncompleteCaptureError(exceptions.ValueError):
@@ -311,26 +209,6 @@ class IncompleteCaptureError(exceptions.ValueError):
     __weakref__ = None
 
 
-class CharacterBufferFromFile(CharacterBuffer):
-    """
-    Implementation of CharacterBuffers for files.  We use the native
-    read(1) and seek() calls, so we don't have to do so much magic.
-    """
-    
-    
-    
-    def __init__(self, myfile):
-        pass
-    
-    
-    def getch(self):
-        pass
-    
-    
-    def ungetch(self, ch):
-        pass
-
-
 class CharacterBufferFromIterable(CharacterBuffer):
     """
     Implementation of CharacterBuffers for iterable things.
@@ -339,16 +217,9 @@ class CharacterBufferFromIterable(CharacterBuffer):
     
     
     
-    def __init__(self, iterable):
-        pass
-    
-    
-    def getch(self):
-        pass
-    
-    
-    def ungetch(self, ch):
-        pass
+    def __init__(self, iterable): pass
+    def getch(self): pass
+    def ungetch(self, ch): pass
 
 
 class CappedBuffer(CharacterBuffer):
@@ -359,35 +230,102 @@ class CappedBuffer(CharacterBuffer):
     
     
     
-    def __init__(self, buffer, width, ignoreWhitespace='False'):
-        pass
+    def __init__(self, buffer, width, ignoreWhitespace='False'): pass
+    def getch(self): pass
+    def isIgnoredChar(self, ch): pass
+    def ungetch(self, ch): pass
+
+
+class CharacterBufferFromFile(CharacterBuffer):
+    """
+    Implementation of CharacterBuffers for files.  We use the native
+    read(1) and seek() calls, so we don't have to do so much magic.
+    """
     
     
-    def getch(self):
-        pass
     
-    
-    def isIgnoredChar(self, ch):
-        pass
-    
-    
-    def ungetch(self, ch):
-        pass
+    def __init__(self, myfile): pass
+    def getch(self): pass
+    def ungetch(self, ch): pass
 
 
 
-def makeIgnoredHandler(handler):
+
+def isWhitespaceChar(ch, _set="set(['\\t', '\\n', '\\x0b', '\\x0c', '\\r', ' ', '\\xa0'])"):
+    """
+    Returns true if the charcter looks like whitespace.
+    We follow the definition of C's isspace() function.
+    """
     pass
-
-
-def handleFloat(buffer, allowLeadingWhitespace='True'):
+def makeWidthLimitedHandler(handler, width, ignoreWhitespace='False'):
+    """
+    Constructs a Handler that caps the number of bytes that can be read
+    from the byte buffer.
+    """
     pass
-
-
-def makeHandleLiteral(literal):
+def sscanf(inputString, formatString):
+    """
+    sscanf(inputString, formatString) -> tuple
+    
+    Scans inputString for formats specified in the formatString.  See
+    module's docs for list of supported format characters.
+    """
     pass
-
-
+def handleInt(buffer, base='0'): pass
+def fscanf(inputFile, formatString):
+    """
+    fscanf(inputFile, formatString) -> tuple
+    
+    Scans inputFile for formats specified in the formatString.  See
+    module's docs for list of supported format characters.
+    """
+    pass
+def handleDecimalInt(buffer, optional='False', allowLeadingWhitespace='True'):
+    """
+    Tries to scan for an integer.  If 'optional' is set to False,
+    returns None if an integer can't be successfully scanned.
+    """
+    pass
+def isIterable(thing):
+    """
+    Returns true if 'thing' looks iterable.
+    """
+    pass
+def handleWhitespace(buffer):
+    """
+    Scans for whitespace.  Returns all the whitespace it collects.
+    """
+    pass
+def handleFloat(buffer, allowLeadingWhitespace='True'): pass
+def readiter(inputFile, *args):
+    """
+    Returns an iterator that calls read(*args) on the inputFile.
+    """
+    pass
+def handleChar(buffer): pass
+def bscanf(buffer, formatString):
+    """
+    fscanf(buffer, formatString) -> tuple
+    
+    Scans a CharacterBuffer 'buffer' for formats specified in the
+    formatString.  See scanf module's docs for list of supported format
+    characters.
+    """
+    pass
+def handleString(buffer, allowLeadingWhitespace='True'):
+    """
+    Reading a string format is just an application of reading
+    characters (skipping leading spaces, and reading up to space).
+    """
+    pass
+def isFileLike(thing):
+    """
+    Returns true if thing looks like a file.
+    """
+    pass
+def makeIgnoredHandler(handler): pass
+def _compileFormat(formatBuffer): pass
+def makeHandleLiteral(literal): pass
 def makeCharBuffer(thing):
     """
     Try to coerse 'thing' into a CharacterBuffer.  'thing' can be
@@ -399,115 +337,14 @@ def makeCharBuffer(thing):
     
     makeCharBuffer() will make guesses in that order.
     """
-
     pass
-
-
-def _compileFormat(formatBuffer):
-    pass
-
-
-def handleOct(buffer):
-    pass
-
-
 def makeFormattedHandler(suppression, width, formatCh):
     """
     Given suppression, width, and a formatType, returns a function
     that eats a buffer and returns that thing.
     """
-
     pass
-
-
-def isWhitespaceChar(ch, _set="set(['\\t', '\\n', '\\x0b', '\\x0c', '\\r', ' ', '\\xa0'])"):
-    """
-    Returns true if the charcter looks like whitespace.
-    We follow the definition of C's isspace() function.
-    """
-
-    pass
-
-
-def fscanf(inputFile, formatString):
-    """
-    fscanf(inputFile, formatString) -> tuple
-    
-    Scans inputFile for formats specified in the formatString.  See
-    module's docs for list of supported format characters.
-    """
-
-    pass
-
-
-def makeWidthLimitedHandler(handler, width, ignoreWhitespace='False'):
-    """
-    Constructs a Handler that caps the number of bytes that can be read
-    from the byte buffer.
-    """
-
-    pass
-
-
-def handleChars(buffer, allowLeadingWhitespace='False', isBadCharacter="'<function <lambda>>'", optional='False'):
-    """
-    Read as many characters are there are in the buffer.
-    """
-
-    pass
-
-
-def handleInt(buffer, base='0'):
-    pass
-
-
-def sscanf(inputString, formatString):
-    """
-    sscanf(inputString, formatString) -> tuple
-    
-    Scans inputString for formats specified in the formatString.  See
-    module's docs for list of supported format characters.
-    """
-
-    pass
-
-
-def isIterable(thing):
-    """
-    Returns true if 'thing' looks iterable.
-    """
-
-    pass
-
-
-def handleWhitespace(buffer):
-    """
-    Scans for whitespace.  Returns all the whitespace it collects.
-    """
-
-    pass
-
-
-def bscanf(buffer, formatString):
-    """
-    fscanf(buffer, formatString) -> tuple
-    
-    Scans a CharacterBuffer 'buffer' for formats specified in the
-    formatString.  See scanf module's docs for list of supported format
-    characters.
-    """
-
-    pass
-
-
-def isFileLike(thing):
-    """
-    Returns true if thing looks like a file.
-    """
-
-    pass
-
-
+def handleOct(buffer): pass
 def compile(formatString):
     """
     Given a format string, emits a new CompiledPattern that eats
@@ -517,59 +354,29 @@ def compile(formatString):
     with args being a two-tuple of the FormatError, and the results that
     were captured before the error occurred.
     """
-
     pass
-
-
-def handleHex(buffer):
+def handleChars(buffer, allowLeadingWhitespace='False', isBadCharacter="'<function <lambda>>'", optional='False'):
+    """
+    Read as many characters are there are in the buffer.
+    """
     pass
+def handleHex(buffer): pass
 
-
-def readiter(inputFile, *args):
-    """
-    Returns an iterator that calls read(*args) on the inputFile.
-    """
-
-    pass
-
-
-def handleString(buffer, allowLeadingWhitespace='True'):
-    """
-    Reading a string format is just an application of reading
-    characters (skipping leading spaces, and reading up to space).
-    """
-
-    pass
-
-
-def handleChar(buffer):
-    pass
-
-
-def handleDecimalInt(buffer, optional='False', allowLeadingWhitespace='True'):
-    """
-    Tries to scan for an integer.  If 'optional' is set to False,
-    returns None if an integer can't be successfully scanned.
-    """
-
-    pass
-
-
-
-DIGITS = '0123456789'
-
-_OCT_SET = set()
-
-__version__ = '1.0'
 
 _DIGIT_SET = set()
 
-_HEX_SET = set()
+_FORMAT_HANDLERS = {}
+
+DIGITS = '0123456789'
 
 _PLUS_MINUS_SET = set()
 
-_FORMAT_HANDLERS = {}
-
 WHITESPACE = '\t\n\x0b\x0c\r \xa0'
+
+_HEX_SET = set()
+
+__version__ = '1.0'
+
+_OCT_SET = set()
 
 

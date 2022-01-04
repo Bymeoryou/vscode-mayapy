@@ -1,13 +1,279 @@
-from __builtin__ import max as _max
-from __builtin__ import sum as _sum
-from __builtin__ import min as _min
-from pymel.util.arguments import isNumeric
 from __builtin__ import all as _all
-from pymel.util.utilitytypes import metaReadOnlyAttr
-from pymel.util.arguments import clsname
-from __builtin__ import any as _any
-from __builtin__ import abs as _abs
+from __builtin__ import min as _min
 from pymel.util.utilitytypes import readonly
+from __builtin__ import max as _max
+from __builtin__ import abs as _abs
+from pymel.util.arguments import clsname
+from pymel.util.arguments import isNumeric
+from __builtin__ import any as _any
+from pymel.util.utilitytypes import metaReadOnlyAttr
+from __builtin__ import sum as _sum
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class ArrayIter(object):
+    """
+    A general purpose iterator on Arrays.
+    
+    ArrayIter allows to iterate on one or more specified axis of an Array, in any order.
+    
+    For an Array of n dimensions, iterator on p axis will yield sub-arrays of n-p dimensions,
+    numerical components if n-p is 0.
+    
+    >>> A = Array(range(1, 28), shape=(3, 3, 3))
+    >>> print A.formated()
+    [[[1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]],
+    <BLANKLINE>
+     [[10, 11, 12],
+      [13, 14, 15],
+      [16, 17, 18]],
+    <BLANKLINE>
+     [[19, 20, 21],
+      [22, 23, 24],
+      [25, 26, 27]]]
+    >>> [a for a in A]
+    [Array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), Array([[10, 11, 12], [13, 14, 15], [16, 17, 18]]), Array([[19, 20, 21], [22, 23, 24], [25, 26, 27]])]
+    >>> [a for a in ArrayIter(A, 0)]
+    [Array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), Array([[10, 11, 12], [13, 14, 15], [16, 17, 18]]), Array([[19, 20, 21], [22, 23, 24], [25, 26, 27]])]
+    >>> [a for a in ArrayIter(A, 1)]
+    [Array([[1, 2, 3], [10, 11, 12], [19, 20, 21]]), Array([[4, 5, 6], [13, 14, 15], [22, 23, 24]]), Array([[7, 8, 9], [16, 17, 18], [25, 26, 27]])]
+    >>> [a for a in ArrayIter(A, 2)]
+    [Array([[1, 4, 7], [10, 13, 16], [19, 22, 25]]), Array([[2, 5, 8], [11, 14, 17], [20, 23, 26]]), Array([[3, 6, 9], [12, 15, 18], [21, 24, 27]])]
+    >>> [a for a in ArrayIter(A, 0, 1)]
+    [Array([1, 2, 3]), Array([4, 5, 6]), Array([7, 8, 9]), Array([10, 11, 12]), Array([13, 14, 15]), Array([16, 17, 18]), Array([19, 20, 21]), Array([22, 23, 24]), Array([25, 26, 27])]
+    >>> [a for a in ArrayIter(A, 0, 2)]
+    [Array([1, 4, 7]), Array([2, 5, 8]), Array([3, 6, 9]), Array([10, 13, 16]), Array([11, 14, 17]), Array([12, 15, 18]), Array([19, 22, 25]), Array([20, 23, 26]), Array([21, 24, 27])]
+    >>> [a for a in ArrayIter(A, 0, 1, 2)]
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+    >>> [a for a in ArrayIter(A, 0, 2, 1)]
+    [1, 4, 7, 2, 5, 8, 3, 6, 9, 10, 13, 16, 11, 14, 17, 12, 15, 18, 19, 22, 25, 20, 23, 26, 21, 24, 27]
+    
+    ArrayIter iterators support __len__, __getitem__,  __setitem__ and __delitem__ methods, it can be used
+    to set whole sub-arrays in any order (for instance rows or columns in MatrixN)
+    
+    >>> A = Array(range(1, 10), shape=(3, 3))
+    >>> print A.formated()
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+    >>> [a for a in ArrayIter(A, 0, 1)]
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    >>> len(ArrayIter(A, 0, 1))
+    9
+    >>> ArrayIter(A, 0, 1)[5:9] = [4, 3, 2, 1]
+    >>> print A.formated()
+    [[1, 2, 3],
+     [4, 5, 4],
+     [3, 2, 1]]
+    >>> [a for a in ArrayIter(A, 1)]
+    [Array([1, 4, 3]), Array([2, 5, 2]), Array([3, 4, 1])]
+    >>> len(ArrayIter(A, 1))
+    3
+    >>> ArrayIter(A, 1)[1] = [7, 8, 9]
+    >>> print A.formated()
+    [[1, 7, 3],
+     [4, 8, 4],
+     [3, 9, 1]]
+    >>> ArrayIter(A, 0)[1] = 0
+    >>> print A.formated()
+    [[1, 7, 3],
+     [0, 0, 0],
+     [3, 9, 1]]
+    """
+    
+    
+    
+    def __delitem__(self, index):
+        """
+        it.__delitem__(index) <==> del it[index]
+        
+        Note : if it is an ArrayIter built on Array a, it's equivalent to del a[c] for c in it.toArrayCoords(index)
+        
+        Warning : Do not use __delitem__ during iteration
+        
+        >>> A = Array(range(1, 10), shape=(3, 3))
+        >>> print A.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        >>> [a for a in ArrayIter(A, 0, 1)]
+        [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        >>> del ArrayIter(A, 0, 1)[1]
+        >>> [a for a in ArrayIter(A, 0, 1)]
+        [4, 6, 7, 9]
+        >>> print A.formated()
+        [[4, 6],
+         [7, 9]]
+        >>> [a for a in ArrayIter(A, 1)]
+        [Array([4, 7]), Array([6, 9])]
+        >>> del ArrayIter(A, 1)[-1]
+        >>> print A.formated()
+        [[4],
+         [7]]
+        """
+        pass
+    def __getitem__(self, index):
+        """
+        it.__getitem__(index) <==> it[index]
+        
+        Returns a single sub-Array or component corresponding to the iterator item designated by index, or an Array of values if index is a slice.
+        
+        Note : if it is an ArrayIter built on Array a, it's equivalent to a[c] for c in it.toArrayCoords(index)
+        
+        >>> A = Array(range(1, 10), shape=(3, 3))
+        >>> print A.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        >>> [a for a in ArrayIter(A, 0, 1)]
+        [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        >>> ArrayIter(A, 0, 1)[4]
+        5
+        >>> ArrayIter(A, 0, 1)[0:6]
+        Array([1, 2, 3, 4, 5, 6])
+        >>> [a for a in ArrayIter(A, 1)]
+        [Array([1, 4, 7]), Array([2, 5, 8]), Array([3, 6, 9])]
+        >>> ArrayIter(A, 1)[1]
+        Array([2, 5, 8])
+        >>> ArrayIter(A, 1)[1, 0]
+        2
+        >>> print ArrayIter(A, 1)[0:2, 0:2].formated()
+        [[1, 4],
+         [2, 5]]
+        >>> print A.transpose()[0:2, 0:2].formated()
+        [[1, 4],
+         [2, 5]]
+        """
+        pass
+    def __init__(self, data, *args):
+        """
+        it.__init__(a[, axis1[, axis2[, ...]]])
+        
+        Inits this Array iterator on Array a, using the specified list of axis, see ArrayIter help.
+        """
+        pass
+    def __iter__(self): pass
+    def __len__(self): pass
+    def __length_hint__(self): pass
+    def __setitem__(self, index, value):
+        """
+        it.__setitem__(index, value) <==> it[index] = value
+        
+        Returns a single sub-Array or component corresponding to the iterator item item, or an Array of values if index is a slice.
+        
+        Note : if it is an ArrayIter built on Array a, it's equivalent to a[c]=value for c in it.toArrayCoords(index) or
+        a[c] = value[i] for i, c in enumerate(it.toArrayCoords(index)) if an iterable of values of suitable shapes was provided.
+        
+        >>> A = Array(range(1, 10), shape=(3, 3))
+        >>> print A.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        >>> [a for a in ArrayIter(A, 0, 1)]
+        [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        >>> ArrayIter(A, 0, 1)[4] = 10
+        >>> [a for a in ArrayIter(A, 0, 1)]
+        [1, 2, 3, 4, 10, 6, 7, 8, 9]
+        >>> print A.formated()
+        [[1, 2, 3],
+         [4, 10, 6],
+         [7, 8, 9]]
+        >>> ArrayIter(A, 0, 1)[0:3] = 1
+        >>> [a for a in ArrayIter(A, 0, 1)]
+        [1, 1, 1, 4, 10, 6, 7, 8, 9]
+        >>> print A.formated()
+        [[1, 1, 1],
+         [4, 10, 6],
+         [7, 8, 9]]
+        >>> ArrayIter(A, 0, 1)[5:9] = [4, 3, 2, 1]
+        >>> [a for a in ArrayIter(A, 0, 1)]
+        [1, 1, 1, 4, 10, 4, 3, 2, 1]
+        >>> print A.formated()
+        [[1, 1, 1],
+         [4, 10, 4],
+         [3, 2, 1]]
+        >>> [a for a in ArrayIter(A, 1)]
+        [Array([1, 4, 3]), Array([1, 10, 2]), Array([1, 4, 1])]
+        >>> ArrayIter(A, 1)[1]
+        Array([1, 10, 2])
+        >>> ArrayIter(A, 1)[1, 1] = 5
+        >>> print A.formated()
+        [[1, 1, 1],
+         [4, 5, 4],
+         [3, 2, 1]]
+        >>> ArrayIter(A, 1)[-1] = [7, 8, 9]
+        >>> print A.formated()
+        [[1, 1, 7],
+         [4, 5, 8],
+         [3, 2, 9]]
+        >>> ArrayIter(A, 0)[1] = 0
+        >>> print A.formated()
+        [[1, 1, 7],
+         [0, 0, 0],
+         [3, 2, 9]]
+        """
+        pass
+    def next(self):
+        """
+        it.next() -> the next value, or raise StopIteration
+        """
+        pass
+    def toArrayCoords(self, index, default='None'):
+        """
+        it.toArrayCoords(index, default=None) --> list or tuple
+        
+        Converts an iterator item index (item of number index in the iterator) for that Array iterator to a tuple of axis coordinates for that Array,
+        returns a single coordinates tuple or a list of coordinate tuples if index was a slice.
+        If index is a multi-index (a tuple), the first element if index is checked against the iterator and the remaining elements are considered
+        indices on the iterated sub-array (s).
+        
+        >>> A = Array(range(1, 10), shape=(3, 3))
+        >>> print A.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        >>> [a for a in ArrayIter(A, 0, 1)]
+        [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        >>> it = ArrayIter(A, 0, 1)
+        >>> it[4]
+        5
+        >>> it.toArrayCoords(4)
+        (1, 1)
+        >>> A[1, 1]
+        5
+        >>> it[1:4]
+        Array([2, 3, 4])
+        >>> it.toArrayCoords(slice(1, 4))
+        [(0, 1), (0, 2), (1, 0)]
+        
+        >>> [a for a in ArrayIter(A, 1)]
+        [Array([1, 4, 7]), Array([2, 5, 8]), Array([3, 6, 9])]
+        >>> it = ArrayIter(A, 1)
+        >>> it[0]
+        Array([1, 4, 7])
+        >>> it.toArrayCoords(0)
+        (None, 0)
+        >>> it.toArrayCoords(0, default=slice(None))
+        (slice(None, None, None), 0)
+        >>> A[:, 0]
+        Array([1, 4, 7])
+        >>> it.toArrayCoords((0, 1))
+        (1, 0)
+        >>> it[0, 1]
+        4
+        >>> A[1, 0]
+        4
+        """
+        pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
 
 class Array(object):
     """
@@ -183,10 +449,7 @@ class Array(object):
         >>> print repr(abs(A))
         Array([1, 2, 3])
         """
-    
         pass
-    
-    
     def __add__(self, other):
         """
         a.__add__(b) <==> a+b
@@ -226,10 +489,7 @@ class Array(object):
         >>> print clsname(A+M)
         MatrixN
         """
-    
         pass
-    
-    
     def __coerce__(self, other):
         """
         coerce(a, b) -> (a1, b1)
@@ -458,10 +718,7 @@ class Array(object):
         
         TODO : return some more explicit messages in these cases
         """
-    
         pass
-    
-    
     def __contains__(self, value):
         """
         a.__contains__(b) <==> b in a
@@ -494,10 +751,7 @@ class Array(object):
         #>>> [[1], [4], [3]] in A
         #True
         """
-    
         pass
-    
-    
     def __delitem__(self, index):
         """
         a.__delitem__(index) <==> del a[index]
@@ -563,18 +817,12 @@ class Array(object):
         >>> A.shape
         (0,)
         """
-    
         pass
-    
-    
     def __delslice__(self, start):
         """
         deprecated and __setitem__ should accept slices anyway
         """
-    
         pass
-    
-    
     def __div__(self, other):
         """
         a.__div__(b) <==> a/b
@@ -583,10 +831,7 @@ class Array(object):
         Returns the result of the element wise division of a by b if b is convertible to Array,
         divides every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __eq__(self, other):
         """
         a.__equ__(b) <==> a == b
@@ -601,20 +846,14 @@ class Array(object):
         >>> Array(range(4), shape=(2, 2)) == MatrixN(range(4), shape=(2, 2))
         False
         """
-    
         pass
-    
-    
     def __floordiv__(self, other):
         """
         a.__floordiv__(b) <==> a//b
         Returns the result of the element wise floor division of a by b if b is convertible to Array,
         performs floor division of every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __getitem__(self, index):
         """
         a.__getitem__(index) <==> a[index]
@@ -689,22 +928,13 @@ class Array(object):
          [14, 15, 6],
          [17, 18, 9]]
         """
-    
         pass
-    
-    
-    def __getnewargs__(self):
-        pass
-    
-    
+    def __getnewargs__(self): pass
     def __getslice__(self, start, end):
         """
         Deprecated and __getitem__ should accept slices anyway
         """
-    
         pass
-    
-    
     def __iadd__(self, other):
         """
         a.__iadd__(b) <==> a += b
@@ -751,10 +981,7 @@ class Array(object):
         TypeError: cannot cast a Array of shape (2, 3, 2) to a MatrixN of shape (2, 6),
         as it would truncate data or reduce the number of dimensions
         """
-    
         pass
-    
-    
     def __idiv__(self, other):
         """
         a.__idiv__(b) <==> a /= b
@@ -762,37 +989,25 @@ class Array(object):
         when __future__.division is in effect, otherwise __div__() is used.
         In place division of a by b, see __div__, result must fit a's type
         """
-    
         pass
-    
-    
     def __ifloordiv__(self, other):
         """
         a.__ifloordiv__(b) <==> a //= b
         In place true division of a by b, see __floordiv__, result must fit a's type
         """
-    
         pass
-    
-    
     def __imod__(self, other):
         """
         a.__imod__(b) <==> a %= b
         In place modulo of a by b, see __mod__, result must fit a's type
         """
-    
         pass
-    
-    
     def __imul__(self, other):
         """
         a.__imul__(b) <==> a *= b
         In place multiplication of a and b, see __mul__, result must fit a's type
         """
-    
         pass
-    
-    
     def __init__(self, *args, **kwargs):
         """
         a.__init__(...)
@@ -803,10 +1018,7 @@ class Array(object):
         Note : __init__ from another Array acts as a shallow copy, not a deepcopy, unless
         the Array argument is resized or reshaped.
         """
-    
         pass
-    
-    
     def __invert__(self):
         """
         a.__invert__() <==> ~a
@@ -818,28 +1030,19 @@ class Array(object):
         [[-1, -2],
          [-3, -4]]
         """
-    
         pass
-    
-    
     def __ipow__(self, other, modulo='None'):
         """
         a.__ipow__(b[, modulo]) <==> a**=b or a = (a**b) % modulo
         In place elevation to power of a by b, see __pow__, result must fit a's type
         """
-    
         pass
-    
-    
     def __isub__(self, other):
         """
         a.__isub__(b) <==> a -= b
         In place substraction of a and b, see __sub__, result must fit a's type
         """
-    
         pass
-    
-    
     def __iter__(self, *args, **kwargs):
         """
         a.__iter__(*args, **kwargs) <==> iter(a, *args, **kwargs)
@@ -854,19 +1057,13 @@ class Array(object):
         >>> [a for a in A]
         [Array([1, 2, 3]), Array([4, 5, 6]), Array([7, 8, 9])]
         """
-    
         pass
-    
-    
     def __itruediv__(self, other):
         """
         a.__itruediv__(b) <==> a /= b
         In place true division of a by b, see __truediv__, result must fit a's type
         """
-    
         pass
-    
-    
     def __len__(self):
         """
         a.__len__() <==> len(a)
@@ -877,30 +1074,21 @@ class Array(object):
         >>> Array(shape=(3, 2)).__len__()
         3
         """
-    
         pass
-    
-    
     def __mod__(self, other):
         """
         a.__mod__(b) <==> a%b
         Returns the result of the element wise modulo of a by b if b is convertible to Array,
         performs modulo of every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __mul__(self, other):
         """
         a.__mul__(b) <==> a*b
         Returns the result of the element wise multiplication of a and b if b is convertible to Array,
         multiplies every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __ne__(self, other):
         """
         a.__ne__(b) <==> a != b
@@ -914,10 +1102,7 @@ class Array(object):
         >>> Array(range(4), shape=(2, 2)) != MatrixN(range(4), shape=(2, 2))
         True
         """
-    
         pass
-    
-    
     def __neg__(self):
         """
         a.__neg__() <==> -a
@@ -929,10 +1114,7 @@ class Array(object):
         [[0, -1],
          [-2, -3]]
         """
-    
         pass
-    
-    
     def __neq__(self, other):
         """
         a.__ne__(b) <==> a != b
@@ -946,10 +1128,7 @@ class Array(object):
         >>> Array(range(4), shape=(2, 2)) != MatrixN(range(4), shape=(2, 2))
         True
         """
-    
         pass
-    
-    
     def __pos__(self):
         """
         a.__pos__() <==> +a
@@ -961,10 +1140,7 @@ class Array(object):
         [[0, 1],
          [2, 3]]
         """
-    
         pass
-    
-    
     def __pow__(self, other, modulo='None'):
         """
         a.__pow__(b[, modulo]) <==> a**b or (a**b) % modulo
@@ -972,10 +1148,7 @@ class Array(object):
         Returns the result of the element wise elevation to power of a by b if b is convertible to Array,
         elevates every component of a to power b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __radd__(self, other):
         """
         a.__radd__(b) <==> b+a
@@ -1015,10 +1188,7 @@ class Array(object):
         >>> print clsname(M+A)
         MatrixN
         """
-    
         pass
-    
-    
     def __rdiv__(self, other):
         """
         a.__rdiv__(b) <==> b/a
@@ -1027,52 +1197,34 @@ class Array(object):
         Returns the result of the element wise division of b by a if b is convertible to Array,
         replaces every component c of a by b/c if b is a single numeric value
         """
-    
         pass
-    
-    
     def __reduce__(self):
         """
         __reduce__ is defined to allow pickling of Arrays
         """
-    
         pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
+    def __repr__(self): pass
     def __rfloordiv__(self, other):
         """
         a.__rfloordiv__(b) <==> b//a
         Returns the result of the element wise floor division of b by a if b is convertible to Array,
         replaces every component c of a by b//c if b is a single numeric value
         """
-    
         pass
-    
-    
     def __rmod__(self, other):
         """
         a.__rmod__(b) <==> b%a
         Returns the result of the element wise modulo of b by a if b is convertible to Array,
         replaces every component c of a by b%c if b is a single numeric value
         """
-    
         pass
-    
-    
     def __rmul__(self, other):
         """
         a.__mul__(b) <==> b*a
         Returns the result of the element wise multiplication of a and b if b is convertible to Array,
         multiplies every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __round__(self, ndigits='0'):
         """
         a.__round__([ndigits]) <==> round(a[, ndigits])
@@ -1086,10 +1238,7 @@ class Array(object):
          [0.25, 0.2, 0.17],
          [0.14, 0.13, 0.11]]
         """
-    
         pass
-    
-    
     def __rpow__(self, other):
         """
         a.__rpow__(b[, modulo]) <==> b**a or (b**a) % modulo
@@ -1097,20 +1246,14 @@ class Array(object):
         Returns the result of the element wise elevation to power of b by a if b is convertible to Array,
         replaces every component c of a by b elevated to power c if b is a single numeric value
         """
-    
         pass
-    
-    
     def __rsub__(self, other):
         """
         a.__rsub__(b) <==> b-a
         Returns the result of the element wise substraction of a from b if b is convertible to Array,
         replace every component c of a by b-c if b is a single numeric value
         """
-    
         pass
-    
-    
     def __rtruediv__(self, other):
         """
         a.__rtruediv__(b) <==> b/a
@@ -1119,10 +1262,7 @@ class Array(object):
         Returns the result of the element wise true division of b by a if b is convertible to Array,
         replaces every component c of a by b/c if b is a single numeric value
         """
-    
         pass
-    
-    
     def __setitem__(self, index, value):
         """
         a.__setitem__(index, value) <==> a[index] = value
@@ -1213,36 +1353,24 @@ class Array(object):
             ...
         ValueError: shape mismatch between value(s) and Array components or sub Arrays designated by the indexing
         """
-    
         pass
-    
-    
     def __setslice__(self, start, end, value):
         """
         Deprecated and __setitem__ should accept slices anyway
         """
-    
         pass
-    
-    
     def __str__(self):
         """
         # display
         """
-    
         pass
-    
-    
     def __sub__(self, other):
         """
         a.__sub__(b) <==> a-b
         Returns the result of the element wise substraction of b from a if b is convertible to Array,
         substracts b from every component of a if b is a single numeric value
         """
-    
         pass
-    
-    
     def __truediv__(self, other):
         """
         a.__truediv__(b) <==> a/b
@@ -1251,14 +1379,8 @@ class Array(object):
         Returns the result of the element wise true division of a by b if b is convertible to Array,
         performs true division of every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
-    def __unicode__(self):
-        pass
-    
-    
+    def __unicode__(self): pass
     def all(self, *args, **kwargs):
         """
         a.all([axis0[, axis1[, ...]]]) <=> all(a, axis=(axis0, axis1, ...))
@@ -1279,10 +1401,7 @@ class Array(object):
         >>> A.all(1)
         Array([True, False])
         """
-    
         pass
-    
-    
     def any(self, *args, **kwargs):
         """
         a.any([axis0[, axis1[, ...]]]) <=> any(a, axis=(axis0, axis1, ...))
@@ -1303,10 +1422,7 @@ class Array(object):
         >>> A.any(1)
         Array([True, True])
         """
-    
         pass
-    
-    
     def append(self, other, axis='0'):
         """
         a.append(b[, axis=0])
@@ -1383,10 +1499,7 @@ class Array(object):
           [7, 8, 9, 0],
           [0, 0, 0, 1]]]
         """
-    
         pass
-    
-    
     def appended(self, other, axis='0'):
         """
         a.appended(b[, axis=0]) --> Array
@@ -1462,10 +1575,7 @@ class Array(object):
           [7, 8, 9, 0],
           [0, 0, 0, 1]]]
         """
-    
         pass
-    
-    
     def assign(self, value):
         """
         a.assign(b) --> Array
@@ -1489,10 +1599,7 @@ class Array(object):
         >>> B[0] is A[0]
         True
         """
-    
         pass
-    
-    
     def axisiter(self, *args):
         """
         a.axisiter([axis1[, axis2[, ...]]]) --> ArrayIter
@@ -1519,10 +1626,7 @@ class Array(object):
         >>> [a for a in A.axisiter(1,0)]
         [1, 4, 7, 2, 5, 8, 3, 6, 9]
         """
-    
         pass
-    
-    
     def blend(self, other, weight='0.5'):
         """
         a.blend(b[, weight=0.5]) <==> blend(a, b[, weights=0.5])
@@ -1552,10 +1656,7 @@ class Array(object):
         [[0.0, 0.25],
          [0.75, 1.0]]
         """
-    
         pass
-    
-    
     def clamp(self, low='0', high='1'):
         """
         a.clamp([low=0[, high=1]]) <==> clamp (a, low, high)
@@ -1577,10 +1678,7 @@ class Array(object):
         [[0, 0.25],
          [0.5, 0.75]]
         """
-    
         pass
-    
-    
     def conjugate(self):
         """
         a.conjugate() <==> conjugate(a)
@@ -1602,10 +1700,7 @@ class Array(object):
         [[1, 2],
          [3, 4]]
         """
-    
         pass
-    
-    
     def copy(self):
         """
         a.copy() <==> copy.copy(a)
@@ -1627,10 +1722,7 @@ class Array(object):
         >>> print B[0] is A[0]
         True
         """
-    
         pass
-    
-    
     def count(self, value):
         """
         a.count(b) --> int
@@ -1651,10 +1743,7 @@ class Array(object):
         >>> A.count([1, 2])
         0
         """
-    
         pass
-    
-    
     def deepcopy(self):
         """
         a.deepcopy() <==> copy.deepcopy(a)
@@ -1676,10 +1765,7 @@ class Array(object):
         >>> print B[0] is A[0]
         False
         """
-    
         pass
-    
-    
     def deleted(self, *args):
         """
         a.deleted(index) --> Array
@@ -1745,10 +1831,7 @@ class Array(object):
         >>> B.shape
         (0,)
         """
-    
         pass
-    
-    
     def dist(self, other, *args):
         """
         a.dist(b, axis0, axis1, ...) <==> dist(a, b[, axis=(axis0, axis1, ...)])
@@ -1772,20 +1855,14 @@ class Array(object):
         >>> A.dist(B, 1)
         Array([0.0104403065089, 0.0122065556157, 0.003])
         """
-    
         pass
-    
-    
     def distanceTo(self, other):
         """
         a.distanceTo(b) <==> a.dist(b)
         
         Equivalent to the dist method, for compatibility with Maya's API. Does not take axis arguements
         """
-    
         pass
-    
-    
     def extend(self, other):
         """
         a.vstack(b) <==> a.stack(b, axis=0)
@@ -1803,10 +1880,7 @@ class Array(object):
          [3, 4],
          [5, 6]]
         """
-    
         pass
-    
-    
     def extended(self, other):
         """
         a.vstacked(b) <==> a.stacked(b, axis=0)
@@ -1824,10 +1898,7 @@ class Array(object):
          [3, 4],
          [5, 6]]
         """
-    
         pass
-    
-    
     def fill(self, value='None'):
         """
         a.fill([value])
@@ -1868,10 +1939,7 @@ class Array(object):
         >>> A[0] is A[-1]
         False
         """
-    
         pass
-    
-    
     def filled(self, value='None'):
         """
         a.filled([value]) --> Array
@@ -1911,10 +1979,7 @@ class Array(object):
             ...
         ValueError: value of shape (3,) cannot be fit in a Array of shape (2, 2), some data would be lost
         """
-    
         pass
-    
-    
     def fit(self, other):
         """
         a.fit(b)
@@ -1965,10 +2030,7 @@ class Array(object):
         [[1, 2],
          [4, 5]]
         """
-    
         pass
-    
-    
     def fitted(self, other):
         """
         a.fitted(b) --> Array
@@ -2016,10 +2078,7 @@ class Array(object):
         [[1, 2],
          [4, 5]]
         """
-    
         pass
-    
-    
     def formated(self):
         """
         a.formated() --> str
@@ -2032,10 +2091,7 @@ class Array(object):
          [4, 5, 6],
          [7, 8, 9]]
         """
-    
         pass
-    
-    
     def get(self):
         """
         a.get() --> Tuple
@@ -2046,10 +2102,7 @@ class Array(object):
         >>> print A.get()
         ((1, 2), (3, 4))
         """
-    
         pass
-    
-    
     def hstack(self, other):
         """
         a.hstack(b) <==> a.stack(b, axis=-1)
@@ -2066,10 +2119,7 @@ class Array(object):
         [[1, 2, 3],
          [4, 5, 6]]
         """
-    
         pass
-    
-    
     def hstacked(self, other):
         """
         a.hstacked(b) <==> a.stacked(b, axis=-1)
@@ -2086,10 +2136,7 @@ class Array(object):
         [[1, 2, 3],
          [4, 5, 6]]
         """
-    
         pass
-    
-    
     def imag(self):
         """
         a.real() <==> real(a)
@@ -2111,10 +2158,7 @@ class Array(object):
         [[0, 0],
          [0, 0]]
         """
-    
         pass
-    
-    
     def index(self, value):
         """
         a.index(b) --> int or tuple
@@ -2137,10 +2181,7 @@ class Array(object):
             ...
         ValueError: Array.index(x): x not in Array
         """
-    
         pass
-    
-    
     def isEquivalent(self, other, tol='9.313225746154785e-10'):
         """
         a.isEquivalent(b[, tol]) --> bool
@@ -2161,10 +2202,7 @@ class Array(object):
         >>> A.isEquivalent(B, 0.020)
         True
         """
-    
         pass
-    
-    
     def length(self, *args):
         """
         a.length(axis0, axis1, ...) <==> length(a[, axis=(axis0, axis1, ...)])
@@ -2185,10 +2223,7 @@ class Array(object):
         >>> A.length(1)
         Array([0.865938219505, 0.865938219505, 0.707])
         """
-    
         pass
-    
-    
     def max(self, *args, **kwargs):
         """
         a.max([axis0[, axis1[, ...[, key=func]]]])  <==> max(a[, key=func[, axis=(axis0, axis1, ...)]])
@@ -2209,10 +2244,7 @@ class Array(object):
         >>> A.max(1)
         Array([6, 5])
         """
-    
         pass
-    
-    
     def min(self, *args, **kwargs):
         """
         a.min([axis0[, axis1[, ...[, key=func]]]])  <==> min(a[, key=func[, axis=(axis0, axis1, ...)]])
@@ -2233,10 +2265,7 @@ class Array(object):
         >>> A.min(1)
         Array([3, 0.5])
         """
-    
         pass
-    
-    
     def normal(self, *args):
         """
         a.normal(axis0, axis1, ...) <==> normal(a[, axis=(axis0, axis1, ...)])
@@ -2260,18 +2289,12 @@ class Array(object):
         [[0.577408397894, 0.577408397894, -1.0],
          [0.816455474623, -0.816455474623, 0.0]]
         """
-    
         pass
-    
-    
     def normalize(self, *args):
         """
         Performs an in place normalization of self
         """
-    
         pass
-    
-    
     def prod(self, *args, **kwargs):
         """
         a.prod([axis0[, axis1[, ...[, start=0]]]]) <=> prod(a, start=start, axis=(axis0, axis1, ...))
@@ -2292,10 +2315,7 @@ class Array(object):
         >>> A.prod(1)
         Array([6, 120])
         """
-    
         pass
-    
-    
     def ravel(self):
         """
         a.ravel() <==> Array(a.flat)
@@ -2306,10 +2326,7 @@ class Array(object):
         >>> print repr(A.ravel())
         Array([1, 2, 3, 4, 5, 6, 7, 8, 9])
         """
-    
         pass
-    
-    
     def real(self):
         """
         a.real() <==> real(a)
@@ -2331,10 +2348,7 @@ class Array(object):
         [[1, 2],
          [3, 4]]
         """
-    
         pass
-    
-    
     def reshape(self, shape='None'):
         """
         a.reshaped(shape) <==> a.shape = shape
@@ -2365,10 +2379,7 @@ class Array(object):
         >>> S is A[0, 0]
         False
         """
-    
         pass
-    
-    
     def reshaped(self, shape='None'):
         """
         a.reshaped(shape) --> Array
@@ -2396,10 +2407,7 @@ class Array(object):
         >>> A[0] is B[0, 0]
         False
         """
-    
         pass
-    
-    
     def resize(self, shape='None', value='None'):
         """
         a.resize([shape[, value]])
@@ -2446,10 +2454,7 @@ class Array(object):
          [11, 12, 13, 14, 15],
          [16, 0, 0, 1, 1]]
         """
-    
         pass
-    
-    
     def resized(self, shape='None', value='None'):
         """
         a.resized([shape [, value]]) --> Array
@@ -2493,10 +2498,7 @@ class Array(object):
          [11, 12, 13, 14, 15],
          [16, 0, 0, 1, 1]]
         """
-    
         pass
-    
-    
     def sqlength(self, *args):
         """
         a.sqlength(axis0, axis1, ...) <==> sqlength(a[, axis=(axis0, axis1, ...)])
@@ -2517,10 +2519,7 @@ class Array(object):
         >>> A.sqlength(1)
         Array([0.749849, 0.749849, 0.499849])
         """
-    
         pass
-    
-    
     def stack(self, other, axis='0'):
         """
         a.stack(b[, axis=0]) --> Array
@@ -2597,10 +2596,7 @@ class Array(object):
           [7, 8, 9, 0],
           [0, 0, 0, 1]]]
         """
-    
         pass
-    
-    
     def stacked(self, other, axis='0'):
         """
         a.stacked(b[, axis=0]) --> Array
@@ -2677,10 +2673,7 @@ class Array(object):
           [7, 8, 9, 0],
           [0, 0, 0, 1]]]
         """
-    
         pass
-    
-    
     def strip(self, *args):
         """
         a.strip(index)
@@ -2748,10 +2741,7 @@ class Array(object):
         >>> print A.formated()
         []
         """
-    
         pass
-    
-    
     def stripped(self, *args):
         """
         a.stripped(index) --> Array
@@ -2819,10 +2809,7 @@ class Array(object):
         >>> print B.formated()
         []
         """
-    
         pass
-    
-    
     def subiter(self, dim='None'):
         """
         a.subiter([dim=None]) --> ArrayIter
@@ -2858,10 +2845,7 @@ class Array(object):
             ...
         ValueError: can only iterate for a sub-dimension inferior to Array's number of dimensions 3
         """
-    
         pass
-    
-    
     def sum(self, *args, **kwargs):
         """
         a.sum([axis0[, axis1[, ...[, start=0]]]]) <=> sum(a, start=start, axis=(axis0, axis1, ...))
@@ -2883,10 +2867,7 @@ class Array(object):
         >>> A.sum(1)
         Array([6, 15])
         """
-    
         pass
-    
-    
     def tolist(self):
         """
         a.tolist() --> list
@@ -2901,10 +2882,7 @@ class Array(object):
         >>> print repr(A.tolist())
         [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
         """
-    
         pass
-    
-    
     def totuple(self):
         """
         a.totuple() --> tuple
@@ -2919,10 +2897,7 @@ class Array(object):
         >>> print repr(A.totuple())
         ((1, 2, 3), (4, 5, 6), (7, 8, 9))
         """
-    
         pass
-    
-    
     def transpose(self, *args):
         """
         a.transpose([axis0[, axis1[, ...]]]) --> Array
@@ -2971,10 +2946,7 @@ class Array(object):
          [1, 4, 7],
          [2, 5, 8]]
         """
-    
         pass
-    
-    
     def trim(self, shape='None', value='None'):
         """
         a.trim(shape)
@@ -3011,10 +2983,7 @@ class Array(object):
         [[1, 2],
          [4, 5]]
         """
-    
         pass
-    
-    
     def trimmed(self, shape='None', value='None'):
         """
         a.trimmed([shape [, value]]) --> Array
@@ -3055,10 +3024,7 @@ class Array(object):
         [[1, 2],
          [4, 5]]
         """
-    
         pass
-    
-    
     def vstack(self, other):
         """
         a.vstack(b) <==> a.stack(b, axis=0)
@@ -3076,10 +3042,7 @@ class Array(object):
          [3, 4],
          [5, 6]]
         """
-    
         pass
-    
-    
     def vstacked(self, other):
         """
         a.vstacked(b) <==> a.stacked(b, axis=0)
@@ -3097,10 +3060,8 @@ class Array(object):
          [3, 4],
          [5, 6]]
         """
-    
         pass
-    
-    
+    @staticmethod
     def __new__(cls, *args, **kwargs):
         """
         cls.__new__(...) --> cls
@@ -3109,22 +3070,89 @@ class Array(object):
         class cls (an Array subclass) default shape (if any) and set to the class default value.
         See Array, MatrixN or VectorN help for more information.
         """
-    
         pass
-    
-    
-    T = None
-    
-    data = None
-    
-    flat = None
-    
-    ndim = None
-    
-    shape = None
-    
-    size = None
-    
+    @property
+    def T(self):
+        """
+        The transposed array
+        """
+        pass
+    @property
+    def data(self):
+        """
+        The nested list storage for the Array data
+        """
+        pass
+    @property
+    def flat(self):
+        """
+        a.flat --> ArrayIter
+        
+        Flat iterator on all components of the Array
+        
+        Note : ArrayIter iterators support __len__, __getitem__ and __setitem__
+        
+        >>> A = Array(range(1, 10), shape=(3, 3))
+        >>> print A.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        >>> [a for a in A]
+        [Array([1, 2, 3]), Array([4, 5, 6]), Array([7, 8, 9])]
+        >>> [a for a in A.flat]
+        [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        >>> A.flat[5:10] = [4, 3, 2, 1]
+        >>> print A.formated()
+        [[1, 2, 3],
+         [4, 5, 4],
+         [3, 2, 1]]
+        """
+        pass
+    @property
+    def ndim(self):
+        """
+        Number of dimensions of the Array
+        """
+        pass
+    @property
+    def shape(self):
+        """
+        a.shape : tuple
+        
+        Shape of the Array (number of dimensions and number of components in each dimension).
+        
+        It can be queried, or set to change the Array's shape similarly to the reshape method.
+        
+        >>> A = Array(range(1, 17), shape=(4, 4))
+        >>> print A.formated()
+        [[1, 2, 3, 4],
+         [5, 6, 7, 8],
+         [9, 10, 11, 12],
+         [13, 14, 15, 16]]
+        >>> S = A[0]
+        >>> A.shape=(2, 2, 4)
+        >>> print A.formated()
+        [[[1, 2, 3, 4],
+          [5, 6, 7, 8]],
+        <BLANKLINE>
+         [[9, 10, 11, 12],
+          [13, 14, 15, 16]]]
+        >>> A.shape=(4, 4)
+        >>> print A.formated()
+        [[1, 2, 3, 4],
+         [5, 6, 7, 8],
+         [9, 10, 11, 12],
+         [13, 14, 15, 16]]
+        
+        Related : see Array.reshape method.
+        """
+        pass
+    @property
+    def size(self):
+        """
+        Total size of the Array (number of individual components)
+        """
+        pass
     __hash__ = None
     
     
@@ -3134,294 +3162,6 @@ class Array(object):
     
     
     apicls = None
-
-
-class ArrayIter(object):
-    """
-    A general purpose iterator on Arrays.
-    
-    ArrayIter allows to iterate on one or more specified axis of an Array, in any order.
-    
-    For an Array of n dimensions, iterator on p axis will yield sub-arrays of n-p dimensions,
-    numerical components if n-p is 0.
-    
-    >>> A = Array(range(1, 28), shape=(3, 3, 3))
-    >>> print A.formated()
-    [[[1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9]],
-    <BLANKLINE>
-     [[10, 11, 12],
-      [13, 14, 15],
-      [16, 17, 18]],
-    <BLANKLINE>
-     [[19, 20, 21],
-      [22, 23, 24],
-      [25, 26, 27]]]
-    >>> [a for a in A]
-    [Array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), Array([[10, 11, 12], [13, 14, 15], [16, 17, 18]]), Array([[19, 20, 21], [22, 23, 24], [25, 26, 27]])]
-    >>> [a for a in ArrayIter(A, 0)]
-    [Array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), Array([[10, 11, 12], [13, 14, 15], [16, 17, 18]]), Array([[19, 20, 21], [22, 23, 24], [25, 26, 27]])]
-    >>> [a for a in ArrayIter(A, 1)]
-    [Array([[1, 2, 3], [10, 11, 12], [19, 20, 21]]), Array([[4, 5, 6], [13, 14, 15], [22, 23, 24]]), Array([[7, 8, 9], [16, 17, 18], [25, 26, 27]])]
-    >>> [a for a in ArrayIter(A, 2)]
-    [Array([[1, 4, 7], [10, 13, 16], [19, 22, 25]]), Array([[2, 5, 8], [11, 14, 17], [20, 23, 26]]), Array([[3, 6, 9], [12, 15, 18], [21, 24, 27]])]
-    >>> [a for a in ArrayIter(A, 0, 1)]
-    [Array([1, 2, 3]), Array([4, 5, 6]), Array([7, 8, 9]), Array([10, 11, 12]), Array([13, 14, 15]), Array([16, 17, 18]), Array([19, 20, 21]), Array([22, 23, 24]), Array([25, 26, 27])]
-    >>> [a for a in ArrayIter(A, 0, 2)]
-    [Array([1, 4, 7]), Array([2, 5, 8]), Array([3, 6, 9]), Array([10, 13, 16]), Array([11, 14, 17]), Array([12, 15, 18]), Array([19, 22, 25]), Array([20, 23, 26]), Array([21, 24, 27])]
-    >>> [a for a in ArrayIter(A, 0, 1, 2)]
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-    >>> [a for a in ArrayIter(A, 0, 2, 1)]
-    [1, 4, 7, 2, 5, 8, 3, 6, 9, 10, 13, 16, 11, 14, 17, 12, 15, 18, 19, 22, 25, 20, 23, 26, 21, 24, 27]
-    
-    ArrayIter iterators support __len__, __getitem__,  __setitem__ and __delitem__ methods, it can be used
-    to set whole sub-arrays in any order (for instance rows or columns in MatrixN)
-    
-    >>> A = Array(range(1, 10), shape=(3, 3))
-    >>> print A.formated()
-    [[1, 2, 3],
-     [4, 5, 6],
-     [7, 8, 9]]
-    >>> [a for a in ArrayIter(A, 0, 1)]
-    [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    >>> len(ArrayIter(A, 0, 1))
-    9
-    >>> ArrayIter(A, 0, 1)[5:9] = [4, 3, 2, 1]
-    >>> print A.formated()
-    [[1, 2, 3],
-     [4, 5, 4],
-     [3, 2, 1]]
-    >>> [a for a in ArrayIter(A, 1)]
-    [Array([1, 4, 3]), Array([2, 5, 2]), Array([3, 4, 1])]
-    >>> len(ArrayIter(A, 1))
-    3
-    >>> ArrayIter(A, 1)[1] = [7, 8, 9]
-    >>> print A.formated()
-    [[1, 7, 3],
-     [4, 8, 4],
-     [3, 9, 1]]
-    >>> ArrayIter(A, 0)[1] = 0
-    >>> print A.formated()
-    [[1, 7, 3],
-     [0, 0, 0],
-     [3, 9, 1]]
-    """
-    
-    
-    
-    def __delitem__(self, index):
-        """
-        it.__delitem__(index) <==> del it[index]
-        
-        Note : if it is an ArrayIter built on Array a, it's equivalent to del a[c] for c in it.toArrayCoords(index)
-        
-        Warning : Do not use __delitem__ during iteration
-        
-        >>> A = Array(range(1, 10), shape=(3, 3))
-        >>> print A.formated()
-        [[1, 2, 3],
-         [4, 5, 6],
-         [7, 8, 9]]
-        >>> [a for a in ArrayIter(A, 0, 1)]
-        [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        >>> del ArrayIter(A, 0, 1)[1]
-        >>> [a for a in ArrayIter(A, 0, 1)]
-        [4, 6, 7, 9]
-        >>> print A.formated()
-        [[4, 6],
-         [7, 9]]
-        >>> [a for a in ArrayIter(A, 1)]
-        [Array([4, 7]), Array([6, 9])]
-        >>> del ArrayIter(A, 1)[-1]
-        >>> print A.formated()
-        [[4],
-         [7]]
-        """
-    
-        pass
-    
-    
-    def __getitem__(self, index):
-        """
-        it.__getitem__(index) <==> it[index]
-        
-        Returns a single sub-Array or component corresponding to the iterator item designated by index, or an Array of values if index is a slice.
-        
-        Note : if it is an ArrayIter built on Array a, it's equivalent to a[c] for c in it.toArrayCoords(index)
-        
-        >>> A = Array(range(1, 10), shape=(3, 3))
-        >>> print A.formated()
-        [[1, 2, 3],
-         [4, 5, 6],
-         [7, 8, 9]]
-        >>> [a for a in ArrayIter(A, 0, 1)]
-        [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        >>> ArrayIter(A, 0, 1)[4]
-        5
-        >>> ArrayIter(A, 0, 1)[0:6]
-        Array([1, 2, 3, 4, 5, 6])
-        >>> [a for a in ArrayIter(A, 1)]
-        [Array([1, 4, 7]), Array([2, 5, 8]), Array([3, 6, 9])]
-        >>> ArrayIter(A, 1)[1]
-        Array([2, 5, 8])
-        >>> ArrayIter(A, 1)[1, 0]
-        2
-        >>> print ArrayIter(A, 1)[0:2, 0:2].formated()
-        [[1, 4],
-         [2, 5]]
-        >>> print A.transpose()[0:2, 0:2].formated()
-        [[1, 4],
-         [2, 5]]
-        """
-    
-        pass
-    
-    
-    def __init__(self, data, *args):
-        """
-        it.__init__(a[, axis1[, axis2[, ...]]])
-        
-        Inits this Array iterator on Array a, using the specified list of axis, see ArrayIter help.
-        """
-    
-        pass
-    
-    
-    def __iter__(self):
-        pass
-    
-    
-    def __len__(self):
-        pass
-    
-    
-    def __length_hint__(self):
-        pass
-    
-    
-    def __setitem__(self, index, value):
-        """
-        it.__setitem__(index, value) <==> it[index] = value
-        
-        Returns a single sub-Array or component corresponding to the iterator item item, or an Array of values if index is a slice.
-        
-        Note : if it is an ArrayIter built on Array a, it's equivalent to a[c]=value for c in it.toArrayCoords(index) or
-        a[c] = value[i] for i, c in enumerate(it.toArrayCoords(index)) if an iterable of values of suitable shapes was provided.
-        
-        >>> A = Array(range(1, 10), shape=(3, 3))
-        >>> print A.formated()
-        [[1, 2, 3],
-         [4, 5, 6],
-         [7, 8, 9]]
-        >>> [a for a in ArrayIter(A, 0, 1)]
-        [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        >>> ArrayIter(A, 0, 1)[4] = 10
-        >>> [a for a in ArrayIter(A, 0, 1)]
-        [1, 2, 3, 4, 10, 6, 7, 8, 9]
-        >>> print A.formated()
-        [[1, 2, 3],
-         [4, 10, 6],
-         [7, 8, 9]]
-        >>> ArrayIter(A, 0, 1)[0:3] = 1
-        >>> [a for a in ArrayIter(A, 0, 1)]
-        [1, 1, 1, 4, 10, 6, 7, 8, 9]
-        >>> print A.formated()
-        [[1, 1, 1],
-         [4, 10, 6],
-         [7, 8, 9]]
-        >>> ArrayIter(A, 0, 1)[5:9] = [4, 3, 2, 1]
-        >>> [a for a in ArrayIter(A, 0, 1)]
-        [1, 1, 1, 4, 10, 4, 3, 2, 1]
-        >>> print A.formated()
-        [[1, 1, 1],
-         [4, 10, 4],
-         [3, 2, 1]]
-        >>> [a for a in ArrayIter(A, 1)]
-        [Array([1, 4, 3]), Array([1, 10, 2]), Array([1, 4, 1])]
-        >>> ArrayIter(A, 1)[1]
-        Array([1, 10, 2])
-        >>> ArrayIter(A, 1)[1, 1] = 5
-        >>> print A.formated()
-        [[1, 1, 1],
-         [4, 5, 4],
-         [3, 2, 1]]
-        >>> ArrayIter(A, 1)[-1] = [7, 8, 9]
-        >>> print A.formated()
-        [[1, 1, 7],
-         [4, 5, 8],
-         [3, 2, 9]]
-        >>> ArrayIter(A, 0)[1] = 0
-        >>> print A.formated()
-        [[1, 1, 7],
-         [0, 0, 0],
-         [3, 2, 9]]
-        """
-    
-        pass
-    
-    
-    def next(self):
-        """
-        it.next() -> the next value, or raise StopIteration
-        """
-    
-        pass
-    
-    
-    def toArrayCoords(self, index, default='None'):
-        """
-        it.toArrayCoords(index, default=None) --> list or tuple
-        
-        Converts an iterator item index (item of number index in the iterator) for that Array iterator to a tuple of axis coordinates for that Array,
-        returns a single coordinates tuple or a list of coordinate tuples if index was a slice.
-        If index is a multi-index (a tuple), the first element if index is checked against the iterator and the remaining elements are considered
-        indices on the iterated sub-array (s).
-        
-        >>> A = Array(range(1, 10), shape=(3, 3))
-        >>> print A.formated()
-        [[1, 2, 3],
-         [4, 5, 6],
-         [7, 8, 9]]
-        >>> [a for a in ArrayIter(A, 0, 1)]
-        [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        >>> it = ArrayIter(A, 0, 1)
-        >>> it[4]
-        5
-        >>> it.toArrayCoords(4)
-        (1, 1)
-        >>> A[1, 1]
-        5
-        >>> it[1:4]
-        Array([2, 3, 4])
-        >>> it.toArrayCoords(slice(1, 4))
-        [(0, 1), (0, 2), (1, 0)]
-        
-        >>> [a for a in ArrayIter(A, 1)]
-        [Array([1, 4, 7]), Array([2, 5, 8]), Array([3, 6, 9])]
-        >>> it = ArrayIter(A, 1)
-        >>> it[0]
-        Array([1, 4, 7])
-        >>> it.toArrayCoords(0)
-        (None, 0)
-        >>> it.toArrayCoords(0, default=slice(None))
-        (slice(None, None, None), 0)
-        >>> A[:, 0]
-        Array([1, 4, 7])
-        >>> it.toArrayCoords((0, 1))
-        (1, 0)
-        >>> it[0, 1]
-        4
-        >>> A[1, 0]
-        4
-        """
-    
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
 
 
 class VectorN(Array):
@@ -3517,20 +3257,14 @@ class VectorN(Array):
         
         In place multiplication of VectorN a and b, see __mul__, result must fit a's type
         """
-    
         pass
-    
-    
     def __ixor__(self, other):
         """
         a.__xor__(b) <==> a^=b
         
         Inplace cross product or transformation by inverse transpose MatrixN of b is v is a MatrixN
         """
-    
         pass
-    
-    
     def __mul__(self, other):
         """
         a.__mul__(b) <==> a*b
@@ -3540,10 +3274,7 @@ class VectorN(Array):
         otherwise, returns the result of the element wise multiplication of a and b if b is convertible to Array,
         multiplies every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __rmul__(self, other):
         """
         a.__rmul__(b) <==> b*a
@@ -3553,10 +3284,7 @@ class VectorN(Array):
         otherwise, returns the result of the element wise multiplication of b and a if b is convertible to Array,
         multiplies every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __xor__(self, other):
         """
         a.__xor__(b) <==> a^b
@@ -3565,10 +3293,7 @@ class VectorN(Array):
         if b is a MatrixN, a^b is equivalent to transforming a by the inverse transpose MatrixN of b,
         often used to transform normals
         """
-    
         pass
-    
-    
     def angle(self, other, third='None'):
         """
         u.angle(v) <==> angle(u, v) --> float
@@ -3580,10 +3305,7 @@ class VectorN(Array):
         Alternatively can use the form a.angle(b, c), where a, b, c are 4 dimensional Vectors representing 3D points,
         it is then equivalent to angle(b-a, c-a)
         """
-    
         pass
-    
-    
     def axis(self, other, third='None', normalize='False'):
         """
         u.axis(v[, normalize=False]) <==> axis(u, v[, normalize=False])
@@ -3596,10 +3318,7 @@ class VectorN(Array):
         Alternatively can use the form a.axis(b, c), where a, b, c are 4 dimensional Vectors representing 3D points,
         it is then equivalent to axis(b-a, c-a).
         """
-    
         pass
-    
-    
     def cotan(self, other, third='None'):
         """
         u.cotan(v) <==> cotan(u, v)
@@ -3609,50 +3328,35 @@ class VectorN(Array):
         Alternatively can use the form a.cotan(b, c), where a, b, c are 4 dimensional Vectors representing 3D points,
         it is then equivalent to cotan(b-a, c-a)
         """
-    
         pass
-    
-    
     def cross(self, other):
         """
         u.cross(v) <==> cross(u, v)
         
         cross product of u and v, u and v should be 3 dimensional vectors.
         """
-    
         pass
-    
-    
     def dot(self, other):
         """
         u.dot(v) <==> dot(u, v)
         
         dot product of u and v, u and v should be Vectors of identical size.
         """
-    
         pass
-    
-    
     def isParallel(self, other, tol='9.313225746154785e-10'):
         """
         u.isParallel(v[, tol]) --> bool
         
         Returns True if both arguments considered as VectorN are parallel within the specified tolerance
         """
-    
         pass
-    
-    
     def length(self):
         """
         u.length() --> float
         
         Returns the length of u, ie sqrt(u.dot(u))
         """
-    
         pass
-    
-    
     def normal(self):
         """
         u.normal() --> VectorN
@@ -3660,48 +3364,33 @@ class VectorN(Array):
         Returns a normalized copy of self. Overriden to be consistant with Maya API and MEL unit command,
         does not raise an exception if self if of zero length, instead returns a copy of self
         """
-    
         pass
-    
-    
     def outer(self, other):
         """
         u.outer(v) <==> outer(u, v)
         
         Outer product of vectors u and v
         """
-    
         pass
-    
-    
     def projectionOnto(self, other):
         """
         Returns the projection of this vector onto other vector.
         """
-    
         pass
-    
-    
     def sqlength(self):
         """
         u.sqlength() --> float
         
         Returns the square length of u, ie u.dot(u).
         """
-    
         pass
-    
-    
     def transformAsNormal(self, other):
         """
         u.transformAsNormal(m) --> VectorN
         
         Equivalent to transforming u by the inverse transpose MatrixN of m, used to transform normals.
         """
-    
         pass
-    
-    
     def unit(self):
         """
         u.normal() --> VectorN
@@ -3709,14 +3398,37 @@ class VectorN(Array):
         Returns a normalized copy of self. Overriden to be consistant with Maya API and MEL unit command,
         does not raise an exception if self if of zero length, instead returns a copy of self
         """
-    
         pass
-    
-    
-    shape = None
-    
-    size = None
-    
+    @property
+    def shape(self):
+        """
+        v.shape : tuple of one int
+        
+        Shape of the VectorN, as Vectors are one-dimensional Arrays: v.shape = (v.size,).
+        
+        It can be queried, or set to change the VectorN's shape similarly to the resize method,
+        as the only way to change a VectorN's shape is to resize it.
+        
+        >>> V = VectorN(1, 2, 3)
+        >>> V
+        VectorN([1, 2, 3])
+        >>> V.shape=(4)
+        >>> V
+        VectorN([1, 2, 3, 0])
+        >>> V.shape=(2, 2)
+        Traceback (most recent call last):
+            ...
+        TypeError: new shape (2, 2) is not compatible with class VectorN
+        
+        Related : see Array.resize method.
+        """
+        pass
+    @property
+    def size(self):
+        """
+        Number of components in the VectorN
+        """
+        pass
     __readonly__ = {}
     
     
@@ -3838,10 +3550,7 @@ class MatrixN(Array):
         
         In place multiplication of MatrixN a and b, see __mul__, result must fit a's type
         """
-    
         pass
-    
-    
     def __mul__(self, other):
         """
         a.__mul__(b) <==> a*b
@@ -3850,10 +3559,7 @@ class MatrixN(Array):
         otherwise, returns the result of the element wise multiplication of a and b if b is convertible to Array,
         multiplies every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def __rmul__(self, other):
         """
         a.__rmul__(b) <==> b*a
@@ -3862,10 +3568,7 @@ class MatrixN(Array):
         otherwise, returns the result of the element wise multiplication of a and b if b is convertible to Array,
         multiplies every component of a by b if b is a single numeric value
         """
-    
         pass
-    
-    
     def adjugate(self):
         """
         m.adjugate() --> MatrixN
@@ -3895,10 +3598,7 @@ class MatrixN(Array):
          [154, -775, 575, 175],
          [49, -245, 175, 63]]
         """
-    
         pass
-    
-    
     def cofactor(self, i, j):
         """
         m.cofactor(i, j) --> float
@@ -3927,10 +3627,7 @@ class MatrixN(Array):
         >>> M.cofactor(0, 1)
         6
         """
-    
         pass
-    
-    
     def det(self):
         """
         m.det() <==> det(m)
@@ -3966,10 +3663,7 @@ class MatrixN(Array):
         >>> M.det()
         0
         """
-    
         pass
-    
-    
     def diagonal(self, offset='0', wrap='False'):
         """
         m.diagonal([offset=0[, wrap=False]]) -> Array
@@ -3995,10 +3689,7 @@ class MatrixN(Array):
         >>> M.diagonal(-1, wrap=True)
         Array([2, 4])
         """
-    
         pass
-    
-    
     def gauss(self):
         """
         m.gauss() --> MatrixN
@@ -4056,10 +3747,7 @@ class MatrixN(Array):
             ...
         ZeroDivisionError: MatrixN is singular
         """
-    
         pass
-    
-    
     def inv(self):
         """
         m.inverse() <==> inv(m)
@@ -4116,10 +3804,7 @@ class MatrixN(Array):
             ...
         ValueError: MatrixN is not invertible
         """
-    
         pass
-    
-    
     def inverse(self):
         """
         m.inverse() <==> inv(m)
@@ -4176,10 +3861,7 @@ class MatrixN(Array):
             ...
         ValueError: MatrixN is not invertible
         """
-    
         pass
-    
-    
     def isSingular(self, tol='9.313225746154785e-10'):
         """
         m.isSingular([tol]) --> bool
@@ -4205,10 +3887,7 @@ class MatrixN(Array):
         >>> M.isSingular()
         True
         """
-    
         pass
-    
-    
     def is_square(self):
         """
         m.is_square() --> bool
@@ -4222,10 +3901,7 @@ class MatrixN(Array):
         >>> M.is_square()
         False
         """
-    
         pass
-    
-    
     def linverse(self):
         """
         m.linverse() --> MatrixN
@@ -4243,10 +3919,7 @@ class MatrixN(Array):
         [[-1.33, -0.33, 0.67],
          [1.08, 0.33, -0.42]]
         """
-    
         pass
-    
-    
     def minor(self, i, j):
         """
         m.minor(i, j) --> MatrixN
@@ -4278,10 +3951,7 @@ class MatrixN(Array):
          [4.0, 5.0, 6.0],
          [7.0, 8.0, 9.0]]
         """
-    
         pass
-    
-    
     def reduced(self):
         """
         m.reduced() --> MatrixN
@@ -4339,10 +4009,7 @@ class MatrixN(Array):
             ...
         ZeroDivisionError: MatrixN is singular
         """
-    
         pass
-    
-    
     def rinverse(self):
         """
         m.rinverse() --> MatrixN
@@ -4360,10 +4027,7 @@ class MatrixN(Array):
          [-0.11, 0.11],
          [0.72, -0.22]]
         """
-    
         pass
-    
-    
     def trace(self, offset='0', wrap='False'):
         """
         a.trace([offset=0[, wrap=False]]) -> float
@@ -4385,10 +4049,8 @@ class MatrixN(Array):
         >>> M.trace(offset=-1, wrap=True)
         6
         """
-    
         pass
-    
-    
+    @classmethod
     def basis(cls, u, v, normalize='False'):
         """
         MatrixN.basis(u, v[, normalize=False]) --> MatrixN
@@ -4405,10 +4067,8 @@ class MatrixN(Array):
          [1, 0, 0],
          [0, 1, 0]]
         """
-    
         pass
-    
-    
+    @classmethod
     def identity(cls, n):
         """
         MatrixN.identity(n) --> MatrixN
@@ -4423,24 +4083,298 @@ class MatrixN(Array):
          [0.0, 0.0, 1.0, 0.0],
          [0.0, 0.0, 0.0, 1.0]]
         """
-    
         pass
-    
-    
-    I = None
-    
-    col = None
-    
-    ncol = None
-    
-    nrow = None
-    
-    row = None
-    
-    shape = None
-    
-    size = None
-    
+    @property
+    def I(self):
+        """
+        The inverse MatrixN
+        """
+        pass
+    @property
+    def col(self):
+        """
+        m.col --> ArrayIter
+        
+        Iterator on the MatrixN columns
+        Being an ArrayIter, it support __len__, __getitem__, __setitem__ and __delitem__
+        
+        >>> M = MatrixN(range(1, 10), shape=(3, 3))
+        >>> M.nrow, M.ncol = 4, 4
+        >>> M[-1, -1] = 1
+        >>> print M.formated()
+        [[1, 2, 3, 0],
+         [4, 5, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 1]]
+        >>> [c for c in M.col]
+        [Array([1, 4, 7, 0]), Array([2, 5, 8, 0]), Array([3, 6, 9, 0]), Array([0, 0, 0, 1])]
+        
+        The col iterator has to rebuild sub-arrays and thus returns copies and not references.
+        
+        >>> c = M.col[0]
+        >>> c
+        Array([1, 4, 7, 0])
+        >>> c == M[:,0]
+        True
+        >>> c is M[:,0]
+        False
+        
+        Multiple columns are returned as rows in a new MatrixN
+        
+        >>> c = M.col[:2]
+        >>> print c.formated()
+        [[1, 4, 7, 0],
+         [2, 5, 8, 0]]
+        >>> print clsname(c)
+        MatrixN
+        
+        >>> s = M[:,:2]
+        >>> print s.formated()
+        [[1, 2],
+         [4, 5],
+         [7, 8],
+         [0, 0]]
+        >>> print clsname(s)
+        MatrixN
+        
+        TODO : is it what we want ? If so invert these
+        
+        # >>> c == s
+        # True
+        # >>> c == s.T
+        # False
+        
+        Results can be indexed again, using Array indexing or MatrixN methods wether they're returned
+        as Array (single lines / columns) or MatrixN (2 dimensionnal Array).
+        
+        >>> r = c.row[1]
+        >>> r
+        Array([2, 5, 8, 0])
+        >>> r = s.row[1]
+        >>> r
+        Array([4, 5])
+        
+        Multiple indexing is possible
+        
+        >>> M[0, 1]
+        2
+        >>> M.col[1][0]
+        2
+        >>> M.col[1, 0]
+        2
+        
+        As results are rebuilt Arrays, values can only b set for full columns
+        
+        >>> M.col[1]
+        Array([2, 5, 8, 0])
+        
+        This won't work :
+        
+        >>> M.col[1][:2] = 10
+        >>> print M.formated()
+        [[1, 2, 3, 0],
+         [4, 5, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 1]]
+        
+        But this will :
+        
+        >>> M.col[1, :2] = 10
+        >>> print M.formated()
+        [[1, 10, 3, 0],
+         [4, 10, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 1]]
+        
+        >>> c = M.col[1]
+        >>> c[:2] = [2, 5]
+        >>> M.col[1] = c
+        >>> print M.formated()
+        [[1, 2, 3, 0],
+         [4, 5, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 1]]
+        
+        Columns can be deleted too
+        
+        >>> del M.col[-1]
+        >>> del M[-1]
+        >>> print M.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        """
+        pass
+    @property
+    def ncol(self):
+        """
+        m.ncol : int
+        
+        Number of rows in this MatrixN.
+        
+        It can be queried, or set to reduce / expand the matrix similarly to the trim method.
+        
+        >>> M = MatrixN(range(1, 10), shape=(3, 3))
+        >>> print M.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        >>> M.nrow, M.ncol
+        (3, 3)
+        >>> M.nrow, M.ncol = 4, 4
+        >>> print M.formated()
+        [[1, 2, 3, 0],
+         [4, 5, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 0]]
+        """
+        pass
+    @property
+    def nrow(self):
+        """
+        m.nrow : int
+        
+        Number of rows in this MatrixN.
+        
+        It can be queried, or set to reduce / expand the matrix similarly to the trim method.
+        
+        >>> M = MatrixN(range(1, 10), shape=(3, 3))
+        >>> print M.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        >>> M.nrow, M.ncol
+        (3, 3)
+        >>> M.nrow, M.ncol = 4, 4
+        >>> print M.formated()
+        [[1, 2, 3, 0],
+         [4, 5, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 0]]
+        """
+        pass
+    @property
+    def row(self):
+        """
+        m.row --> ArrayIter
+        
+        Iterator on the MatrixN rows.
+        Being an ArrayIter, it support __len__, __getitem__, __setitem__ and __delitem__
+        
+        >>> M = MatrixN(range(1, 10), shape=(3, 3))
+        >>> M.nrow, M.ncol = 4, 4
+        >>> M[-1, -1] = 1
+        >>> print M.formated()
+        [[1, 2, 3, 0],
+         [4, 5, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 1]]
+        >>> [r for r in M.row]
+        [Array([1, 2, 3, 0]), Array([4, 5, 6, 0]), Array([7, 8, 9, 0]), Array([0, 0, 0, 1])]
+        
+        The row iterator indexing works like the MatrixN indexing and returns references.
+        
+        >>> r = M.row[0]
+        >>> r
+        Array([1, 2, 3, 0])
+        >>> r == M[0]
+        True
+        >>> r is M[0]
+        True
+        
+        Slices return shallow copies though
+        
+        >>> r = M.row[:2]
+        >>> print r.formated()
+        [[1, 2, 3, 0],
+         [4, 5, 6, 0]]
+        >>> print clsname(r)
+        MatrixN
+        
+        >>> r == M[:2]
+        True
+        >>> r is M[:2]
+        False
+        >>> r[0] == M[0]
+        True
+        >>> r[0] is M[0]
+        True
+        
+        Results can be indexed again, using Array indexing or MatrixN methods wether they're returned
+        as Array (single lines / columns) or MatrixN (2 dimensionnal Array).
+        
+        >>> c = r.col[1]
+        >>> c
+        Array([2, 5])
+        
+        Multiple indexing is possible
+        
+        >>> M[0, 1]
+        2
+        >>> M.row[0][1]
+        2
+        >>> M.row[0, 1]
+        2
+        
+        Values can be set as with MatrixN indexing
+        
+        >>> M.row[:2, 1] = 10
+        >>> print M.formated()
+        [[1, 10, 3, 0],
+         [4, 10, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 1]]
+        >>> r = M.row[:2]
+        >>> r[:, 1] = [2, 5]
+        >>> print M.formated()
+        [[1, 2, 3, 0],
+         [4, 5, 6, 0],
+         [7, 8, 9, 0],
+         [0, 0, 0, 1]]
+        
+        Rows can be deleted too
+        
+        >>> del M.row[-1]
+        >>> del M[None, -1]
+        >>> print M.formated()
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+        """
+        pass
+    @property
+    def shape(self):
+        """
+        m.shape : tuple of two ints
+        
+        Shape of the MatrixN, the (nrow, ncol) tuple.
+        
+        It can be queried, or set to change the MatrixN's shape similarly to the reshape method.
+        
+        >>> M = MatrixN(range(1, 17), shape=(4, 4))
+        >>> print M.formated()
+        [[1, 2, 3, 4],
+         [5, 6, 7, 8],
+         [9, 10, 11, 12],
+         [13, 14, 15, 16]]
+        >>> M.shape=(2, 8)
+        >>> print M.formated()
+        [[1, 2, 3, 4, 5, 6, 7, 8],
+         [9, 10, 11, 12, 13, 14, 15, 16]]
+        >>> M.shape=(2, 2, 4)
+        Traceback (most recent call last):
+            ...
+        TypeError: new shape (2, 2, 4) is not compatible with class MatrixN
+        
+        Related : see Array.reshape method.
+        """
+        pass
+    @property
+    def size(self):
+        """
+        Total size of the MatrixN (number of individual components), ie nrow*ncol
+        """
+        pass
     __readonly__ = {}
     
     
@@ -4448,98 +4382,32 @@ class MatrixN(Array):
 
 
 
-def imag(*args, **kwargs):
-    """
-    the imaginary part of x 
-    This function has been overriden from pymel.util.mathutils.imag to work element-wise on iterables
-    """
 
-    pass
-
-
-def asinh(*args, **kwargs):
+def setRange(*args, **kwargs):
     """
-    asinh(x)
+    Resets x range from x linear interpolation of oldmin to oldmax to x linear interpolation from newmin to newmax
     
-    Return the inverse hyperbolic sine of x.
-    This function has been overriden from math.asinh to work element-wise on iterables
+        :rtype: float
+        
+    This function has been overriden from pymel.util.mathutils.setRange to work element-wise on iterables
     """
-
     pass
-
-
-def asin(*args, **kwargs):
+def _toCompOrArrayInstance(value, cls='None'): pass
+def hermite(*args, **kwargs):
     """
-    asin(x)
+        As the MEL command : This command returns x point along on x hermite curve from the five given control arguments.
+        The first two arguments are the start and end points of the curve, respectively.
+        The next two arguments are the tangents of the curve at the start point and end point of the curve, respectively.
+        The fifth argument, parameter, specifies the point on the hermite curve that is returned by this function.
+        This parameter is the unitized distance along the curve from the start point to the end point.
+        A parameter value of 0.0 corresponds to the start point and x parameter value of 1.0 corresponds to the end point of the curve.
     
-    Return the arc sine (measured in radians) of x.
-    This function has been overriden from math.asin to work element-wise on iterables
-    """
-
-    pass
-
-
-def sinh(*args, **kwargs):
-    """
-    sinh(x)
+        :rtype: float
     
-    Return the hyperbolic sine of x.
-    This function has been overriden from math.sinh to work element-wise on iterables
+        
+    This function has been overriden from pymel.util.mathutils.hermite to work element-wise on iterables
     """
-
     pass
-
-
-def copysign(*args, **kwargs):
-    """
-    copysign(x, y)
-    
-    Return x with the sign of y.
-    This function has been overriden from math.copysign to work element-wise on iterables
-    """
-
-    pass
-
-
-def isnan(*args, **kwargs):
-    """
-    isnan(x) -> bool
-    
-    Check if float x is not a number (NaN).
-    This function has been overriden from math.isnan to work element-wise on iterables
-    """
-
-    pass
-
-
-def _toCompOrArray(value):
-    pass
-
-
-def radians(*args, **kwargs):
-    """
-    radians(x)
-    
-    Convert angle x from degrees to radians.
-    This function has been overriden from math.radians to work element-wise on iterables
-    """
-
-    pass
-
-
-def inv(value):
-    """
-    inv(m) --> MatrixN
-    
-    Returns the inverse of m, if m is invertible, raises ZeroDivisionError otherwise.
-    m must be convertible to MatrixN.
-    
-    Related : see MatrixN.inverse(self) method and MatrixN.I property
-    """
-
-    pass
-
-
 def length(a, axis='None'):
     """
     length(a[, axis=(axis0, axis1, ...)]) --> numeric or Array
@@ -4560,22 +4428,220 @@ def length(a, axis='None'):
     >>> length(A, axis=1)
     Array([0.865938219505, 0.865938219505, 0.707])
     """
-
     pass
-
-
-def gamma(*args, **kwargs):
+def tan(*args, **kwargs):
     """
-        Gamma color correction of c with a single scalar gamma value g
+    tan(x)
+    
+    Return the tangent of x (measured in radians).
+    This function has been overriden from math.tan to work element-wise on iterables
+    """
+    pass
+def cotan(a, b, c='None'):
+    """
+    cotan(u, v) --> float :
+    
+    Returns the cotangent of the u, v angle, u and v should be 3 dimensional Vectors representing 3D vectors.
+    
+    >>> u = VectorN(1.0, 0.0, 0.0)
+    >>> v = VectorN(0.707, 0.0, -0.707)
+    >>> cotan(u, v)
+    1.0
+    >>> cotan(u, [0.707, 0.0, -0.707])
+    1.0
+    
+    Alternatively can use the form cotan(a, b, c), where a, b, c are 4 dimensional Vectors representing 3D points,
+    it is then equivalent to cotan(b-a, c-a).
+    
+    >>> o = VectorN(0.0, 1.0, 0.0, 1.0)
+    >>> p = VectorN(1.0, 1.0, 0.0, 1.0)
+    >>> q = VectorN(0.707, 1.0, -0.707, 1.0)
+    >>> cotan(o, p, q)
+    1.0
+    
+    Related : see VectorN.cotan method.
+    """
+    pass
+def dot(u, v):
+    """
+    dot(u, v) --> float
+    
+    Returns the dot product of u and v, u and v should be Vectors of identical size.
+    
+    >>> u = VectorN(1.0, 0.0, 0.0)
+    >>> v = VectorN(0.707, 0.0, -0.707)
+    >>> print round(dot(u, v), 3)
+    0.707
+    >>> print round(dot(u, [0.707, 0.0, -0.707]), 3)
+    0.707
+    
+    Related : see VectorN.dot method.
+    """
+    pass
+def imag(*args, **kwargs):
+    """
+    the imaginary part of x 
+    This function has been overriden from pymel.util.mathutils.imag to work element-wise on iterables
+    """
+    pass
+def acosh(*args, **kwargs):
+    """
+    acosh(x)
+    
+    Return the inverse hyperbolic cosine of x.
+    This function has been overriden from math.acosh to work element-wise on iterables
+    """
+    pass
+def linstep(*args, **kwargs):
+    """
+    Returns the value of a linear step function.
+    
+        Returns 0 if x < min, 1 if x > max, and performs a linear
+        interpolation between 0 and 1 in the interval min to max.
     
         :rtype: float
         
-    This function has been overriden from pymel.util.mathutils.gamma to work element-wise on iterables
+    This function has been overriden from pymel.util.mathutils.linstep to work element-wise on iterables
     """
-
     pass
-
-
+def log(*args, **kwargs):
+    """
+    log(x[, base])
+    
+    Return the logarithm of x to the given base.
+    If the base not specified, returns the natural logarithm (base e) of x.
+    This function has been overriden from math.log to work element-wise on iterables
+    """
+    pass
+def factorial(*args, **kwargs):
+    """
+    factorial(x) -> Integral
+    
+    Find x!. Raise a ValueError if x is negative or non-integral.
+    This function has been overriden from math.factorial to work element-wise on iterables
+    """
+    pass
+def cosh(*args, **kwargs):
+    """
+    cosh(x)
+    
+    Return the hyperbolic cosine of x.
+    This function has been overriden from math.cosh to work element-wise on iterables
+    """
+    pass
+def trunc(*args, **kwargs):
+    """
+    trunc(x:Real) -> Integral
+    
+    Truncates x to the nearest Integral toward 0. Uses the __trunc__ magic method.
+    This function has been overriden from math.trunc to work element-wise on iterables
+    """
+    pass
+def expm1(*args, **kwargs):
+    """
+    expm1(x)
+    
+    Return exp(x)-1.
+    This function avoids the loss of precision involved in the direct evaluation of exp(x)-1 for small x.
+    This function has been overriden from math.expm1 to work element-wise on iterables
+    """
+    pass
+def hermiteInterp(*args, **kwargs):
+    """
+    Hermite interpolation of x between points y0 and y1 of tangent slope s0 and s1
+    
+        :rtype: float
+        
+    This function has been overriden from pymel.util.mathutils.hermiteInterp to work element-wise on iterables
+    """
+    pass
+def pow(*args, **kwargs):
+    """
+    pow(x, y)
+    
+    Return x**y (x to the power of y).
+    This function has been overriden from math.pow to work element-wise on iterables
+    """
+    pass
+def isnan(*args, **kwargs):
+    """
+    isnan(x) -> bool
+    
+    Check if float x is not a number (NaN).
+    This function has been overriden from math.isnan to work element-wise on iterables
+    """
+    pass
+def atanh(*args, **kwargs):
+    """
+    atanh(x)
+    
+    Return the inverse hyperbolic tangent of x.
+    This function has been overriden from math.atanh to work element-wise on iterables
+    """
+    pass
+def all(a, axis='None'):
+    """
+    all(a, [,axis=(axis0, axis1, ...)]) --> bool or Array of booleans
+    
+    Returns True if all the components of iterable a evaluate to True.
+    If axis are specified will return an Array of all(x) for x in a.axisiter(*axis).
+    
+    >>> A = Array([[True,True,True],[False,True,False]])
+    >>> print A.formated()
+    [[True, True, True],
+     [False, True, False]]
+    >>> all(A)
+    False
+    >>> all(A, axis=(0, 1))
+    False
+    >>> all(A, axis=0)
+    Array([False, True, False])
+    >>> all(A, axis=1)
+    Array([True, False])
+    """
+    pass
+def sinh(*args, **kwargs):
+    """
+    sinh(x)
+    
+    Return the hyperbolic sine of x.
+    This function has been overriden from math.sinh to work element-wise on iterables
+    """
+    pass
+def radians(*args, **kwargs):
+    """
+    radians(x)
+    
+    Convert angle x from degrees to radians.
+    This function has been overriden from math.radians to work element-wise on iterables
+    """
+    pass
+def cross(u, v):
+    """
+    cross(u, v) --> VectorN
+    
+    Returns the cross product of u and v, u and v should be 3 dimensional vectors.
+    
+    >>> u = VectorN(1.0, 0.0, 0.0)
+    >>> v = VectorN(0.0, 1.0, 0.0)
+    >>> cross(u, v)
+    VectorN([0.0, 0.0, 1.0])
+    >>> cross(u, [0.0, 1.0, 0.0])
+    VectorN([0.0, 0.0, 1.0])
+    
+    Related : see VectorN.cross method.
+    """
+    pass
+def frexp(*args, **kwargs):
+    """
+    frexp(x)
+    
+    Return the mantissa and exponent of x, as pair (m, e).
+    m is a float and e is an int, such that x = m * 2.**e.
+    If x is 0, m and e are both 0.  Else 0.5 <= abs(m) < 1.0.
+    This function has been overriden from math.frexp to work element-wise on iterables
+    """
+    pass
 def fmod(*args, **kwargs):
     """
     fmod(x, y)
@@ -4583,41 +4649,27 @@ def fmod(*args, **kwargs):
     Return fmod(x, y), according to platform C.  x % y may differ.
     This function has been overriden from math.fmod to work element-wise on iterables
     """
-
     pass
-
-
-def erf(*args, **kwargs):
+def linmap(*args, **kwargs):
     """
-    erf(x)
+    Returns the value of a linear remapping function.
     
-    Error function at x.
-    This function has been overriden from math.erf to work element-wise on iterables
-    """
-
-    pass
-
-
-def _patchfn(basefn):
-    """
-    Overload the given base function to have it accept iterables
-    """
-
-    pass
-
-
-def atan2(*args, **kwargs):
-    """
-    atan2(y, x)
+        performs a linear interpolation between 0 and 1 in the interval min to max,
+        but does not clamp the range
     
-    Return the arc tangent (measured in radians) of y/x.
-    Unlike atan(y/x), the signs of both x and y are considered.
-    This function has been overriden from math.atan2 to work element-wise on iterables
+        :rtype: float
+        
+    This function has been overriden from pymel.util.mathutils.linmap to work element-wise on iterables
     """
-
     pass
-
-
+def asinh(*args, **kwargs):
+    """
+    asinh(x)
+    
+    Return the inverse hyperbolic sine of x.
+    This function has been overriden from math.asinh to work element-wise on iterables
+    """
+    pass
 def outer(u, v):
     """
     outer(u, v) --> MatrixN
@@ -4633,10 +4685,7 @@ def outer(u, v):
     
     Related : see VectorN.outer method.
     """
-
     pass
-
-
 def sin(*args, **kwargs):
     """
     sin(x)
@@ -4644,10 +4693,121 @@ def sin(*args, **kwargs):
     Return the sine of x (measured in radians).
     This function has been overriden from math.sin to work element-wise on iterables
     """
-
     pass
-
-
+def asin(*args, **kwargs):
+    """
+    asin(x)
+    
+    Return the arc sine (measured in radians) of x.
+    This function has been overriden from math.asin to work element-wise on iterables
+    """
+    pass
+def log10(*args, **kwargs):
+    """
+    log10(x)
+    
+    Return the base 10 logarithm of x.
+    This function has been overriden from math.log10 to work element-wise on iterables
+    """
+    pass
+def fabs(*args, **kwargs):
+    """
+    fabs(x)
+    
+    Return the absolute value of the float x.
+    This function has been overriden from math.fabs to work element-wise on iterables
+    """
+    pass
+def any(a, axis='None'):
+    """
+    any(a [,axis=(axis0, axis1, ...)]) --> bool or Array of booleans
+    
+    Returns True if any of the components of iterable a evaluate to True.
+    If axis are specified will return an Array of any(x) for x in a.axisiter(*axis).
+    
+    >>> A = Array([[False,True,True],[False,True,False]])
+    >>> print A.formated()
+    [[False, True, True],
+     [False, True, False]]
+    >>> any(A)
+    True
+    >>> any(A, axis=(0, 1))
+    True
+    >>> any(A, axis=0)
+    Array([False, True, True])
+    >>> any(A, axis=1)
+    Array([True, True])
+    """
+    pass
+def gamma(*args, **kwargs):
+    """
+        Gamma color correction of c with a single scalar gamma value g
+    
+        :rtype: float
+        
+    This function has been overriden from pymel.util.mathutils.gamma to work element-wise on iterables
+    """
+    pass
+def _shapeInfo(value): pass
+def round(*args, **kwargs):
+    """
+        round(number[, ndigits]) -> float
+        Round a number to a given precision in decimal digits (default 0 digits).
+        This always returns a floating point number.  Precision may be negative.
+        This builtin function was overloaded in mathutils to work on complex numbers,
+        in that case rel and imaginary values are rounded separately
+    
+        
+    This function has been overriden from pymel.util.mathutils.round to work element-wise on iterables
+    """
+    pass
+def smoothstep(*args, **kwargs):
+    """
+    Returns the value of a smooth step function.
+    
+        Returns 0 if x < min, 1 if x > max, and performs a smooth Hermite
+        interpolation between 0 and 1 in the interval min to max.
+    
+        :rtype: float
+        
+    This function has been overriden from pymel.util.mathutils.smoothstep to work element-wise on iterables
+    """
+    pass
+def ceil(*args, **kwargs):
+    """
+    ceil(x)
+    
+    Return the ceiling of x as a float.
+    This is the smallest integral value >= x.
+    This function has been overriden from math.ceil to work element-wise on iterables
+    """
+    pass
+def sqlength(a, axis='None'):
+    """
+    sqlength(a[, axis=(axis0, axis1, ...)]) --> numeric or Array
+    
+    Returns square length of a, ie a*a or the sum of x*x for x in a if a is an iterable of numeric values.
+    If a is an Array and axis are specified will return a list of sqlength(x) for x in a.axisiter(*axis).
+    
+    >>> A = Array([[0.5,0.5,-0.707],[0.707,-0.707,0.0]])
+    >>> print A.formated()
+    [[0.5, 0.5, -0.707],
+     [0.707, -0.707, 0.0]]
+    >>> sqlength(A)
+    1.999547
+    >>> sqlength(A, axis=(0,1))
+    1.999547
+    >>> sqlength(A, axis=0)
+    Array([0.999849, 0.999698])
+    >>> sqlength(A, axis=1)
+    Array([0.749849, 0.749849, 0.499849])
+    """
+    pass
+def _patchfn(basefn):
+    """
+    Overload the given base function to have it accept iterables
+    """
+    pass
 def axis(a, b, c='None', normalize='False'):
     """
     axis(u, v[, normalize=False]) --> VectorN
@@ -4674,10 +4834,15 @@ def axis(a, b, c='None', normalize='False'):
     
     Related : see VectorN.axis method.
     """
-
     pass
-
-
+def sqrt(*args, **kwargs):
+    """
+    sqrt(x)
+    
+    Return the square root of x.
+    This function has been overriden from math.sqrt to work element-wise on iterables
+    """
+    pass
 def fsum(*args, **kwargs):
     """
     fsum(iterable)
@@ -4686,102 +4851,136 @@ def fsum(*args, **kwargs):
     Assumes IEEE-754 floating point arithmetic.
     This function has been overriden from math.fsum to work element-wise on iterables
     """
-
     pass
-
-
-def atan(*args, **kwargs):
+def lgamma(*args, **kwargs):
     """
-    atan(x)
+    lgamma(x)
     
-    Return the arc tangent (measured in radians) of x.
-    This function has been overriden from math.atan to work element-wise on iterables
+    Natural logarithm of absolute value of Gamma function at x.
+    This function has been overriden from math.lgamma to work element-wise on iterables
     """
-
     pass
-
-
-def linstep(*args, **kwargs):
+def min(*args, **kwargs):
     """
-    Returns the value of a linear step function.
+    min(iterable[, key=func[, axis=(axis0, axis1, ...)]]) --> value
+    min(a, b, c, ...[, key=func[, axis=(axis0, axis1, ...)]]) --> value
     
-        Returns 0 if x < min, 1 if x > max, and performs a linear
-        interpolation between 0 and 1 in the interval min to max.
+    With a single iterable argument, return its smallest item.
+    With two or more arguments, return the smallest argument.
+    If the iterable argument is an Array instance, returns the smallest component of iterable.
+    If axis are specified will return an Array of element-wise min(x) for x in a.axisiter(*axis).
     
-        :rtype: float
-        
-    This function has been overriden from pymel.util.mathutils.linstep to work element-wise on iterables
-    """
-
-    pass
-
-
-def any(a, axis='None'):
-    """
-    any(a [,axis=(axis0, axis1, ...)]) --> bool or Array of booleans
-    
-    Returns True if any of the components of iterable a evaluate to True.
-    If axis are specified will return an Array of any(x) for x in a.axisiter(*axis).
-    
-    >>> A = Array([[False,True,True],[False,True,False]])
+    >>> A = Array([[6,3,4],[1,5,0.5]])
     >>> print A.formated()
-    [[False, True, True],
-     [False, True, False]]
-    >>> any(A)
-    True
-    >>> any(A, axis=(0, 1))
-    True
-    >>> any(A, axis=0)
-    Array([False, True, True])
-    >>> any(A, axis=1)
-    Array([True, True])
+    [[6, 3, 4],
+     [1, 5, 0.5]]
+    >>> min(A)
+    0.5
+    >>> min(A, axis=(0,1))
+    0.5
+    >>> min(A, axis=0)
+    Array([1, 3, 0.5])
+    >>> min(A, axis=1)
+    Array([3, 0.5])
     """
-
     pass
-
-
-def round(*args, **kwargs):
+def smoothmap(*args, **kwargs):
     """
-        round(number[, ndigits]) -> float
-        Round a number to a given precision in decimal digits (default 0 digits).
-        This always returns a floating point number.  Precision may be negative.
-        This builtin function was overloaded in mathutils to work on complex numbers,
-        in that case rel and imaginary values are rounded separately
+    Returns the value of a smooth remapping function.
     
-        
-    This function has been overriden from pymel.util.mathutils.round to work element-wise on iterables
-    """
-
-    pass
-
-
-def smoothstep(*args, **kwargs):
-    """
-    Returns the value of a smooth step function.
-    
-        Returns 0 if x < min, 1 if x > max, and performs a smooth Hermite
-        interpolation between 0 and 1 in the interval min to max.
+        performs a smooth Hermite interpolation between 0 and 1 in the interval min to max,
+        but does not clamp the range
     
         :rtype: float
         
-    This function has been overriden from pymel.util.mathutils.smoothstep to work element-wise on iterables
+    This function has been overriden from pymel.util.mathutils.smoothmap to work element-wise on iterables
     """
-
     pass
-
-
-def log(*args, **kwargs):
+def log1p(*args, **kwargs):
     """
-    log(x[, base])
+    log1p(x)
     
-    Return the logarithm of x to the given base.
-    If the base not specified, returns the natural logarithm (base e) of x.
-    This function has been overriden from math.log to work element-wise on iterables
+    Return the natural logarithm of 1+x (base e).
+    The result is computed in a way which is accurate for x near zero.
+    This function has been overriden from math.log1p to work element-wise on iterables
     """
-
     pass
-
-
+def real(*args, **kwargs):
+    """
+    the real part of x 
+    This function has been overriden from pymel.util.mathutils.real to work element-wise on iterables
+    """
+    pass
+def normal(a, axis='None'):
+    """
+    normal(a[, axis=(axis0, axis1, ...)]) --> Array
+    
+    Returns a normalized copy of self: self/length(self, axis).
+    
+    >>> A = Array([[0.5,0.5,-0.707],[0.707,-0.707,0.0]])
+    >>> print A.formated()
+    [[0.5, 0.5, -0.707],
+     [0.707, -0.707, 0.0]]
+    >>> print normal(A).formated()
+    [[0.353593437318, 0.353593437318, -0.499981120367],
+     [0.499981120367, -0.499981120367, 0.0]]
+    >>> print normal(A, axis=(0,1)).formated()
+    [[0.353593437318, 0.353593437318, -0.499981120367],
+     [0.499981120367, -0.499981120367, 0.0]]
+    >>> print normal(A, axis=0).formated()
+    [[0.5, 0.5, -0.707],
+     [0.707, -0.707, 0.0]]
+    >>> print normal(A, axis=1).formated()
+    [[0.577408397894, 0.577408397894, -1.0],
+     [0.816455474623, -0.816455474623, 0.0]]
+    """
+    pass
+def tanh(*args, **kwargs):
+    """
+    tanh(x)
+    
+    Return the hyperbolic tangent of x.
+    This function has been overriden from math.tanh to work element-wise on iterables
+    """
+    pass
+def isinf(*args, **kwargs):
+    """
+    isinf(x) -> bool
+    
+    Check if float x is infinite (positive or negative).
+    This function has been overriden from math.isinf to work element-wise on iterables
+    """
+    pass
+def _toCompOrArray(value): pass
+def copysign(*args, **kwargs):
+    """
+    copysign(x, y)
+    
+    Return x with the sign of y.
+    This function has been overriden from math.copysign to work element-wise on iterables
+    """
+    pass
+def sum(a, start='0', axis='None'):
+    """
+    sum(a[, start=0[, axis=(axis0, axis1, ...)]]) --> numeric or Array
+    
+    Returns the sum of all the components of a, an iterable of values that support the add operator, plus start.
+    If a is an Array and axis are specified will return an Array of sum(x) for x in a.axisiter(*axis)
+    
+    >>> A = Array([[1,2,3],[4,5,6]])
+    >>> print A.formated()
+    [[1, 2, 3],
+     [4, 5, 6]]
+    >>> sum(A)
+    21
+    >>> sum(A, axis=(0, 1))
+    21
+    >>> sum(A, axis=0)
+    Array([5, 7, 9])
+    >>> sum(A, axis=1)
+    Array([6, 15])
+    """
+    pass
 def angle(a, b, c='None'):
     """
     angle(u, v) --> float
@@ -4809,115 +5008,40 @@ def angle(a, b, c='None'):
     
     Related : see VectorN.angle method.
     """
-
     pass
-
-
-def acos(*args, **kwargs):
+def ldexp(*args, **kwargs):
     """
-    acos(x)
+    ldexp(x, i)
     
-    Return the arc cosine (measured in radians) of x.
-    This function has been overriden from math.acos to work element-wise on iterables
+    Return x * (2**i).
+    This function has been overriden from math.ldexp to work element-wise on iterables
     """
-
     pass
-
-
-def hermite(*args, **kwargs):
+def erf(*args, **kwargs):
     """
-        As the MEL command : This command returns x point along on x hermite curve from the five given control arguments.
-        The first two arguments are the start and end points of the curve, respectively.
-        The next two arguments are the tangents of the curve at the start point and end point of the curve, respectively.
-        The fifth argument, parameter, specifies the point on the hermite curve that is returned by this function.
-        This parameter is the unitized distance along the curve from the start point to the end point.
-        A parameter value of 0.0 corresponds to the start point and x parameter value of 1.0 corresponds to the end point of the curve.
+    erf(x)
     
-        :rtype: float
-    
-        
-    This function has been overriden from pymel.util.mathutils.hermite to work element-wise on iterables
+    Error function at x.
+    This function has been overriden from math.erf to work element-wise on iterables
     """
-
     pass
-
-
-def fabs(*args, **kwargs):
+def degrees(*args, **kwargs):
     """
-    fabs(x)
+    degrees(x)
     
-    Return the absolute value of the float x.
-    This function has been overriden from math.fabs to work element-wise on iterables
+    Convert angle x from radians to degrees.
+    This function has been overriden from math.degrees to work element-wise on iterables
     """
-
     pass
-
-
-def cos(*args, **kwargs):
+def det(value):
     """
-    cos(x)
+    det(m) --> float
     
-    Return the cosine of x (measured in radians).
-    This function has been overriden from math.cos to work element-wise on iterables
+    Returns the determinant of m, 0 if m is a singular MatrixN, m must be convertible to MatrixN.
+    
+    Related : see MatrixN.det(self) method.
     """
-
     pass
-
-
-def modf(*args, **kwargs):
-    """
-    modf(x)
-    
-    Return the fractional and integer parts of x.  Both results carry the sign
-    of x and are floats.
-    This function has been overriden from math.modf to work element-wise on iterables
-    """
-
-    pass
-
-
-def log1p(*args, **kwargs):
-    """
-    log1p(x)
-    
-    Return the natural logarithm of 1+x (base e).
-    The result is computed in a way which is accurate for x near zero.
-    This function has been overriden from math.log1p to work element-wise on iterables
-    """
-
-    pass
-
-
-def hypot(*args, **kwargs):
-    """
-    hypot(x, y)
-    
-    Return the Euclidean distance, sqrt(x*x + y*y).
-    This function has been overriden from math.hypot to work element-wise on iterables
-    """
-
-    pass
-
-
-def cross(u, v):
-    """
-    cross(u, v) --> VectorN
-    
-    Returns the cross product of u and v, u and v should be 3 dimensional vectors.
-    
-    >>> u = VectorN(1.0, 0.0, 0.0)
-    >>> v = VectorN(0.0, 1.0, 0.0)
-    >>> cross(u, v)
-    VectorN([0.0, 0.0, 1.0])
-    >>> cross(u, [0.0, 1.0, 0.0])
-    VectorN([0.0, 0.0, 1.0])
-    
-    Related : see VectorN.cross method.
-    """
-
-    pass
-
-
 def erfc(*args, **kwargs):
     """
     erfc(x)
@@ -4925,36 +5049,7 @@ def erfc(*args, **kwargs):
     Complementary error function at x.
     This function has been overriden from math.erfc to work element-wise on iterables
     """
-
     pass
-
-
-def trunc(*args, **kwargs):
-    """
-    trunc(x:Real) -> Integral
-    
-    Truncates x to the nearest Integral toward 0. Uses the __trunc__ magic method.
-    This function has been overriden from math.trunc to work element-wise on iterables
-    """
-
-    pass
-
-
-def smoothmap(*args, **kwargs):
-    """
-    Returns the value of a smooth remapping function.
-    
-        performs a smooth Hermite interpolation between 0 and 1 in the interval min to max,
-        but does not clamp the range
-    
-        :rtype: float
-        
-    This function has been overriden from pymel.util.mathutils.smoothmap to work element-wise on iterables
-    """
-
-    pass
-
-
 def blend(*args, **kwargs):
     """
         blend(a, b[, weight=0.5]) :
@@ -4965,123 +5060,16 @@ def blend(*args, **kwargs):
         
     This function has been overriden from pymel.util.mathutils.blend to work element-wise on iterables
     """
-
     pass
-
-
-def cotan(a, b, c='None'):
+def modf(*args, **kwargs):
     """
-    cotan(u, v) --> float :
+    modf(x)
     
-    Returns the cotangent of the u, v angle, u and v should be 3 dimensional Vectors representing 3D vectors.
-    
-    >>> u = VectorN(1.0, 0.0, 0.0)
-    >>> v = VectorN(0.707, 0.0, -0.707)
-    >>> cotan(u, v)
-    1.0
-    >>> cotan(u, [0.707, 0.0, -0.707])
-    1.0
-    
-    Alternatively can use the form cotan(a, b, c), where a, b, c are 4 dimensional Vectors representing 3D points,
-    it is then equivalent to cotan(b-a, c-a).
-    
-    >>> o = VectorN(0.0, 1.0, 0.0, 1.0)
-    >>> p = VectorN(1.0, 1.0, 0.0, 1.0)
-    >>> q = VectorN(0.707, 1.0, -0.707, 1.0)
-    >>> cotan(o, p, q)
-    1.0
-    
-    Related : see VectorN.cotan method.
+    Return the fractional and integer parts of x.  Both results carry the sign
+    of x and are floats.
+    This function has been overriden from math.modf to work element-wise on iterables
     """
-
     pass
-
-
-def normal(a, axis='None'):
-    """
-    normal(a[, axis=(axis0, axis1, ...)]) --> Array
-    
-    Returns a normalized copy of self: self/length(self, axis).
-    
-    >>> A = Array([[0.5,0.5,-0.707],[0.707,-0.707,0.0]])
-    >>> print A.formated()
-    [[0.5, 0.5, -0.707],
-     [0.707, -0.707, 0.0]]
-    >>> print normal(A).formated()
-    [[0.353593437318, 0.353593437318, -0.499981120367],
-     [0.499981120367, -0.499981120367, 0.0]]
-    >>> print normal(A, axis=(0,1)).formated()
-    [[0.353593437318, 0.353593437318, -0.499981120367],
-     [0.499981120367, -0.499981120367, 0.0]]
-    >>> print normal(A, axis=0).formated()
-    [[0.5, 0.5, -0.707],
-     [0.707, -0.707, 0.0]]
-    >>> print normal(A, axis=1).formated()
-    [[0.577408397894, 0.577408397894, -1.0],
-     [0.816455474623, -0.816455474623, 0.0]]
-    """
-
-    pass
-
-
-def abs(*args, **kwargs):
-    """
-    abs(number) -> number
-    
-    Return the absolute value of the argument.
-    This function has been overriden from __builtin__.abs to work element-wise on iterables
-    """
-
-    pass
-
-
-def sqlength(a, axis='None'):
-    """
-    sqlength(a[, axis=(axis0, axis1, ...)]) --> numeric or Array
-    
-    Returns square length of a, ie a*a or the sum of x*x for x in a if a is an iterable of numeric values.
-    If a is an Array and axis are specified will return a list of sqlength(x) for x in a.axisiter(*axis).
-    
-    >>> A = Array([[0.5,0.5,-0.707],[0.707,-0.707,0.0]])
-    >>> print A.formated()
-    [[0.5, 0.5, -0.707],
-     [0.707, -0.707, 0.0]]
-    >>> sqlength(A)
-    1.999547
-    >>> sqlength(A, axis=(0,1))
-    1.999547
-    >>> sqlength(A, axis=0)
-    Array([0.999849, 0.999698])
-    >>> sqlength(A, axis=1)
-    Array([0.749849, 0.749849, 0.499849])
-    """
-
-    pass
-
-
-def pow(*args, **kwargs):
-    """
-    pow(x, y)
-    
-    Return x**y (x to the power of y).
-    This function has been overriden from math.pow to work element-wise on iterables
-    """
-
-    pass
-
-
-def hermiteInterp(*args, **kwargs):
-    """
-    Hermite interpolation of x between points y0 and y1 of tangent slope s0 and s1
-    
-        :rtype: float
-        
-    This function has been overriden from pymel.util.mathutils.hermiteInterp to work element-wise on iterables
-    """
-
-    pass
-
-
 def floor(*args, **kwargs):
     """
     floor(x)
@@ -5090,147 +5078,36 @@ def floor(*args, **kwargs):
     This is the largest integral value <= x.
     This function has been overriden from math.floor to work element-wise on iterables
     """
-
     pass
-
-
-def linmap(*args, **kwargs):
+def prod(a, start='1', axis='None'):
     """
-    Returns the value of a linear remapping function.
+    prod(a[, start=1[, axis=(axis0, axis1, ...)]]) --> numeric or Array
     
-        performs a linear interpolation between 0 and 1 in the interval min to max,
-        but does not clamp the range
+    Returns the product of all the components of a, an iterable of values that support the mul operator, times start.
+    If axis are specified will return an Array of prod(x) for x in a.axisiter(*axis).
     
-        :rtype: float
-        
-    This function has been overriden from pymel.util.mathutils.linmap to work element-wise on iterables
-    """
-
-    pass
-
-
-def _toCompOrArrayInstance(value, cls='None'):
-    pass
-
-
-def tanh(*args, **kwargs):
-    """
-    tanh(x)
-    
-    Return the hyperbolic tangent of x.
-    This function has been overriden from math.tanh to work element-wise on iterables
-    """
-
-    pass
-
-
-def setRange(*args, **kwargs):
-    """
-    Resets x range from x linear interpolation of oldmin to oldmax to x linear interpolation from newmin to newmax
-    
-        :rtype: float
-        
-    This function has been overriden from pymel.util.mathutils.setRange to work element-wise on iterables
-    """
-
-    pass
-
-
-def det(value):
-    """
-    det(m) --> float
-    
-    Returns the determinant of m, 0 if m is a singular MatrixN, m must be convertible to MatrixN.
-    
-    Related : see MatrixN.det(self) method.
-    """
-
-    pass
-
-
-def min(*args, **kwargs):
-    """
-    min(iterable[, key=func[, axis=(axis0, axis1, ...)]]) --> value
-    min(a, b, c, ...[, key=func[, axis=(axis0, axis1, ...)]]) --> value
-    
-    With a single iterable argument, return its smallest item.
-    With two or more arguments, return the smallest argument.
-    If the iterable argument is an Array instance, returns the smallest component of iterable.
-    If axis are specified will return an Array of element-wise min(x) for x in a.axisiter(*axis).
-    
-    >>> A = Array([[6,3,4],[1,5,0.5]])
+    >>> A = Array([[1,2,3],[4,5,6]])
     >>> print A.formated()
-    [[6, 3, 4],
-     [1, 5, 0.5]]
-    >>> min(A)
-    0.5
-    >>> min(A, axis=(0,1))
-    0.5
-    >>> min(A, axis=0)
-    Array([1, 3, 0.5])
-    >>> min(A, axis=1)
-    Array([3, 0.5])
+    [[1, 2, 3],
+     [4, 5, 6]]
+    >>> prod(A)
+    720
+    >>> prod(A, axis=(0, 1))
+    720
+    >>> prod(A, axis=0)
+    Array([4, 10, 18])
+    >>> prod(A, axis=1)
+    Array([6, 120])
     """
-
     pass
-
-
-def exp(*args, **kwargs):
+def cos(*args, **kwargs):
     """
-    exp(x)
+    cos(x)
     
-    Return e raised to the power of x.
-    This function has been overriden from math.exp to work element-wise on iterables
+    Return the cosine of x (measured in radians).
+    This function has been overriden from math.cos to work element-wise on iterables
     """
-
     pass
-
-
-def ldexp(*args, **kwargs):
-    """
-    ldexp(x, i)
-    
-    Return x * (2**i).
-    This function has been overriden from math.ldexp to work element-wise on iterables
-    """
-
-    pass
-
-
-def clamp(*args, **kwargs):
-    """
-    Clamps the value x between min and max
-    
-        :rtype: float
-        
-    This function has been overriden from pymel.util.mathutils.clamp to work element-wise on iterables
-    """
-
-    pass
-
-
-def frexp(*args, **kwargs):
-    """
-    frexp(x)
-    
-    Return the mantissa and exponent of x, as pair (m, e).
-    m is a float and e is an int, such that x = m * 2.**e.
-    If x is 0, m and e are both 0.  Else 0.5 <= abs(m) < 1.0.
-    This function has been overriden from math.frexp to work element-wise on iterables
-    """
-
-    pass
-
-
-def real(*args, **kwargs):
-    """
-    the real part of x 
-    This function has been overriden from pymel.util.mathutils.real to work element-wise on iterables
-    """
-
-    pass
-
-
 def dist(a, b, axis='None'):
     """
     dist(a, b[, axis=(axis0, axis1, ...)]) --> float or Array
@@ -5256,113 +5133,13 @@ def dist(a, b, axis='None'):
     >>> dist(A, B, axis=1)
     Array([0.0104403065089, 0.0122065556157, 0.003])
     """
-
     pass
-
-
 def conjugate(*args, **kwargs):
     """
     the conjugate part of x 
     This function has been overriden from pymel.util.mathutils.conjugate to work element-wise on iterables
     """
-
     pass
-
-
-def ceil(*args, **kwargs):
-    """
-    ceil(x)
-    
-    Return the ceiling of x as a float.
-    This is the smallest integral value >= x.
-    This function has been overriden from math.ceil to work element-wise on iterables
-    """
-
-    pass
-
-
-def patchMath():
-    """
-    Overload various math functions to work element-wise on iterables
-    
-    >>> A = Array([[0, pi/4.0], [pi/2.0, 3.0*pi/4.0], [pi, 5.0*pi/4.0], [3.0*pi/2.0, 7.0*pi/4.0]])
-    >>> print round(A,2).formated()
-    [[0.0, 0.79],
-     [1.57, 2.36],
-     [3.14, 3.93],
-     [4.71, 5.5]]
-    >>> print degrees(A).formated()
-    [[0.0, 45.0],
-     [90.0, 135.0],
-     [180.0, 225.0],
-     [270.0, 315.0]]
-    >>> print round(sin(A), 2).formated()
-    [[0.0, 0.71],
-     [1.0, 0.71],
-     [0.0, -0.71],
-     [-1.0, -0.71]]
-    """
-
-    pass
-
-
-def cosh(*args, **kwargs):
-    """
-    cosh(x)
-    
-    Return the hyperbolic cosine of x.
-    This function has been overriden from math.cosh to work element-wise on iterables
-    """
-
-    pass
-
-
-def acosh(*args, **kwargs):
-    """
-    acosh(x)
-    
-    Return the inverse hyperbolic cosine of x.
-    This function has been overriden from math.acosh to work element-wise on iterables
-    """
-
-    pass
-
-
-def log10(*args, **kwargs):
-    """
-    log10(x)
-    
-    Return the base 10 logarithm of x.
-    This function has been overriden from math.log10 to work element-wise on iterables
-    """
-
-    pass
-
-
-def all(a, axis='None'):
-    """
-    all(a, [,axis=(axis0, axis1, ...)]) --> bool or Array of booleans
-    
-    Returns True if all the components of iterable a evaluate to True.
-    If axis are specified will return an Array of all(x) for x in a.axisiter(*axis).
-    
-    >>> A = Array([[True,True,True],[False,True,False]])
-    >>> print A.formated()
-    [[True, True, True],
-     [False, True, False]]
-    >>> all(A)
-    False
-    >>> all(A, axis=(0, 1))
-    False
-    >>> all(A, axis=0)
-    Array([False, True, False])
-    >>> all(A, axis=1)
-    Array([True, False])
-    """
-
-    pass
-
-
 def max(*args, **kwargs):
     """
     max(iterable[, key=func[, axis=(axis0, axis1, ...)]]) --> value
@@ -5386,169 +5163,97 @@ def max(*args, **kwargs):
     >>> max(A, axis=1)
     Array([6, 5])
     """
-
     pass
-
-
-def expm1(*args, **kwargs):
+def acos(*args, **kwargs):
     """
-    expm1(x)
+    acos(x)
     
-    Return exp(x)-1.
-    This function avoids the loss of precision involved in the direct evaluation of exp(x)-1 for small x.
-    This function has been overriden from math.expm1 to work element-wise on iterables
+    Return the arc cosine (measured in radians) of x.
+    This function has been overriden from math.acos to work element-wise on iterables
     """
-
     pass
-
-
-def _shapeInfo(value):
+def patchMath():
+    """
+    Overload various math functions to work element-wise on iterables
+    
+    >>> A = Array([[0, pi/4.0], [pi/2.0, 3.0*pi/4.0], [pi, 5.0*pi/4.0], [3.0*pi/2.0, 7.0*pi/4.0]])
+    >>> print round(A,2).formated()
+    [[0.0, 0.79],
+     [1.57, 2.36],
+     [3.14, 3.93],
+     [4.71, 5.5]]
+    >>> print degrees(A).formated()
+    [[0.0, 45.0],
+     [90.0, 135.0],
+     [180.0, 225.0],
+     [270.0, 315.0]]
+    >>> print round(sin(A), 2).formated()
+    [[0.0, 0.71],
+     [1.0, 0.71],
+     [0.0, -0.71],
+     [-1.0, -0.71]]
+    """
     pass
-
-
-def dot(u, v):
+def inv(value):
     """
-    dot(u, v) --> float
+    inv(m) --> MatrixN
     
-    Returns the dot product of u and v, u and v should be Vectors of identical size.
+    Returns the inverse of m, if m is invertible, raises ZeroDivisionError otherwise.
+    m must be convertible to MatrixN.
     
-    >>> u = VectorN(1.0, 0.0, 0.0)
-    >>> v = VectorN(0.707, 0.0, -0.707)
-    >>> print round(dot(u, v), 3)
-    0.707
-    >>> print round(dot(u, [0.707, 0.0, -0.707]), 3)
-    0.707
-    
-    Related : see VectorN.dot method.
+    Related : see MatrixN.inverse(self) method and MatrixN.I property
     """
-
     pass
-
-
-def tan(*args, **kwargs):
+def hypot(*args, **kwargs):
     """
-    tan(x)
+    hypot(x, y)
     
-    Return the tangent of x (measured in radians).
-    This function has been overriden from math.tan to work element-wise on iterables
+    Return the Euclidean distance, sqrt(x*x + y*y).
+    This function has been overriden from math.hypot to work element-wise on iterables
     """
-
     pass
-
-
-def sqrt(*args, **kwargs):
+def atan2(*args, **kwargs):
     """
-    sqrt(x)
+    atan2(y, x)
     
-    Return the square root of x.
-    This function has been overriden from math.sqrt to work element-wise on iterables
+    Return the arc tangent (measured in radians) of y/x.
+    Unlike atan(y/x), the signs of both x and y are considered.
+    This function has been overriden from math.atan2 to work element-wise on iterables
     """
-
     pass
-
-
-def atanh(*args, **kwargs):
+def atan(*args, **kwargs):
     """
-    atanh(x)
+    atan(x)
     
-    Return the inverse hyperbolic tangent of x.
-    This function has been overriden from math.atanh to work element-wise on iterables
+    Return the arc tangent (measured in radians) of x.
+    This function has been overriden from math.atan to work element-wise on iterables
     """
-
     pass
-
-
-def prod(a, start='1', axis='None'):
+def exp(*args, **kwargs):
     """
-    prod(a[, start=1[, axis=(axis0, axis1, ...)]]) --> numeric or Array
+    exp(x)
     
-    Returns the product of all the components of a, an iterable of values that support the mul operator, times start.
-    If axis are specified will return an Array of prod(x) for x in a.axisiter(*axis).
-    
-    >>> A = Array([[1,2,3],[4,5,6]])
-    >>> print A.formated()
-    [[1, 2, 3],
-     [4, 5, 6]]
-    >>> prod(A)
-    720
-    >>> prod(A, axis=(0, 1))
-    720
-    >>> prod(A, axis=0)
-    Array([4, 10, 18])
-    >>> prod(A, axis=1)
-    Array([6, 120])
+    Return e raised to the power of x.
+    This function has been overriden from math.exp to work element-wise on iterables
     """
-
     pass
-
-
-def isinf(*args, **kwargs):
+def clamp(*args, **kwargs):
     """
-    isinf(x) -> bool
+    Clamps the value x between min and max
     
-    Check if float x is infinite (positive or negative).
-    This function has been overriden from math.isinf to work element-wise on iterables
+        :rtype: float
+        
+    This function has been overriden from pymel.util.mathutils.clamp to work element-wise on iterables
     """
-
     pass
-
-
-def sum(a, start='0', axis='None'):
+def abs(*args, **kwargs):
     """
-    sum(a[, start=0[, axis=(axis0, axis1, ...)]]) --> numeric or Array
+    abs(number) -> number
     
-    Returns the sum of all the components of a, an iterable of values that support the add operator, plus start.
-    If a is an Array and axis are specified will return an Array of sum(x) for x in a.axisiter(*axis)
-    
-    >>> A = Array([[1,2,3],[4,5,6]])
-    >>> print A.formated()
-    [[1, 2, 3],
-     [4, 5, 6]]
-    >>> sum(A)
-    21
-    >>> sum(A, axis=(0, 1))
-    21
-    >>> sum(A, axis=0)
-    Array([5, 7, 9])
-    >>> sum(A, axis=1)
-    Array([6, 15])
+    Return the absolute value of the argument.
+    This function has been overriden from __builtin__.abs to work element-wise on iterables
     """
-
     pass
-
-
-def lgamma(*args, **kwargs):
-    """
-    lgamma(x)
-    
-    Natural logarithm of absolute value of Gamma function at x.
-    This function has been overriden from math.lgamma to work element-wise on iterables
-    """
-
-    pass
-
-
-def factorial(*args, **kwargs):
-    """
-    factorial(x) -> Integral
-    
-    Find x!. Raise a ValueError if x is negative or non-integral.
-    This function has been overriden from math.factorial to work element-wise on iterables
-    """
-
-    pass
-
-
-def degrees(*args, **kwargs):
-    """
-    degrees(x)
-    
-    Convert angle x from radians to degrees.
-    This function has been overriden from math.degrees to work element-wise on iterables
-    """
-
-    pass
-
 
 
 eps = 9.313225746154785e-10

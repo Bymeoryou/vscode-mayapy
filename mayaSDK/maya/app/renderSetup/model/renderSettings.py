@@ -50,6 +50,10 @@ Note: In order to ease the understanding of the json file resulting from an 'Exp
         }
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 from . import rendererCallbacks
 
 class DefaultNodeExporter(rendererCallbacks.BasicNodeExporter):
@@ -59,19 +63,7 @@ class DefaultNodeExporter(rendererCallbacks.BasicNodeExporter):
     
     
     
-    def __init__(self):
-        pass
-
-
-class DefaultRendererNodeExporter(rendererCallbacks.BasicNodeExporter):
-    """
-    Exporter to only manage renderer specific default nodes
-    """
-    
-    
-    
-    def __init__(self, renderer, defaultNodeExporter):
-        pass
+    def __init__(self): pass
 
 
 class VoidUserDataExporter(rendererCallbacks.RenderSettingsCallbacks):
@@ -84,42 +76,51 @@ class VoidUserDataExporter(rendererCallbacks.RenderSettingsCallbacks):
     pass
 
 
+class DefaultRendererNodeExporter(rendererCallbacks.BasicNodeExporter):
+    """
+    Exporter to only manage renderer specific default nodes
+    """
+    
+    
+    
+    def __init__(self, renderer, defaultNodeExporter): pass
 
+
+
+
+def encodeMasterValues():
+    """
+    Encode the master values of the attributes related to the Render
+    Settings of a specific renderer
+    """
+    pass
+def getAllRenderSettingsNodesInScene():
+    """
+    Return a set of all Render Settings nodes in the scene using their names
+    """
+    pass
+def sceneHasRenderSettingsApplyOverrides(): pass
+def _registerSelectedRender(currentRenderer): pass
+def decode(*args, **kwargs): pass
 def getDefaultNodes():
     """
     Return the list of default nodes
     """
-
     pass
-
-
 def encode():
     """
     Encode all the attribute values related to the Render Settings of a specific renderer
     """
-
     pass
-
-
-def decode(*args, **kwargs):
-    pass
-
-
-def _registerDefaultMechanisms(renderer):
-    pass
-
-
-def _registerSelectedRender(currentRenderer):
-    pass
-
+def _registerDefaultMechanisms(renderer): pass
 
 
 voidUserDataExporter = VoidUserDataExporter()
 
+kRendererMismatch = []
+
 renderSettingsExporters = {}
 
 kCreateDefaultNodesFailed = []
-
-kRendererMismatch = []
 
 

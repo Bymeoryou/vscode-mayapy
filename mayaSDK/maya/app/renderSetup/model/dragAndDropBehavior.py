@@ -23,7 +23,12 @@ The interface to implement for each derived class is the following:
         # Create all connections needed when sourceNode is dropped on destinationNode
 """
 
+
 from maya.app.renderSetup.model.connectionOverride import *
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class _MPxDragAndDropBehavior(object):
     """
@@ -36,10 +41,7 @@ class _MPxDragAndDropBehavior(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def connectAttrToAttr(*args, **kwargs):
         """
         connectAttrToAttr(sourcePlug, destinationPlug, force) -> None
@@ -52,10 +54,7 @@ class _MPxDragAndDropBehavior(object):
         * destinationPlug (MPlug) - Destination plug in the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination attribute.
         """
-    
         pass
-    
-    
     def connectAttrToNode(*args, **kwargs):
         """
         connectAttrToNode(sourcePlug, destinationNode, force) -> None
@@ -68,10 +67,7 @@ class _MPxDragAndDropBehavior(object):
         * destinationNode (MObject) - Destination node for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination node.
         """
-    
         pass
-    
-    
     def connectNodeToAttr(*args, **kwargs):
         """
         connectNodeToAttr(sourceNode, destinationPlug, force) -> None
@@ -84,10 +80,7 @@ class _MPxDragAndDropBehavior(object):
         * destinationPlug (MPlug) - Destination plug for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination attribute.
         """
-    
         pass
-    
-    
     def connectNodeToNode(*args, **kwargs):
         """
         connectNodeToNode(sourceNode, destinationNode, force) -> None
@@ -100,10 +93,7 @@ class _MPxDragAndDropBehavior(object):
         * destinationNode (MObject) - Destination node for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination node.
         """
-    
         pass
-    
-    
     def shouldBeUsedFor(*args, **kwargs):
         """
         shouldBeUsedFor(sourceNode, destinationNode, sourcePlug, destinationPlug) -> bool
@@ -117,10 +107,7 @@ class _MPxDragAndDropBehavior(object):
         * sourcePlug (MPlug) - The source plug of the drag and drop or the plug being dragged (this may be null).
         * destinationPlug (MPlug) - The destination plug of the drag and drop or the plug being dropped upon (this may be null).
         """
-    
         pass
-    
-    
     __new__ = None
 
 
@@ -131,23 +118,20 @@ class DragAndDropBehavior(_MPxDragAndDropBehavior):
     
     
     
+    @staticmethod
     def connect(sourcePlug, destinationPlug):
         """
         Try to connect two plugs and catch any plug type mismatches.
         """
-    
         pass
-    
-    
+    @staticmethod
     def findCandidatePlug(sourceNode, destinationPlug):
         """
         Return a plug to the first matching attribute in the candidate list.
         If no attribute is found, None is returned.
         """
-    
         pass
-    
-    
+    @staticmethod
     def findNode(node, typeId='4', acceptor='None'):
         """
         Find a node of given type in a network, starting with the given node
@@ -156,29 +140,24 @@ class DragAndDropBehavior(_MPxDragAndDropBehavior):
         
         The acceptor signature should be: func(MObject) -> bool
         """
-    
         pass
-    
-    
+    @staticmethod
     def isMatchingClass(node, classificationString):
         """
         Returns True if the given node has a matching classification string.
         """
-    
         pass
-    
-    
-    def raiseWarning(msg):
+    @staticmethod
+    def raiseError(msg):
         """
-        Give an warning message to the user to avoid raising an exception here.
+        Give an error message to the user without raising an exception.
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     kAttributeCandidates = []
     
@@ -208,54 +187,34 @@ class ConnectionOverrideDragAndDrop(DragAndDropBehavior):
     
     
     
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def connectAttrToAttr(self, sourcePlug, destinationPlug, force):
         """
         Handle connection requests from source attribute to destination attribute.
         """
-    
         pass
-    
-    
     def connectAttrToNode(self, sourcePlug, destinationNode, force):
         """
         Handle connection requests from source attribute to destination node.
         """
-    
         pass
-    
-    
     def connectNodeToAttr(self, sourceNode, destinationPlug, force):
         """
         Handle connection requests from source node to destination attribute.
         """
-    
         pass
-    
-    
     def connectNodeToNode(self, sourceNode, destinationNode, force):
         """
         Handle connection requests from source node to destination node.
         """
-    
         pass
-    
-    
     def shouldBeUsedFor(self, sourceNode, destinationNode, sourcePlug, destinationPlug):
         """
         Return True if the given nodes/plugs are handled by this class.
         """
-    
         pass
-    
-    
-    def creator():
-        pass
-    
-    
+    @staticmethod
+    def creator(): pass
     kNodeSearchIgnoreList = []
     
     

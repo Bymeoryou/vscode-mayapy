@@ -10,6 +10,10 @@ Decorators in this module use the context objects to provide a convenient
 syntax to guard a block that is a complete function.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class EnvironGuardCtx:
     """
     Safe way to transiently set and restore an environment variable
@@ -37,16 +41,9 @@ class EnvironGuardCtx:
     
     
     
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, type, value, traceback):
-        pass
-    
-    
-    def __init__(self, key, value):
-        pass
+    def __enter__(self): pass
+    def __exit__(self, type, value, traceback): pass
+    def __init__(self, key, value): pass
 
 
 class StateGuardCtx:
@@ -72,16 +69,9 @@ class StateGuardCtx:
     
     
     
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, type, value, traceback):
-        pass
-    
-    
-    def __init__(self, getFunc, setFunc, newVal='None'):
-        pass
+    def __enter__(self): pass
+    def __exit__(self, type, value, traceback): pass
+    def __init__(self, getFunc, setFunc, newVal='None'): pass
 
 
 class MemberGuardCtx:
@@ -119,16 +109,10 @@ class MemberGuardCtx:
     
     
     
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, type, value, traceback):
-        pass
-    
-    
-    def __init__(self, obj, member, newVal='None'):
-        pass
+    def __enter__(self): pass
+    def __exit__(self, type, value, traceback): pass
+    def __init__(self, obj, member, newVal='None'): pass
+
 
 
 
@@ -136,10 +120,13 @@ def state(getFunc, setFunc, newValue='True'):
     """
     Set a static state to a fixed value within the scope of the decorated function.
     """
-
     pass
-
-
+def member(objectMember, newValue='True'):
+    """
+    Set a data member to a fixed value within the scope of the decorated
+    member member.
+    """
+    pass
 def environ(key, value):
     """
     Set an environment variable to a value within the scope of the decorated
@@ -148,17 +135,5 @@ def environ(key, value):
         On scope exit, the previous value is restored.  If the environment
         variable did not exist, it is removed from the environment.
     """
-
     pass
-
-
-def member(objectMember, newValue='True'):
-    """
-    Set a data member to a fixed value within the scope of the decorated
-    member member.
-    """
-
-    pass
-
-
 

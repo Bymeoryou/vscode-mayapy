@@ -1,21 +1,15 @@
-def pyError(errorString):
-    """
-    print an error message
-    """
-
-    pass
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 def pyResult(resultString):
     """
     print a result message
     """
-
     pass
-
-
-def zipScene(archiveUnloadedReferences):
+def pyError(errorString):
+    """
+    print an error message
+    """
     pass
-
-
+def zipScene(archiveUnloadedReferences): pass
 

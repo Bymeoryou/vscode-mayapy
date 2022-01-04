@@ -1,3 +1,6 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 def createRig(basename="'stereoCameraMulti'"):
     """
     Creates a new stereo rig. Uses a series of Maya commands to build
@@ -5,28 +8,7 @@ def createRig(basename="'stereoCameraMulti'"):
     The optionnal argument basename defines the base name for each DAG
     object that will be created.
     """
-
     pass
-
-
-def __createSlaveCamera(masterShape, name, parent):
-    """
-    Private method to this module.
-    Create a slave camera
-    Make the default connections between the master camera and the slave one.
-    """
-
-    pass
-
-
-def registerThisRig():
-    """
-    Registers the rig in Maya's database
-    """
-
-    pass
-
-
 def __createFrustumNode(mainCam, parent, baseName):
     """
     Private method to this module.
@@ -35,8 +17,17 @@ def __createFrustumNode(mainCam, parent, baseName):
     Remove some of the channel box attributes that we do not want to show
     up in the channel box.
     """
-
     pass
-
-
+def registerThisRig():
+    """
+    Registers the rig in Maya's database
+    """
+    pass
+def __createSlaveCamera(masterShape, name, parent):
+    """
+    Private method to this module.
+    Create a slave camera
+    Make the default connections between the master camera and the slave one.
+    """
+    pass
 

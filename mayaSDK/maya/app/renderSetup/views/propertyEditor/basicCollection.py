@@ -1,7 +1,11 @@
-from PySide2.QtWidgets import QLabel
-from PySide2.QtWidgets import QGroupBox
 from maya.app.general.mayaMixin import MayaQWidgetBaseMixin
 from PySide2.QtWidgets import QVBoxLayout
+from PySide2.QtWidgets import QLabel
+from PySide2.QtWidgets import QGroupBox
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class BasicCollection(MayaQWidgetBaseMixin, QGroupBox):
     """
@@ -15,28 +19,14 @@ class BasicCollection(MayaQWidgetBaseMixin, QGroupBox):
     
     
     
-    def __init__(self, item, parent):
-        pass
-    
-    
-    def paintEvent(self, event):
-        pass
-    
-    
-    def preSelector(self):
-        pass
-    
-    
-    def setupSelector(self, layout):
-        pass
-    
-    
+    def __init__(self, item, parent): pass
+    def paintEvent(self, event): pass
+    def preSelector(self): pass
+    def setupSelector(self, layout): pass
     staticMetaObject = None
 
 
 
-def getCppPointer(*args, **kwargs):
-    pass
 
-
+def getCppPointer(*args, **kwargs): pass
 

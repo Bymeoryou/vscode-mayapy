@@ -3,5 +3,9 @@ Low-level maya and pymel utilities.  Functions in this module are used by both `
 and are able to be defined before maya.standalone is initialized.
 """
 
+
 from pymel.internal.plogging import getLogger
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional

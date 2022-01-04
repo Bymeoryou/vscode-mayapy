@@ -1,10 +1,8 @@
-def TracePrint(strMsg):
-    pass
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-
-def Trace(tag="''"):
-    pass
-
+def Trace(tag="''"): pass
+def TracePrint(strMsg): pass
 
 
 _traceEnabled = False

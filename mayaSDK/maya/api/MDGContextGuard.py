@@ -26,6 +26,10 @@ beyond a single method:
     print plug.asMDistance() # Gets the value of the plug at the current time
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class MDGContextGuard(object):
     """
     Scoping object to manage changes to the current evaluation context
@@ -37,51 +41,34 @@ class MDGContextGuard(object):
         """
         Begin the scope, the work is done in __init__
         """
-    
         pass
-    
-    
     def __exit__(self, object_type, value, traceback):
         """
         Ensure the state is restored if this object goes out of scope
         """
-    
         pass
-    
-    
     def __init__(self, context):
         """
         Initialize the object with a specific context
         """
-    
         pass
-    
-    
     def context(self):
         """
         Return the context that was passed into this object on entry/construction
         """
-    
         pass
-    
-    
     def original_context(self):
         """
         Return the context that was current when this object was entered/constructed
         """
-    
         pass
-    
-    
     def restore(self):
         """
         Restore the context on entry/construction to be the current evaluation context
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 

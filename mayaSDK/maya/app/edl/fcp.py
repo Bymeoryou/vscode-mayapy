@@ -1,19 +1,17 @@
 from maya.app.edl.translator import *
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class FCP(Translator):
-    def __init__(self, fileName):
-        pass
-    
-    
+    def __init__(self, fileName): pass
     def formatErrorElement(self, cur_elem):
         """
         Format information about the current element that will be used in an error message.
         So we want the type of element (ex: file, clip etc) and the name/id.
         """
-    
         pass
-    
-    
     def getClip(self, clip_elem):
         """
         Given a clip element or transition item (which is returned b getTrack), return a dictionary with the
@@ -30,10 +28,7 @@ class FCP(Translator):
         alignment       = define the placement of a transition, not present for clips
                                   according to FCP/XML doc, valid values are center, start, end, start-black and end-black
         """
-    
         pass
-    
-    
     def getFile(self, file_elem):
         """
         Given a file element (returned by getClip), return a dictionary with the following
@@ -44,28 +39,19 @@ class FCP(Translator):
         name            = name of file
         pathurl         = path to file (i.e. file://)
         """
-    
         pass
-    
-    
     def getLinks(self):
         """
         Return a list of dictionaries that map ids to elements.
         Each dict is a link group
         """
-    
         pass
-    
-    
     def getMasterClips(self):
         """
         Read the <bin> tag and all master clip and file information. Will
         populate the self.master_clips dictionary.
         """
-    
         pass
-    
-    
     def getSequence(self):
         """
         Read the sequence information from a Final Cut Pro XML hierarchy.
@@ -82,10 +68,7 @@ class FCP(Translator):
         audio_tracks    = list of audio track SubElements. use getTrack to
                                           read the contents
         """
-    
         pass
-    
-    
     def getTrack(self, track_elem):
         """
         Given a track element (which is returned by getSequence), read the
@@ -101,18 +84,12 @@ class FCP(Translator):
         clip_list       = list of clipitem SubElements that are a part of this track.
                                   To read data from the clips, use getClip
         """
-    
         pass
-    
-    
     def readFromFile(self):
         """
         Reads XML file and populates an ElementTree hierarchy
         """
-    
         pass
-    
-    
     def writeClip(self, track_elem, clip_info):
         """
         Add a clip to the specified track. clip_info must contain the following info:
@@ -122,10 +99,7 @@ class FCP(Translator):
         start/end       = define placement of clip in the sequence
         in/out          = define start/end frames of the clip in source media
         """
-    
         pass
-    
-    
     def writeFile(self, clip_elem, file_info):
         """
         Add a file to the specified clip. file_info must contain the following:
@@ -134,18 +108,12 @@ class FCP(Translator):
         name or pathurl         = file name or absolute path to the location
         duration                        = media length (sequence frames)
         """
-    
         pass
-    
-    
     def writeFormat(self, seq_elem, width, height):
         """
         Add a format element to the specified sequence.
         """
-    
         pass
-    
-    
     def writeSequence(self, seq_info):
         """
         Write the sequence. We expect seq_info to contain the following information:
@@ -155,18 +123,12 @@ class FCP(Translator):
         framerate               = in frames per second
         timecode                = timecode of the sequence (optional)
         """
-    
         pass
-    
-    
     def writeToFile(self):
         """
         Write the XML file in memory to disk
         """
-    
         pass
-    
-    
     def writeTrack(self, seq_elem, track_info):
         """
         Add a track to the specified sequence. track_info must contain the following info:
@@ -176,8 +138,8 @@ class FCP(Translator):
         locked          = True/False
         enabled         = True/False
         """
-    
         pass
+
 
 
 
@@ -187,8 +149,5 @@ def indent(elem, level='0'):
     in the compact form, with no whitespace. So we need to do the indenting
     ourselves to get human-readable XML
     """
-
     pass
-
-
 

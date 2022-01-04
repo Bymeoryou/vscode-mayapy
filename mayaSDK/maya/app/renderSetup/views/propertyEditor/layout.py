@@ -1,6 +1,10 @@
 from PySide2.QtCore import Qt
-from PySide2.QtWidgets import QLabel
 from PySide2.QtWidgets import QFormLayout
+from PySide2.QtWidgets import QLabel
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class Layout(QFormLayout):
     """
@@ -9,26 +13,17 @@ class Layout(QFormLayout):
     
     
     
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def addRow(self, v1, v2='None'):
         """
         Adds a row to the layout. If v2 is None, then there is no label specified.
         """
-    
         pass
-    
-    
     def insertRow(self, row, v1, v2='None'):
         """
         Inserts a row into the layout. If v2 is None, then there is no label specified.
         """
-    
         pass
-    
-    
     LABEL_COLUMN_WIDTH = 96.0
     
     

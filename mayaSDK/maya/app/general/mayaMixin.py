@@ -6,13 +6,19 @@
                             the show() function
 """
 
+
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 
-from PySide2.QtCore import QSize
-from PySide2.QtCore import QPoint
-from PySide2.QtCore import Signal
+
 from PySide2.QtCore import Qt
+from PySide2.QtCore import Signal
+from PySide2.QtCore import QPoint
+from PySide2.QtCore import QSize
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class MayaQWidgetBaseMixin(object):
     """
@@ -39,29 +45,58 @@ class MayaQWidgetBaseMixin(object):
     
     
     
-    def __init__(self, parent='None', *args, **kwargs):
-        pass
-    
-    
+    def __init__(self, parent='None', *args, **kwargs): pass
     def setVisible(self, makeVisible):
         """
         Show/hide the widget.  Overrides standard QWidget.setVisible()
         """
-    
         pass
-    
-    
     def show(self):
         """
         Show the widget. Overrides standard QWidget.show()
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+
+
+class MayaQDockWidget(MayaQWidgetBaseMixin, QDockWidget):
+    """
+    QDockWidget tailored for use with Maya.
+    Mimics the behavior performed by Maya's internal QMayaDockWidget class and the dockControl command
+    
+    :Signals:
+        closeEventTriggered: emitted when a closeEvent occurs
+    
+    :Known Issues:
+        * Manually dragging the DockWidget to dock in the Main MayaWindow will have it resize to the 'sizeHint' size
+          of the child widget() instead of preserving its existing size.
+    """
+    
+    
+    
+    def __init__(self, parent='None', *args, **kwargs): pass
+    def closeEvent(self, evt):
+        """
+        Hide the QDockWidget and trigger the closeEventTriggered signal
+        """
+        pass
+    def moveEvent(self, event): pass
+    def resizeEvent(self, event): pass
+    def setArea(self, area):
+        """
+        Set the docking area
+        """
+        pass
+    closeEventTriggered = None
+    
+    
+    staticMetaObject = None
+    
+    
+    windowStateChanged = None
 
 
 class MayaQWidgetDockableMixin(MayaQWidgetBaseMixin):
@@ -86,18 +121,11 @@ class MayaQWidgetDockableMixin(MayaQWidgetBaseMixin):
     
     
     
-    def __del__(self):
-        pass
-    
-    
     def close(self):
         """
         Closes the widget. Overrides standard QWidget.close()
         """
-    
         pass
-    
-    
     def dockArea(self):
         """
         Return area if the widget is currently docked to the Maya MainWindow
@@ -105,47 +133,32 @@ class MayaQWidgetDockableMixin(MayaQWidgetBaseMixin):
         
         :Return: str
         """
-    
         pass
-    
-    
     def dockCloseEventTriggered(self):
         """
         Triggered when QDockWidget.closeEventTriggered() signal is triggered.
         Stub function.  Override to perform actions when this happens.
         """
-    
         pass
-    
-    
     def floatingChanged(self, isFloating):
         """
         Triggered when QDockWidget.topLevelChanged() signal is triggered.
         Stub function.  Override to perform actions when this happens.
         """
-    
         pass
-    
-    
     def hide(self, *args, **kwargs):
         """
         Hides the widget.  Will hide the parent widget if it is a QDockWidget.
         Overrides standard QWidget.hide()
         """
-    
         pass
-    
-    
     def isDockable(self):
         """
         Return if the widget is currently dockable (under a QDockWidget)
         
         :Return: bool
         """
-    
         pass
-    
-    
     def isFloating(self):
         """
         Return if the widget is currently floating (under a QDockWidget)
@@ -153,30 +166,21 @@ class MayaQWidgetDockableMixin(MayaQWidgetBaseMixin):
         
         :Return: bool
         """
-    
         pass
-    
-    
     def isVisible(self):
         """
         Return if the widget is currently visible. Overrides standard QWidget.isVisible()
         
         :Return: bool
         """
-    
         pass
-    
-    
     def raise_(self):
         """
         Raises the widget to the top.  Will raise the parent widget if it is a QDockWidget.
         Overrides standard QWidget.raise_()
         """
-    
         pass
-    
-    
-    def setDockableParameters(self, dockable='None', floating='None', area='None', allowedArea='None', width='None', widthSizingProperty='None', initWidthAsMinimum='None', height='None', heightSizingProperty='None', x='None', y='None', retain='True', plugins='None', controls='None', uiScript='None', closeCallback='None', *args, **kwargs):
+    def setDockableParameters(self, dockable='None', floating='None', area='None', allowedArea='None', width='None', widthSizingProperty='None', minWidth='None', height='None', heightSizingProperty='None', x='None', y='None', retain='True', plugins='None', controls='None', uiScript='None', closeCallback='None', *args, **kwargs):
         """
         Set the dockable parameters.
         
@@ -202,49 +206,34 @@ class MayaQWidgetDockableMixin(MayaQWidgetBaseMixin):
                 
         :See: show(), hide(), and setVisible()
         """
-    
         pass
-    
-    
     def setSizeHint(self, size):
         """
         Virtual method used to pass the user settable width and height down to the widget whose 
         size policy controls the actual size most of the time.
         """
-    
         pass
-    
-    
     def setVisible(self, makeVisible, *args, **kwargs):
         """
         Show/hide the QWidget window.  Overrides standard QWidget.setVisible() to pass along additional arguments
         
         :See: show() and hide()
         """
-    
         pass
-    
-    
     def setWindowTitle(self, val):
         """
         Sets the QWidget's title and also it's parent QDockWidget's title if dockable.
         
         :Return: None
         """
-    
         pass
-    
-    
     def show(self, *args, **kwargs):
         """
         Show the QWidget window.  Overrides standard QWidget.show()
         
         :See: setDockableParameters() for a list of parameters
         """
-    
         pass
-    
-    
     def showRepr(self):
         """
         Present a string of the parameters used to reproduce the current state of the
@@ -252,88 +241,20 @@ class MayaQWidgetDockableMixin(MayaQWidgetBaseMixin):
         
         :Return: str
         """
-    
         pass
-    
-    
     closeEventTriggered = None
     
     
     windowStateChanged = None
 
 
-class MayaQDockWidget(MayaQWidgetBaseMixin, QDockWidget):
-    """
-    QDockWidget tailored for use with Maya.
-    Mimics the behavior performed by Maya's internal QMayaDockWidget class and the dockControl command
-    
-    :Signals:
-        closeEventTriggered: emitted when a closeEvent occurs
-    
-    :Known Issues:
-        * Manually dragging the DockWidget to dock in the Main MayaWindow will have it resize to the 'sizeHint' size
-          of the child widget() instead of preserving its existing size.
-    """
-    
-    
-    
-    def __init__(self, parent='None', *args, **kwargs):
-        pass
-    
-    
-    def closeEvent(self, evt):
-        """
-        Hide the QDockWidget and trigger the closeEventTriggered signal
-        """
-    
-        pass
-    
-    
-    def moveEvent(self, event):
-        pass
-    
-    
-    def resizeEvent(self, event):
-        pass
-    
-    
-    def setArea(self, area):
-        """
-        Set the docking area
-        """
-    
-        pass
-    
-    
-    closeEventTriggered = None
-    
-    
-    staticMetaObject = None
-    
-    
-    windowStateChanged = None
 
 
-
-def workspaceControlDeleted(controlName):
-    pass
-
-
-def getCppPointer(*args, **kwargs):
-    pass
-
-
-def workspaceControlClosed(controlName):
-    pass
-
-
-def wrapInstance(*args, **kwargs):
-    pass
-
-
-def workspaceControlReparented(controlName, isFloating):
-    pass
-
+def workspaceControlDeleted(controlName): pass
+def wrapInstance(*args, **kwargs): pass
+def workspaceControlClosed(controlName): pass
+def getCppPointer(*args, **kwargs): pass
+def workspaceControlReparented(controlName, isFloating): pass
 
 
 mixinWorkspaceControls = {}

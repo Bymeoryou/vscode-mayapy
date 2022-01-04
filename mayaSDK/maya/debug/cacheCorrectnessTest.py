@@ -8,16 +8,67 @@ for more details.
 Sample usage to run the tests on a single file:
 
     from maya.debug.cacheCorrectnessTest import cacheCorrectnessTest
-    cacheErrors = cacheCorrectnessTest(fileName='MyDir/MyFile.ma', resultsPath='MyDir/cacheCorrectness', modes=[['transform', 'mesh', 'curves']])
+    from maya.plugin.evaluator.CacheEvaluatorManager import CACHE_STANDARD_MODE_EVAL
+    cacheErrors = cacheCorrectnessTest(file_name='MyDir/MyFile.ma', results_path='MyDir/cacheCorrectness', modes=[{KEY_CACHE_MODE: CACHE_STANDARD_MODE_EVAL}])
 
 Sample usage to run the tests on the current scene and ignore output:
 
     from maya.debug.cacheCorrectnessTest import cacheCorrectnessTest
-    cacheErrors = cacheCorrectnessTest(modes=[['transform', 'mesh', 'curves']])
+    from maya.plugin.evaluator.CacheEvaluatorManager import CACHE_STANDARD_MODE_EVAL
+    cacheErrors = cacheCorrectnessTest(modes=[{KEY_CACHE_MODE: CACHE_STANDARD_MODE_EVAL}])
 """
 
+
 from maya.debug.correctnessUtils import run_correctness_test
-from maya.debug.TODO import TODO
+from maya.plugin.evaluator.CacheEvaluatorManager import standard_modes
+from maya.debug.correctnessUtils import multichain_nodes
+from maya.debug.EvaluatorManager import EvaluatorManager
+from maya.plugin.evaluator.CacheEvaluatorManager import CacheEvaluatorManager
+from maya.debug.DeformerEvaluatorManager import DeformerEvaluatorManager
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class CacheCorrectnessContext(object):
+    """
+    This class configures the cache evaluator according to a set of options and
+    shuts off the HIK and GPU deformer evaluators to help isolate correctness errors.
+    """
+    
+    
+    
+    def __enter__(self):
+        """
+        Enter the section controlled by the context
+        """
+        pass
+    def __exit__(self, exit_type, value, traceback):
+        """
+        Exit the section controlled by the context, raising an exception if any restore failed
+        """
+        pass
+    def __init__(self, mode, cache_timeout):
+        """
+        Create the evaluator managers and remember the desired configuration values
+        """
+        pass
+    def __str__(self):
+        """
+        :return: a string with information on the managed evaluator's states
+        """
+        pass
+    def should_pull_values(self):
+        """
+        Ask if the values in this context are good as-is or if they have to be pulled to be valid
+        :return: True always - cached values need to be pulled to ensure correctness
+        """
+        pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
 
 class CacheCorrectnessMode(object):
     """
@@ -32,115 +83,73 @@ class CacheCorrectnessMode(object):
     
     
     
-    def __init__(self, cacheMode, cacheTimeout):
-        pass
-    
-    
-    def getContext(self):
+    def __init__(self, cache_mode, cache_timeout): pass
+    def context(self):
         """
         Returns the context object that will set up and tear down the required
         caching configuration to be tested.
         """
-    
         pass
-    
-    
-    def getEmMode(self):
+    def em_mode(self):
         """
-        Returns the evaluation mode in which the cache correctness test must
-        be run, which is the same for all tests:
-        - Parallel evaluation
-        - Cache evaluator enabled
+        Returns the evaluation mode in which the cache correctness test must be run.
         """
-    
         pass
-    
-    
-    def getTitle(self):
+    def title(self):
         """
         Returns the identifying string for this cache mode.
         """
-    
         pass
-    
-    
+    @staticmethod
+    def relevant_nodes(potential_nodes):
+        """
+        :param potential_nodes: Set of nodes that could be evaluated/compared in the current mode
+        :return: a subset of nodes relevant to the defined evaluation caching mode
+        """
+        pass
     __dict__ = None
     
-    __weakref__ = None
-
-
-class CacheEvaluatorContext(object):
-    """
-    This class configures the cache evaluator according to a set of options.
-    
-    It enables the evaluator for a given set of nodes.  The supported values are:
-    - 'transform' : to enable the evaluator on transforms and derived types.
-    """
-    
-    
-    
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, type, value, traceback):
-        pass
-    
-    
-    def __init__(self, mode, cacheTimeout):
-        pass
-    
-    
-    def getCacheEnabled(cacheType, nodeType):
-        pass
-    
-    
-    __dict__ = None
     
     __weakref__ = None
 
 
 
-def cacheCorrectnessTest(fileName='None', resultsPath='None', verbose='False', modes="[['transform', 'mesh', 'curves']]", maxFrames='20', dataTypes="['matrix', 'vertex', 'screen']", emSetup='0', cacheTimeout='1800'):
+
+def cacheCorrectnessTest(file_name='None', results_path='None', verbose='False', modes='None', max_frames='20', data_types="['matrix', 'vertex', 'screen']", em_setup='2', cache_timeout='1800'):
     """
     Evaluate the file in multiple caching modes and compare the results.
     
-    fileName:     See fileName parameter in run_correctness_test.
-    resultsPath:  See resultsPath parameter in run_correctness_test.
-    verbose:      See verbose parameter in run_correctness_test.
-    modes:        List of modes to run the tests in.  A mode is a list of options to activate
-                  in the cache system.  The only valid ones are:
-                  transform: caches transforms
-                  mesh: caches meshes
-                  curves: caches NURBS curves
-                  meshOnlyVP2: activates VP2 mesh caching
-    maxFrames:    See maxFrames parameter in run_correctness_test.
-    dataTypes:    See dataTypes parameter in run_correctness_test.
-    emSetup:      See emSetup parameter in run_correctness_test.
-    cacheTimeout: The maximum amount of time to wait for cache to fill.
+    :param file_name:    Name of file to load for comparison. None means use the current scene.
+    :param results_path: Where to store the results. None means don't store anything.
+    :param verbose:      If True then dump the differing values when they are encountered.
+    :param modes:        List of modes to run the tests in.  A mode is a list of options to activate
+                         in the cache system.  See the CacheEvaluatorManager set_state() method for
+                         the format it expects for these modes.
+    :param max_frames:   Maximum number of frames in the playback, to avoid long tests.
+    :param data_types:   List of data types to include in the analysis.
+                            See run_correctness_test for the possible values.
+    :param em_setup:     What to do before running an EM mode test, in bitfield combinations.
+                            See run_correctness_test for the possible values.
+    :param cache_timeout: The maximum amount of time to wait for cache to fill.
     
-    Returns the output of run_correctness_test().
+    :return: a list of value tuples indicating the run mode and the number of
+             changes encountered in that mode. e.g. ['ems', 0]
     """
-
     pass
-
-
 def getModeString(mode):
     """
-    Returns the identifying string for this cache mode, which is just the
-    list of activated options separated by a '+' sign.
+    Returns the identifying string for this cache mode.
+    Temporary function here while QATA is refactored.
     """
-
     pass
 
 
+CORRECTNESS_INVALIDATE = 2
 
-CACHE_TIMEOUT = 1800
+MAX_CACHE_TIMEOUT = 1800
 
-CORRECTNESS_NO_SETUP = 0
+KEY_CACHE_MODE = 'cache_mode'
 
 CORRECTNESS_MAX_FRAMECOUNT = 20
-
-TYPES_TO_MANIPULATE = []
 
 

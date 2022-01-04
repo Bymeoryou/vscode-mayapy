@@ -1,7 +1,5 @@
-from maya.debug.TODO import TODO
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-def reapply():
-    pass
-
-
+def reapply(): pass
 

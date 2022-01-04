@@ -3,6 +3,10 @@ Helper methods for handling assembly initial representation.
 Called from the sceneAssembly plug-in code.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class assemblyReferenceInitialRep:
     """
     This utility class is invoked by the sceneAssembly plug-in to manage
@@ -50,28 +54,19 @@ class assemblyReferenceInitialRep:
     
     
     
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def clear(self, rootAssemblyName):
         """
         Remove the initialRep data associated with the 
         specified root assembly
         """
-    
         pass
-    
-    
     def getInitialRep(self, targetAssemblyName):
         """
         Get the initialRep data associated with the 
         specified target assembly
         """
-    
         pass
-    
-    
     def reader(self, rootAssemblyName):
         """
         Given a top level assembly, read the initialRep data
@@ -84,32 +79,22 @@ class assemblyReferenceInitialRep:
         If the data is no longer required, it can also be removed by
         calling clear() directly.
         """
-    
         pass
-    
-    
     def writer(self, rootAssemblyName):
         """
         Given a top level assembly, format the initialRep data for
         its hierarchy of subassemblies and store it in the
         initialRep attribute on the top level assembly node.
         """
-    
         pass
-    
-    
-    def className():
-        pass
-    
-    
+    @staticmethod
+    def className(): pass
+    @staticmethod
     def enableDebugOutput(value):
         """
         Enable or disable debug output
         """
-    
         pass
-    
-    
     initialRepDictionaries = {}
     
     

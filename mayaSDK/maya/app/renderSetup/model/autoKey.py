@@ -24,21 +24,11 @@ Using the autoKeyframe command has the following desirable properties:
   frame addition is undone atomically with the corresponding set value command.
 """
 
-def setValue(mPlug, value, autoKey):
-    """
-    Set the argument value on the argument plug, setting an
-    autoKeyframe on that attribute, if autoKey is True.
-    
-    The plug argument must be an MPlug.
-    """
 
-    pass
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-
-def isEnabled():
-    pass
-
-
+def isEnabled(): pass
 def autoKeyed():
     """
     Returns the attribute(s) that the autoKeyframe command will set.
@@ -46,8 +36,13 @@ def autoKeyed():
     The attribute(s) is returned in a set.  If autoKeyframe is off, an
     empty set is returned.
     """
-
     pass
-
-
+def setValue(mPlug, value, autoKey):
+    """
+    Set the argument value on the argument plug, setting an
+    autoKeyframe on that attribute, if autoKey is True.
+    
+    The plug argument must be an MPlug.
+    """
+    pass
 

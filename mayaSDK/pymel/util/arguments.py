@@ -3,201 +3,68 @@ Defines arguments manipulation utilities, like checking if an argument is iterab
 These utility functions can be used by other util modules and are imported in util's main namespace for use by other pymel modules
 """
 
+
 from collections import deque as _deque
 from pymel.util.utilitytypes import ProxyUnicode
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class RemovedKey(object):
-    def __eq__(self, other):
-        pass
-    
-    
-    def __init__(self, oldVal):
-        pass
-    
-    
-    def __ne__(self, other):
-        pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
+    def __eq__(self, other): pass
+    def __init__(self, oldVal): pass
+    def __ne__(self, other): pass
+    def __repr__(self): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
 
 class ChangedKey(object):
-    def __eq__(self, other):
-        pass
-    
-    
-    def __init__(self, oldVal, newVal):
-        pass
-    
-    
-    def __ne__(self, other):
-        pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
+    def __eq__(self, other): pass
+    def __init__(self, oldVal, newVal): pass
+    def __ne__(self, other): pass
+    def __repr__(self): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
 
 class AddedKey(object):
-    def __eq__(self, other):
-        pass
-    
-    
-    def __init__(self, newVal):
-        pass
-    
-    
-    def __ne__(self, other):
-        pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
+    def __eq__(self, other): pass
+    def __init__(self, newVal): pass
+    def __ne__(self, other): pass
+    def __repr__(self): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
 
 
-def isMapping(obj):
-    """
-    Returns True if an object is a mapping (dictionary) type, otherwise returns False.
-    
-    same as `operator.isMappingType`
-    
-    :rtype: bool
-    """
 
+def isSequence(obj):
+    """
+    same as `operator.isSequenceType`
+    
+    Returns
+    -------
+    bool
+    """
     pass
-
-
-def isIterable(obj):
+def breadthArgs(limit='1000', testFn="'<function isIterable>'", *args):
     """
-    Returns True if an object is iterable and not a string or ProxyUnicode type, otherwise returns False.
-    
-    :rtype: bool
+    returns a list of a breadth first expansion of args
     """
-
     pass
-
-
-def getCascadingDictItem(dict, keys, default='{}'):
+def breadthIterArgs(limit='1000', testFn="'<function isIterable>'", *args):
+    """
+    iterator doing a breadth first expansion of args
+    """
     pass
-
-
-def postorderIterArgs(limit='1000', testFn="'<function isIterable>'", *args):
-    """
-    iterator doing a postorder expansion of args
-    """
-
-    pass
-
-
-def convertListArgs(args):
-    pass
-
-
-def iterateArgs(*args, **kwargs):
-    """
-    Iterates through all arguments list: recursively replaces any iterable argument in *args by a tuple of its
-    elements that will be inserted at its place in the returned arguments.
-    
-    By default will return elements depth first, from root to leaves.  Set postorder or breadth to control order.
-    
-    :Keywords:
-        depth : int
-            will specify the nested depth limit after which iterables are returned as they are
-    
-        type
-            for type='list' will only expand lists, by default type='all' expands any iterable sequence
-    
-        postorder : bool
-             will return elements depth first, from leaves to roots
-    
-        breadth : bool
-            will return elements breadth first, roots, then first depth level, etc.
-    
-    For a nested list represent trees::
-    
-        a____b____c
-        |    |____d
-        e____f
-        |____g
-    
-    preorder(default) :
-    
-        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], limit=1 ))
-        ('a', 'b', ['c', 'd'], 'e', 'f', 'g')
-        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'] ))
-        ('a', 'b', 'c', 'd', 'e', 'f', 'g')
-    
-    postorder :
-    
-        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], postorder=True, limit=1 ))
-        ('b', ['c', 'd'], 'a', 'f', 'g', 'e')
-        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], postorder=True))
-        ('c', 'd', 'b', 'a', 'f', 'g', 'e')
-    
-    breadth :
-    
-        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], limit=1, breadth=True))
-        ('a', 'e', 'b', ['c', 'd'], 'f', 'g')
-        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], breadth=True))
-        ('a', 'e', 'b', 'f', 'g', 'c', 'd')
-    
-    Note that with default depth (-1 for unlimited) and order (preorder), if passed a pymel Tree
-    result will be the equivalent of using a preorder iterator : iter(theTree)
-    """
-
-    pass
-
-
-def preorder(iterable, testFn="'<function isIterable>'", limit='1000'):
-    """
-    iterator doing a preorder expansion of args
-    """
-
-    pass
-
-
-def preorderArgs(limit='1000', testFn="'<function isIterable>'", *args):
-    """
-    returns a list of a preorder expansion of args
-    """
-
-    pass
-
-
-def listForNone(res):
-    """
-    returns an empty list when the result is None
-    """
-
-    pass
-
-
-def sequenceToSlices(intList, sort='True'):
-    """
-    convert a sequence of integers into a tuple of slice objects
-    """
-
-    pass
-
-
 def expandArgs(*args, **kwargs):
     """
     'Flattens' the arguments list: recursively replaces any iterable argument in *args by a tuple of its
@@ -250,26 +117,54 @@ def expandArgs(*args, **kwargs):
     Note that with default depth (unlimited) and order (preorder), if passed a pymel Tree
     result will be the equivalent of doing a preorder traversal : [k for k in iter(theTree)]
     """
-
     pass
-
-
-def preorderIterArgs(limit='1000', testFn="'<function isIterable>'", *args):
+def isScalar(obj):
+    """
+    Returns True if an object is a number or complex type, otherwise returns False.
+    
+    Returns
+    -------
+    bool
+    """
+    pass
+def listForNone(res):
+    """
+    returns an empty list when the result is None
+    """
+    pass
+def getCascadingDictItem(dict, keys, default='{}'): pass
+def preorderArgs(limit='1000', testFn="'<function isIterable>'", *args):
+    """
+    returns a list of a preorder expansion of args
+    """
+    pass
+def convertListArgs(args): pass
+def preorder(iterable, testFn="'<function isIterable>'", limit='1000'):
     """
     iterator doing a preorder expansion of args
     """
-
     pass
-
-
-def breadth(iterable, testFn="'<function isIterable>'", limit='1000'):
+def isIterable(obj):
     """
-    iterator doing a breadth first expansion of args
+    Returns True if an object is iterable and not a string or ProxyUnicode type, otherwise returns False.
+    
+    Returns
+    -------
+    bool
     """
-
     pass
-
-
+def clsname(x): pass
+def isMapping(obj):
+    """
+    Returns True if an object is a mapping (dictionary) type, otherwise returns False.
+    
+    same as `operator.isMappingType`
+    
+    Returns
+    -------
+    bool
+    """
+    pass
 def pairIter(sequence):
     """
     Returns an iterator over every 2 items of sequence.
@@ -278,18 +173,17 @@ def pairIter(sequence):
     
     If sequence has an odd number of items, the last item will not be returned in a pair.
     """
-
     pass
-
-
-def postorder(iterable, testFn="'<function isIterable>'", limit='1000'):
+def preorderIterArgs(limit='1000', testFn="'<function isIterable>'", *args):
     """
-    iterator doing a postorder expansion of args
+    iterator doing a preorder expansion of args
     """
-
     pass
-
-
+def sequenceToSlices(intList, sort='True'):
+    """
+    convert a sequence of integers into a tuple of slice objects
+    """
+    pass
 def mergeCascadingDicts(from_dict, to_dict, allowDictToListMerging='False', allowNewListMembers='False'):
     """
     recursively update to_dict with values from from_dict.
@@ -310,22 +204,74 @@ def mergeCascadingDicts(from_dict, to_dict, allowDictToListMerging='False', allo
     indices greater than all of any indices updated / added should be removed,
     because the order in which items are updated / removed is indeterminate.
     """
-
     pass
-
-
+def postorder(iterable, testFn="'<function isIterable>'", limit='1000'):
+    """
+    iterator doing a postorder expansion of args
+    """
+    pass
 def postorderArgs(limit='1000', testFn="'<function isIterable>'", *args):
     """
     returns a list of  a postorder expansion of args
     """
-
     pass
-
-
-def izip_longest(*args, **kwds):
+def iterateArgs(*args, **kwargs):
+    """
+    Iterates through all arguments list: recursively replaces any iterable argument in *args by a tuple of its
+    elements that will be inserted at its place in the returned arguments.
+    
+    By default will return elements depth first, from root to leaves.  Set postorder or breadth to control order.
+    
+    :Keywords:
+        depth : int
+            will specify the nested depth limit after which iterables are returned as they are
+    
+        type
+            for type='list' will only expand lists, by default type='all' expands any iterable sequence
+    
+        postorder : bool
+             will return elements depth first, from leaves to roots
+    
+        breadth : bool
+            will return elements breadth first, roots, then first depth level, etc.
+    
+    For a nested list represent trees::
+    
+        a____b____c
+        |    |____d
+        e____f
+        |____g
+    
+    preorder(default) :
+    
+        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], limit=1 ))
+        ('a', 'b', ['c', 'd'], 'e', 'f', 'g')
+        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'] ))
+        ('a', 'b', 'c', 'd', 'e', 'f', 'g')
+    
+    postorder :
+    
+        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], postorder=True, limit=1 ))
+        ('b', ['c', 'd'], 'a', 'f', 'g', 'e')
+        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], postorder=True))
+        ('c', 'd', 'b', 'a', 'f', 'g', 'e')
+    
+    breadth :
+    
+        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], limit=1, breadth=True))
+        ('a', 'e', 'b', ['c', 'd'], 'f', 'g')
+        >>> tuple(k for k in iterateArgs( 'a', ['b', ['c', 'd']], 'e', ['f', 'g'], breadth=True))
+        ('a', 'e', 'b', 'f', 'g', 'c', 'd')
+    
+    Note that with default depth (-1 for unlimited) and order (preorder), if passed a pymel Tree
+    result will be the equivalent of using a preorder iterator : iter(theTree)
+    """
     pass
-
-
+def breadth(iterable, testFn="'<function isIterable>'", limit='1000'):
+    """
+    iterator doing a breadth first expansion of args
+    """
+    pass
 def reorder(x, indexList='[]', indexDict='{}'):
     """
     Reorder a list based upon a list of positional indices and/or a dictionary of fromIndex:toIndex.
@@ -338,50 +284,22 @@ def reorder(x, indexList='[]', indexDict='{}'):
         >>> reorder( l, [1, 4], {5:6} )  # remapping via dictionary: move the value at index 5 to index 6
         ['one', 'four', 'zero', 'two', 'three', 'six', 'five']
     """
-
     pass
-
-
-def isScalar(obj):
+def postorderIterArgs(limit='1000', testFn="'<function isIterable>'", *args):
     """
-    Returns True if an object is a number or complex type, otherwise returns False.
-    
-    :rtype: bool
+    iterator doing a postorder expansion of args
     """
-
     pass
-
-
-def setCascadingDictItem(dict, keys, value):
-    pass
-
-
-def breadthIterArgs(limit='1000', testFn="'<function isIterable>'", *args):
-    """
-    iterator doing a breadth first expansion of args
-    """
-
-    pass
-
-
-def breadthArgs(limit='1000', testFn="'<function isIterable>'", *args):
-    """
-    returns a list of a breadth first expansion of args
-    """
-
-    pass
-
-
 def isNumeric(obj):
     """
     Returns True if an object is a number type, otherwise returns False.
     
-    :rtype: bool
+    Returns
+    -------
+    bool
     """
-
     pass
-
-
+def setCascadingDictItem(dict, keys, value): pass
 def compareCascadingDicts(dict1, dict2, encoding='None', useAddedKeys='False', useChangedKeys='False'):
     """
     compares two cascading dicts
@@ -434,22 +352,6 @@ def compareCascadingDicts(dict1, dict2, encoding='None', useAddedKeys='False', u
         The return value should be such that if you do if you merge the
         differences with d1, you will get d2.
     """
-
     pass
-
-
-def isSequence(obj):
-    """
-    same as `operator.isSequenceType`
-    
-    :rtype: bool
-    """
-
-    pass
-
-
-def clsname(x):
-    pass
-
-
+def izip_longest(*args, **kwds): pass
 

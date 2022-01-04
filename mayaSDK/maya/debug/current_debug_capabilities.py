@@ -33,37 +33,9 @@ abbreviated output is provided:
     }
 """
 
-def dgdirty_capabilities():
-    """
-    Find the current capabilities of the dgdirty command if it exists.
-    """
 
-    pass
-
-
-def dgeval_capabilities():
-    """
-    Find the current capabilities of the dgeval command if it exists.
-    """
-
-    pass
-
-
-def dgdebug_capabilities():
-    """
-    Find the current capabilities of the dgdebug command if it exists.
-    """
-
-    pass
-
-
-def dgInfo_capabilities():
-    """
-    Find the current capabilities of the dgInfo command if it exists.
-    """
-
-    pass
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 def dbtrace_keyword_split(keyword):
     """
@@ -71,10 +43,75 @@ def dbtrace_keyword_split(keyword):
     for internal traces and just KEY for customer-facing ones. In the
     latter case a level of 0 is returned for consistency.
     """
-
     pass
-
-
+def dgeval_capabilities():
+    """
+    Find the current capabilities of the dgeval command if it exists.
+    """
+    pass
+def dgInfo_capabilities():
+    """
+    Find the current capabilities of the dgInfo command if it exists.
+    """
+    pass
+def command_available(command, results):
+    """
+    Check to see if a command is available in this cut.
+    :param command: Name of command to check
+    :param results: Returned help information. If the command is available
+                    it will have the output from 'help command' appended,
+                    otherwise it will have a notice that the command is
+                    not available.
+    :return: True if the command is available, False if not
+    """
+    pass
+def dgmodified_capabilities():
+    """
+    Find the current capabilities of the dgmodified command if it exists.
+    """
+    pass
+def dbmessage_capabilities():
+    """
+    Find the current capabilities of the dbmessage command if it exists.
+    """
+    pass
+def current_debug_capabilities(file_name):
+    """
+    Dump out the current debugging capabilities to the named file.
+    :param file_name: Name of file to receive the results. If None then
+                      the results are returned in a JSON dictionary.
+    """
+    pass
+def dbcount_capabilities():
+    """
+    Find the current capabilities of the dbcount command if it exists.
+    """
+    pass
+def dgdirty_capabilities():
+    """
+    Find the current capabilities of the dgdirty command if it exists.
+    """
+    pass
+def dgdebug_capabilities():
+    """
+    Find the current capabilities of the dgdebug command if it exists.
+    """
+    pass
+def dbtrace_capabilities():
+    """
+    Find the current capabilities for the dbtrace command and return it
+    in a dictionary. Only the help information and a summary of each
+    available keyword derived from the 'info' flag is provided.
+    
+        {
+            "help" : "HELP INFORMATION FROM 'help dbtrace'"
+            "keywords" :
+            {
+                "KEYWORD" : "SUMMARY FROM 'dbtrace -k KEYWORD -q -info'"
+            }
+        }
+    """
+    pass
 def dbpeek_capabilities():
     """
     Find the current capabilities of the dbpeek command if it exists.
@@ -90,75 +127,7 @@ def dbpeek_capabilities():
             }
         }
     """
-
     pass
-
-
-def current_debug_capabilities(file_name):
-    """
-    Dump out the current debugging capabilities to the named file.
-    :param file_name: Name of file to receive the results. If None then
-                      the results are returned in a JSON dictionary.
-    """
-
-    pass
-
-
-def dbmessage_capabilities():
-    """
-    Find the current capabilities of the dbmessage command if it exists.
-    """
-
-    pass
-
-
-def command_available(command, results):
-    """
-    Check to see if a command is available in this cut.
-    :param command: Name of command to check
-    :param results: Returned help information. If the command is available
-                    it will have the output from 'help command' appended,
-                    otherwise it will have a notice that the command is
-                    not available.
-    :return: True if the command is available, False if not
-    """
-
-    pass
-
-
-def dbtrace_capabilities():
-    """
-    Find the current capabilities for the dbtrace command and return it
-    in a dictionary. Only the help information and a summary of each
-    available keyword derived from the 'info' flag is provided.
-    
-        {
-            "help" : "HELP INFORMATION FROM 'help dbtrace'"
-            "keywords" :
-            {
-                "KEYWORD" : "SUMMARY FROM 'dbtrace -k KEYWORD -q -info'"
-            }
-        }
-    """
-
-    pass
-
-
-def dgmodified_capabilities():
-    """
-    Find the current capabilities of the dgmodified command if it exists.
-    """
-
-    pass
-
-
-def dbcount_capabilities():
-    """
-    Find the current capabilities of the dbcount command if it exists.
-    """
-
-    pass
-
 
 
 RE_DBTRACE_KEYWORD_LEVEL = None

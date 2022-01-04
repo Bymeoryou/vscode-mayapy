@@ -46,6 +46,71 @@ Overrides and their application nodes have the following characteristics:
   trivial.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class LeafClass(object):
+    """
+    To be used by leaf classes only
+    """
+    
+    
+    
+    def isAbstractClass(self): pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
+class ApplyValueOverride(object):
+    """
+    Mixin class to support applying value overrides.
+    
+    The chain of apply override nodes for an attribute acts as a
+    handler in a chain of responsibility design pattern when the
+    overridden attribute is set (written to).  This class implements
+    support for this chain of responsibility.
+    """
+    
+    
+    
+    def canHandleSetOverride(self):
+        """
+        Can this apply override node handle a set override value request?
+        
+        This predicate indicates whether the apply override can handle such
+        a request.  If true, Maya will accept writes to the overridden
+        attribute.  If false, the overridden attribute cannot be written to.
+        """
+        pass
+    def handleSetOverride(self, overriddenPlug, autoKeyed):
+        """
+        Handle a set override request.
+        
+        This is the chain of responsibility handler that sets (writes) the
+        override value.  It assumes that canHandleSetOverride has returned
+        true for this node.
+        
+        If autoKeyed is True, autoKeyframe will be given the override
+        attribute that ultimately receives the value, so that a keyframe
+        will be set on the override (or the original) if the autoKeyframe
+        conditions to set a keyframe are met.
+        """
+        pass
+    def isInvertible(self):
+        """
+        Can input values be found that produce a given output value?
+        """
+        pass
+    def isPassiveOutput(self, plug): pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
 class _MPxNode(object):
     """
     Base class for user defined dependency nodes.
@@ -57,10 +122,7 @@ class _MPxNode(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def addExternalContentForFileAttr(*args, **kwargs):
         """
         addExternalContentForFileAttr(table, attr) -> bool
@@ -74,10 +136,7 @@ class _MPxNode(object):
         
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-    
         pass
-    
-    
     def compute(*args, **kwargs):
         """
         compute(plug, dataBlock) -> self
@@ -88,17 +147,16 @@ class _MPxNode(object):
         
         The MDataBlock will provide smart handles for reading and writing this node's attribute values.  Only these values should be used when performing computations.
         
-        When evaluating the dependency graph, Maya will first call the compute method for this node.  If the plug that is provided to the compute indicates that that the attribute was defined by the Maya parent node, the compute method should return None.  When this occurs, Maya will call the internal Maya node from which the user-defined node is derived to compute the plug's value.
+        When evaluating the dependency graph, Maya will first call the compute method for this node.  If the plug that is provided to the compute indicates that that the attribute was defined by the Maya parent node, the compute method should return None.  When this occurs, Maya will call the internal Maya node from which the user-defined node is derived to compute the plug's value. Returning any othervalue (including self) will tell Maya that this node successfully computed theplug. Raising an exception will tell Maya that this node failed at computingthe plug. Note that in most cases, Maya ignores node compute failures.
+        
+        In other words, the compute method should return None to get the Maya parent class to compute the plug. It should return self (or any other value) to indicate that the plug was computed successfully.
         
         This means that a user defined node does not need to be concerned with computing inherited output attributes.  However, if desired, these can be safely recomputed by this method to change the behaviour of the node.
         
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-    
         pass
-    
-    
     def connectionBroken(*args, **kwargs):
         """
         connectionBroken( plug, otherPlug, asSrc) -> self
@@ -109,10 +167,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def connectionMade(*args, **kwargs):
         """
         connectionMade(plug, otherPlug, asSrc) -> self
@@ -123,10 +178,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def copyInternalData(*args, **kwargs):
         """
         copyInternalData(node) -> self
@@ -137,10 +189,7 @@ class _MPxNode(object):
         
         * node (MPxNode) - the node that is being duplicated.
         """
-    
         pass
-    
-    
     def dependsOn(*args, **kwargs):
         """
         dependsOn( plug, otherPlug) -> bool/None
@@ -156,20 +205,14 @@ class _MPxNode(object):
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-    
         pass
-    
-    
     def doNotWrite(*args, **kwargs):
         """
         doNotWrite() -> bool
         
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-    
         pass
-    
-    
     def forceCache(*args, **kwargs):
         """
         forceCache(ctx=MDGContext::current()) -> MDataBlock
@@ -179,10 +222,7 @@ class _MPxNode(object):
         
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-    
         pass
-    
-    
     def getExternalContent(*args, **kwargs):
         """
         getExternalContent(table) -> self
@@ -197,10 +237,7 @@ class _MPxNode(object):
         
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-    
         pass
-    
-    
     def getFilesToArchive(*args, **kwargs):
         """
         getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
@@ -217,10 +254,7 @@ class _MPxNode(object):
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-    
         pass
-    
-    
     def getInternalValue(*args, **kwargs):
         """
         getInternalValue(plug, dataHandle) -> bool
@@ -236,10 +270,7 @@ class _MPxNode(object):
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-    
         pass
-    
-    
     def getInternalValueInContext(*args, **kwargs):
         """
         getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
@@ -250,10 +281,7 @@ class _MPxNode(object):
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-    
         pass
-    
-    
     def internalArrayCount(*args, **kwargs):
         """
         internalArrayCount(plug) -> int
@@ -270,10 +298,7 @@ class _MPxNode(object):
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-    
         pass
-    
-    
     def isAbstractClass(*args, **kwargs):
         """
         isAbstractClass() -> bool
@@ -282,10 +307,7 @@ class _MPxNode(object):
         
         It is not necessary to override this method.
         """
-    
         pass
-    
-    
     def isPassiveOutput(*args, **kwargs):
         """
         isPassiveOutput(plug) -> bool
@@ -294,10 +316,7 @@ class _MPxNode(object):
         
         * plug (MPlug) - plug representing output in question.
         """
-    
         pass
-    
-    
     def legalConnection(*args, **kwargs):
         """
         legalConnection(plug, otherPlug, asSrc) -> bool/None
@@ -310,10 +329,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def legalDisconnection(*args, **kwargs):
         """
         legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
@@ -326,10 +342,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def name(*args, **kwargs):
         """
         name() -> string
@@ -340,10 +353,7 @@ class _MPxNode(object):
         
         Returns the name of the node
         """
-    
         pass
-    
-    
     def passThroughToMany(*args, **kwargs):
         """
         passThroughToMany(plug, plugArray) -> bool
@@ -355,10 +365,7 @@ class _MPxNode(object):
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-    
         pass
-    
-    
     def passThroughToOne(*args, **kwargs):
         """
         passThroughToOne(plug) -> plug
@@ -371,10 +378,7 @@ class _MPxNode(object):
         
         * plug (MPlug) - the plug.
         """
-    
         pass
-    
-    
     def postConstructor(*args, **kwargs):
         """
         postConstructor() -> self
@@ -383,10 +387,7 @@ class _MPxNode(object):
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-    
         pass
-    
-    
     def postEvaluation(*args, **kwargs):
         """
         postEvaluation(context, evalNode, evalType) -> None
@@ -415,10 +416,7 @@ class _MPxNode(object):
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-    
         pass
-    
-    
     def preEvaluation(*args, **kwargs):
         """
         preEvaluation(context, evalNode) -> None
@@ -441,10 +439,7 @@ class _MPxNode(object):
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-    
         pass
-    
-    
     def setDependentsDirty(*args, **kwargs):
         """
         setDependentsDirty(plug, plugArray) -> self
@@ -466,10 +461,7 @@ class _MPxNode(object):
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-    
         pass
-    
-    
     def setDoNotWrite(*args, **kwargs):
         """
         setDoNotWrite(bool) -> self
@@ -480,10 +472,7 @@ class _MPxNode(object):
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-    
         pass
-    
-    
     def setExternalContent(*args, **kwargs):
         """
         setExternalContent(table) -> self
@@ -498,10 +487,7 @@ class _MPxNode(object):
         
         * table Key->location table with new content locations.
         """
-    
         pass
-    
-    
     def setExternalContentForFileAttr(*args, **kwargs):
         """
         setExternalContentForFileAttr(attr, table) -> bool
@@ -515,10 +501,7 @@ class _MPxNode(object):
         
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-    
         pass
-    
-    
     def setInternalValue(*args, **kwargs):
         """
         setInternalValue(plug, dataHandle) -> bool
@@ -537,10 +520,7 @@ class _MPxNode(object):
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-    
         pass
-    
-    
     def setInternalValueInContext(*args, **kwargs):
         """
         setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
@@ -551,24 +531,18 @@ class _MPxNode(object):
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-    
         pass
-    
-    
     def setMPSafe(*args, **kwargs):
         """
         setMPSafe(bool) -> self
         
-        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data. 
+        This method is obsolete. Override MPxNode.setSchedulingType instead.
         
-        This flag does NOT mark a node thread safe for parallel DG evaluation in Viewport 2.0.  To mark a node thread safe for parallel DG evaluation see the setNodeTypeFlag mel command. 
+        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data. 
         
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-    
         pass
-    
-    
     def shouldSave(*args, **kwargs):
         """
         shouldSave(plug) -> bool/None
@@ -580,20 +554,14 @@ class _MPxNode(object):
         
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-    
         pass
-    
-    
     def thisMObject(*args, **kwargs):
         """
         thisMObject() -> MObject
         
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-    
         pass
-    
-    
     def type(*args, **kwargs):
         """
         type() -> int
@@ -628,30 +596,22 @@ class _MPxNode(object):
           kGeometryFilter                               Custom deformer derived from MPxGeometryFilter
                  kBlendShape                                    Custom deformer derived from MPxBlendShape
         """
-    
         pass
-    
-    
     def typeId(*args, **kwargs):
         """
         typeId() -> MTypeId
         
         Returns the TYPEID of this node.
         """
-    
         pass
-    
-    
     def typeName(*args, **kwargs):
         """
         typeName() -> string
         
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-    
         pass
-    
-    
+    @staticmethod
     def addAttribute(*args, **kwargs):
         """
         addAttribute(attr) -> None
@@ -665,10 +625,8 @@ class _MPxNode(object):
         
         * attr (MObject) - new attribute to add.
         """
-    
         pass
-    
-    
+    @staticmethod
     def attributeAffects(*args, **kwargs):
         """
         attributeAffects(whenChanges, isAffected) -> None
@@ -682,10 +640,8 @@ class _MPxNode(object):
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-    
         pass
-    
-    
+    @staticmethod
     def inheritAttributesFrom(*args, **kwargs):
         """
         inheritAttributesFrom(parentClassName) -> None
@@ -700,10 +656,7 @@ class _MPxNode(object):
         
         * parentClassName (string) - class of node to inherit attributes from.
         """
-    
         pass
-    
-    
     __new__ = None
     
     
@@ -800,80 +753,6 @@ class _MPxNode(object):
     kTransformNode = 11
 
 
-class ApplyValueOverride(object):
-    """
-    Mixin class to support applying value overrides.
-    
-    The chain of apply override nodes for an attribute acts as a
-    handler in a chain of responsibility design pattern when the
-    overridden attribute is set (written to).  This class implements
-    support for this chain of responsibility.
-    """
-    
-    
-    
-    def canHandleSetOverride(self):
-        """
-        Can this apply override node handle a set override value request?
-        
-        This predicate indicates whether the apply override can handle such
-        a request.  If true, Maya will accept writes to the overridden
-        attribute.  If false, the overridden attribute cannot be written to.
-        """
-    
-        pass
-    
-    
-    def handleSetOverride(self, overriddenPlug, autoKeyed):
-        """
-        Handle a set override request.
-        
-        This is the chain of responsibility handler that sets (writes) the
-        override value.  It assumes that canHandleSetOverride has returned
-        true for this node.
-        
-        If autoKeyed is True, autoKeyframe will be given the override
-        attribute that ultimately receives the value, so that a keyframe
-        will be set on the override (or the original) if the autoKeyframe
-        conditions to set a keyframe are met.
-        """
-    
-        pass
-    
-    
-    def isInvertible(self):
-        """
-        Can input values be found that produce a given output value?
-        """
-    
-        pass
-    
-    
-    def isPassiveOutput(self, plug):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
-class LeafClass(object):
-    """
-    To be used by leaf classes only
-    """
-    
-    
-    
-    def isAbstractClass(self):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
 class ApplyOverride(_MPxNode):
     """
     Apply an override to an input attribute.
@@ -908,30 +787,12 @@ class ApplyOverride(_MPxNode):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def getEnabledPlug(self):
-        pass
-    
-    
-    def getOriginalPlug(self):
-        pass
-    
-    
-    def getOutputPlug(self):
-        pass
-    
-    
-    def isAbstractClass(self):
-        pass
-    
-    
-    def isEnabled(self):
-        pass
-    
-    
+    def __init__(self): pass
+    def getEnabledPlug(self): pass
+    def getOriginalPlug(self): pass
+    def getOutputPlug(self): pass
+    def isAbstractClass(self): pass
+    def isEnabled(self): pass
     def onMainScene(self):
         """
         Applied to a node not in the main scene?
@@ -939,18 +800,12 @@ class ApplyOverride(_MPxNode):
         Nodes that are not in the main scene include file referenced nodes and 
         nodes in scene assemblies.  These nodes might not be loaded.
         """
-    
         pass
-    
-    
     def override(self):
         """
         Return the override that corresponds to this apply override node.
         """
-    
         pass
-    
-    
     def setNotOnMainScene(self):
         """
         Mark as applied to a node that is not in the main scene.
@@ -958,21 +813,16 @@ class ApplyOverride(_MPxNode):
         Nodes that are not in the main scene include file referenced nodes and 
         nodes in scene assemblies.  These nodes might not be loaded.
         """
-    
         pass
-    
-    
-    def creator(cls):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    @classmethod
+    def creator(cls): pass
+    @staticmethod
+    def initializer(): pass
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     enabled = None
     
@@ -989,42 +839,6 @@ class ApplyOverride(_MPxNode):
     kTypeName = 'applyOverride'
 
 
-class ApplyAbsOverride(ApplyValueOverride, ApplyOverride):
-    """
-    Apply an absolute override.
-    
-    If the enabled boolean input is false, return the original input, else 
-    return the value input.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def getValuePlug(self):
-        pass
-    
-    
-    def isOverrideValueSettable(self):
-        pass
-    
-    
-    def setOverrideValue(self, overriddenPlug, autoKeyed):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'applyAbsOverride'
-
-
 class ApplyRelOverride(ApplyValueOverride, ApplyOverride):
     """
     Apply a relative override.
@@ -1037,96 +851,59 @@ class ApplyRelOverride(ApplyValueOverride, ApplyOverride):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def getMultiplyPlug(self):
-        pass
-    
-    
-    def getOffsetPlug(self):
-        pass
-    
-    
-    def isOverrideValueSettable(self):
-        pass
-    
-    
-    def setOverrideValue(self, overriddenPlug, autoKeyed):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def __init__(self): pass
+    def getMultiplyPlug(self): pass
+    def getOffsetPlug(self): pass
+    def isOverrideValueSettable(self): pass
+    def setOverrideValue(self, overriddenPlug, autoKeyed): pass
+    @staticmethod
+    def initializer(): pass
     kTypeId = None
     
     
     kTypeName = 'applyRelOverride'
 
 
-class ApplyAbsFloatOverride(LeafClass, ApplyAbsOverride):
+class ApplyAbsOverride(ApplyValueOverride, ApplyOverride):
     """
-    Apply a float absolute override.
+    Apply an absolute override.
+    
+    If the enabled boolean input is false, return the original input, else 
+    return the value input.
     """
     
     
     
-    def __init__(self):
-        pass
+    def __init__(self): pass
+    def getValuePlug(self): pass
+    def isOverrideValueSettable(self): pass
+    def setOverrideValue(self, overriddenPlug, autoKeyed): pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
     
     
-    def compute(self, plug, dataBlock):
-        pass
+    kTypeName = 'applyAbsOverride'
+
+
+class ApplyAbsBoolOverride(LeafClass, ApplyAbsOverride):
+    """
+    Apply a boolean absolute override.
+    """
     
     
-    def initializer():
-        pass
     
-    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
     attrValue = None
     
     
     kTypeId = None
     
     
-    kTypeName = 'applyAbsFloatOverride'
-    
-    
-    original = None
-    
-    
-    out = None
-
-
-class ApplyAbsEnumOverride(LeafClass, ApplyAbsOverride):
-    """
-    Apply an enum absolute override.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    attrValue = None
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'applyAbsEnumOverride'
+    kTypeName = 'applyAbsBoolOverride'
     
     
     original = None
@@ -1142,18 +919,10 @@ class ApplyAbsStringOverride(LeafClass, ApplyAbsOverride):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
     attrValue = None
     
     
@@ -1169,6 +938,145 @@ class ApplyAbsStringOverride(LeafClass, ApplyAbsOverride):
     out = None
 
 
+class ApplyRel3FloatsOverride(LeafClass, ApplyRelOverride):
+    """
+    Apply a 3 floats relative override.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
+    
+    
+    kTypeName = 'applyRel3FloatsOverride'
+    
+    
+    multiply = None
+    
+    
+    offset = None
+    
+    
+    original = None
+    
+    
+    out = None
+
+
+class ApplyRelIntOverride(LeafClass, ApplyRelOverride):
+    """
+    Apply an int relative override.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
+    
+    
+    kTypeName = 'applyRelIntOverride'
+    
+    
+    multiply = None
+    
+    
+    offset = None
+    
+    
+    original = None
+    
+    
+    out = None
+
+
+class ApplyAbs3FloatsOverride(LeafClass, ApplyAbsOverride):
+    """
+    Apply a 3 floats absolute override.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
+    attrValue = None
+    
+    
+    kTypeId = None
+    
+    
+    kTypeName = 'applyAbs3FloatsOverride'
+    
+    
+    original = None
+    
+    
+    out = None
+
+
+class ApplyRel2FloatsOverride(LeafClass, ApplyRelOverride):
+    """
+    Apply a 2 floats relative override.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
+    
+    
+    kTypeName = 'applyRel2FloatsOverride'
+    
+    
+    multiply = None
+    
+    
+    offset = None
+    
+    
+    original = None
+    
+    
+    out = None
+
+
+class ApplyAbsIntOverride(LeafClass, ApplyAbsOverride):
+    """
+    Apply an int absolute override.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
+    attrValue = None
+    
+    
+    kTypeId = None
+    
+    
+    kTypeName = 'applyAbsIntOverride'
+    
+    
+    original = None
+    
+    
+    out = None
+
+
 class ApplyRelFloatOverride(LeafClass, ApplyRelOverride):
     """
     Apply a float relative override.
@@ -1176,18 +1084,10 @@ class ApplyRelFloatOverride(LeafClass, ApplyRelOverride):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
     kTypeId = None
     
     
@@ -1213,18 +1113,10 @@ class ApplyAbs2FloatsOverride(LeafClass, ApplyAbsOverride):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
     attrValue = None
     
     
@@ -1240,32 +1132,24 @@ class ApplyAbs2FloatsOverride(LeafClass, ApplyAbsOverride):
     out = None
 
 
-class ApplyAbs3FloatsOverride(LeafClass, ApplyAbsOverride):
+class ApplyAbsFloatOverride(LeafClass, ApplyAbsOverride):
     """
-    Apply a 3 floats absolute override.
+    Apply a float absolute override.
     """
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
     attrValue = None
     
     
     kTypeId = None
     
     
-    kTypeName = 'applyAbs3FloatsOverride'
+    kTypeName = 'applyAbsFloatOverride'
     
     
     original = None
@@ -1274,32 +1158,24 @@ class ApplyAbs3FloatsOverride(LeafClass, ApplyAbsOverride):
     out = None
 
 
-class ApplyAbsIntOverride(LeafClass, ApplyAbsOverride):
+class ApplyAbsEnumOverride(LeafClass, ApplyAbsOverride):
     """
-    Apply an int absolute override.
+    Apply an enum absolute override.
     """
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    @staticmethod
+    def initializer(): pass
     attrValue = None
     
     
     kTypeId = None
     
     
-    kTypeName = 'applyAbsIntOverride'
+    kTypeName = 'applyAbsEnumOverride'
     
     
     original = None
@@ -1308,170 +1184,6 @@ class ApplyAbsIntOverride(LeafClass, ApplyAbsOverride):
     out = None
 
 
-class ApplyRel2FloatsOverride(LeafClass, ApplyRelOverride):
-    """
-    Apply a 2 floats relative override.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'applyRel2FloatsOverride'
-    
-    
-    multiply = None
-    
-    
-    offset = None
-    
-    
-    original = None
-    
-    
-    out = None
-
-
-class ApplyRel3FloatsOverride(LeafClass, ApplyRelOverride):
-    """
-    Apply a 3 floats relative override.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'applyRel3FloatsOverride'
-    
-    
-    multiply = None
-    
-    
-    offset = None
-    
-    
-    original = None
-    
-    
-    out = None
-
-
-class ApplyAbsBoolOverride(LeafClass, ApplyAbsOverride):
-    """
-    Apply a boolean absolute override.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    attrValue = None
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'applyAbsBoolOverride'
-    
-    
-    original = None
-    
-    
-    out = None
-
-
-class ApplyRelIntOverride(LeafClass, ApplyRelOverride):
-    """
-    Apply an int relative override.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'applyRelIntOverride'
-    
-    
-    multiply = None
-    
-    
-    offset = None
-    
-    
-    original = None
-    
-    
-    out = None
-
-
-
-def connectedDst(srcPlug):
-    """
-    Return the apply override node connected to the source plug,
-    if one exists, else None.
-    """
-
-    pass
-
-
-def create(name, typeId):
-    """
-    Create an apply override with type given by the argument type ID.
-    
-    Returns the MPxNode object corresponding to the created override node.
-    A RuntimeError is raised in case of error.
-    """
-
-    pass
 
 
 def reverseGenerator(dstPlug):
@@ -1491,10 +1203,31 @@ def reverseGenerator(dstPlug):
     original plug (destination) of the higher-priority node to the output
     plug (source) of the lower-priority node.
     """
-
     pass
-
-
+def _createInputAttribute(attrClass, longAttrName, shortAttrName, attrTypeId, defaultValue):
+    """
+    Helper method to create a typed attribute
+    """
+    pass
+def getAllApplyOverrideClasses():
+    """
+    Returns the list of Apply Override subclasses
+    """
+    pass
+def connectedDst(srcPlug):
+    """
+    Return the apply override node connected to the source plug,
+    if one exists, else None.
+    """
+    pass
+def create(name, typeId):
+    """
+    Create an apply override with type given by the argument type ID.
+    
+    Returns the MPxNode object corresponding to the created override node.
+    A RuntimeError is raised in case of error.
+    """
+    pass
 def forwardGenerator(srcPlug):
     """
     Generator to iterate on apply override nodes in the direction of
@@ -1505,41 +1238,16 @@ def forwardGenerator(srcPlug):
     the connection from the output plug (source) of the lower-priority
     node to the original plug (destination) of the higher-priority node.
     """
-
     pass
-
-
+def _createOutputAttribute(attrClass, longAttrName, shortAttrName, attrTypeId, defaultValue):
+    """
+    Helper method to create a typed attribute
+    """
+    pass
 def connectedSrc(dstPlug):
     """
     Return the apply override node connected to the destination plug,
     if one exists, else None.
     """
-
     pass
-
-
-def _createOutputAttribute(attrClass, longAttrName, shortAttrName, attrTypeId, defaultValue):
-    """
-    Helper method to create a typed attribute
-    """
-
-    pass
-
-
-def getAllApplyOverrideClasses():
-    """
-    Returns the list of Apply Override subclasses
-    """
-
-    pass
-
-
-def _createInputAttribute(attrClass, longAttrName, shortAttrName, attrTypeId, defaultValue):
-    """
-    Helper method to create a typed attribute
-    """
-
-    pass
-
-
 

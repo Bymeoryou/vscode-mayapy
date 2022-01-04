@@ -7,36 +7,34 @@ node is a multi-line string, with one node name (or instance name) per
 line.
 """
 
+
+from maya.app.renderSetup.model.dagPath import *
 from maya.app.renderSetup.common.devtools import *
 
-from maya.app.renderSetup.model.dagPath import DagPath
+
 from maya.app.renderSetup.model.selection import Selection
 from functools import partial
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class Filters(object):
-    def filterFunction(ftype):
-        pass
-    
-    
-    def filterName(ftype):
-        pass
-    
-    
-    def filterTypes(ftype):
-        pass
-    
-    
-    def filterUIName(ftype):
-        pass
-    
-    
-    def getFiltersFor(typeName):
-        pass
-    
-    
+    @staticmethod
+    def filterFunction(ftype): pass
+    @staticmethod
+    def filterName(ftype): pass
+    @staticmethod
+    def filterTypes(ftype): pass
+    @staticmethod
+    def filterUIName(ftype): pass
+    @staticmethod
+    def getFiltersFor(typeName): pass
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     kAll = 0
     
@@ -77,6 +75,153 @@ class Filters(object):
     names = {}
 
 
+class StaticSelection(object):
+    """
+    Class that represents a static selection of nodes, without duplicates (a set).
+    It has specialized functions to add/remove/set nodes and optimized query functions.
+    """
+    
+    
+    
+    def __contains__(self, node):
+        """
+        Return True if node is in the static selection. False otherwise.
+        """
+        pass
+    def __init__(self, selector):
+        """
+        Constructor of the StaticSelection.
+        "selector" is the BasicSelector this static selection belongs to.
+        """
+        pass
+    def __iter__(self):
+        """
+        Generator over the all the selection in deterministic order.
+        """
+        pass
+    def __len__(self):
+        """
+        Return the length of the static selection (including missing/filtered out items).
+        """
+        pass
+    def add(self, selection):
+        """
+        Adds the given nodes to the static selection.
+        "selection" can either be a MSelectionList or an iterable of node names or dag paths or dag nodes or dependency nodes.
+        """
+        pass
+    def asList(self):
+        """
+        Returns the static selection items as a list.
+        """
+        pass
+    def asSet(self):
+        """
+        Returns the static selection items as a set.
+        """
+        pass
+    def decode(self, string):
+        """
+        Decodes the static selection from a string.
+        """
+        pass
+    def dirtyFilterCB(self):
+        """
+        Clears filter-related cache.
+        """
+        pass
+    def dirtyMissingCB(self):
+        """
+        Clears missing objects related cache.
+        """
+        pass
+    def dirtySelectionCB(self):
+        """
+        Clears all cache.
+        """
+        pass
+    def encode(self):
+        """
+        Encodes the static selection into a string.
+        """
+        pass
+    def hasFilteredOutObjects(self):
+        """
+        Returns True if static selection contains filtered out nodes. False otherwise.
+        """
+        pass
+    def hasMissingObjects(self):
+        """
+        Returns True if static selection contains an object that doesn't exist in the scene. False otherwise.
+        """
+        pass
+    def isFilteredOut(self, node):
+        """
+        Returns True if given node is in the static selection but filtered out.
+        Raises RuntimeError if given node is not in the static selection.
+        """
+        pass
+    def isMissing(self, node):
+        """
+        Returns True if the given node is in the static selection but missing in the scene.
+        Raises RuntimeError if given node is not in the static selection.
+        """
+        pass
+    def onNodeAdded(self, obj): pass
+    def onNodeRemoved(self, obj): pass
+    def onNodeRenamed(self, obj, oldName): pass
+    def onNodeReparented(self, msgType, child, parent): pass
+    def remove(self, selection):
+        """
+        Removes the given nodes from the static selection.
+        "selection" can either be a MSelectionList or an iterable of node names or dag paths or dag nodes or dependency nodes.
+        """
+        pass
+    def set(self, selection):
+        """
+        Sets the given nodes as the new static selection.
+        "selection" can either be a MSelectionList or an iterable of node names or dag paths or dag nodes or dependency nodes.
+        """
+        pass
+    def setCache(self, names):
+        """
+        Caches the static selection items as a list.
+        """
+        pass
+    def setWithoutExistenceCheck(self, selection):
+        """
+        Sets the given nodes as the new static selection.
+        "selection" can either be a MSelectionList or an iterable of node names or dag paths or dag nodes or dependency nodes.
+        NOTE: Do not use. Reserved for Render Settings nodes.
+        """
+        pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
+class Strategy(object):
+    """
+    Abstract parent class for strategies for finding nodes given an input Selection.
+    items(self, selection) returns an iterable of items found by the strategy.
+    An item can be a MObject, a MDagPath or a string (existing node name or existing dag path).
+    """
+    
+    
+    
+    def contentType(*args, **kwargs): pass
+    def create(*args, **kwargs): pass
+    def isTraversingConnections(*args, **kwargs): pass
+    def items(*args, **kwargs): pass
+    def members(self, selector): pass
+    def onConnectionChanged(*args, **kwargs): pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
 class _MPxNode(object):
     """
     Base class for user defined dependency nodes.
@@ -88,10 +233,7 @@ class _MPxNode(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def addExternalContentForFileAttr(*args, **kwargs):
         """
         addExternalContentForFileAttr(table, attr) -> bool
@@ -105,10 +247,7 @@ class _MPxNode(object):
         
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-    
         pass
-    
-    
     def compute(*args, **kwargs):
         """
         compute(plug, dataBlock) -> self
@@ -119,17 +258,16 @@ class _MPxNode(object):
         
         The MDataBlock will provide smart handles for reading and writing this node's attribute values.  Only these values should be used when performing computations.
         
-        When evaluating the dependency graph, Maya will first call the compute method for this node.  If the plug that is provided to the compute indicates that that the attribute was defined by the Maya parent node, the compute method should return None.  When this occurs, Maya will call the internal Maya node from which the user-defined node is derived to compute the plug's value.
+        When evaluating the dependency graph, Maya will first call the compute method for this node.  If the plug that is provided to the compute indicates that that the attribute was defined by the Maya parent node, the compute method should return None.  When this occurs, Maya will call the internal Maya node from which the user-defined node is derived to compute the plug's value. Returning any othervalue (including self) will tell Maya that this node successfully computed theplug. Raising an exception will tell Maya that this node failed at computingthe plug. Note that in most cases, Maya ignores node compute failures.
+        
+        In other words, the compute method should return None to get the Maya parent class to compute the plug. It should return self (or any other value) to indicate that the plug was computed successfully.
         
         This means that a user defined node does not need to be concerned with computing inherited output attributes.  However, if desired, these can be safely recomputed by this method to change the behaviour of the node.
         
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-    
         pass
-    
-    
     def connectionBroken(*args, **kwargs):
         """
         connectionBroken( plug, otherPlug, asSrc) -> self
@@ -140,10 +278,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def connectionMade(*args, **kwargs):
         """
         connectionMade(plug, otherPlug, asSrc) -> self
@@ -154,10 +289,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def copyInternalData(*args, **kwargs):
         """
         copyInternalData(node) -> self
@@ -168,10 +300,7 @@ class _MPxNode(object):
         
         * node (MPxNode) - the node that is being duplicated.
         """
-    
         pass
-    
-    
     def dependsOn(*args, **kwargs):
         """
         dependsOn( plug, otherPlug) -> bool/None
@@ -187,20 +316,14 @@ class _MPxNode(object):
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-    
         pass
-    
-    
     def doNotWrite(*args, **kwargs):
         """
         doNotWrite() -> bool
         
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-    
         pass
-    
-    
     def forceCache(*args, **kwargs):
         """
         forceCache(ctx=MDGContext::current()) -> MDataBlock
@@ -210,10 +333,7 @@ class _MPxNode(object):
         
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-    
         pass
-    
-    
     def getExternalContent(*args, **kwargs):
         """
         getExternalContent(table) -> self
@@ -228,10 +348,7 @@ class _MPxNode(object):
         
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-    
         pass
-    
-    
     def getFilesToArchive(*args, **kwargs):
         """
         getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
@@ -248,10 +365,7 @@ class _MPxNode(object):
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-    
         pass
-    
-    
     def getInternalValue(*args, **kwargs):
         """
         getInternalValue(plug, dataHandle) -> bool
@@ -267,10 +381,7 @@ class _MPxNode(object):
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-    
         pass
-    
-    
     def getInternalValueInContext(*args, **kwargs):
         """
         getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
@@ -281,10 +392,7 @@ class _MPxNode(object):
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-    
         pass
-    
-    
     def internalArrayCount(*args, **kwargs):
         """
         internalArrayCount(plug) -> int
@@ -301,10 +409,7 @@ class _MPxNode(object):
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-    
         pass
-    
-    
     def isAbstractClass(*args, **kwargs):
         """
         isAbstractClass() -> bool
@@ -313,10 +418,7 @@ class _MPxNode(object):
         
         It is not necessary to override this method.
         """
-    
         pass
-    
-    
     def isPassiveOutput(*args, **kwargs):
         """
         isPassiveOutput(plug) -> bool
@@ -325,10 +427,7 @@ class _MPxNode(object):
         
         * plug (MPlug) - plug representing output in question.
         """
-    
         pass
-    
-    
     def legalConnection(*args, **kwargs):
         """
         legalConnection(plug, otherPlug, asSrc) -> bool/None
@@ -341,10 +440,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def legalDisconnection(*args, **kwargs):
         """
         legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
@@ -357,10 +453,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def name(*args, **kwargs):
         """
         name() -> string
@@ -371,10 +464,7 @@ class _MPxNode(object):
         
         Returns the name of the node
         """
-    
         pass
-    
-    
     def passThroughToMany(*args, **kwargs):
         """
         passThroughToMany(plug, plugArray) -> bool
@@ -386,10 +476,7 @@ class _MPxNode(object):
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-    
         pass
-    
-    
     def passThroughToOne(*args, **kwargs):
         """
         passThroughToOne(plug) -> plug
@@ -402,10 +489,7 @@ class _MPxNode(object):
         
         * plug (MPlug) - the plug.
         """
-    
         pass
-    
-    
     def postConstructor(*args, **kwargs):
         """
         postConstructor() -> self
@@ -414,10 +498,7 @@ class _MPxNode(object):
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-    
         pass
-    
-    
     def postEvaluation(*args, **kwargs):
         """
         postEvaluation(context, evalNode, evalType) -> None
@@ -446,10 +527,7 @@ class _MPxNode(object):
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-    
         pass
-    
-    
     def preEvaluation(*args, **kwargs):
         """
         preEvaluation(context, evalNode) -> None
@@ -472,10 +550,7 @@ class _MPxNode(object):
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-    
         pass
-    
-    
     def setDependentsDirty(*args, **kwargs):
         """
         setDependentsDirty(plug, plugArray) -> self
@@ -497,10 +572,7 @@ class _MPxNode(object):
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-    
         pass
-    
-    
     def setDoNotWrite(*args, **kwargs):
         """
         setDoNotWrite(bool) -> self
@@ -511,10 +583,7 @@ class _MPxNode(object):
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-    
         pass
-    
-    
     def setExternalContent(*args, **kwargs):
         """
         setExternalContent(table) -> self
@@ -529,10 +598,7 @@ class _MPxNode(object):
         
         * table Key->location table with new content locations.
         """
-    
         pass
-    
-    
     def setExternalContentForFileAttr(*args, **kwargs):
         """
         setExternalContentForFileAttr(attr, table) -> bool
@@ -546,10 +612,7 @@ class _MPxNode(object):
         
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-    
         pass
-    
-    
     def setInternalValue(*args, **kwargs):
         """
         setInternalValue(plug, dataHandle) -> bool
@@ -568,10 +631,7 @@ class _MPxNode(object):
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-    
         pass
-    
-    
     def setInternalValueInContext(*args, **kwargs):
         """
         setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
@@ -582,24 +642,18 @@ class _MPxNode(object):
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-    
         pass
-    
-    
     def setMPSafe(*args, **kwargs):
         """
         setMPSafe(bool) -> self
         
-        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data. 
+        This method is obsolete. Override MPxNode.setSchedulingType instead.
         
-        This flag does NOT mark a node thread safe for parallel DG evaluation in Viewport 2.0.  To mark a node thread safe for parallel DG evaluation see the setNodeTypeFlag mel command. 
+        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data. 
         
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-    
         pass
-    
-    
     def shouldSave(*args, **kwargs):
         """
         shouldSave(plug) -> bool/None
@@ -611,20 +665,14 @@ class _MPxNode(object):
         
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-    
         pass
-    
-    
     def thisMObject(*args, **kwargs):
         """
         thisMObject() -> MObject
         
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-    
         pass
-    
-    
     def type(*args, **kwargs):
         """
         type() -> int
@@ -659,30 +707,22 @@ class _MPxNode(object):
           kGeometryFilter                               Custom deformer derived from MPxGeometryFilter
                  kBlendShape                                    Custom deformer derived from MPxBlendShape
         """
-    
         pass
-    
-    
     def typeId(*args, **kwargs):
         """
         typeId() -> MTypeId
         
         Returns the TYPEID of this node.
         """
-    
         pass
-    
-    
     def typeName(*args, **kwargs):
         """
         typeName() -> string
         
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-    
         pass
-    
-    
+    @staticmethod
     def addAttribute(*args, **kwargs):
         """
         addAttribute(attr) -> None
@@ -696,10 +736,8 @@ class _MPxNode(object):
         
         * attr (MObject) - new attribute to add.
         """
-    
         pass
-    
-    
+    @staticmethod
     def attributeAffects(*args, **kwargs):
         """
         attributeAffects(whenChanges, isAffected) -> None
@@ -713,10 +751,8 @@ class _MPxNode(object):
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-    
         pass
-    
-    
+    @staticmethod
     def inheritAttributesFrom(*args, **kwargs):
         """
         inheritAttributesFrom(parentClassName) -> None
@@ -731,10 +767,7 @@ class _MPxNode(object):
         
         * parentClassName (string) - class of node to inherit attributes from.
         """
-    
         pass
-    
-    
     __new__ = None
     
     
@@ -831,312 +864,6 @@ class _MPxNode(object):
     kTransformNode = 11
 
 
-class StaticSelection(object):
-    """
-    Class that represents a static selection of nodes, without duplicates (a set).
-    It has specialized functions to add/remove/set nodes and optimized query functions.
-    """
-    
-    
-    
-    def __contains__(self, node):
-        """
-        Return True if node is in the static selection. False otherwise.
-        """
-    
-        pass
-    
-    
-    def __init__(self, selector):
-        """
-        Constructor of the StaticSelection.
-        "selector" is the BasicSelector this static selection belongs to.
-        """
-    
-        pass
-    
-    
-    def __iter__(self):
-        """
-        Generator over the all the selection in deterministic order.
-        """
-    
-        pass
-    
-    
-    def __len__(self):
-        """
-        Return the length of the static selection (including missing/filtered out items).
-        """
-    
-        pass
-    
-    
-    def add(self, selection):
-        """
-        Adds the given nodes to the static selection.
-        "selection" can either be a MSelectionList or an iterable of node names or dag paths or dag nodes or dependency nodes.
-        """
-    
-        pass
-    
-    
-    def asList(self):
-        """
-        Returns the static selection items as a list.
-        """
-    
-        pass
-    
-    
-    def asSet(self):
-        """
-        Returns the static selection items as a set.
-        """
-    
-        pass
-    
-    
-    def decode(self, string):
-        """
-        Decodes the static selection from a string.
-        """
-    
-        pass
-    
-    
-    def dirtyFilterCB(self):
-        """
-        Clears filter-related cache.
-        """
-    
-        pass
-    
-    
-    def dirtyMissingCB(self):
-        """
-        Clears missing objects related cache.
-        """
-    
-        pass
-    
-    
-    def dirtySelectionCB(self):
-        """
-        Clears all cache.
-        """
-    
-        pass
-    
-    
-    def encode(self):
-        """
-        Encodes the static selection into a string.
-        """
-    
-        pass
-    
-    
-    def hasFilteredOutObjects(self):
-        """
-        Returns True if static selection contains filtered out nodes. False otherwise.
-        """
-    
-        pass
-    
-    
-    def hasMissingObjects(self):
-        """
-        Returns True if static selection contains an object that doesn't exist in the scene. False otherwise.
-        """
-    
-        pass
-    
-    
-    def isFilteredOut(self, node):
-        """
-        Returns True if given node is in the static selection but filtered out.
-        Raises RuntimeError if given node is not in the static selection.
-        """
-    
-        pass
-    
-    
-    def isMissing(self, node):
-        """
-        Returns True if the given node is in the static selection but missing in the scene.
-        Raises RuntimeError if given node is not in the static selection.
-        """
-    
-        pass
-    
-    
-    def onNodeAdded(self, obj):
-        pass
-    
-    
-    def onNodeRemoved(self, obj):
-        pass
-    
-    
-    def onNodeRenamed(self, obj, oldName):
-        pass
-    
-    
-    def onNodeReparented(self, msgType, child, parent):
-        pass
-    
-    
-    def remove(self, selection):
-        """
-        Removes the given nodes from the static selection.
-        "selection" can either be a MSelectionList or an iterable of node names or dag paths or dag nodes or dependency nodes.
-        """
-    
-        pass
-    
-    
-    def set(self, selection):
-        """
-        Sets the given nodes as the new static selection.
-        "selection" can either be a MSelectionList or an iterable of node names or dag paths or dag nodes or dependency nodes.
-        """
-    
-        pass
-    
-    
-    def setCache(self, names):
-        """
-        Caches the static selection items as a list.
-        """
-    
-        pass
-    
-    
-    def setWithoutExistenceCheck(self, selection):
-        """
-        Sets the given nodes as the new static selection.
-        "selection" can either be a MSelectionList or an iterable of node names or dag paths or dag nodes or dependency nodes.
-        NOTE: Do not use. Reserved for Render Settings nodes.
-        """
-    
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
-class Strategy(object):
-    """
-    Abstract parent class for strategies for finding nodes given an input Selection.
-    items(self, selection) returns an iterable of items found by the strategy.
-    An item can be a MObject, a MDagPath or a string (existing node name or existing dag path).
-    """
-    
-    
-    
-    def create(*args, **kwargs):
-        pass
-    
-    
-    def isTraversingConnections(*args, **kwargs):
-        pass
-    
-    
-    def items(*args, **kwargs):
-        pass
-    
-    
-    def onConnectionChanged(*args, **kwargs):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
-class CompositeStrategy(Strategy):
-    def __init__(self, strategies):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
-    def isTraversingConnections(self):
-        pass
-    
-    
-    def items(self, selection):
-        pass
-    
-    
-    def onConnectionChanged(self, selector, srcPlug, dstPlug, made):
-        pass
-
-
-class TraversingConnectionStrategy(Strategy):
-    def isTraversingConnections(self):
-        pass
-
-
-class DagStrategy(Strategy):
-    """
-    Strategy for searching in the dag hierarchy.
-    """
-    
-    
-    
-    def __init__(self, filterType):
-        pass
-    
-    
-    def isTraversingConnections(self):
-        pass
-    
-    
-    def items(self, selection):
-        pass
-    
-    
-    def onConnectionChanged(self, selector, srcPlug, dstPlug, made):
-        pass
-    
-    
-    def create(filterType, customs):
-        pass
-
-
-class NonDagStrategy(Strategy):
-    """
-    Concrete strategy that returns non-DAG nodes without searching.
-    
-        The default strategy is a catch-all for all node type filtering, or for
-    custom type filtering.
-    """
-    
-    
-    
-    def isTraversingConnections(self):
-        pass
-    
-    
-    def items(self, selection):
-        pass
-    
-    
-    def onConnectionChanged(self, selector, srcPlug, dstPlug, made):
-        pass
-    
-    
-    def create(filterType, customs):
-        pass
-
-
 class Selector(_MPxNode):
     """
     Selector node base class (abstract).
@@ -1147,184 +874,115 @@ class Selector(_MPxNode):
     
     
     
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def activate(self):
         """
         Creates observation callbacks. 
         This is called when a selector is created or connected to a collection.
         Override this method to do any scene specific initialization.
         """
-    
         pass
-    
-    
-    def beforeBulkChange(self, *args, **kwargs):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def contentType(*args, **kwargs):
-        pass
-    
-    
+    def beforeBulkChange(self, *args, **kwargs): pass
+    def compute(self, plug, dataBlock): pass
+    def contentType(*args, **kwargs): pass
     def deactivate(self):
         """
         Removes all observation callbacks. 
         This is called when a selector is deleted or disconnected from a collection.
         Override this method to do any scene specific deinitialization.
         """
-    
         pass
-    
-    
     def getAbsoluteNames(self):
         """
         # for backward compatibility
         """
-    
         pass
-    
-    
-    def hasDagNodes(self):
+    def getSelectionStandIn(self, nodeName):
+        """
+        Return a selection string to use as stand-in for the given nodeName.
+        Can be overridden by derived classes if another node should be used as 
+        stand-in for the given node.
+        """
         pass
-    
-    
-    def isAbstractClass(self):
+    def hasDagNodes(self): pass
+    def isAbstractClass(self): pass
+    def isActivated(self): pass
+    def isDirty(self): pass
+    def isTraversingConnections(self): pass
+    def members(self):
+        """
+        Return selection content as MDagPath iterable representing the layer members.
+        """
         pass
-    
-    
-    def isDirty(self):
-        pass
-    
-    
-    def isTraversingConnections(self):
-        pass
-    
-    
     def minimalClone(self, other):
         """
         Does a minimal copy of other (Selector) to search for the same kind of objects.
         "other" must be the same type as "self".
         To be overriden by subclasses if needed.
         """
-    
         pass
-    
-    
     def names(self):
         """
         Return selection content as name string iterable.
         """
-    
         pass
-    
-    
     def nodes(self):
         """
         Return selection content as MObjects iterable.
         """
-    
         pass
-    
-    
-    def onBulkChange(self, *args, **kwargs):
-        pass
-    
-    
-    def onFileOpened(self):
-        pass
-    
-    
+    def onBulkChange(self, *args, **kwargs): pass
+    def onFileOpened(self): pass
     def owner(self):
         """
         Find the collection owner of this selector.
         """
-    
         pass
-    
-    
     def parent(self):
         """
         Returns the parent of this selector if any, None otherwise.
         """
-    
         pass
-    
-    
     def paths(self):
         """
         Return selection content as DagPath iterable.
         """
-    
         pass
-    
-    
-    def postConstructor(self):
-        pass
-    
-    
-    def selectionChanged(self):
-        pass
-    
-    
-    def setParent(self, parent):
-        pass
-    
-    
+    def postConstructor(self): pass
+    def selectionChanged(*args, **kwargs): pass
+    def setParent(self, parent): pass
     def status(self):
         """
         Returns the status of this selector (a string warning/error or None).
         """
-    
         pass
-    
-    
     def templateNodeName(self):
         """
         Returns a node name in this selector's selection.
         """
-    
         pass
-    
-    
-    def affectsOutput(cls, attr):
-        pass
-    
-    
-    def create(cls, name):
-        pass
-    
-    
-    def creator(cls):
-        pass
-    
-    
-    def createInput(attr, args):
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    @classmethod
+    def affectsOutput(cls, attr): pass
+    @classmethod
+    def create(cls, name): pass
+    @classmethod
+    def creator(cls): pass
+    @staticmethod
+    def createInput(attr, args): pass
+    @staticmethod
+    def initializer(): pass
+    @staticmethod
     def synced(f):
         """
         Decorator for Selector's functions to guarantee selection is up to date (_update() is called if needed).
         Must decorate an instance function (starting with self).
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     aIn = None
     
@@ -1365,6 +1023,54 @@ class Selector(_MPxNode):
     onNodeReparented = None
 
 
+class CompositeStrategy(Strategy):
+    def __init__(self, strategies): pass
+    def __str__(self): pass
+    def contentType(self): pass
+    def isTraversingConnections(self): pass
+    def items(self, selection): pass
+    def members(self, selector): pass
+    def onConnectionChanged(self, selector, srcPlug, dstPlug, made): pass
+
+
+class DagStrategy(Strategy):
+    """
+    Strategy for searching in the dag hierarchy.
+    """
+    
+    
+    
+    def __init__(self, filterType): pass
+    def contentType(self): pass
+    def isTraversingConnections(self): pass
+    def items(self, selection): pass
+    def onConnectionChanged(self, selector, srcPlug, dstPlug, made): pass
+    @staticmethod
+    def create(filterType, customs): pass
+
+
+class NonDagStrategy(Strategy):
+    """
+    Concrete strategy that returns non-DAG nodes without searching.
+    
+        The default strategy is a catch-all for all node type filtering, or for
+    custom type filtering.
+    """
+    
+    
+    
+    def contentType(self): pass
+    def isTraversingConnections(self): pass
+    def items(self, selection): pass
+    def onConnectionChanged(self, selector, srcPlug, dstPlug, made): pass
+    @staticmethod
+    def create(filterType, customs): pass
+
+
+class TraversingConnectionStrategy(Strategy):
+    def isTraversingConnections(self): pass
+
+
 class SetStrategy(TraversingConnectionStrategy):
     """
     Strategy for finding sets containing the DAG paths in the selection.
@@ -1375,16 +1081,16 @@ class SetStrategy(TraversingConnectionStrategy):
     
     
     
-    def items(self, selection):
+    def contentType(self): pass
+    def items(self, selection): pass
+    def members(self, selector):
+        """
+        Return all dag members of the sets in the selector recursively.
+        """
         pass
-    
-    
-    def onConnectionChanged(self, selector, srcPlug, dstPlug, made):
-        pass
-    
-    
-    def create(filterType, customs):
-        pass
+    def onConnectionChanged(self, selector, srcPlug, dstPlug, made): pass
+    @staticmethod
+    def create(filterType, customs): pass
 
 
 class ShadingStrategy(TraversingConnectionStrategy):
@@ -1394,42 +1100,29 @@ class ShadingStrategy(TraversingConnectionStrategy):
     
     
     
-    def __init__(self, surface, displace, volume, network):
-        pass
-    
-    
-    def items(self, selection):
-        pass
-    
-    
-    def onConnectionChanged(self, selector, srcPlug, dstPlug, made):
-        pass
-    
-    
-    def create(filterType, customs):
-        pass
+    def __init__(self, surface, displace, volume, network): pass
+    def contentType(self): pass
+    def items(self, selection): pass
+    def onConnectionChanged(self, selector, srcPlug, dstPlug, made): pass
+    @staticmethod
+    def create(filterType, customs): pass
 
 
-class GeneratorStrategy(TraversingConnectionStrategy):
+class ShadingEngineStrategy(TraversingConnectionStrategy):
     """
-    Strategy for finding geometry generators.
+    Strategy for finding assigned materials (shading engines).
     
-    This strategy will return the union of geometry generators creating shapes
-    in its input, and geometry generators directly in its input.
+    This strategy will return the union of shading engines assigned to shapes
+    in its input, and shading engines directly in its input.
     """
     
     
     
-    def items(self, selection):
-        pass
-    
-    
-    def onConnectionChanged(self, selector, srcPlug, dstPlug, made):
-        pass
-    
-    
-    def create(filterType, customs):
-        pass
+    def contentType(self): pass
+    def items(self, selection): pass
+    def onConnectionChanged(self, selector, srcPlug, dstPlug, made): pass
+    @staticmethod
+    def create(filterType, customs): pass
 
 
 class SimpleSelector(Selector):
@@ -1438,194 +1131,101 @@ class SimpleSelector(Selector):
     list of names selection.
     
     Output is the union of both selections (dynamic and static).
+    
+    This class maintains caches for its static and dynamic selections.
+    These caches become invalid (see selectionChanged) when the selector
+    observes nodes being added or removed, or for selectors that traverse
+    connections, when the selector observes connections being made or
+    removed (see isTraversingConnections).  The caches are updated when the
+    selector node compute is called.
+    
+    This observation of scene changes can be costly, for large numbers of
+    changes, and is in large part unnecessary during layer switch, where
+    unapply and apply are called.  Unapply deletes apply override nodes, and
+    apply creates apply override nodes, none of which are interesting to
+    selectors.  Unapply disconnects apply override nodes, and performs
+    disconnections for connection overrides.  In some circumstances (see the
+    context module documentation), this can affect the result of selectors
+    that traverse connection.  Finally, apply connects apply override nodes
+    and performs connections for connection overrides.  Connections made by
+    lower priority collections can affect the result of higher priority
+    collections that traverse connections (again, see the context module
+    documentation).
     """
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def acceptsType(self, typeName, dataBlock='None'):
-        pass
-    
-    
-    def contentType(self):
-        pass
-    
-    
-    def getCustomFilterValue(self, dataBlock='None'):
-        pass
-    
-    
-    def getDynamicNames(*args, **kwargs):
-        pass
-    
-    
-    def getFilterType(self, dataBlock='None'):
-        pass
-    
-    
-    def getInvalidFilters(self, dataBlock='None'):
-        pass
-    
-    
-    def getPattern(self, dataBlock='None'):
-        pass
-    
-    
-    def getStaticNames(*args, **kwargs):
-        pass
-    
-    
+    def __init__(self): pass
+    def acceptsType(self, typeName, dataBlock='None'): pass
+    def contentType(self): pass
+    def getCustomFilterValue(self, dataBlock='None'): pass
+    def getDynamicNames(*args, **kwargs): pass
+    def getFilterType(self, dataBlock='None'): pass
+    def getInvalidFilters(self, dataBlock='None'): pass
+    def getPattern(self, dataBlock='None'): pass
+    def getStaticNames(*args, **kwargs): pass
     def getStaticSelection(self):
         """
         Deprecated method.
         
         Use methods on SimpleSelector.staticSelection instead.
         """
-    
         pass
-    
-    
-    def getTypeFilters(self, dataBlock='None'):
-        pass
-    
-    
-    def hasFilteredOutObjects(self):
-        pass
-    
-    
-    def hasMissingObjects(self):
-        pass
-    
-    
-    def isAbstractClass(self):
-        pass
-    
-    
-    def isEmpty(self):
-        pass
-    
-    
+    def getTypeFilters(self, dataBlock='None'): pass
+    def hasFilteredOutObjects(self): pass
+    def hasMissingObjects(self): pass
+    def isAbstractClass(self): pass
+    def isEmpty(self): pass
     def isTraversingConnections(self):
         """
         Returns True if this selector traverses connections to populate its content, False otherwise.
         """
-    
         pass
-    
-    
-    def minimalClone(self, other):
-        pass
-    
-    
-    def names(*args, **kwargs):
-        pass
-    
-    
-    def nodes(*args, **kwargs):
-        pass
-    
-    
-    def onBulkChange(self, *args, **kwargs):
-        pass
-    
-    
-    def onConnectionChanged(self, srcPlug, dstPlug, made):
-        pass
-    
-    
+    def members(*args, **kwargs): pass
+    def minimalClone(self, other): pass
+    def names(*args, **kwargs): pass
+    def nodes(*args, **kwargs): pass
+    def onBulkChange(self, *args, **kwargs): pass
+    def onConnectionChanged(self, srcPlug, dstPlug, made): pass
     def onNodeAdded(self, obj):
         """
         # CALLBACKS
         # TODO optimize pattern check
         """
-    
         pass
-    
-    
-    def onNodeRemoved(self, obj):
-        pass
-    
-    
-    def onNodeRenamed(self, obj, oldName):
-        pass
-    
-    
-    def onNodeReparented(self, msgType, child, parent):
-        pass
-    
-    
-    def paths(*args, **kwargs):
-        pass
-    
-    
-    def patterns(self, dataBlock='None'):
-        pass
-    
-    
-    def selection(self):
-        pass
-    
-    
-    def setCustomFilterValue(self, val):
-        pass
-    
-    
-    def setFilterType(self, val):
-        pass
-    
-    
-    def setPattern(self, val):
-        pass
-    
-    
+    def onNodeRemoved(self, obj): pass
+    def onNodeRenamed(self, obj, oldName): pass
+    def onNodeReparented(self, msgType, child, parent): pass
+    def paths(*args, **kwargs): pass
+    def patterns(self, dataBlock='None'): pass
+    def selection(self): pass
+    def setCustomFilterValue(self, val): pass
+    def setFilterType(self, val): pass
+    def setPattern(self, val): pass
     def setStaticSelection(self, ss):
         """
         Deprecated method.
         
         Use methods on SimpleSelector.staticSelection instead.
         """
-    
         pass
-    
-    
-    def shapes(*args, **kwargs):
-        pass
-    
-    
-    def status(self, dataBlock='None'):
-        pass
-    
-    
-    def strategy(self, dataBlock='None'):
-        pass
-    
-    
+    def shapes(*args, **kwargs): pass
+    def status(self, dataBlock='None'): pass
+    def strategy(self, dataBlock='None'): pass
     def templateNodeName(self):
         """
         Returns a node name in this selector's selection or a node in the scene that 
         would be accepted by this selector if empty.
         """
-    
         pass
-    
-    
-    def getAvailableFilters(cls):
-        pass
-    
-    
-    def getDefaultFilter(cls):
-        pass
-    
-    
-    def initializer(cls):
-        pass
-    
-    
-    staticSelection = None
-    
+    @classmethod
+    def getAvailableFilters(cls): pass
+    @classmethod
+    def getDefaultFilter(cls): pass
+    @classmethod
+    def initializer(cls): pass
+    @property
+    def staticSelection(self): pass
     aCustomFilterValue = None
     
     
@@ -1644,94 +1244,66 @@ class SimpleSelector(Selector):
     kTypeName = 'simpleSelector'
 
 
-class ShadingEngineStrategy(TraversingConnectionStrategy):
+class GeneratorStrategy(TraversingConnectionStrategy):
     """
-    Strategy for finding assigned materials (shading engines).
+    Strategy for finding geometry generators.
     
-    This strategy will return the union of shading engines assigned to shapes
-    in its input, and shading engines directly in its input.
+    This strategy will return the union of geometry generators creating shapes
+    in its input, and geometry generators directly in its input.
     """
     
     
     
-    def items(self, selection):
-        pass
+    def contentType(self): pass
+    def items(self, selection): pass
+    def onConnectionChanged(self, selector, srcPlug, dstPlug, made): pass
+    @staticmethod
+    def create(filterType, customs): pass
+
+
+class LightsCollectionSelector(SimpleSelector):
+    """
+    A custom selector only to be used with the LightsCollection and LightsChildCollection.
+    Will select light source and light groups, but also add in any light editor items 
+    attached to light sources. This makes it possible to override attributes on both the
+    light source and its corresponding light editor item.
+    """
     
     
-    def onConnectionChanged(self, selector, srcPlug, dstPlug, made):
-        pass
+    
+    def __init__(self): pass
+    def getSelectionStandIn(self, nodeName): pass
+    def isAbstractClass(self): pass
+    def isTraversingConnections(self): pass
+    def onConnectionChanged(self, srcPlug, dstPlug, made): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    @classmethod
+    def initializer(cls): pass
+    kTypeId = None
     
     
-    def create(filterType, customs):
-        pass
+    kTypeName = 'lightsCollectionSelector'
 
 
 class BasicSelector(SimpleSelector):
-    def getIncludeHierarchy(self):
-        pass
-    
-    
-    def isAbstractClass(self):
-        pass
-    
-    
-    def onConnectionChanged(self, **kwargs):
-        pass
-    
-    
-    def onNodeAdded(self, **kwargs):
-        pass
-    
-    
-    def onNodeRemoved(self, **kwargs):
-        pass
-    
-    
-    def onNodeRenamed(self, **kwargs):
-        pass
-    
-    
-    def onNodeReparented(self, **kwargs):
-        pass
-    
-    
-    def setIncludeHierarchy(self, val):
-        pass
-    
-    
-    def shapes(*args, **kwargs):
-        pass
-    
-    
-    def status(self):
-        pass
-    
-    
-    def getAvailableFilters(cls):
-        pass
-    
-    
-    def getDefaultFilter(cls):
-        pass
-    
-    
-    def initializer(cls):
-        pass
-    
-    
-    aCustomFilterValue = None
-    
-    
+    def getIncludeHierarchy(self): pass
+    def isAbstractClass(self): pass
+    def onConnectionChanged(self, **kwargs): pass
+    def onNodeAdded(self, **kwargs): pass
+    def onNodeRemoved(self, **kwargs): pass
+    def onNodeRenamed(self, **kwargs): pass
+    def onNodeReparented(self, **kwargs): pass
+    def setIncludeHierarchy(self, val): pass
+    def shapes(*args, **kwargs): pass
+    def status(self): pass
+    @classmethod
+    def getAvailableFilters(cls): pass
+    @classmethod
+    def getDefaultFilter(cls): pass
+    @classmethod
+    def initializer(cls): pass
     aIncludeHierarchy = None
-    
-    
-    aPattern = None
-    
-    
-    aStaticSelection = None
-    
-    
-    aTypeFilter = None
     
     
     kForceCompute = False
@@ -1744,23 +1316,25 @@ class BasicSelector(SimpleSelector):
 
 
 
+
+def createClassificationFilter(classification): pass
+def createTypeFilter(types): pass
+def isRenderSetupOrLegacyRenderLayerNode(node):
+    """
+    Returns whether or not the node is a Render Setup or Legacy Render Layer node.
+    """
+    pass
+def createCustomFilter(customs):
+    """
+    "customs" is a string of types and classifications. ex: 'shader/surface -blinn'
+    returns a filter function over a node name that returns True if the name passes the custom filtering, False otherwise.
+    """
+    pass
 def ls(patterns, types='None'):
     """
     Returns a set containing all the nodes matching patterns and types.
     """
-
     pass
-
-
-def _nodesToLongNames(selection, permissive='False'):
-    """
-    Generator that converts name/MObject/MDagPath/MDagNode/MFnDependencyNode to long names.
-    i.e. absolute paths for dag nodes or instances and names for dependency (non-dag) nodes.
-    """
-
-    pass
-
-
 def selectionToAbsoluteNames(selection, permissive='False'):
     """
     Generator that converts selected nodes to long names.
@@ -1768,53 +1342,50 @@ def selectionToAbsoluteNames(selection, permissive='False'):
     "selection" can either be a MSelectionList or an iterable of nodes.
     if permissive, invalid nodes names (strings) are kept.
     """
-
     pass
-
-
-def create(name, typeid):
-    pass
-
-
-def createTypeFilter(types):
-    pass
-
-
-def createClassificationFilter(classification):
-    pass
-
-
-def createCustomFilter(customs):
+def getRSExcludes():
     """
-    "customs" is a string of types and classifications. ex: 'shader/surface -blinn'
-    returns a filter function over a node name that returns True if the name passes the custom filtering, False otherwise.
+    Returns the list of Render Setup and Legacy Render Layer node types
+    names of interest, with the exclude symbol in front. The list only
+    needs to be computed once, especially since it will be used often.
     """
-
     pass
-
-
+def create(name, typeid): pass
+def _nodesToLongNames(selection, permissive='False'):
+    """
+    Generator that converts name/MObject/MDagPath/MDagNode/MFnDependencyNode to long names.
+    i.e. absolute paths for dag nodes or instances and names for dependency (non-dag) nodes.
+    NOTE: All Render Setup nodes are filtered out of the resulting generator.
+    """
+    pass
+def findSetMembersRecursively(members):
+    """
+    Return a generator consisting of the dagPaths of all members of the set
+    and its nested sets.
+    """
+    pass
 def _mSelectionListToAbsoluteNames(selection):
     """
     Generator that converts nodes in a MSelectionList to long names.
     i.e. absolute path for dag nodes or instances and names for dependency (non-dag) nodes.
     """
-
     pass
 
 
-
-kSet = []
+rsExcludes = []
 
 kHasMissingObjects = []
 
-kNodeNotInStaticSelection = "Node '%s' is not in static selection"
+kParentMissing = []
 
 kNodeToAbsoluteNameFailure = "Failed to get the absolute name for '%s'"
 
-kParentMissing = []
+kNodeNotInStaticSelection = "Node '%s' is not in static selection"
+
+kInvalidParent = []
 
 logger = None
 
-kInvalidParent = []
+kSet = []
 
 

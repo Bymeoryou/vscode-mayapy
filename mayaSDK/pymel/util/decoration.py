@@ -1,4 +1,15 @@
-def interface_wrapper(doer, args='[]', varargs='None', varkw='None', defaults='None'):
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def decorated(origFunc, newFunc, decoration='None'):
+    """
+    Copies the original function's name/docs/signature to the new function, so that the docstrings
+    contain relevant information again.
+    Most importantly, it adds the original function signature to the docstring of the decorating function,
+    as well as a comment that the function was decorated. Supports nested decorations.
+    """
+    pass
+def interface_wrapper(doer, args='()', varargs='None', varkw='None', defaults='None'):
     """
     A wrapper which allows factories to programatically create functions with
     precise input arguments, instead of using the argument catch-all:
@@ -15,27 +26,11 @@ def interface_wrapper(doer, args='[]', varargs='None', varkw='None', defaults='N
         the second-to-last with the second-to-last and so on ( see inspect.getargspec ). Arguments
         which pair with a default become keyword arguments.
     """
-
     pass
-
-
 def decorator(func):
     """
     Decorator for decorators. Calls the 'decorated' function above for the decorated function, to preserve docstrings.
     """
-
     pass
-
-
-def decorated(origFunc, newFunc, decoration='None'):
-    """
-    Copies the original function's name/docs/signature to the new function, so that the docstrings
-    contain relevant information again.
-    Most importantly, it adds the original function signature to the docstring of the decorating function,
-    as well as a comment that the function was decorated. Supports nested decorations.
-    """
-
-    pass
-
-
+def format_signature(args='()', varargs='None', varkw='None', defaults='None'): pass
 

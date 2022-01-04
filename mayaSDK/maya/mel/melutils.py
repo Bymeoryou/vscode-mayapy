@@ -4,6 +4,10 @@
 #
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 def createMelWrapper(fn, types='[]', retType="'void'", ignoreDefaultArgs='True', returnCmd='False', outDir='None'):
     """
     \brief Create a wrapper mel proc for a python function
@@ -37,8 +41,5 @@ def createMelWrapper(fn, types='[]', retType="'void'", ignoreDefaultArgs='True',
     \return path to generated mel proc OR generated mel code, depending on
     returnCmd.
     """
-
     pass
-
-
 

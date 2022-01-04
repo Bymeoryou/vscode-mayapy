@@ -26,6 +26,10 @@ Render layer membership is determined from enabled / disabled, in
 conjunction with isolate select.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 from . import nodeList
 from . import childNode
 
@@ -52,23 +56,13 @@ class Collection(nodeList.ListBase, childNode.TreeOrderedItem, childNode.ChildNo
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def acceptImport(self):
-        pass
-    
-    
+    def acceptImport(self): pass
     def activate(self):
         """
         Called when this list item is inserted into the list.
         Override this method to do any scene specific initialization.
         """
-    
         pass
-    
-    
     def ancestorCollections(self):
         """
         Return this collection's ancestors.
@@ -77,67 +71,28 @@ class Collection(nodeList.ListBase, childNode.TreeOrderedItem, childNode.ChildNo
         in the ancestors.  Therefore, a top-level collection has no
         ancestors.
         """
-    
         pass
-    
-    
-    def appendChild(*args, **kwargs):
-        pass
-    
-    
-    def apply(*args, **kwargs):
-        pass
-    
-    
-    def attachChild(*args, **kwargs):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def createAbsoluteOverride(*args, **kwargs):
-        pass
-    
-    
+    def appendChild(*args, **kwargs): pass
+    def apply(*args, **kwargs): pass
+    def attachChild(*args, **kwargs): pass
+    def compute(self, plug, dataBlock): pass
+    def createAbsoluteOverride(*args, **kwargs): pass
     def createCollection(self, collectionName):
         """
         Add a child collection to the Collection.
         """
-    
         pass
-    
-    
-    def createConnectionOverride(*args, **kwargs):
-        pass
-    
-    
-    def createOverride(*args, **kwargs):
-        pass
-    
-    
-    def createRelativeOverride(*args, **kwargs):
-        pass
-    
-    
+    def createConnectionOverride(*args, **kwargs): pass
+    def createOverride(*args, **kwargs): pass
+    def createRelativeOverride(*args, **kwargs): pass
     def deactivate(self):
         """
         Called when this list item is removed from the list.
         Override this method to do any scene specific teardown.
         """
-    
         pass
-    
-    
-    def detachChild(*args, **kwargs):
-        pass
-    
-    
-    def enabledChanged(self):
-        pass
-    
-    
+    def detachChild(*args, **kwargs): pass
+    def enabledChanged(self): pass
     def findChild(self, predicate, creator='None'):
         """
         Find the child of this collection satisfying the predicate function or creates it
@@ -146,10 +101,7 @@ class Collection(nodeList.ListBase, childNode.TreeOrderedItem, childNode.ChildNo
           predicate(childNode): returns boolean.
           creator(void) : returns the created node.
         """
-    
         pass
-    
-    
     def getChild(self, childName, cls='"<class \'maya.app.renderSetup.model.childNode.ChildNode\'>"'):
         """
         Look for an existing child by name and optionally class.
@@ -161,167 +113,82 @@ class Collection(nodeList.ListBase, childNode.TreeOrderedItem, childNode.ChildNo
         @rtype: Child model instance
         @return: Found instance or throw an exception
         """
-    
         pass
-    
-    
     def getChildren(self, cls='"<class \'maya.app.renderSetup.model.childNode.ChildNode\'>"'):
         """
         Get the list of all children. 
         Optionally only the children matching the given class.
         """
-    
         pass
-    
-    
-    def getCollectionByName(self, collectionName, nested='False'):
-        pass
-    
-    
-    def getCollections(self):
-        pass
-    
-    
-    def getLayerNumIsolatedChildren(self):
-        pass
-    
-    
-    def getNumIsolatedAncestors(self):
-        pass
-    
-    
-    def getNumIsolatedChildren(self, includeSelf='False'):
-        pass
-    
-    
-    def getOverrides(self):
-        pass
-    
-    
-    def getRenderLayer(self):
-        pass
-    
-    
+    def getCollectionByName(self, collectionName, nested='False'): pass
+    def getCollections(self): pass
+    def getLayerNumIsolatedChildren(self): pass
+    def getNumIsolatedAncestors(self): pass
+    def getNumIsolatedChildren(self, includeSelf='False'): pass
+    def getOverrides(self): pass
+    def getRenderLayer(self): pass
     def getSelector(self):
         """
         Return the selector user node for this collection.
+        
+        If there is no selector node, or if the selector node does not
+        have an MPxNode interface (e.g. an unknown node), an exception
+        of type Exception is raised.
         """
-    
         pass
-    
-    
-    def getSelectorType(self):
-        pass
-    
-    
-    def hasChildren(self):
-        pass
-    
-    
-    def hasIsolatedAncestors(self, dataBlock='None'):
-        pass
-    
-    
-    def hasIsolatedChildren(self, dataBlock='None'):
-        pass
-    
-    
-    def isAbstractClass(self):
-        pass
-    
-    
+    def getSelectorType(self): pass
+    def hasApplyOverridesRecursive(self): pass
+    def hasChildren(self): pass
+    def hasIsolatedAncestors(self, dataBlock='None'): pass
+    def hasIsolatedChildren(self, dataBlock='None'): pass
+    def hasOverridesRecursive(self): pass
+    def isAbstractClass(self): pass
     def isAcceptableChild(self, modelOrData):
         """
         Check if the model could be a child
         """
-    
         pass
-    
-    
-    def isEnabled(self, dataBlock='None'):
+    def isEmptyRecursive(self):
+        """
+        Return whether or not the collection or any of its parents is empty
+        """
         pass
-    
-    
+    def isEnabled(self, dataBlock='None'): pass
     def isIsolateSelected(self, dataBlock='None'):
         """
         Get if isolate selected. Will always return False in batch mode
         """
-    
         pass
-    
-    
     def isSelfAcceptableChild(self):
         """
         Overridden instances that return False, prevent copy/paste of the collection type to itself.
         """
-    
         pass
-    
-    
-    def isSelfEnabled(self, dataBlock='None'):
-        pass
-    
-    
+    def isSelfEnabled(self, dataBlock='None'): pass
     def isTopLevel(self):
         """
         Is the collection's parent a render layer?
         """
-    
         pass
-    
-    
-    def isolateSelectedChanged(self):
-        pass
-    
-    
-    def postApply(*args, **kwargs):
-        pass
-    
-    
-    def postConstructor(self):
-        pass
-    
-    
-    def pullEnabled(*args, **kwargs):
-        pass
-    
-    
-    def setIsolateSelected(self, val):
-        pass
-    
-    
+    def isTraversingConnections(self): pass
+    def itemChangedRecursive(self): pass
+    def overridesConnections(self): pass
+    def postApply(*args, **kwargs): pass
+    def setIsolateSelected(self, value): pass
     def setSelectorType(self, typeName):
         """
         Sets the selector type of this collection.
         """
-    
         pass
-    
-    
-    def setSelfEnabled(self, value):
-        pass
-    
-    
-    def typeId(self):
-        pass
-    
-    
-    def typeName(self):
-        pass
-    
-    
-    def unapply(*args, **kwargs):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def setSelfEnabled(self, value): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    def unapply(*args, **kwargs): pass
+    def update(*args, **kwargs): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
     aSelector = None
     
     
@@ -364,6 +231,70 @@ class Collection(nodeList.ListBase, childNode.TreeOrderedItem, childNode.ChildNo
     selfEnabled = None
 
 
+class AOVChildCollection(Collection):
+    """
+    AOV (arbitrary output variable) Child Collection node.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    def containsNodeName(self, nodeName): pass
+    def isSelfAcceptableChild(self):
+        """
+        This code prevents copy/paste of AOV child collections to themselves/other AOV child collections.
+        """
+        pass
+    def setSelectorType(self, typeName): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
+    
+    
+    kTypeName = 'aovChildCollection'
+
+
+class LightsChildCollection(Collection):
+    """
+    LightsChildCollection node.
+    
+    A child collection node specific for one single light source
+    and overrides on this light source.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    def isAcceptableChild(self, modelOrData):
+        """
+        Check if the argument can be a child of this collection.
+        
+        Pasting is prevented because the Light Editor considers only the 
+        first override in the LightsChildCollection. Additionally dragging 
+        is prevented between overrides in LightsChildCollections to prevent 
+        dragging between incompatible LightsChildCollection types 
+        (ie. point light, spot light)
+        """
+        pass
+    def setSelectorType(self, typeName): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
+    
+    
+    kTypeName = 'lightsChildCollection'
+
+
 class RenderSettingsChildCollection(Collection):
     """
     Render Settings Sub Collection node.
@@ -371,74 +302,33 @@ class RenderSettingsChildCollection(Collection):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def appendChild(self, child):
-        pass
-    
-    
-    def attachChild(self, pos, child):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
+    def __init__(self): pass
+    def appendChild(self, child): pass
+    def attachChild(self, pos, child): pass
+    def compute(self, plug, dataBlock): pass
     def createCollection(self, collectionName):
         """
         Add a child collection to the Collection.
         """
-    
         pass
-    
-    
-    def getRenderSettingsChildCollectionByName(self, renderSettingsChildCollectionName, nested='False'):
-        pass
-    
-    
-    def getRenderSettingsChildCollections(self):
-        pass
-    
-    
+    def getRenderSettingsChildCollectionByName(self, renderSettingsChildCollectionName, nested='False'): pass
+    def getRenderSettingsChildCollections(self): pass
     def isAcceptableChild(self, modelOrData):
         """
         Check if the argument can be a child of this collection.
         """
-    
         pass
-    
-    
-    def setSelectorType(self, typeName):
-        pass
-    
-    
-    def superTypeName(self):
-        pass
-    
-    
-    def typeId(self):
-        pass
-    
-    
-    def typeName(self):
-        pass
-    
-    
-    def containsNodeName(nodeName):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def isTraversingConnections(self): pass
+    def setSelectorType(self, typeName): pass
+    def superTypeName(self): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    @staticmethod
+    def containsNodeName(nodeName): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
     kSelectorTypeName = 'simpleSelector'
     
     
@@ -446,6 +336,82 @@ class RenderSettingsChildCollection(Collection):
     
     
     kTypeName = 'renderSettingsChildCollection'
+
+
+class LightsCollection(Collection):
+    """
+    LightsCollection node.
+    
+    A collection node specific for grouping light sources
+    and overrides on those light sources.
+    
+    This collection should have all light sources as member by default. All nodes 
+    matching the light classification should be returned by the selector
+    on this collection.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def compute(self, plug, dataBlock): pass
+    def createCollection(self, collectionName):
+        """
+        Add a lights child collection to the Collection.
+        """
+        pass
+    def isAcceptableChild(self, modelOrData):
+        """
+        Check if the argument can be a child of this collection.
+        
+        We want to prevent copying LightsChildCollections in the same 
+        LightsCollection at the expense of not being able to copy 
+        LightsChildCollections between different LightsCollections.
+        """
+        pass
+    def setSelectorType(self, typeName): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    @staticmethod
+    def containsNodeName(nodeName): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
+    
+    
+    kTypeName = 'lightsCollection'
+
+
+class AOVCollection(Collection):
+    """
+    AOV (arbitrary output variable) parent collection node.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def appendChild(self, child): pass
+    def attachChild(self, pos, child): pass
+    def compute(self, plug, dataBlock): pass
+    def isAcceptableChild(self, modelOrData):
+        """
+        Check if the model could be a child
+        """
+        pass
+    def setSelectorType(self, typeName): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    @staticmethod
+    def containsNodeName(nodeName): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
+    
+    
+    kTypeName = 'aovCollection'
 
 
 class RenderSettingsCollection(Collection):
@@ -467,62 +433,29 @@ class RenderSettingsCollection(Collection):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def appendChild(self, child):
-        pass
-    
-    
-    def attachChild(self, pos, child):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
+    def __init__(self): pass
+    def appendChild(self, child): pass
+    def attachChild(self, pos, child): pass
+    def compute(self, plug, dataBlock): pass
     def createCollection(self, collectionName):
         """
         Add a child collection to the Collection.
         """
-    
         pass
-    
-    
     def isAcceptableChild(self, modelOrData):
         """
         Check if the argument can be a child of this collection.
         """
-    
         pass
-    
-    
-    def setSelectorType(self, typeName):
-        pass
-    
-    
-    def typeId(self):
-        pass
-    
-    
-    def typeName(self):
-        pass
-    
-    
-    def containsNodeName(nodeName):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def setSelectorType(self, typeName): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    @staticmethod
+    def containsNodeName(nodeName): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
     kSelectorTypeName = 'simpleSelector'
     
     
@@ -535,296 +468,39 @@ class RenderSettingsCollection(Collection):
     numIsolatedRenderSettingsChildren = None
 
 
-class LightsChildCollection(Collection):
-    """
-    LightsChildCollection node.
-    
-    A child collection node specific for one single light source
-    and overrides on this light source.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def isAcceptableChild(self, modelOrData):
-        """
-        Check if the argument can be a child of this collection.
-        
-        Pasting is prevented because the Light Editor considers only the 
-        first override in the LightsChildCollection. Additionally dragging 
-        is prevented between overrides in LightsChildCollections to prevent 
-        dragging between incompatible LightsChildCollection types 
-        (ie. point light, spot light)
-        """
-    
-        pass
-    
-    
-    def setSelectorType(self, typeName):
-        pass
-    
-    
-    def typeId(self):
-        pass
-    
-    
-    def typeName(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'lightsChildCollection'
 
 
-class LightsCollection(Collection):
-    """
-    LightsCollection node.
-    
-    A collection node specific for grouping light sources
-    and overrides on those light sources.
-    
-    This collection should have all light sources as member by default. All nodes 
-    matching the light classification should be returned by the selector
-    on this collection.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def createCollection(self, collectionName):
-        """
-        Add a lights child collection to the Collection.
-        """
-    
-        pass
-    
-    
-    def isAcceptableChild(self, modelOrData):
-        """
-        Check if the argument can be a child of this collection.
-        
-        We want to prevent copying LightsChildCollections in the same 
-        LightsCollection at the expense of not being able to copy 
-        LightsChildCollections between different LightsCollections.
-        """
-    
-        pass
-    
-    
-    def setSelectorType(self, typeName):
-        pass
-    
-    
-    def typeId(self):
-        pass
-    
-    
-    def typeName(self):
-        pass
-    
-    
-    def containsNodeName(nodeName):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'lightsCollection'
-
-
-class AOVChildCollection(Collection):
-    """
-    AOV (arbitrary output variable) Child Collection node.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def containsNodeName(self, nodeName):
-        pass
-    
-    
-    def isSelfAcceptableChild(self):
-        """
-        This code prevents copy/paste of AOV child collections to themselves/other AOV child collections.
-        """
-    
-        pass
-    
-    
-    def setSelectorType(self, typeName):
-        pass
-    
-    
-    def typeId(self):
-        pass
-    
-    
-    def typeName(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'aovChildCollection'
-
-
-class AOVCollection(Collection):
-    """
-    AOV (arbitrary output variable) parent collection node.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def appendChild(self, child):
-        pass
-    
-    
-    def attachChild(self, pos, child):
-        pass
-    
-    
-    def compute(self, plug, dataBlock):
-        pass
-    
-    
-    def isAcceptableChild(self, modelOrData):
-        """
-        Check if the model could be a child
-        """
-    
-        pass
-    
-    
-    def setSelectorType(self, typeName):
-        pass
-    
-    
-    def typeId(self):
-        pass
-    
-    
-    def typeName(self):
-        pass
-    
-    
-    def containsNodeName(nodeName):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'aovCollection'
-
-
-
-def unapply(*args, **kwargs):
-    pass
-
-
-def collections(c):
-    pass
-
-
+def delete(*args, **kwargs): pass
 def getAllCollectionClasses():
     """
     Returns the list of Collection subclasses
     """
-
     pass
+def collections(c): pass
+def unapply(*args, **kwargs): pass
+def create(*args, **kwargs): pass
 
-
-def create(*args, **kwargs):
-    pass
-
-
-def delete(*args, **kwargs):
-    pass
-
-
-
-kChildDetached = []
-
-kOverrideCreationFailed = []
-
-kIncorrectChildType = []
-
-_specialCollectionTypes = set()
-
-kCollectionMissingSelector = []
-
-kUnknownChild = []
-
-kInvalidChildName = []
-
-kChildAttached = []
 
 kSet = []
 
+kCollectionMissingSelector = []
+
+kChildAttached = []
+
+kOverrideCreationFailed = []
+
 _overrideTypes = set()
 
+kUnknownChild = []
+
 kRendererMismatch = []
+
+kInvalidChildName = []
+
+kChildDetached = []
+
+_specialCollectionTypes = set()
+
+kIncorrectChildType = []
 
 

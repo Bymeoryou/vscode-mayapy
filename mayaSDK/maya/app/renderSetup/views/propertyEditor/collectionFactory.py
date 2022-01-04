@@ -12,39 +12,35 @@ of a class derived from MayaQWidgetBaseMixin and QGroupBox.
 The collection factory is a singleton.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 def register(typeName, creator):
     """
     Register a property editor UI creator for collection type.
     
     Raises a RuntimeError if a creator had already been registered.
     """
-
     pass
-
-
 def unregister(typeName):
     """
     Unregister a property editor UI creator for collection type.
     
     Raises a KeyError if a creator had not already been registered.
     """
-
     pass
-
-
 def create(proxyItem, parent):
     """
     Create a property editor UI for collection type.
     
     Raises a KeyError if a creator had not already been registered.
     """
-
     pass
 
 
+kAlreadyRegistered = []
 
 _creators = {}
-
-kAlreadyRegistered = []
 
 

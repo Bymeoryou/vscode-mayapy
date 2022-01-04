@@ -7,10 +7,14 @@ can add analytics from any location using the @makeAnalytic decorator.
     list_analytics()
 """
 
-from maya.analytics.Runner import Runner
-from maya.analytics.utilities import list_analytics
-from maya.analytics.utilities import add_analytic
-from maya.analytics.Logger import Logger
-from maya.analytics.utilities import analytic_by_name
-from maya.analytics.utilities import bootstrap_analytics
 
+from maya.analytics.utilities import analytic_by_name
+from maya.analytics.Logger import Logger
+from maya.analytics.utilities import bootstrap_analytics
+from maya.analytics.Runner import Runner
+from maya.analytics.utilities import add_analytic
+from maya.analytics.utilities import list_analytics
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional

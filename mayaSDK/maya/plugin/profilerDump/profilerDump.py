@@ -1,3 +1,7 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def uninitializePlugin(obj): pass
 def profilerToCSV(fileName, durationMin):
     """
     fileName : name of file to write to disk
@@ -9,10 +13,7 @@ def profilerToCSV(fileName, durationMin):
     Example:
             > profilerToCSV('profiler.csv', 0.0)
     """
-
     pass
-
-
 def profilerFormatJSON(fileName, fileName2):
     """
     fileName : name of file to read
@@ -25,18 +26,12 @@ def profilerFormatJSON(fileName, fileName2):
     Example:
             > profilerFormatJSON('profilerIn.json', 'profilerFormatted.json')
     """
-
     pass
-
-
 def initializePlugin(obj):
     """
     # Nothing run on initialize for now
     """
-
     pass
-
-
 def profilerToJSON(fileName, useIndex, durationMin):
     """
     fileName : name of file to write to disk
@@ -50,12 +45,5 @@ def profilerToJSON(fileName, useIndex, durationMin):
             > profilerToJSON('profiler_indexed.json', True, 0.0) # Index without a duration clamp
             > profilerToJSON('profiler_nonIndexed.json', False, 10.0) # Non-Indexed with duration clamp
     """
-
     pass
-
-
-def uninitializePlugin(obj):
-    pass
-
-
 

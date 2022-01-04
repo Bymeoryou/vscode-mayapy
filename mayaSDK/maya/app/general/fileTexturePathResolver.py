@@ -9,83 +9,70 @@
 ##############################################################################
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 def getFilePatternString(filePath, useFrameExtension, uvTilingMode):
     """
     Given a path to a file and hints about UV tiling and frame extension usage,
     convert the path to a version with appropriate tags marking the UV tile
     and frame number.
     """
-
     pass
-
-
-def _splitPath(filePath):
-    """
-    ##############################################################################
-    # Private Utilities
-    ##############################################################################
-    """
-
-    pass
-
-
-def _patternToRegex(pattern):
-    pass
-
-
 def computeUVForFile(filePath, filePattern):
     """
     Given a path to a file and the UV pattern it matches compute the 0-based UV
     tile indicated by the file name. If the filePath or pattern are poorly
     formed then (0,0) is returned.
     """
-
     pass
-
-
+def _splitPath(filePath):
+    """
+    ##############################################################################
+    # Private Utilities
+    ##############################################################################
+    """
+    pass
 def findAllFilesForPattern(pattern, frameNumber):
     """
     Given a path, possibly containing tags in the file name, find all files in
     the same directory that match the tags. If none found, just return pattern
     that we looked for.
     """
-
     pass
-
-
 def computeUVForFiles(filePaths, filePattern):
     """
     Given a collection of paths to a file and the UV pattern it matches compute
     the 0-based UV tile indicated by the file name. If a filePath or the pattern
     are poorly formed then (0,0) is returned for that path.
     """
-
     pass
+def _patternToRegex(pattern): pass
 
-
-
-_zeroBasedRegex = None
-
-_frameExtensionRegex = None
 
 _taggedZeroBasedRegex = None
 
+_VTag = '<V>'
+
 _frameTag = '<f>'
-
-_uTag = '<u>'
-
-_udimRegex = None
-
-_taggedOneBasedRegex = None
-
-_oneBasedRegex = None
 
 _UTag = '<U>'
 
-_udimTag = '<UDIM>'
-
 _vTag = '<v>'
 
-_VTag = '<V>'
+_oneBasedRegex = None
+
+_taggedOneBasedRegex = None
+
+_frameExtensionRegex = None
+
+_zeroBasedRegex = None
+
+_uTag = '<u>'
+
+_udimTag = '<UDIM>'
+
+_udimRegex = None
 
 

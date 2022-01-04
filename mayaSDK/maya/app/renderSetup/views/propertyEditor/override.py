@@ -1,12 +1,15 @@
-from PySide2.QtWidgets import QGroupBox
 from maya.app.general.mayaMixin import MayaQWidgetBaseMixin
-from maya.app.renderSetup.views.propertyEditor.layout import Layout
-from PySide2.QtWidgets import QWidget
-from maya.app.renderSetup.common.utils import ReportableException
-from PySide2.QtCore import Qt
-from PySide2.QtWidgets import QLabel
-from functools import partial
 from PySide2.QtWidgets import QVBoxLayout
+from PySide2.QtWidgets import QWidget
+from PySide2.QtCore import Qt
+from PySide2.QtWidgets import QGroupBox
+from PySide2.QtWidgets import QLabel
+from maya.app.renderSetup.common.utils import ReportableException
+from maya.app.renderSetup.views.propertyEditor.layout import Layout
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class Override(MayaQWidgetBaseMixin, QGroupBox):
     """
@@ -15,35 +18,25 @@ class Override(MayaQWidgetBaseMixin, QGroupBox):
     
     
     
-    def __init__(self, item, parent):
-        pass
-    
-    
-    def paintEvent(self, event):
-        pass
-    
-    
-    def update(self):
-        pass
-    
-    
+    def __init__(self, item, parent): pass
+    def paintEvent(self, event): pass
+    def update(self): pass
     staticMetaObject = None
 
 
 
-def getCppPointer(*args, **kwargs):
-    pass
 
+def getCppPointer(*args, **kwargs): pass
 
 
 kIncompatibleAttribute = []
 
-kLayer = []
-
 kInvalidAttribute = []
 
-kAppliedToUnique = []
-
 kDragAttributeFromAE = []
+
+kLayer = []
+
+kAppliedToUnique = []
 
 

@@ -17,6 +17,10 @@ Special thanks to those studios with the foresight to support an open-source pro
 Attitude Studio, and ImageMovers Digital.
 """
 
-__version__ = '1.0.9'
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+__version__ = '1.1.0'
 
 

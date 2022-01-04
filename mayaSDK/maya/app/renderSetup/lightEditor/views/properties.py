@@ -1,10 +1,11 @@
-from PySide2.QtWidgets import QGroupBox
 from maya.app.general.mayaMixin import MayaQWidgetBaseMixin
 from maya.app.renderSetup.views.propertyEditor.layout import Layout
-from PySide2.QtCore import Qt
-from PySide2.QtWidgets import QLabel
-from functools import partial
 from PySide2.QtWidgets import QVBoxLayout
+from PySide2.QtWidgets import QGroupBox
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class LightProperties(MayaQWidgetBaseMixin, QGroupBox):
     """
@@ -13,10 +14,7 @@ class LightProperties(MayaQWidgetBaseMixin, QGroupBox):
     
     
     
-    def __init__(self, item, parent):
-        pass
-    
-    
+    def __init__(self, item, parent): pass
     staticMetaObject = None
 
 
@@ -27,16 +25,10 @@ class GroupProperties(MayaQWidgetBaseMixin, QGroupBox):
     
     
     
-    def __init__(self, item, parent):
-        pass
-    
-    
+    def __init__(self, item, parent): pass
     staticMetaObject = None
 
 
-
-def getCppPointer(*args, **kwargs):
-    pass
 
 
 def _createControl(plg, attrLabel, connectable='True', enabled='True'):
@@ -44,13 +36,12 @@ def _createControl(plg, attrLabel, connectable='True', enabled='True'):
     Create a UI control for the given attribute, 
     matching its type and considering if it's connectable.
     """
-
     pass
+def getCppPointer(*args, **kwargs): pass
 
-
-
-kIsolate = []
 
 kEnable = []
+
+kIsolate = []
 
 

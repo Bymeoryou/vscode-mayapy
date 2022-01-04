@@ -1,35 +1,45 @@
-from logging import setLoggerClass
-from logging import log
-from logging import basicConfig
-from logging import LoggerAdapter
-from logging import exception
-from logging import makeLogRecord
-from pymel.util.decoration import decorator
-from logging import Filter
-from maya.OpenMaya import MGlobal
-from logging import StreamHandler
-from logging import getLevelName
-from logging import debug
-from logging import info
-from logging import Handler
-from logging import getLoggerClass
-from logging import Logger
-from maya.OpenMaya import MMessage
-from logging import NullHandler
-from logging import Formatter
-from logging import LogRecord
-from logging import FileHandler
-from logging import captureWarnings
-from logging import critical
-from logging import critical as fatal
-from logging import addLevelName
-from logging import error
-from logging import disable
-from maya.OpenMaya import MEventMessage
 from logging import warning
 from logging import warning as warn
+from logging import log
+from logging import LoggerAdapter
+from logging import getLevelName
+from logging import info
+from logging import Formatter
+from logging import Logger
+from logging import disable
+from logging import Handler
+from logging import critical
+from logging import critical as fatal
+from logging import basicConfig
+from maya.OpenMaya import MMessage
+from maya.OpenMaya import MGlobal
+from logging import getLoggerClass
+from logging import captureWarnings
+from maya.OpenMaya import MEventMessage
 from logging import BufferingFormatter
+from pymel.util.decoration import decorator
+from logging import error
+from logging import addLevelName
+from logging import NullHandler
+from logging import Filter
+from logging import debug
+from logging import StreamHandler
+from logging import setLoggerClass
+from logging import exception
+from logging import FileHandler
+from logging import makeLogRecord
+from logging import LogRecord
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def getLogConfigFile(): pass
+def _setupLevelPreferenceHook():
+    """
+    Sets up a callback so that the last used log-level is saved to the user preferences file
+    """
+    pass
 def pymelLogFileConfig(fname, defaults='None', disable_existing_loggers='False'):
     """
     Reads in a file to set up pymel's loggers.
@@ -53,61 +63,18 @@ def pymelLogFileConfig(fname, defaults='None', disable_existing_loggers='False')
     handlers, by setting the 'remove_existing_handlers' option in the appropriate
     section to True.
     """
-
     pass
-
-
 def getLogger(name):
     """
     a convenience function that allows any module to setup a logger by simply
     calling `getLogger(__name__)`.  If the module is a package, "__init__" will
     be stripped from the logger name
     """
-
     pass
-
-
-def timed(level='10'):
-    pass
-
-
-def levelToName(level):
-    pass
-
-
-def _addOldHandlers(logger, oldHandlers, secName, configParser):
-    pass
-
-
-def addErrorLog(logger):
-    """
-    Adds an 'raiseLog' method to the given logger instance
-    """
-
-    pass
-
-
-def nameToLevel(name):
-    pass
-
-
-def _fixMayaOutput():
-    pass
-
-
-def environLogLevelOverride(logger):
-    """
-    If PYMEL_LOGLEVEL is set, make sure the logging level is at least that
-    much for the given logger.
-    """
-
-    pass
-
-
-def getLogConfigFile():
-    pass
-
-
+def _fixMayaOutput(): pass
+def levelToName(level): pass
+def _addOldHandlers(logger, oldHandlers, secName, configParser): pass
+def nameToLevel(name): pass
 def raiseLog(logger, level, message, errorClass='"<type \'exceptions.RuntimeError\'>"'):
     """
     For use in situations in which you may wish to raise an error or simply
@@ -128,51 +95,48 @@ def raiseLog(logger, level, message, errorClass='"<type \'exceptions.RuntimeErro
     the getLogger function in this module, so you can do:
         _logger.raiseLog(_logger.INFO, "oh noes! something weird happened!")
     """
-
     pass
-
-
-def _setupLevelPreferenceHook():
+def addErrorLog(logger):
     """
-    Sets up a callback so that the last used log-level is saved to the user preferences file
+    Adds an 'raiseLog' method to the given logger instance
     """
-
     pass
-
-
-def getConfigFile():
+def getConfigFile(): pass
+def environLogLevelOverride(logger):
+    """
+    If PYMEL_LOGLEVEL is set, make sure the logging level is at least that
+    much for the given logger.
+    """
     pass
+def timed(level='10'): pass
 
-
-
-NOTSET = 0
-
-PYMEL_ERRORLEVEL_ENV_VAR = 'PYMEL_ERRORLEVEL'
-
-root = None
-
-DEBUG = 10
-
-INFO = 20
-
-logLevels = {}
-
-ERRORLEVEL = None
-
-PYMEL_CONF_ENV_VAR = 'PYMEL_CONF'
 
 WARN = 30
 
-pymelLogger = None
+root = None
 
-BASIC_FORMAT = '%(levelname)s:%(name)s:%(message)s'
-
-PYMEL_LOGLEVEL_ENV_VAR = 'PYMEL_LOGLEVEL'
+PYMEL_CONF_ENV_VAR = 'PYMEL_CONF'
 
 ERROR = 40
 
+ERRORLEVEL = None
+
+PYMEL_ERRORLEVEL_ENV_VAR = 'PYMEL_ERRORLEVEL'
+
+PYMEL_LOGLEVEL_ENV_VAR = 'PYMEL_LOGLEVEL'
+
+pymelLogger = None
+
+NOTSET = 0
+
+logLevels = {}
+
+DEBUG = 10
+
 CRITICAL = 50
 
-FATAL = CRITICAL
-n = CRITICAL
+INFO = 20
+
+BASIC_FORMAT = '%(levelname)s:%(name)s:%(message)s'
+
 

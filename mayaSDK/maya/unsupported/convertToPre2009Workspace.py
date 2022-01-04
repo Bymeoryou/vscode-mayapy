@@ -12,8 +12,9 @@
 #
 """
 
-def convertToPre2009Workspace(inWorkspace, outWorkspace):
-    pass
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
+def convertToPre2009Workspace(inWorkspace, outWorkspace): pass
 

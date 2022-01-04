@@ -38,6 +38,10 @@ Example usage:
 \sa TODO.mel
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 def TODO(toDoType, description, jiraEntry):
     """
     Register a "TODO" with the system. This is used to track when running code
@@ -61,8 +65,5 @@ def TODO(toDoType, description, jiraEntry):
             Link to the name of a JIRA entry referencing this code. None if
             there is no associated JIRA entry, but there really should be.
     """
-
     pass
-
-
 

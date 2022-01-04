@@ -1,6 +1,6 @@
 def encodeString():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/encodeString.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/encodeString.html
 
 
 
@@ -26,7 +26,7 @@ string  Command result
 
 def format(s="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/format.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/format.html
 
 
 
@@ -62,7 +62,7 @@ s     : stringArg       [string]
 
 def sortCaseInsensitive():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sortCaseInsensitive.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sortCaseInsensitive.html
 
 
 
@@ -83,7 +83,7 @@ string[]  string to sort
 
 def stringArrayIntersector(q=1,e=1,ad=1,dt="string",ex=1,i="string[]",r=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/stringArrayIntersector.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/stringArrayIntersector.html
 
 
 
@@ -149,7 +149,7 @@ ut    : useTemplate     [string]
 
 def stringArrayIntersector(q=1,e=1,ad=1,dt="string",ex=1,i="string[]",r=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/stringArrayIntersector.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/stringArrayIntersector.html
 
 
 
@@ -215,7 +215,7 @@ ut    : useTemplate     [string]
 
 def assignCommand(q=1,e=1,ad="string",alt=1,ann="string",c="script",cmd=1,ctl=1,da1="string",da2="string",da3="string",d="int",ds="string",ecr=1,fs=1,i="int",ka=1,k="string",kup=1,n=1,ndp="int",num=1,opt=1,sbk=1,suc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/assignCommand.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/assignCommand.html
 
 
 
@@ -366,7 +366,7 @@ suc   : sourceUserCommands [boolean]
 
 def callbacks(ac="script",cac=1,cc=1,dh=1,dc=1,ec=1,h="string",lc=1,o="string",rc="script"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/callbacks.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/callbacks.html
 
 
 
@@ -448,7 +448,7 @@ rc    : removeCallback  [script]
 
 def commandEcho(q=1,af="string[]",f="string[]",ln=1,st=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/commandEcho.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/commandEcho.html
 
 
 
@@ -498,7 +498,7 @@ st    : state           [boolean]
 
 def condition(q=1,e=1,delete=1,d="string",i=1,s="string",st=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/condition.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/condition.html
 
 
 
@@ -555,7 +555,7 @@ st    : state           [boolean]
 
 def connectControl(fi=1,index="uint",pcm=1,po=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/connectControl.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/connectControl.html
 
 
 
@@ -634,7 +634,7 @@ po    : preventOverride [boolean]
 
 def deleteUI(cl=1,ctl=1,ed=1,lay=1,m=1,mi=1,pnl=1,pc=1,ric=1,tc=1,uit=1,wnd=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/deleteUI.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/deleteUI.html
 
 
 
@@ -728,7 +728,7 @@ wnd   : window          [boolean]
 
 def dimWhen(c=1,f=1,t=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dimWhen.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dimWhen.html
 
 
 
@@ -779,7 +779,7 @@ t     : true            [boolean]
 
 def disable(v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/disable.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/disable.html
 
 
 
@@ -812,7 +812,7 @@ v     : value           [boolean]
 
 def eval():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/eval.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/eval.html
 
 
 
@@ -836,7 +836,7 @@ Any  depending on input.
 
 def evalDeferred(en=1,ls=1,low=1,lp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/evalDeferred.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/evalDeferred.html
 
 
 
@@ -886,7 +886,7 @@ lp    : lowestPriority  [boolean]
 
 def isTrue():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/isTrue.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/isTrue.html
 
 
 
@@ -908,7 +908,7 @@ None
 
 def itemFilter(q=1,e=1,bk="string",bn="string",bs="string",bt="string",cat="string",cls="string",cbk=1,cbt=1,di="[string, string]",ex=1,intersect="[string, string]",lbf=1,lof=1,luf=1,neg=1,p="string",pym="string",ss="string",t="string",un="[string, string]",unn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/itemFilter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/itemFilter.html
 
 
 
@@ -1047,7 +1047,7 @@ unn   : uniqueNodeNames [boolean]
 
 def itemFilterAttr(q=1,e=1,bn="string",bns="string",bs="string",cls="string",dy=1,ex=1,hc=1,hdk=1,he=1,h=1,intersect="[string, string]",k=1,lbf=1,lof=1,luf=1,neg=1,p="string",pub=1,r=1,srt=1,ss="string",t="string",un="[string, string]",w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/itemFilterAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/itemFilterAttr.html
 
 
 
@@ -1201,7 +1201,7 @@ w     : writable        [boolean]
 
 def itemFilterType(q=1,e=1,t="string",typ=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/itemFilterType.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/itemFilterType.html
 
 
 
@@ -1245,7 +1245,7 @@ typ   : type            [boolean]
 
 def lsUI(ct=1,col=1,ctx=1,cl=1,ctl=1,dw=1,ed=1,hd="int",l=1,mi=1,m=1,nw=1,p=1,rmc=1,tl="int",typ="string",wnd=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/lsUI.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/lsUI.html
 
 
 
@@ -1358,7 +1358,7 @@ wnd   : windows         [boolean]
 
 def melOptions(q=1,dvw=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/melOptions.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/melOptions.html
 
 
 
@@ -1394,7 +1394,7 @@ dvw   : duplicateVariableWarnings [boolean]
 
 def objectTypeUI(i="string",la=1,sc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/objectTypeUI.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/objectTypeUI.html
 
 
 
@@ -1437,7 +1437,7 @@ sc    : superClasses    [boolean]
 
 def optionVar(q=1,arraySize="string",ca="string",ex="string",fv="[string, float]",fva="[string, float]",iv="[string, int]",iva="[string, int]",l=1,rm="string",rfa="[string, int]",sv="[string, string]",sva="[string, string]",v="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/optionVar.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/optionVar.html
 
 
 
@@ -1535,7 +1535,7 @@ v     : version         [int]
 
 def pause(sec="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pause.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pause.html
 
 
 
@@ -1569,7 +1569,7 @@ sec   : seconds         [int]
 
 def refresh(cv=1,fe="string",fn="string",f=1,su=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/refresh.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/refresh.html
 
 
 
@@ -1627,7 +1627,7 @@ su    : suspend         [boolean]
 
 def renameUI():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renameUI.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renameUI.html
 
 
 
@@ -1655,7 +1655,7 @@ string  The new name, or the old name if re-naming fails.
 
 def resourceManager(nf="string",s="[string, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/resourceManager.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/resourceManager.html
 
 
 
@@ -1693,7 +1693,7 @@ s     : saveAs          [[string, string]]
 
 def scriptJob(alc=1,aa="[string, script]",ac="[string, script]",ad="[string, script]",cu=1,cc="[string, script]",cf="[string, script]",ct="[string, script]",con="[string, script]",dri=1,event="[string, script]",ex="int",f=1,ie="script",k="int",ka=1,kws=1,lc=1,le=1,lj=1,nd="[string, script]",nnc="[string, script]",ovc="[string, script]",p="string",per=1,pro=1,rp=1,ro=1,tc="script",uid="[string, script]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scriptJob.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scriptJob.html
 
 
 
@@ -1924,7 +1924,7 @@ uid   : uiDeleted       [[string, script]]
 
 def selectionConnection(q=1,e=1,atc=1,acl=1,act=1,addScript="script",add="string",cl=1,clr=1,lst=1,dt="string",d="name",ed="string",ex=1,f="string",fo="name",g=1,hl=1,id=1,key=1,lck=1,mdl=1,obj="name",p="string",rm="string",rs="script",s="name",sl=1,sw=1,ut="string",wl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/selectionConnection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/selectionConnection.html
 
 
 
@@ -2202,7 +2202,7 @@ wl    : worldList       [boolean]
 
 def setParent(q=1,dt="string",m=1,top=1,u=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setParent.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setParent.html
 
 
 
@@ -2273,7 +2273,7 @@ ut    : useTemplate     [string]
 
 def setUITemplate(q=1,ppt=1,pst=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setUITemplate.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setUITemplate.html
 
 
 
@@ -2315,7 +2315,7 @@ pst   : pushTemplate    [boolean]
 
 def uiTemplate(q=1,e=1,dt="string",ex=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/uiTemplate.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/uiTemplate.html
 
 
 
@@ -2363,7 +2363,7 @@ ut    : useTemplate     [string]
 
 def waitCursor(q=1,st=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/waitCursor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/waitCursor.html
 
 
 

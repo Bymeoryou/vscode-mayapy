@@ -30,6 +30,10 @@ Note that it is understood that changing the override value will cause all
 overridden attributes to change.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class OverriddenAttributeManager(object):
     """
     Observe and react to overridden attribute changes.
@@ -44,54 +48,38 @@ class OverriddenAttributeManager(object):
     
     
     
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def aboutToDelete(self):
         """
         Final clean up before the manager is destroyed.
         """
-    
         pass
-    
-    
     def addAttributeChangeObservation(self):
         """
         Start observing DG attribute changes.
         """
-    
         pass
-    
-    
-    def onAttributeChanged(self, msg, plg, otherPlug, clientData):
+    def isObserving(self):
+        """
+        Returns state of DG attribute change observation.
+        """
         pass
-    
-    
+    def onAttributeChanged(self, msg, plg, otherPlug, clientData): pass
     def onRenderLayerChanged(self):
         """
         Called after the visible render layer has been changed.
         """
-    
         pass
-    
-    
     def removeAttributeChangeObservation(self):
         """
         End observation of DG attribute changes.
         """
-    
         pass
-    
-    
     def renderSetupAdded(self):
         """
         Called just after the render setup node has been added.
         """
-    
         pass
-    
-    
     def renderSetupPreDelete(self):
         """
         Called just before the render setup node is deleted.
@@ -99,31 +87,19 @@ class OverriddenAttributeManager(object):
         Unregisters from visible render layer and attribute change
         observation.
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 
 
 
-def isDefaultRenderLayerVisible():
-    pass
 
-
-def initialize():
-    pass
-
-
-def finalize():
-    pass
-
-
-def instance():
-    pass
-
+def isDefaultRenderLayerVisible(): pass
+def instance(): pass
+def initialize(): pass
+def finalize(): pass
 
 
 _instance = OverriddenAttributeManager()

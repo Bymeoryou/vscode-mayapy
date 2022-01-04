@@ -1,6 +1,10 @@
+from PySide2.QtWidgets import QVBoxLayout
 from PySide2.QtWidgets import QGroupBox
 from functools import partial
-from PySide2.QtWidgets import QVBoxLayout
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 from . import basicCollection
 
@@ -11,78 +15,49 @@ class Collection(basicCollection.BasicCollection):
     
     
     
-    def __del__(self):
-        pass
-    
-    
-    def __init__(self, item, parent):
-        pass
-    
-    
-    def dataModelChanged(self, *posArgs, **kwArgs):
-        pass
-    
-    
-    def getModelSelector(self):
-        pass
-    
-    
-    def highlight(self, names):
-        pass
-    
-    
-    def isAbsoluteMode(self):
-        pass
-    
-    
-    def populateFields(self):
-        pass
-    
-    
-    def postSelector(self):
-        pass
-    
-    
+    def __del__(self): pass
+    def __init__(self, item, parent): pass
+    def dataModelChanged(self, *posArgs, **kwArgs): pass
+    def getModelSelector(self): pass
+    def highlight(self, names): pass
+    def isAbsoluteMode(self): pass
+    def populateFields(self): pass
+    def postSelector(self): pass
     def preSelector(self):
         """
         Create UI displayed above selector UI.
         """
-    
         pass
-    
-    
-    def setupSelector(self, layout):
-        pass
-    
-    
+    def setupSelector(self, layout): pass
     staticMetaObject = None
 
 
 
-kDragAttributesFromAE = []
+
+kViewCollectionObjects = []
+
+kRelativeWarning = []
 
 kSelectAll = []
 
-kOK = []
+kViewAllTooltip = []
 
-kAddOverride = []
+kViewAll = []
 
-kViewCollectionObjects = []
+kAddOverrideTooltipStr = []
 
 vSpc = 3
 
 kSelectAllTooltip = []
 
-kRelativeWarning = []
-
-kAddOverrideTooltipStr = []
+kDragAttributesFromAE = []
 
 kNbObjects = []
 
+kOK = []
+
+kAddOverride = []
+
 hSpc = 10
-
-kViewAllTooltip = []
-
-kViewAll = []
 
 

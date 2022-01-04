@@ -44,10 +44,19 @@ manually call the method to complete the sequence:
 
     mgr = emModeManager()
     mgr.setMode( someMode )
-    mgr.restore()
+    mgr.restore_state()
 """
 
-class emModeManager(object):
+
+from traceback import extract_tb
+from maya.debug.DebugTrace import DebugTrace
+from traceback import format_list
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class emModeManager(DebugTrace):
     """
     Class for managing the EM state in a 'with' format. Remembers and
     restores the EM mode, active evaluators, and the node types enabled on
@@ -60,26 +69,17 @@ class emModeManager(object):
         """
         #----------------------------------------------------------------------
         """
-    
         pass
-    
-    
     def __exit__(self, type, value, traceback):
         """
         Ensure the state is restored if this object goes out of scope
         """
-    
         pass
-    
-    
     def __init__(self):
         """
         Defining both __enter__ and __init__ so that either one can be used
         """
-    
         pass
-    
-    
     def restore_state(self):
         """
         Restore the evaluation manager to its original mode prior to creation
@@ -92,10 +92,7 @@ class emModeManager(object):
         independent, and the performance is good enough that it's not necessary to
         remember just the things that were changed.
         """
-    
         pass
-    
-    
     def setMode(self, modeName):
         """
         Ensure the EM has a named mode set. See class docs for details on mode names.
@@ -116,54 +113,64 @@ class emModeManager(object):
         
         raises SyntaxError if the mode name is not legal
         """
-    
         pass
-    
-    
+    @staticmethod
     def rebuild(include_scheduling='False'):
         """
         Invalidate the EM and rebuild it.
         """
-    
         pass
+    @property
+    def idle_action(self):
+        """
+        Return the current idle action state
+        """
+        pass
+    @property
+    def invalid(self):
+        """
+        Return the current invalidation state.
+        Note that the command returns True when the graph is valid so the
+        sense of the boolean must be inverted.
+        """
+        pass
+    @property
+    def mode(self):
+        """
+        Return the current evaluation mode
+        """
+        pass
+    idle_action_build = 1
     
     
-    __dict__ = None
+    idle_action_buildAndManipPrepare = 3
     
-    __weakref__ = None
+    
+    idle_action_manipPrepare = 2
+    
+    
+    idle_action_none = 0
 
 
-
-def as_list(thing):
-    """
-    Simple utility to ensure the thing is a list, return None as an empty list
-    """
-
-    pass
 
 
 def _hasEvaluationManager():
     """
     Check to see if the evaluation manager is available
     """
-
+    pass
+def as_list(thing):
+    """
+    Simple utility to ensure the thing is a list, return None as an empty list
+    """
     pass
 
 
-def _dbg(message):
-    """
-    Print a message only if debugging mode is turned on
-    """
-
-    pass
-
-
-
-IN_DEBUG_MODE = False
-
-RE_EVALUATORS = None
+EVALUATOR_LIBRARIES = {}
 
 RE_MODE = None
+
+RE_EVALUATORS = None
 
 EVALUATOR_PLUGINS = {}
 

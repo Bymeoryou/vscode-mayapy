@@ -1,5 +1,6 @@
 import exceptions
 
+
 """
 # -----------------------------------------------------------------------------
 # ply: lex.py
@@ -35,139 +36,117 @@ import exceptions
 # -----------------------------------------------------------------------------
 """
 
-class LexError(exceptions.Exception):
-    def __init__(self, message, s):
-        pass
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class NullLogger(object):
+    """
+    # Null logger is used when no output is generated. Does nothing.
+    """
+    
+    
+    
+    def __call__(self, *args, **kwargs): pass
+    def __getattribute__(self, name): pass
+    __dict__ = None
     
     
     __weakref__ = None
 
 
-class PlyLogger(object):
-    def __init__(self, f):
-        pass
+class LexToken(object):
+    """
+    # Token class.  This class is used to represent the tokens produced.
+    """
     
     
-    def critical(self, msg, *args, **kwargs):
-        pass
     
-    
-    def debug(self, msg, *args, **kwargs):
-        pass
-    
-    
-    def error(self, msg, *args, **kwargs):
-        pass
-    
-    
-    def info(self, msg, *args, **kwargs):
-        pass
-    
-    
-    def warning(self, msg, *args, **kwargs):
-        pass
-    
-    
+    def __repr__(self): pass
+    def __str__(self): pass
     __dict__ = None
+    
+    
+    __weakref__ = None
+
+
+class LexError(exceptions.Exception):
+    def __init__(self, message, s): pass
+    __weakref__ = None
+
+
+class PlyLogger(object):
+    def __init__(self, f): pass
+    def critical(self, msg, *args, **kwargs): pass
+    def debug(self, msg, *args, **kwargs): pass
+    def error(self, msg, *args, **kwargs): pass
+    def info(self, msg, *args, **kwargs): pass
+    def warning(self, msg, *args, **kwargs): pass
+    __dict__ = None
+    
     
     __weakref__ = None
 
 
 class Lexer:
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def __iter__(self):
         """
         # Iterator interface
         """
-    
         pass
-    
-    
-    def __next__(self):
-        pass
-    
-    
+    def __next__(self): pass
     def begin(self, state):
         """
         # ------------------------------------------------------------
         # begin() - Changes the lexing state
         # ------------------------------------------------------------
         """
-    
         pass
-    
-    
-    def clone(self, object='None'):
-        pass
-    
-    
+    def clone(self, object='None'): pass
     def current_state(self):
         """
         # ------------------------------------------------------------
         # current_state() - Returns the current lexing state
         # ------------------------------------------------------------
         """
-    
         pass
-    
-    
     def input(self, s):
         """
         # ------------------------------------------------------------
         # input() - Push a new string into the lexer
         # ------------------------------------------------------------
         """
-    
         pass
-    
-    
-    def next(self):
-        pass
-    
-    
+    def next(self): pass
     def pop_state(self):
         """
         # ------------------------------------------------------------
         # pop_state() - Restores the previous state
         # ------------------------------------------------------------
         """
-    
         pass
-    
-    
     def push_state(self, state):
         """
         # ------------------------------------------------------------
         # push_state() - Changes the lexing state and saves old on stack
         # ------------------------------------------------------------
         """
-    
         pass
-    
-    
     def readtab(self, tabfile, fdict):
         """
         # ------------------------------------------------------------
         # readtab() - Read lexer information from a tab file
         # ------------------------------------------------------------
         """
-    
         pass
-    
-    
     def skip(self, n):
         """
         # ------------------------------------------------------------
         # skip() - Skip ahead n characters
         # ------------------------------------------------------------
         """
-    
         pass
-    
-    
     def token(self):
         """
         # ------------------------------------------------------------
@@ -178,17 +157,13 @@ class Lexer:
         # you are doing
         # ------------------------------------------------------------
         """
-    
         pass
-    
-    
     def writetab(self, tabfile, outputdir="''"):
         """
         # ------------------------------------------------------------
         # writetab() - Write lexer information to a table file
         # ------------------------------------------------------------
         """
-    
         pass
 
 
@@ -204,130 +179,51 @@ class LexerReflect(object):
     
     
     
-    def __init__(self, ldict, log='None', reflags='0'):
-        pass
-    
-    
+    def __init__(self, ldict, log='None', reflags='0'): pass
     def get_all(self):
         """
         # Get all of the basic information
         """
-    
         pass
-    
-    
     def get_literals(self):
         """
         # Get the literals specifier
         """
-    
         pass
-    
-    
-    def get_rules(self):
-        pass
-    
-    
-    def get_states(self):
-        pass
-    
-    
+    def get_rules(self): pass
+    def get_states(self): pass
     def get_tokens(self):
         """
         # Get the tokens map
         """
-    
         pass
-    
-    
     def validate_all(self):
         """
         # Validate all of the information
         """
-    
         pass
-    
-    
-    def validate_file(self, filename):
-        pass
-    
-    
+    def validate_file(self, filename): pass
     def validate_literals(self):
         """
         # Validate literals
         """
-    
         pass
-    
-    
     def validate_rules(self):
         """
         # Validate all of the t_rules collected
         """
-    
         pass
-    
-    
     def validate_tokens(self):
         """
         # Validate the tokens
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 
 
-class LexToken(object):
-    """
-    # Token class.  This class is used to represent the tokens produced.
-    """
-    
-    
-    
-    def __repr__(self):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
-class NullLogger(object):
-    """
-    # Null logger is used when no output is generated. Does nothing.
-    """
-    
-    
-    
-    def __call__(self, *args, **kwargs):
-        pass
-    
-    
-    def __getattribute__(self, name):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
-
-def _names_to_funcs(namelist, fdict):
-    pass
-
-
-def func_code(f):
-    pass
 
 
 def input(self, s):
@@ -336,38 +232,9 @@ def input(self, s):
     # input() - Push a new string into the lexer
     # ------------------------------------------------------------
     """
-
     pass
-
-
-def runmain(lexer='None', data='None'):
-    pass
-
-
-def get_caller_module_dict(levels):
-    pass
-
-
-def lex(module='None', object='None', debug='0', optimize='0', lextab="'lextab'", reflags='0', nowarn='0', outputdir="''", debuglog='None', errorlog='None'):
-    """
-    # -----------------------------------------------------------------------------
-    # lex(module)
-    #
-    # Build all of the regular expression rules from definitions in the supplied module
-    # -----------------------------------------------------------------------------
-    """
-
-    pass
-
-
-def _funcs_to_names(funclist, namelist):
-    pass
-
-
-def _statetoken(s, names):
-    pass
-
-
+def runmain(lexer='None', data='None'): pass
+def get_caller_module_dict(levels): pass
 def token(self):
     """
     # ------------------------------------------------------------
@@ -378,26 +245,30 @@ def token(self):
     # you are doing
     # ------------------------------------------------------------
     """
-
     pass
-
-
-def _form_master_re(relist, reflags, ldict, toknames):
+def _statetoken(s, names): pass
+def TOKEN(r): pass
+def _form_master_re(relist, reflags, ldict, toknames): pass
+def _names_to_funcs(namelist, fdict): pass
+def _funcs_to_names(funclist, namelist): pass
+def lex(module='None', object='None', debug='0', optimize='0', lextab="'lextab'", reflags='0', nowarn='0', outputdir="''", debuglog='None', errorlog='None'):
+    """
+    # -----------------------------------------------------------------------------
+    # lex(module)
+    #
+    # Build all of the regular expression rules from definitions in the supplied module
+    # -----------------------------------------------------------------------------
+    """
     pass
+def func_code(f): pass
 
-
-def TOKEN(r):
-    pass
-
-
-Token = TOKEN
 
 lexer = Lexer()
 
-StringTypes = ()
+__version__ = '3.3'
 
 _is_identifier = None
 
-__version__ = '3.3'
+StringTypes = ()
 
 

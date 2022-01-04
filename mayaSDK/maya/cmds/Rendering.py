@@ -1,6 +1,6 @@
 def assignViewportFactories(q=1,e=1,mf="string",nt="string",tf="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/assignViewportFactories.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/assignViewportFactories.html
 
 
 
@@ -45,7 +45,7 @@ tf    : textureFactory  [string]
 
 def batchRender(f="string",mc="string",n="int",prc="string",rm="string",rco="string",si=1,st="string",um=1,us=1,v="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/batchRender.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/batchRender.html
 
 
 
@@ -135,7 +135,7 @@ v     : verbosity       [int]
 
 def binMembership(q=1,add="string",ex="string",ibn="name",ivn="string",lb=1,mke="string",nfc=1,rm="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/binMembership.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/binMembership.html
 
 
 
@@ -205,7 +205,7 @@ rm    : removeFromBin   [string]
 
 def callbacks(ac="script",cac=1,cc=1,dh=1,dc=1,ec=1,h="string",lc=1,o="string",rc="script"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/callbacks.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/callbacks.html
 
 
 
@@ -287,7 +287,7 @@ rc    : removeCallback  [script]
 
 def checkDefaultRenderGlobals(q=1,e=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/checkDefaultRenderGlobals.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/checkDefaultRenderGlobals.html
 
 
 
@@ -312,7 +312,7 @@ In query mode, return type is based on queried flag.
 
 def convertSolidTx(q=1,e=1,al=1,aa=1,bc="[int, int, int]",bm="string",cam="name",cr=1,ds=1,fil="string",fin="string",fts=1,f=1,fur=1,n="string",pf="string",rx="int",ry="int",rdm=1,sp=1,spr="[float, float, float, float]",sh=1,ubi=1,uvr="[float, float, float, float]",uv="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/convertSolidTx.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/convertSolidTx.html
 
 
 
@@ -478,7 +478,7 @@ uv    : uvSetName       [string]
 
 def convertTessellation(acm=1,cam="name"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/convertTessellation.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/convertTessellation.html
 
 
 
@@ -529,7 +529,7 @@ cam   : camera          [name]
 
 def displacementToPoly(q=1,e=1,fbb=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/displacementToPoly.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/displacementToPoly.html
 
 
 
@@ -564,7 +564,7 @@ fbb   : findBboxOnly    [boolean]
 
 def doBlur(c="string",l="float",o="float",s="float",m="float",r=1,v="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/doBlur.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/doBlur.html
 
 
 
@@ -631,7 +631,7 @@ v     : vectorFile      [string]
 
 def getRenderDependencies():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getRenderDependencies.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getRenderDependencies.html
 
 
 
@@ -655,7 +655,7 @@ string  Dependencies for argument image source
 
 def getRenderTasks(c="string",rl="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getRenderTasks.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getRenderTasks.html
 
 
 
@@ -702,7 +702,7 @@ rl    : renderLayer     [string]
 
 def glRender(q=1,e=1,abp="int",alphaSource="string",aam="string",ci=1,cc="[float, float, float]",coi=1,ce=1,cf=1,ds="string",es="float",ei=1,fii=1,fc="string",fe="int",fi="int",fs="int",fr=1,gr=1,id="string",imageName="string",imageSize="[int, int, float]",li=1,lm="string",ls=1,os=1,rf="string",rs="string",sh="float",sa="float",txd=1,ti=1,uab=1,vp="[int, int, float]",wdm=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/glRender.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/glRender.html
 
 
 
@@ -905,7 +905,7 @@ wdm   : writeDepthMap   [boolean]
 
 def glRenderEditor(q=1,e=1,ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",lck=1,lt="string",mlc="string",pnl="string",p="string",slc="string",sts=1,up=1,ulk=1,upd=1,ut="string",vcn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/glRenderEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/glRenderEditor.html
 
 
 
@@ -1033,7 +1033,7 @@ vcn   : viewCameraName  [boolean]
 
 def hwReflectionMap(q=1,e=1,bkn="string",bmn="string",cm=1,dm=1,en=1,ftn="string",ltn="string",rtn="string",smn="string",tpn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hwReflectionMap.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hwReflectionMap.html
 
 
 
@@ -1115,7 +1115,7 @@ tpn   : topTextureName  [string]
 
 def hwRender(q=1,ams=1,atc=1,cam="string",cf=1,cv=1,eaa="[uint, uint]",fnp=1,f="float",frs=1,h="uint",ifn=1,l="name",lrs=1,lql=1,nrv=1,nwf=1,pg=1,rhw=1,reg="[uint, uint, uint, uint]",rs=1,res="uint",w="uint",a=1,d=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hwRender.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hwRender.html
 
 
 
@@ -1265,7 +1265,7 @@ d     : writeDepth      [boolean]
 
 def hwRenderLoad():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hwRenderLoad.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hwRenderLoad.html
 
 
 
@@ -1286,7 +1286,7 @@ None
 
 def iprEngine(q=1,e=1,cp="string",dt="string",dig=1,mem=1,ex=1,ipr="string",mvf=1,obj="name",r="[int, int, int, int]",rel=1,rii=1,res=1,sli="string",spb=1,st=1,spt=1,un="[int, int]",u=1,udf=1,ulg=1,umb=1,up="string",usg=1,us=1,usm=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/iprEngine.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/iprEngine.html
 
 
 
@@ -1448,7 +1448,7 @@ ut    : useTemplate     [string]
 
 def layeredShaderPort(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,n="name",npm=1,p="string",pma=1,po=1,scc="string",stc="string",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/layeredShaderPort.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/layeredShaderPort.html
 
 
 
@@ -1619,7 +1619,7 @@ w     : width           [int]
 
 def layeredTexturePort(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,n="name",npm=1,p="string",pma=1,po=1,sac="string",sbc="string",scc="string",svc="string",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/layeredTexturePort.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/layeredTexturePort.html
 
 
 
@@ -1800,7 +1800,7 @@ w     : width           [int]
 
 def lsThroughFilter(it="string",na=1,rv=1,sl=1,so="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/lsThroughFilter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/lsThroughFilter.html
 
 
 
@@ -1853,7 +1853,7 @@ so    : sort            [string]
 
 def makebot(c=1,r="uint",i="string",nov=1,o="string",v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/makebot.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/makebot.html
 
 
 
@@ -1915,7 +1915,7 @@ v     : verbose         [boolean]
 
 def mayaHasRenderSetup(q=1,e=1,ecs=1,edt=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/mayaHasRenderSetup.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/mayaHasRenderSetup.html
 
 
 
@@ -1955,7 +1955,7 @@ edt   : enableDuringTests [boolean]
 
 def nodeIconButton(q=1,e=1,al="string",ann="string",bgc="[float, float, float]",c="script",dt="string",di="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fx=1,fy=1,fn="string",fpn=1,h="int",hlc="[float, float, float]",i="string",i1="string",i2="string",i3="string",iol="string",io=1,l="string",lo="int",lt="string",m=1,mh="uint",mw="uint",nbg=1,npm=1,olb="[float, float, float, float]",olc="[float, float, float]",p="string",pma=1,po=1,rot="float",sbm="string",st="string",ua=1,ut="string",ver="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nodeIconButton.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nodeIconButton.html
 
 
 
@@ -2227,7 +2227,7 @@ w     : width           [int]
 
 def nodePreset(atr="string",ctm="string",delete="[name, string]",ex="[name, string]",ivn="string",ls="name",ld="[name, string]",sv="[name, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nodePreset.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nodePreset.html
 
 
 
@@ -2300,7 +2300,7 @@ sv    : save            [[name, string]]
 
 def ogsRender(q=1,e=1,mst="string",cro="string",fpt="string",afp=1,amt=1,aro=1,cam="string",cf=1,cv=1,efp=1,ems=1,f="float",h="uint",l="name",nrv=1,w="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ogsRender.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ogsRender.html
 
 
 
@@ -2410,7 +2410,7 @@ w     : width           [uint]
 
 def preferredRenderer(q=1,f="string",mc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/preferredRenderer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/preferredRenderer.html
 
 
 
@@ -2452,7 +2452,7 @@ mc    : makeCurrent     [boolean]
 
 def prepareRender(q=1,e=1,dt="string",d="string",ior=1,iof=1,iol=1,irr=1,irf=1,irl=1,isu=1,lbl="string",lt=1,por="script",pof="script",pol="script",prr="script",prf="script",prl="script",rtr=1,sac=1,sui="script",stp=1,ts="string",tsi="script"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/prepareRender.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/prepareRender.html
 
 
 
@@ -2689,7 +2689,7 @@ tsi   : traversalSetInit [script]
 
 def projectionManip(q=1,fb=1,pt="int",st=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/projectionManip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/projectionManip.html
 
 
 
@@ -2734,7 +2734,7 @@ st    : switchType      [boolean]
 
 def rampColorPort(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,n="name",npm=1,p="string",pma=1,po=1,sc="string",si="string",sp="string",sbm="string",ut="string",vl=1,vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rampColorPort.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rampColorPort.html
 
 
 
@@ -2915,7 +2915,7 @@ w     : width           [int]
 
 def render(amt=1,b=1,kpi=1,l="string",ngl=1,nsh=1,rep=1,x="int",y="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/render.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/render.html
 
 
 
@@ -2990,7 +2990,7 @@ y     : yresolution     [int]
 
 def renderer(q=1,e=1,agn="string",agt="[string, string, string]",bro="string",bso="string",br="string",cbr="string",cir="string",cr="string",ex=1,gn=1,gtc=1,gtl=1,gtu=1,ipm="string",io="string",ips="string",ipr="string",irs="string",isr="string",lgc="string",log="string",mvl=1,mvp=1,mvs=1,ava=1,psi="string",pp="string",rfi="string",rd="string",rg="string",rm="string",ro="string",r="string",rr="string",rs="string",ui="string",res="string",brl="string",sbr="string",srl="string",sti="string",spi="string",scm=1,tb="string",unr=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderer.html
 
 
 
@@ -3247,7 +3247,7 @@ unr   : unregisterRenderer [boolean]
 
 def renderGlobalsNode(n="string",p="string",rq="string",rr="string",s=1,ss=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderGlobalsNode.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderGlobalsNode.html
 
 
 
@@ -3309,7 +3309,7 @@ ss    : skipSelect      [boolean]
 
 def renderInfo(q=1,e=1,cs=1,ch="float",chr="float",ds=1,es=1,ms="float",n="string",o=1,ss=1,un="int",uch=1,ucr=1,udl=1,ums=1,ut="int",vn="int",vt="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderInfo.html
 
 
 
@@ -3425,7 +3425,7 @@ vt    : vtype           [int]
 
 def renderManip(q=1,e=1,cam="[boolean, boolean, boolean, boolean, boolean]",lt="[boolean, boolean, boolean]",slt="[boolean, boolean, boolean, boolean, boolean, boolean, boolean]",st=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderManip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderManip.html
 
 
 
@@ -3475,7 +3475,7 @@ st    : state           [boolean]
 
 def renderPartition(q=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderPartition.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderPartition.html
 
 
 
@@ -3500,7 +3500,7 @@ In query mode, return type is based on queried flag.
 
 def renderQualityNode(n="string",p="string",s=1,ss=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderQualityNode.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderQualityNode.html
 
 
 
@@ -3552,7 +3552,7 @@ ss    : skipSelect      [boolean]
 
 def renderSettings(cam="string",cts="string",fin=1,fp=1,fpt=1,gin="string",ign=1,lin=1,lyr="string",lut=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderSettings.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderSettings.html
 
 
 
@@ -3630,7 +3630,7 @@ lut   : leaveUnmatchedTokens [boolean]
 
 def renderThumbnailUpdate(q=1,fu="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderThumbnailUpdate.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderThumbnailUpdate.html
 
 
 
@@ -3668,7 +3668,7 @@ fu    : forceUpdate     [string]
 
 def renderWindowEditor(q=1,e=1,ar=1,blm="int",cap="string",cc="[string, string, string, string]",cl="[int, int, float, float, float]",cme=1,com=1,cd="int",cif="string",ctl=1,crc="string",crg="string",dt="string",di="int",dvc="int",dst="string",dtg="string",dbf=1,da=1,en=1,ex=1,exp="float",f="string",fmc="string",fi=1,fr=1,ga="float",hlc="string",li="string",lck=1,mlc="string",mq="[float, float, float, float]",nim=1,nvi=1,ocm=1,pnl="string",p="string",pca="string",rs=1,ref=1,ra=1,ri=1,rr=1,rvi=1,si=1,sb="float",sg="float",sr="float",slc="string",srg="[int, int]",sbf=1,snp="[string, int, int]",snm=1,sts=1,s="int",sio="[string, string]",sm="string",tgl=1,up=1,ulk=1,upd=1,ut="string",vic="int",vtn="string",wi="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderWindowEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderWindowEditor.html
 
 
 
@@ -4023,7 +4023,7 @@ wi    : writeImage      [string]
 
 def resolutionNode(n="string",p="string",s=1,ss=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/resolutionNode.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/resolutionNode.html
 
 
 
@@ -4075,7 +4075,7 @@ ss    : skipSelect      [boolean]
 
 def sampleImage(f=1,r="[int, name]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sampleImage.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sampleImage.html
 
 
 
@@ -4118,7 +4118,7 @@ r     : resolution      [[int, name]]
 
 def setDefaultShadingGroup(q=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setDefaultShadingGroup.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setDefaultShadingGroup.html
 
 
 
@@ -4143,7 +4143,7 @@ In query mode, return type is based on queried flag.
 
 def shadingConnection(q=1,e=1,cs=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shadingConnection.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shadingConnection.html
 
 
 
@@ -4179,7 +4179,7 @@ cs    : connectionState [boolean]
 
 def shadingNetworkCompare(q=1,nam=1,val=1,delete=1,eq=1,n1=1,n2=1,up=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shadingNetworkCompare.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shadingNetworkCompare.html
 
 
 
@@ -4244,7 +4244,7 @@ up    : upstreamOnly    [boolean]
 
 def shadingNode(al=1,app=1,ar=1,asShader=1,at=1,au=1,icm=1,n="string",p="string",s=1,ss=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shadingNode.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shadingNode.html
 
 
 
@@ -4334,7 +4334,7 @@ ss    : skipSelect      [boolean]
 
 def showShadingGroupAttrEditor(q=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/showShadingGroupAttrEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/showShadingGroupAttrEditor.html
 
 
 
@@ -4358,7 +4358,7 @@ In query mode, return type is based on queried flag.
 
 def soloMaterial(q=1,a="string",l=1,n="string",us=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/soloMaterial.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/soloMaterial.html
 
 
 
@@ -4408,7 +4408,7 @@ us    : unsolo          [boolean]
 
 def surfaceSampler(cam="name",ff="string",fn="string",fs="float",ft="uint",fu=1,fv=1,imf=1,it=1,mh="uint",mm=1,mo="string",sp="string",mw="uint",msd="linear",max="linear",os="uint",sc="string",sm="uint",so="linear",sh=1,s="string",sus="string",ss="uint",t="string",tus="string",ugn=1,uv="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/surfaceSampler.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/surfaceSampler.html
 
 
 
@@ -4578,7 +4578,7 @@ uv    : uvSet           [string]
 
 def surfaceShaderList(q=1,e=1,add="name",rm="name"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/surfaceShaderList.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/surfaceShaderList.html
 
 
 
@@ -4618,7 +4618,7 @@ rm    : remove          [name]
 
 def swatchRefresh():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/swatchRefresh.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/swatchRefresh.html
 
 
 
@@ -4645,7 +4645,7 @@ succeded.
 
 def textureWindow(q=1,e=1,ast=1,axc="[float, float, float]",bfc="[float, float, float, float]",cpt="string",csn="int",cc="[string, string, string, string]",cc1="[float, float, float]",cc2="[float, float, float]",ccm="int",cd="int",cdt=1,cg1="[float, float, float]",cg2="[float, float, float]",cgo=1,ctc="[float, float, float]",ci=1,cme=1,ctl=1,dt="string",dax=1,dct=1,ddt=1,ddl=1,dgl=1,di="int",dih=1,dl=1,doh=1,dps=1,drh=1,dsm=1,dst="string",dtb=1,dsh=1,duh=1,dph=1,dta="float",dpo=1,d="int",dtg="string",dbf=1,da=1,dsr=1,ex=1,exp="float",f="string",fmc="string",frb=1,fa=1,fs=1,ffc="[float, float, float, float]",ga="float",glc="[float, float, float]",gnc="[float, float, float]",hlc="string",ibc="[float, float, float]",idm=1,id=1,imn=1,imageNumber="int",ip=1,imr=1,irv="float",imageSize=1,itr="[float, float, float, float]",iuf=1,internalFaces=1,lp="string",li="string",lck=1,mlc="string",mrs="int",mca="float",nim=1,nv=1,nuv=1,ni="int",nt="int",pnl="string",p="string",pv=1,rs=1,ref=1,rf=1,ra=1,ri=1,rds="string",r=1,si=1,sb="float",sg="float",sr="float",sif=1,srf=1,slc="string",suv="int",sbf=1,s="float",s3d=1,scs="int",sps=1,sp="float",sts=1,st="int",sdc="[float, float, float]",t3d=1,tbc="[float, float, float]",tbw="int",txn=1,tn="int",tlb=1,tlc="[float, float, float]",tgl=1,tge=1,tgg=1,up=1,ulk=1,upd=1,uf=1,ut="string",upr="[float, float, float, float]",uvs=1,vpi=1,vtn="string",wcc="[float, float, float, float]",woc="[float, float, float, float]",wi="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/textureWindow.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/textureWindow.html
 
 
 
@@ -5328,7 +5328,7 @@ wi    : writeImage      [string]
 
 def uvLink(q=1,b=1,iv=1,m=1,qo="name",t="name",uvs="name"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/uvLink.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/uvLink.html
 
 
 
@@ -5400,7 +5400,7 @@ uvs   : uvSet           [name]
 
 def vectorize(bv=1,bf="float",c="string",cfe=1,cf=1,ct="float",ce="string",dl="int",ec="[int, int, int]",ed=1,es="string",ew="float",ef="float",ff="string",fs="string",fv="int",fr="int",h="int",he=1,hl="int",hi=1,imageFormat="string",l="name",mea="float",oai=1,of="string",par="float",rd="int",rf=1,rl=1,ro="string",rv=1,scf=1,sh=1,sb=1,sf="float",sa="string",sc=1,w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/vectorize.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/vectorize.html
 
 
 
@@ -5624,7 +5624,7 @@ w     : width           [int]
 
 def camera(q=1,e=1,ar="float",cs="float",coi="linear",cp=1,dof=1,dfc=1,dfg=1,dfo=1,dfp=1,dgm=1,dr=1,dsa=1,dst=1,fs="float",fcp="linear",ffd="linear",ff="string",ffo="float",fro="string",frv="angle",fth="float",ftv="float",fl="float",fd="linear",hc="string",hfv="angle",hfa="float",hfo="float",hpn="float",hrp="float",hs="float",jc=1,lsr="float",lt=1,mb=1,n="string",ncp="linear",nfd="linear",o=1,ow="linear",ovr="float",pze=1,p="[linear, linear, linear]",pts="float",prs="float",rpz=1,rot="[angle, angle, angle]",se=1,so="float",soe=1,sa="angle",sc=1,hit="float",she=1,vfv="angle",vfa="float",vfo="float",vl=1,vpn="float",vrp="float",vs="float",wci="[linear, linear, linear]",wup="[linear, linear, linear]",zom="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/camera.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/camera.html
 
 
 
@@ -5979,7 +5979,7 @@ zom   : zoom            [float]
 
 def cameraSet(q=1,e=1,a=1,atl=1,cam="string",cd=1,da=1,d=1,ins=1,l="int",n="string",nl=1,os="string",o="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cameraSet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cameraSet.html
 
 
 
@@ -6086,7 +6086,7 @@ o     : order           [int]
 
 def cameraView(e=1,ab=1,an=1,typ="int",c="name",n="string",rb=1,sc=1,sv=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cameraView.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cameraView.html
 
 
 
@@ -6164,7 +6164,7 @@ sv    : setView         [boolean]
 
 def dolly(abs=1,d="linear",dtc=1,os="float",rel=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dolly.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dolly.html
 
 
 
@@ -6241,7 +6241,7 @@ rel   : relative        [boolean]
 
 def imagePlane(q=1,e=1,c="string",cn=1,d=1,df=1,fn="string",fd="int",h="float",iz="[int, int]",lt="string",mr=1,n="string",nt=1,nf="int",qt=1,sia=1,tc="int",tt=1,ts="int",tf=1,w="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/imagePlane.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/imagePlane.html
 
 
 
@@ -6376,7 +6376,7 @@ w     : width           [float]
 
 def listCameras(o=1,p=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/listCameras.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/listCameras.html
 
 
 
@@ -6417,7 +6417,7 @@ p     : perspective     [boolean]
 
 def lookThru(q=1,fc="float",nc="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/lookThru.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/lookThru.html
 
 
 
@@ -6462,7 +6462,7 @@ nc    : nearClip        [float]
 
 def orbit(ha="angle",pp="[linear, linear, linear]",ra="[angle, angle]",va="angle"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/orbit.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/orbit.html
 
 
 
@@ -6521,7 +6521,7 @@ va    : verticalAngle   [angle]
 
 def panZoom(abs=1,d="float",l="float",rel=1,r="float",u="float",z="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/panZoom.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/panZoom.html
 
 
 
@@ -6590,7 +6590,7 @@ z     : zoomRatio       [float]
 
 def perCameraVisibility(q=1,c="name",ex=1,hi=1,rm=1,ra=1,rc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/perCameraVisibility.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/perCameraVisibility.html
 
 
 
@@ -6656,7 +6656,7 @@ rc    : removeCamera    [boolean]
 
 def roll(abs=1,d="angle",rel=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/roll.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/roll.html
 
 
 
@@ -6716,7 +6716,7 @@ rel   : relative        [boolean]
 
 def stereoCameraView(q=1,e=1,acx=1,ace="string",acg="string",acl="string",aog="string",acr="string",ao=1,asg="string",ams=1,av=1,aob="string",addSelected=1,alo=1,bfc=1,bm="string",brz="[uint, uint]",cam="string",cn="string",cst="string",cs=1,ca=1,cpt="string",csn="int",ccm="string",cm=1,crz="[uint, uint]",ctl=1,cv=1,cov="string",d=1,dt="string",df=1,dim=1,da="string",dl="string",dm="string",dtx=1,dtg="string",dc=1,dy=1,ec="script",ex=1,f="string",fol=1,fl=1,fcl="[float, float, float, float]",fdn="float",fen="float",fmd="string",fsc="string",fst="float",fg=1,fo=1,fmc="string",gr=1,hs=1,ha=1,hud=1,h=1,hlc="string",hu=1,ipz=1,ikh=1,imp=1,i=1,ibc=1,dis=1,isFiltered=1,jx=1,j=1,lcm="string",lt=1,lw="float",lc=1,lck=1,lql=1,mlc="string",m=1,mct="float",mhl=1,mp="string",mt=1,ncl=1,npa=1,nr=1,nud=1,nc=1,ns=1,obf="script",ofl="script",ofu="script",ofs=1,obu="script",ocl=1,pnl="string",p="string",pv=1,pl=1,po="[string, boolean]",ps=1,pm=1,qpo="string",rs=1,rdn=1,rls=1,rlu=1,rnm="string",rol=1,rou=1,rom="string",rcc=1,rr="string",rcm="string",srf="string",slc="string",sel=1,ss=1,sml="int",sdw=1,soc=1,sot="float",swf=1,st=1,sts=1,sdm=1,str=1,sds=1,se=1,ta=1,tcp=1,td="string",tem=1,th=1,tms="int",tmu=1,ts="int",tx=1,tis=1,tal="string",tsl=1,up=1,ulk=1,ucm=1,upd=1,ubr=1,uci=1,ucb=1,udm=1,ui=1,ip=1,urr=1,ut="string",un="string",vc="[float, float, float, float]",vo=1,vs=1,vt=1,w=1,wbs=1,wos=1,xr=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/stereoCameraView.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/stereoCameraView.html
 
 
 
@@ -7561,7 +7561,7 @@ xr    : xray            [boolean]
 
 def stereoRigManager(q=1,lr=1,rd="string",add="[string, string, string]",csf="[string, string]",cp="[string, string]",dr="string",d="string",l="[string, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/stereoRigManager.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/stereoRigManager.html
 
 
 
@@ -7631,7 +7631,7 @@ l     : language        [[string, string]]
 
 def track(d="linear",l="linear",r="linear",u="linear",up="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/track.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/track.html
 
 
 
@@ -7692,7 +7692,7 @@ up    : upDistance02    [linear]
 
 def tumble(aa="angle",ea="angle",lt="int",pp="[linear, linear, linear]",ra="[angle, angle]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/tumble.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/tumble.html
 
 
 
@@ -7754,7 +7754,7 @@ ra    : rotationAngles  [[angle, angle]]
 
 def viewCamera(m="name",s=1,t=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/viewCamera.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/viewCamera.html
 
 
 
@@ -7803,7 +7803,7 @@ t     : topView         [boolean]
 
 def viewClipPlane(q=1,acp=1,fcp="linear",ncp="linear",so=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/viewClipPlane.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/viewClipPlane.html
 
 
 
@@ -7856,7 +7856,7 @@ so    : surfacesOnly    [boolean]
 
 def viewFit(all=1,an=1,c=1,f="float",ns="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/viewFit.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/viewFit.html
 
 
 
@@ -7919,7 +7919,7 @@ ns    : namespace       [string]
 
 def viewHeadOn():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/viewHeadOn.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/viewHeadOn.html
 
 
 
@@ -7942,7 +7942,7 @@ None
 
 def viewLookAt(pos="[linear, linear, linear]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/viewLookAt.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/viewLookAt.html
 
 
 
@@ -7977,7 +7977,7 @@ pos   : position        [[linear, linear, linear]]
 
 def viewPlace(an=1,eye="[linear, linear, linear]",fov="angle",la="[linear, linear, linear]",o=1,p=1,up="[linear, linear, linear]",vd="[linear, linear, linear]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/viewPlace.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/viewPlace.html
 
 
 
@@ -8060,7 +8060,7 @@ vd    : viewDirection   [[linear, linear, linear]]
 
 def viewSet(q=1,an=1,b=1,bo=1,fit=1,ff="float",f=1,h=1,krs=1,ls=1,ns="string",nv=1,p=1,pv=1,rs=1,s=1,t=1,vnx=1,vny=1,vnz=1,vx=1,vy=1,vz=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/viewSet.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/viewSet.html
 
 
 
@@ -8206,7 +8206,7 @@ vz    : viewZ           [boolean]
 
 def convertIffToPsd(q=1,ifn="string",pfn="string",xr="int",yr="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/convertIffToPsd.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/convertIffToPsd.html
 
 
 
@@ -8256,7 +8256,7 @@ yr    : yResolution     [int]
 
 def createLayeredPsdFile(ifn="[string, string, string]",psf="string",xr="uint",yr="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/createLayeredPsdFile.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/createLayeredPsdFile.html
 
 
 
@@ -8304,7 +8304,7 @@ yr    : yResolution     [uint]
 
 def createRenderLayer(empty=1,g=1,mc=1,n="string",nr=1,num="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/createRenderLayer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/createRenderLayer.html
 
 
 
@@ -8367,7 +8367,7 @@ num   : number          [int]
 
 def editRenderLayerAdjustment(q=1,alg=1,lyr="name",nlg=1,r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/editRenderLayerAdjustment.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/editRenderLayerAdjustment.html
 
 
 
@@ -8420,7 +8420,7 @@ r     : remove          [boolean]
 
 def editRenderLayerGlobals(q=1,bi="int",crl="name",eaa=1,mt="int",uc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/editRenderLayerGlobals.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/editRenderLayerGlobals.html
 
 
 
@@ -8480,7 +8480,7 @@ uc    : useCurrent      [boolean]
 
 def editRenderLayerMembers(q=1,fn=1,nr=1,r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/editRenderLayerMembers.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/editRenderLayerMembers.html
 
 
 
@@ -8528,7 +8528,7 @@ r     : remove          [boolean]
 
 def frameBufferName(a=1,c="string",l="string",p="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/frameBufferName.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/frameBufferName.html
 
 
 
@@ -8579,7 +8579,7 @@ p     : renderPass      [string]
 
 def psdChannelOutliner(q=1,e=1,ach="[string, string]",all=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dcc="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,ni=1,npm=1,p="string",pma=1,po=1,ppa="string",ra=1,rc="string",sel="string",sc="string",si=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/psdChannelOutliner.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/psdChannelOutliner.html
 
 
 
@@ -8785,7 +8785,7 @@ w     : width           [int]
 
 def psdEditTextureFile(adc="string",acc="[string, float, float, float]",aci="[string, string]",deleteChannel="string",psf="string",ssi="string",uvt=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/psdEditTextureFile.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/psdEditTextureFile.html
 
 
 
@@ -8849,7 +8849,7 @@ uvt   : uvSnapPostionTop [boolean]
 
 def psdExport(q=1,aci="int",bpc="int",els=1,format="string",lyn="string",lsn="string",ofn="string",pma=1,ifn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/psdExport.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/psdExport.html
 
 
 
@@ -8926,7 +8926,7 @@ ifn   : psdFileName     [string]
 
 def psdTextureFile(chc="[string, uint, uint, uint, uint]",chs="[string, uint, boolean]",ifn="[string, string, uint]",psf="string",ssi="string",uvt=1,xr="uint",yr="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/psdTextureFile.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/psdTextureFile.html
 
 
 
@@ -8995,7 +8995,7 @@ yr    : yResolution     [uint]
 
 def renderLayerPostProcess(q=1,ki=1,sn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderLayerPostProcess.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderLayerPostProcess.html
 
 
 
@@ -9036,7 +9036,7 @@ sn    : sceneName       [string]
 
 def renderPassRegistry(ch="int",ips=1,pi="string",pn=1,r="string",scc=1,sdt=1,ps=1,spn=1,srp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/renderPassRegistry.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/renderPassRegistry.html
 
 
 
@@ -9114,7 +9114,7 @@ srp   : supportedRenderPasses [boolean]
 
 def setRenderPassType(d=1,n="int",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setRenderPassType.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setRenderPassType.html
 
 
 
@@ -9163,7 +9163,7 @@ t     : type            [string]
 
 def ambientLight(q=1,e=1,ambientShade="float",drs="linear",exc=1,i="float",n="string",pos="[linear, linear, linear]",rgb="[float, float, float]",rot="[angle, angle, angle]",sc="[float, float, float]",sd="float",sh="int",ss=1,rs=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ambientLight.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ambientLight.html
 
 
 
@@ -9280,7 +9280,7 @@ rs    : useRayTraceShadows [boolean]
 
 def defaultLightListCheckBox(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",m=1,nbg=1,npm=1,p="string",pma=1,po=1,sg="name",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/defaultLightListCheckBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/defaultLightListCheckBox.html
 
 
 
@@ -9446,7 +9446,7 @@ w     : width           [int]
 
 def directionalLight(q=1,e=1,d="int",drs="linear",exc=1,i="float",n="string",pos="[linear, linear, linear]",rgb="[float, float, float]",rot="[angle, angle, angle]",sc="[float, float, float]",sd="float",sh="int",ss=1,rs=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/directionalLight.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/directionalLight.html
 
 
 
@@ -9565,7 +9565,7 @@ rs    : useRayTraceShadows [boolean]
 
 def exclusiveLightCheckBox(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,l="string",lt="name",m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/exclusiveLightCheckBox.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/exclusiveLightCheckBox.html
 
 
 
@@ -9733,7 +9733,7 @@ w     : width           [int]
 
 def lightlink(q=1,b=1,h=1,l="name",m=1,o="name",set=1,shd=1,shp=1,t=1,ual=1,uao=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/lightlink.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/lightlink.html
 
 
 
@@ -9837,7 +9837,7 @@ uao   : useActiveObjects [boolean]
 
 def lightList(q=1,e=1,add="name",rm="name"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/lightList.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/lightList.html
 
 
 
@@ -9878,7 +9878,7 @@ rm    : remove          [name]
 
 def pointLight(q=1,e=1,d="int",drs="linear",exc=1,i="float",n="string",pos="[linear, linear, linear]",rgb="[float, float, float]",rot="[angle, angle, angle]",sc="[float, float, float]",sd="float",sh="int",ss=1,rs=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pointLight.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pointLight.html
 
 
 
@@ -9974,7 +9974,7 @@ rs    : useRayTraceShadows [boolean]
 
 def spotLight(q=1,e=1,bd=1,bbd="angle",ca="angle",d="int",drs="linear",do="float",exc=1,i="float",lbd="angle",n="string",p="angle",pos="[linear, linear, linear]",rgb="[float, float, float]",rbd="angle",rot="[angle, angle, angle]",sc="[float, float, float]",sd="float",sh="int",ss=1,tbd="angle",rs=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/spotLight.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/spotLight.html
 
 
 
@@ -10126,7 +10126,7 @@ rs    : useRayTraceShadows [boolean]
 
 def spotLightPreviewPort(q=1,e=1,ann="string",bgc="[float, float, float]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sl="name",sbm="string",ut="string",vis=1,vcc="script",w="int",wh="[int, int]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/spotLightPreviewPort.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/spotLightPreviewPort.html
 
 
 

@@ -1,63 +1,32 @@
 from pymel.util.arguments import isIterable
-from pymel.util.arguments import isMapping
 from pymel.core.language import isValidMelType
+from pymel.util.arguments import isMapping
 from pymel.core.language import getMelType
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 import pymel.api.plugins as plugins
 
 class WrapperCommand(plugins.Command):
-    def parseCommandArgs(self, argData):
-        pass
-    
-    
+    def parseCommandArgs(self, argData): pass
     def parseFlagArgs(self, argData):
         """
         cycle through known flags looking for any that have been set.
         
         :rtype: a list of (flagLongName, flagArgList) tuples
         """
-    
         pass
-    
-    
     def setResult(self, result):
         """
         convert to a valid result type
         """
-    
         pass
-    
-    
-    def createSyntax(cls):
-        pass
+    @classmethod
+    def createSyntax(cls): pass
 
 
-
-def _shortnameByCaps(name):
-    """
-    uses hungarian notation (aka camelCaps) to generate a shortname, with a maximum of 3 letters
-        ex.
-    
-            myProc --> mp
-            fooBar --> fb
-            superCrazyLongProc --> scl
-    """
-
-    pass
-
-
-def _nonUniqueName(longname, shortname, shortNames, operation):
-    pass
-
-
-def _getArgInfo(obj, allowExtraKwargs='True', maxVarArgs='10', filter='None'):
-    """
-    Returns a dict giving info about the arugments for the function/property
-    
-    If obj is None, will return the 'defaults'.
-    """
-
-    pass
 
 
 def py2melCmd(pyObj, commandName='None', register='True', includeFlags='None', excludeFlags='[]', includeFlagArgs='None', excludeFlagArgs='{}', nonUniqueName="'warn'", invalidName="'warn'"):
@@ -138,57 +107,25 @@ def py2melCmd(pyObj, commandName='None', register='True', includeFlags='None', e
     invalidName: 'force', 'warn', 'skip', or 'error'
         what to do if a flag name is invalid
     """
-
     pass
-
-
+def _shortnameByConvention(name):
+    """
+    chooses between byUnderscores and ByCaps
+    """
+    pass
+def _invalidName(commandName, longname, operation): pass
+def _getArgInfo(obj, allowExtraKwargs='True', maxVarArgs='10', filter='None'):
+    """
+    Returns a dict giving info about the arugments for the function/property
+    
+    If obj is None, will return the 'defaults'.
+    """
+    pass
 def _getShortNames(objects, nonUniqueName):
     """
     uses several different methods to generate a shortname flag from the long name
     """
-
     pass
-
-
-def _shortnameByDoc(method):
-    """
-    a shortname can be explicitly set by adding the keyword shortname followed by a colon followed by the shortname
-    
-            ex.
-    
-            class foo():
-                def bar():
-                    'shortname: b'
-                    # do some things
-                    return
-    """
-
-    pass
-
-
-def getMelArgs(function, exactMelType='True'):
-    """
-    Inspect the arguments of a python function and return the cloesst
-    compatible MEL arguments.
-    
-    Returns
-    -------
-    ``((argName, melType ), {argName : default}, {argName : description})``
-    
-    Parameters
-    ----------
-    function : callable or str
-        This can be a callable python object or the full, dotted path to the
-        callable object as a string.
-    """
-
-    pass
-
-
-def _invalidName(commandName, longname, operation):
-    pass
-
-
 def py2melProc(function, returnType='None', procName='None', evaluateInputs='True', argTypes='None'):
     """
     This is a work in progress.  It generates and sources a mel procedure which wraps the passed
@@ -239,37 +176,61 @@ def py2melProc(function, returnType='None', procName='None', evaluateInputs='Tru
     
         the string "[1,2,3]" will be converted to a python list [1,2,3] before it is executed by the python function myFunc
     """
-
     pass
-
-
-def _shortnameByConvention(name):
+def _shortnameByDoc(method):
     """
-    chooses between byUnderscores and ByCaps
+    a shortname can be explicitly set by adding the keyword shortname followed by a colon followed by the shortname
+    
+            ex.
+    
+            class foo():
+                def bar():
+                    'shortname: b'
+                    # do some things
+                    return
     """
-
     pass
-
-
-def _getFunction(function):
+def getMelArgs(function, exactMelType='True'):
+    """
+    Inspect the arguments of a python function and return the cloesst
+    compatible MEL arguments.
+    
+    Returns
+    -------
+    ``((argName, melType ), {argName : default}, {argName : description})``
+    
+    Parameters
+    ----------
+    function : callable or str
+        This can be a callable python object or the full, dotted path to the
+        callable object as a string.
+    """
     pass
-
-
+def _shortnameByCaps(name):
+    """
+    uses hungarian notation (aka camelCaps) to generate a shortname, with a maximum of 3 letters
+        ex.
+    
+            myProc --> mp
+            fooBar --> fb
+            superCrazyLongProc --> scl
+    """
+    pass
+def _getFunction(function): pass
+def _nonUniqueName(longname, shortname, shortNames, operation): pass
 def _shortnameByUnderscores(name):
     """
     for python methods that use underscores instead of camelCaps, with a maximum of 3 letters
     """
-
     pass
 
 
+MELTYPES = []
+
+MAX_FLAG_ARGS = 6
 
 MAX_VAR_ARGS = 10
 
-MELTYPES = []
-
 _functionStore = {}
-
-MAX_FLAG_ARGS = 6
 
 

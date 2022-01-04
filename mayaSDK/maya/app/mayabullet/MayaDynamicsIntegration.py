@@ -3,48 +3,54 @@ MayaDynamicsIntegration - integration with the user interface for Maya's
                           built-in Dynamics such as supporting Maya's fields
 """
 
+
 from collections import defaultdict
 
-def deleteConnections(bullet_shapes, fields):
-    """
-    Delete all of the connections between the given fields and bullet shapes
-    """
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def collectBulletObjects(objects):
+    """
+    Take the list of objects and find all Bullet shapes associated with them.
+    
+    In this case we are interested in shapes that can be affected by fields.
+    """
     pass
-
-
-def addDynamicConnectHook():
-    pass
-
-
-def makeConnections(bullet_shapes, fields):
-    """
-    Make all of the required connections
-    """
-
-    pass
-
-
-def removeDynamicConnectHook():
-    pass
-
-
-def disconnectFieldFromShape(field, shape):
-    """
-    Disconnect the given field from the given bullet shape
-    """
-
-    pass
-
-
 def solverForShape(shape):
     """
     Get the solver for the given bullet shape
     """
-
     pass
-
-
+def deleteConnections(bullet_shapes, fields):
+    """
+    Delete all of the connections between the given fields and bullet shapes
+    """
+    pass
+def addDynamicConnectHook(): pass
+def removeDynamicConnectHook(): pass
+def disconnectFieldFromShape(field, shape):
+    """
+    Disconnect the given field from the given bullet shape
+    """
+    pass
+def makeConnections(bullet_shapes, fields):
+    """
+    Make all of the required connections
+    """
+    pass
+def connectDynamicCB(fields, emitters, collisionObjects, objects, delete):
+    """
+    This is the callback that gets called when the 'connectDynamic' command
+    is called. This callback looks for bullet shapes in the objects and 
+    takes over if it finds some.
+    """
+    pass
+def connectFieldToShape(field, shape):
+    """
+    Connect the given field to the given bullet shape
+    """
+    pass
 def findExisitingConnections(objects):
     """
     In the case where we connect a field to a solver, we need to check if that
@@ -60,51 +66,21 @@ def findExisitingConnections(objects):
     
     We build these lists because, for large operations, it is more efficient
     """
-
     pass
 
-
-def collectBulletObjects(objects):
-    """
-    Take the list of objects and find all Bullet shapes associated with them.
-    
-    In this case we are interested in shapes that can be affected by fields.
-    """
-
-    pass
-
-
-def connectDynamicCB(fields, emitters, collisionObjects, objects, delete):
-    """
-    This is the callback that gets called when the 'connectDynamic' command
-    is called. This callback looks for bullet shapes in the objects and 
-    takes over if it finds some.
-    """
-
-    pass
-
-
-def connectFieldToShape(field, shape):
-    """
-    Connect the given field to the given bullet shape
-    """
-
-    pass
-
-
-
-aVersion = []
 
 strVersion = []
 
+aVersion = []
+
 kBulletSoftBodyShapeType = 'bulletSoftBodyShape'
 
-kBulletRigidBodyShapeType = 'bulletRigidBodyShape'
+kBulletSolverShapeType = 'bulletSolverShape'
 
 connectDynamicCB_ID = None
 
-gMayaVersion = 2015
+gMayaVersion = 2019.0
 
-kBulletSolverShapeType = 'bulletSolverShape'
+kBulletRigidBodyShapeType = 'bulletRigidBodyShape'
 
 

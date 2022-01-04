@@ -74,7 +74,51 @@ Changes in %s' % modeNames[result_type]
         print 'Change count for %s = %d' % (modeNames[resultType], len(result))
 """
 
+
+from maya.debug.correctnessUtils import multichain_nodes
 from maya.debug.correctnessUtils import run_correctness_test
+from maya.debug.EvaluatorManager import EvaluatorManager
+from maya.plugin.evaluator.CacheEvaluatorManager import CacheEvaluatorManager
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class EMCorrectnessContext(object):
+    """
+    This class shuts off the cache evaluator and the HIK evaluator in order to
+    help minimize the sources of correctness errors.
+    """
+    
+    
+    
+    def __enter__(self):
+        """
+        Enter the section controlled by the context
+        """
+        pass
+    def __exit__(self, exit_type, value, traceback):
+        """
+        Exit the section controlled by the context, raising an exception if any restore failed
+        """
+        pass
+    def __init__(self):
+        """
+        Create the evaluator managers and remember the desired configuration values
+        """
+        pass
+    @staticmethod
+    def should_pull_values():
+        """
+        Ask if the values in this context are good as-is or if they have to be pulled to be valid
+        :return: True if the evaluation manager is not active or it is in DG mode
+        """
+        pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
 
 class EMCorrectnessMode(object):
     """
@@ -84,24 +128,37 @@ class EMCorrectnessMode(object):
     
     
     def __init__(self, mode):
+        """
+        Remember the mode for these tests
+        """
         pass
-    
-    
-    def getContext(self):
+    def em_mode(self):
+        """
+        Get the name of the EM mode used for the tests
+        """
         pass
-    
-    
-    def getEmMode(self):
+    def relevant_nodes(self, potential_nodes):
+        """
+        :param potential_nodes: Set of nodes that could be evaluated/compared in the current mode
+        :return: Subset of nodes relevant to the defined evaluation mode
+        """
         pass
-    
-    
-    def getTitle(self):
+    def title(self):
+        """
+        Get the title of this test mode
+        """
         pass
-    
-    
+    @staticmethod
+    def context():
+        """
+        Get the context in which the tests are to run
+        """
+        pass
     __dict__ = None
     
+    
     __weakref__ = None
+
 
 
 
@@ -125,9 +182,7 @@ def emCorrectnessTest(fileName='None', resultsPath='None', verbose='False', mode
     
     Returns the output of run_correctness_test().
     """
-
     pass
-
 
 
 CORRECTNESS_NO_SETUP = 0

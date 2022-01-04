@@ -21,82 +21,43 @@ The enabled output boolean value is the logical and of the self enabled
 attribute and the parent enabled attribute.
 """
 
-def isPulling():
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def computeEnabled(node, dataBlock):
+    """
+    Returns the enabled state based on the basic conditions (selfEnabled and parentEnabled).
+    """
     pass
-
-
+def setEnabledOutput(node, dataBlock, value): pass
+def createBoolOutputAttribute(longName, shortName, defaultValue):
+    """
+    Helper method to create an output (readable) boolean attribute
+    """
+    pass
+def createBoolAttribute(longName, shortName, defaultValue):
+    """
+    Helper method to create an input (writable) boolean attribute
+    """
+    pass
 def createIntAttribute(longName, shortName, defaultValue):
     """
     Helper method to create an input (writable) int attribute
     """
-
     pass
-
-
-def compute(node, plug, dataBlock):
-    """
-    Computes the enabled plug with the basic conditions (selfEnabled and parentEnabled).
-    Do not use if 'enabled' depends on other attributes.
-    """
-
-    pass
-
-
-def initializeAttributes(cls):
-    pass
-
-
-def addChangeCallbacks(node):
-    """
-    Add callbacks to indicate the argument node's enabled attribute changed.
-    
-    A list of callback IDs is returned.
-    """
-
-    pass
-
-
-def setPulling(value):
-    pass
-
-
 def createHiddenIntAttribute(longName, shortName):
     """
     Helper method to create a hidden, readable, non-keyable, and
     writable integer attribute.
     """
-
     pass
-
-
-def setEnabledOutput(node, dataBlock, value):
+def compute(node, plug, dataBlock):
+    """
+    Computes the enabled plug with the basic conditions (selfEnabled and parentEnabled).
+    Do not use if 'enabled' depends on other attributes.
+    """
     pass
-
-
-def createBoolOutputAttribute(longName, shortName, defaultValue):
-    """
-    Helper method to create an output (readable) boolean attribute
-    """
-
-    pass
-
-
-def createBoolAttribute(longName, shortName, defaultValue):
-    """
-    Helper method to create an input (writable) boolean attribute
-    """
-
-    pass
-
-
-def computeParentEnabled(node, dataBlock):
-    """
-    Compute the parent enabled input while avoiding DG cycle check warnings.
-    """
-
-    pass
-
-
 def createNumIsolatedChildrenAttribute():
     """
     Helper method to create the number of isolated children attribute.
@@ -105,19 +66,6 @@ def createNumIsolatedChildrenAttribute():
     of isolate selected children in the subtree of the render layer
     or collection.
     """
-
     pass
-
-
-def computeEnabled(node, dataBlock):
-    """
-    Returns the enabled state based on the basic conditions (selfEnabled and parentEnabled).
-    """
-
-    pass
-
-
-
-_pulling = False
-
+def initializeAttributes(cls): pass
 

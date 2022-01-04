@@ -1,3 +1,6 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class SelectionSet(object):
     """
     This class defines DG behavior related to the 'selection set'.
@@ -8,13 +11,12 @@ class SelectionSet(object):
     
     
     
-    def __init__(self, name, tobeCreated):
-        pass
-    
-    
+    def __init__(self, name, tobeCreated): pass
     __dict__ = None
     
+    
     __weakref__ = None
+
 
 
 
@@ -22,24 +24,15 @@ def get(name):
     """
     Get a specific Selection Set
     """
-
     pass
-
-
-def create(name):
-    """
-    Create a specific Selection Set
-    """
-
-    pass
-
-
 def getAll(selectedNodesOnly, parentNameFiler):
     """
     Get the list of all Selection Sets
     """
-
     pass
-
-
+def create(name):
+    """
+    Create a specific Selection Set
+    """
+    pass
 

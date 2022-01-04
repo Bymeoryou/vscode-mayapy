@@ -7,74 +7,9 @@
 # or hard copy form.
 """
 
-class _MMessage(object):
-    """
-    Base class for message callbacks.
-    """
-    
-    
-    
-    def currentCallbackId(*args, **kwargs):
-        """
-        currentCallbackId() -> id
-        
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    
-        pass
-    
-    
-    def nodeCallbacks(*args, **kwargs):
-        """
-        nodeCallbacks(node) -> ids
-        
-        Returns a list of callback IDs registered to a given node.
-        
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    
-        pass
-    
-    
-    def removeCallback(*args, **kwargs):
-        """
-        removeCallback(id) -> None
-        
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-        
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    
-        pass
-    
-    
-    def removeCallbacks(*args, **kwargs):
-        """
-        removeCallbacks(ids) -> None
-        
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-        
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-    
-        pass
-    
-    
-    kDefaultAction = 0
-    
-    
-    kDoAction = 2
-    
-    
-    kDoNotDoAction = 1
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class MAnimCurveClipboard(object):
     """
@@ -90,30 +25,21 @@ class MAnimCurveClipboard(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def clear(*args, **kwargs):
         """
         clear() -> self
         
         Clears the clipboard.
         """
-    
         pass
-    
-    
     def clipboardItems(*args, **kwargs):
         """
         clipboardItems() -> MAnimCurveClipboardItemArray
         
         Returns the clipboard items.
         """
-    
         pass
-    
-    
     def set(*args, **kwargs):
         """
         set( clipboard ) -> self
@@ -123,24 +49,216 @@ class MAnimCurveClipboard(object):
         Sets the content of the clipboard.
         'items' may be either an MAnimClipboardItemArray or a sequence of MAnimClipboardItems.
         """
-    
         pass
+    __new__ = None
     
     
     endTime = None
     
+    
     endUnitlessInput = None
+    
     
     isEmpty = None
     
+    
     startTime = None
+    
     
     startUnitlessInput = None
     
+    
+    theAPIClipboard = None
+
+
+class _MMessage(object):
+    """
+    Base class for message callbacks.
+    """
+    
+    
+    
+    @staticmethod
+    def currentCallbackId(*args, **kwargs):
+        """
+        currentCallbackId() -> id
+        
+        Returns the callback ID of the currently executing callback. If called
+        outside of a callback, an invalid MCallbackId and failed status will
+        be returned.
+        """
+        pass
+    @staticmethod
+    def nodeCallbacks(*args, **kwargs):
+        """
+        nodeCallbacks(node) -> ids
+        
+        Returns a list of callback IDs registered to a given node.
+        
+         * node (MObject) - Node to query for callbacks.
+         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
+        """
+        pass
+    @staticmethod
+    def removeCallback(*args, **kwargs):
+        """
+        removeCallback(id) -> None
+        
+        Removes the specified callback from Maya.
+        This method must be called for all callbacks registered by a
+        plug-in before that plug-in is unloaded.
+        
+         * id (MCallbackId) - identifier of callback to be removed
+        """
+        pass
+    @staticmethod
+    def removeCallbacks(*args, **kwargs):
+        """
+        removeCallbacks(ids) -> None
+        
+        Removes all of the specified callbacks from Maya.
+        This method must be called for all callbacks registered by a
+        plug-in before that plug-in is unloaded.
+        
+         * idList (MCallbackIdArray) - list of callbacks to be removed.
+        """
+        pass
+    kDefaultAction = 0
+    
+    
+    kDoAction = 2
+    
+    
+    kDoNotDoAction = 1
+
+
+class MAnimCurveClipboardItemArray(object):
+    """
+    Array of MAnimCurveClipboardItem values.
+    """
+    
+    
+    
+    def __add__(*args, **kwargs):
+        """
+        x.__add__(y) <==> x+y
+        """
+        pass
+    def __contains__(*args, **kwargs):
+        """
+        x.__contains__(y) <==> y in x
+        """
+        pass
+    def __delitem__(*args, **kwargs):
+        """
+        x.__delitem__(y) <==> del x[y]
+        """
+        pass
+    def __delslice__(*args, **kwargs):
+        """
+        x.__delslice__(i, j) <==> del x[i:j]
+        
+        Use of negative indices is not supported.
+        """
+        pass
+    def __getitem__(*args, **kwargs):
+        """
+        x.__getitem__(y) <==> x[y]
+        """
+        pass
+    def __getslice__(*args, **kwargs):
+        """
+        x.__getslice__(i, j) <==> x[i:j]
+        
+        Use of negative indices is not supported.
+        """
+        pass
+    def __iadd__(*args, **kwargs):
+        """
+        x.__iadd__(y) <==> x+=y
+        """
+        pass
+    def __imul__(*args, **kwargs):
+        """
+        x.__imul__(y) <==> x*=y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __len__(*args, **kwargs):
+        """
+        x.__len__() <==> len(x)
+        """
+        pass
+    def __mul__(*args, **kwargs):
+        """
+        x.__mul__(n) <==> x*n
+        """
+        pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def __rmul__(*args, **kwargs):
+        """
+        x.__rmul__(n) <==> n*x
+        """
+        pass
+    def __setitem__(*args, **kwargs):
+        """
+        x.__setitem__(i, y) <==> x[i]=y
+        """
+        pass
+    def __setslice__(*args, **kwargs):
+        """
+        x.__setslice__(i, j, y) <==> x[i:j]=y
+        
+        Use  of negative indices is not supported.
+        """
+        pass
+    def __str__(*args, **kwargs):
+        """
+        x.__str__() <==> str(x)
+        """
+        pass
+    def append(*args, **kwargs):
+        """
+        Add a value to the end of the array.
+        """
+        pass
+    def clear(*args, **kwargs):
+        """
+        Remove all elements from the array.
+        """
+        pass
+    def copy(*args, **kwargs):
+        """
+        Replace the array contents with that of another or of a compatible Python sequence.
+        """
+        pass
+    def insert(*args, **kwargs):
+        """
+        Insert a new value into the array at the given index.
+        """
+        pass
+    def remove(*args, **kwargs):
+        """
+        Remove an element from the array.
+        """
+        pass
+    def setLength(*args, **kwargs):
+        """
+        Grow or shrink the array to contain a specific number of elements.
+        """
+        pass
     __new__ = None
     
     
-    theAPIClipboard = None
+    sizeIncrement = None
 
 
 class MAnimControl(object):
@@ -150,136 +268,111 @@ class MAnimControl(object):
     
     
     
+    @staticmethod
     def animationEndTime(*args, **kwargs):
         """
         animationEndTime() -> MTime
         
         Return an MTime specifying the last frame of the animation, as specified by the Maya user in the Range Slider UI.
         """
-    
         pass
-    
-    
+    @staticmethod
     def animationStartTime(*args, **kwargs):
         """
         animationStartTime() -> MTime
         
         Return an MTime specifying the first frame of the animation, as specified by the Maya user in the Range Slider UI.
         """
-    
         pass
-    
-    
+    @staticmethod
     def autoKeyMode(*args, **kwargs):
         """
         autoKeyMode() -> bool
         
         Return the autoKeyMode.
         """
-    
         pass
-    
-    
+    @staticmethod
     def currentTime(*args, **kwargs):
         """
         currentTime() -> MTime
         
         Return an MTime instance containing the current animation frame.
         """
-    
         pass
-    
-    
+    @staticmethod
     def globalInTangentType(*args, **kwargs):
         """
         globalInTangentType() -> int
         
         Return the current global in tangent type.
         """
-    
         pass
-    
-    
+    @staticmethod
     def globalOutTangentType(*args, **kwargs):
         """
         globalOutTangentType() -> int
         
         Return the current global out tangent type.
         """
-    
         pass
-    
-    
+    @staticmethod
     def isPlaying(*args, **kwargs):
         """
         isPlaying() -> bool
         
         Return a value indicating whether Maya is currently playing the animation
         """
-    
         pass
-    
-    
+    @staticmethod
     def isScrubbing(*args, **kwargs):
         """
         isScrubbing() -> bool
         
         Return a value indicating whether interactive scrubbing is occuring while Maya is not currently playing an animation.
         """
-    
         pass
-    
-    
+    @staticmethod
     def maxTime(*args, **kwargs):
         """
         maxTime() -> MTime
         
         Return an MTime specifying the last frame of the current playback time range.
         """
-    
         pass
-    
-    
+    @staticmethod
     def minTime(*args, **kwargs):
         """
         minTime() -> MTime
         
         Return an MTime specifying the first frame of the current playback time range.
         """
-    
         pass
-    
-    
+    @staticmethod
     def playBackward(*args, **kwargs):
         """
         playBackward() -> None
         
         Start playing the current animation backwards.
         """
-    
         pass
-    
-    
+    @staticmethod
     def playForward(*args, **kwargs):
         """
         playForward() -> None
         
         Start playing the current animation forwards.
         """
-    
         pass
-    
-    
+    @staticmethod
     def playbackBy(*args, **kwargs):
         """
         playbackBy() -> float
         
         Return a float specifying the increment between times viewed during the playing of the animation.
         """
-    
         pass
-    
-    
+    @staticmethod
     def playbackMode(*args, **kwargs):
         """
         playbackMode() -> int
@@ -289,150 +382,120 @@ class MAnimControl(object):
           MAnimControl.kPlaybackLoop         Play continuously.
           MAnimControl.kPlaybackOscillate    Play forwards, then backwards continuously.
         """
-    
         pass
-    
-    
+    @staticmethod
     def playbackSpeed(*args, **kwargs):
         """
         playbackSpeed() -> float
         
         Return the speed with with to play the animation.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setAnimationEndTime(*args, **kwargs):
         """
         setAnimationEndTime(MTime) -> None
         
         Set the value of the last frame in the animation.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setAnimationStartEndTime(*args, **kwargs):
         """
         setAnimationStartEndTime(MTime, MTime) -> None
         
         Set the values of the first and last frames in the animation.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setAnimationStartTime(*args, **kwargs):
         """
         setAnimationStartTime(MTime) -> None
         
         Set the value of the first frame in the animation.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setAutoKeyMode(*args, **kwargs):
         """
         setAutoKeyMode(bool) -> None
         
         Set the autoKeyMode.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setCurrentTime(*args, **kwargs):
         """
         setMinTime(MTime) -> None
         
         Set the current animation frame.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setGlobalInTangentType(*args, **kwargs):
         """
         setGlobalInTangentType(int) -> None
         
         Set the current global in tangent type
         """
-    
         pass
-    
-    
+    @staticmethod
     def setGlobalOutTangentType(*args, **kwargs):
         """
         setGlobalOutTangentType(int) -> None
         
         Set the current global out tangent type.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setMaxTime(*args, **kwargs):
         """
         setMaxTime(MTime) -> None
         
         Set the value of the last frame of the current playback time range.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setMinMaxTime(*args, **kwargs):
         """
         setMinMaxTime(MTime, MTime) -> None
         
         Set the values of the first and last frames of the playback time range.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setMinTime(*args, **kwargs):
         """
         setMinTime(MTime) -> None
         
         Set the value of the first frame of the current playback time range.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setPlaybackBy(*args, **kwargs):
         """
         setPlaybackBy(float) -> None
         
         Specify the increment between times viewed during the playing of the animation.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setPlaybackMode(*args, **kwargs):
         """
         setPlaybackMode(int) -> None
         
         Set the current playback mode.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setPlaybackSpeed(*args, **kwargs):
         """
         setPlaybackSpeed(float) -> None
         
         Set the desired speed factor at which the animation will play back.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setViewMode(*args, **kwargs):
         """
         setViewMode(int) -> None
@@ -440,30 +503,24 @@ class MAnimControl(object):
         Set the current viewing mode.
         Controls whether the animation is run in only the active view, or simultaneously in all views.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setWeightedTangents(*args, **kwargs):
         """
         setWeightedTangents(bool) -> None
         
         Sets whether or not the tangents on the Anim Curve are weighted.
         """
-    
         pass
-    
-    
+    @staticmethod
     def stop(*args, **kwargs):
         """
         stop() -> None
         
         Stop playing the current animation.
         """
-    
         pass
-    
-    
+    @staticmethod
     def viewMode(*args, **kwargs):
         """
         viewMode() -> int
@@ -472,20 +529,15 @@ class MAnimControl(object):
           MAnimControl.kPlaybackViewAll      Playback in all views.
           MAnimControl.kPlaybackViewActive   Playback in only the active view.
         """
-    
         pass
-    
-    
+    @staticmethod
     def weightedTangents(*args, **kwargs):
         """
         weightedTangents() -> bool
         
         Determine whether or not the tangents on the Anim Curve are weighted.
         """
-    
         pass
-    
-    
     kPlaybackLoop = 1
     
     
@@ -502,198 +554,131 @@ class MAnimControl(object):
 
 
 val = MAnimControl
-class MAnimCurveClipboardItemArray(object):
+class _MFnBase(object):
     """
-    Array of MAnimCurveClipboardItem values.
+    Base class for function sets.
     """
     
-    
-    
-    def __add__(*args, **kwargs):
-        """
-        x.__add__(y) <==> x+y
-        """
-    
-        pass
-    
-    
-    def __contains__(*args, **kwargs):
-        """
-        x.__contains__(y) <==> y in x
-        """
-    
-        pass
-    
-    
-    def __delitem__(*args, **kwargs):
-        """
-        x.__delitem__(y) <==> del x[y]
-        """
-    
-        pass
-    
-    
-    def __delslice__(*args, **kwargs):
-        """
-        x.__delslice__(i, j) <==> del x[i:j]
-        
-        Use of negative indices is not supported.
-        """
-    
-        pass
-    
-    
-    def __getitem__(*args, **kwargs):
-        """
-        x.__getitem__(y) <==> x[y]
-        """
-    
-        pass
-    
-    
-    def __getslice__(*args, **kwargs):
-        """
-        x.__getslice__(i, j) <==> x[i:j]
-        
-        Use of negative indices is not supported.
-        """
-    
-        pass
-    
-    
-    def __iadd__(*args, **kwargs):
-        """
-        x.__iadd__(y) <==> x+=y
-        """
-    
-        pass
-    
-    
-    def __imul__(*args, **kwargs):
-        """
-        x.__imul__(y) <==> x*=y
-        """
-    
-        pass
     
     
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def __len__(*args, **kwargs):
+    def hasObj(*args, **kwargs):
         """
-        x.__len__() <==> len(x)
+        Returns True if the function set is compatible with the specified Maya object.
         """
-    
         pass
-    
-    
-    def __mul__(*args, **kwargs):
+    def object(*args, **kwargs):
         """
-        x.__mul__(n) <==> x*n
+        Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none.
         """
-    
         pass
-    
-    
-    def __repr__(*args, **kwargs):
+    def setObject(*args, **kwargs):
         """
-        x.__repr__() <==> repr(x)
+        Attaches the function set to the specified Maya object.
         """
-    
         pass
-    
-    
-    def __rmul__(*args, **kwargs):
+    def type(*args, **kwargs):
         """
-        x.__rmul__(n) <==> n*x
+        Returns the type of the function set.
         """
-    
         pass
-    
-    
-    def __setitem__(*args, **kwargs):
-        """
-        x.__setitem__(i, y) <==> x[i]=y
-        """
-    
-        pass
-    
-    
-    def __setslice__(*args, **kwargs):
-        """
-        x.__setslice__(i, j, y) <==> x[i:j]=y
-        
-        Use  of negative indices is not supported.
-        """
-    
-        pass
-    
-    
-    def __str__(*args, **kwargs):
-        """
-        x.__str__() <==> str(x)
-        """
-    
-        pass
-    
-    
-    def append(*args, **kwargs):
-        """
-        Add a value to the end of the array.
-        """
-    
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        """
-        Remove all elements from the array.
-        """
-    
-        pass
-    
-    
-    def copy(*args, **kwargs):
-        """
-        Replace the array contents with that of another or of a compatible Python sequence.
-        """
-    
-        pass
-    
-    
-    def insert(*args, **kwargs):
-        """
-        Insert a new value into the array at the given index.
-        """
-    
-        pass
-    
-    
-    def remove(*args, **kwargs):
-        """
-        Remove an element from the array.
-        """
-    
-        pass
-    
-    
-    def setLength(*args, **kwargs):
-        """
-        Grow or shrink the array to contain a specific number of elements.
-        """
-    
-        pass
-    
-    
-    sizeIncrement = None
-    
     __new__ = None
+
+
+class MAnimUtil(object):
+    """
+    Static class providing common animation helper methods.
+    """
+    
+    
+    
+    @staticmethod
+    def findAnimatablePlugs(*args, **kwargs):
+        """
+        findAnimatablePlugs(MSelectionList) -> MPlugArray
+        
+        Find the list of attributes (MPlugs) on any member of an MSelectionList
+        that is animatable.
+        
+        In addition to normal objects, components such as mesh vertices or
+        faces can be easily described on an MSelectionList, making this a
+        good way to determine if parts of a shape are animatable or not.
+        """
+        pass
+    @staticmethod
+    def findAnimatedPlugs(*args, **kwargs):
+        """
+        findAnimatedPlugs(MObject, bool) -> MPlugArray
+        findAnimatedPlugs(MDagPath, bool) -> MPlugArray
+        findAnimatedPlugs(MSelectionList selectionList, bool checkParent) -> MPlugArray
+        
+        Find the list of attributes (MPlugs) on the input object that is animated.
+        """
+        pass
+    @staticmethod
+    def findAnimation(*args, **kwargs):
+        """
+        findAnimation(MPlug) -> MObjectArray
+        
+        Find the animCurve(s) that are animating a given attribute (MPlug).
+        In most cases an attribute is animated by a single animCurve and so
+        just that animCurve will be returned.  It is possible to setup a
+        series of connections where an attribute is animated by more than
+        one animCurve, although Maya does not currently offer a UI to do so.
+        Compound attributes are not expanded to include any child attributes.
+        """
+        pass
+    @staticmethod
+    def findConstraint(*args, **kwargs):
+        """
+        findConstraint(Mplug) -> (MObject, MObjectArray)
+        
+        Find any constraint that is directly driving the specified attribute.
+        If a constraint is found, this method will also find the constraint
+        targets. Return false if no constraint exists on the attribute.
+        
+        Compound attributes are not expanded to include any child attributes.
+        """
+        pass
+    @staticmethod
+    def findSetDrivenKeyAnimation(*args, **kwargs):
+        """
+        findSetDrivenKeyAnimation(MPlug) -> (MObjectArray, MPlugArray)
+        
+        Find any driven keyframe animCurves, the blendWeighted node and the
+        driver attribute(s) that are animating a given attribute (MPlug).
+        Or return false if no driven keyframe exists on the attribute.
+        
+        A driven keyframe is similar to a regular keyframe. However, while a
+        standard keyframe always has an x-axis of time in the graph editor,
+        for a drivenkeyframe the user may choose any attribute
+        as the x-axis of the graph editor. This attribute is called the driver.
+        
+        In the case where there is only one driver, the animation curve
+        will be connected directly to the driven attribute. When there are
+        multiple drivers, the driven keyframe animCurves feed into a
+        blendWeighted node which drives the attribute.
+        
+        Compound attributes are not expanded to include any child attributes.
+        """
+        pass
+    @staticmethod
+    def isAnimated(*args, **kwargs):
+        """
+        isAnimated(MObject, bool) -> bool
+        isAnimated(MDagPath, bool) -> bool
+        isAnimated(MPlug, bool) -> bool
+        isAnimated(MSelectionList selectionList, bool checkParent) -> bool
+        
+        Determine whether or not an MObject is animated.
+        If the MObject is a hierarchical object (such as a dag node) then
+        you may also specify whether or not the input object's parents are examined.
+        """
+        pass
 
 
 class MAnimCurveClipboardItem(object):
@@ -710,20 +695,14 @@ class MAnimCurveClipboardItem(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def animCurveType(*args, **kwargs):
         """
         animCurveType() -> MFnAnimCurve.AnimCurveType
         
         Returns the type of the item's anim curve.
         """
-    
         pass
-    
-    
     def getAddressingInfo(*args, **kwargs):
         """
         getAddressingInfo() -> (unsigned int, unsigned int, unsigned int)
@@ -731,49 +710,41 @@ class MAnimCurveClipboardItem(object):
         Returns the addressing information for this clipboard item
         as (rowCount, childCount, attributeCount).
         """
-    
         pass
-    
-    
     def setAddressingInfo(*args, **kwargs):
         """
         setAddressingInfo(rowCount, childCount, attributeCount) -> self
         
         Sets the addressing information for this clipboard item.
         """
-    
         pass
-    
-    
     def setAnimCurve(*args, **kwargs):
         """
         setAnimCurve(object) -> self
         
         Sets the anim curve MObject.
         """
-    
         pass
-    
-    
     def setNameInfo(*args, **kwargs):
         """
         setNameInfo(nodeName, fullName, leafName) -> self
         
         Sets the name information for this clipboard item.
         """
-    
         pass
+    __new__ = None
     
     
     animCurve = None
     
+    
     fullAttributeName = None
+    
     
     leafAttributeName = None
     
-    nodeName = None
     
-    __new__ = None
+    nodeName = None
 
 
 class MAnimCurveChange(object):
@@ -787,92 +758,18 @@ class MAnimCurveChange(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def redoIt(*args, **kwargs):
         """
         Redo all of the Anim Curve changes in this cache.
         """
-    
         pass
-    
-    
     def undoIt(*args, **kwargs):
         """
         Undo all of the Anim Curve changes in this cache.
         """
-    
         pass
-    
-    
     __new__ = None
-
-
-class _MFnBase(object):
-    """
-    Base class for function sets.
-    """
-    
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def hasObj(*args, **kwargs):
-        """
-        Returns True if the function set is compatible with the specified Maya object.
-        """
-    
-        pass
-    
-    
-    def object(*args, **kwargs):
-        """
-        Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none.
-        """
-    
-        pass
-    
-    
-    def setObject(*args, **kwargs):
-        """
-        Attaches the function set to the specified Maya object.
-        """
-    
-        pass
-    
-    
-    def type(*args, **kwargs):
-        """
-        Returns the type of the function set.
-        """
-    
-        pass
-    
-    
-    __new__ = None
-
-
-class MAnimUtil(object):
-    """
-    Static class providing common animation helper methods.
-    """
-    
-    
-    
-    def isAnimated(*args, **kwargs):
-        """
-        Return true if the target is animated.
-        """
-    
-        pass
 
 
 class _MFnDependencyNode(_MFnBase):
@@ -886,387 +783,259 @@ class _MFnDependencyNode(_MFnBase):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def absoluteName(*args, **kwargs):
         """
         Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).
         """
-    
         pass
-    
-    
     def addAttribute(*args, **kwargs):
         """
         Adds a new dynamic attribute to the node.
         """
-    
         pass
-    
-    
     def addExternalContentForFileAttr(*args, **kwargs):
         """
         Adds content info to the specified table from a file path attribute.
         """
-    
         pass
-    
-    
+    def affectsAnimation(*args, **kwargs):
+        """
+        Returns true if the changes to the node may affect animation.
+        """
+        pass
     def attribute(*args, **kwargs):
         """
         Returns an attribute of the node, given either its index or name.
         """
-    
         pass
-    
-    
     def attributeClass(*args, **kwargs):
         """
         Returns the class of the specified attribute.
         """
-    
         pass
-    
-    
     def attributeCount(*args, **kwargs):
         """
         Returns the number of attributes on the node.
         """
-    
         pass
-    
-    
     def canBeWritten(*args, **kwargs):
         """
         Returns true if the node will be written to file.
         """
-    
         pass
-    
-    
     def create(*args, **kwargs):
         """
         Creates a new node of the given type.
         """
-    
         pass
-    
-    
     def dgCallbackIds(*args, **kwargs):
         """
         Returns DG timing information for a specific callback type, broken down by callbackId.
         """
-    
         pass
-    
-    
     def dgCallbacks(*args, **kwargs):
         """
         Returns DG timing information broken down by callback type.
         """
-    
         pass
-    
-    
     def dgTimer(*args, **kwargs):
         """
         Returns a specific DG timer metric for a given timer type.
         """
-    
         pass
-    
-    
     def dgTimerOff(*args, **kwargs):
         """
         Turns DG timing off for this node.
         """
-    
         pass
-    
-    
     def dgTimerOn(*args, **kwargs):
         """
         Turns DG timing on for this node.
         """
-    
         pass
-    
-    
     def dgTimerQueryState(*args, **kwargs):
         """
         Returns the current DG timer state for this node.
         """
-    
         pass
-    
-    
     def dgTimerReset(*args, **kwargs):
         """
         Resets all DG timers for this node.
         """
-    
         pass
-    
-    
     def findAlias(*args, **kwargs):
         """
         Returns the attribute which has the given alias.
         """
-    
         pass
-    
-    
     def findPlug(*args, **kwargs):
         """
         Returns a plug for the given attribute.
         """
-    
         pass
-    
-    
     def getAffectedAttributes(*args, **kwargs):
         """
         Returns all of the attributes which are affected by the specified attribute.
         """
-    
         pass
-    
-    
     def getAffectingAttributes(*args, **kwargs):
         """
         Returns all of the attributes which affect the specified attribute.
         """
-    
         pass
-    
-    
     def getAliasAttr(*args, **kwargs):
         """
         Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases.
         """
-    
         pass
-    
-    
     def getAliasList(*args, **kwargs):
         """
         Returns all of the node's attribute aliases.
         """
-    
         pass
-    
-    
     def getConnections(*args, **kwargs):
         """
         Returns all the plugs which are connected to attributes of this node.
         """
-    
         pass
-    
-    
     def getExternalContent(*args, **kwargs):
         """
         Gets the external content (files) that this node depends on.
         """
-    
         pass
-    
-    
     def hasAttribute(*args, **kwargs):
         """
         Returns True if the node has an attribute with the given name.
         """
-    
         pass
-    
-    
     def hasUniqueName(*args, **kwargs):
         """
         Returns True if the node's name is unique.
         """
-    
         pass
-    
-    
     def isFlagSet(*args, **kwargs):
         """
         Returns the state of the specified node flag.
         """
-    
         pass
-    
-    
     def isNewAttribute(*args, **kwargs):
         """
         Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files.
         """
-    
         pass
-    
-    
     def isTrackingEdits(*args, **kwargs):
         """
         Returns True if the node is referenced or in an assembly that is tracking edits.
         """
-    
         pass
-    
-    
     def name(*args, **kwargs):
         """
         Returns the node's name.
         """
-    
         pass
-    
-    
     def plugsAlias(*args, **kwargs):
         """
         Returns the alias for a plug's attribute.
         """
-    
         pass
-    
-    
     def removeAttribute(*args, **kwargs):
         """
         Removes a dynamic attribute from the node.
         """
-    
         pass
-    
-    
     def reorderedAttribute(*args, **kwargs):
         """
         Returns one of the node's attribute, based on the order in which they are written to file.
         """
-    
         pass
-    
-    
+    def setAffectsAnimation(*args, **kwargs):
+        """
+        Specifies that modifications to a node could potentially affect the animation.
+        """
+        pass
     def setAlias(*args, **kwargs):
         """
         Adds or removes an attribute alias.
         """
-    
         pass
-    
-    
     def setDoNotWrite(*args, **kwargs):
         """
         Used to prevent the node from being written to file.
         """
-    
         pass
-    
-    
     def setExternalContent(*args, **kwargs):
         """
         Changes the location of external content.
         """
-    
         pass
-    
-    
     def setExternalContentForFileAttr(*args, **kwargs):
         """
         Sets content info in the specified attribute from the table.
         """
-    
         pass
-    
-    
     def setFlag(*args, **kwargs):
         """
         Sets the state of the specified node flag.
         """
-    
         pass
-    
-    
     def setName(*args, **kwargs):
         """
         Sets the node's name.
         """
-    
         pass
-    
-    
     def setUuid(*args, **kwargs):
         """
         Sets the node's UUID.
         """
-    
         pass
-    
-    
     def userNode(*args, **kwargs):
         """
         Returns the MPxNode object for a plugin node.
         """
-    
         pass
-    
-    
     def uuid(*args, **kwargs):
         """
         Returns the node's UUID.
         """
-    
         pass
-    
-    
+    @staticmethod
     def allocateFlag(*args, **kwargs):
         """
         Allocates a flag on all nodes for use by the named plugin and returns the flag's index.
         """
-    
         pass
-    
-    
+    @staticmethod
     def classification(*args, **kwargs):
         """
         Returns the classification string for the named node type.
         """
-    
         pass
-    
-    
+    @staticmethod
     def deallocateAllFlags(*args, **kwargs):
         """
         Deallocates all node flags which are currently allocated to the named plugin.
         """
-    
         pass
-    
-    
+    @staticmethod
     def deallocateFlag(*args, **kwargs):
         """
         Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag().
         """
-    
         pass
+    __new__ = None
     
     
     isDefaultNode = None
     
+    
     isFromReferencedFile = None
+    
     
     isLocked = None
     
+    
     isShared = None
-    
-    namespace = None
-    
-    pluginName = None
-    
-    typeId = None
-    
-    typeName = None
-    
-    __new__ = None
     
     
     kExtensionAttr = 3
@@ -1333,6 +1102,18 @@ class _MFnDependencyNode(_MFnBase):
     
     
     kTimerUninitialized = 2
+    
+    
+    namespace = None
+    
+    
+    pluginName = None
+    
+    
+    typeId = None
+    
+    
+    typeName = None
 
 
 class MAnimMessage(_MMessage):
@@ -1342,6 +1123,7 @@ class MAnimMessage(_MMessage):
     
     
     
+    @staticmethod
     def addAnimCurveEditedCallback(*args, **kwargs):
         """
         addAnimCurveEditedCallback(function, clientData=None) -> id
@@ -1355,10 +1137,8 @@ class MAnimMessage(_MMessage):
         
          * return: Identifier used for removing the callback.
         """
-    
         pass
-    
-    
+    @staticmethod
     def addAnimKeyframeEditCheckCallback(*args, **kwargs):
         """
         addAnimKeyframeEditCheckCallback(function, clientData=None) -> id
@@ -1375,10 +1155,8 @@ class MAnimMessage(_MMessage):
         
          * return: Identifier used for removing the callback.
         """
-    
         pass
-    
-    
+    @staticmethod
     def addAnimKeyframeEditedCallback(*args, **kwargs):
         """
         addAnimKeyframeEditedCallback(function, clientData=None) -> id
@@ -1398,10 +1176,8 @@ class MAnimMessage(_MMessage):
         
          * return: Identifier used for removing the callback.
         """
-    
         pass
-    
-    
+    @staticmethod
     def addDisableImplicitControlCallback(*args, **kwargs):
         """
         addDisableImplicitControlCallback(function, clientData=None) -> id
@@ -1420,10 +1196,8 @@ class MAnimMessage(_MMessage):
         
          * return: Identifier used for removing the callback.
         """
-    
         pass
-    
-    
+    @staticmethod
     def addNodeAnimKeyframeEditedCallback(*args, **kwargs):
         """
         addNodeAnimKeyframeEditedCallback(animNode, function, clientData=None) -> id
@@ -1446,10 +1220,8 @@ class MAnimMessage(_MMessage):
         
          * return: Identifier used for removing the callback.
         """
-    
         pass
-    
-    
+    @staticmethod
     def addPostBakeResultsCallback(*args, **kwargs):
         """
         addPostBakeResultsCallback(function, clientData=None) -> id
@@ -1467,10 +1239,8 @@ class MAnimMessage(_MMessage):
         
          * return: Identifier used for removing the callback.
         """
-    
         pass
-    
-    
+    @staticmethod
     def addPreBakeResultsCallback(*args, **kwargs):
         """
         addPreBakeResultsCallback(function, clientData=None) -> id
@@ -1488,10 +1258,8 @@ class MAnimMessage(_MMessage):
         
          * return: Identifier used for removing the callback.
         """
-    
         pass
-    
-    
+    @staticmethod
     def flushAnimKeyframeEditedCallbacks(*args, **kwargs):
         """
         flushAnimKeyframeEditedCallbacks() -> None
@@ -1502,7 +1270,6 @@ class MAnimMessage(_MMessage):
         flush all animation keyframe edited callbacks and force them to issue
         their callbacks with the data contained within.
         """
-    
         pass
 
 
@@ -1526,10 +1293,7 @@ class MFnGeometryFilter(_MFnDependencyNode):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def getInputGeometry(*args, **kwargs):
         """
         getInputGeometry() -> MObjectArray
@@ -1543,20 +1307,14 @@ class MFnGeometryFilter(_MFnDependencyNode):
         accessed by using MPlug::getValue() to query the inputGeometry
         attribute on the deformer.
         """
-    
         pass
-    
-    
     def getOutputGeometry(*args, **kwargs):
         """
         getOutputGeometry() -> MObjectArray
         
         Returns the DAG nodes which receive output geometry from the deformer.
         """
-    
         pass
-    
-    
     def getPathAtIndex(*args, **kwargs):
         """
         getPathAtIndex(plugIndex) -> MDagPath
@@ -1565,10 +1323,7 @@ class MFnGeometryFilter(_MFnDependencyNode):
         
         * plugIndex (unsigned int) - Plug index of the desired geometry.
         """
-    
         pass
-    
-    
     def groupIdAtIndex(*args, **kwargs):
         """
         groupIdAtIndex(plugIndex) -> long
@@ -1577,10 +1332,7 @@ class MFnGeometryFilter(_MFnDependencyNode):
         
         * plugIndex (unsigned int) - Plug index of the desired geometry.
         """
-    
         pass
-    
-    
     def indexForGroupId(*args, **kwargs):
         """
         indexForGroupId(groupId) -> plugIndex
@@ -1589,10 +1341,7 @@ class MFnGeometryFilter(_MFnDependencyNode):
         
         * groupId (unsigned int) - groupId of the desired geometry.
         """
-    
         pass
-    
-    
     def indexForOutputConnection(*args, **kwargs):
         """
         indexForOutputConnection(connIndex) -> plugIndex
@@ -1604,10 +1353,7 @@ class MFnGeometryFilter(_MFnDependencyNode):
         
         * connIndex (unsigned int) - Connection index of the desired geometry.
         """
-    
         pass
-    
-    
     def indexForOutputShape(*args, **kwargs):
         """
         indexForOutputShape(shape) -> plugIndex
@@ -1616,10 +1362,7 @@ class MFnGeometryFilter(_MFnDependencyNode):
         
         * shape (MObject) - Shape for which the plug index is requested.
         """
-    
         pass
-    
-    
     def inputShapeAtIndex(*args, **kwargs):
         """
         inputShapeAtIndex(plugIndex) -> MObject
@@ -1628,10 +1371,7 @@ class MFnGeometryFilter(_MFnDependencyNode):
         
         * plugIndex (unsigned int) - Plug index of the desired shape.
         """
-    
         pass
-    
-    
     def numOutputConnections(*args, **kwargs):
         """
         numOutputConnections() -> long
@@ -1644,25 +1384,21 @@ class MFnGeometryFilter(_MFnDependencyNode):
         This method is useful in conjunction with indexForOutputConnection()
         to iterate through the affected objects.
         """
-    
         pass
-    
-    
     def outputShapeAtIndex(*args, **kwargs):
         """
         outputShapeAtIndex(index) -> MObject
         
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-    
         pass
+    __new__ = None
     
     
     deformerSet = None
     
-    envelope = None
     
-    __new__ = None
+    envelope = None
 
 
 class MFnAnimCurve(_MFnDependencyNode):
@@ -1687,10 +1423,7 @@ class MFnAnimCurve(_MFnDependencyNode):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def addKey(*args, **kwargs):
         """
         addKey(at, value, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, change=None) -> unsigned int
@@ -1699,30 +1432,21 @@ class MFnAnimCurve(_MFnDependencyNode):
         at and value can both be either MTime or double,depending on what is appropriate for the animCurve type.
         change is an optional MAnimCurveChange.
         """
-    
         pass
-    
-    
     def addKeys(*args, **kwargs):
         """
         addKeys(times, values, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, keepExistingKeys=False, change=None) -> self
         
         Add a set of new keys with the given corresponding values and tangent typesat the specified times.  This method only works for animCurves of typekAnimCurveTA, kAnimCurveTL and kAnimCurveTU.
         """
-    
         pass
-    
-    
     def addKeysWithTangents(*args, **kwargs):
         """
         addKeysWithTangents(times, values, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, tangentInTypeArray=None, tangentOutTypeArray=None, tangentInXArray=None, tangentInYArray=None, tangentOutXArray=None, tangentOutYArray=None, tangentsLockedArray=None, weightsLockedArray=None, convertUnits=True, keepExistingKeys=False, change=None) -> self
         
         Add a set of new keys with the given corresponding values, tangent types and tangents at the specified times.  This method only works for animCurves of typekAnimCurveTA, kAnimCurveTL and kAnimCurveTU.
         """
-    
         pass
-    
-    
     def create(*args, **kwargs):
         """
         create(node, attribute, animCurveType=kAnimCurveUnknown [, modifier] ) -> MObject
@@ -1744,10 +1468,7 @@ class MFnAnimCurve(_MFnDependencyNode):
         kAnimCurveUU            Unitless to Unitless
         kAnimCurveUnknown       Unknown type
         """
-    
         pass
-    
-    
     def evaluate(*args, **kwargs):
         """
         evaluate(at) -> value
@@ -1756,10 +1477,7 @@ class MFnAnimCurve(_MFnDependencyNode):
         For curves of type kAnimCurveTA, kAnimCurveTL and kAnimCurveTU,the at parameter is an MTime, otherwise it is a double.
         For curves of type kAnimCurveTT and kAnimCurveUT,the value is an MTime, otherwise it is a double.
         """
-    
         pass
-    
-    
     def find(*args, **kwargs):
         """
         find(at) -> unsigned int
@@ -1767,80 +1485,68 @@ class MFnAnimCurve(_MFnDependencyNode):
         Determines the index of the key which is set at the specifiedMTime (time-input curves) or double (unitless-input curves).
         Returns None if the key is not found.
         """
-    
         pass
-    
-    
     def findClosest(*args, **kwargs):
         """
         findClosest(at) -> unsigned int
         
         Determines the index of the key which is set at theMTime (time-input curves) or double (unitless-input curves)closest to the specified time.
         """
-    
         pass
-    
-    
     def getTangentAngleWeight(*args, **kwargs):
         """
         getTangentAngleWeight(index, isInTangent) -> (MAngle,double)
         
         Determines the angle and weight of the in- or out-tangent to the curvefor the key at the specified index
         """
-    
         pass
-    
-    
     def getTangentXY(*args, **kwargs):
         """
         getTangentXY(index, isInTangent) -> (x,y)
         
         Determines the x,y value representing the vector of the in- orout-tangent (depending on the value of the isInTangent parameter) tothe curve for the key at the specified index.  The values returnedwill be in Maya's internal units (seconds for time, centimeters forlinear, radians for angles).
         """
-    
         pass
-    
-    
     def inTangentType(*args, **kwargs):
         """
         inTangentType(index) -> TangentType
         
         Determines the type of the tangent to the curve entering the current key.
         """
-    
         pass
-    
-    
     def input(*args, **kwargs):
         """
         input(index) -> MTime or double
         
         Determines the input (MTime for T* curves or double for U* curves) of the key at the specified index.
         """
-    
         pass
-    
-    
+    def insertKey(*args, **kwargs):
+        """
+        addKey(time, breakdown=False, change=None) -> unsigned int
+        
+        Inserts a new key at the specified time adjusting neighboring
+        tangents to maintain curve shape. This method is the API equivalent
+        to maya.cmds.setKeyframe(insert=True).
+        breakdown specifies the breakdown state of the newly inserted key.
+        change is an optional MAnimCurveChange.
+        Returns the index of the newly inserted key.
+        """
+        pass
     def isBreakdown(*args, **kwargs):
         """
         isBreakdown(index) -> bool
         
         Determines whether or not a key is a breakdown.
         """
-    
         pass
-    
-    
     def outTangentType(*args, **kwargs):
         """
         outTangentType(index) -> TangentType
         
         Determines the type of the tangent to the curve leaving the current key.
         """
-    
         pass
-    
-    
     def remove(*args, **kwargs):
         """
         remove(index, change=None) -> self
@@ -1848,10 +1554,7 @@ class MFnAnimCurve(_MFnDependencyNode):
         Removes the key at the specified index.
         change is an optional MAnimCurveChange.
         """
-    
         pass
-    
-    
     def setAngle(*args, **kwargs):
         """
         setAngle(index, setAngle, isInTangent, change=None) -> self
@@ -1859,10 +1562,7 @@ class MFnAnimCurve(_MFnDependencyNode):
         Sets the in- or out-angle of the tangent for the key at the given index.
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
-    
         pass
-    
-    
     def setInTangentType(*args, **kwargs):
         """
         setInTangentType(index, tangentType, change=None) -> self
@@ -1882,60 +1582,42 @@ class MFnAnimCurve(_MFnDependencyNode):
         kTangentStepNext        StepNext
         kTangentAuto            Auto
         """
-    
         pass
-    
-    
     def setInput(*args, **kwargs):
         """
         setInput(index, at, change=None) -> self
         
         Sets the input (MTime for T* curves or double for U* curves) of the key at the specified index.  This will fail ifsetting the input would require re-ordering of the keys.
         """
-    
         pass
-    
-    
     def setIsBreakdown(*args, **kwargs):
         """
         setIsBreakdown(index, isBreakdown, change=None) -> self
         
         Sets the breakdown state of a key at a given index.
         """
-    
         pass
-    
-    
     def setIsWeighted(*args, **kwargs):
         """
         setIsWeighted(isWeighted, change=None) -> self
         
         Sets whether or not the curve has weighted tangents.
         """
-    
         pass
-    
-    
     def setOutTangentType(*args, **kwargs):
         """
         setOutTangentType(index, tangentType, change=None) -> self
         
         Sets the type of the tangent to the curve leaving the key at thespecified index.
         """
-    
         pass
-    
-    
     def setPostInfinityType(*args, **kwargs):
         """
         setPostInfinityType(infinityType, change=None) -> self
         
         Sets the behaviour of the curve for the range occurring after the last key.
         """
-    
         pass
-    
-    
     def setPreInfinityType(*args, **kwargs):
         """
         setPreInfinityType(infinityType, change=None) -> self
@@ -1948,10 +1630,7 @@ class MFnAnimCurve(_MFnDependencyNode):
         kCycleRelative          Cycle relative
         kOscillate                      Oscillate
         """
-    
         pass
-    
-    
     def setTangent(*args, **kwargs):
         """
         setTangent(index, xOrAngle, yOrWeight, isInTangent, change=None, convertUnits=True) -> self
@@ -1960,40 +1639,28 @@ class MFnAnimCurve(_MFnDependencyNode):
         The tangent can be specified as an x/y pair, oras an MAngle and a weight.
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
-    
         pass
-    
-    
     def setTangentTypes(*args, **kwargs):
         """
         setTangentTypes(indexArray, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, change=None) -> self
         
         Sets the tangent types for multiple keys.
         """
-    
         pass
-    
-    
     def setTangentsLocked(*args, **kwargs):
         """
         setTangentsLocked(index, locked, change=None) -> self
         
         Lock or unlock the tangents at the given key.
         """
-    
         pass
-    
-    
     def setValue(*args, **kwargs):
         """
         setValue(index, value, change=None) -> self
         
         Sets the value of the key at the specified index.  This methodshould only be used on Anim Curves of type kAnimCurve*A, kAnimCurve*Lor kAnimCurve*U.
         """
-    
         pass
-    
-    
     def setWeight(*args, **kwargs):
         """
         setWeight(index, weight, isInTangent, change=None) -> self
@@ -2001,87 +1668,65 @@ class MFnAnimCurve(_MFnDependencyNode):
         Sets the in- or out-weight of the tangent for the key at the given index.
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
-    
         pass
-    
-    
     def setWeightsLocked(*args, **kwargs):
         """
         setWeightsLocked(index, locked, change=None) -> self
         
         Lock or unlock the weights at the given key.
         """
-    
         pass
-    
-    
     def tangentsLocked(*args, **kwargs):
         """
         tangentsLocked(index) -> bool
         
         Determines whether the tangents are locked at the given key.
         """
-    
         pass
-    
-    
     def timedAnimCurveTypeForPlug(*args, **kwargs):
         """
         timedAnimCurveTypeForPlug(plug) -> AnimCurveType
         
         Returns the timed animCurve type appropriate for the specified plug.
         """
-    
         pass
-    
-    
     def unitlessAnimCurveTypeForPlug(*args, **kwargs):
         """
         unitlessAnimCurveTypeForPlug(plug) -> AnimCurveType
         
         Returns the unitless animCurve type appropriate for the specified plug.
         """
-    
         pass
-    
-    
     def value(*args, **kwargs):
         """
         value(index) -> double
         
         Determines the value of the key at the specified index.  This methodshould only be used on Anim Curves of type kAnimCurve*A, kAnimCurve*Lor kAnimCurve*U.
         """
-    
         pass
-    
-    
     def weightsLocked(*args, **kwargs):
         """
         weightsLocked(index) -> bool
         
         Determines whether the weights are locked at the given key.
         """
-    
         pass
+    __new__ = None
     
     
     animCurveType = None
     
+    
     isStatic = None
+    
     
     isTimeInput = None
     
+    
     isUnitlessInput = None
     
+    
     isWeighted = None
-    
-    numKeys = None
-    
-    postInfinityType = None
-    
-    preInfinityType = None
-    
-    __new__ = None
     
     
     kAnimCurveTA = 0
@@ -2193,6 +1838,15 @@ class MFnAnimCurve(_MFnDependencyNode):
     
     
     kTangentTypeCount = 32768
+    
+    
+    numKeys = None
+    
+    
+    postInfinityType = None
+    
+    
+    preInfinityType = None
 
 
 class MFnSkinCluster(MFnGeometryFilter):
@@ -2221,10 +1875,7 @@ class MFnSkinCluster(MFnGeometryFilter):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def getBlendWeights(*args, **kwargs):
         """
         getBlendWeights(shape, components) -> MDoubleArray
@@ -2238,10 +1889,7 @@ class MFnSkinCluster(MFnGeometryFilter):
         * shape     (MDagPath) - the object being deformed by the skinCluster
         * components (MObject) - components for which weights should be returned
         """
-    
         pass
-    
-    
     def getPointsAffectedByInfluence(*args, **kwargs):
         """
         getPointsAffectedByInfluence(influence) -> (MSelectionList, MDoubleArray)
@@ -2259,10 +1907,7 @@ class MFnSkinCluster(MFnGeometryFilter):
         
         * influence (MDagPath) - the influence object of interest
         """
-    
         pass
-    
-    
     def getWeights(*args, **kwargs):
         """
         getWeights(shape, components) -> (MDoubleArray, int)
@@ -2291,10 +1936,7 @@ class MFnSkinCluster(MFnGeometryFilter):
         * influence        (int) - index of the single influence to return weights for
         * influences (MIntArray) - indices of multiple influences to return weights for
         """
-    
         pass
-    
-    
     def indexForInfluenceObject(*args, **kwargs):
         """
         indexForInfluenceObject(influenceObj) -> long
@@ -2304,20 +1946,14 @@ class MFnSkinCluster(MFnGeometryFilter):
         
         * influenceObj (MObject) - influence object for which the index is requested.
         """
-    
         pass
-    
-    
     def influenceObjects(*args, **kwargs):
         """
         influenceObjects() -> MDagPathArray
         
         Returns an array of paths to the influence objects for the skinCluster.
         """
-    
         pass
-    
-    
     def setBlendWeights(*args, **kwargs):
         """
         setBlendWeights(shape, components, weights) -> self
@@ -2334,10 +1970,7 @@ class MFnSkinCluster(MFnGeometryFilter):
                                    of components provided then the lesser of
                                    the two will be used.
         """
-    
         pass
-    
-    
     def setWeights(*args, **kwargs):
         """
         setWeights(shape, components, influence, weight, normalize=True, returnOldWeights=False) -> None or MDoubleArray
@@ -2381,17 +2014,15 @@ class MFnSkinCluster(MFnGeometryFilter):
         * normalize       (bool) - if True, normalize weights on other influence objects
         * returnOldWeights(bool) - if True, return the old weights, otherwise return None
         """
-    
         pass
-    
-    
     __new__ = None
 
 
 
-key = 'MAnimControl'
 
 py2dict = {}
+
+key = 'MAnimControl'
 
 ourdict = {}
 

@@ -1,152 +1,83 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class _Object(object):
     __dict__ = None
 
 
 class QTest(_Object):
-    def addColumnInternal(*args, **kwargs):
-        pass
-    
-    
-    def asciiToKey(*args, **kwargs):
-        pass
-    
-    
-    def compare_ptr_helper(*args, **kwargs):
-        pass
-    
-    
-    def compare_string_helper(*args, **kwargs):
-        pass
-    
-    
-    def currentAppName(*args, **kwargs):
-        pass
-    
-    
-    def currentDataTag(*args, **kwargs):
-        pass
-    
-    
-    def currentTestFailed(*args, **kwargs):
-        pass
-    
-    
-    def currentTestFunction(*args, **kwargs):
-        pass
-    
-    
-    def ignoreMessage(*args, **kwargs):
-        pass
-    
-    
-    def keyClick(*args, **kwargs):
-        pass
-    
-    
-    def keyClicks(*args, **kwargs):
-        pass
-    
-    
-    def keyEvent(*args, **kwargs):
-        pass
-    
-    
-    def keyPress(*args, **kwargs):
-        pass
-    
-    
-    def keyRelease(*args, **kwargs):
-        pass
-    
-    
-    def keyToAscii(*args, **kwargs):
-        pass
-    
-    
-    def mouseClick(*args, **kwargs):
-        pass
-    
-    
-    def mouseDClick(*args, **kwargs):
-        pass
-    
-    
-    def mouseEvent(*args, **kwargs):
-        pass
-    
-    
-    def mouseMove(*args, **kwargs):
-        pass
-    
-    
-    def mousePress(*args, **kwargs):
-        pass
-    
-    
-    def mouseRelease(*args, **kwargs):
-        pass
-    
-    
-    def qElementData(*args, **kwargs):
-        pass
-    
-    
-    def qExpectFail(*args, **kwargs):
-        pass
-    
-    
-    def qFindTestData(*args, **kwargs):
-        pass
-    
-    
-    def qGlobalData(*args, **kwargs):
-        pass
-    
-    
-    def qSkip(*args, **kwargs):
-        pass
-    
-    
-    def qWaitForWindowActive(*args, **kwargs):
-        pass
-    
-    
-    def qWaitForWindowExposed(*args, **kwargs):
-        pass
-    
-    
-    def sendKeyEvent(*args, **kwargs):
-        pass
-    
-    
-    def setBenchmarkResult(*args, **kwargs):
-        pass
-    
-    
-    def setMainSourcePath(*args, **kwargs):
-        pass
-    
-    
-    def simulateEvent(*args, **kwargs):
-        pass
-    
-    
-    def testObject(*args, **kwargs):
-        pass
-    
-    
-    def toPrettyCString(*args, **kwargs):
-        pass
-    
-    
-    def touchEvent(*args, **kwargs):
-        pass
-    
-    
-    def waitForEvents(*args, **kwargs):
-        pass
-    
-    
+    @staticmethod
+    def addColumnInternal(*args, **kwargs): pass
+    @staticmethod
+    def asciiToKey(*args, **kwargs): pass
+    @staticmethod
+    def compare_ptr_helper(*args, **kwargs): pass
+    @staticmethod
+    def compare_string_helper(*args, **kwargs): pass
+    @staticmethod
+    def currentAppName(*args, **kwargs): pass
+    @staticmethod
+    def currentDataTag(*args, **kwargs): pass
+    @staticmethod
+    def currentTestFailed(*args, **kwargs): pass
+    @staticmethod
+    def currentTestFunction(*args, **kwargs): pass
+    @staticmethod
+    def ignoreMessage(*args, **kwargs): pass
+    @staticmethod
+    def keyClick(*args, **kwargs): pass
+    @staticmethod
+    def keyClicks(*args, **kwargs): pass
+    @staticmethod
+    def keyEvent(*args, **kwargs): pass
+    @staticmethod
+    def keyPress(*args, **kwargs): pass
+    @staticmethod
+    def keyRelease(*args, **kwargs): pass
+    @staticmethod
+    def keyToAscii(*args, **kwargs): pass
+    @staticmethod
+    def mouseClick(*args, **kwargs): pass
+    @staticmethod
+    def mouseDClick(*args, **kwargs): pass
+    @staticmethod
+    def mouseEvent(*args, **kwargs): pass
+    @staticmethod
+    def mouseMove(*args, **kwargs): pass
+    @staticmethod
+    def mousePress(*args, **kwargs): pass
+    @staticmethod
+    def mouseRelease(*args, **kwargs): pass
+    @staticmethod
+    def qElementData(*args, **kwargs): pass
+    @staticmethod
+    def qExpectFail(*args, **kwargs): pass
+    @staticmethod
+    def qFindTestData(*args, **kwargs): pass
+    @staticmethod
+    def qGlobalData(*args, **kwargs): pass
+    @staticmethod
+    def qSkip(*args, **kwargs): pass
+    @staticmethod
+    def qWaitForWindowActive(*args, **kwargs): pass
+    @staticmethod
+    def qWaitForWindowExposed(*args, **kwargs): pass
+    @staticmethod
+    def sendKeyEvent(*args, **kwargs): pass
+    @staticmethod
+    def setBenchmarkResult(*args, **kwargs): pass
+    @staticmethod
+    def setMainSourcePath(*args, **kwargs): pass
+    @staticmethod
+    def simulateEvent(*args, **kwargs): pass
+    @staticmethod
+    def testObject(*args, **kwargs): pass
+    @staticmethod
+    def toPrettyCString(*args, **kwargs): pass
+    @staticmethod
+    def touchEvent(*args, **kwargs): pass
+    @staticmethod
+    def waitForEvents(*args, **kwargs): pass
     Abort = None
     
     

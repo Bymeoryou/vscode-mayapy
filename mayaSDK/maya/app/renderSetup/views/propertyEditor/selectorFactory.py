@@ -20,24 +20,24 @@ the property editor UI layout for the selector.
 The selector factory is a singleton.
 """
 
-def entry(typeName):
-    """
-    Return the creator for the argument selector data model type.
-    """
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def register(typeName, creator):
+    """
+    Register a property editor UI creator for selector data model type.
+    
+    Raises a RuntimeError if a creator had already been registered.
+    """
     pass
-
-
 def unregister(typeName):
     """
     Unregister a property editor UI creator for selector data model type.
     
     Raises a KeyError if a creator had not already been registered.
     """
-
     pass
-
-
 def create(selector):
     """
     Create a property editor UI for selector.
@@ -48,23 +48,13 @@ def create(selector):
     
     Raises a KeyError if a creator had not already been registered.
     """
-
     pass
-
-
-def register(typeName, creator):
+def selectorTypes(): pass
+def entry(typeName):
     """
-    Register a property editor UI creator for selector data model type.
-    
-    Raises a RuntimeError if a creator had already been registered.
+    Return the creator for the argument selector data model type.
     """
-
     pass
-
-
-def selectorTypes():
-    pass
-
 
 
 kAlreadyRegistered = []

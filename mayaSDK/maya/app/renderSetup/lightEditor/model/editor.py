@@ -1,6 +1,10 @@
-from maya.app.renderSetup.lightEditor.model.group import LightEditorGroup
+from maya.app.renderSetup.lightEditor.model.group import LightGroup
 
-class LightEditor(LightEditorGroup):
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class LightEditor(LightGroup):
     """
     Singleton group item that is the root of the light editor items.
     
@@ -11,58 +15,27 @@ class LightEditor(LightEditorGroup):
     
     
     
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def ancestors(self):
         """
         Returns a single-element deque with the render setup node itself.
         """
-    
         pass
-    
-    
-    def createGroupItem(*args, **kwargs):
-        pass
-    
-    
-    def createLightItem(*args, **kwargs):
-        pass
-    
-    
-    def findEditorItem(self, obj):
-        pass
-    
-    
-    def isAbstractClass(self):
-        pass
-    
-    
+    def createGroupItem(*args, **kwargs): pass
+    def createLightItem(*args, **kwargs): pass
+    def findEditorItem(self, obj): pass
+    def isAbstractClass(self): pass
     def parent(self):
         """
         Returns None, as the render setup node is the root of the hierarchy.
         """
-    
         pass
-    
-    
-    def postConstructor(self):
-        pass
-    
-    
-    def rebuildScene(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def postConstructor(self): pass
+    def rebuildScene(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
     kTypeId = None
     
     
@@ -70,25 +43,18 @@ class LightEditor(LightEditorGroup):
 
 
 
+
+def _createInstance(*args, **kwargs): pass
 def instance():
     """
     Return the light editor singleton node, creating it if required.
     """
-
     pass
-
-
 def hasInstance():
     """
     Return true if the light editor node exists
     """
-
     pass
-
-
-def _createInstance(*args, **kwargs):
-    pass
-
 
 
 _LIGHT_EDITOR_NODE_NAME = ':lightEditor'

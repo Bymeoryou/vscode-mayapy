@@ -1,5 +1,6 @@
 import exceptions
 
+
 """
 # -----------------------------------------------------------------------------
 # ply: yacc.py
@@ -63,101 +64,16 @@ import exceptions
 # ----------------------------------------------------------------------------
 """
 
-class YaccError(exceptions.Exception):
-    """
-    # Exception raised for yacc-related errors
-    """
-    
-    
-    
-    __weakref__ = None
 
-
-class LRParser:
-    def __init__(self, lrtab, errorf):
-        pass
-    
-    
-    def errok(self):
-        pass
-    
-    
-    def parse(self, input='None', lexer='None', debug='0', tracking='0', tokenfunc='None'):
-        pass
-    
-    
-    def parsedebug(self, input='None', lexer='None', debug='None', tracking='0', tokenfunc='None'):
-        pass
-    
-    
-    def parseopt(self, input='None', lexer='None', debug='0', tracking='0', tokenfunc='None'):
-        pass
-    
-    
-    def parseopt_notrack(self, input='None', lexer='None', debug='0', tracking='0', tokenfunc='None'):
-        pass
-    
-    
-    def restart(self):
-        pass
-
-
-class MiniProduction(object):
-    """
-    # This class serves as a minimal standin for Production objects when
-    # reading table data from files.   It only contains information
-    # actually used by the LR parsing engine, plus some additional
-    # debugging information.
-    """
-    
-    
-    
-    def __init__(self, str, name, len, func, file, line):
-        pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
-    def bind(self, pdict):
-        """
-        # Bind the production function name to a callable
-        """
-    
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class Grammar(object):
-    def __getitem__(self, index):
-        pass
-    
-    
-    def __init__(self, terminals):
-        pass
-    
-    
-    def __len__(self):
-        pass
-    
-    
-    def add_production(self, prodname, syms, func='None', file="''", line='0'):
-        pass
-    
-    
-    def build_lritems(self):
-        pass
-    
-    
+    def __getitem__(self, index): pass
+    def __init__(self, terminals): pass
+    def __len__(self): pass
+    def add_production(self, prodname, syms, func='None', file="''", line='0'): pass
+    def build_lritems(self): pass
     def compute_first(self):
         """
         # -------------------------------------------------------------------------
@@ -166,10 +82,7 @@ class Grammar(object):
         # Compute the value of FIRST1(X) for all symbols
         # -------------------------------------------------------------------------
         """
-    
         pass
-    
-    
     def compute_follow(self, start='None'):
         """
         # ---------------------------------------------------------------------
@@ -180,26 +93,11 @@ class Grammar(object):
         # non-terminal.  See the Dragon book, 2nd Ed. p. 189.
         # ---------------------------------------------------------------------
         """
-    
         pass
-    
-    
-    def find_unreachable(self):
-        pass
-    
-    
-    def infinite_cycles(self):
-        pass
-    
-    
-    def set_precedence(self, term, assoc, level):
-        pass
-    
-    
-    def set_start(self, start='None'):
-        pass
-    
-    
+    def find_unreachable(self): pass
+    def infinite_cycles(self): pass
+    def set_precedence(self, term, assoc, level): pass
+    def set_start(self, start='None'): pass
     def undefined_symbols(self):
         """
         # -----------------------------------------------------------------------------
@@ -210,18 +108,9 @@ class Grammar(object):
         # and prod is the production where the symbol was used. 
         # -----------------------------------------------------------------------------
         """
-    
         pass
-    
-    
-    def unused_precedence(self):
-        pass
-    
-    
-    def unused_rules(self):
-        pass
-    
-    
+    def unused_precedence(self): pass
+    def unused_rules(self): pass
     def unused_terminals(self):
         """
         # -----------------------------------------------------------------------------
@@ -231,116 +120,54 @@ class Grammar(object):
         # a list of all symbols.
         # -----------------------------------------------------------------------------
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 
 
-class Production(object):
-    def __getitem__(self, index):
-        pass
+class YaccError(exceptions.Exception):
+    """
+    # Exception raised for yacc-related errors
+    """
     
     
-    def __init__(self, number, name, prod, precedence="('right', 0)", func='None', file="''", line='0'):
-        pass
-    
-    
-    def __len__(self):
-        pass
-    
-    
-    def __nonzero__(self):
-        pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
-    def bind(self, pdict):
-        """
-        # Bind the production function name to a callable
-        """
-    
-        pass
-    
-    
-    def lr_item(self, n):
-        """
-        # Return the nth lr_item from the production (or None if at the end)
-        """
-    
-        pass
-    
-    
-    __dict__ = None
     
     __weakref__ = None
-    
-    reduced = 0
 
 
-class PlyLogger(object):
-    def __init__(self, f):
+class LRTable(object):
+    def __init__(self): pass
+    def bind_callables(self, pdict):
+        """
+        # Bind all production function names to callable objects in pdict
+        """
         pass
-    
-    
-    def critical(self, msg, *args, **kwargs):
-        pass
-    
-    
-    def debug(self, msg, *args, **kwargs):
-        pass
-    
-    
-    def error(self, msg, *args, **kwargs):
-        pass
-    
-    
-    def info(self, msg, *args, **kwargs):
-        pass
-    
-    
-    def warning(self, msg, *args, **kwargs):
-        pass
-    
-    
+    def read_pickle(self, filename): pass
+    def read_table(self, module): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
 
 class YaccSymbol:
-    def __repr__(self):
-        pass
-    
-    
-    def __str__(self):
-        pass
+    def __repr__(self): pass
+    def __str__(self): pass
 
 
-class LRItem(object):
-    def __init__(self, p, n):
-        pass
+class NullLogger(object):
+    """
+    # Null logger is used when no output is generated. Does nothing.
+    """
     
     
-    def __repr__(self):
-        pass
     
-    
-    def __str__(self):
-        pass
-    
-    
+    def __call__(self, *args, **kwargs): pass
+    def __getattribute__(self, name): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
@@ -358,271 +185,197 @@ class ParserReflect(object):
     
     
     
-    def __init__(self, pdict, log='None'):
-        pass
-    
-    
+    def __init__(self, pdict, log='None'): pass
     def get_all(self):
         """
         # Get all of the basic information
         """
-    
         pass
-    
-    
     def get_error_func(self):
         """
         # Look for error handler
         """
-    
         pass
-    
-    
     def get_pfunctions(self):
         """
         # Get all p_functions from the grammar
         """
-    
         pass
-    
-    
     def get_precedence(self):
         """
         # Get the precedence map (if any)
         """
-    
         pass
-    
-    
     def get_start(self):
         """
         # Get the start symbol
         """
-    
         pass
-    
-    
     def get_tokens(self):
         """
         # Get the tokens map
         """
-    
         pass
-    
-    
     def signature(self):
         """
         # Compute a signature over the grammar
         """
-    
         pass
-    
-    
     def validate_all(self):
         """
         # Validate all of the information
         """
-    
         pass
-    
-    
     def validate_error_func(self):
         """
         # Validate the error function
         """
-    
         pass
-    
-    
-    def validate_files(self):
-        pass
-    
-    
+    def validate_files(self): pass
     def validate_pfunctions(self):
         """
         # Validate all of the p_functions
         """
-    
         pass
-    
-    
     def validate_precedence(self):
         """
         # Validate and parse the precedence map
         """
-    
         pass
-    
-    
     def validate_start(self):
         """
         # Validate the start symbol
         """
-    
         pass
-    
-    
     def validate_tokens(self):
         """
         # Validate the tokens
         """
-    
         pass
-    
-    
     __dict__ = None
     
-    __weakref__ = None
-
-
-class NullLogger(object):
-    """
-    # Null logger is used when no output is generated. Does nothing.
-    """
-    
-    
-    
-    def __call__(self, *args, **kwargs):
-        pass
-    
-    
-    def __getattribute__(self, name):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
-class LRTable(object):
-    def __init__(self):
-        pass
-    
-    
-    def bind_callables(self, pdict):
-        """
-        # Bind all production function names to callable objects in pdict
-        """
-    
-        pass
-    
-    
-    def read_pickle(self, filename):
-        pass
-    
-    
-    def read_table(self, module):
-        pass
-    
-    
-    __dict__ = None
     
     __weakref__ = None
 
 
 class YaccProduction:
-    def __getitem__(self, n):
-        pass
-    
-    
-    def __getslice__(self, i, j):
-        pass
-    
-    
-    def __init__(self, s, stack='None'):
-        pass
-    
-    
-    def __len__(self):
-        pass
-    
-    
-    def __setitem__(self, n, v):
-        pass
-    
-    
-    def error(self):
-        pass
-    
-    
-    def lexpos(self, n):
-        pass
-    
-    
-    def lexspan(self, n):
-        pass
-    
-    
-    def lineno(self, n):
-        pass
-    
-    
-    def linespan(self, n):
-        pass
-    
-    
-    def set_lineno(self, n, lineno):
-        pass
+    def __getitem__(self, n): pass
+    def __getslice__(self, i, j): pass
+    def __init__(self, s, stack='None'): pass
+    def __len__(self): pass
+    def __setitem__(self, n, v): pass
+    def error(self): pass
+    def lexpos(self, n): pass
+    def lexspan(self, n): pass
+    def lineno(self, n): pass
+    def linespan(self, n): pass
+    def set_lineno(self, n, lineno): pass
 
 
-class VersionError(YaccError):
+class Production(object):
+    def __getitem__(self, index): pass
+    def __init__(self, number, name, prod, precedence="('right', 0)", func='None', file="''", line='0'): pass
+    def __len__(self): pass
+    def __nonzero__(self): pass
+    def __repr__(self): pass
+    def __str__(self): pass
+    def bind(self, pdict):
+        """
+        # Bind the production function name to a callable
+        """
+        pass
+    def lr_item(self, n):
+        """
+        # Return the nth lr_item from the production (or None if at the end)
+        """
+        pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+    
+    
+    reduced = 0
+
+
+class LRItem(object):
+    def __init__(self, p, n): pass
+    def __repr__(self): pass
+    def __str__(self): pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
+class MiniProduction(object):
+    """
+    # This class serves as a minimal standin for Production objects when
+    # reading table data from files.   It only contains information
+    # actually used by the LR parsing engine, plus some additional
+    # debugging information.
+    """
+    
+    
+    
+    def __init__(self, str, name, len, func, file, line): pass
+    def __repr__(self): pass
+    def __str__(self): pass
+    def bind(self, pdict):
+        """
+        # Bind the production function name to a callable
+        """
+        pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
+class LRParser:
+    def __init__(self, lrtab, errorf): pass
+    def errok(self): pass
+    def parse(self, input='None', lexer='None', debug='0', tracking='0', tokenfunc='None'): pass
+    def parsedebug(self, input='None', lexer='None', debug='None', tracking='0', tokenfunc='None'): pass
+    def parseopt(self, input='None', lexer='None', debug='0', tracking='0', tokenfunc='None'): pass
+    def parseopt_notrack(self, input='None', lexer='None', debug='0', tracking='0', tokenfunc='None'): pass
+    def restart(self): pass
+
+
+class PlyLogger(object):
+    def __init__(self, f): pass
+    def critical(self, msg, *args, **kwargs): pass
+    def debug(self, msg, *args, **kwargs): pass
+    def error(self, msg, *args, **kwargs): pass
+    def info(self, msg, *args, **kwargs): pass
+    def warning(self, msg, *args, **kwargs): pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
+class GrammarError(YaccError):
     pass
 
 
 class LRGeneratedTable(LRTable):
-    def __init__(self, grammar, method="'LALR'", log='None'):
-        pass
-    
-    
-    def add_lalr_lookaheads(self, C):
-        pass
-    
-    
-    def add_lookaheads(self, lookbacks, followset):
-        pass
-    
-    
-    def compute_follow_sets(self, ntrans, readsets, inclsets):
-        pass
-    
-    
-    def compute_lookback_includes(self, C, trans, nullable):
-        pass
-    
-    
-    def compute_nullable_nonterminals(self):
-        pass
-    
-    
-    def compute_read_sets(self, C, ntrans, nullable):
-        pass
-    
-    
-    def dr_relation(self, C, trans, nullable):
-        pass
-    
-    
-    def find_nonterminal_transitions(self, C):
-        pass
-    
-    
-    def lr0_closure(self, I):
-        pass
-    
-    
-    def lr0_goto(self, I, x):
-        pass
-    
-    
+    def __init__(self, grammar, method="'LALR'", log='None'): pass
+    def add_lalr_lookaheads(self, C): pass
+    def add_lookaheads(self, lookbacks, followset): pass
+    def compute_follow_sets(self, ntrans, readsets, inclsets): pass
+    def compute_lookback_includes(self, C, trans, nullable): pass
+    def compute_nullable_nonterminals(self): pass
+    def compute_read_sets(self, C, ntrans, nullable): pass
+    def dr_relation(self, C, trans, nullable): pass
+    def find_nonterminal_transitions(self, C): pass
+    def lr0_closure(self, I): pass
+    def lr0_goto(self, I, x): pass
     def lr0_items(self):
         """
         # Compute the LR(0) sets of item function
         """
-    
         pass
-    
-    
     def lr_parse_table(self):
         """
         # -----------------------------------------------------------------------------
@@ -631,23 +384,13 @@ class LRGeneratedTable(LRTable):
         # This function constructs the parse tables for SLR or LALR
         # -----------------------------------------------------------------------------
         """
-    
         pass
-    
-    
-    def pickle_table(self, filename, signature="''"):
-        pass
-    
-    
-    def reads_relation(self, C, trans, empty):
-        pass
-    
-    
-    def write_table(self, modulename, outputdir="''", signature="''"):
-        pass
+    def pickle_table(self, filename, signature="''"): pass
+    def reads_relation(self, C, trans, empty): pass
+    def write_table(self, modulename, outputdir="''", signature="''"): pass
 
 
-class GrammarError(YaccError):
+class VersionError(YaccError):
     pass
 
 
@@ -656,62 +399,13 @@ class LALRError(YaccError):
 
 
 
-def parse_grammar(doc, file, line):
-    """
-    # -----------------------------------------------------------------------------
-    # parse_grammar()
-    #
-    # This takes a raw grammar rule string and parses it into production data
-    # -----------------------------------------------------------------------------
-    """
-
-    pass
-
 
 def load_ply_lex():
     """
     # Python 2.x/3.0 compatibility.
     """
-
     pass
-
-
-def format_stack_entry(r):
-    """
-    # Format stack entries when the parser is running in debug mode
-    """
-
-    pass
-
-
-def format_result(r):
-    """
-    # Format the result message that the parser produces when running in debug mode.
-    """
-
-    pass
-
-
-def traverse(x, N, stack, F, X, R, FP):
-    pass
-
-
-def parse(self, input='None', lexer='None', debug='0', tracking='0', tokenfunc='None'):
-    pass
-
-
-def digraph(X, R, FP):
-    pass
-
-
-def get_caller_module_dict(levels):
-    pass
-
-
-def yacc(method="'LALR'", debug='1', module='None', tabmodule="'parsetab'", start='None', check_recursion='1', optimize='0', write_tables='1', debugfile="'parser.out'", outputdir="''", debuglog='None', errorlog='None', picklefile='None'):
-    pass
-
-
+def parse(self, input='None', lexer='None', debug='0', tracking='0', tokenfunc='None'): pass
 def rightmost_terminal(symbols, terminals):
     """
     # -----------------------------------------------------------------------------
@@ -720,33 +414,51 @@ def rightmost_terminal(symbols, terminals):
     # Return the rightmost terminal from a list of symbols.  Used in add_production()
     # -----------------------------------------------------------------------------
     """
-
     pass
-
-
-def func_code(f):
+def format_stack_entry(r):
+    """
+    # Format stack entries when the parser is running in debug mode
+    """
     pass
+def format_result(r):
+    """
+    # Format the result message that the parser produces when running in debug mode.
+    """
+    pass
+def parse_grammar(doc, file, line):
+    """
+    # -----------------------------------------------------------------------------
+    # parse_grammar()
+    #
+    # This takes a raw grammar rule string and parses it into production data
+    # -----------------------------------------------------------------------------
+    """
+    pass
+def traverse(x, N, stack, F, X, R, FP): pass
+def digraph(X, R, FP): pass
+def yacc(method="'LALR'", debug='1', module='None', tabmodule="'parsetab'", start='None', check_recursion='1', optimize='0', write_tables='1', debugfile="'parser.out'", outputdir="''", debuglog='None', errorlog='None', picklefile='None'): pass
+def func_code(f): pass
+def get_caller_module_dict(levels): pass
 
-
-
-default_lr = 'LALR'
-
-error_count = 3
 
 tab_module = 'parsetab'
 
-pickle_protocol = 0
-
-resultlimit = 40
-
-_is_identifier = None
+error_count = 3
 
 debug_file = 'parser.out'
 
-MAXINT = 2147483647
+resultlimit = 40
 
 yaccdebug = 1
 
+MAXINT = 2147483647
+
 __version__ = '3.3'
+
+default_lr = 'LALR'
+
+pickle_protocol = 0
+
+_is_identifier = None
 
 

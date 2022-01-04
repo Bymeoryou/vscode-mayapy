@@ -32,7 +32,12 @@ Sample usage to run the tests on the current scene in parallel mode and ignore o
         emConsistencyTest(doParallel=True)
 """
 
+
 from maya.debug.graphStructure import graphStructure
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 def _testPlayback(outputFile='None', maxFrames='10', resultsPath='None'):
     """
@@ -56,22 +61,12 @@ def _testPlayback(outputFile='None', maxFrames='10', resultsPath='None'):
     If resultsPath is set then the graph outputs will be dumped to a file
     whose base name is that with the suffix "_N.eg" for frame "N".
     """
-
     pass
-
-
-def _isMayaFile(fileName):
-    pass
-
-
 def _hasEvaluationManager():
     """
     Check to see if the evaluation manager is available
     """
-
     pass
-
-
 def emConsistencyTest(fileName='None', resultsPath='None', doParallel='False', maxFrames='10'):
     """
     Run a simulated playback, forcing a rebuild the evaluation manager graph
@@ -94,9 +89,8 @@ def emConsistencyTest(fileName='None', resultsPath='None', doParallel='False', m
     
     Returns True if all frames generated the same graph, otherwise False.
     """
-
     pass
-
+def _isMayaFile(fileName): pass
 
 
 EMCONSISTENCY_MAX_FRAMECOUNT = 10

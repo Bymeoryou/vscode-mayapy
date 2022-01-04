@@ -2,6 +2,10 @@
         @private
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 def private(method):
     """
     Use this decorator to force a class method to be really private
@@ -18,8 +22,5 @@ def private(method):
             def __myPrivateClass(self):
                     doSomeInternalWork()
     """
-
     pass
-
-
 

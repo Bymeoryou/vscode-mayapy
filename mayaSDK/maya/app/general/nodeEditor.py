@@ -10,6 +10,10 @@ pluginNodeCreationCallbacks
 Following the Mentalray example at the bottom of this file.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class NodeEditor(object):
     """
     Encapsulates one Node Editor panel instance.
@@ -17,33 +21,49 @@ class NodeEditor(object):
     
     
     
-    def __init__(self, ned):
-        pass
-    
-    
+    def __init__(self, ned): pass
     def buildMenus(self):
         """
         Create any required UI for this editor
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 
 
 
+
+def mayaNodeCategories(): pass
+def nEd(*args, **kwargs): pass
+def buildPanelMenus(ned):
+    """
+    Do the python menu creation.
+    This is called by nodeEdBuildPanelMenus
+    """
+    pass
 def _findCustomCreateCommand(nodeType):
     """
     Locate a custom command to create this nodeType, based on registered 
     custom classification categories. Return None if no match.
     """
-
     pass
-
-
+def _findStandardCreateCommand(nodeType):
+    """
+    Locate a standard create command based on classification cateogries
+    """
+    pass
+def mrClassificationCB():
+    """
+    eturn classification root of all nodes handled by the corresponding create callback.
+    """
+    pass
+def createCallback(ned):
+    """
+    Do non-UI initialization
+    """
+    pass
 def mrCreateNodeCB(postCmd, nodeType):
     """
     If the given node is Mentalray, return a MEL command which will create
@@ -54,96 +74,38 @@ def mrCreateNodeCB(postCmd, nodeType):
     \param[in] nodeType - The type of the node to be created
     eturn MEL command which creates the given node, or None
     """
-
     pass
-
-
-def createCallback(ned):
-    """
-    Do non-UI initialization
-    """
-
-    pass
-
-
-def mrClassificationCB():
-    """
-    eturn classification root of all nodes handled by the corresponding create callback.
-    """
-
-    pass
-
-
-def _findStandardCreateCommand(nodeType):
-    """
-    Locate a standard create command based on classification cateogries
-    """
-
-    pass
-
-
-def mrNodeCategories():
-    pass
-
-
-def mayaNodeCategories():
-    pass
-
-
-def createNode(nodeType):
-    """
-    Called by the editor to create a new node based on the supplied type.
-    """
-
-    pass
-
-
-def _findCustomCreateCommand2012(nodeType):
-    """
-    Implementation of _findCustomCreateCommand for 2012
-    """
-
-    pass
-
-
-def buildPanelMenus(ned):
-    """
-    Do the python menu creation.
-    This is called by nodeEdBuildPanelMenus
-    """
-
-    pass
-
-
-def removeCallback(ned):
-    """
-    Clean up any UI
-    """
-
-    pass
-
-
-def nEd(*args, **kwargs):
-    pass
-
-
 def addCallback(ned):
     """
     Create any required UI
     """
-
     pass
-
+def removeCallback(ned):
+    """
+    Clean up any UI
+    """
+    pass
+def createNode(nodeType):
+    """
+    Called by the editor to create a new node based on the supplied type.
+    """
+    pass
+def mrNodeCategories(): pass
+def _findCustomCreateCommand2012(nodeType):
+    """
+    Implementation of _findCustomCreateCommand for 2012
+    """
+    pass
 
 
 _mrCreateNodeTable = []
 
 editors = {}
 
-pluginNodeClassificationCallbacks = []
-
 pluginNodeCreationCallbacks = []
 
 _createNodeTable = []
+
+pluginNodeClassificationCallbacks = []
 
 

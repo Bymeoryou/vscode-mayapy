@@ -8,3 +8,6 @@ Tool Modules
   - `pymel.tools.envparse`
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional

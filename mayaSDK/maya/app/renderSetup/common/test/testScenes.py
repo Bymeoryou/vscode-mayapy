@@ -1,4 +1,13 @@
+from maya.app.renderSetup.common.test.sceneUtils import assignMaterial
+from maya.app.renderSetup.common.test.sceneUtils import testShapeColor
+from maya.app.renderSetup.common.test.sceneUtils import setColor
+from maya.app.renderSetup.common.test.sceneUtils import ColorConstants
+from maya.app.renderSetup.common.test.sceneUtils import createShader
 from collections import namedtuple
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 Instance = namedtuple('Instance', ('transform', 'shape', 'generator', 'materials'))
 
@@ -7,51 +16,20 @@ Material = namedtuple('Material', ('shadingEngine', 'surfaceShader', 'displaceme
 
 
 
-def createSphereWithAllShaders():
-    """
-    Creates a poly sphere (pSphere1) with the following material.
-     
-    place2dTexture1 ----> noise1 ----> bump1 ----> lambert1 ----\ 
-                                        displacementShader1 ----- initialShadingGroup
-                                                 volumeFog1 ----/
-    You can see it with: 
-    import maya.app.renderSetup.common.test.testScenes as scenes; scenes.createSphereWithAllShaders()
-    """
 
+def createRenderSetupScene():
+    """
+    Create a trivial scene with render setup.
+    Return the render layer.
+    """
     pass
-
-
 def createSurfaceShader(color):
     """
     Creates a Surface Shader with the specified color.
     Returns a tuple (shaderName, shadingEngineName)
     """
-
     pass
-
-
-def createAllShaders():
-    """
-    place2dTexture# ----> noise# ----> bump# ----> blinn# ----\ 
-                                      displacementShader# ----- shadingGroup#
-                                               volumeFog# ----/
-    """
-
-    pass
-
-
-def assignShadingEngine(shape, shadingEngine, components='None'):
-    """
-    Assign shading engine to shape.
-    "components" is an optional list of mesh face indices or nurbs surface patch indices
-    that can be used to specify per-face shading engine assignment.
-    A mesh index is given by an integer >= 0.
-    A surface patch is given by a tuple (span, section) where span and section are integers >= 0.
-    """
-
-    pass
-
-
+def _createSceneWithMaterialShaderOverrides(typeId, setSource): pass
 def createSceneWithMaterials():
     """
     Create a test scene composed of
@@ -67,9 +45,36 @@ def createSceneWithMaterials():
     To see it in maya, just run python script:
     import maya.app.renderSetup.common.test.testScenes as scenes; scenes.createSceneWithMaterials()
     """
-
     pass
-
+def createSphereWithAllShaders():
+    """
+    Creates a poly sphere (pSphere1) with the following material.
+     
+    place2dTexture1 ----> noise1 ----> bump1 ----> lambert1 ----\ 
+                                        displacementShader1 ----- initialShadingGroup
+                                                 volumeFog1 ----/
+    You can see it with: 
+    import maya.app.renderSetup.common.test.testScenes as scenes; scenes.createSphereWithAllShaders()
+    """
+    pass
+def createAllShaders():
+    """
+    place2dTexture# ----> noise# ----> bump# ----> blinn# ----\ 
+                                      displacementShader# ----- shadingGroup#
+                                               volumeFog# ----/
+    """
+    pass
+def assignShadingEngine(shape, shadingEngine, components='None'):
+    """
+    Assign shading engine to shape.
+    "components" is an optional list of mesh face indices or nurbs surface patch indices
+    that can be used to specify per-face shading engine assignment.
+    A mesh index is given by an integer >= 0.
+    A surface patch is given by a tuple (span, section) where span and section are integers >= 0.
+    """
+    pass
+def createSceneWithMaterialOverrides(): pass
+def createSceneWithShaderOverrides(): pass
 
 
 DefaultMaterial = ()

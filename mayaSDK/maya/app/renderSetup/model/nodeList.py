@@ -36,117 +36,13 @@ module receive and take ownership of their data directly as Python objects,
 on first execution.
 """
 
+
 from collections import deque
 from maya.app.renderSetup.model.nodeListPrivate import forwardListGenerator
 
-class ListBase(object):
-    """
-    List mix-in class.
-    
-    This class implements list operations for its derived classes.
-    Lists are observable (subjects in the Observer Pattern:
-    
-    https://en.wikipedia.org/wiki/Observer_pattern
-    
-    ).  Observers are held through weak references.  It is not necessary
-    for observers to remove themselves from ListBase subjects when they are
-    about to be destroyed (in their __del__ method).  A ListBase subject
-    will clean up these zombie observers on next invocation of its
-    itemAdded() or itemRemoved().
-    
-    Observers are notified with the list item that was added or removed.
-    They must have listItemAdded() and listItemRemoved() methods.
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def addListObserver(self, obs):
-        """
-        Add an observer to this list.
-        
-        Observers are kept as weak references.  The order in which
-        observers are called is unspecified.
-        """
-    
-        pass
-    
-    
-    def clearListObservers(self):
-        pass
-    
-    
-    def getBack(self):
-        pass
-    
-    
-    def getFront(self):
-        """
-        # List front and back operations.
-        #
-        # The list front and back are destination message plugs, so that there
-        # can only be one connection to them, as there is only one front and
-        # one back list item.  They are connected to the front and back list
-        # items through the list item's message plug.
-        """
-    
-        pass
-    
-    
-    def itemAdded(self, listItem):
-        """
-        Call the listItemAdded() methods on list item observers
-        
-        The order in which observers are called is not specified.
-        """
-    
-        pass
-    
-    
-    def itemRemoved(self, listItem):
-        """
-        Call the listItemRemoved() methods on list item observers
-        
-        The order in which observers are called is not specified.
-        """
-    
-        pass
-    
-    
-    def removeListObserver(self, obs):
-        """
-        Remove an observer from this list.
-        
-        Observers are kept as weak references.  ValueError is raised by the 
-        remove listItem method if the argument observer is not found.
-        """
-    
-        pass
-    
-    
-    def setBack(self, item):
-        pass
-    
-    
-    def setFront(self, item):
-        pass
-    
-    
-    def initListItems(cls):
-        """
-        Create and return a source message attribute that connects to all list items.
-        """
-    
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class _MPxNode(object):
     """
@@ -159,10 +55,7 @@ class _MPxNode(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def addExternalContentForFileAttr(*args, **kwargs):
         """
         addExternalContentForFileAttr(table, attr) -> bool
@@ -176,10 +69,7 @@ class _MPxNode(object):
         
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-    
         pass
-    
-    
     def compute(*args, **kwargs):
         """
         compute(plug, dataBlock) -> self
@@ -190,17 +80,16 @@ class _MPxNode(object):
         
         The MDataBlock will provide smart handles for reading and writing this node's attribute values.  Only these values should be used when performing computations.
         
-        When evaluating the dependency graph, Maya will first call the compute method for this node.  If the plug that is provided to the compute indicates that that the attribute was defined by the Maya parent node, the compute method should return None.  When this occurs, Maya will call the internal Maya node from which the user-defined node is derived to compute the plug's value.
+        When evaluating the dependency graph, Maya will first call the compute method for this node.  If the plug that is provided to the compute indicates that that the attribute was defined by the Maya parent node, the compute method should return None.  When this occurs, Maya will call the internal Maya node from which the user-defined node is derived to compute the plug's value. Returning any othervalue (including self) will tell Maya that this node successfully computed theplug. Raising an exception will tell Maya that this node failed at computingthe plug. Note that in most cases, Maya ignores node compute failures.
+        
+        In other words, the compute method should return None to get the Maya parent class to compute the plug. It should return self (or any other value) to indicate that the plug was computed successfully.
         
         This means that a user defined node does not need to be concerned with computing inherited output attributes.  However, if desired, these can be safely recomputed by this method to change the behaviour of the node.
         
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-    
         pass
-    
-    
     def connectionBroken(*args, **kwargs):
         """
         connectionBroken( plug, otherPlug, asSrc) -> self
@@ -211,10 +100,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def connectionMade(*args, **kwargs):
         """
         connectionMade(plug, otherPlug, asSrc) -> self
@@ -225,10 +111,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def copyInternalData(*args, **kwargs):
         """
         copyInternalData(node) -> self
@@ -239,10 +122,7 @@ class _MPxNode(object):
         
         * node (MPxNode) - the node that is being duplicated.
         """
-    
         pass
-    
-    
     def dependsOn(*args, **kwargs):
         """
         dependsOn( plug, otherPlug) -> bool/None
@@ -258,20 +138,14 @@ class _MPxNode(object):
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-    
         pass
-    
-    
     def doNotWrite(*args, **kwargs):
         """
         doNotWrite() -> bool
         
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-    
         pass
-    
-    
     def forceCache(*args, **kwargs):
         """
         forceCache(ctx=MDGContext::current()) -> MDataBlock
@@ -281,10 +155,7 @@ class _MPxNode(object):
         
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-    
         pass
-    
-    
     def getExternalContent(*args, **kwargs):
         """
         getExternalContent(table) -> self
@@ -299,10 +170,7 @@ class _MPxNode(object):
         
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-    
         pass
-    
-    
     def getFilesToArchive(*args, **kwargs):
         """
         getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
@@ -319,10 +187,7 @@ class _MPxNode(object):
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-    
         pass
-    
-    
     def getInternalValue(*args, **kwargs):
         """
         getInternalValue(plug, dataHandle) -> bool
@@ -338,10 +203,7 @@ class _MPxNode(object):
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-    
         pass
-    
-    
     def getInternalValueInContext(*args, **kwargs):
         """
         getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
@@ -352,10 +214,7 @@ class _MPxNode(object):
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-    
         pass
-    
-    
     def internalArrayCount(*args, **kwargs):
         """
         internalArrayCount(plug) -> int
@@ -372,10 +231,7 @@ class _MPxNode(object):
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-    
         pass
-    
-    
     def isAbstractClass(*args, **kwargs):
         """
         isAbstractClass() -> bool
@@ -384,10 +240,7 @@ class _MPxNode(object):
         
         It is not necessary to override this method.
         """
-    
         pass
-    
-    
     def isPassiveOutput(*args, **kwargs):
         """
         isPassiveOutput(plug) -> bool
@@ -396,10 +249,7 @@ class _MPxNode(object):
         
         * plug (MPlug) - plug representing output in question.
         """
-    
         pass
-    
-    
     def legalConnection(*args, **kwargs):
         """
         legalConnection(plug, otherPlug, asSrc) -> bool/None
@@ -412,10 +262,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def legalDisconnection(*args, **kwargs):
         """
         legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
@@ -428,10 +275,7 @@ class _MPxNode(object):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-    
         pass
-    
-    
     def name(*args, **kwargs):
         """
         name() -> string
@@ -442,10 +286,7 @@ class _MPxNode(object):
         
         Returns the name of the node
         """
-    
         pass
-    
-    
     def passThroughToMany(*args, **kwargs):
         """
         passThroughToMany(plug, plugArray) -> bool
@@ -457,10 +298,7 @@ class _MPxNode(object):
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-    
         pass
-    
-    
     def passThroughToOne(*args, **kwargs):
         """
         passThroughToOne(plug) -> plug
@@ -473,10 +311,7 @@ class _MPxNode(object):
         
         * plug (MPlug) - the plug.
         """
-    
         pass
-    
-    
     def postConstructor(*args, **kwargs):
         """
         postConstructor() -> self
@@ -485,10 +320,7 @@ class _MPxNode(object):
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-    
         pass
-    
-    
     def postEvaluation(*args, **kwargs):
         """
         postEvaluation(context, evalNode, evalType) -> None
@@ -517,10 +349,7 @@ class _MPxNode(object):
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-    
         pass
-    
-    
     def preEvaluation(*args, **kwargs):
         """
         preEvaluation(context, evalNode) -> None
@@ -543,10 +372,7 @@ class _MPxNode(object):
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-    
         pass
-    
-    
     def setDependentsDirty(*args, **kwargs):
         """
         setDependentsDirty(plug, plugArray) -> self
@@ -568,10 +394,7 @@ class _MPxNode(object):
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-    
         pass
-    
-    
     def setDoNotWrite(*args, **kwargs):
         """
         setDoNotWrite(bool) -> self
@@ -582,10 +405,7 @@ class _MPxNode(object):
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-    
         pass
-    
-    
     def setExternalContent(*args, **kwargs):
         """
         setExternalContent(table) -> self
@@ -600,10 +420,7 @@ class _MPxNode(object):
         
         * table Key->location table with new content locations.
         """
-    
         pass
-    
-    
     def setExternalContentForFileAttr(*args, **kwargs):
         """
         setExternalContentForFileAttr(attr, table) -> bool
@@ -617,10 +434,7 @@ class _MPxNode(object):
         
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-    
         pass
-    
-    
     def setInternalValue(*args, **kwargs):
         """
         setInternalValue(plug, dataHandle) -> bool
@@ -639,10 +453,7 @@ class _MPxNode(object):
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-    
         pass
-    
-    
     def setInternalValueInContext(*args, **kwargs):
         """
         setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
@@ -653,24 +464,18 @@ class _MPxNode(object):
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-    
         pass
-    
-    
     def setMPSafe(*args, **kwargs):
         """
         setMPSafe(bool) -> self
         
-        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data. 
+        This method is obsolete. Override MPxNode.setSchedulingType instead.
         
-        This flag does NOT mark a node thread safe for parallel DG evaluation in Viewport 2.0.  To mark a node thread safe for parallel DG evaluation see the setNodeTypeFlag mel command. 
+        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data. 
         
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-    
         pass
-    
-    
     def shouldSave(*args, **kwargs):
         """
         shouldSave(plug) -> bool/None
@@ -682,20 +487,14 @@ class _MPxNode(object):
         
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-    
         pass
-    
-    
     def thisMObject(*args, **kwargs):
         """
         thisMObject() -> MObject
         
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-    
         pass
-    
-    
     def type(*args, **kwargs):
         """
         type() -> int
@@ -730,30 +529,22 @@ class _MPxNode(object):
           kGeometryFilter                               Custom deformer derived from MPxGeometryFilter
                  kBlendShape                                    Custom deformer derived from MPxBlendShape
         """
-    
         pass
-    
-    
     def typeId(*args, **kwargs):
         """
         typeId() -> MTypeId
         
         Returns the TYPEID of this node.
         """
-    
         pass
-    
-    
     def typeName(*args, **kwargs):
         """
         typeName() -> string
         
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-    
         pass
-    
-    
+    @staticmethod
     def addAttribute(*args, **kwargs):
         """
         addAttribute(attr) -> None
@@ -767,10 +558,8 @@ class _MPxNode(object):
         
         * attr (MObject) - new attribute to add.
         """
-    
         pass
-    
-    
+    @staticmethod
     def attributeAffects(*args, **kwargs):
         """
         attributeAffects(whenChanges, isAffected) -> None
@@ -784,10 +573,8 @@ class _MPxNode(object):
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-    
         pass
-    
-    
+    @staticmethod
     def inheritAttributesFrom(*args, **kwargs):
         """
         inheritAttributesFrom(parentClassName) -> None
@@ -802,10 +589,7 @@ class _MPxNode(object):
         
         * parentClassName (string) - class of node to inherit attributes from.
         """
-    
         pass
-    
-    
     __new__ = None
     
     
@@ -902,6 +686,84 @@ class _MPxNode(object):
     kTransformNode = 11
 
 
+class ListBase(object):
+    """
+    List mix-in class.
+    
+    This class implements list operations for its derived classes.
+    Lists are observable (subjects in the Observer Pattern:
+    
+    https://en.wikipedia.org/wiki/Observer_pattern
+    
+    ).  Observers are held through weak references.  It is not necessary
+    for observers to remove themselves from ListBase subjects when they are
+    about to be destroyed (in their __del__ method).  A ListBase subject
+    will clean up these zombie observers on next invocation of its
+    itemAdded() or itemRemoved().
+    
+    Observers are notified with the list item that was added or removed.
+    They must have listItemAdded() and listItemRemoved() methods.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def addListObserver(self, obs):
+        """
+        Add an observer to this list.
+        
+        Observers are kept as weak references.  The order in which
+        observers are called is unspecified.
+        """
+        pass
+    def clearListObservers(self): pass
+    def getBack(self): pass
+    def getFront(self):
+        """
+        # List front and back operations.
+        #
+        # The list front and back are destination message plugs, so that there
+        # can only be one connection to them, as there is only one front and
+        # one back list item.  They are connected to the front and back list
+        # items through the list item's message plug.
+        """
+        pass
+    def itemAdded(self, listItem):
+        """
+        Call the listItemAdded() methods on list item observers
+        
+        The order in which observers are called is not specified.
+        """
+        pass
+    def itemRemoved(self, listItem):
+        """
+        Call the listItemRemoved() methods on list item observers
+        
+        The order in which observers are called is not specified.
+        """
+        pass
+    def removeListObserver(self, obs):
+        """
+        Remove an observer from this list.
+        
+        Observers are kept as weak references.  ValueError is raised by the 
+        remove listItem method if the argument observer is not found.
+        """
+        pass
+    def setBack(self, item): pass
+    def setFront(self, item): pass
+    @classmethod
+    def initListItems(cls):
+        """
+        Create and return a source message attribute that connects to all list items.
+        """
+        pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
 class ListItem(_MPxNode):
     """
     List of nodes item base class.
@@ -912,19 +774,13 @@ class ListItem(_MPxNode):
     
     
     
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def activate(self):
         """
         Called when this list item is inserted into the list.
         Override this method to do any scene specific initialization.
         """
-    
         pass
-    
-    
     def ancestors(self, root='None'):
         """
         Returns the inclusive list of parents of this node.
@@ -933,43 +789,28 @@ class ListItem(_MPxNode):
         list is this node.  If a root argument is given, iteration will
         stop at and include this root node, if found.
         """
-    
         pass
-    
-    
     def deactivate(self):
         """
         Called when this list item is removed from the list.
         Override this method to do any scene specific teardown.
         """
-    
         pass
-    
-    
     def getNext(self):
         """
         Return the list item following this one.
         
         If there is no next item, returns None.
         """
-    
         pass
-    
-    
     def getPrevious(self):
         """
         Return the list item before this one.
         
         If there is no previous item, returns None.
         """
-    
         pass
-    
-    
-    def isAbstractClass(self):
-        pass
-    
-    
+    def isAbstractClass(self): pass
     def parent(self):
         """
         Returns the list to which this item belongs.
@@ -977,14 +818,8 @@ class ListItem(_MPxNode):
         If the item belongs to no list, None is returned.  This method
         has O(1) time complexity.
         """
-    
         pass
-    
-    
-    def setNext(self, item):
-        pass
-    
-    
+    def setNext(self, item): pass
     def setParent(self, parentListUserNode):
         """
         Set the list to which this item belongs.
@@ -992,29 +827,21 @@ class ListItem(_MPxNode):
         To remove this item from its list, the parent node argument must be
         None.
         """
-    
         pass
-    
-    
-    def setPrevious(self, item):
-        pass
-    
-    
+    def setPrevious(self, item): pass
+    @staticmethod
     def creator():
         """
         # Awkwardly, abstract base classes seem to need a creator method.
         """
-    
         pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    @staticmethod
+    def initializer(): pass
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     kTypeId = None
     
@@ -1032,72 +859,6 @@ class ListItem(_MPxNode):
 
 
 
-def insert(list, ndx, x):
-    """
-    Insert node x before position ndx in list.
-    
-    This function has the same characteristics as nodeListPrivate.insert(),
-    along with support for undo / redo.
-    """
-
-    pass
-
-
-def forwardListNodeClassGenerator(list, cls):
-    pass
-
-
-def insertBefore(list, nextItem, x):
-    """
-    Insert node x before item nextItem in list.
-    
-    This function has the same characteristics as nodeListPrivate.insertBefore(),
-    along with support for undo / redo.
-    """
-
-    pass
-
-
-def remove(list, x):
-    """
-    Remove node x from the list, with support for undo.
-    
-    This function has the same characteristics as nodeListPrivate.remove(),
-    along with support for undo / redo.
-    """
-
-    pass
-
-
-def prepend(list, x):
-    """
-    Add x to the head of the list.
-    
-    This function has the same characteristics as nodeListPrivate.prepend(),
-    along with support for undo / redo.
-    """
-
-    pass
-
-
-def reverseListNodeClassGenerator(list, cls):
-    pass
-
-
-def reverseListGenerator(list):
-    pass
-
-
-def isAfter(list, a, b):
-    """
-    Return True if a is after b in list.
-    
-    No check is made to ensure either argument is a member of the list.
-    This function has O(n) time complexity.
-    """
-
-    pass
-
 
 def pop(list):
     """
@@ -1106,10 +867,50 @@ def pop(list):
     This function has the same characteristics as nodeListPrivate.pop(),
     along with support for undo / redo.
     """
-
     pass
-
-
+def reverseListGenerator(list): pass
+def insertBefore(list, nextItem, x):
+    """
+    Insert node x before item nextItem in list.
+    
+    This function has the same characteristics as nodeListPrivate.insertBefore(),
+    along with support for undo / redo.
+    """
+    pass
+def prepend(list, x):
+    """
+    Add x to the head of the list.
+    
+    This function has the same characteristics as nodeListPrivate.prepend(),
+    along with support for undo / redo.
+    """
+    pass
+def insert(list, ndx, x):
+    """
+    Insert node x before position ndx in list.
+    
+    This function has the same characteristics as nodeListPrivate.insert(),
+    along with support for undo / redo.
+    """
+    pass
+def forwardListNodeClassGenerator(list, cls): pass
+def isAfter(list, a, b):
+    """
+    Return True if a is after b in list.
+    
+    No check is made to ensure either argument is a member of the list.
+    This function has O(n) time complexity.
+    """
+    pass
+def reverseListNodeClassGenerator(list, cls): pass
+def remove(list, x):
+    """
+    Remove node x from the list, with support for undo.
+    
+    This function has the same characteristics as nodeListPrivate.remove(),
+    along with support for undo / redo.
+    """
+    pass
 def append(list, x):
     """
     Append node x to the list.
@@ -1117,8 +918,5 @@ def append(list, x):
     This function has the same characteristics as nodeListPrivate.insertBefore(),
     along with support for undo / redo.
     """
-
     pass
-
-
 

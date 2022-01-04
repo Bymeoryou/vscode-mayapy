@@ -1,58 +1,24 @@
+from PySide2.QtGui import QFontMetrics
+from PySide2.QtWidgets import QVBoxLayout
+from maya.app.renderSetup.views.baseDelegate import BaseDelegate
 from PySide2.QtGui import QPen
 from PySide2.QtCore import Signal
-from PySide2.QtGui import QBrush
-from PySide2.QtCore import QRect
-from PySide2.QtWidgets import QLineEdit
-from PySide2.QtGui import QColor
-from PySide2.QtWidgets import QVBoxLayout
 from PySide2.QtGui import QPainter
+from PySide2.QtGui import QBrush
+from PySide2.QtWidgets import QLineEdit
 from PySide2.QtCore import Qt
-from PySide2.QtGui import QTextOption
-from PySide2.QtGui import QFontMetrics
-from PySide2.QtWidgets import QFrame
-from maya.app.renderSetup.views.baseDelegate import BaseDelegate
+from PySide2.QtCore import QRect
 from PySide2.QtWidgets import QHBoxLayout
+from PySide2.QtGui import QColor
+from PySide2.QtWidgets import QFrame
+from PySide2.QtGui import QTextOption
 
-class NameLineEdit(QLineEdit):
-    """
-    This class is used to display the editable name associated with a 
-    collection, layer, or override.
-    """
-    
-    
-    
-    def __init__(self, item, parent):
-        pass
-    
-    
-    def focusInEvent(self, event):
-        pass
-    
-    
-    def focusOutEvent(self, event):
-        pass
-    
-    
-    def keyPressEvent(self, event):
-        pass
-    
-    
-    def nameChanged(self):
-        pass
-    
-    
-    def paintEvent(self, event):
-        pass
-    
-    
-    staticMetaObject = None
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class Frame(QFrame):
-    def __init__(self, item, parent):
-        pass
-    
-    
+    def __init__(self, item, parent): pass
     staticMetaObject = None
 
 
@@ -65,40 +31,56 @@ class FrameLayout(QFrame):
     
     
     
-    def __init__(self, item, parent):
-        pass
-    
-    
-    def addWidget(self, widget):
-        pass
-    
-    
-    def getWidget(self, index):
-        pass
-    
-    
-    def initContentFrame(self):
-        pass
-    
-    
-    def initFrameLayout(self):
-        pass
-    
-    
-    def initMainLayout(self):
-        pass
-    
-    
-    def initTitleFrame(self):
-        pass
-    
-    
+    def __init__(self, item, parent): pass
+    def addWidget(self, widget): pass
+    def getWidget(self, index): pass
+    def initContentFrame(self): pass
+    def initFrameLayout(self): pass
+    def initMainLayout(self): pass
+    def initTitleFrame(self): pass
     def toggleCollapsed(self):
         """
         When the title frame is clicked, this function is called to toggle the collapsed state
         """
-    
         pass
+    staticMetaObject = None
+
+
+class NameLineEdit(QLineEdit):
+    """
+    This class is used to display the editable name associated with a 
+    collection, layer, or override.
+    """
+    
+    
+    
+    def __init__(self, item, parent): pass
+    def focusInEvent(self, event): pass
+    def focusOutEvent(self, event): pass
+    def keyPressEvent(self, event): pass
+    def nameChanged(self): pass
+    def paintEvent(self, event): pass
+    staticMetaObject = None
+
+
+class TitleFrame(Frame):
+    """
+    This class defines the frame for the FrameLayout
+    """
+    
+    
+    
+    def __init__(self, item, parent): pass
+    def mousePressEvent(self, event): pass
+    def paintEvent(self, e):
+        """
+        Draws the disabled or enabled title frame background.
+        """
+        pass
+    FRAME_HEIGHT = 56.0
+    
+    
+    clicked = None
     
     
     staticMetaObject = None
@@ -111,26 +93,17 @@ class CollapsibleArrowAndTitle(Frame):
     
     
     
-    def __init__(self, item, parent):
-        pass
-    
-    
+    def __init__(self, item, parent): pass
     def paintEvent(self, e):
         """
         Draws the color bar and arrow
         """
-    
         pass
-    
-    
     def setArrow(self, isCollapsed):
         """
         Sets the arrow direction
         """
-    
         pass
-    
-    
     ARROW_COLOR = None
     
     
@@ -153,38 +126,6 @@ class CollapsibleArrowAndTitle(Frame):
     
     
     WIDTH = 66.0
-    
-    
-    staticMetaObject = None
-
-
-class TitleFrame(Frame):
-    """
-    This class defines the frame for the FrameLayout
-    """
-    
-    
-    
-    def __init__(self, item, parent):
-        pass
-    
-    
-    def mousePressEvent(self, event):
-        pass
-    
-    
-    def paintEvent(self, e):
-        """
-        Draws the disabled or enabled title frame background.
-        """
-    
-        pass
-    
-    
-    FRAME_HEIGHT = 56.0
-    
-    
-    clicked = None
     
     
     staticMetaObject = None

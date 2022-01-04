@@ -1,20 +1,37 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class ClassInfo(object):
     def __call__(*args, **kwargs):
         """
         x.__call__(...) <==> x(...)
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
+    __new__ = None
+
+
+class Slot(object):
+    """
+    Slot
+    """
     
     
+    
+    def __call__(*args, **kwargs):
+        """
+        x.__call__(...) <==> x(...)
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
     __new__ = None
 
 
@@ -22,233 +39,192 @@ class _Object(object):
     __dict__ = None
 
 
+class MetaFunction(object):
+    """
+    MetaFunction
+    """
+    
+    
+    
+    def __call__(*args, **kwargs):
+        """
+        x.__call__(...) <==> x(...)
+        """
+        pass
+    __new__ = None
+
+
+class Signal(object):
+    """
+    Signal
+    """
+    
+    
+    
+    def __call__(*args, **kwargs):
+        """
+        x.__call__(...) <==> x(...)
+        """
+        pass
+    def __getitem__(*args, **kwargs):
+        """
+        x.__getitem__(y) <==> x[y]
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __str__(*args, **kwargs):
+        """
+        x.__str__() <==> str(x)
+        """
+        pass
+    __new__ = None
+
+
 class QtMsgType(object):
     def __add__(*args, **kwargs):
         """
         x.__add__(y) <==> x+y
         """
-    
         pass
-    
-    
     def __and__(*args, **kwargs):
         """
         x.__and__(y) <==> x&y
         """
-    
         pass
-    
-    
     def __div__(*args, **kwargs):
         """
         x.__div__(y) <==> x/y
         """
-    
         pass
-    
-    
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
     def __hash__(*args, **kwargs):
         """
         x.__hash__() <==> hash(x)
         """
-    
         pass
-    
-    
     def __index__(*args, **kwargs):
         """
         x[y:z] <==> x[y.__index__():z.__index__()]
         """
-    
         pass
-    
-    
     def __int__(*args, **kwargs):
         """
         x.__int__() <==> int(x)
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __long__(*args, **kwargs):
         """
         x.__long__() <==> long(x)
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __mul__(*args, **kwargs):
         """
         x.__mul__(y) <==> x*y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __nonzero__(*args, **kwargs):
         """
         x.__nonzero__() <==> x != 0
         """
-    
         pass
-    
-    
     def __or__(*args, **kwargs):
         """
         x.__or__(y) <==> x|y
         """
-    
         pass
-    
-    
     def __pos__(*args, **kwargs):
         """
         x.__pos__() <==> +x
         """
-    
         pass
-    
-    
     def __radd__(*args, **kwargs):
         """
         x.__radd__(y) <==> y+x
         """
-    
         pass
-    
-    
     def __rand__(*args, **kwargs):
         """
         x.__rand__(y) <==> y&x
         """
-    
         pass
-    
-    
     def __rdiv__(*args, **kwargs):
         """
         x.__rdiv__(y) <==> y/x
         """
-    
         pass
-    
-    
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
     def __rmul__(*args, **kwargs):
         """
         x.__rmul__(y) <==> y*x
         """
-    
         pass
-    
-    
     def __ror__(*args, **kwargs):
         """
         x.__ror__(y) <==> y|x
         """
-    
         pass
-    
-    
     def __rsub__(*args, **kwargs):
         """
         x.__rsub__(y) <==> y-x
         """
-    
         pass
-    
-    
     def __rxor__(*args, **kwargs):
         """
         x.__rxor__(y) <==> y^x
         """
-    
         pass
-    
-    
     def __str__(*args, **kwargs):
         """
         x.__str__() <==> str(x)
         """
-    
         pass
-    
-    
     def __sub__(*args, **kwargs):
         """
         x.__sub__(y) <==> x-y
         """
-    
         pass
-    
-    
     def __xor__(*args, **kwargs):
         """
         x.__xor__(y) <==> x^y
         """
-    
         pass
-    
-    
-    name = None
-    
     QtCriticalMsg = None
     
     
@@ -270,93 +246,10 @@ class QtMsgType(object):
     __new__ = None
     
     
+    name = None
+    
+    
     values = {}
-
-
-class MetaFunction(object):
-    """
-    MetaFunction
-    """
-    
-    
-    
-    def __call__(*args, **kwargs):
-        """
-        x.__call__(...) <==> x(...)
-        """
-    
-        pass
-    
-    
-    __new__ = None
-
-
-class Signal(object):
-    """
-    Signal
-    """
-    
-    
-    
-    def __call__(*args, **kwargs):
-        """
-        x.__call__(...) <==> x(...)
-        """
-    
-        pass
-    
-    
-    def __getitem__(*args, **kwargs):
-        """
-        x.__getitem__(y) <==> x[y]
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __str__(*args, **kwargs):
-        """
-        x.__str__() <==> str(x)
-        """
-    
-        pass
-    
-    
-    __new__ = None
-
-
-class Slot(object):
-    """
-    Slot
-    """
-    
-    
-    
-    def __call__(*args, **kwargs):
-        """
-        x.__call__(...) <==> x(...)
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    __new__ = None
 
 
 class Property(object):
@@ -364,245 +257,835 @@ class Property(object):
         """
         x.__call__(...) <==> x(...)
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def getter(*args, **kwargs):
-        pass
-    
-    
-    def read(*args, **kwargs):
-        pass
-    
-    
-    def setter(*args, **kwargs):
-        pass
-    
-    
-    def write(*args, **kwargs):
-        pass
-    
-    
+    def getter(*args, **kwargs): pass
+    def read(*args, **kwargs): pass
+    def setter(*args, **kwargs): pass
+    def write(*args, **kwargs): pass
     __new__ = None
 
 
-class QDirIterator(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def fileInfo(*args, **kwargs):
-        pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def filePath(*args, **kwargs):
-        pass
-    
-    
-    def hasNext(*args, **kwargs):
-        pass
-    
-    
-    def next(*args, **kwargs):
-        pass
-    
-    
-    def path(*args, **kwargs):
-        pass
-    
-    
-    FollowSymlinks = None
-    
-    
-    IteratorFlag = None
-    
-    
-    IteratorFlags = None
-    
-    
-    NoIteratorFlags = None
-    
-    
-    Subdirectories = None
-    
-    
-    __new__ = None
-
-
-class QMimeType(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+class QLine(_Object):
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
+    def __hash__(*args, **kwargs):
+        """
+        x.__hash__() <==> hash(x)
+        """
+        pass
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
-    def aliases(*args, **kwargs):
+    def dx(*args, **kwargs): pass
+    def dy(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def p1(*args, **kwargs): pass
+    def p2(*args, **kwargs): pass
+    def setLine(*args, **kwargs): pass
+    def setP1(*args, **kwargs): pass
+    def setP2(*args, **kwargs): pass
+    def setPoints(*args, **kwargs): pass
+    def toTuple(*args, **kwargs): pass
+    def translate(*args, **kwargs): pass
+    def translated(*args, **kwargs): pass
+    def x1(*args, **kwargs): pass
+    def x2(*args, **kwargs): pass
+    def y1(*args, **kwargs): pass
+    def y2(*args, **kwargs): pass
+    __new__ = None
+
+
+class QBitArray(_Object):
+    def __and__(*args, **kwargs):
+        """
+        x.__and__(y) <==> x&y
+        """
         pass
-    
-    
-    def allAncestors(*args, **kwargs):
+    def __copy__(*args, **kwargs): pass
+    def __delitem__(*args, **kwargs):
+        """
+        x.__delitem__(y) <==> del x[y]
+        """
         pass
-    
-    
-    def comment(*args, **kwargs):
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
         pass
-    
-    
-    def filterString(*args, **kwargs):
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
         pass
-    
-    
-    def genericIconName(*args, **kwargs):
+    def __getitem__(*args, **kwargs):
+        """
+        x.__getitem__(y) <==> x[y]
+        """
         pass
-    
-    
-    def globPatterns(*args, **kwargs):
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
         pass
-    
-    
-    def iconName(*args, **kwargs):
+    def __hash__(*args, **kwargs):
+        """
+        x.__hash__() <==> hash(x)
+        """
         pass
-    
-    
-    def inherits(*args, **kwargs):
+    def __iand__(*args, **kwargs):
+        """
+        x.__iand__(y) <==> x&=y
+        """
         pass
-    
-    
-    def isDefault(*args, **kwargs):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
         pass
-    
-    
-    def isValid(*args, **kwargs):
+    def __invert__(*args, **kwargs):
+        """
+        x.__invert__() <==> ~x
+        """
         pass
-    
-    
-    def name(*args, **kwargs):
+    def __ior__(*args, **kwargs):
+        """
+        x.__ior__(y) <==> x|=y
+        """
         pass
-    
-    
-    def parentMimeTypes(*args, **kwargs):
+    def __ixor__(*args, **kwargs):
+        """
+        x.__ixor__(y) <==> x^=y
+        """
         pass
-    
-    
-    def preferredSuffix(*args, **kwargs):
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
         pass
-    
-    
-    def suffixes(*args, **kwargs):
+    def __len__(*args, **kwargs):
+        """
+        x.__len__() <==> len(x)
+        """
         pass
-    
-    
-    def swap(*args, **kwargs):
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
         pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __or__(*args, **kwargs):
+        """
+        x.__or__(y) <==> x|y
+        """
+        pass
+    def __rand__(*args, **kwargs):
+        """
+        x.__rand__(y) <==> y&x
+        """
+        pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def __ror__(*args, **kwargs):
+        """
+        x.__ror__(y) <==> y|x
+        """
+        pass
+    def __rxor__(*args, **kwargs):
+        """
+        x.__rxor__(y) <==> y^x
+        """
+        pass
+    def __setitem__(*args, **kwargs):
+        """
+        x.__setitem__(i, y) <==> x[i]=y
+        """
+        pass
+    def __xor__(*args, **kwargs):
+        """
+        x.__xor__(y) <==> x^y
+        """
+        pass
+    def at(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def clearBit(*args, **kwargs): pass
+    def count(*args, **kwargs): pass
+    def fill(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def resize(*args, **kwargs): pass
+    def setBit(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def testBit(*args, **kwargs): pass
+    def toggleBit(*args, **kwargs): pass
+    def truncate(*args, **kwargs): pass
+    __new__ = None
+
+
+class QMetaObject(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def cast(*args, **kwargs): pass
+    def classInfo(*args, **kwargs): pass
+    def classInfoCount(*args, **kwargs): pass
+    def classInfoOffset(*args, **kwargs): pass
+    def className(*args, **kwargs): pass
+    def constructor(*args, **kwargs): pass
+    def constructorCount(*args, **kwargs): pass
+    def enumerator(*args, **kwargs): pass
+    def enumeratorCount(*args, **kwargs): pass
+    def enumeratorOffset(*args, **kwargs): pass
+    def indexOfClassInfo(*args, **kwargs): pass
+    def indexOfConstructor(*args, **kwargs): pass
+    def indexOfEnumerator(*args, **kwargs): pass
+    def indexOfMethod(*args, **kwargs): pass
+    def indexOfProperty(*args, **kwargs): pass
+    def indexOfSignal(*args, **kwargs): pass
+    def indexOfSlot(*args, **kwargs): pass
+    def method(*args, **kwargs): pass
+    def methodCount(*args, **kwargs): pass
+    def methodOffset(*args, **kwargs): pass
+    def newInstance(*args, **kwargs): pass
+    def property(*args, **kwargs): pass
+    def propertyCount(*args, **kwargs): pass
+    def propertyOffset(*args, **kwargs): pass
+    def superClass(*args, **kwargs): pass
+    def userProperty(*args, **kwargs): pass
+    @staticmethod
+    def checkConnectArgs(*args, **kwargs): pass
+    @staticmethod
+    def connectSlotsByName(*args, **kwargs): pass
+    @staticmethod
+    def disconnect(*args, **kwargs): pass
+    @staticmethod
+    def disconnectOne(*args, **kwargs): pass
+    @staticmethod
+    def invokeMethod(*args, **kwargs): pass
+    @staticmethod
+    def normalizedSignature(*args, **kwargs): pass
+    @staticmethod
+    def normalizedType(*args, **kwargs): pass
+    Call = None
+    
+    
+    CreateInstance = None
+    
+    
+    IndexOfMethod = None
+    
+    
+    InvokeMetaMethod = None
+    
+    
+    QueryPropertyDesignable = None
+    
+    
+    QueryPropertyEditable = None
+    
+    
+    QueryPropertyScriptable = None
+    
+    
+    QueryPropertyStored = None
+    
+    
+    QueryPropertyUser = None
+    
+    
+    ReadProperty = None
+    
+    
+    RegisterMethodArgumentMetaType = None
+    
+    
+    RegisterPropertyMetaType = None
+    
+    
+    ResetProperty = None
+    
+    
+    WriteProperty = None
     
     
     __new__ = None
 
 
-class QFactoryInterface(_Object):
+class QElapsedTimer(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def keys(*args, **kwargs):
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
         pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def elapsed(*args, **kwargs): pass
+    def hasExpired(*args, **kwargs): pass
+    def invalidate(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def msecsSinceReference(*args, **kwargs): pass
+    def msecsTo(*args, **kwargs): pass
+    def nsecsElapsed(*args, **kwargs): pass
+    def restart(*args, **kwargs): pass
+    def secsTo(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    @staticmethod
+    def clockType(*args, **kwargs): pass
+    @staticmethod
+    def isMonotonic(*args, **kwargs): pass
+    ClockType = None
+    
+    
+    MachAbsoluteTime = None
+    
+    
+    MonotonicClock = None
+    
+    
+    PerformanceCounter = None
+    
+    
+    SystemTime = None
+    
+    
+    TickCounter = None
     
     
     __new__ = None
 
 
-class Connection(_Object):
+class QTextBoundaryFinder(_Object):
+    def __copy__(*args, **kwargs): pass
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
+    def boundaryReasons(*args, **kwargs): pass
+    def isAtBoundary(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def position(*args, **kwargs): pass
+    def setPosition(*args, **kwargs): pass
+    def string(*args, **kwargs): pass
+    def toEnd(*args, **kwargs): pass
+    def toNextBoundary(*args, **kwargs): pass
+    def toPreviousBoundary(*args, **kwargs): pass
+    def toStart(*args, **kwargs): pass
+    def type(*args, **kwargs): pass
+    BoundaryReason = None
     
     
+    BoundaryReasons = None
+    
+    
+    BoundaryType = None
+    
+    
+    BreakOpportunity = None
+    
+    
+    EndOfItem = None
+    
+    
+    Grapheme = None
+    
+    
+    Line = None
+    
+    
+    MandatoryBreak = None
+    
+    
+    NotAtBoundary = None
+    
+    
+    Sentence = None
+    
+    
+    SoftHyphen = None
+    
+    
+    StartOfItem = None
+    
+    
+    Word = None
+    
+    
+    __new__ = None
+
+
+class QMessageLogContext(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    __new__ = None
+    
+    
+    category = None
+    
+    
+    file = None
+    
+    
+    function = None
+    
+    
+    line = None
+    
+    
+    version = None
+
+
+class QItemSelection(_Object):
+    def __add__(*args, **kwargs):
+        """
+        x.__add__(y) <==> x+y
+        """
+        pass
+    def __copy__(*args, **kwargs): pass
+    def __delitem__(*args, **kwargs):
+        """
+        x.__delitem__(y) <==> del x[y]
+        """
+        pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __getitem__(*args, **kwargs):
+        """
+        x.__getitem__(y) <==> x[y]
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __iadd__(*args, **kwargs):
+        """
+        x.__iadd__(y) <==> x+=y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __len__(*args, **kwargs):
+        """
+        x.__len__() <==> len(x)
+        """
+        pass
+    def __lshift__(*args, **kwargs):
+        """
+        x.__lshift__(y) <==> x<<y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __radd__(*args, **kwargs):
+        """
+        x.__radd__(y) <==> y+x
+        """
+        pass
+    def __rlshift__(*args, **kwargs):
+        """
+        x.__rlshift__(y) <==> y<<x
+        """
+        pass
+    def __setitem__(*args, **kwargs):
+        """
+        x.__setitem__(i, y) <==> x[i]=y
+        """
+        pass
+    def append(*args, **kwargs): pass
+    def at(*args, **kwargs): pass
+    def back(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def constFirst(*args, **kwargs): pass
+    def constLast(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def count(*args, **kwargs): pass
+    def detachShared(*args, **kwargs): pass
+    def empty(*args, **kwargs): pass
+    def endsWith(*args, **kwargs): pass
+    def first(*args, **kwargs): pass
+    def front(*args, **kwargs): pass
+    def indexOf(*args, **kwargs): pass
+    def indexes(*args, **kwargs): pass
+    def insert(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isSharedWith(*args, **kwargs): pass
+    def last(*args, **kwargs): pass
+    def lastIndexOf(*args, **kwargs): pass
+    def length(*args, **kwargs): pass
+    def merge(*args, **kwargs): pass
+    def mid(*args, **kwargs): pass
+    def move(*args, **kwargs): pass
+    def pop_back(*args, **kwargs): pass
+    def pop_front(*args, **kwargs): pass
+    def prepend(*args, **kwargs): pass
+    def push_back(*args, **kwargs): pass
+    def push_front(*args, **kwargs): pass
+    def removeAll(*args, **kwargs): pass
+    def removeAt(*args, **kwargs): pass
+    def removeFirst(*args, **kwargs): pass
+    def removeLast(*args, **kwargs): pass
+    def removeOne(*args, **kwargs): pass
+    def replace(*args, **kwargs): pass
+    def reserve(*args, **kwargs): pass
+    def select(*args, **kwargs): pass
+    def setSharable(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def startsWith(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def takeAt(*args, **kwargs): pass
+    def takeFirst(*args, **kwargs): pass
+    def takeLast(*args, **kwargs): pass
+    def toSet(*args, **kwargs): pass
+    def toVector(*args, **kwargs): pass
+    def value(*args, **kwargs): pass
+    @staticmethod
+    def fromSet(*args, **kwargs): pass
+    @staticmethod
+    def fromVector(*args, **kwargs): pass
+    @staticmethod
+    def split(*args, **kwargs): pass
+    __new__ = None
+
+
+class QTextStream(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __lshift__(*args, **kwargs):
+        """
+        x.__lshift__(y) <==> x<<y
+        """
+        pass
+    def __rlshift__(*args, **kwargs):
+        """
+        x.__rlshift__(y) <==> y<<x
+        """
+        pass
+    def __rrshift__(*args, **kwargs):
+        """
+        x.__rrshift__(y) <==> y>>x
+        """
+        pass
+    def __rshift__(*args, **kwargs):
+        """
+        x.__rshift__(y) <==> x>>y
+        """
+        pass
+    def atEnd(*args, **kwargs): pass
+    def autoDetectUnicode(*args, **kwargs): pass
+    def codec(*args, **kwargs): pass
+    def device(*args, **kwargs): pass
+    def fieldAlignment(*args, **kwargs): pass
+    def fieldWidth(*args, **kwargs): pass
+    def flush(*args, **kwargs): pass
+    def generateByteOrderMark(*args, **kwargs): pass
+    def integerBase(*args, **kwargs): pass
+    def locale(*args, **kwargs): pass
+    def numberFlags(*args, **kwargs): pass
+    def padChar(*args, **kwargs): pass
+    def pos(*args, **kwargs): pass
+    def read(*args, **kwargs): pass
+    def readAll(*args, **kwargs): pass
+    def readLine(*args, **kwargs): pass
+    def realNumberNotation(*args, **kwargs): pass
+    def realNumberPrecision(*args, **kwargs): pass
+    def reset(*args, **kwargs): pass
+    def resetStatus(*args, **kwargs): pass
+    def seek(*args, **kwargs): pass
+    def setAutoDetectUnicode(*args, **kwargs): pass
+    def setCodec(*args, **kwargs): pass
+    def setDevice(*args, **kwargs): pass
+    def setFieldAlignment(*args, **kwargs): pass
+    def setFieldWidth(*args, **kwargs): pass
+    def setGenerateByteOrderMark(*args, **kwargs): pass
+    def setIntegerBase(*args, **kwargs): pass
+    def setLocale(*args, **kwargs): pass
+    def setNumberFlags(*args, **kwargs): pass
+    def setPadChar(*args, **kwargs): pass
+    def setRealNumberNotation(*args, **kwargs): pass
+    def setRealNumberPrecision(*args, **kwargs): pass
+    def setStatus(*args, **kwargs): pass
+    def skipWhiteSpace(*args, **kwargs): pass
+    def status(*args, **kwargs): pass
+    def string(*args, **kwargs): pass
+    AlignAccountingStyle = None
+    
+    
+    AlignCenter = None
+    
+    
+    AlignLeft = None
+    
+    
+    AlignRight = None
+    
+    
+    FieldAlignment = None
+    
+    
+    FixedNotation = None
+    
+    
+    ForcePoint = None
+    
+    
+    ForceSign = None
+    
+    
+    NumberFlag = None
+    
+    
+    NumberFlags = None
+    
+    
+    Ok = None
+    
+    
+    ReadCorruptData = None
+    
+    
+    ReadPastEnd = None
+    
+    
+    RealNumberNotation = None
+    
+    
+    ScientificNotation = None
+    
+    
+    ShowBase = None
+    
+    
+    SmartNotation = None
+    
+    
+    Status = None
+    
+    
+    UppercaseBase = None
+    
+    
+    UppercaseDigits = None
+    
+    
+    WriteFailed = None
+    
+    
+    __new__ = None
+
+
+class QModelIndex(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __hash__(*args, **kwargs):
+        """
+        x.__hash__() <==> hash(x)
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def child(*args, **kwargs): pass
+    def column(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def flags(*args, **kwargs): pass
+    def internalId(*args, **kwargs): pass
+    def internalPointer(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def model(*args, **kwargs): pass
+    def parent(*args, **kwargs): pass
+    def row(*args, **kwargs): pass
+    def sibling(*args, **kwargs): pass
+    __new__ = None
+
+
+class QResource(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def absoluteFilePath(*args, **kwargs): pass
+    def children(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def fileName(*args, **kwargs): pass
+    def isCompressed(*args, **kwargs): pass
+    def isDir(*args, **kwargs): pass
+    def isFile(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def locale(*args, **kwargs): pass
+    def setFileName(*args, **kwargs): pass
+    def setLocale(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    @staticmethod
+    def addSearchPath(*args, **kwargs): pass
+    @staticmethod
+    def registerResource(*args, **kwargs): pass
+    @staticmethod
+    def registerResourceData(*args, **kwargs): pass
+    @staticmethod
+    def searchPaths(*args, **kwargs): pass
+    @staticmethod
+    def unregisterResource(*args, **kwargs): pass
+    @staticmethod
+    def unregisterResourceData(*args, **kwargs): pass
     __new__ = None
 
 
@@ -611,576 +1094,301 @@ class QJsonArray(_Object):
         """
         x.__add__(y) <==> x+y
         """
-    
         pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
     def __iadd__(*args, **kwargs):
         """
         x.__iadd__(y) <==> x+=y
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lshift__(*args, **kwargs):
         """
         x.__lshift__(y) <==> x<<y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __radd__(*args, **kwargs):
         """
         x.__radd__(y) <==> y+x
         """
-    
         pass
-    
-    
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
     def __rlshift__(*args, **kwargs):
         """
         x.__rlshift__(y) <==> y<<x
         """
-    
         pass
-    
-    
-    def append(*args, **kwargs):
-        pass
-    
-    
-    def at(*args, **kwargs):
-        pass
-    
-    
-    def contains(*args, **kwargs):
-        pass
-    
-    
-    def count(*args, **kwargs):
-        pass
-    
-    
-    def empty(*args, **kwargs):
-        pass
-    
-    
-    def first(*args, **kwargs):
-        pass
-    
-    
-    def insert(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def last(*args, **kwargs):
-        pass
-    
-    
-    def pop_back(*args, **kwargs):
-        pass
-    
-    
-    def pop_front(*args, **kwargs):
-        pass
-    
-    
-    def prepend(*args, **kwargs):
-        pass
-    
-    
-    def push_back(*args, **kwargs):
-        pass
-    
-    
-    def push_front(*args, **kwargs):
-        pass
-    
-    
-    def removeAt(*args, **kwargs):
-        pass
-    
-    
-    def removeFirst(*args, **kwargs):
-        pass
-    
-    
-    def removeLast(*args, **kwargs):
-        pass
-    
-    
-    def replace(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def takeAt(*args, **kwargs):
-        pass
-    
-    
-    def toVariantList(*args, **kwargs):
-        pass
-    
-    
-    def fromStringList(*args, **kwargs):
-        pass
-    
-    
-    def fromVariantList(*args, **kwargs):
-        pass
-    
-    
+    def append(*args, **kwargs): pass
+    def at(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def count(*args, **kwargs): pass
+    def empty(*args, **kwargs): pass
+    def first(*args, **kwargs): pass
+    def insert(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def last(*args, **kwargs): pass
+    def pop_back(*args, **kwargs): pass
+    def pop_front(*args, **kwargs): pass
+    def prepend(*args, **kwargs): pass
+    def push_back(*args, **kwargs): pass
+    def push_front(*args, **kwargs): pass
+    def removeAt(*args, **kwargs): pass
+    def removeFirst(*args, **kwargs): pass
+    def removeLast(*args, **kwargs): pass
+    def replace(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def takeAt(*args, **kwargs): pass
+    def toVariantList(*args, **kwargs): pass
+    @staticmethod
+    def fromStringList(*args, **kwargs): pass
+    @staticmethod
+    def fromVariantList(*args, **kwargs): pass
     __new__ = None
 
 
-class QTextEncoder(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def fromUnicode(*args, **kwargs):
-        pass
-    
-    
-    def hasFailure(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QTextDecoder(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def hasFailure(*args, **kwargs):
-        pass
-    
-    
-    def toUnicode(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QXmlStreamAttributes(_Object):
-    def __add__(*args, **kwargs):
-        """
-        x.__add__(y) <==> x+y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __delitem__(*args, **kwargs):
-        """
-        x.__delitem__(y) <==> del x[y]
-        """
-    
-        pass
-    
-    
+class QUrl(_Object):
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
-    def __getitem__(*args, **kwargs):
-        """
-        x.__getitem__(y) <==> x[y]
-        """
-    
-        pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
-    def __iadd__(*args, **kwargs):
+    def __hash__(*args, **kwargs):
         """
-        x.__iadd__(y) <==> x+=y
+        x.__hash__() <==> hash(x)
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
-    def __len__(*args, **kwargs):
-        """
-        x.__len__() <==> len(x)
-        """
-    
-        pass
-    
-    
-    def __lshift__(*args, **kwargs):
-        """
-        x.__lshift__(y) <==> x<<y
-        """
-    
-        pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
-    def __radd__(*args, **kwargs):
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
         """
-        x.__radd__(y) <==> y+x
+        x.__repr__() <==> repr(x)
         """
-    
         pass
+    def adjusted(*args, **kwargs): pass
+    def authority(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def errorString(*args, **kwargs): pass
+    def fileName(*args, **kwargs): pass
+    def fragment(*args, **kwargs): pass
+    def hasFragment(*args, **kwargs): pass
+    def hasQuery(*args, **kwargs): pass
+    def host(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isLocalFile(*args, **kwargs): pass
+    def isParentOf(*args, **kwargs): pass
+    def isRelative(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def matches(*args, **kwargs): pass
+    def password(*args, **kwargs): pass
+    def path(*args, **kwargs): pass
+    def port(*args, **kwargs): pass
+    def query(*args, **kwargs): pass
+    def resolved(*args, **kwargs): pass
+    def scheme(*args, **kwargs): pass
+    def setAuthority(*args, **kwargs): pass
+    def setFragment(*args, **kwargs): pass
+    def setHost(*args, **kwargs): pass
+    def setPassword(*args, **kwargs): pass
+    def setPath(*args, **kwargs): pass
+    def setPort(*args, **kwargs): pass
+    def setQuery(*args, **kwargs): pass
+    def setScheme(*args, **kwargs): pass
+    def setUrl(*args, **kwargs): pass
+    def setUserInfo(*args, **kwargs): pass
+    def setUserName(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def toDisplayString(*args, **kwargs): pass
+    def toEncoded(*args, **kwargs): pass
+    def toLocalFile(*args, **kwargs): pass
+    def toString(*args, **kwargs): pass
+    def topLevelDomain(*args, **kwargs): pass
+    def url(*args, **kwargs): pass
+    def userInfo(*args, **kwargs): pass
+    def userName(*args, **kwargs): pass
+    @staticmethod
+    def fromAce(*args, **kwargs): pass
+    @staticmethod
+    def fromEncoded(*args, **kwargs): pass
+    @staticmethod
+    def fromLocalFile(*args, **kwargs): pass
+    @staticmethod
+    def fromPercentEncoding(*args, **kwargs): pass
+    @staticmethod
+    def fromStringList(*args, **kwargs): pass
+    @staticmethod
+    def fromUserInput(*args, **kwargs): pass
+    @staticmethod
+    def idnWhitelist(*args, **kwargs): pass
+    @staticmethod
+    def setIdnWhitelist(*args, **kwargs): pass
+    @staticmethod
+    def toAce(*args, **kwargs): pass
+    @staticmethod
+    def toPercentEncoding(*args, **kwargs): pass
+    @staticmethod
+    def toStringList(*args, **kwargs): pass
+    AssumeLocalFile = None
     
     
-    def __rlshift__(*args, **kwargs):
-        """
-        x.__rlshift__(y) <==> y<<x
-        """
+    ComponentFormattingOption = None
     
-        pass
     
+    DecodeReserved = None
     
-    def __setitem__(*args, **kwargs):
-        """
-        x.__setitem__(i, y) <==> x[i]=y
-        """
     
-        pass
+    DecodedMode = None
     
     
-    def append(*args, **kwargs):
-        pass
+    DefaultResolution = None
     
     
-    def at(*args, **kwargs):
-        pass
+    EncodeDelimiters = None
     
     
-    def capacity(*args, **kwargs):
-        pass
+    EncodeReserved = None
     
     
-    def clear(*args, **kwargs):
-        pass
+    EncodeSpaces = None
     
     
-    def constData(*args, **kwargs):
-        pass
+    EncodeUnicode = None
     
     
-    def constFirst(*args, **kwargs):
-        pass
+    FormattingOptions = None
     
     
-    def constLast(*args, **kwargs):
-        pass
+    FullyDecoded = None
     
     
-    def contains(*args, **kwargs):
-        pass
+    FullyEncoded = None
     
     
-    def count(*args, **kwargs):
-        pass
+    locals()['None'] = None
     
     
-    def data(*args, **kwargs):
-        pass
+    NormalizePathSegments = None
     
     
-    def empty(*args, **kwargs):
-        pass
+    ParsingMode = None
     
     
-    def endsWith(*args, **kwargs):
-        pass
+    PreferLocalFile = None
     
     
-    def fill(*args, **kwargs):
-        pass
+    PrettyDecoded = None
     
     
-    def first(*args, **kwargs):
-        pass
+    RemoveAuthority = None
     
     
-    def front(*args, **kwargs):
-        pass
+    RemoveFilename = None
     
     
-    def hasAttribute(*args, **kwargs):
-        pass
+    RemoveFragment = None
     
     
-    def indexOf(*args, **kwargs):
-        pass
+    RemovePassword = None
     
     
-    def insert(*args, **kwargs):
-        pass
+    RemovePath = None
     
     
-    def isEmpty(*args, **kwargs):
-        pass
+    RemovePort = None
     
     
-    def isSharedWith(*args, **kwargs):
-        pass
+    RemoveQuery = None
     
     
-    def last(*args, **kwargs):
-        pass
+    RemoveScheme = None
     
     
-    def lastIndexOf(*args, **kwargs):
-        pass
+    RemoveUserInfo = None
     
     
-    def length(*args, **kwargs):
-        pass
+    StrictMode = None
     
     
-    def mid(*args, **kwargs):
-        pass
+    StripTrailingSlash = None
     
     
-    def move(*args, **kwargs):
-        pass
+    TolerantMode = None
     
     
-    def prepend(*args, **kwargs):
-        pass
+    UrlFormattingOption = None
     
     
-    def remove(*args, **kwargs):
-        pass
+    UserInputResolutionOption = None
     
     
-    def removeAll(*args, **kwargs):
-        pass
-    
-    
-    def removeAt(*args, **kwargs):
-        pass
-    
-    
-    def removeFirst(*args, **kwargs):
-        pass
-    
-    
-    def removeLast(*args, **kwargs):
-        pass
-    
-    
-    def removeOne(*args, **kwargs):
-        pass
-    
-    
-    def replace(*args, **kwargs):
-        pass
-    
-    
-    def reserve(*args, **kwargs):
-        pass
-    
-    
-    def resize(*args, **kwargs):
-        pass
-    
-    
-    def setSharable(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def squeeze(*args, **kwargs):
-        pass
-    
-    
-    def startsWith(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def takeAt(*args, **kwargs):
-        pass
-    
-    
-    def takeFirst(*args, **kwargs):
-        pass
-    
-    
-    def takeLast(*args, **kwargs):
-        pass
-    
-    
-    def value(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QWaitCondition(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def wait(*args, **kwargs):
-        pass
-    
-    
-    def wakeAll(*args, **kwargs):
-        pass
-    
-    
-    def wakeOne(*args, **kwargs):
-        pass
+    UserInputResolutionOptions = None
     
     
     __new__ = None
@@ -1191,4475 +1399,1540 @@ class QCollator(_Object):
         """
         x.__call__(...) <==> x(...)
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def caseSensitivity(*args, **kwargs):
+    def caseSensitivity(*args, **kwargs): pass
+    def compare(*args, **kwargs): pass
+    def ignorePunctuation(*args, **kwargs): pass
+    def locale(*args, **kwargs): pass
+    def numericMode(*args, **kwargs): pass
+    def setCaseSensitivity(*args, **kwargs): pass
+    def setIgnorePunctuation(*args, **kwargs): pass
+    def setLocale(*args, **kwargs): pass
+    def setNumericMode(*args, **kwargs): pass
+    def sortKey(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    __new__ = None
+
+
+class QXmlStreamReader(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
         pass
+    def addData(*args, **kwargs): pass
+    def addExtraNamespaceDeclaration(*args, **kwargs): pass
+    def addExtraNamespaceDeclarations(*args, **kwargs): pass
+    def atEnd(*args, **kwargs): pass
+    def attributes(*args, **kwargs): pass
+    def characterOffset(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def columnNumber(*args, **kwargs): pass
+    def device(*args, **kwargs): pass
+    def documentEncoding(*args, **kwargs): pass
+    def documentVersion(*args, **kwargs): pass
+    def dtdName(*args, **kwargs): pass
+    def dtdPublicId(*args, **kwargs): pass
+    def dtdSystemId(*args, **kwargs): pass
+    def entityDeclarations(*args, **kwargs): pass
+    def entityResolver(*args, **kwargs): pass
+    def error(*args, **kwargs): pass
+    def errorString(*args, **kwargs): pass
+    def hasError(*args, **kwargs): pass
+    def isCDATA(*args, **kwargs): pass
+    def isCharacters(*args, **kwargs): pass
+    def isComment(*args, **kwargs): pass
+    def isDTD(*args, **kwargs): pass
+    def isEndDocument(*args, **kwargs): pass
+    def isEndElement(*args, **kwargs): pass
+    def isEntityReference(*args, **kwargs): pass
+    def isProcessingInstruction(*args, **kwargs): pass
+    def isStandaloneDocument(*args, **kwargs): pass
+    def isStartDocument(*args, **kwargs): pass
+    def isStartElement(*args, **kwargs): pass
+    def isWhitespace(*args, **kwargs): pass
+    def lineNumber(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    def namespaceDeclarations(*args, **kwargs): pass
+    def namespaceProcessing(*args, **kwargs): pass
+    def namespaceUri(*args, **kwargs): pass
+    def notationDeclarations(*args, **kwargs): pass
+    def prefix(*args, **kwargs): pass
+    def processingInstructionData(*args, **kwargs): pass
+    def processingInstructionTarget(*args, **kwargs): pass
+    def qualifiedName(*args, **kwargs): pass
+    def raiseError(*args, **kwargs): pass
+    def readElementText(*args, **kwargs): pass
+    def readNext(*args, **kwargs): pass
+    def readNextStartElement(*args, **kwargs): pass
+    def setDevice(*args, **kwargs): pass
+    def setEntityResolver(*args, **kwargs): pass
+    def setNamespaceProcessing(*args, **kwargs): pass
+    def skipCurrentElement(*args, **kwargs): pass
+    def text(*args, **kwargs): pass
+    def tokenString(*args, **kwargs): pass
+    def tokenType(*args, **kwargs): pass
+    Characters = None
     
     
-    def compare(*args, **kwargs):
-        pass
+    Comment = None
     
     
-    def ignorePunctuation(*args, **kwargs):
-        pass
+    CustomError = None
     
     
-    def locale(*args, **kwargs):
-        pass
+    DTD = None
     
     
-    def numericMode(*args, **kwargs):
-        pass
+    EndDocument = None
     
     
-    def setCaseSensitivity(*args, **kwargs):
-        pass
+    EndElement = None
     
     
-    def setIgnorePunctuation(*args, **kwargs):
-        pass
+    EntityReference = None
     
     
-    def setLocale(*args, **kwargs):
-        pass
+    Error = None
     
     
-    def setNumericMode(*args, **kwargs):
-        pass
+    ErrorOnUnexpectedElement = None
     
     
-    def sortKey(*args, **kwargs):
-        pass
+    IncludeChildElements = None
     
     
-    def swap(*args, **kwargs):
-        pass
+    Invalid = None
+    
+    
+    NoError = None
+    
+    
+    NoToken = None
+    
+    
+    NotWellFormedError = None
+    
+    
+    PrematureEndOfDocumentError = None
+    
+    
+    ProcessingInstruction = None
+    
+    
+    ReadElementTextBehaviour = None
+    
+    
+    SkipChildElements = None
+    
+    
+    StartDocument = None
+    
+    
+    StartElement = None
+    
+    
+    TokenType = None
+    
+    
+    UnexpectedElementError = None
     
     
     __new__ = None
 
 
-class QXmlStreamWriter(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def autoFormatting(*args, **kwargs):
-        pass
-    
-    
-    def autoFormattingIndent(*args, **kwargs):
-        pass
-    
-    
-    def codec(*args, **kwargs):
-        pass
-    
-    
-    def device(*args, **kwargs):
-        pass
-    
-    
-    def hasError(*args, **kwargs):
-        pass
-    
-    
-    def setAutoFormatting(*args, **kwargs):
-        pass
-    
-    
-    def setAutoFormattingIndent(*args, **kwargs):
-        pass
-    
-    
-    def setCodec(*args, **kwargs):
-        pass
-    
-    
-    def setDevice(*args, **kwargs):
-        pass
-    
-    
-    def writeAttribute(*args, **kwargs):
-        pass
-    
-    
-    def writeAttributes(*args, **kwargs):
-        pass
-    
-    
-    def writeCDATA(*args, **kwargs):
-        pass
-    
-    
-    def writeCharacters(*args, **kwargs):
-        pass
-    
-    
-    def writeComment(*args, **kwargs):
-        pass
-    
-    
-    def writeCurrentToken(*args, **kwargs):
-        pass
-    
-    
-    def writeDTD(*args, **kwargs):
-        pass
-    
-    
-    def writeDefaultNamespace(*args, **kwargs):
-        pass
-    
-    
-    def writeEmptyElement(*args, **kwargs):
-        pass
-    
-    
-    def writeEndDocument(*args, **kwargs):
-        pass
-    
-    
-    def writeEndElement(*args, **kwargs):
-        pass
-    
-    
-    def writeEntityReference(*args, **kwargs):
-        pass
-    
-    
-    def writeNamespace(*args, **kwargs):
-        pass
-    
-    
-    def writeProcessingInstruction(*args, **kwargs):
-        pass
-    
-    
-    def writeStartDocument(*args, **kwargs):
-        pass
-    
-    
-    def writeStartElement(*args, **kwargs):
-        pass
-    
-    
-    def writeTextElement(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QByteArray(_Object):
+class QXmlStreamAttributes(_Object):
     def __add__(*args, **kwargs):
         """
         x.__add__(y) <==> x+y
         """
-    
         pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+    def __copy__(*args, **kwargs): pass
     def __delitem__(*args, **kwargs):
         """
         x.__delitem__(y) <==> del x[y]
         """
-    
         pass
-    
-    
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __getitem__(*args, **kwargs):
         """
         x.__getitem__(y) <==> x[y]
         """
-    
         pass
-    
-    
-    def __getslice__(*args, **kwargs):
-        """
-        x.__getslice__(i, j) <==> x[i:j]
-        
-        Use of negative indices is not supported.
-        """
-    
-        pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
     def __iadd__(*args, **kwargs):
         """
         x.__iadd__(y) <==> x+=y
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __len__(*args, **kwargs):
         """
         x.__len__() <==> len(x)
         """
-    
         pass
-    
-    
+    def __lshift__(*args, **kwargs):
+        """
+        x.__lshift__(y) <==> x<<y
+        """
+        pass
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
     def __radd__(*args, **kwargs):
         """
         x.__radd__(y) <==> y+x
         """
-    
         pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
+    def __rlshift__(*args, **kwargs):
         """
-        x.__repr__() <==> repr(x)
+        x.__rlshift__(y) <==> y<<x
         """
-    
         pass
-    
-    
     def __setitem__(*args, **kwargs):
         """
         x.__setitem__(i, y) <==> x[i]=y
         """
-    
         pass
-    
-    
-    def __str__(*args, **kwargs):
+    def append(*args, **kwargs): pass
+    def at(*args, **kwargs): pass
+    def capacity(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def constData(*args, **kwargs): pass
+    def constFirst(*args, **kwargs): pass
+    def constLast(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def count(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def empty(*args, **kwargs): pass
+    def endsWith(*args, **kwargs): pass
+    def fill(*args, **kwargs): pass
+    def first(*args, **kwargs): pass
+    def front(*args, **kwargs): pass
+    def hasAttribute(*args, **kwargs): pass
+    def indexOf(*args, **kwargs): pass
+    def insert(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isSharedWith(*args, **kwargs): pass
+    def last(*args, **kwargs): pass
+    def lastIndexOf(*args, **kwargs): pass
+    def length(*args, **kwargs): pass
+    def mid(*args, **kwargs): pass
+    def move(*args, **kwargs): pass
+    def prepend(*args, **kwargs): pass
+    def remove(*args, **kwargs): pass
+    def removeAll(*args, **kwargs): pass
+    def removeAt(*args, **kwargs): pass
+    def removeFirst(*args, **kwargs): pass
+    def removeLast(*args, **kwargs): pass
+    def removeOne(*args, **kwargs): pass
+    def replace(*args, **kwargs): pass
+    def reserve(*args, **kwargs): pass
+    def resize(*args, **kwargs): pass
+    def setSharable(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def squeeze(*args, **kwargs): pass
+    def startsWith(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def takeAt(*args, **kwargs): pass
+    def takeFirst(*args, **kwargs): pass
+    def takeLast(*args, **kwargs): pass
+    def value(*args, **kwargs): pass
+    __new__ = None
+
+
+class QDir(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
         """
-        x.__str__() <==> str(x)
+        x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
-    def append(*args, **kwargs):
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
         pass
-    
-    
-    def at(*args, **kwargs):
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
         pass
-    
-    
-    def capacity(*args, **kwargs):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
         pass
-    
-    
-    def cbegin(*args, **kwargs):
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
         pass
-    
-    
-    def cend(*args, **kwargs):
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
         pass
-    
-    
-    def chop(*args, **kwargs):
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
         pass
-    
-    
-    def clear(*args, **kwargs):
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
         pass
+    def absoluteFilePath(*args, **kwargs): pass
+    def absolutePath(*args, **kwargs): pass
+    def canonicalPath(*args, **kwargs): pass
+    def cd(*args, **kwargs): pass
+    def cdUp(*args, **kwargs): pass
+    def count(*args, **kwargs): pass
+    def dirName(*args, **kwargs): pass
+    def entryInfoList(*args, **kwargs): pass
+    def entryList(*args, **kwargs): pass
+    def exists(*args, **kwargs): pass
+    def filePath(*args, **kwargs): pass
+    def filter(*args, **kwargs): pass
+    def isAbsolute(*args, **kwargs): pass
+    def isReadable(*args, **kwargs): pass
+    def isRelative(*args, **kwargs): pass
+    def isRoot(*args, **kwargs): pass
+    def makeAbsolute(*args, **kwargs): pass
+    def mkdir(*args, **kwargs): pass
+    def mkpath(*args, **kwargs): pass
+    def nameFilters(*args, **kwargs): pass
+    def path(*args, **kwargs): pass
+    def refresh(*args, **kwargs): pass
+    def relativeFilePath(*args, **kwargs): pass
+    def remove(*args, **kwargs): pass
+    def removeRecursively(*args, **kwargs): pass
+    def rename(*args, **kwargs): pass
+    def rmdir(*args, **kwargs): pass
+    def rmpath(*args, **kwargs): pass
+    def setFilter(*args, **kwargs): pass
+    def setNameFilters(*args, **kwargs): pass
+    def setPath(*args, **kwargs): pass
+    def setSorting(*args, **kwargs): pass
+    def sorting(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    @staticmethod
+    def addResourceSearchPath(*args, **kwargs): pass
+    @staticmethod
+    def addSearchPath(*args, **kwargs): pass
+    @staticmethod
+    def cleanPath(*args, **kwargs): pass
+    @staticmethod
+    def current(*args, **kwargs): pass
+    @staticmethod
+    def currentPath(*args, **kwargs): pass
+    @staticmethod
+    def drives(*args, **kwargs): pass
+    @staticmethod
+    def fromNativeSeparators(*args, **kwargs): pass
+    @staticmethod
+    def home(*args, **kwargs): pass
+    @staticmethod
+    def homePath(*args, **kwargs): pass
+    @staticmethod
+    def isAbsolutePath(*args, **kwargs): pass
+    @staticmethod
+    def isRelativePath(*args, **kwargs): pass
+    @staticmethod
+    def listSeparator(*args, **kwargs): pass
+    @staticmethod
+    def match(*args, **kwargs): pass
+    @staticmethod
+    def nameFiltersFromString(*args, **kwargs): pass
+    @staticmethod
+    def root(*args, **kwargs): pass
+    @staticmethod
+    def rootPath(*args, **kwargs): pass
+    @staticmethod
+    def searchPaths(*args, **kwargs): pass
+    @staticmethod
+    def separator(*args, **kwargs): pass
+    @staticmethod
+    def setCurrent(*args, **kwargs): pass
+    @staticmethod
+    def setSearchPaths(*args, **kwargs): pass
+    @staticmethod
+    def temp(*args, **kwargs): pass
+    @staticmethod
+    def tempPath(*args, **kwargs): pass
+    @staticmethod
+    def toNativeSeparators(*args, **kwargs): pass
+    AccessMask = None
     
     
-    def contains(*args, **kwargs):
-        pass
+    AllDirs = None
     
     
-    def count(*args, **kwargs):
-        pass
+    AllEntries = None
     
     
-    def data(*args, **kwargs):
-        pass
+    CaseSensitive = None
     
     
-    def endsWith(*args, **kwargs):
-        pass
+    Dirs = None
     
     
-    def fill(*args, **kwargs):
-        pass
+    DirsFirst = None
     
     
-    def indexOf(*args, **kwargs):
-        pass
+    DirsLast = None
     
     
-    def insert(*args, **kwargs):
-        pass
+    Drives = None
     
     
-    def isEmpty(*args, **kwargs):
-        pass
+    Executable = None
     
     
-    def isNull(*args, **kwargs):
-        pass
+    Files = None
     
     
-    def isSharedWith(*args, **kwargs):
-        pass
+    Filter = None
     
     
-    def lastIndexOf(*args, **kwargs):
-        pass
+    Filters = None
     
     
-    def left(*args, **kwargs):
-        pass
+    Hidden = None
     
     
-    def leftJustified(*args, **kwargs):
-        pass
+    IgnoreCase = None
     
     
-    def length(*args, **kwargs):
-        pass
+    LocaleAware = None
     
     
-    def mid(*args, **kwargs):
-        pass
+    Modified = None
     
     
-    def prepend(*args, **kwargs):
-        pass
+    Name = None
     
     
-    def remove(*args, **kwargs):
-        pass
+    NoDot = None
     
     
-    def repeated(*args, **kwargs):
-        pass
+    NoDotAndDotDot = None
     
     
-    def replace(*args, **kwargs):
-        pass
+    NoDotDot = None
     
     
-    def reserve(*args, **kwargs):
-        pass
+    NoFilter = None
     
     
-    def resize(*args, **kwargs):
-        pass
+    NoSort = None
     
     
-    def right(*args, **kwargs):
-        pass
+    NoSymLinks = None
     
     
-    def rightJustified(*args, **kwargs):
-        pass
+    PermissionMask = None
     
     
-    def setNum(*args, **kwargs):
-        pass
+    Readable = None
     
     
-    def setRawData(*args, **kwargs):
-        pass
+    Reversed = None
     
     
-    def simplified(*args, **kwargs):
-        pass
+    Size = None
     
     
-    def size(*args, **kwargs):
-        pass
+    SortByMask = None
     
     
-    def split(*args, **kwargs):
-        pass
+    SortFlag = None
     
     
-    def squeeze(*args, **kwargs):
-        pass
+    SortFlags = None
     
     
-    def startsWith(*args, **kwargs):
-        pass
+    System = None
     
     
-    def swap(*args, **kwargs):
-        pass
+    Time = None
     
     
-    def toBase64(*args, **kwargs):
-        pass
+    Type = None
     
     
-    def toDouble(*args, **kwargs):
-        pass
+    TypeMask = None
     
     
-    def toFloat(*args, **kwargs):
-        pass
+    Unsorted = None
     
     
-    def toHex(*args, **kwargs):
-        pass
-    
-    
-    def toInt(*args, **kwargs):
-        pass
-    
-    
-    def toLong(*args, **kwargs):
-        pass
-    
-    
-    def toLongLong(*args, **kwargs):
-        pass
-    
-    
-    def toLower(*args, **kwargs):
-        pass
-    
-    
-    def toPercentEncoding(*args, **kwargs):
-        pass
-    
-    
-    def toShort(*args, **kwargs):
-        pass
-    
-    
-    def toUInt(*args, **kwargs):
-        pass
-    
-    
-    def toULong(*args, **kwargs):
-        pass
-    
-    
-    def toULongLong(*args, **kwargs):
-        pass
-    
-    
-    def toUShort(*args, **kwargs):
-        pass
-    
-    
-    def toUpper(*args, **kwargs):
-        pass
-    
-    
-    def trimmed(*args, **kwargs):
-        pass
-    
-    
-    def truncate(*args, **kwargs):
-        pass
-    
-    
-    def fromBase64(*args, **kwargs):
-        pass
-    
-    
-    def fromHex(*args, **kwargs):
-        pass
-    
-    
-    def fromPercentEncoding(*args, **kwargs):
-        pass
-    
-    
-    def fromRawData(*args, **kwargs):
-        pass
-    
-    
-    def number(*args, **kwargs):
-        pass
-    
-    
-    Base64Encoding = None
-    
-    
-    Base64Option = None
-    
-    
-    Base64Options = None
-    
-    
-    Base64UrlEncoding = None
-    
-    
-    KeepTrailingEquals = None
-    
-    
-    OmitTrailingEquals = None
+    Writable = None
     
     
     __new__ = None
 
 
-class QBitArray(_Object):
-    def __and__(*args, **kwargs):
-        """
-        x.__and__(y) <==> x&y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __delitem__(*args, **kwargs):
-        """
-        x.__delitem__(y) <==> del x[y]
-        """
-    
-        pass
-    
-    
+class QMimeType(_Object):
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
-    def __getitem__(*args, **kwargs):
-        """
-        x.__getitem__(y) <==> x[y]
-        """
-    
-        pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def aliases(*args, **kwargs): pass
+    def allAncestors(*args, **kwargs): pass
+    def comment(*args, **kwargs): pass
+    def filterString(*args, **kwargs): pass
+    def genericIconName(*args, **kwargs): pass
+    def globPatterns(*args, **kwargs): pass
+    def iconName(*args, **kwargs): pass
+    def inherits(*args, **kwargs): pass
+    def isDefault(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    def parentMimeTypes(*args, **kwargs): pass
+    def preferredSuffix(*args, **kwargs): pass
+    def suffixes(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    __new__ = None
+
+
+class QRect(_Object):
+    def __add__(*args, **kwargs):
+        """
+        x.__add__(y) <==> x+y
+        """
+        pass
+    def __and__(*args, **kwargs):
+        """
+        x.__and__(y) <==> x&y
+        """
+        pass
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
     def __hash__(*args, **kwargs):
         """
         x.__hash__() <==> hash(x)
         """
-    
         pass
-    
-    
+    def __iadd__(*args, **kwargs):
+        """
+        x.__iadd__(y) <==> x+=y
+        """
+        pass
     def __iand__(*args, **kwargs):
         """
         x.__iand__(y) <==> x&=y
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def __invert__(*args, **kwargs):
-        """
-        x.__invert__() <==> ~x
-        """
-    
-        pass
-    
-    
     def __ior__(*args, **kwargs):
         """
         x.__ior__(y) <==> x|=y
         """
-    
         pass
-    
-    
-    def __ixor__(*args, **kwargs):
+    def __isub__(*args, **kwargs):
         """
-        x.__ixor__(y) <==> x^=y
+        x.__isub__(y) <==> x-=y
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
-    def __len__(*args, **kwargs):
-        """
-        x.__len__() <==> len(x)
-        """
-    
-        pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __nonzero__(*args, **kwargs):
         """
         x.__nonzero__() <==> x != 0
         """
-    
         pass
-    
-    
     def __or__(*args, **kwargs):
         """
         x.__or__(y) <==> x|y
         """
-    
         pass
-    
-    
+    def __radd__(*args, **kwargs):
+        """
+        x.__radd__(y) <==> y+x
+        """
+        pass
     def __rand__(*args, **kwargs):
         """
         x.__rand__(y) <==> y&x
         """
-    
         pass
-    
-    
+    def __reduce__(*args, **kwargs): pass
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
     def __ror__(*args, **kwargs):
         """
         x.__ror__(y) <==> y|x
         """
-    
         pass
-    
-    
-    def __rxor__(*args, **kwargs):
+    def __rsub__(*args, **kwargs):
         """
-        x.__rxor__(y) <==> y^x
+        x.__rsub__(y) <==> y-x
         """
-    
         pass
-    
-    
-    def __setitem__(*args, **kwargs):
+    def __sub__(*args, **kwargs):
         """
-        x.__setitem__(i, y) <==> x[i]=y
+        x.__sub__(y) <==> x-y
         """
-    
         pass
-    
-    
-    def __xor__(*args, **kwargs):
-        """
-        x.__xor__(y) <==> x^y
-        """
-    
-        pass
-    
-    
-    def at(*args, **kwargs):
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def clearBit(*args, **kwargs):
-        pass
-    
-    
-    def count(*args, **kwargs):
-        pass
-    
-    
-    def fill(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def resize(*args, **kwargs):
-        pass
-    
-    
-    def setBit(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def testBit(*args, **kwargs):
-        pass
-    
-    
-    def toggleBit(*args, **kwargs):
-        pass
-    
-    
-    def truncate(*args, **kwargs):
-        pass
-    
-    
+    def adjust(*args, **kwargs): pass
+    def adjusted(*args, **kwargs): pass
+    def bottom(*args, **kwargs): pass
+    def bottomLeft(*args, **kwargs): pass
+    def bottomRight(*args, **kwargs): pass
+    def center(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def getCoords(*args, **kwargs): pass
+    def getRect(*args, **kwargs): pass
+    def height(*args, **kwargs): pass
+    def intersected(*args, **kwargs): pass
+    def intersects(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def left(*args, **kwargs): pass
+    def marginsAdded(*args, **kwargs): pass
+    def marginsRemoved(*args, **kwargs): pass
+    def moveBottom(*args, **kwargs): pass
+    def moveBottomLeft(*args, **kwargs): pass
+    def moveBottomRight(*args, **kwargs): pass
+    def moveCenter(*args, **kwargs): pass
+    def moveLeft(*args, **kwargs): pass
+    def moveRight(*args, **kwargs): pass
+    def moveTo(*args, **kwargs): pass
+    def moveTop(*args, **kwargs): pass
+    def moveTopLeft(*args, **kwargs): pass
+    def moveTopRight(*args, **kwargs): pass
+    def normalized(*args, **kwargs): pass
+    def right(*args, **kwargs): pass
+    def setBottom(*args, **kwargs): pass
+    def setBottomLeft(*args, **kwargs): pass
+    def setBottomRight(*args, **kwargs): pass
+    def setCoords(*args, **kwargs): pass
+    def setHeight(*args, **kwargs): pass
+    def setLeft(*args, **kwargs): pass
+    def setRect(*args, **kwargs): pass
+    def setRight(*args, **kwargs): pass
+    def setSize(*args, **kwargs): pass
+    def setTop(*args, **kwargs): pass
+    def setTopLeft(*args, **kwargs): pass
+    def setTopRight(*args, **kwargs): pass
+    def setWidth(*args, **kwargs): pass
+    def setX(*args, **kwargs): pass
+    def setY(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def top(*args, **kwargs): pass
+    def topLeft(*args, **kwargs): pass
+    def topRight(*args, **kwargs): pass
+    def translate(*args, **kwargs): pass
+    def translated(*args, **kwargs): pass
+    def united(*args, **kwargs): pass
+    def width(*args, **kwargs): pass
+    def x(*args, **kwargs): pass
+    def y(*args, **kwargs): pass
     __new__ = None
 
 
-class QRectF(_Object):
-    def __and__(*args, **kwargs):
-        """
-        x.__and__(y) <==> x&y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+class QLineF(_Object):
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
-    def __iand__(*args, **kwargs):
-        """
-        x.__iand__(y) <==> x&=y
-        """
-    
-        pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def __ior__(*args, **kwargs):
-        """
-        x.__ior__(y) <==> x|=y
-        """
-    
-        pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __nonzero__(*args, **kwargs):
         """
         x.__nonzero__() <==> x != 0
         """
-    
         pass
-    
-    
-    def __or__(*args, **kwargs):
-        """
-        x.__or__(y) <==> x|y
-        """
-    
-        pass
-    
-    
-    def __rand__(*args, **kwargs):
-        """
-        x.__rand__(y) <==> y&x
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
+    def __reduce__(*args, **kwargs): pass
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
-    def __ror__(*args, **kwargs):
-        """
-        x.__ror__(y) <==> y|x
-        """
-    
-        pass
-    
-    
-    def adjust(*args, **kwargs):
-        pass
-    
-    
-    def adjusted(*args, **kwargs):
-        pass
-    
-    
-    def bottom(*args, **kwargs):
-        pass
-    
-    
-    def bottomLeft(*args, **kwargs):
-        pass
-    
-    
-    def bottomRight(*args, **kwargs):
-        pass
-    
-    
-    def center(*args, **kwargs):
-        pass
-    
-    
-    def contains(*args, **kwargs):
-        pass
-    
-    
-    def getCoords(*args, **kwargs):
-        pass
-    
-    
-    def getRect(*args, **kwargs):
-        pass
-    
-    
-    def height(*args, **kwargs):
-        pass
-    
-    
-    def intersected(*args, **kwargs):
-        pass
-    
-    
-    def intersects(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def left(*args, **kwargs):
-        pass
-    
-    
-    def moveBottom(*args, **kwargs):
-        pass
-    
-    
-    def moveBottomLeft(*args, **kwargs):
-        pass
-    
-    
-    def moveBottomRight(*args, **kwargs):
-        pass
-    
-    
-    def moveCenter(*args, **kwargs):
-        pass
-    
-    
-    def moveLeft(*args, **kwargs):
-        pass
-    
-    
-    def moveRight(*args, **kwargs):
-        pass
-    
-    
-    def moveTo(*args, **kwargs):
-        pass
-    
-    
-    def moveTop(*args, **kwargs):
-        pass
-    
-    
-    def moveTopLeft(*args, **kwargs):
-        pass
-    
-    
-    def moveTopRight(*args, **kwargs):
-        pass
-    
-    
-    def normalized(*args, **kwargs):
-        pass
-    
-    
-    def right(*args, **kwargs):
-        pass
-    
-    
-    def setBottom(*args, **kwargs):
-        pass
-    
-    
-    def setBottomLeft(*args, **kwargs):
-        pass
-    
-    
-    def setBottomRight(*args, **kwargs):
-        pass
-    
-    
-    def setCoords(*args, **kwargs):
-        pass
-    
-    
-    def setHeight(*args, **kwargs):
-        pass
-    
-    
-    def setLeft(*args, **kwargs):
-        pass
-    
-    
-    def setRect(*args, **kwargs):
-        pass
-    
-    
-    def setRight(*args, **kwargs):
-        pass
-    
-    
-    def setSize(*args, **kwargs):
-        pass
-    
-    
-    def setTop(*args, **kwargs):
-        pass
-    
-    
-    def setTopLeft(*args, **kwargs):
-        pass
-    
-    
-    def setTopRight(*args, **kwargs):
-        pass
-    
-    
-    def setWidth(*args, **kwargs):
-        pass
-    
-    
-    def setX(*args, **kwargs):
-        pass
-    
-    
-    def setY(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def toAlignedRect(*args, **kwargs):
-        pass
-    
-    
-    def toRect(*args, **kwargs):
-        pass
-    
-    
-    def top(*args, **kwargs):
-        pass
-    
-    
-    def topLeft(*args, **kwargs):
-        pass
-    
-    
-    def topRight(*args, **kwargs):
-        pass
-    
-    
-    def translate(*args, **kwargs):
-        pass
-    
-    
-    def translated(*args, **kwargs):
-        pass
-    
-    
-    def united(*args, **kwargs):
-        pass
-    
-    
-    def width(*args, **kwargs):
-        pass
-    
-    
-    def x(*args, **kwargs):
-        pass
-    
-    
-    def y(*args, **kwargs):
-        pass
+    def angle(*args, **kwargs): pass
+    def angleTo(*args, **kwargs): pass
+    def dx(*args, **kwargs): pass
+    def dy(*args, **kwargs): pass
+    def intersect(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def length(*args, **kwargs): pass
+    def normalVector(*args, **kwargs): pass
+    def p1(*args, **kwargs): pass
+    def p2(*args, **kwargs): pass
+    def pointAt(*args, **kwargs): pass
+    def setAngle(*args, **kwargs): pass
+    def setLength(*args, **kwargs): pass
+    def setLine(*args, **kwargs): pass
+    def setP1(*args, **kwargs): pass
+    def setP2(*args, **kwargs): pass
+    def setPoints(*args, **kwargs): pass
+    def toLine(*args, **kwargs): pass
+    def toTuple(*args, **kwargs): pass
+    def translate(*args, **kwargs): pass
+    def translated(*args, **kwargs): pass
+    def unitVector(*args, **kwargs): pass
+    def x1(*args, **kwargs): pass
+    def x2(*args, **kwargs): pass
+    def y1(*args, **kwargs): pass
+    def y2(*args, **kwargs): pass
+    @staticmethod
+    def fromPolar(*args, **kwargs): pass
+    BoundedIntersection = None
+    
+    
+    IntersectType = None
+    
+    
+    NoIntersection = None
+    
+    
+    UnboundedIntersection = None
     
     
     __new__ = None
+
+
+class QGenericArgument(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def data(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    __new__ = None
+
+
+class QTextStreamManipulator(_Object):
+    def __copy__(*args, **kwargs): pass
+    def exec_(*args, **kwargs): pass
 
 
 class QPersistentModelIndex(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
     def __hash__(*args, **kwargs):
         """
         x.__hash__() <==> hash(x)
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
-    def child(*args, **kwargs):
-        pass
-    
-    
-    def column(*args, **kwargs):
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def flags(*args, **kwargs):
-        pass
-    
-    
-    def internalId(*args, **kwargs):
-        pass
-    
-    
-    def internalPointer(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def model(*args, **kwargs):
-        pass
-    
-    
-    def parent(*args, **kwargs):
-        pass
-    
-    
-    def row(*args, **kwargs):
-        pass
-    
-    
-    def sibling(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
+    def child(*args, **kwargs): pass
+    def column(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def flags(*args, **kwargs): pass
+    def internalId(*args, **kwargs): pass
+    def internalPointer(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def model(*args, **kwargs): pass
+    def parent(*args, **kwargs): pass
+    def row(*args, **kwargs): pass
+    def sibling(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
     __new__ = None
 
 
-class QDate(_Object):
-    def __copy__(*args, **kwargs):
+class QRunnable(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
         pass
-    
-    
+    def autoDelete(*args, **kwargs): pass
+    def run(*args, **kwargs): pass
+    def setAutoDelete(*args, **kwargs): pass
+    __new__ = None
+
+
+class QMetaProperty(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def enumerator(*args, **kwargs): pass
+    def hasNotifySignal(*args, **kwargs): pass
+    def hasStdCppSet(*args, **kwargs): pass
+    def isConstant(*args, **kwargs): pass
+    def isDesignable(*args, **kwargs): pass
+    def isEditable(*args, **kwargs): pass
+    def isEnumType(*args, **kwargs): pass
+    def isFinal(*args, **kwargs): pass
+    def isFlagType(*args, **kwargs): pass
+    def isReadable(*args, **kwargs): pass
+    def isResettable(*args, **kwargs): pass
+    def isScriptable(*args, **kwargs): pass
+    def isStored(*args, **kwargs): pass
+    def isUser(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def isWritable(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    def notifySignal(*args, **kwargs): pass
+    def notifySignalIndex(*args, **kwargs): pass
+    def propertyIndex(*args, **kwargs): pass
+    def read(*args, **kwargs): pass
+    def readOnGadget(*args, **kwargs): pass
+    def reset(*args, **kwargs): pass
+    def resetOnGadget(*args, **kwargs): pass
+    def revision(*args, **kwargs): pass
+    def type(*args, **kwargs): pass
+    def typeName(*args, **kwargs): pass
+    def userType(*args, **kwargs): pass
+    def write(*args, **kwargs): pass
+    def writeOnGadget(*args, **kwargs): pass
+    __new__ = None
+
+
+class QCollatorSortKey(_Object):
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
-    def __getattribute__(*args, **kwargs):
-        """
-        x.__getattribute__('name') <==> x.name
-        """
-    
-        pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def addDays(*args, **kwargs):
-        pass
-    
-    
-    def addMonths(*args, **kwargs):
-        pass
-    
-    
-    def addYears(*args, **kwargs):
-        pass
-    
-    
-    def day(*args, **kwargs):
-        pass
-    
-    
-    def dayOfWeek(*args, **kwargs):
-        pass
-    
-    
-    def dayOfYear(*args, **kwargs):
-        pass
-    
-    
-    def daysInMonth(*args, **kwargs):
-        pass
-    
-    
-    def daysInYear(*args, **kwargs):
-        pass
-    
-    
-    def daysTo(*args, **kwargs):
-        pass
-    
-    
-    def getDate(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def month(*args, **kwargs):
-        pass
-    
-    
-    def setDate(*args, **kwargs):
-        pass
-    
-    
-    def toJulianDay(*args, **kwargs):
-        pass
-    
-    
-    def toPython(*args, **kwargs):
-        pass
-    
-    
-    def toString(*args, **kwargs):
-        pass
-    
-    
-    def weekNumber(*args, **kwargs):
-        pass
-    
-    
-    def year(*args, **kwargs):
-        pass
-    
-    
-    def currentDate(*args, **kwargs):
-        pass
-    
-    
-    def fromJulianDay(*args, **kwargs):
-        pass
-    
-    
-    def fromString(*args, **kwargs):
-        pass
-    
-    
-    def isLeapYear(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def longDayName(*args, **kwargs):
-        pass
-    
-    
-    def longMonthName(*args, **kwargs):
-        pass
-    
-    
-    def shortDayName(*args, **kwargs):
-        pass
-    
-    
-    def shortMonthName(*args, **kwargs):
-        pass
-    
-    
-    DateFormat = None
-    
-    
-    MonthNameType = None
-    
-    
-    StandaloneFormat = None
-    
-    
+    def compare(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
     __new__ = None
 
 
-class QTime(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __getattribute__(*args, **kwargs):
-        """
-        x.__getattribute__('name') <==> x.name
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
+class QEvent(_Object):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
-        pass
-    
-    
-    def addMSecs(*args, **kwargs):
-        pass
-    
-    
-    def addSecs(*args, **kwargs):
-        pass
-    
-    
-    def elapsed(*args, **kwargs):
-        pass
-    
-    
-    def hour(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def minute(*args, **kwargs):
-        pass
-    
-    
-    def msec(*args, **kwargs):
-        pass
-    
-    
-    def msecsSinceStartOfDay(*args, **kwargs):
-        pass
-    
-    
-    def msecsTo(*args, **kwargs):
-        pass
-    
-    
-    def restart(*args, **kwargs):
-        pass
-    
-    
-    def second(*args, **kwargs):
-        pass
-    
-    
-    def secsTo(*args, **kwargs):
-        pass
-    
-    
-    def setHMS(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def toPython(*args, **kwargs):
-        pass
-    
-    
-    def toString(*args, **kwargs):
-        pass
-    
-    
-    def currentTime(*args, **kwargs):
-        pass
-    
-    
-    def fromMSecsSinceStartOfDay(*args, **kwargs):
-        pass
-    
-    
-    def fromString(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QLocale(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def amText(*args, **kwargs):
-        pass
-    
-    
-    def bcp47Name(*args, **kwargs):
-        pass
-    
-    
-    def country(*args, **kwargs):
-        pass
-    
-    
-    def createSeparatedList(*args, **kwargs):
-        pass
-    
-    
-    def currencySymbol(*args, **kwargs):
-        pass
-    
-    
-    def dateFormat(*args, **kwargs):
-        pass
-    
-    
-    def dateTimeFormat(*args, **kwargs):
-        pass
-    
-    
-    def dayName(*args, **kwargs):
-        pass
-    
-    
-    def decimalPoint(*args, **kwargs):
-        pass
-    
-    
-    def exponential(*args, **kwargs):
-        pass
-    
-    
-    def firstDayOfWeek(*args, **kwargs):
-        pass
-    
-    
-    def groupSeparator(*args, **kwargs):
-        pass
-    
-    
-    def language(*args, **kwargs):
-        pass
-    
-    
-    def measurementSystem(*args, **kwargs):
-        pass
-    
-    
-    def monthName(*args, **kwargs):
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def nativeCountryName(*args, **kwargs):
-        pass
-    
-    
-    def nativeLanguageName(*args, **kwargs):
-        pass
-    
-    
-    def negativeSign(*args, **kwargs):
-        pass
-    
-    
-    def numberOptions(*args, **kwargs):
-        pass
-    
-    
-    def percent(*args, **kwargs):
-        pass
-    
-    
-    def pmText(*args, **kwargs):
-        pass
-    
-    
-    def positiveSign(*args, **kwargs):
-        pass
-    
-    
-    def quoteString(*args, **kwargs):
-        pass
-    
-    
-    def script(*args, **kwargs):
-        pass
-    
-    
-    def setNumberOptions(*args, **kwargs):
-        pass
-    
-    
-    def standaloneDayName(*args, **kwargs):
-        pass
-    
-    
-    def standaloneMonthName(*args, **kwargs):
-        pass
-    
-    
-    def textDirection(*args, **kwargs):
-        pass
-    
-    
-    def timeFormat(*args, **kwargs):
-        pass
-    
-    
-    def toCurrencyString(*args, **kwargs):
-        pass
-    
-    
-    def toDate(*args, **kwargs):
         pass
-    
-    
-    def toDateTime(*args, **kwargs):
-        pass
-    
-    
-    def toDouble(*args, **kwargs):
-        pass
-    
-    
-    def toFloat(*args, **kwargs):
-        pass
-    
-    
-    def toInt(*args, **kwargs):
-        pass
-    
-    
-    def toLongLong(*args, **kwargs):
-        pass
-    
-    
-    def toLower(*args, **kwargs):
-        pass
-    
-    
-    def toShort(*args, **kwargs):
-        pass
-    
-    
-    def toString(*args, **kwargs):
-        pass
-    
-    
-    def toTime(*args, **kwargs):
-        pass
-    
-    
-    def toUInt(*args, **kwargs):
-        pass
-    
-    
-    def toULongLong(*args, **kwargs):
-        pass
-    
-    
-    def toUShort(*args, **kwargs):
-        pass
-    
-    
-    def toUpper(*args, **kwargs):
-        pass
-    
-    
-    def uiLanguages(*args, **kwargs):
-        pass
-    
-    
-    def weekdays(*args, **kwargs):
-        pass
-    
-    
-    def zeroDigit(*args, **kwargs):
-        pass
-    
-    
-    def c(*args, **kwargs):
-        pass
-    
-    
-    def countriesForLanguage(*args, **kwargs):
-        pass
-    
-    
-    def countryToString(*args, **kwargs):
-        pass
-    
-    
-    def languageToString(*args, **kwargs):
-        pass
-    
-    
-    def matchingLocales(*args, **kwargs):
-        pass
-    
-    
-    def scriptToString(*args, **kwargs):
-        pass
-    
-    
-    def setDefault(*args, **kwargs):
-        pass
-    
-    
-    def system(*args, **kwargs):
-        pass
-    
-    
-    Abkhazian = None
-    
-    
-    Afan = None
-    
-    
-    Afar = None
-    
-    
-    Afghanistan = None
-    
-    
-    Afrikaans = None
-    
-    
-    Aghem = None
-    
-    
-    Akan = None
-    
-    
-    Akkadian = None
-    
-    
-    Akoose = None
-    
-    
-    AlandIslands = None
-    
-    
-    Albania = None
-    
-    
-    Albanian = None
-    
-    
-    Algeria = None
-    
-    
-    AlternateQuotation = None
-    
-    
-    AmericanSamoa = None
-    
-    
-    Amharic = None
-    
-    
-    AncientEgyptian = None
-    
-    
-    AncientGreek = None
-    
-    
-    AncientNorthArabian = None
-    
-    
-    Andorra = None
-    
-    
-    Angola = None
-    
-    
-    Anguilla = None
-    
-    
-    Antarctica = None
-    
-    
-    AntiguaAndBarbuda = None
-    
-    
-    AnyCountry = None
-    
-    
-    AnyLanguage = None
-    
-    
-    AnyScript = None
-    
-    
-    Arabic = None
-    
-    
-    ArabicScript = None
-    
-    
-    Aragonese = None
-    
-    
-    Aramaic = None
-    
-    
-    Argentina = None
-    
-    
-    Armenia = None
-    
-    
-    Armenian = None
-    
-    
-    ArmenianScript = None
-    
-    
-    Aruba = None
-    
-    
-    AscensionIsland = None
-    
-    
-    Assamese = None
-    
-    
-    Asturian = None
-    
-    
-    Asu = None
-    
-    
-    Atsam = None
-    
-    
-    Australia = None
-    
-    
-    Austria = None
-    
-    
-    Avaric = None
-    
-    
-    Avestan = None
-    
-    
-    AvestanScript = None
-    
-    
-    Aymara = None
-    
-    
-    Azerbaijan = None
-    
-    
-    Azerbaijani = None
-    
-    
-    Bafia = None
-    
-    
-    Bahamas = None
-    
-    
-    Bahrain = None
-    
-    
-    Balinese = None
-    
-    
-    BalineseScript = None
-    
-    
-    Bambara = None
-    
-    
-    BamumScript = None
-    
-    
-    Bamun = None
-    
-    
-    Bangladesh = None
-    
-    
-    Barbados = None
-    
-    
-    Basaa = None
-    
-    
-    Bashkir = None
-    
-    
-    Basque = None
-    
-    
-    Bassa = None
-    
-    
-    BassaVahScript = None
-    
-    
-    BatakScript = None
-    
-    
-    BatakToba = None
-    
-    
-    Belarus = None
-    
-    
-    Belarusian = None
-    
-    
-    Belgium = None
-    
-    
-    Belize = None
-    
-    
-    Bemba = None
-    
-    
-    Bena = None
-    
-    
-    Bengali = None
-    
-    
-    BengaliScript = None
-    
-    
-    Benin = None
-    
-    
-    Bermuda = None
-    
-    
-    Bhutan = None
-    
-    
-    Bhutani = None
-    
-    
-    Bihari = None
-    
-    
-    Bislama = None
-    
-    
-    Blin = None
-    
-    
-    Bodo = None
-    
-    
-    Bolivia = None
-    
-    
-    Bonaire = None
-    
-    
-    BopomofoScript = None
-    
-    
-    BosniaAndHerzegowina = None
-    
-    
-    Bosnian = None
-    
-    
-    Botswana = None
-    
-    
-    BouvetIsland = None
-    
-    
-    BrahmiScript = None
-    
-    
-    BrailleScript = None
-    
-    
-    Brazil = None
-    
-    
-    Breton = None
-    
-    
-    BritishIndianOceanTerritory = None
-    
-    
-    BritishVirginIslands = None
-    
-    
-    Brunei = None
-    
-    
-    Buginese = None
-    
-    
-    BugineseScript = None
-    
-    
-    Buhid = None
-    
-    
-    BuhidScript = None
-    
-    
-    Bulgaria = None
-    
-    
-    Bulgarian = None
-    
-    
-    BurkinaFaso = None
-    
-    
-    Burmese = None
-    
-    
-    Burundi = None
-    
-    
-    Byelorussian = None
-    
-    
-    C = None
-    
-    
-    Cambodia = None
-    
-    
-    Cambodian = None
-    
-    
-    Cameroon = None
-    
-    
-    Canada = None
-    
-    
-    CanadianAboriginalScript = None
-    
-    
-    CanaryIslands = None
-    
-    
-    CapeVerde = None
-    
-    
-    Carian = None
-    
-    
-    CarianScript = None
-    
-    
-    Catalan = None
-    
-    
-    CaucasianAlbanianScript = None
-    
-    
-    CaymanIslands = None
-    
-    
-    CentralAfricanRepublic = None
-    
-    
-    CentralKurdish = None
-    
-    
-    CentralMoroccoTamazight = None
-    
-    
-    CeutaAndMelilla = None
-    
-    
-    Chad = None
-    
-    
-    Chakma = None
-    
-    
-    ChakmaScript = None
-    
-    
-    ChamScript = None
-    
-    
-    Chamorro = None
-    
-    
-    Chechen = None
-    
-    
-    Cherokee = None
-    
-    
-    CherokeeScript = None
-    
-    
-    Chewa = None
-    
-    
-    Chiga = None
-    
-    
-    Chile = None
-    
-    
-    China = None
-    
-    
-    Chinese = None
-    
-    
-    ChristmasIsland = None
-    
-    
-    Church = None
-    
-    
-    Chuvash = None
-    
-    
-    ClassicalMandaic = None
-    
-    
-    ClippertonIsland = None
-    
-    
-    CocosIslands = None
-    
-    
-    Colognian = None
-    
-    
-    Colombia = None
-    
-    
-    Comoros = None
-    
-    
-    CongoBrazzaville = None
-    
-    
-    CongoKinshasa = None
-    
-    
-    CongoSwahili = None
-    
-    
-    CookIslands = None
-    
-    
-    Coptic = None
-    
-    
-    CopticScript = None
-    
-    
-    Cornish = None
-    
-    
-    Corsican = None
-    
-    
-    CostaRica = None
-    
-    
-    Country = None
-    
-    
-    Cree = None
-    
-    
-    Croatia = None
-    
-    
-    Croatian = None
-    
-    
-    Cuba = None
-    
-    
-    CuneiformScript = None
-    
-    
-    CuraSao = None
-    
-    
-    CurrencyDisplayName = None
-    
-    
-    CurrencyIsoCode = None
-    
-    
-    CurrencySymbol = None
-    
-    
-    CurrencySymbolFormat = None
-    
-    
-    CypriotScript = None
-    
-    
-    Cyprus = None
-    
-    
-    CyrillicScript = None
-    
-    
-    Czech = None
-    
-    
-    CzechRepublic = None
-    
-    
-    Danish = None
-    
-    
-    DemocraticRepublicOfCongo = None
-    
-    
-    DemocraticRepublicOfKorea = None
-    
-    
-    Denmark = None
-    
-    
-    DeseretScript = None
-    
-    
-    DevanagariScript = None
-    
-    
-    DiegoGarcia = None
-    
-    
-    Divehi = None
-    
-    
-    Djibouti = None
-    
-    
-    Dogri = None
-    
-    
-    Dominica = None
-    
-    
-    DominicanRepublic = None
-    
-    
-    Duala = None
-    
-    
-    DuployanScript = None
-    
-    
-    Dutch = None
-    
-    
-    Dzongkha = None
-    
-    
-    EastTimor = None
-    
-    
-    EasternCham = None
-    
-    
-    EasternKayah = None
-    
-    
-    Ecuador = None
-    
-    
-    Egypt = None
-    
-    
-    EgyptianHieroglyphsScript = None
-    
-    
-    ElSalvador = None
-    
-    
-    ElbasanScript = None
-    
-    
-    Embu = None
-    
-    
-    English = None
-    
-    
-    EquatorialGuinea = None
-    
-    
-    Eritrea = None
-    
-    
-    Esperanto = None
-    
-    
-    Estonia = None
-    
-    
-    Estonian = None
-    
-    
-    Ethiopia = None
-    
-    
-    EthiopicScript = None
-    
-    
-    Etruscan = None
-    
-    
-    Ewe = None
-    
-    
-    Ewondo = None
-    
-    
-    FalklandIslands = None
-    
-    
-    FaroeIslands = None
-    
-    
-    Faroese = None
-    
-    
-    Fiji = None
-    
-    
-    Fijian = None
-    
-    
-    Filipino = None
-    
-    
-    Finland = None
-    
-    
-    Finnish = None
-    
-    
-    FormatType = None
-    
-    
-    France = None
-    
-    
-    FraserScript = None
-    
-    
-    French = None
-    
-    
-    FrenchGuiana = None
-    
-    
-    FrenchPolynesia = None
-    
-    
-    FrenchSouthernTerritories = None
-    
-    
-    Frisian = None
-    
-    
-    Friulian = None
-    
-    
-    Fulah = None
-    
-    
-    Ga = None
-    
-    
-    Gabon = None
-    
-    
-    Gaelic = None
-    
-    
-    Galician = None
-    
-    
-    Gambia = None
-    
-    
-    Ganda = None
-    
-    
-    Geez = None
-    
-    
-    Georgia = None
-    
-    
-    Georgian = None
-    
-    
-    GeorgianScript = None
-    
-    
-    German = None
-    
-    
-    Germany = None
-    
-    
-    Ghana = None
-    
-    
-    Gibraltar = None
-    
-    
-    GlagoliticScript = None
-    
-    
-    Gothic = None
-    
-    
-    GothicScript = None
-    
-    
-    GranthaScript = None
-    
-    
-    Greece = None
-    
-    
-    Greek = None
-    
-    
-    GreekScript = None
-    
-    
-    Greenland = None
-    
-    
-    Greenlandic = None
-    
-    
-    Grenada = None
-    
-    
-    Guadeloupe = None
-    
-    
-    Guam = None
-    
-    
-    Guarani = None
-    
-    
-    Guatemala = None
-    
-    
-    Guernsey = None
-    
-    
-    Guinea = None
-    
-    
-    GuineaBissau = None
-    
-    
-    Gujarati = None
-    
-    
-    GujaratiScript = None
-    
-    
-    GurmukhiScript = None
-    
-    
-    Gusii = None
-    
-    
-    Guyana = None
-    
-    
-    Haiti = None
-    
-    
-    Haitian = None
-    
-    
-    HanScript = None
-    
-    
-    HangulScript = None
-    
-    
-    Hanunoo = None
-    
-    
-    HanunooScript = None
-    
-    
-    Hausa = None
-    
-    
-    Hawaiian = None
-    
-    
-    HeardAndMcDonaldIslands = None
-    
-    
-    Hebrew = None
-    
-    
-    HebrewScript = None
-    
-    
-    Herero = None
-    
-    
-    Hindi = None
-    
-    
-    HiraganaScript = None
-    
-    
-    HiriMotu = None
-    
-    
-    HmongNjua = None
-    
-    
-    Ho = None
-    
-    
-    Honduras = None
-    
-    
-    HongKong = None
-    
-    
-    Hungarian = None
-    
-    
-    Hungary = None
-    
-    
-    Iceland = None
-    
-    
-    Icelandic = None
-    
-    
-    Igbo = None
-    
-    
-    ImperialAramaicScript = None
-    
-    
-    ImperialSystem = None
-    
-    
-    ImperialUKSystem = None
-    
-    
-    ImperialUSSystem = None
-    
-    
-    InariSami = None
-    
-    
-    India = None
-    
-    
-    Indonesia = None
-    
-    
-    Indonesian = None
-    
-    
-    Ingush = None
-    
-    
-    InscriptionalPahlaviScript = None
-    
-    
-    InscriptionalParthianScript = None
-    
-    
-    Interlingua = None
-    
-    
-    Interlingue = None
-    
-    
-    Inuktitut = None
-    
-    
-    Inupiak = None
-    
-    
-    Iran = None
-    
-    
-    Iraq = None
-    
-    
-    Ireland = None
-    
-    
-    Irish = None
-    
-    
-    IsleOfMan = None
-    
-    
-    Israel = None
-    
-    
-    Italian = None
-    
-    
-    Italy = None
-    
-    
-    IvoryCoast = None
-    
-    
-    Jamaica = None
-    
-    
-    Japan = None
-    
-    
-    Japanese = None
-    
-    
-    JapaneseScript = None
-    
-    
-    Javanese = None
-    
-    
-    JavaneseScript = None
-    
-    
-    Jersey = None
-    
-    
-    Jju = None
-    
-    
-    JolaFonyi = None
-    
-    
-    Jordan = None
-    
-    
-    Kabuverdianu = None
-    
-    
-    Kabyle = None
-    
-    
-    KaithiScript = None
-    
-    
-    Kako = None
-    
-    
-    Kalenjin = None
-    
-    
-    Kamba = None
-    
-    
-    Kannada = None
-    
-    
-    KannadaScript = None
-    
-    
-    Kanuri = None
-    
-    
-    Kashmiri = None
-    
-    
-    KatakanaScript = None
-    
-    
-    KayahLiScript = None
-    
-    
-    Kazakh = None
-    
-    
-    Kazakhstan = None
-    
-    
-    Kenya = None
-    
-    
-    Kenyang = None
-    
-    
-    KharoshthiScript = None
-    
-    
-    Khmer = None
-    
-    
-    KhmerScript = None
-    
-    
-    KhojkiScript = None
-    
-    
-    KhudawadiScript = None
-    
-    
-    Kiche = None
-    
-    
-    Kikuyu = None
-    
-    
-    Kinyarwanda = None
-    
-    
-    Kirghiz = None
-    
-    
-    Kiribati = None
-    
-    
-    Komi = None
-    
-    
-    Kongo = None
-    
-    
-    Konkani = None
-    
-    
-    Korean = None
-    
-    
-    KoreanScript = None
-    
-    
-    Koro = None
-    
-    
-    Kosovo = None
-    
-    
-    KoyraChiini = None
-    
-    
-    KoyraboroSenni = None
-    
-    
-    Kpelle = None
-    
-    
-    Kurdish = None
-    
-    
-    Kurundi = None
-    
-    
-    Kuwait = None
-    
-    
-    Kwanyama = None
-    
-    
-    Kwasio = None
-    
-    
-    Kyrgyzstan = None
-    
-    
-    Lakota = None
-    
-    
-    Langi = None
-    
-    
-    Language = None
-    
-    
-    LannaScript = None
-    
-    
-    Lao = None
-    
-    
-    LaoScript = None
-    
-    
-    Laos = None
-    
-    
-    LargeFloweryMiao = None
-    
-    
-    LastCountry = None
-    
-    
-    LastLanguage = None
-    
-    
-    LastScript = None
-    
-    
-    Latin = None
-    
-    
-    LatinAmericaAndTheCaribbean = None
-    
-    
-    LatinScript = None
-    
-    
-    Latvia = None
-    
-    
-    Latvian = None
-    
-    
-    Lebanon = None
-    
-    
-    Lepcha = None
-    
-    
-    LepchaScript = None
-    
-    
-    Lesotho = None
-    
-    
-    Lezghian = None
-    
-    
-    Liberia = None
-    
-    
-    Libya = None
-    
-    
-    Liechtenstein = None
-    
-    
-    Limbu = None
-    
-    
-    LimbuScript = None
-    
-    
-    Limburgish = None
-    
-    
-    LinearA = None
-    
-    
-    LinearAScript = None
-    
-    
-    LinearBScript = None
-    
-    
-    Lingala = None
-    
-    
-    Lisu = None
-    
-    
-    Lithuania = None
-    
-    
-    Lithuanian = None
-    
-    
-    LongFormat = None
-    
-    
-    LowGerman = None
-    
-    
-    LowerSorbian = None
-    
-    
-    Lu = None
-    
-    
-    LubaKatanga = None
-    
-    
-    LuleSami = None
-    
-    
-    Luo = None
-    
-    
-    Luxembourg = None
-    
-    
-    Luxembourgish = None
-    
-    
-    Luyia = None
-    
-    
-    Lycian = None
-    
-    
-    LycianScript = None
-    
-    
-    Lydian = None
-    
-    
-    LydianScript = None
-    
-    
-    Macau = None
-    
-    
-    Macedonia = None
-    
-    
-    Macedonian = None
-    
-    
-    Machame = None
-    
-    
-    Madagascar = None
-    
-    
-    MahajaniScript = None
-    
-    
-    Maithili = None
-    
-    
-    MakhuwaMeetto = None
-    
-    
-    Makonde = None
-    
-    
-    Malagasy = None
-    
-    
-    Malawi = None
-    
-    
-    Malay = None
-    
-    
-    Malayalam = None
-    
-    
-    MalayalamScript = None
-    
-    
-    Malaysia = None
-    
-    
-    Maldives = None
-    
-    
-    Mali = None
-    
-    
-    Malta = None
-    
-    
-    Maltese = None
-    
-    
-    MandaeanScript = None
-    
-    
-    Mandingo = None
-    
-    
-    ManichaeanMiddlePersian = None
-    
-    
-    ManichaeanScript = None
-    
-    
-    Manipuri = None
-    
-    
-    Manx = None
-    
-    
-    Maori = None
-    
-    
-    Mapuche = None
-    
-    
-    Marathi = None
-    
-    
-    MarshallIslands = None
-    
-    
-    Marshallese = None
-    
-    
-    Martinique = None
-    
-    
-    Masai = None
-    
-    
-    Mauritania = None
-    
-    
-    Mauritius = None
-    
-    
-    Mayotte = None
-    
-    
-    MeasurementSystem = None
+    def accept(*args, **kwargs): pass
+    def ignore(*args, **kwargs): pass
+    def isAccepted(*args, **kwargs): pass
+    def setAccepted(*args, **kwargs): pass
+    def spontaneous(*args, **kwargs): pass
+    def type(*args, **kwargs): pass
+    @staticmethod
+    def registerEventType(*args, **kwargs): pass
+    AcceptDropsChange = None
     
     
-    MeiteiMayekScript = None
+    ActionAdded = None
     
     
-    Mende = None
+    ActionChanged = None
     
     
-    MendeKikakuiScript = None
+    ActionRemoved = None
     
     
-    Meroitic = None
+    ActivateControl = None
     
     
-    MeroiticCursiveScript = None
+    ActivationChange = None
     
     
-    MeroiticScript = None
+    ApplicationActivate = None
     
     
-    Meru = None
+    ApplicationActivated = None
     
     
-    Meta = None
+    ApplicationDeactivate = None
     
     
-    MetricSystem = None
+    ApplicationDeactivated = None
     
     
-    Mexico = None
+    ApplicationFontChange = None
     
     
-    Micronesia = None
+    ApplicationLayoutDirectionChange = None
     
     
-    ModiScript = None
+    ApplicationPaletteChange = None
     
     
-    Mohawk = None
+    ApplicationStateChange = None
     
     
-    Moldavian = None
+    ApplicationWindowIconChange = None
     
     
-    Moldova = None
+    ChildAdded = None
     
     
-    Monaco = None
+    ChildPolished = None
     
     
-    Mongolia = None
+    ChildRemoved = None
     
     
-    Mongolian = None
+    Clipboard = None
     
     
-    MongolianScript = None
+    Close = None
     
     
-    Mono = None
+    CloseSoftwareInputPanel = None
     
     
-    Montenegro = None
+    ContentsRectChange = None
     
     
-    Montserrat = None
+    ContextMenu = None
     
     
-    Morisyen = None
+    Create = None
     
     
-    Morocco = None
+    CursorChange = None
     
     
-    Mozambique = None
+    DeactivateControl = None
     
     
-    MroScript = None
+    DeferredDelete = None
     
     
-    Mundang = None
+    Destroy = None
     
     
-    Myanmar = None
+    DragEnter = None
     
     
-    MyanmarScript = None
+    DragLeave = None
     
     
-    NabataeanScript = None
+    DragMove = None
     
     
-    Nama = None
+    DragResponse = None
     
     
-    Namibia = None
+    Drop = None
     
     
-    NarrowFormat = None
+    DynamicPropertyChange = None
     
     
-    NauruCountry = None
+    EmbeddingControl = None
     
     
-    NauruLanguage = None
+    EnabledChange = None
     
     
-    Navaho = None
+    Enter = None
     
     
-    Ndonga = None
+    EnterWhatsThisMode = None
     
     
-    Nepal = None
+    Expose = None
     
     
-    Nepali = None
+    FileOpen = None
     
     
-    Netherlands = None
+    FocusAboutToChange = None
     
     
-    NewCaledonia = None
+    FocusIn = None
     
     
-    NewTaiLueScript = None
+    FocusOut = None
     
     
-    NewZealand = None
+    FontChange = None
     
     
-    Ngiemboon = None
+    FutureCallOut = None
     
     
-    Ngomba = None
+    Gesture = None
     
     
-    Nicaragua = None
+    GestureOverride = None
     
     
-    Niger = None
+    GrabKeyboard = None
     
     
-    Nigeria = None
+    GrabMouse = None
     
     
-    Niue = None
+    GraphicsSceneContextMenu = None
     
     
-    Nko = None
+    GraphicsSceneDragEnter = None
     
     
-    NkoScript = None
+    GraphicsSceneDragLeave = None
     
     
-    NorfolkIsland = None
+    GraphicsSceneDragMove = None
     
     
-    NorthKorea = None
+    GraphicsSceneDrop = None
     
     
-    NorthNdebele = None
+    GraphicsSceneHelp = None
     
     
-    NorthernMarianaIslands = None
+    GraphicsSceneHoverEnter = None
     
     
-    NorthernSami = None
+    GraphicsSceneHoverLeave = None
     
     
-    NorthernSotho = None
+    GraphicsSceneHoverMove = None
     
     
-    NorthernThai = None
+    GraphicsSceneMouseDoubleClick = None
     
     
-    Norway = None
+    GraphicsSceneMouseMove = None
     
     
-    Norwegian = None
+    GraphicsSceneMousePress = None
     
     
-    NorwegianBokmal = None
+    GraphicsSceneMouseRelease = None
     
     
-    NorwegianNynorsk = None
+    GraphicsSceneMove = None
     
     
-    Nuer = None
+    GraphicsSceneResize = None
     
     
-    NumberOption = None
+    GraphicsSceneWheel = None
     
     
-    NumberOptions = None
+    HelpRequest = None
     
     
-    Nyanja = None
+    Hide = None
     
     
-    Nyankole = None
+    HideToParent = None
     
     
-    Occitan = None
+    HoverEnter = None
     
     
-    OghamScript = None
+    HoverLeave = None
     
     
-    Ojibwa = None
+    HoverMove = None
     
     
-    OlChikiScript = None
+    IconDrag = None
     
     
-    OldIrish = None
+    IconTextChange = None
     
     
-    OldItalicScript = None
+    InputMethod = None
     
     
-    OldNorse = None
+    InputMethodQuery = None
     
     
-    OldNorthArabianScript = None
+    KeyPress = None
     
     
-    OldPermicScript = None
+    KeyRelease = None
     
     
-    OldPersian = None
+    KeyboardLayoutChange = None
     
     
-    OldPersianScript = None
+    LanguageChange = None
     
     
-    OldSouthArabianScript = None
+    LayoutDirectionChange = None
     
     
-    OldTurkish = None
+    LayoutRequest = None
     
     
-    Oman = None
+    Leave = None
     
     
-    OmitGroupSeparator = None
+    LeaveWhatsThisMode = None
     
     
-    Oriya = None
+    LocaleChange = None
     
     
-    OriyaScript = None
+    MacGLClearDrawable = None
     
     
-    OrkhonScript = None
+    MacGLWindowChange = None
     
     
-    Oromo = None
+    MacSizeChange = None
     
     
-    OsmanyaScript = None
+    MaxUser = None
     
     
-    Ossetic = None
+    MetaCall = None
     
     
-    PahawhHmongScript = None
+    ModifiedChange = None
     
     
-    Pahlavi = None
+    MouseButtonDblClick = None
     
     
-    Pakistan = None
+    MouseButtonPress = None
     
     
-    Palau = None
+    MouseButtonRelease = None
     
     
-    PalestinianTerritories = None
+    MouseMove = None
     
     
-    Pali = None
+    MouseTrackingChange = None
     
     
-    PalmyreneScript = None
+    Move = None
     
     
-    Panama = None
+    NativeGesture = None
     
     
-    PapuaNewGuinea = None
+    NetworkReplyUpdated = None
     
     
-    Paraguay = None
+    NonClientAreaMouseButtonDblClick = None
     
     
-    Parthian = None
+    NonClientAreaMouseButtonPress = None
     
     
-    Pashto = None
+    NonClientAreaMouseButtonRelease = None
     
     
-    PauCinHauScript = None
+    NonClientAreaMouseMove = None
     
     
-    PeoplesRepublicOfCongo = None
+    locals()['None'] = None
     
     
-    Persian = None
+    OkRequest = None
     
     
-    Peru = None
+    OrientationChange = None
     
     
-    PhagsPaScript = None
+    Paint = None
     
     
-    Philippines = None
+    PaletteChange = None
     
     
-    Phoenician = None
+    ParentAboutToChange = None
     
     
-    PhoenicianScript = None
+    ParentChange = None
     
     
-    Pitcairn = None
+    PlatformPanel = None
     
     
-    Poland = None
+    PlatformSurface = None
     
     
     Polish = None
     
     
-    PollardPhoneticScript = None
+    PolishRequest = None
     
     
-    Portugal = None
+    QueryWhatsThis = None
     
     
-    Portuguese = None
+    Quit = None
     
     
-    PrakritLanguage = None
+    ReadOnlyChange = None
     
     
-    Prussian = None
+    RequestSoftwareInputPanel = None
     
     
-    PsalterPahlaviScript = None
+    Resize = None
     
     
-    PuertoRico = None
+    ScreenChangeInternal = None
     
     
-    Punjabi = None
+    Scroll = None
     
     
-    Qatar = None
+    ScrollPrepare = None
     
     
-    Quechua = None
+    Shortcut = None
     
     
-    QuotationStyle = None
+    ShortcutOverride = None
     
     
-    Rejang = None
+    Show = None
     
     
-    RejangScript = None
+    ShowToParent = None
     
     
-    RejectGroupSeparator = None
+    ShowWindowRequest = None
     
     
-    RepublicOfKorea = None
+    SockAct = None
     
     
-    Reunion = None
+    SockClose = None
     
     
-    RhaetoRomance = None
+    Speech = None
     
     
-    Romania = None
+    StateMachineSignal = None
     
     
-    Romanian = None
+    StateMachineWrapped = None
     
     
-    Romansh = None
+    StatusTip = None
     
     
-    Rombo = None
+    Style = None
     
     
-    Rundi = None
+    StyleAnimationUpdate = None
     
     
-    RunicScript = None
+    StyleChange = None
     
     
-    Russia = None
+    TabletEnterProximity = None
     
     
-    Russian = None
+    TabletLeaveProximity = None
     
     
-    RussianFederation = None
+    TabletMove = None
     
     
-    Rwa = None
+    TabletPress = None
     
     
-    Rwanda = None
+    TabletRelease = None
     
     
-    Sabaean = None
+    ThemeChange = None
     
     
-    Saho = None
+    ThreadChange = None
     
     
-    SaintBarthelemy = None
+    Timer = None
     
     
-    SaintHelena = None
+    ToolBarChange = None
     
     
-    SaintKittsAndNevis = None
+    ToolTip = None
     
     
-    SaintLucia = None
+    ToolTipChange = None
     
     
-    SaintMartin = None
+    TouchBegin = None
     
     
-    SaintPierreAndMiquelon = None
+    TouchCancel = None
     
     
-    SaintVincentAndTheGrenadines = None
+    TouchEnd = None
     
     
-    Sakha = None
+    TouchUpdate = None
     
     
-    Samaritan = None
+    Type = None
     
     
-    SamaritanScript = None
+    UngrabKeyboard = None
     
     
-    Samburu = None
+    UngrabMouse = None
     
     
-    Samoa = None
+    UpdateLater = None
     
     
-    Samoan = None
+    UpdateRequest = None
     
     
-    SanMarino = None
+    User = None
     
     
-    Sango = None
+    WhatsThis = None
     
     
-    Sangu = None
+    WhatsThisClicked = None
     
     
-    Sanskrit = None
+    Wheel = None
     
     
-    Santali = None
+    WinEventAct = None
     
     
-    SaoTomeAndPrincipe = None
+    WinIdChange = None
     
     
-    Sardinian = None
+    WindowActivate = None
     
     
-    SaudiArabia = None
+    WindowBlocked = None
     
     
-    Saurashtra = None
+    WindowChangeInternal = None
     
     
-    SaurashtraScript = None
+    WindowDeactivate = None
     
     
-    Script = None
+    WindowIconChange = None
     
     
-    Sena = None
+    WindowStateChange = None
     
     
-    Senegal = None
+    WindowTitleChange = None
     
     
-    Serbia = None
+    WindowUnblocked = None
     
     
-    Serbian = None
+    ZOrderChange = None
     
     
-    SerboCroatian = None
-    
-    
-    Seychelles = None
-    
-    
-    Shambala = None
-    
-    
-    SharadaScript = None
-    
-    
-    ShavianScript = None
-    
-    
-    Shona = None
-    
-    
-    ShortFormat = None
-    
-    
-    SichuanYi = None
-    
-    
-    Sidamo = None
-    
-    
-    SiddhamScript = None
-    
-    
-    SierraLeone = None
-    
-    
-    SimplifiedChineseScript = None
-    
-    
-    SimplifiedHanScript = None
-    
-    
-    Sindhi = None
-    
-    
-    Singapore = None
-    
-    
-    Sinhala = None
-    
-    
-    SinhalaScript = None
-    
-    
-    SintMaarten = None
-    
-    
-    SkoltSami = None
-    
-    
-    Slovak = None
-    
-    
-    Slovakia = None
-    
-    
-    Slovenia = None
-    
-    
-    Slovenian = None
-    
-    
-    Soga = None
-    
-    
-    SolomonIslands = None
-    
-    
-    Somali = None
-    
-    
-    Somalia = None
-    
-    
-    Sora = None
-    
-    
-    SoraSompengScript = None
-    
-    
-    SouthAfrica = None
-    
-    
-    SouthGeorgiaAndTheSouthSandwichIslands = None
-    
-    
-    SouthKorea = None
-    
-    
-    SouthNdebele = None
-    
-    
-    SouthSudan = None
-    
-    
-    SouthernSami = None
-    
-    
-    SouthernSotho = None
-    
-    
-    Spain = None
-    
-    
-    Spanish = None
-    
-    
-    SriLanka = None
-    
-    
-    StandardMoroccanTamazight = None
-    
-    
-    StandardQuotation = None
-    
-    
-    Sudan = None
-    
-    
-    Sundanese = None
-    
-    
-    SundaneseScript = None
-    
-    
-    Suriname = None
-    
-    
-    SvalbardAndJanMayenIslands = None
-    
-    
-    Swahili = None
-    
-    
-    Swati = None
-    
-    
-    Swaziland = None
-    
-    
-    Sweden = None
-    
-    
-    Swedish = None
-    
-    
-    SwissGerman = None
-    
-    
-    Switzerland = None
-    
-    
-    Sylheti = None
-    
-    
-    SylotiNagriScript = None
-    
-    
-    Syria = None
-    
-    
-    Syriac = None
-    
-    
-    SyriacScript = None
-    
-    
-    SyrianArabRepublic = None
-    
-    
-    Tachelhit = None
-    
-    
-    Tagalog = None
-    
-    
-    TagalogScript = None
-    
-    
-    Tagbanwa = None
-    
-    
-    TagbanwaScript = None
-    
-    
-    Tahitian = None
-    
-    
-    TaiDam = None
-    
-    
-    TaiLeScript = None
-    
-    
-    TaiNua = None
-    
-    
-    TaiVietScript = None
-    
-    
-    Taita = None
-    
-    
-    Taiwan = None
-    
-    
-    Tajik = None
-    
-    
-    Tajikistan = None
-    
-    
-    TakriScript = None
-    
-    
-    Tamil = None
-    
-    
-    TamilScript = None
-    
-    
-    Tanzania = None
-    
-    
-    Taroko = None
-    
-    
-    Tasawaq = None
-    
-    
-    Tatar = None
-    
-    
-    TedimChin = None
-    
-    
-    Telugu = None
-    
-    
-    TeluguScript = None
-    
-    
-    Teso = None
-    
-    
-    ThaanaScript = None
-    
-    
-    Thai = None
-    
-    
-    ThaiScript = None
-    
-    
-    Thailand = None
-    
-    
-    Tibetan = None
-    
-    
-    TibetanScript = None
-    
-    
-    TifinaghScript = None
-    
-    
-    Tigre = None
-    
-    
-    Tigrinya = None
-    
-    
-    TirhutaScript = None
-    
-    
-    Togo = None
-    
-    
-    Tokelau = None
-    
-    
-    Tonga = None
-    
-    
-    Tongan = None
-    
-    
-    TraditionalChineseScript = None
-    
-    
-    TraditionalHanScript = None
-    
-    
-    TrinidadAndTobago = None
-    
-    
-    TristanDaCunha = None
-    
-    
-    Tsonga = None
-    
-    
-    Tswana = None
-    
-    
-    Tunisia = None
-    
-    
-    Turkey = None
-    
-    
-    Turkish = None
-    
-    
-    Turkmen = None
-    
-    
-    Turkmenistan = None
-    
-    
-    TurksAndCaicosIslands = None
-    
-    
-    Tuvalu = None
-    
-    
-    Twi = None
-    
-    
-    Tyap = None
-    
-    
-    Uganda = None
-    
-    
-    Ugaritic = None
-    
-    
-    UgariticScript = None
-    
-    
-    Uighur = None
-    
-    
-    Uigur = None
-    
-    
-    Ukraine = None
-    
-    
-    Ukrainian = None
-    
-    
-    UnitedArabEmirates = None
-    
-    
-    UnitedKingdom = None
-    
-    
-    UnitedStates = None
-    
-    
-    UnitedStatesMinorOutlyingIslands = None
-    
-    
-    UnitedStatesVirginIslands = None
-    
-    
-    UpperSorbian = None
-    
-    
-    Urdu = None
-    
-    
-    Uruguay = None
-    
-    
-    Uzbek = None
-    
-    
-    Uzbekistan = None
-    
-    
-    Vai = None
-    
-    
-    VaiScript = None
-    
-    
-    Vanuatu = None
-    
-    
-    VarangKshitiScript = None
-    
-    
-    VaticanCityState = None
-    
-    
-    Venda = None
-    
-    
-    Venezuela = None
-    
-    
-    Vietnam = None
-    
-    
-    Vietnamese = None
-    
-    
-    Volapuk = None
-    
-    
-    Vunjo = None
-    
-    
-    Walamo = None
-    
-    
-    WallisAndFutunaIslands = None
-    
-    
-    Walloon = None
-    
-    
-    Walser = None
-    
-    
-    Warlpiri = None
-    
-    
-    Welsh = None
-    
-    
-    WesternFrisian = None
-    
-    
-    WesternSahara = None
-    
-    
-    Wolof = None
-    
-    
-    Xhosa = None
-    
-    
-    Yangben = None
-    
-    
-    Yemen = None
-    
-    
-    YiScript = None
-    
-    
-    Yiddish = None
-    
-    
-    Yoruba = None
-    
-    
-    Zambia = None
-    
-    
-    Zarma = None
-    
-    
-    Zhuang = None
-    
-    
-    Zimbabwe = None
-    
-    
-    Zulu = None
-    
-    
-    __new__ = None
-
-
-class QModelIndex(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def child(*args, **kwargs):
-        pass
-    
-    
-    def column(*args, **kwargs):
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def flags(*args, **kwargs):
-        pass
-    
-    
-    def internalId(*args, **kwargs):
-        pass
-    
-    
-    def internalPointer(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def model(*args, **kwargs):
-        pass
-    
-    
-    def parent(*args, **kwargs):
-        pass
-    
-    
-    def row(*args, **kwargs):
-        pass
-    
-    
-    def sibling(*args, **kwargs):
-        pass
+    ZeroTimerEvent = None
     
     
     __new__ = None
@@ -5670,50 +2943,27 @@ class QSysInfo(_Object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def buildAbi(*args, **kwargs):
-        pass
-    
-    
-    def buildCpuArchitecture(*args, **kwargs):
-        pass
-    
-    
-    def currentCpuArchitecture(*args, **kwargs):
-        pass
-    
-    
-    def kernelType(*args, **kwargs):
-        pass
-    
-    
-    def kernelVersion(*args, **kwargs):
-        pass
-    
-    
-    def machineHostName(*args, **kwargs):
-        pass
-    
-    
-    def prettyProductName(*args, **kwargs):
-        pass
-    
-    
-    def productType(*args, **kwargs):
-        pass
-    
-    
-    def productVersion(*args, **kwargs):
-        pass
-    
-    
-    def windowsVersion(*args, **kwargs):
-        pass
-    
-    
+    @staticmethod
+    def buildAbi(*args, **kwargs): pass
+    @staticmethod
+    def buildCpuArchitecture(*args, **kwargs): pass
+    @staticmethod
+    def currentCpuArchitecture(*args, **kwargs): pass
+    @staticmethod
+    def kernelType(*args, **kwargs): pass
+    @staticmethod
+    def kernelVersion(*args, **kwargs): pass
+    @staticmethod
+    def machineHostName(*args, **kwargs): pass
+    @staticmethod
+    def prettyProductName(*args, **kwargs): pass
+    @staticmethod
+    def productType(*args, **kwargs): pass
+    @staticmethod
+    def productVersion(*args, **kwargs): pass
+    @staticmethod
+    def windowsVersion(*args, **kwargs): pass
     BigEndian = None
     
     
@@ -5831,687 +3081,73 @@ class QSysInfo(_Object):
     __new__ = None
 
 
-class QXmlStreamEntityDeclaration(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def notationName(*args, **kwargs):
-        pass
-    
-    
-    def publicId(*args, **kwargs):
-        pass
-    
-    
-    def systemId(*args, **kwargs):
-        pass
-    
-    
-    def value(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QUrl(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def adjusted(*args, **kwargs):
-        pass
-    
-    
-    def authority(*args, **kwargs):
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def errorString(*args, **kwargs):
-        pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def fragment(*args, **kwargs):
-        pass
-    
-    
-    def hasFragment(*args, **kwargs):
-        pass
-    
-    
-    def hasQuery(*args, **kwargs):
-        pass
-    
-    
-    def host(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isLocalFile(*args, **kwargs):
-        pass
-    
-    
-    def isParentOf(*args, **kwargs):
-        pass
-    
-    
-    def isRelative(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def matches(*args, **kwargs):
-        pass
-    
-    
-    def password(*args, **kwargs):
-        pass
-    
-    
-    def path(*args, **kwargs):
-        pass
-    
-    
-    def port(*args, **kwargs):
-        pass
-    
-    
-    def query(*args, **kwargs):
-        pass
-    
-    
-    def resolved(*args, **kwargs):
-        pass
-    
-    
-    def scheme(*args, **kwargs):
-        pass
-    
-    
-    def setAuthority(*args, **kwargs):
-        pass
-    
-    
-    def setFragment(*args, **kwargs):
-        pass
-    
-    
-    def setHost(*args, **kwargs):
-        pass
-    
-    
-    def setPassword(*args, **kwargs):
-        pass
-    
-    
-    def setPath(*args, **kwargs):
-        pass
-    
-    
-    def setPort(*args, **kwargs):
-        pass
-    
-    
-    def setQuery(*args, **kwargs):
-        pass
-    
-    
-    def setScheme(*args, **kwargs):
-        pass
-    
-    
-    def setUrl(*args, **kwargs):
-        pass
-    
-    
-    def setUserInfo(*args, **kwargs):
-        pass
-    
-    
-    def setUserName(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def toDisplayString(*args, **kwargs):
-        pass
-    
-    
-    def toEncoded(*args, **kwargs):
-        pass
-    
-    
-    def toLocalFile(*args, **kwargs):
-        pass
-    
-    
-    def toString(*args, **kwargs):
-        pass
-    
-    
-    def topLevelDomain(*args, **kwargs):
-        pass
-    
-    
-    def url(*args, **kwargs):
-        pass
-    
-    
-    def userInfo(*args, **kwargs):
-        pass
-    
-    
-    def userName(*args, **kwargs):
-        pass
-    
-    
-    def fromAce(*args, **kwargs):
-        pass
-    
-    
-    def fromEncoded(*args, **kwargs):
-        pass
-    
-    
-    def fromLocalFile(*args, **kwargs):
-        pass
-    
-    
-    def fromPercentEncoding(*args, **kwargs):
-        pass
-    
-    
-    def fromStringList(*args, **kwargs):
-        pass
-    
-    
-    def fromUserInput(*args, **kwargs):
-        pass
-    
-    
-    def idnWhitelist(*args, **kwargs):
-        pass
-    
-    
-    def setIdnWhitelist(*args, **kwargs):
-        pass
-    
-    
-    def toAce(*args, **kwargs):
-        pass
-    
-    
-    def toPercentEncoding(*args, **kwargs):
-        pass
-    
-    
-    def toStringList(*args, **kwargs):
-        pass
-    
-    
-    AssumeLocalFile = None
-    
-    
-    ComponentFormattingOption = None
-    
-    
-    DecodeReserved = None
-    
-    
-    DecodedMode = None
-    
-    
-    DefaultResolution = None
-    
-    
-    EncodeDelimiters = None
-    
-    
-    EncodeReserved = None
-    
-    
-    EncodeSpaces = None
-    
-    
-    EncodeUnicode = None
-    
-    
-    FormattingOptions = None
-    
-    
-    FullyDecoded = None
-    
-    
-    FullyEncoded = None
-    
-    
-    locals()['None'] = None
-    
-    
-    NormalizePathSegments = None
-    
-    
-    ParsingMode = None
-    
-    
-    PreferLocalFile = None
-    
-    
-    PrettyDecoded = None
-    
-    
-    RemoveAuthority = None
-    
-    
-    RemoveFilename = None
-    
-    
-    RemoveFragment = None
-    
-    
-    RemovePassword = None
-    
-    
-    RemovePath = None
-    
-    
-    RemovePort = None
-    
-    
-    RemoveQuery = None
-    
-    
-    RemoveScheme = None
-    
-    
-    RemoveUserInfo = None
-    
-    
-    StrictMode = None
-    
-    
-    StripTrailingSlash = None
-    
-    
-    TolerantMode = None
-    
-    
-    UrlFormattingOption = None
-    
-    
-    UserInputResolutionOption = None
-    
-    
-    UserInputResolutionOptions = None
-    
-    
-    __new__ = None
-
-
-class QCollatorSortKey(_Object):
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def compare(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
 class QJsonDocument(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __nonzero__(*args, **kwargs):
         """
         x.__nonzero__() <==> x != 0
         """
-    
         pass
-    
-    
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
-    def array(*args, **kwargs):
-        pass
-    
-    
-    def isArray(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def isObject(*args, **kwargs):
-        pass
-    
-    
-    def object(*args, **kwargs):
-        pass
-    
-    
-    def rawData(*args, **kwargs):
-        pass
-    
-    
-    def setArray(*args, **kwargs):
-        pass
-    
-    
-    def setObject(*args, **kwargs):
-        pass
-    
-    
-    def toBinaryData(*args, **kwargs):
-        pass
-    
-    
-    def toJson(*args, **kwargs):
-        pass
-    
-    
-    def toVariant(*args, **kwargs):
-        pass
-    
-    
-    def fromBinaryData(*args, **kwargs):
-        pass
-    
-    
-    def fromJson(*args, **kwargs):
-        pass
-    
-    
-    def fromRawData(*args, **kwargs):
-        pass
-    
-    
-    def fromVariant(*args, **kwargs):
-        pass
-    
-    
+    def array(*args, **kwargs): pass
+    def isArray(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def isObject(*args, **kwargs): pass
+    def object(*args, **kwargs): pass
+    def rawData(*args, **kwargs): pass
+    def setArray(*args, **kwargs): pass
+    def setObject(*args, **kwargs): pass
+    def toBinaryData(*args, **kwargs): pass
+    def toJson(*args, **kwargs): pass
+    def toVariant(*args, **kwargs): pass
+    @staticmethod
+    def fromBinaryData(*args, **kwargs): pass
+    @staticmethod
+    def fromJson(*args, **kwargs): pass
+    @staticmethod
+    def fromRawData(*args, **kwargs): pass
+    @staticmethod
+    def fromVariant(*args, **kwargs): pass
     BypassValidation = None
     
     
@@ -6533,19 +3169,674 @@ class QJsonDocument(_Object):
     __new__ = None
 
 
+class QDataStream(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __lshift__(*args, **kwargs):
+        """
+        x.__lshift__(y) <==> x<<y
+        """
+        pass
+    def __rlshift__(*args, **kwargs):
+        """
+        x.__rlshift__(y) <==> y<<x
+        """
+        pass
+    def __rrshift__(*args, **kwargs):
+        """
+        x.__rrshift__(y) <==> y>>x
+        """
+        pass
+    def __rshift__(*args, **kwargs):
+        """
+        x.__rshift__(y) <==> x>>y
+        """
+        pass
+    def atEnd(*args, **kwargs): pass
+    def byteOrder(*args, **kwargs): pass
+    def device(*args, **kwargs): pass
+    def floatingPointPrecision(*args, **kwargs): pass
+    def readBool(*args, **kwargs): pass
+    def readDouble(*args, **kwargs): pass
+    def readFloat(*args, **kwargs): pass
+    def readInt16(*args, **kwargs): pass
+    def readInt32(*args, **kwargs): pass
+    def readInt64(*args, **kwargs): pass
+    def readInt8(*args, **kwargs): pass
+    def readQChar(*args, **kwargs): pass
+    def readQString(*args, **kwargs): pass
+    def readQStringList(*args, **kwargs): pass
+    def readQVariant(*args, **kwargs): pass
+    def readRawData(*args, **kwargs): pass
+    def readString(*args, **kwargs): pass
+    def readUInt16(*args, **kwargs): pass
+    def readUInt32(*args, **kwargs): pass
+    def readUInt64(*args, **kwargs): pass
+    def readUInt8(*args, **kwargs): pass
+    def resetStatus(*args, **kwargs): pass
+    def setByteOrder(*args, **kwargs): pass
+    def setDevice(*args, **kwargs): pass
+    def setFloatingPointPrecision(*args, **kwargs): pass
+    def setStatus(*args, **kwargs): pass
+    def setVersion(*args, **kwargs): pass
+    def skipRawData(*args, **kwargs): pass
+    def status(*args, **kwargs): pass
+    def unsetDevice(*args, **kwargs): pass
+    def version(*args, **kwargs): pass
+    def writeBool(*args, **kwargs): pass
+    def writeDouble(*args, **kwargs): pass
+    def writeFloat(*args, **kwargs): pass
+    def writeInt16(*args, **kwargs): pass
+    def writeInt32(*args, **kwargs): pass
+    def writeInt64(*args, **kwargs): pass
+    def writeInt8(*args, **kwargs): pass
+    def writeQChar(*args, **kwargs): pass
+    def writeQString(*args, **kwargs): pass
+    def writeQStringList(*args, **kwargs): pass
+    def writeQVariant(*args, **kwargs): pass
+    def writeRawData(*args, **kwargs): pass
+    def writeString(*args, **kwargs): pass
+    def writeUInt16(*args, **kwargs): pass
+    def writeUInt32(*args, **kwargs): pass
+    def writeUInt64(*args, **kwargs): pass
+    def writeUInt8(*args, **kwargs): pass
+    BigEndian = None
+    
+    
+    ByteOrder = None
+    
+    
+    DoublePrecision = None
+    
+    
+    FloatingPointPrecision = None
+    
+    
+    LittleEndian = None
+    
+    
+    Ok = None
+    
+    
+    Qt_1_0 = None
+    
+    
+    Qt_2_0 = None
+    
+    
+    Qt_2_1 = None
+    
+    
+    Qt_3_0 = None
+    
+    
+    Qt_3_1 = None
+    
+    
+    Qt_3_3 = None
+    
+    
+    Qt_4_0 = None
+    
+    
+    Qt_4_1 = None
+    
+    
+    Qt_4_2 = None
+    
+    
+    Qt_4_3 = None
+    
+    
+    Qt_4_4 = None
+    
+    
+    Qt_4_5 = None
+    
+    
+    Qt_4_6 = None
+    
+    
+    Qt_4_7 = None
+    
+    
+    Qt_4_8 = None
+    
+    
+    Qt_4_9 = None
+    
+    
+    Qt_5_0 = None
+    
+    
+    Qt_5_1 = None
+    
+    
+    Qt_5_2 = None
+    
+    
+    Qt_5_3 = None
+    
+    
+    Qt_5_4 = None
+    
+    
+    Qt_5_5 = None
+    
+    
+    Qt_5_6 = None
+    
+    
+    Qt_DefaultCompiledVersion = None
+    
+    
+    ReadCorruptData = None
+    
+    
+    ReadPastEnd = None
+    
+    
+    SinglePrecision = None
+    
+    
+    Status = None
+    
+    
+    Version = None
+    
+    
+    WriteFailed = None
+    
+    
+    __new__ = None
+
+
+class QMetaEnum(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def isFlag(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def key(*args, **kwargs): pass
+    def keyCount(*args, **kwargs): pass
+    def keyToValue(*args, **kwargs): pass
+    def keysToValue(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    def scope(*args, **kwargs): pass
+    def value(*args, **kwargs): pass
+    def valueToKey(*args, **kwargs): pass
+    def valueToKeys(*args, **kwargs): pass
+    __new__ = None
+
+
+class QXmlStreamEntityDeclaration(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def name(*args, **kwargs): pass
+    def notationName(*args, **kwargs): pass
+    def publicId(*args, **kwargs): pass
+    def systemId(*args, **kwargs): pass
+    def value(*args, **kwargs): pass
+    __new__ = None
+
+
+class QSize(_Object):
+    def __add__(*args, **kwargs):
+        """
+        x.__add__(y) <==> x+y
+        """
+        pass
+    def __copy__(*args, **kwargs): pass
+    def __div__(*args, **kwargs):
+        """
+        x.__div__(y) <==> x/y
+        """
+        pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __hash__(*args, **kwargs):
+        """
+        x.__hash__() <==> hash(x)
+        """
+        pass
+    def __iadd__(*args, **kwargs):
+        """
+        x.__iadd__(y) <==> x+=y
+        """
+        pass
+    def __idiv__(*args, **kwargs):
+        """
+        x.__idiv__(y) <==> x/=y
+        """
+        pass
+    def __imul__(*args, **kwargs):
+        """
+        x.__imul__(y) <==> x*=y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __isub__(*args, **kwargs):
+        """
+        x.__isub__(y) <==> x-=y
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __mul__(*args, **kwargs):
+        """
+        x.__mul__(y) <==> x*y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __radd__(*args, **kwargs):
+        """
+        x.__radd__(y) <==> y+x
+        """
+        pass
+    def __rdiv__(*args, **kwargs):
+        """
+        x.__rdiv__(y) <==> y/x
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def __rmul__(*args, **kwargs):
+        """
+        x.__rmul__(y) <==> y*x
+        """
+        pass
+    def __rsub__(*args, **kwargs):
+        """
+        x.__rsub__(y) <==> y-x
+        """
+        pass
+    def __rtruediv__(*args, **kwargs):
+        """
+        x.__rtruediv__(y) <==> y/x
+        """
+        pass
+    def __sub__(*args, **kwargs):
+        """
+        x.__sub__(y) <==> x-y
+        """
+        pass
+    def __truediv__(*args, **kwargs):
+        """
+        x.__truediv__(y) <==> x/y
+        """
+        pass
+    def boundedTo(*args, **kwargs): pass
+    def expandedTo(*args, **kwargs): pass
+    def height(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def scale(*args, **kwargs): pass
+    def scaled(*args, **kwargs): pass
+    def setHeight(*args, **kwargs): pass
+    def setWidth(*args, **kwargs): pass
+    def toTuple(*args, **kwargs): pass
+    def transpose(*args, **kwargs): pass
+    def transposed(*args, **kwargs): pass
+    def width(*args, **kwargs): pass
+    __new__ = None
+
+
+class QDate(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __getattribute__(*args, **kwargs):
+        """
+        x.__getattribute__('name') <==> x.name
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __hash__(*args, **kwargs):
+        """
+        x.__hash__() <==> hash(x)
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def addDays(*args, **kwargs): pass
+    def addMonths(*args, **kwargs): pass
+    def addYears(*args, **kwargs): pass
+    def day(*args, **kwargs): pass
+    def dayOfWeek(*args, **kwargs): pass
+    def dayOfYear(*args, **kwargs): pass
+    def daysInMonth(*args, **kwargs): pass
+    def daysInYear(*args, **kwargs): pass
+    def daysTo(*args, **kwargs): pass
+    def getDate(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def month(*args, **kwargs): pass
+    def setDate(*args, **kwargs): pass
+    def toJulianDay(*args, **kwargs): pass
+    def toPython(*args, **kwargs): pass
+    def toString(*args, **kwargs): pass
+    def weekNumber(*args, **kwargs): pass
+    def year(*args, **kwargs): pass
+    @staticmethod
+    def currentDate(*args, **kwargs): pass
+    @staticmethod
+    def fromJulianDay(*args, **kwargs): pass
+    @staticmethod
+    def fromString(*args, **kwargs): pass
+    @staticmethod
+    def isLeapYear(*args, **kwargs): pass
+    @staticmethod
+    def isValid(*args, **kwargs): pass
+    @staticmethod
+    def longDayName(*args, **kwargs): pass
+    @staticmethod
+    def longMonthName(*args, **kwargs): pass
+    @staticmethod
+    def shortDayName(*args, **kwargs): pass
+    @staticmethod
+    def shortMonthName(*args, **kwargs): pass
+    DateFormat = None
+    
+    
+    MonthNameType = None
+    
+    
+    StandaloneFormat = None
+    
+    
+    __new__ = None
+
+
+class QMutexLocker(_Object):
+    def __enter__(*args, **kwargs): pass
+    def __exit__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def mutex(*args, **kwargs): pass
+    def relock(*args, **kwargs): pass
+    def unlock(*args, **kwargs): pass
+    __new__ = None
+
+
+class QSemaphore(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def acquire(*args, **kwargs): pass
+    def available(*args, **kwargs): pass
+    def release(*args, **kwargs): pass
+    def tryAcquire(*args, **kwargs): pass
+    __new__ = None
+
+
+class QMetaClassInfo(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def name(*args, **kwargs): pass
+    def value(*args, **kwargs): pass
+    __new__ = None
+
+
+class QTextCodec(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def aliases(*args, **kwargs): pass
+    def canEncode(*args, **kwargs): pass
+    def convertToUnicode(*args, **kwargs): pass
+    def fromUnicode(*args, **kwargs): pass
+    def makeDecoder(*args, **kwargs): pass
+    def makeEncoder(*args, **kwargs): pass
+    def mibEnum(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    def toUnicode(*args, **kwargs): pass
+    @staticmethod
+    def availableCodecs(*args, **kwargs): pass
+    @staticmethod
+    def availableMibs(*args, **kwargs): pass
+    @staticmethod
+    def codecForHtml(*args, **kwargs): pass
+    @staticmethod
+    def codecForLocale(*args, **kwargs): pass
+    @staticmethod
+    def codecForMib(*args, **kwargs): pass
+    @staticmethod
+    def codecForName(*args, **kwargs): pass
+    @staticmethod
+    def codecForUtfText(*args, **kwargs): pass
+    @staticmethod
+    def setCodecForLocale(*args, **kwargs): pass
+    ConversionFlag = None
+    
+    
+    ConversionFlags = None
+    
+    
+    ConvertInvalidToNull = None
+    
+    
+    ConverterState = None
+    
+    
+    DefaultConversion = None
+    
+    
+    FreeFunction = None
+    
+    
+    IgnoreHeader = None
+    
+    
+    __new__ = None
+
+
+class QXmlStreamWriter(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def autoFormatting(*args, **kwargs): pass
+    def autoFormattingIndent(*args, **kwargs): pass
+    def codec(*args, **kwargs): pass
+    def device(*args, **kwargs): pass
+    def hasError(*args, **kwargs): pass
+    def setAutoFormatting(*args, **kwargs): pass
+    def setAutoFormattingIndent(*args, **kwargs): pass
+    def setCodec(*args, **kwargs): pass
+    def setDevice(*args, **kwargs): pass
+    def writeAttribute(*args, **kwargs): pass
+    def writeAttributes(*args, **kwargs): pass
+    def writeCDATA(*args, **kwargs): pass
+    def writeCharacters(*args, **kwargs): pass
+    def writeComment(*args, **kwargs): pass
+    def writeCurrentToken(*args, **kwargs): pass
+    def writeDTD(*args, **kwargs): pass
+    def writeDefaultNamespace(*args, **kwargs): pass
+    def writeEmptyElement(*args, **kwargs): pass
+    def writeEndDocument(*args, **kwargs): pass
+    def writeEndElement(*args, **kwargs): pass
+    def writeEntityReference(*args, **kwargs): pass
+    def writeNamespace(*args, **kwargs): pass
+    def writeProcessingInstruction(*args, **kwargs): pass
+    def writeStartDocument(*args, **kwargs): pass
+    def writeStartElement(*args, **kwargs): pass
+    def writeTextElement(*args, **kwargs): pass
+    __new__ = None
+
+
+class QDirIterator(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def fileInfo(*args, **kwargs): pass
+    def fileName(*args, **kwargs): pass
+    def filePath(*args, **kwargs): pass
+    def hasNext(*args, **kwargs): pass
+    def next(*args, **kwargs): pass
+    def path(*args, **kwargs): pass
+    FollowSymlinks = None
+    
+    
+    IteratorFlag = None
+    
+    
+    IteratorFlags = None
+    
+    
+    NoIteratorFlags = None
+    
+    
+    Subdirectories = None
+    
+    
+    __new__ = None
+
+
 class Qt(_Object):
-    def qt_getEnumMetaObject(*args, **kwargs):
-        pass
-    
-    
-    def qt_getEnumName(*args, **kwargs):
-        pass
-    
-    
+    @staticmethod
+    def qt_getEnumMetaObject(*args, **kwargs): pass
+    @staticmethod
+    def qt_getEnumName(*args, **kwargs): pass
     AA_AttributeCount = None
     
     
     AA_CompressHighFrequencyEvents = None
+    
+    
+    AA_CompressTabletEvents = None
     
     
     AA_DisableHighDpiScaling = None
@@ -10274,573 +7565,4310 @@ class Qt(_Object):
     yellow = None
 
 
-class QItemSelectionRange(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+class QProcessEnvironment(_Object):
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def clear(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def insert(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def keys(*args, **kwargs): pass
+    def remove(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def toStringList(*args, **kwargs): pass
+    def value(*args, **kwargs): pass
+    @staticmethod
+    def systemEnvironment(*args, **kwargs): pass
+    __new__ = None
+
+
+class QSystemSemaphore(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def acquire(*args, **kwargs): pass
+    def error(*args, **kwargs): pass
+    def errorString(*args, **kwargs): pass
+    def key(*args, **kwargs): pass
+    def release(*args, **kwargs): pass
+    def setKey(*args, **kwargs): pass
+    AccessMode = None
     
     
+    AlreadyExists = None
+    
+    
+    Create = None
+    
+    
+    KeyError = None
+    
+    
+    NoError = None
+    
+    
+    NotFound = None
+    
+    
+    Open = None
+    
+    
+    OutOfResources = None
+    
+    
+    PermissionDenied = None
+    
+    
+    SystemSemaphoreError = None
+    
+    
+    UnknownError = None
+    
+    
+    __new__ = None
+
+
+class QJsonParseError(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def errorString(*args, **kwargs): pass
+    DeepNesting = None
+    
+    
+    DocumentTooLarge = None
+    
+    
+    GarbageAtEnd = None
+    
+    
+    IllegalEscapeSequence = None
+    
+    
+    IllegalNumber = None
+    
+    
+    IllegalUTF8String = None
+    
+    
+    IllegalValue = None
+    
+    
+    MissingNameSeparator = None
+    
+    
+    MissingObject = None
+    
+    
+    MissingValueSeparator = None
+    
+    
+    NoError = None
+    
+    
+    ParseError = None
+    
+    
+    TerminationByNumber = None
+    
+    
+    UnterminatedArray = None
+    
+    
+    UnterminatedObject = None
+    
+    
+    UnterminatedString = None
+    
+    
+    __new__ = None
+    
+    
+    error = None
+    
+    
+    offset = None
+
+
+class QMimeDatabase(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def allMimeTypes(*args, **kwargs): pass
+    def mimeTypeForData(*args, **kwargs): pass
+    def mimeTypeForFile(*args, **kwargs): pass
+    def mimeTypeForFileNameAndData(*args, **kwargs): pass
+    def mimeTypeForName(*args, **kwargs): pass
+    def mimeTypeForUrl(*args, **kwargs): pass
+    def mimeTypesForFileName(*args, **kwargs): pass
+    def suffixForFileName(*args, **kwargs): pass
+    MatchContent = None
+    
+    
+    MatchDefault = None
+    
+    
+    MatchExtension = None
+    
+    
+    MatchMode = None
+    
+    
+    __new__ = None
+
+
+class QXmlStreamEntityResolver(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def resolveEntity(*args, **kwargs): pass
+    def resolveUndeclaredEntity(*args, **kwargs): pass
+    __new__ = None
+
+
+class QWaitCondition(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def wait(*args, **kwargs): pass
+    def wakeAll(*args, **kwargs): pass
+    def wakeOne(*args, **kwargs): pass
+    __new__ = None
+
+
+class QStandardPaths(_Object):
+    @staticmethod
+    def displayName(*args, **kwargs): pass
+    @staticmethod
+    def enableTestMode(*args, **kwargs): pass
+    @staticmethod
+    def findExecutable(*args, **kwargs): pass
+    @staticmethod
+    def isTestModeEnabled(*args, **kwargs): pass
+    @staticmethod
+    def locate(*args, **kwargs): pass
+    @staticmethod
+    def locateAll(*args, **kwargs): pass
+    @staticmethod
+    def setTestModeEnabled(*args, **kwargs): pass
+    @staticmethod
+    def standardLocations(*args, **kwargs): pass
+    @staticmethod
+    def writableLocation(*args, **kwargs): pass
+    AppConfigLocation = None
+    
+    
+    AppDataLocation = None
+    
+    
+    AppLocalDataLocation = None
+    
+    
+    ApplicationsLocation = None
+    
+    
+    CacheLocation = None
+    
+    
+    ConfigLocation = None
+    
+    
+    DataLocation = None
+    
+    
+    DesktopLocation = None
+    
+    
+    DocumentsLocation = None
+    
+    
+    DownloadLocation = None
+    
+    
+    FontsLocation = None
+    
+    
+    GenericCacheLocation = None
+    
+    
+    GenericConfigLocation = None
+    
+    
+    GenericDataLocation = None
+    
+    
+    HomeLocation = None
+    
+    
+    LocateDirectory = None
+    
+    
+    LocateFile = None
+    
+    
+    LocateOption = None
+    
+    
+    LocateOptions = None
+    
+    
+    MoviesLocation = None
+    
+    
+    MusicLocation = None
+    
+    
+    PicturesLocation = None
+    
+    
+    RuntimeLocation = None
+    
+    
+    StandardLocation = None
+    
+    
+    TempLocation = None
+
+
+class QMetaMethod(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def access(*args, **kwargs): pass
+    def enclosingMetaObject(*args, **kwargs): pass
+    def invoke(*args, **kwargs): pass
+    def invokeOnGadget(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def methodIndex(*args, **kwargs): pass
+    def methodSignature(*args, **kwargs): pass
+    def methodType(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    def parameterCount(*args, **kwargs): pass
+    def parameterNames(*args, **kwargs): pass
+    def parameterType(*args, **kwargs): pass
+    def parameterTypes(*args, **kwargs): pass
+    def returnType(*args, **kwargs): pass
+    def revision(*args, **kwargs): pass
+    def tag(*args, **kwargs): pass
+    def typeName(*args, **kwargs): pass
+    Access = None
+    
+    
+    Constructor = None
+    
+    
+    Method = None
+    
+    
+    MethodType = None
+    
+    
+    Private = None
+    
+    
+    Protected = None
+    
+    
+    Public = None
+    
+    
+    Signal = None
+    
+    
+    Slot = None
+    
+    
+    __new__ = None
+
+
+class QTextDecoder(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def hasFailure(*args, **kwargs): pass
+    def toUnicode(*args, **kwargs): pass
+    __new__ = None
+
+
+class QPoint(_Object):
+    def __add__(*args, **kwargs):
+        """
+        x.__add__(y) <==> x+y
+        """
+        pass
+    def __copy__(*args, **kwargs): pass
+    def __div__(*args, **kwargs):
+        """
+        x.__div__(y) <==> x/y
+        """
+        pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
     def __hash__(*args, **kwargs):
         """
         x.__hash__() <==> hash(x)
         """
-    
         pass
-    
-    
+    def __iadd__(*args, **kwargs):
+        """
+        x.__iadd__(y) <==> x+=y
+        """
+        pass
+    def __idiv__(*args, **kwargs):
+        """
+        x.__idiv__(y) <==> x/=y
+        """
+        pass
+    def __imul__(*args, **kwargs):
+        """
+        x.__imul__(y) <==> x*=y
+        """
+        pass
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
+    def __isub__(*args, **kwargs):
+        """
+        x.__isub__(y) <==> x-=y
+        """
+        pass
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
+    def __mul__(*args, **kwargs):
+        """
+        x.__mul__(y) <==> x*y
+        """
+        pass
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
+    def __neg__(*args, **kwargs):
+        """
+        x.__neg__() <==> -x
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __pos__(*args, **kwargs):
+        """
+        x.__pos__() <==> +x
+        """
+        pass
+    def __radd__(*args, **kwargs):
+        """
+        x.__radd__(y) <==> y+x
+        """
+        pass
+    def __rdiv__(*args, **kwargs):
+        """
+        x.__rdiv__(y) <==> y/x
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
-    def bottom(*args, **kwargs):
+    def __rmul__(*args, **kwargs):
+        """
+        x.__rmul__(y) <==> y*x
+        """
         pass
-    
-    
-    def bottomRight(*args, **kwargs):
+    def __rsub__(*args, **kwargs):
+        """
+        x.__rsub__(y) <==> y-x
+        """
         pass
-    
-    
-    def contains(*args, **kwargs):
+    def __rtruediv__(*args, **kwargs):
+        """
+        x.__rtruediv__(y) <==> y/x
+        """
         pass
-    
-    
-    def height(*args, **kwargs):
+    def __sub__(*args, **kwargs):
+        """
+        x.__sub__(y) <==> x-y
+        """
         pass
-    
-    
-    def indexes(*args, **kwargs):
+    def __truediv__(*args, **kwargs):
+        """
+        x.__truediv__(y) <==> x/y
+        """
         pass
-    
-    
-    def intersected(*args, **kwargs):
-        pass
-    
-    
-    def intersects(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def left(*args, **kwargs):
-        pass
-    
-    
-    def model(*args, **kwargs):
-        pass
-    
-    
-    def parent(*args, **kwargs):
-        pass
-    
-    
-    def right(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def top(*args, **kwargs):
-        pass
-    
-    
-    def topLeft(*args, **kwargs):
-        pass
-    
-    
-    def width(*args, **kwargs):
-        pass
-    
-    
+    def isNull(*args, **kwargs): pass
+    def manhattanLength(*args, **kwargs): pass
+    def setX(*args, **kwargs): pass
+    def setY(*args, **kwargs): pass
+    def toTuple(*args, **kwargs): pass
+    def x(*args, **kwargs): pass
+    def y(*args, **kwargs): pass
+    @staticmethod
+    def dotProduct(*args, **kwargs): pass
     __new__ = None
 
 
-class QMetaObject(_Object):
-    def __init__(*args, **kwargs):
+class QSizeF(_Object):
+    def __add__(*args, **kwargs):
         """
-        x.__init__(...) initializes x; see help(type(x)) for signature
+        x.__add__(y) <==> x+y
         """
-    
         pass
-    
-    
-    def cast(*args, **kwargs):
+    def __copy__(*args, **kwargs): pass
+    def __div__(*args, **kwargs):
+        """
+        x.__div__(y) <==> x/y
+        """
         pass
-    
-    
-    def classInfo(*args, **kwargs):
-        pass
-    
-    
-    def classInfoCount(*args, **kwargs):
-        pass
-    
-    
-    def classInfoOffset(*args, **kwargs):
-        pass
-    
-    
-    def className(*args, **kwargs):
-        pass
-    
-    
-    def constructor(*args, **kwargs):
-        pass
-    
-    
-    def constructorCount(*args, **kwargs):
-        pass
-    
-    
-    def enumerator(*args, **kwargs):
-        pass
-    
-    
-    def enumeratorCount(*args, **kwargs):
-        pass
-    
-    
-    def enumeratorOffset(*args, **kwargs):
-        pass
-    
-    
-    def indexOfClassInfo(*args, **kwargs):
-        pass
-    
-    
-    def indexOfConstructor(*args, **kwargs):
-        pass
-    
-    
-    def indexOfEnumerator(*args, **kwargs):
-        pass
-    
-    
-    def indexOfMethod(*args, **kwargs):
-        pass
-    
-    
-    def indexOfProperty(*args, **kwargs):
-        pass
-    
-    
-    def indexOfSignal(*args, **kwargs):
-        pass
-    
-    
-    def indexOfSlot(*args, **kwargs):
-        pass
-    
-    
-    def method(*args, **kwargs):
-        pass
-    
-    
-    def methodCount(*args, **kwargs):
-        pass
-    
-    
-    def methodOffset(*args, **kwargs):
-        pass
-    
-    
-    def newInstance(*args, **kwargs):
-        pass
-    
-    
-    def property(*args, **kwargs):
-        pass
-    
-    
-    def propertyCount(*args, **kwargs):
-        pass
-    
-    
-    def propertyOffset(*args, **kwargs):
-        pass
-    
-    
-    def superClass(*args, **kwargs):
-        pass
-    
-    
-    def userProperty(*args, **kwargs):
-        pass
-    
-    
-    def checkConnectArgs(*args, **kwargs):
-        pass
-    
-    
-    def connectSlotsByName(*args, **kwargs):
-        pass
-    
-    
-    def disconnect(*args, **kwargs):
-        pass
-    
-    
-    def disconnectOne(*args, **kwargs):
-        pass
-    
-    
-    def invokeMethod(*args, **kwargs):
-        pass
-    
-    
-    def normalizedSignature(*args, **kwargs):
-        pass
-    
-    
-    def normalizedType(*args, **kwargs):
-        pass
-    
-    
-    Call = None
-    
-    
-    CreateInstance = None
-    
-    
-    IndexOfMethod = None
-    
-    
-    InvokeMetaMethod = None
-    
-    
-    QueryPropertyDesignable = None
-    
-    
-    QueryPropertyEditable = None
-    
-    
-    QueryPropertyScriptable = None
-    
-    
-    QueryPropertyStored = None
-    
-    
-    QueryPropertyUser = None
-    
-    
-    ReadProperty = None
-    
-    
-    RegisterMethodArgumentMetaType = None
-    
-    
-    RegisterPropertyMetaType = None
-    
-    
-    ResetProperty = None
-    
-    
-    WriteProperty = None
-    
-    
-    __new__ = None
-
-
-class QProcessEnvironment(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
+    def __iadd__(*args, **kwargs):
+        """
+        x.__iadd__(y) <==> x+=y
+        """
+        pass
+    def __idiv__(*args, **kwargs):
+        """
+        x.__idiv__(y) <==> x/=y
+        """
+        pass
+    def __imul__(*args, **kwargs):
+        """
+        x.__imul__(y) <==> x*=y
+        """
+        pass
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
+    def __isub__(*args, **kwargs):
+        """
+        x.__isub__(y) <==> x-=y
+        """
+        pass
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
+    def __mul__(*args, **kwargs):
+        """
+        x.__mul__(y) <==> x*y
+        """
+        pass
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
-    def clear(*args, **kwargs):
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
         pass
-    
-    
-    def contains(*args, **kwargs):
+    def __radd__(*args, **kwargs):
+        """
+        x.__radd__(y) <==> y+x
+        """
         pass
-    
-    
-    def insert(*args, **kwargs):
+    def __rdiv__(*args, **kwargs):
+        """
+        x.__rdiv__(y) <==> y/x
+        """
         pass
-    
-    
-    def isEmpty(*args, **kwargs):
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
         pass
-    
-    
-    def keys(*args, **kwargs):
+    def __rmul__(*args, **kwargs):
+        """
+        x.__rmul__(y) <==> y*x
+        """
         pass
-    
-    
-    def remove(*args, **kwargs):
+    def __rsub__(*args, **kwargs):
+        """
+        x.__rsub__(y) <==> y-x
+        """
         pass
-    
-    
-    def swap(*args, **kwargs):
+    def __rtruediv__(*args, **kwargs):
+        """
+        x.__rtruediv__(y) <==> y/x
+        """
         pass
-    
-    
-    def toStringList(*args, **kwargs):
+    def __sub__(*args, **kwargs):
+        """
+        x.__sub__(y) <==> x-y
+        """
         pass
-    
-    
-    def value(*args, **kwargs):
+    def __truediv__(*args, **kwargs):
+        """
+        x.__truediv__(y) <==> x/y
+        """
         pass
-    
-    
-    def systemEnvironment(*args, **kwargs):
+    def boundedTo(*args, **kwargs): pass
+    def expandedTo(*args, **kwargs): pass
+    def height(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def scale(*args, **kwargs): pass
+    def scaled(*args, **kwargs): pass
+    def setHeight(*args, **kwargs): pass
+    def setWidth(*args, **kwargs): pass
+    def toSize(*args, **kwargs): pass
+    def toTuple(*args, **kwargs): pass
+    def transpose(*args, **kwargs): pass
+    def transposed(*args, **kwargs): pass
+    def width(*args, **kwargs): pass
+    __new__ = None
+
+
+class QByteArray(_Object):
+    def __add__(*args, **kwargs):
+        """
+        x.__add__(y) <==> x+y
+        """
         pass
+    def __copy__(*args, **kwargs): pass
+    def __delitem__(*args, **kwargs):
+        """
+        x.__delitem__(y) <==> del x[y]
+        """
+        pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __getitem__(*args, **kwargs):
+        """
+        x.__getitem__(y) <==> x[y]
+        """
+        pass
+    def __getslice__(*args, **kwargs):
+        """
+        x.__getslice__(i, j) <==> x[i:j]
+        
+        Use of negative indices is not supported.
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __hash__(*args, **kwargs):
+        """
+        x.__hash__() <==> hash(x)
+        """
+        pass
+    def __iadd__(*args, **kwargs):
+        """
+        x.__iadd__(y) <==> x+=y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __len__(*args, **kwargs):
+        """
+        x.__len__() <==> len(x)
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __radd__(*args, **kwargs):
+        """
+        x.__radd__(y) <==> y+x
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def __setitem__(*args, **kwargs):
+        """
+        x.__setitem__(i, y) <==> x[i]=y
+        """
+        pass
+    def __str__(*args, **kwargs):
+        """
+        x.__str__() <==> str(x)
+        """
+        pass
+    def append(*args, **kwargs): pass
+    def at(*args, **kwargs): pass
+    def capacity(*args, **kwargs): pass
+    def cbegin(*args, **kwargs): pass
+    def cend(*args, **kwargs): pass
+    def chop(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def count(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def endsWith(*args, **kwargs): pass
+    def fill(*args, **kwargs): pass
+    def indexOf(*args, **kwargs): pass
+    def insert(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def isSharedWith(*args, **kwargs): pass
+    def lastIndexOf(*args, **kwargs): pass
+    def left(*args, **kwargs): pass
+    def leftJustified(*args, **kwargs): pass
+    def length(*args, **kwargs): pass
+    def mid(*args, **kwargs): pass
+    def prepend(*args, **kwargs): pass
+    def remove(*args, **kwargs): pass
+    def repeated(*args, **kwargs): pass
+    def replace(*args, **kwargs): pass
+    def reserve(*args, **kwargs): pass
+    def resize(*args, **kwargs): pass
+    def right(*args, **kwargs): pass
+    def rightJustified(*args, **kwargs): pass
+    def setNum(*args, **kwargs): pass
+    def setRawData(*args, **kwargs): pass
+    def simplified(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def split(*args, **kwargs): pass
+    def squeeze(*args, **kwargs): pass
+    def startsWith(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def toBase64(*args, **kwargs): pass
+    def toDouble(*args, **kwargs): pass
+    def toFloat(*args, **kwargs): pass
+    def toHex(*args, **kwargs): pass
+    def toInt(*args, **kwargs): pass
+    def toLong(*args, **kwargs): pass
+    def toLongLong(*args, **kwargs): pass
+    def toLower(*args, **kwargs): pass
+    def toPercentEncoding(*args, **kwargs): pass
+    def toShort(*args, **kwargs): pass
+    def toUInt(*args, **kwargs): pass
+    def toULong(*args, **kwargs): pass
+    def toULongLong(*args, **kwargs): pass
+    def toUShort(*args, **kwargs): pass
+    def toUpper(*args, **kwargs): pass
+    def trimmed(*args, **kwargs): pass
+    def truncate(*args, **kwargs): pass
+    @staticmethod
+    def fromBase64(*args, **kwargs): pass
+    @staticmethod
+    def fromHex(*args, **kwargs): pass
+    @staticmethod
+    def fromPercentEncoding(*args, **kwargs): pass
+    @staticmethod
+    def fromRawData(*args, **kwargs): pass
+    @staticmethod
+    def number(*args, **kwargs): pass
+    Base64Encoding = None
     
     
+    Base64Option = None
+    
+    
+    Base64Options = None
+    
+    
+    Base64UrlEncoding = None
+    
+    
+    KeepTrailingEquals = None
+    
+    
+    OmitTrailingEquals = None
+    
+    
+    __new__ = None
+
+
+class QRectF(_Object):
+    def __and__(*args, **kwargs):
+        """
+        x.__and__(y) <==> x&y
+        """
+        pass
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __iand__(*args, **kwargs):
+        """
+        x.__iand__(y) <==> x&=y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __ior__(*args, **kwargs):
+        """
+        x.__ior__(y) <==> x|=y
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __or__(*args, **kwargs):
+        """
+        x.__or__(y) <==> x|y
+        """
+        pass
+    def __rand__(*args, **kwargs):
+        """
+        x.__rand__(y) <==> y&x
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def __ror__(*args, **kwargs):
+        """
+        x.__ror__(y) <==> y|x
+        """
+        pass
+    def adjust(*args, **kwargs): pass
+    def adjusted(*args, **kwargs): pass
+    def bottom(*args, **kwargs): pass
+    def bottomLeft(*args, **kwargs): pass
+    def bottomRight(*args, **kwargs): pass
+    def center(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def getCoords(*args, **kwargs): pass
+    def getRect(*args, **kwargs): pass
+    def height(*args, **kwargs): pass
+    def intersected(*args, **kwargs): pass
+    def intersects(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def left(*args, **kwargs): pass
+    def moveBottom(*args, **kwargs): pass
+    def moveBottomLeft(*args, **kwargs): pass
+    def moveBottomRight(*args, **kwargs): pass
+    def moveCenter(*args, **kwargs): pass
+    def moveLeft(*args, **kwargs): pass
+    def moveRight(*args, **kwargs): pass
+    def moveTo(*args, **kwargs): pass
+    def moveTop(*args, **kwargs): pass
+    def moveTopLeft(*args, **kwargs): pass
+    def moveTopRight(*args, **kwargs): pass
+    def normalized(*args, **kwargs): pass
+    def right(*args, **kwargs): pass
+    def setBottom(*args, **kwargs): pass
+    def setBottomLeft(*args, **kwargs): pass
+    def setBottomRight(*args, **kwargs): pass
+    def setCoords(*args, **kwargs): pass
+    def setHeight(*args, **kwargs): pass
+    def setLeft(*args, **kwargs): pass
+    def setRect(*args, **kwargs): pass
+    def setRight(*args, **kwargs): pass
+    def setSize(*args, **kwargs): pass
+    def setTop(*args, **kwargs): pass
+    def setTopLeft(*args, **kwargs): pass
+    def setTopRight(*args, **kwargs): pass
+    def setWidth(*args, **kwargs): pass
+    def setX(*args, **kwargs): pass
+    def setY(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def toAlignedRect(*args, **kwargs): pass
+    def toRect(*args, **kwargs): pass
+    def top(*args, **kwargs): pass
+    def topLeft(*args, **kwargs): pass
+    def topRight(*args, **kwargs): pass
+    def translate(*args, **kwargs): pass
+    def translated(*args, **kwargs): pass
+    def united(*args, **kwargs): pass
+    def width(*args, **kwargs): pass
+    def x(*args, **kwargs): pass
+    def y(*args, **kwargs): pass
+    __new__ = None
+
+
+class QBasicMutex(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def isRecursive(*args, **kwargs): pass
+    def lock(*args, **kwargs): pass
+    def tryLock(*args, **kwargs): pass
+    def unlock(*args, **kwargs): pass
+    __new__ = None
+
+
+class QLocale(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def amText(*args, **kwargs): pass
+    def bcp47Name(*args, **kwargs): pass
+    def country(*args, **kwargs): pass
+    def createSeparatedList(*args, **kwargs): pass
+    def currencySymbol(*args, **kwargs): pass
+    def dateFormat(*args, **kwargs): pass
+    def dateTimeFormat(*args, **kwargs): pass
+    def dayName(*args, **kwargs): pass
+    def decimalPoint(*args, **kwargs): pass
+    def exponential(*args, **kwargs): pass
+    def firstDayOfWeek(*args, **kwargs): pass
+    def groupSeparator(*args, **kwargs): pass
+    def language(*args, **kwargs): pass
+    def measurementSystem(*args, **kwargs): pass
+    def monthName(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    def nativeCountryName(*args, **kwargs): pass
+    def nativeLanguageName(*args, **kwargs): pass
+    def negativeSign(*args, **kwargs): pass
+    def numberOptions(*args, **kwargs): pass
+    def percent(*args, **kwargs): pass
+    def pmText(*args, **kwargs): pass
+    def positiveSign(*args, **kwargs): pass
+    def quoteString(*args, **kwargs): pass
+    def script(*args, **kwargs): pass
+    def setNumberOptions(*args, **kwargs): pass
+    def standaloneDayName(*args, **kwargs): pass
+    def standaloneMonthName(*args, **kwargs): pass
+    def textDirection(*args, **kwargs): pass
+    def timeFormat(*args, **kwargs): pass
+    def toCurrencyString(*args, **kwargs): pass
+    def toDate(*args, **kwargs): pass
+    def toDateTime(*args, **kwargs): pass
+    def toDouble(*args, **kwargs): pass
+    def toFloat(*args, **kwargs): pass
+    def toInt(*args, **kwargs): pass
+    def toLongLong(*args, **kwargs): pass
+    def toLower(*args, **kwargs): pass
+    def toShort(*args, **kwargs): pass
+    def toString(*args, **kwargs): pass
+    def toTime(*args, **kwargs): pass
+    def toUInt(*args, **kwargs): pass
+    def toULongLong(*args, **kwargs): pass
+    def toUShort(*args, **kwargs): pass
+    def toUpper(*args, **kwargs): pass
+    def uiLanguages(*args, **kwargs): pass
+    def weekdays(*args, **kwargs): pass
+    def zeroDigit(*args, **kwargs): pass
+    @staticmethod
+    def c(*args, **kwargs): pass
+    @staticmethod
+    def countriesForLanguage(*args, **kwargs): pass
+    @staticmethod
+    def countryToString(*args, **kwargs): pass
+    @staticmethod
+    def languageToString(*args, **kwargs): pass
+    @staticmethod
+    def matchingLocales(*args, **kwargs): pass
+    @staticmethod
+    def scriptToString(*args, **kwargs): pass
+    @staticmethod
+    def setDefault(*args, **kwargs): pass
+    @staticmethod
+    def system(*args, **kwargs): pass
+    Abkhazian = None
+    
+    
+    Afan = None
+    
+    
+    Afar = None
+    
+    
+    Afghanistan = None
+    
+    
+    Afrikaans = None
+    
+    
+    Aghem = None
+    
+    
+    Akan = None
+    
+    
+    Akkadian = None
+    
+    
+    Akoose = None
+    
+    
+    AlandIslands = None
+    
+    
+    Albania = None
+    
+    
+    Albanian = None
+    
+    
+    Algeria = None
+    
+    
+    AlternateQuotation = None
+    
+    
+    AmericanSamoa = None
+    
+    
+    Amharic = None
+    
+    
+    AncientEgyptian = None
+    
+    
+    AncientGreek = None
+    
+    
+    AncientNorthArabian = None
+    
+    
+    Andorra = None
+    
+    
+    Angola = None
+    
+    
+    Anguilla = None
+    
+    
+    Antarctica = None
+    
+    
+    AntiguaAndBarbuda = None
+    
+    
+    AnyCountry = None
+    
+    
+    AnyLanguage = None
+    
+    
+    AnyScript = None
+    
+    
+    Arabic = None
+    
+    
+    ArabicScript = None
+    
+    
+    Aragonese = None
+    
+    
+    Aramaic = None
+    
+    
+    Argentina = None
+    
+    
+    Armenia = None
+    
+    
+    Armenian = None
+    
+    
+    ArmenianScript = None
+    
+    
+    Aruba = None
+    
+    
+    AscensionIsland = None
+    
+    
+    Assamese = None
+    
+    
+    Asturian = None
+    
+    
+    Asu = None
+    
+    
+    Atsam = None
+    
+    
+    Australia = None
+    
+    
+    Austria = None
+    
+    
+    Avaric = None
+    
+    
+    Avestan = None
+    
+    
+    AvestanScript = None
+    
+    
+    Aymara = None
+    
+    
+    Azerbaijan = None
+    
+    
+    Azerbaijani = None
+    
+    
+    Bafia = None
+    
+    
+    Bahamas = None
+    
+    
+    Bahrain = None
+    
+    
+    Balinese = None
+    
+    
+    BalineseScript = None
+    
+    
+    Bambara = None
+    
+    
+    BamumScript = None
+    
+    
+    Bamun = None
+    
+    
+    Bangladesh = None
+    
+    
+    Barbados = None
+    
+    
+    Basaa = None
+    
+    
+    Bashkir = None
+    
+    
+    Basque = None
+    
+    
+    Bassa = None
+    
+    
+    BassaVahScript = None
+    
+    
+    BatakScript = None
+    
+    
+    BatakToba = None
+    
+    
+    Belarus = None
+    
+    
+    Belarusian = None
+    
+    
+    Belgium = None
+    
+    
+    Belize = None
+    
+    
+    Bemba = None
+    
+    
+    Bena = None
+    
+    
+    Bengali = None
+    
+    
+    BengaliScript = None
+    
+    
+    Benin = None
+    
+    
+    Bermuda = None
+    
+    
+    Bhutan = None
+    
+    
+    Bhutani = None
+    
+    
+    Bihari = None
+    
+    
+    Bislama = None
+    
+    
+    Blin = None
+    
+    
+    Bodo = None
+    
+    
+    Bolivia = None
+    
+    
+    Bonaire = None
+    
+    
+    BopomofoScript = None
+    
+    
+    BosniaAndHerzegowina = None
+    
+    
+    Bosnian = None
+    
+    
+    Botswana = None
+    
+    
+    BouvetIsland = None
+    
+    
+    BrahmiScript = None
+    
+    
+    BrailleScript = None
+    
+    
+    Brazil = None
+    
+    
+    Breton = None
+    
+    
+    BritishIndianOceanTerritory = None
+    
+    
+    BritishVirginIslands = None
+    
+    
+    Brunei = None
+    
+    
+    Buginese = None
+    
+    
+    BugineseScript = None
+    
+    
+    Buhid = None
+    
+    
+    BuhidScript = None
+    
+    
+    Bulgaria = None
+    
+    
+    Bulgarian = None
+    
+    
+    BurkinaFaso = None
+    
+    
+    Burmese = None
+    
+    
+    Burundi = None
+    
+    
+    Byelorussian = None
+    
+    
+    C = None
+    
+    
+    Cambodia = None
+    
+    
+    Cambodian = None
+    
+    
+    Cameroon = None
+    
+    
+    Canada = None
+    
+    
+    CanadianAboriginalScript = None
+    
+    
+    CanaryIslands = None
+    
+    
+    CapeVerde = None
+    
+    
+    Carian = None
+    
+    
+    CarianScript = None
+    
+    
+    Catalan = None
+    
+    
+    CaucasianAlbanianScript = None
+    
+    
+    CaymanIslands = None
+    
+    
+    CentralAfricanRepublic = None
+    
+    
+    CentralKurdish = None
+    
+    
+    CentralMoroccoTamazight = None
+    
+    
+    CeutaAndMelilla = None
+    
+    
+    Chad = None
+    
+    
+    Chakma = None
+    
+    
+    ChakmaScript = None
+    
+    
+    ChamScript = None
+    
+    
+    Chamorro = None
+    
+    
+    Chechen = None
+    
+    
+    Cherokee = None
+    
+    
+    CherokeeScript = None
+    
+    
+    Chewa = None
+    
+    
+    Chiga = None
+    
+    
+    Chile = None
+    
+    
+    China = None
+    
+    
+    Chinese = None
+    
+    
+    ChristmasIsland = None
+    
+    
+    Church = None
+    
+    
+    Chuvash = None
+    
+    
+    ClassicalMandaic = None
+    
+    
+    ClippertonIsland = None
+    
+    
+    CocosIslands = None
+    
+    
+    Colognian = None
+    
+    
+    Colombia = None
+    
+    
+    Comoros = None
+    
+    
+    CongoBrazzaville = None
+    
+    
+    CongoKinshasa = None
+    
+    
+    CongoSwahili = None
+    
+    
+    CookIslands = None
+    
+    
+    Coptic = None
+    
+    
+    CopticScript = None
+    
+    
+    Cornish = None
+    
+    
+    Corsican = None
+    
+    
+    CostaRica = None
+    
+    
+    Country = None
+    
+    
+    Cree = None
+    
+    
+    Croatia = None
+    
+    
+    Croatian = None
+    
+    
+    Cuba = None
+    
+    
+    CuneiformScript = None
+    
+    
+    CuraSao = None
+    
+    
+    CurrencyDisplayName = None
+    
+    
+    CurrencyIsoCode = None
+    
+    
+    CurrencySymbol = None
+    
+    
+    CurrencySymbolFormat = None
+    
+    
+    CypriotScript = None
+    
+    
+    Cyprus = None
+    
+    
+    CyrillicScript = None
+    
+    
+    Czech = None
+    
+    
+    CzechRepublic = None
+    
+    
+    Danish = None
+    
+    
+    DemocraticRepublicOfCongo = None
+    
+    
+    DemocraticRepublicOfKorea = None
+    
+    
+    Denmark = None
+    
+    
+    DeseretScript = None
+    
+    
+    DevanagariScript = None
+    
+    
+    DiegoGarcia = None
+    
+    
+    Divehi = None
+    
+    
+    Djibouti = None
+    
+    
+    Dogri = None
+    
+    
+    Dominica = None
+    
+    
+    DominicanRepublic = None
+    
+    
+    Duala = None
+    
+    
+    DuployanScript = None
+    
+    
+    Dutch = None
+    
+    
+    Dzongkha = None
+    
+    
+    EastTimor = None
+    
+    
+    EasternCham = None
+    
+    
+    EasternKayah = None
+    
+    
+    Ecuador = None
+    
+    
+    Egypt = None
+    
+    
+    EgyptianHieroglyphsScript = None
+    
+    
+    ElSalvador = None
+    
+    
+    ElbasanScript = None
+    
+    
+    Embu = None
+    
+    
+    English = None
+    
+    
+    EquatorialGuinea = None
+    
+    
+    Eritrea = None
+    
+    
+    Esperanto = None
+    
+    
+    Estonia = None
+    
+    
+    Estonian = None
+    
+    
+    Ethiopia = None
+    
+    
+    EthiopicScript = None
+    
+    
+    Etruscan = None
+    
+    
+    Ewe = None
+    
+    
+    Ewondo = None
+    
+    
+    FalklandIslands = None
+    
+    
+    FaroeIslands = None
+    
+    
+    Faroese = None
+    
+    
+    Fiji = None
+    
+    
+    Fijian = None
+    
+    
+    Filipino = None
+    
+    
+    Finland = None
+    
+    
+    Finnish = None
+    
+    
+    FormatType = None
+    
+    
+    France = None
+    
+    
+    FraserScript = None
+    
+    
+    French = None
+    
+    
+    FrenchGuiana = None
+    
+    
+    FrenchPolynesia = None
+    
+    
+    FrenchSouthernTerritories = None
+    
+    
+    Frisian = None
+    
+    
+    Friulian = None
+    
+    
+    Fulah = None
+    
+    
+    Ga = None
+    
+    
+    Gabon = None
+    
+    
+    Gaelic = None
+    
+    
+    Galician = None
+    
+    
+    Gambia = None
+    
+    
+    Ganda = None
+    
+    
+    Geez = None
+    
+    
+    Georgia = None
+    
+    
+    Georgian = None
+    
+    
+    GeorgianScript = None
+    
+    
+    German = None
+    
+    
+    Germany = None
+    
+    
+    Ghana = None
+    
+    
+    Gibraltar = None
+    
+    
+    GlagoliticScript = None
+    
+    
+    Gothic = None
+    
+    
+    GothicScript = None
+    
+    
+    GranthaScript = None
+    
+    
+    Greece = None
+    
+    
+    Greek = None
+    
+    
+    GreekScript = None
+    
+    
+    Greenland = None
+    
+    
+    Greenlandic = None
+    
+    
+    Grenada = None
+    
+    
+    Guadeloupe = None
+    
+    
+    Guam = None
+    
+    
+    Guarani = None
+    
+    
+    Guatemala = None
+    
+    
+    Guernsey = None
+    
+    
+    Guinea = None
+    
+    
+    GuineaBissau = None
+    
+    
+    Gujarati = None
+    
+    
+    GujaratiScript = None
+    
+    
+    GurmukhiScript = None
+    
+    
+    Gusii = None
+    
+    
+    Guyana = None
+    
+    
+    Haiti = None
+    
+    
+    Haitian = None
+    
+    
+    HanScript = None
+    
+    
+    HangulScript = None
+    
+    
+    Hanunoo = None
+    
+    
+    HanunooScript = None
+    
+    
+    Hausa = None
+    
+    
+    Hawaiian = None
+    
+    
+    HeardAndMcDonaldIslands = None
+    
+    
+    Hebrew = None
+    
+    
+    HebrewScript = None
+    
+    
+    Herero = None
+    
+    
+    Hindi = None
+    
+    
+    HiraganaScript = None
+    
+    
+    HiriMotu = None
+    
+    
+    HmongNjua = None
+    
+    
+    Ho = None
+    
+    
+    Honduras = None
+    
+    
+    HongKong = None
+    
+    
+    Hungarian = None
+    
+    
+    Hungary = None
+    
+    
+    Iceland = None
+    
+    
+    Icelandic = None
+    
+    
+    Igbo = None
+    
+    
+    ImperialAramaicScript = None
+    
+    
+    ImperialSystem = None
+    
+    
+    ImperialUKSystem = None
+    
+    
+    ImperialUSSystem = None
+    
+    
+    InariSami = None
+    
+    
+    India = None
+    
+    
+    Indonesia = None
+    
+    
+    Indonesian = None
+    
+    
+    Ingush = None
+    
+    
+    InscriptionalPahlaviScript = None
+    
+    
+    InscriptionalParthianScript = None
+    
+    
+    Interlingua = None
+    
+    
+    Interlingue = None
+    
+    
+    Inuktitut = None
+    
+    
+    Inupiak = None
+    
+    
+    Iran = None
+    
+    
+    Iraq = None
+    
+    
+    Ireland = None
+    
+    
+    Irish = None
+    
+    
+    IsleOfMan = None
+    
+    
+    Israel = None
+    
+    
+    Italian = None
+    
+    
+    Italy = None
+    
+    
+    IvoryCoast = None
+    
+    
+    Jamaica = None
+    
+    
+    Japan = None
+    
+    
+    Japanese = None
+    
+    
+    JapaneseScript = None
+    
+    
+    Javanese = None
+    
+    
+    JavaneseScript = None
+    
+    
+    Jersey = None
+    
+    
+    Jju = None
+    
+    
+    JolaFonyi = None
+    
+    
+    Jordan = None
+    
+    
+    Kabuverdianu = None
+    
+    
+    Kabyle = None
+    
+    
+    KaithiScript = None
+    
+    
+    Kako = None
+    
+    
+    Kalenjin = None
+    
+    
+    Kamba = None
+    
+    
+    Kannada = None
+    
+    
+    KannadaScript = None
+    
+    
+    Kanuri = None
+    
+    
+    Kashmiri = None
+    
+    
+    KatakanaScript = None
+    
+    
+    KayahLiScript = None
+    
+    
+    Kazakh = None
+    
+    
+    Kazakhstan = None
+    
+    
+    Kenya = None
+    
+    
+    Kenyang = None
+    
+    
+    KharoshthiScript = None
+    
+    
+    Khmer = None
+    
+    
+    KhmerScript = None
+    
+    
+    KhojkiScript = None
+    
+    
+    KhudawadiScript = None
+    
+    
+    Kiche = None
+    
+    
+    Kikuyu = None
+    
+    
+    Kinyarwanda = None
+    
+    
+    Kirghiz = None
+    
+    
+    Kiribati = None
+    
+    
+    Komi = None
+    
+    
+    Kongo = None
+    
+    
+    Konkani = None
+    
+    
+    Korean = None
+    
+    
+    KoreanScript = None
+    
+    
+    Koro = None
+    
+    
+    Kosovo = None
+    
+    
+    KoyraChiini = None
+    
+    
+    KoyraboroSenni = None
+    
+    
+    Kpelle = None
+    
+    
+    Kurdish = None
+    
+    
+    Kurundi = None
+    
+    
+    Kuwait = None
+    
+    
+    Kwanyama = None
+    
+    
+    Kwasio = None
+    
+    
+    Kyrgyzstan = None
+    
+    
+    Lakota = None
+    
+    
+    Langi = None
+    
+    
+    Language = None
+    
+    
+    LannaScript = None
+    
+    
+    Lao = None
+    
+    
+    LaoScript = None
+    
+    
+    Laos = None
+    
+    
+    LargeFloweryMiao = None
+    
+    
+    LastCountry = None
+    
+    
+    LastLanguage = None
+    
+    
+    LastScript = None
+    
+    
+    Latin = None
+    
+    
+    LatinAmericaAndTheCaribbean = None
+    
+    
+    LatinScript = None
+    
+    
+    Latvia = None
+    
+    
+    Latvian = None
+    
+    
+    Lebanon = None
+    
+    
+    Lepcha = None
+    
+    
+    LepchaScript = None
+    
+    
+    Lesotho = None
+    
+    
+    Lezghian = None
+    
+    
+    Liberia = None
+    
+    
+    Libya = None
+    
+    
+    Liechtenstein = None
+    
+    
+    Limbu = None
+    
+    
+    LimbuScript = None
+    
+    
+    Limburgish = None
+    
+    
+    LinearA = None
+    
+    
+    LinearAScript = None
+    
+    
+    LinearBScript = None
+    
+    
+    Lingala = None
+    
+    
+    Lisu = None
+    
+    
+    Lithuania = None
+    
+    
+    Lithuanian = None
+    
+    
+    LongFormat = None
+    
+    
+    LowGerman = None
+    
+    
+    LowerSorbian = None
+    
+    
+    Lu = None
+    
+    
+    LubaKatanga = None
+    
+    
+    LuleSami = None
+    
+    
+    Luo = None
+    
+    
+    Luxembourg = None
+    
+    
+    Luxembourgish = None
+    
+    
+    Luyia = None
+    
+    
+    Lycian = None
+    
+    
+    LycianScript = None
+    
+    
+    Lydian = None
+    
+    
+    LydianScript = None
+    
+    
+    Macau = None
+    
+    
+    Macedonia = None
+    
+    
+    Macedonian = None
+    
+    
+    Machame = None
+    
+    
+    Madagascar = None
+    
+    
+    MahajaniScript = None
+    
+    
+    Maithili = None
+    
+    
+    MakhuwaMeetto = None
+    
+    
+    Makonde = None
+    
+    
+    Malagasy = None
+    
+    
+    Malawi = None
+    
+    
+    Malay = None
+    
+    
+    Malayalam = None
+    
+    
+    MalayalamScript = None
+    
+    
+    Malaysia = None
+    
+    
+    Maldives = None
+    
+    
+    Mali = None
+    
+    
+    Malta = None
+    
+    
+    Maltese = None
+    
+    
+    MandaeanScript = None
+    
+    
+    Mandingo = None
+    
+    
+    ManichaeanMiddlePersian = None
+    
+    
+    ManichaeanScript = None
+    
+    
+    Manipuri = None
+    
+    
+    Manx = None
+    
+    
+    Maori = None
+    
+    
+    Mapuche = None
+    
+    
+    Marathi = None
+    
+    
+    MarshallIslands = None
+    
+    
+    Marshallese = None
+    
+    
+    Martinique = None
+    
+    
+    Masai = None
+    
+    
+    Mauritania = None
+    
+    
+    Mauritius = None
+    
+    
+    Mayotte = None
+    
+    
+    MeasurementSystem = None
+    
+    
+    MeiteiMayekScript = None
+    
+    
+    Mende = None
+    
+    
+    MendeKikakuiScript = None
+    
+    
+    Meroitic = None
+    
+    
+    MeroiticCursiveScript = None
+    
+    
+    MeroiticScript = None
+    
+    
+    Meru = None
+    
+    
+    Meta = None
+    
+    
+    MetricSystem = None
+    
+    
+    Mexico = None
+    
+    
+    Micronesia = None
+    
+    
+    ModiScript = None
+    
+    
+    Mohawk = None
+    
+    
+    Moldavian = None
+    
+    
+    Moldova = None
+    
+    
+    Monaco = None
+    
+    
+    Mongolia = None
+    
+    
+    Mongolian = None
+    
+    
+    MongolianScript = None
+    
+    
+    Mono = None
+    
+    
+    Montenegro = None
+    
+    
+    Montserrat = None
+    
+    
+    Morisyen = None
+    
+    
+    Morocco = None
+    
+    
+    Mozambique = None
+    
+    
+    MroScript = None
+    
+    
+    Mundang = None
+    
+    
+    Myanmar = None
+    
+    
+    MyanmarScript = None
+    
+    
+    NabataeanScript = None
+    
+    
+    Nama = None
+    
+    
+    Namibia = None
+    
+    
+    NarrowFormat = None
+    
+    
+    NauruCountry = None
+    
+    
+    NauruLanguage = None
+    
+    
+    Navaho = None
+    
+    
+    Ndonga = None
+    
+    
+    Nepal = None
+    
+    
+    Nepali = None
+    
+    
+    Netherlands = None
+    
+    
+    NewCaledonia = None
+    
+    
+    NewTaiLueScript = None
+    
+    
+    NewZealand = None
+    
+    
+    Ngiemboon = None
+    
+    
+    Ngomba = None
+    
+    
+    Nicaragua = None
+    
+    
+    Niger = None
+    
+    
+    Nigeria = None
+    
+    
+    Niue = None
+    
+    
+    Nko = None
+    
+    
+    NkoScript = None
+    
+    
+    NorfolkIsland = None
+    
+    
+    NorthKorea = None
+    
+    
+    NorthNdebele = None
+    
+    
+    NorthernMarianaIslands = None
+    
+    
+    NorthernSami = None
+    
+    
+    NorthernSotho = None
+    
+    
+    NorthernThai = None
+    
+    
+    Norway = None
+    
+    
+    Norwegian = None
+    
+    
+    NorwegianBokmal = None
+    
+    
+    NorwegianNynorsk = None
+    
+    
+    Nuer = None
+    
+    
+    NumberOption = None
+    
+    
+    NumberOptions = None
+    
+    
+    Nyanja = None
+    
+    
+    Nyankole = None
+    
+    
+    Occitan = None
+    
+    
+    OghamScript = None
+    
+    
+    Ojibwa = None
+    
+    
+    OlChikiScript = None
+    
+    
+    OldIrish = None
+    
+    
+    OldItalicScript = None
+    
+    
+    OldNorse = None
+    
+    
+    OldNorthArabianScript = None
+    
+    
+    OldPermicScript = None
+    
+    
+    OldPersian = None
+    
+    
+    OldPersianScript = None
+    
+    
+    OldSouthArabianScript = None
+    
+    
+    OldTurkish = None
+    
+    
+    Oman = None
+    
+    
+    OmitGroupSeparator = None
+    
+    
+    Oriya = None
+    
+    
+    OriyaScript = None
+    
+    
+    OrkhonScript = None
+    
+    
+    Oromo = None
+    
+    
+    OsmanyaScript = None
+    
+    
+    Ossetic = None
+    
+    
+    PahawhHmongScript = None
+    
+    
+    Pahlavi = None
+    
+    
+    Pakistan = None
+    
+    
+    Palau = None
+    
+    
+    PalestinianTerritories = None
+    
+    
+    Pali = None
+    
+    
+    PalmyreneScript = None
+    
+    
+    Panama = None
+    
+    
+    PapuaNewGuinea = None
+    
+    
+    Paraguay = None
+    
+    
+    Parthian = None
+    
+    
+    Pashto = None
+    
+    
+    PauCinHauScript = None
+    
+    
+    PeoplesRepublicOfCongo = None
+    
+    
+    Persian = None
+    
+    
+    Peru = None
+    
+    
+    PhagsPaScript = None
+    
+    
+    Philippines = None
+    
+    
+    Phoenician = None
+    
+    
+    PhoenicianScript = None
+    
+    
+    Pitcairn = None
+    
+    
+    Poland = None
+    
+    
+    Polish = None
+    
+    
+    PollardPhoneticScript = None
+    
+    
+    Portugal = None
+    
+    
+    Portuguese = None
+    
+    
+    PrakritLanguage = None
+    
+    
+    Prussian = None
+    
+    
+    PsalterPahlaviScript = None
+    
+    
+    PuertoRico = None
+    
+    
+    Punjabi = None
+    
+    
+    Qatar = None
+    
+    
+    Quechua = None
+    
+    
+    QuotationStyle = None
+    
+    
+    Rejang = None
+    
+    
+    RejangScript = None
+    
+    
+    RejectGroupSeparator = None
+    
+    
+    RepublicOfKorea = None
+    
+    
+    Reunion = None
+    
+    
+    RhaetoRomance = None
+    
+    
+    Romania = None
+    
+    
+    Romanian = None
+    
+    
+    Romansh = None
+    
+    
+    Rombo = None
+    
+    
+    Rundi = None
+    
+    
+    RunicScript = None
+    
+    
+    Russia = None
+    
+    
+    Russian = None
+    
+    
+    RussianFederation = None
+    
+    
+    Rwa = None
+    
+    
+    Rwanda = None
+    
+    
+    Sabaean = None
+    
+    
+    Saho = None
+    
+    
+    SaintBarthelemy = None
+    
+    
+    SaintHelena = None
+    
+    
+    SaintKittsAndNevis = None
+    
+    
+    SaintLucia = None
+    
+    
+    SaintMartin = None
+    
+    
+    SaintPierreAndMiquelon = None
+    
+    
+    SaintVincentAndTheGrenadines = None
+    
+    
+    Sakha = None
+    
+    
+    Samaritan = None
+    
+    
+    SamaritanScript = None
+    
+    
+    Samburu = None
+    
+    
+    Samoa = None
+    
+    
+    Samoan = None
+    
+    
+    SanMarino = None
+    
+    
+    Sango = None
+    
+    
+    Sangu = None
+    
+    
+    Sanskrit = None
+    
+    
+    Santali = None
+    
+    
+    SaoTomeAndPrincipe = None
+    
+    
+    Sardinian = None
+    
+    
+    SaudiArabia = None
+    
+    
+    Saurashtra = None
+    
+    
+    SaurashtraScript = None
+    
+    
+    Script = None
+    
+    
+    Sena = None
+    
+    
+    Senegal = None
+    
+    
+    Serbia = None
+    
+    
+    Serbian = None
+    
+    
+    SerboCroatian = None
+    
+    
+    Seychelles = None
+    
+    
+    Shambala = None
+    
+    
+    SharadaScript = None
+    
+    
+    ShavianScript = None
+    
+    
+    Shona = None
+    
+    
+    ShortFormat = None
+    
+    
+    SichuanYi = None
+    
+    
+    Sidamo = None
+    
+    
+    SiddhamScript = None
+    
+    
+    SierraLeone = None
+    
+    
+    SimplifiedChineseScript = None
+    
+    
+    SimplifiedHanScript = None
+    
+    
+    Sindhi = None
+    
+    
+    Singapore = None
+    
+    
+    Sinhala = None
+    
+    
+    SinhalaScript = None
+    
+    
+    SintMaarten = None
+    
+    
+    SkoltSami = None
+    
+    
+    Slovak = None
+    
+    
+    Slovakia = None
+    
+    
+    Slovenia = None
+    
+    
+    Slovenian = None
+    
+    
+    Soga = None
+    
+    
+    SolomonIslands = None
+    
+    
+    Somali = None
+    
+    
+    Somalia = None
+    
+    
+    Sora = None
+    
+    
+    SoraSompengScript = None
+    
+    
+    SouthAfrica = None
+    
+    
+    SouthGeorgiaAndTheSouthSandwichIslands = None
+    
+    
+    SouthKorea = None
+    
+    
+    SouthNdebele = None
+    
+    
+    SouthSudan = None
+    
+    
+    SouthernSami = None
+    
+    
+    SouthernSotho = None
+    
+    
+    Spain = None
+    
+    
+    Spanish = None
+    
+    
+    SriLanka = None
+    
+    
+    StandardMoroccanTamazight = None
+    
+    
+    StandardQuotation = None
+    
+    
+    Sudan = None
+    
+    
+    Sundanese = None
+    
+    
+    SundaneseScript = None
+    
+    
+    Suriname = None
+    
+    
+    SvalbardAndJanMayenIslands = None
+    
+    
+    Swahili = None
+    
+    
+    Swati = None
+    
+    
+    Swaziland = None
+    
+    
+    Sweden = None
+    
+    
+    Swedish = None
+    
+    
+    SwissGerman = None
+    
+    
+    Switzerland = None
+    
+    
+    Sylheti = None
+    
+    
+    SylotiNagriScript = None
+    
+    
+    Syria = None
+    
+    
+    Syriac = None
+    
+    
+    SyriacScript = None
+    
+    
+    SyrianArabRepublic = None
+    
+    
+    Tachelhit = None
+    
+    
+    Tagalog = None
+    
+    
+    TagalogScript = None
+    
+    
+    Tagbanwa = None
+    
+    
+    TagbanwaScript = None
+    
+    
+    Tahitian = None
+    
+    
+    TaiDam = None
+    
+    
+    TaiLeScript = None
+    
+    
+    TaiNua = None
+    
+    
+    TaiVietScript = None
+    
+    
+    Taita = None
+    
+    
+    Taiwan = None
+    
+    
+    Tajik = None
+    
+    
+    Tajikistan = None
+    
+    
+    TakriScript = None
+    
+    
+    Tamil = None
+    
+    
+    TamilScript = None
+    
+    
+    Tanzania = None
+    
+    
+    Taroko = None
+    
+    
+    Tasawaq = None
+    
+    
+    Tatar = None
+    
+    
+    TedimChin = None
+    
+    
+    Telugu = None
+    
+    
+    TeluguScript = None
+    
+    
+    Teso = None
+    
+    
+    ThaanaScript = None
+    
+    
+    Thai = None
+    
+    
+    ThaiScript = None
+    
+    
+    Thailand = None
+    
+    
+    Tibetan = None
+    
+    
+    TibetanScript = None
+    
+    
+    TifinaghScript = None
+    
+    
+    Tigre = None
+    
+    
+    Tigrinya = None
+    
+    
+    TirhutaScript = None
+    
+    
+    Togo = None
+    
+    
+    Tokelau = None
+    
+    
+    Tonga = None
+    
+    
+    Tongan = None
+    
+    
+    TraditionalChineseScript = None
+    
+    
+    TraditionalHanScript = None
+    
+    
+    TrinidadAndTobago = None
+    
+    
+    TristanDaCunha = None
+    
+    
+    Tsonga = None
+    
+    
+    Tswana = None
+    
+    
+    Tunisia = None
+    
+    
+    Turkey = None
+    
+    
+    Turkish = None
+    
+    
+    Turkmen = None
+    
+    
+    Turkmenistan = None
+    
+    
+    TurksAndCaicosIslands = None
+    
+    
+    Tuvalu = None
+    
+    
+    Twi = None
+    
+    
+    Tyap = None
+    
+    
+    Uganda = None
+    
+    
+    Ugaritic = None
+    
+    
+    UgariticScript = None
+    
+    
+    Uighur = None
+    
+    
+    Uigur = None
+    
+    
+    Ukraine = None
+    
+    
+    Ukrainian = None
+    
+    
+    UnitedArabEmirates = None
+    
+    
+    UnitedKingdom = None
+    
+    
+    UnitedStates = None
+    
+    
+    UnitedStatesMinorOutlyingIslands = None
+    
+    
+    UnitedStatesVirginIslands = None
+    
+    
+    UpperSorbian = None
+    
+    
+    Urdu = None
+    
+    
+    Uruguay = None
+    
+    
+    Uzbek = None
+    
+    
+    Uzbekistan = None
+    
+    
+    Vai = None
+    
+    
+    VaiScript = None
+    
+    
+    Vanuatu = None
+    
+    
+    VarangKshitiScript = None
+    
+    
+    VaticanCityState = None
+    
+    
+    Venda = None
+    
+    
+    Venezuela = None
+    
+    
+    Vietnam = None
+    
+    
+    Vietnamese = None
+    
+    
+    Volapuk = None
+    
+    
+    Vunjo = None
+    
+    
+    Walamo = None
+    
+    
+    WallisAndFutunaIslands = None
+    
+    
+    Walloon = None
+    
+    
+    Walser = None
+    
+    
+    Warlpiri = None
+    
+    
+    Welsh = None
+    
+    
+    WesternFrisian = None
+    
+    
+    WesternSahara = None
+    
+    
+    Wolof = None
+    
+    
+    Xhosa = None
+    
+    
+    Yangben = None
+    
+    
+    Yemen = None
+    
+    
+    YiScript = None
+    
+    
+    Yiddish = None
+    
+    
+    Yoruba = None
+    
+    
+    Zambia = None
+    
+    
+    Zarma = None
+    
+    
+    Zhuang = None
+    
+    
+    Zimbabwe = None
+    
+    
+    Zulu = None
+    
+    
+    __new__ = None
+
+
+class QXmlStreamNamespaceDeclaration(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def namespaceUri(*args, **kwargs): pass
+    def prefix(*args, **kwargs): pass
+    __new__ = None
+
+
+class QReadLocker(_Object):
+    def __enter__(*args, **kwargs): pass
+    def __exit__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def readWriteLock(*args, **kwargs): pass
+    def relock(*args, **kwargs): pass
+    def unlock(*args, **kwargs): pass
+    __new__ = None
+
+
+class QFactoryInterface(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def keys(*args, **kwargs): pass
+    __new__ = None
+
+
+class QWriteLocker(_Object):
+    def __enter__(*args, **kwargs): pass
+    def __exit__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def readWriteLock(*args, **kwargs): pass
+    def relock(*args, **kwargs): pass
+    def unlock(*args, **kwargs): pass
+    __new__ = None
+
+
+class QJsonValue(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def isArray(*args, **kwargs): pass
+    def isBool(*args, **kwargs): pass
+    def isDouble(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def isObject(*args, **kwargs): pass
+    def isString(*args, **kwargs): pass
+    def isUndefined(*args, **kwargs): pass
+    def toArray(*args, **kwargs): pass
+    def toBool(*args, **kwargs): pass
+    def toDouble(*args, **kwargs): pass
+    def toInt(*args, **kwargs): pass
+    def toObject(*args, **kwargs): pass
+    def toString(*args, **kwargs): pass
+    def toVariant(*args, **kwargs): pass
+    def type(*args, **kwargs): pass
+    @staticmethod
+    def fromVariant(*args, **kwargs): pass
+    Array = None
+    
+    
+    Bool = None
+    
+    
+    Double = None
+    
+    
+    Null = None
+    
+    
+    Object = None
+    
+    
+    String = None
+    
+    
+    Type = None
+    
+    
+    Undefined = None
+    
+    
+    __new__ = None
+
+
+class QObject(_Object):
+    def __delattr__(*args, **kwargs):
+        """
+        x.__delattr__('name') <==> del x.name
+        """
+        pass
+    def __getattribute__(*args, **kwargs):
+        """
+        x.__getattribute__('name') <==> x.name
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __setattr__(*args, **kwargs):
+        """
+        x.__setattr__('name', value) <==> x.name = value
+        """
+        pass
+    def blockSignals(*args, **kwargs): pass
+    def childEvent(*args, **kwargs): pass
+    def children(*args, **kwargs): pass
+    def connectNotify(*args, **kwargs): pass
+    def customEvent(*args, **kwargs): pass
+    def deleteLater(*args, **kwargs): pass
+    def disconnectNotify(*args, **kwargs): pass
+    def dumpObjectInfo(*args, **kwargs): pass
+    def dumpObjectTree(*args, **kwargs): pass
+    def dynamicPropertyNames(*args, **kwargs): pass
+    def emit(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def eventFilter(*args, **kwargs): pass
+    def findChild(*args, **kwargs): pass
+    def findChildren(*args, **kwargs): pass
+    def inherits(*args, **kwargs): pass
+    def installEventFilter(*args, **kwargs): pass
+    def isSignalConnected(*args, **kwargs): pass
+    def isWidgetType(*args, **kwargs): pass
+    def isWindowType(*args, **kwargs): pass
+    def killTimer(*args, **kwargs): pass
+    def metaObject(*args, **kwargs): pass
+    def moveToThread(*args, **kwargs): pass
+    def objectName(*args, **kwargs): pass
+    def parent(*args, **kwargs): pass
+    def property(*args, **kwargs): pass
+    def receivers(*args, **kwargs): pass
+    def removeEventFilter(*args, **kwargs): pass
+    def sender(*args, **kwargs): pass
+    def senderSignalIndex(*args, **kwargs): pass
+    def setObjectName(*args, **kwargs): pass
+    def setParent(*args, **kwargs): pass
+    def setProperty(*args, **kwargs): pass
+    def signalsBlocked(*args, **kwargs): pass
+    def startTimer(*args, **kwargs): pass
+    def thread(*args, **kwargs): pass
+    def timerEvent(*args, **kwargs): pass
+    def tr(*args, **kwargs): pass
+    @staticmethod
+    def connect(*args, **kwargs): pass
+    @staticmethod
+    def disconnect(*args, **kwargs): pass
+    @staticmethod
+    def registerUserData(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    destroyed = None
+    
+    
+    objectNameChanged = None
+    
+    
+    staticMetaObject = None
+
+
+class QDateTime(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __hash__(*args, **kwargs):
+        """
+        x.__hash__() <==> hash(x)
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def addDays(*args, **kwargs): pass
+    def addMSecs(*args, **kwargs): pass
+    def addMonths(*args, **kwargs): pass
+    def addSecs(*args, **kwargs): pass
+    def addYears(*args, **kwargs): pass
+    def date(*args, **kwargs): pass
+    def daysTo(*args, **kwargs): pass
+    def isDaylightTime(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def msecsTo(*args, **kwargs): pass
+    def offsetFromUtc(*args, **kwargs): pass
+    def secsTo(*args, **kwargs): pass
+    def setDate(*args, **kwargs): pass
+    def setMSecsSinceEpoch(*args, **kwargs): pass
+    def setOffsetFromUtc(*args, **kwargs): pass
+    def setTime(*args, **kwargs): pass
+    def setTimeSpec(*args, **kwargs): pass
+    def setTime_t(*args, **kwargs): pass
+    def setUtcOffset(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def time(*args, **kwargs): pass
+    def timeSpec(*args, **kwargs): pass
+    def timeZoneAbbreviation(*args, **kwargs): pass
+    def toLocalTime(*args, **kwargs): pass
+    def toMSecsSinceEpoch(*args, **kwargs): pass
+    def toOffsetFromUtc(*args, **kwargs): pass
+    def toPython(*args, **kwargs): pass
+    def toString(*args, **kwargs): pass
+    def toTimeSpec(*args, **kwargs): pass
+    def toTime_t(*args, **kwargs): pass
+    def toUTC(*args, **kwargs): pass
+    def utcOffset(*args, **kwargs): pass
+    @staticmethod
+    def currentDateTime(*args, **kwargs): pass
+    @staticmethod
+    def currentDateTimeUtc(*args, **kwargs): pass
+    @staticmethod
+    def currentMSecsSinceEpoch(*args, **kwargs): pass
+    @staticmethod
+    def fromMSecsSinceEpoch(*args, **kwargs): pass
+    @staticmethod
+    def fromString(*args, **kwargs): pass
+    @staticmethod
+    def fromTime_t(*args, **kwargs): pass
+    __new__ = None
+
+
+class Connection(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    __new__ = None
+
+
+class QFileInfo(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __getattribute__(*args, **kwargs):
+        """
+        x.__getattribute__('name') <==> x.name
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
+    def absoluteDir(*args, **kwargs): pass
+    def absoluteFilePath(*args, **kwargs): pass
+    def absolutePath(*args, **kwargs): pass
+    def baseName(*args, **kwargs): pass
+    def bundleName(*args, **kwargs): pass
+    def caching(*args, **kwargs): pass
+    def canonicalFilePath(*args, **kwargs): pass
+    def canonicalPath(*args, **kwargs): pass
+    def completeBaseName(*args, **kwargs): pass
+    def completeSuffix(*args, **kwargs): pass
+    def created(*args, **kwargs): pass
+    def dir(*args, **kwargs): pass
+    def fileName(*args, **kwargs): pass
+    def filePath(*args, **kwargs): pass
+    def getAllMetadata(*args, **kwargs): pass
+    def group(*args, **kwargs): pass
+    def groupId(*args, **kwargs): pass
+    def isAbsolute(*args, **kwargs): pass
+    def isBundle(*args, **kwargs): pass
+    def isDir(*args, **kwargs): pass
+    def isExecutable(*args, **kwargs): pass
+    def isFile(*args, **kwargs): pass
+    def isHidden(*args, **kwargs): pass
+    def isNativePath(*args, **kwargs): pass
+    def isReadable(*args, **kwargs): pass
+    def isRelative(*args, **kwargs): pass
+    def isRoot(*args, **kwargs): pass
+    def isSymLink(*args, **kwargs): pass
+    def isWritable(*args, **kwargs): pass
+    def lastModified(*args, **kwargs): pass
+    def lastRead(*args, **kwargs): pass
+    def makeAbsolute(*args, **kwargs): pass
+    def owner(*args, **kwargs): pass
+    def ownerId(*args, **kwargs): pass
+    def path(*args, **kwargs): pass
+    def readLink(*args, **kwargs): pass
+    def refresh(*args, **kwargs): pass
+    def setCaching(*args, **kwargs): pass
+    def setFile(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def suffix(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def symLinkTarget(*args, **kwargs): pass
+    @staticmethod
+    def exists(*args, **kwargs): pass
+    __new__ = None
+
+
+class QTextEncoder(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def fromUnicode(*args, **kwargs): pass
+    def hasFailure(*args, **kwargs): pass
+    __new__ = None
+
+
+class QLibraryInfo(_Object):
+    @staticmethod
+    def build(*args, **kwargs): pass
+    @staticmethod
+    def buildDate(*args, **kwargs): pass
+    @staticmethod
+    def isDebugBuild(*args, **kwargs): pass
+    @staticmethod
+    def licensedProducts(*args, **kwargs): pass
+    @staticmethod
+    def licensee(*args, **kwargs): pass
+    @staticmethod
+    def location(*args, **kwargs): pass
+    @staticmethod
+    def platformPluginArguments(*args, **kwargs): pass
+    ArchDataPath = None
+    
+    
+    BinariesPath = None
+    
+    
+    DataPath = None
+    
+    
+    DocumentationPath = None
+    
+    
+    ExamplesPath = None
+    
+    
+    HeadersPath = None
+    
+    
+    ImportsPath = None
+    
+    
+    LibrariesPath = None
+    
+    
+    LibraryExecutablesPath = None
+    
+    
+    LibraryLocation = None
+    
+    
+    PluginsPath = None
+    
+    
+    PrefixPath = None
+    
+    
+    Qml2ImportsPath = None
+    
+    
+    SettingsPath = None
+    
+    
+    TestsPath = None
+    
+    
+    TranslationsPath = None
+
+
+class QItemSelectionRange(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __hash__(*args, **kwargs):
+        """
+        x.__hash__() <==> hash(x)
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def bottom(*args, **kwargs): pass
+    def bottomRight(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def height(*args, **kwargs): pass
+    def indexes(*args, **kwargs): pass
+    def intersected(*args, **kwargs): pass
+    def intersects(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def left(*args, **kwargs): pass
+    def model(*args, **kwargs): pass
+    def parent(*args, **kwargs): pass
+    def right(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def top(*args, **kwargs): pass
+    def topLeft(*args, **kwargs): pass
+    def width(*args, **kwargs): pass
+    __new__ = None
+
+
+class QBasicTimer(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def isActive(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def stop(*args, **kwargs): pass
+    def timerId(*args, **kwargs): pass
+    __new__ = None
+
+
+class QCryptographicHash(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def addData(*args, **kwargs): pass
+    def reset(*args, **kwargs): pass
+    def result(*args, **kwargs): pass
+    @staticmethod
+    def hash(*args, **kwargs): pass
+    Algorithm = None
+    
+    
+    Md4 = None
+    
+    
+    Md5 = None
+    
+    
+    Sha1 = None
+    
+    
+    Sha224 = None
+    
+    
+    Sha256 = None
+    
+    
+    Sha384 = None
+    
+    
+    Sha3_224 = None
+    
+    
+    Sha3_256 = None
+    
+    
+    Sha3_384 = None
+    
+    
+    Sha3_512 = None
+    
+    
+    Sha512 = None
+    
+    
+    __new__ = None
+
+
+class QPointF(_Object):
+    def __add__(*args, **kwargs):
+        """
+        x.__add__(y) <==> x+y
+        """
+        pass
+    def __copy__(*args, **kwargs): pass
+    def __div__(*args, **kwargs):
+        """
+        x.__div__(y) <==> x/y
+        """
+        pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __iadd__(*args, **kwargs):
+        """
+        x.__iadd__(y) <==> x+=y
+        """
+        pass
+    def __idiv__(*args, **kwargs):
+        """
+        x.__idiv__(y) <==> x/=y
+        """
+        pass
+    def __imul__(*args, **kwargs):
+        """
+        x.__imul__(y) <==> x*=y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __isub__(*args, **kwargs):
+        """
+        x.__isub__(y) <==> x-=y
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __mul__(*args, **kwargs):
+        """
+        x.__mul__(y) <==> x*y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __neg__(*args, **kwargs):
+        """
+        x.__neg__() <==> -x
+        """
+        pass
+    def __nonzero__(*args, **kwargs):
+        """
+        x.__nonzero__() <==> x != 0
+        """
+        pass
+    def __pos__(*args, **kwargs):
+        """
+        x.__pos__() <==> +x
+        """
+        pass
+    def __radd__(*args, **kwargs):
+        """
+        x.__radd__(y) <==> y+x
+        """
+        pass
+    def __rdiv__(*args, **kwargs):
+        """
+        x.__rdiv__(y) <==> y/x
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
+    def __repr__(*args, **kwargs):
+        """
+        x.__repr__() <==> repr(x)
+        """
+        pass
+    def __rmul__(*args, **kwargs):
+        """
+        x.__rmul__(y) <==> y*x
+        """
+        pass
+    def __rsub__(*args, **kwargs):
+        """
+        x.__rsub__(y) <==> y-x
+        """
+        pass
+    def __rtruediv__(*args, **kwargs):
+        """
+        x.__rtruediv__(y) <==> y/x
+        """
+        pass
+    def __sub__(*args, **kwargs):
+        """
+        x.__sub__(y) <==> x-y
+        """
+        pass
+    def __truediv__(*args, **kwargs):
+        """
+        x.__truediv__(y) <==> x/y
+        """
+        pass
+    def isNull(*args, **kwargs): pass
+    def manhattanLength(*args, **kwargs): pass
+    def setX(*args, **kwargs): pass
+    def setY(*args, **kwargs): pass
+    def toPoint(*args, **kwargs): pass
+    def toTuple(*args, **kwargs): pass
+    def x(*args, **kwargs): pass
+    def y(*args, **kwargs): pass
+    @staticmethod
+    def dotProduct(*args, **kwargs): pass
     __new__ = None
 
 
 class QEasingCurve(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
-    def addCubicBezierSegment(*args, **kwargs):
-        pass
-    
-    
-    def addTCBSegment(*args, **kwargs):
-        pass
-    
-    
-    def amplitude(*args, **kwargs):
-        pass
-    
-    
-    def customType(*args, **kwargs):
-        pass
-    
-    
-    def overshoot(*args, **kwargs):
-        pass
-    
-    
-    def period(*args, **kwargs):
-        pass
-    
-    
-    def setAmplitude(*args, **kwargs):
-        pass
-    
-    
-    def setCustomType(*args, **kwargs):
-        pass
-    
-    
-    def setOvershoot(*args, **kwargs):
-        pass
-    
-    
-    def setPeriod(*args, **kwargs):
-        pass
-    
-    
-    def setType(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def toCubicSpline(*args, **kwargs):
-        pass
-    
-    
-    def type(*args, **kwargs):
-        pass
-    
-    
-    def valueForProgress(*args, **kwargs):
-        pass
-    
-    
+    def addCubicBezierSegment(*args, **kwargs): pass
+    def addTCBSegment(*args, **kwargs): pass
+    def amplitude(*args, **kwargs): pass
+    def customType(*args, **kwargs): pass
+    def overshoot(*args, **kwargs): pass
+    def period(*args, **kwargs): pass
+    def setAmplitude(*args, **kwargs): pass
+    def setCustomType(*args, **kwargs): pass
+    def setOvershoot(*args, **kwargs): pass
+    def setPeriod(*args, **kwargs): pass
+    def setType(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    def toCubicSpline(*args, **kwargs): pass
+    def type(*args, **kwargs): pass
+    def valueForProgress(*args, **kwargs): pass
     BezierSpline = None
     
     
@@ -10994,90 +12022,80 @@ class QEasingCurve(_Object):
     __new__ = None
 
 
-class QSystemSemaphore(_Object):
+class QByteArrayMatcher(_Object):
+    def __copy__(*args, **kwargs): pass
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def acquire(*args, **kwargs):
-        pass
-    
-    
-    def error(*args, **kwargs):
-        pass
-    
-    
-    def errorString(*args, **kwargs):
-        pass
-    
-    
-    def key(*args, **kwargs):
-        pass
-    
-    
-    def release(*args, **kwargs):
-        pass
-    
-    
-    def setKey(*args, **kwargs):
-        pass
-    
-    
-    AccessMode = None
-    
-    
-    AlreadyExists = None
-    
-    
-    Create = None
-    
-    
-    KeyError = None
-    
-    
-    NoError = None
-    
-    
-    NotFound = None
-    
-    
-    Open = None
-    
-    
-    OutOfResources = None
-    
-    
-    PermissionDenied = None
-    
-    
-    SystemSemaphoreError = None
-    
-    
-    UnknownError = None
-    
-    
+    def indexIn(*args, **kwargs): pass
+    def pattern(*args, **kwargs): pass
+    def setPattern(*args, **kwargs): pass
     __new__ = None
 
 
-class QXmlStreamEntityResolver(_Object):
+class QXmlStreamNotationDeclaration(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
+        pass
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def resolveEntity(*args, **kwargs):
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
         pass
-    
-    
-    def resolveUndeclaredEntity(*args, **kwargs):
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
         pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def name(*args, **kwargs): pass
+    def publicId(*args, **kwargs): pass
+    def systemId(*args, **kwargs): pass
+    __new__ = None
+
+
+class QReadWriteLock(_Object):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def lockForRead(*args, **kwargs): pass
+    def lockForWrite(*args, **kwargs): pass
+    def tryLockForRead(*args, **kwargs): pass
+    def tryLockForWrite(*args, **kwargs): pass
+    def unlock(*args, **kwargs): pass
+    NonRecursive = None
+    
+    
+    RecursionMode = None
+    
+    
+    Recursive = None
     
     
     __new__ = None
@@ -11088,438 +12106,252 @@ class QMargins(_Object):
         """
         x.__add__(y) <==> x+y
         """
-    
         pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+    def __copy__(*args, **kwargs): pass
     def __div__(*args, **kwargs):
         """
         x.__div__(y) <==> x/y
         """
-    
         pass
-    
-    
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
     def __iadd__(*args, **kwargs):
         """
         x.__iadd__(y) <==> x+=y
         """
-    
         pass
-    
-    
     def __idiv__(*args, **kwargs):
         """
         x.__idiv__(y) <==> x/=y
         """
-    
         pass
-    
-    
     def __imul__(*args, **kwargs):
         """
         x.__imul__(y) <==> x*=y
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __isub__(*args, **kwargs):
         """
         x.__isub__(y) <==> x-=y
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __mul__(*args, **kwargs):
         """
         x.__mul__(y) <==> x*y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __neg__(*args, **kwargs):
         """
         x.__neg__() <==> -x
         """
-    
         pass
-    
-    
     def __nonzero__(*args, **kwargs):
         """
         x.__nonzero__() <==> x != 0
         """
-    
         pass
-    
-    
     def __pos__(*args, **kwargs):
         """
         x.__pos__() <==> +x
         """
-    
         pass
-    
-    
     def __radd__(*args, **kwargs):
         """
         x.__radd__(y) <==> y+x
         """
-    
         pass
-    
-    
     def __rdiv__(*args, **kwargs):
         """
         x.__rdiv__(y) <==> y/x
         """
-    
         pass
-    
-    
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
     def __rmul__(*args, **kwargs):
         """
         x.__rmul__(y) <==> y*x
         """
-    
         pass
-    
-    
     def __rsub__(*args, **kwargs):
         """
         x.__rsub__(y) <==> y-x
         """
-    
         pass
-    
-    
     def __rtruediv__(*args, **kwargs):
         """
         x.__rtruediv__(y) <==> y/x
         """
-    
         pass
-    
-    
     def __sub__(*args, **kwargs):
         """
         x.__sub__(y) <==> x-y
         """
-    
         pass
-    
-    
     def __truediv__(*args, **kwargs):
         """
         x.__truediv__(y) <==> x/y
         """
-    
         pass
-    
-    
-    def bottom(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def left(*args, **kwargs):
-        pass
-    
-    
-    def right(*args, **kwargs):
-        pass
-    
-    
-    def setBottom(*args, **kwargs):
-        pass
-    
-    
-    def setLeft(*args, **kwargs):
-        pass
-    
-    
-    def setRight(*args, **kwargs):
-        pass
-    
-    
-    def setTop(*args, **kwargs):
-        pass
-    
-    
-    def top(*args, **kwargs):
-        pass
-    
-    
+    def bottom(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def left(*args, **kwargs): pass
+    def right(*args, **kwargs): pass
+    def setBottom(*args, **kwargs): pass
+    def setLeft(*args, **kwargs): pass
+    def setRight(*args, **kwargs): pass
+    def setTop(*args, **kwargs): pass
+    def top(*args, **kwargs): pass
     __new__ = None
 
 
-class QReadLocker(_Object):
-    def __enter__(*args, **kwargs):
-        pass
-    
-    
-    def __exit__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def readWriteLock(*args, **kwargs):
-        pass
-    
-    
-    def relock(*args, **kwargs):
-        pass
-    
-    
-    def unlock(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QRegExp(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+class QXmlStreamAttribute(_Object):
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
-    def __reduce__(*args, **kwargs):
+    def isDefault(*args, **kwargs): pass
+    def name(*args, **kwargs): pass
+    def namespaceUri(*args, **kwargs): pass
+    def prefix(*args, **kwargs): pass
+    def qualifiedName(*args, **kwargs): pass
+    def value(*args, **kwargs): pass
+    __new__ = None
+
+
+class QRegExp(_Object):
+    def __copy__(*args, **kwargs): pass
+    def __eq__(*args, **kwargs):
+        """
+        x.__eq__(y) <==> x==y
+        """
         pass
-    
-    
+    def __ge__(*args, **kwargs):
+        """
+        x.__ge__(y) <==> x>=y
+        """
+        pass
+    def __gt__(*args, **kwargs):
+        """
+        x.__gt__(y) <==> x>y
+        """
+        pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def __le__(*args, **kwargs):
+        """
+        x.__le__(y) <==> x<=y
+        """
+        pass
+    def __lt__(*args, **kwargs):
+        """
+        x.__lt__(y) <==> x<y
+        """
+        pass
+    def __ne__(*args, **kwargs):
+        """
+        x.__ne__(y) <==> x!=y
+        """
+        pass
+    def __reduce__(*args, **kwargs): pass
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
-    def cap(*args, **kwargs):
-        pass
-    
-    
-    def captureCount(*args, **kwargs):
-        pass
-    
-    
-    def capturedTexts(*args, **kwargs):
-        pass
-    
-    
-    def caseSensitivity(*args, **kwargs):
-        pass
-    
-    
-    def errorString(*args, **kwargs):
-        pass
-    
-    
-    def exactMatch(*args, **kwargs):
-        pass
-    
-    
-    def indexIn(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isMinimal(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def lastIndexIn(*args, **kwargs):
-        pass
-    
-    
-    def matchedLength(*args, **kwargs):
-        pass
-    
-    
-    def pattern(*args, **kwargs):
-        pass
-    
-    
-    def patternSyntax(*args, **kwargs):
-        pass
-    
-    
-    def pos(*args, **kwargs):
-        pass
-    
-    
-    def replace(*args, **kwargs):
-        pass
-    
-    
-    def setCaseSensitivity(*args, **kwargs):
-        pass
-    
-    
-    def setMinimal(*args, **kwargs):
-        pass
-    
-    
-    def setPattern(*args, **kwargs):
-        pass
-    
-    
-    def setPatternSyntax(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def escape(*args, **kwargs):
-        pass
-    
-    
+    def cap(*args, **kwargs): pass
+    def captureCount(*args, **kwargs): pass
+    def capturedTexts(*args, **kwargs): pass
+    def caseSensitivity(*args, **kwargs): pass
+    def errorString(*args, **kwargs): pass
+    def exactMatch(*args, **kwargs): pass
+    def indexIn(*args, **kwargs): pass
+    def isEmpty(*args, **kwargs): pass
+    def isMinimal(*args, **kwargs): pass
+    def isValid(*args, **kwargs): pass
+    def lastIndexIn(*args, **kwargs): pass
+    def matchedLength(*args, **kwargs): pass
+    def pattern(*args, **kwargs): pass
+    def patternSyntax(*args, **kwargs): pass
+    def pos(*args, **kwargs): pass
+    def replace(*args, **kwargs): pass
+    def setCaseSensitivity(*args, **kwargs): pass
+    def setMinimal(*args, **kwargs): pass
+    def setPattern(*args, **kwargs): pass
+    def setPatternSyntax(*args, **kwargs): pass
+    def swap(*args, **kwargs): pass
+    @staticmethod
+    def escape(*args, **kwargs): pass
     CaretAtOffset = None
     
     
@@ -11556,7432 +12388,102 @@ class QRegExp(_Object):
     __new__ = None
 
 
-class QJsonParseError(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def errorString(*args, **kwargs):
-        pass
-    
-    
-    error = None
-    
-    offset = None
-    
-    DeepNesting = None
-    
-    
-    DocumentTooLarge = None
-    
-    
-    GarbageAtEnd = None
-    
-    
-    IllegalEscapeSequence = None
-    
-    
-    IllegalNumber = None
-    
-    
-    IllegalUTF8String = None
-    
-    
-    IllegalValue = None
-    
-    
-    MissingNameSeparator = None
-    
-    
-    MissingObject = None
-    
-    
-    MissingValueSeparator = None
-    
-    
-    NoError = None
-    
-    
-    ParseError = None
-    
-    
-    TerminationByNumber = None
-    
-    
-    UnterminatedArray = None
-    
-    
-    UnterminatedObject = None
-    
-    
-    UnterminatedString = None
-    
-    
-    __new__ = None
-
-
-class QLibraryInfo(_Object):
-    def build(*args, **kwargs):
-        pass
-    
-    
-    def buildDate(*args, **kwargs):
-        pass
-    
-    
-    def isDebugBuild(*args, **kwargs):
-        pass
-    
-    
-    def licensedProducts(*args, **kwargs):
-        pass
-    
-    
-    def licensee(*args, **kwargs):
-        pass
-    
-    
-    def location(*args, **kwargs):
-        pass
-    
-    
-    def platformPluginArguments(*args, **kwargs):
-        pass
-    
-    
-    ArchDataPath = None
-    
-    
-    BinariesPath = None
-    
-    
-    DataPath = None
-    
-    
-    DocumentationPath = None
-    
-    
-    ExamplesPath = None
-    
-    
-    HeadersPath = None
-    
-    
-    ImportsPath = None
-    
-    
-    LibrariesPath = None
-    
-    
-    LibraryExecutablesPath = None
-    
-    
-    LibraryLocation = None
-    
-    
-    PluginsPath = None
-    
-    
-    PrefixPath = None
-    
-    
-    Qml2ImportsPath = None
-    
-    
-    SettingsPath = None
-    
-    
-    TestsPath = None
-    
-    
-    TranslationsPath = None
-
-
-class QDateTime(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
+class QTime(_Object):
+    def __copy__(*args, **kwargs): pass
     def __eq__(*args, **kwargs):
         """
         x.__eq__(y) <==> x==y
         """
-    
         pass
-    
-    
     def __ge__(*args, **kwargs):
         """
         x.__ge__(y) <==> x>=y
         """
-    
         pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def addDays(*args, **kwargs):
-        pass
-    
-    
-    def addMSecs(*args, **kwargs):
-        pass
-    
-    
-    def addMonths(*args, **kwargs):
-        pass
-    
-    
-    def addSecs(*args, **kwargs):
-        pass
-    
-    
-    def addYears(*args, **kwargs):
-        pass
-    
-    
-    def date(*args, **kwargs):
-        pass
-    
-    
-    def daysTo(*args, **kwargs):
-        pass
-    
-    
-    def isDaylightTime(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def msecsTo(*args, **kwargs):
-        pass
-    
-    
-    def offsetFromUtc(*args, **kwargs):
-        pass
-    
-    
-    def secsTo(*args, **kwargs):
-        pass
-    
-    
-    def setDate(*args, **kwargs):
-        pass
-    
-    
-    def setMSecsSinceEpoch(*args, **kwargs):
-        pass
-    
-    
-    def setOffsetFromUtc(*args, **kwargs):
-        pass
-    
-    
-    def setTime(*args, **kwargs):
-        pass
-    
-    
-    def setTimeSpec(*args, **kwargs):
-        pass
-    
-    
-    def setTime_t(*args, **kwargs):
-        pass
-    
-    
-    def setUtcOffset(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def time(*args, **kwargs):
-        pass
-    
-    
-    def timeSpec(*args, **kwargs):
-        pass
-    
-    
-    def timeZoneAbbreviation(*args, **kwargs):
-        pass
-    
-    
-    def toLocalTime(*args, **kwargs):
-        pass
-    
-    
-    def toMSecsSinceEpoch(*args, **kwargs):
-        pass
-    
-    
-    def toOffsetFromUtc(*args, **kwargs):
-        pass
-    
-    
-    def toPython(*args, **kwargs):
-        pass
-    
-    
-    def toString(*args, **kwargs):
-        pass
-    
-    
-    def toTimeSpec(*args, **kwargs):
-        pass
-    
-    
-    def toTime_t(*args, **kwargs):
-        pass
-    
-    
-    def toUTC(*args, **kwargs):
-        pass
-    
-    
-    def utcOffset(*args, **kwargs):
-        pass
-    
-    
-    def currentDateTime(*args, **kwargs):
-        pass
-    
-    
-    def currentDateTimeUtc(*args, **kwargs):
-        pass
-    
-    
-    def currentMSecsSinceEpoch(*args, **kwargs):
-        pass
-    
-    
-    def fromMSecsSinceEpoch(*args, **kwargs):
-        pass
-    
-    
-    def fromString(*args, **kwargs):
-        pass
-    
-    
-    def fromTime_t(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QPoint(_Object):
-    def __add__(*args, **kwargs):
-        """
-        x.__add__(y) <==> x+y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __div__(*args, **kwargs):
-        """
-        x.__div__(y) <==> x/y
-        """
-    
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
-    def __iadd__(*args, **kwargs):
-        """
-        x.__iadd__(y) <==> x+=y
-        """
-    
-        pass
-    
-    
-    def __idiv__(*args, **kwargs):
-        """
-        x.__idiv__(y) <==> x/=y
-        """
-    
-        pass
-    
-    
-    def __imul__(*args, **kwargs):
-        """
-        x.__imul__(y) <==> x*=y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __isub__(*args, **kwargs):
-        """
-        x.__isub__(y) <==> x-=y
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __mul__(*args, **kwargs):
-        """
-        x.__mul__(y) <==> x*y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __neg__(*args, **kwargs):
-        """
-        x.__neg__() <==> -x
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __pos__(*args, **kwargs):
-        """
-        x.__pos__() <==> +x
-        """
-    
-        pass
-    
-    
-    def __radd__(*args, **kwargs):
-        """
-        x.__radd__(y) <==> y+x
-        """
-    
-        pass
-    
-    
-    def __rdiv__(*args, **kwargs):
-        """
-        x.__rdiv__(y) <==> y/x
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def __rmul__(*args, **kwargs):
-        """
-        x.__rmul__(y) <==> y*x
-        """
-    
-        pass
-    
-    
-    def __rsub__(*args, **kwargs):
-        """
-        x.__rsub__(y) <==> y-x
-        """
-    
-        pass
-    
-    
-    def __rtruediv__(*args, **kwargs):
-        """
-        x.__rtruediv__(y) <==> y/x
-        """
-    
-        pass
-    
-    
-    def __sub__(*args, **kwargs):
-        """
-        x.__sub__(y) <==> x-y
-        """
-    
-        pass
-    
-    
-    def __truediv__(*args, **kwargs):
-        """
-        x.__truediv__(y) <==> x/y
-        """
-    
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def manhattanLength(*args, **kwargs):
-        pass
-    
-    
-    def setX(*args, **kwargs):
-        pass
-    
-    
-    def setY(*args, **kwargs):
-        pass
-    
-    
-    def toTuple(*args, **kwargs):
-        pass
-    
-    
-    def x(*args, **kwargs):
-        pass
-    
-    
-    def y(*args, **kwargs):
-        pass
-    
-    
-    def dotProduct(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QMutexLocker(_Object):
-    def __enter__(*args, **kwargs):
-        pass
-    
-    
-    def __exit__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def mutex(*args, **kwargs):
-        pass
-    
-    
-    def relock(*args, **kwargs):
-        pass
-    
-    
-    def unlock(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QXmlStreamNamespaceDeclaration(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def namespaceUri(*args, **kwargs):
-        pass
-    
-    
-    def prefix(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QElapsedTimer(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def elapsed(*args, **kwargs):
-        pass
-    
-    
-    def hasExpired(*args, **kwargs):
-        pass
-    
-    
-    def invalidate(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def msecsSinceReference(*args, **kwargs):
-        pass
-    
-    
-    def msecsTo(*args, **kwargs):
-        pass
-    
-    
-    def nsecsElapsed(*args, **kwargs):
-        pass
-    
-    
-    def restart(*args, **kwargs):
-        pass
-    
-    
-    def secsTo(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def clockType(*args, **kwargs):
-        pass
-    
-    
-    def isMonotonic(*args, **kwargs):
-        pass
-    
-    
-    ClockType = None
-    
-    
-    MachAbsoluteTime = None
-    
-    
-    MonotonicClock = None
-    
-    
-    PerformanceCounter = None
-    
-    
-    SystemTime = None
-    
-    
-    TickCounter = None
-    
-    
-    __new__ = None
-
-
-class QReadWriteLock(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def lockForRead(*args, **kwargs):
-        pass
-    
-    
-    def lockForWrite(*args, **kwargs):
-        pass
-    
-    
-    def tryLockForRead(*args, **kwargs):
-        pass
-    
-    
-    def tryLockForWrite(*args, **kwargs):
-        pass
-    
-    
-    def unlock(*args, **kwargs):
-        pass
-    
-    
-    NonRecursive = None
-    
-    
-    RecursionMode = None
-    
-    
-    Recursive = None
-    
-    
-    __new__ = None
-
-
-class QMessageLogContext(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    category = None
-    
-    file = None
-    
-    function = None
-    
-    line = None
-    
-    version = None
-    
-    __new__ = None
-
-
-class QTextStream(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __lshift__(*args, **kwargs):
-        """
-        x.__lshift__(y) <==> x<<y
-        """
-    
-        pass
-    
-    
-    def __rlshift__(*args, **kwargs):
-        """
-        x.__rlshift__(y) <==> y<<x
-        """
-    
-        pass
-    
-    
-    def __rrshift__(*args, **kwargs):
-        """
-        x.__rrshift__(y) <==> y>>x
-        """
-    
-        pass
-    
-    
-    def __rshift__(*args, **kwargs):
-        """
-        x.__rshift__(y) <==> x>>y
-        """
-    
-        pass
-    
-    
-    def atEnd(*args, **kwargs):
-        pass
-    
-    
-    def autoDetectUnicode(*args, **kwargs):
-        pass
-    
-    
-    def codec(*args, **kwargs):
-        pass
-    
-    
-    def device(*args, **kwargs):
-        pass
-    
-    
-    def fieldAlignment(*args, **kwargs):
-        pass
-    
-    
-    def fieldWidth(*args, **kwargs):
-        pass
-    
-    
-    def flush(*args, **kwargs):
-        pass
-    
-    
-    def generateByteOrderMark(*args, **kwargs):
-        pass
-    
-    
-    def integerBase(*args, **kwargs):
-        pass
-    
-    
-    def locale(*args, **kwargs):
-        pass
-    
-    
-    def numberFlags(*args, **kwargs):
-        pass
-    
-    
-    def padChar(*args, **kwargs):
-        pass
-    
-    
-    def pos(*args, **kwargs):
-        pass
-    
-    
-    def read(*args, **kwargs):
-        pass
-    
-    
-    def readAll(*args, **kwargs):
-        pass
-    
-    
-    def readLine(*args, **kwargs):
-        pass
-    
-    
-    def realNumberNotation(*args, **kwargs):
-        pass
-    
-    
-    def realNumberPrecision(*args, **kwargs):
-        pass
-    
-    
-    def reset(*args, **kwargs):
-        pass
-    
-    
-    def resetStatus(*args, **kwargs):
-        pass
-    
-    
-    def seek(*args, **kwargs):
-        pass
-    
-    
-    def setAutoDetectUnicode(*args, **kwargs):
-        pass
-    
-    
-    def setCodec(*args, **kwargs):
-        pass
-    
-    
-    def setDevice(*args, **kwargs):
-        pass
-    
-    
-    def setFieldAlignment(*args, **kwargs):
-        pass
-    
-    
-    def setFieldWidth(*args, **kwargs):
-        pass
-    
-    
-    def setGenerateByteOrderMark(*args, **kwargs):
-        pass
-    
-    
-    def setIntegerBase(*args, **kwargs):
-        pass
-    
-    
-    def setLocale(*args, **kwargs):
-        pass
-    
-    
-    def setNumberFlags(*args, **kwargs):
-        pass
-    
-    
-    def setPadChar(*args, **kwargs):
-        pass
-    
-    
-    def setRealNumberNotation(*args, **kwargs):
-        pass
-    
-    
-    def setRealNumberPrecision(*args, **kwargs):
-        pass
-    
-    
-    def setStatus(*args, **kwargs):
-        pass
-    
-    
-    def skipWhiteSpace(*args, **kwargs):
-        pass
-    
-    
-    def status(*args, **kwargs):
-        pass
-    
-    
-    def string(*args, **kwargs):
-        pass
-    
-    
-    AlignAccountingStyle = None
-    
-    
-    AlignCenter = None
-    
-    
-    AlignLeft = None
-    
-    
-    AlignRight = None
-    
-    
-    FieldAlignment = None
-    
-    
-    FixedNotation = None
-    
-    
-    ForcePoint = None
-    
-    
-    ForceSign = None
-    
-    
-    NumberFlag = None
-    
-    
-    NumberFlags = None
-    
-    
-    Ok = None
-    
-    
-    ReadCorruptData = None
-    
-    
-    ReadPastEnd = None
-    
-    
-    RealNumberNotation = None
-    
-    
-    ScientificNotation = None
-    
-    
-    ShowBase = None
-    
-    
-    SmartNotation = None
-    
-    
-    Status = None
-    
-    
-    UppercaseBase = None
-    
-    
-    UppercaseDigits = None
-    
-    
-    WriteFailed = None
-    
-    
-    __new__ = None
-
-
-class QDataStream(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __lshift__(*args, **kwargs):
-        """
-        x.__lshift__(y) <==> x<<y
-        """
-    
-        pass
-    
-    
-    def __rlshift__(*args, **kwargs):
-        """
-        x.__rlshift__(y) <==> y<<x
-        """
-    
-        pass
-    
-    
-    def __rrshift__(*args, **kwargs):
-        """
-        x.__rrshift__(y) <==> y>>x
-        """
-    
-        pass
-    
-    
-    def __rshift__(*args, **kwargs):
-        """
-        x.__rshift__(y) <==> x>>y
-        """
-    
-        pass
-    
-    
-    def atEnd(*args, **kwargs):
-        pass
-    
-    
-    def byteOrder(*args, **kwargs):
-        pass
-    
-    
-    def device(*args, **kwargs):
-        pass
-    
-    
-    def floatingPointPrecision(*args, **kwargs):
-        pass
-    
-    
-    def readBool(*args, **kwargs):
-        pass
-    
-    
-    def readDouble(*args, **kwargs):
-        pass
-    
-    
-    def readFloat(*args, **kwargs):
-        pass
-    
-    
-    def readInt16(*args, **kwargs):
-        pass
-    
-    
-    def readInt32(*args, **kwargs):
-        pass
-    
-    
-    def readInt64(*args, **kwargs):
-        pass
-    
-    
-    def readInt8(*args, **kwargs):
-        pass
-    
-    
-    def readQChar(*args, **kwargs):
-        pass
-    
-    
-    def readQString(*args, **kwargs):
-        pass
-    
-    
-    def readQStringList(*args, **kwargs):
-        pass
-    
-    
-    def readQVariant(*args, **kwargs):
-        pass
-    
-    
-    def readRawData(*args, **kwargs):
-        pass
-    
-    
-    def readString(*args, **kwargs):
-        pass
-    
-    
-    def readUInt16(*args, **kwargs):
-        pass
-    
-    
-    def readUInt32(*args, **kwargs):
-        pass
-    
-    
-    def readUInt64(*args, **kwargs):
-        pass
-    
-    
-    def readUInt8(*args, **kwargs):
-        pass
-    
-    
-    def resetStatus(*args, **kwargs):
-        pass
-    
-    
-    def setByteOrder(*args, **kwargs):
-        pass
-    
-    
-    def setDevice(*args, **kwargs):
-        pass
-    
-    
-    def setFloatingPointPrecision(*args, **kwargs):
-        pass
-    
-    
-    def setStatus(*args, **kwargs):
-        pass
-    
-    
-    def setVersion(*args, **kwargs):
-        pass
-    
-    
-    def skipRawData(*args, **kwargs):
-        pass
-    
-    
-    def status(*args, **kwargs):
-        pass
-    
-    
-    def unsetDevice(*args, **kwargs):
-        pass
-    
-    
-    def version(*args, **kwargs):
-        pass
-    
-    
-    def writeBool(*args, **kwargs):
-        pass
-    
-    
-    def writeDouble(*args, **kwargs):
-        pass
-    
-    
-    def writeFloat(*args, **kwargs):
-        pass
-    
-    
-    def writeInt16(*args, **kwargs):
-        pass
-    
-    
-    def writeInt32(*args, **kwargs):
-        pass
-    
-    
-    def writeInt64(*args, **kwargs):
-        pass
-    
-    
-    def writeInt8(*args, **kwargs):
-        pass
-    
-    
-    def writeQChar(*args, **kwargs):
-        pass
-    
-    
-    def writeQString(*args, **kwargs):
-        pass
-    
-    
-    def writeQStringList(*args, **kwargs):
-        pass
-    
-    
-    def writeQVariant(*args, **kwargs):
-        pass
-    
-    
-    def writeRawData(*args, **kwargs):
-        pass
-    
-    
-    def writeString(*args, **kwargs):
-        pass
-    
-    
-    def writeUInt16(*args, **kwargs):
-        pass
-    
-    
-    def writeUInt32(*args, **kwargs):
-        pass
-    
-    
-    def writeUInt64(*args, **kwargs):
-        pass
-    
-    
-    def writeUInt8(*args, **kwargs):
-        pass
-    
-    
-    BigEndian = None
-    
-    
-    ByteOrder = None
-    
-    
-    DoublePrecision = None
-    
-    
-    FloatingPointPrecision = None
-    
-    
-    LittleEndian = None
-    
-    
-    Ok = None
-    
-    
-    Qt_1_0 = None
-    
-    
-    Qt_2_0 = None
-    
-    
-    Qt_2_1 = None
-    
-    
-    Qt_3_0 = None
-    
-    
-    Qt_3_1 = None
-    
-    
-    Qt_3_3 = None
-    
-    
-    Qt_4_0 = None
-    
-    
-    Qt_4_1 = None
-    
-    
-    Qt_4_2 = None
-    
-    
-    Qt_4_3 = None
-    
-    
-    Qt_4_4 = None
-    
-    
-    Qt_4_5 = None
-    
-    
-    Qt_4_6 = None
-    
-    
-    Qt_4_7 = None
-    
-    
-    Qt_4_8 = None
-    
-    
-    Qt_4_9 = None
-    
-    
-    Qt_5_0 = None
-    
-    
-    Qt_5_1 = None
-    
-    
-    Qt_5_2 = None
-    
-    
-    Qt_5_3 = None
-    
-    
-    Qt_5_4 = None
-    
-    
-    Qt_5_5 = None
-    
-    
-    Qt_5_6 = None
-    
-    
-    Qt_DefaultCompiledVersion = None
-    
-    
-    ReadCorruptData = None
-    
-    
-    ReadPastEnd = None
-    
-    
-    SinglePrecision = None
-    
-    
-    Status = None
-    
-    
-    Version = None
-    
-    
-    WriteFailed = None
-    
-    
-    __new__ = None
-
-
-class QLine(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def dx(*args, **kwargs):
-        pass
-    
-    
-    def dy(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def p1(*args, **kwargs):
-        pass
-    
-    
-    def p2(*args, **kwargs):
-        pass
-    
-    
-    def setLine(*args, **kwargs):
-        pass
-    
-    
-    def setP1(*args, **kwargs):
-        pass
-    
-    
-    def setP2(*args, **kwargs):
-        pass
-    
-    
-    def setPoints(*args, **kwargs):
-        pass
-    
-    
-    def toTuple(*args, **kwargs):
-        pass
-    
-    
-    def translate(*args, **kwargs):
-        pass
-    
-    
-    def translated(*args, **kwargs):
-        pass
-    
-    
-    def x1(*args, **kwargs):
-        pass
-    
-    
-    def x2(*args, **kwargs):
-        pass
-    
-    
-    def y1(*args, **kwargs):
-        pass
-    
-    
-    def y2(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QMetaProperty(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def enumerator(*args, **kwargs):
-        pass
-    
-    
-    def hasNotifySignal(*args, **kwargs):
-        pass
-    
-    
-    def hasStdCppSet(*args, **kwargs):
-        pass
-    
-    
-    def isConstant(*args, **kwargs):
-        pass
-    
-    
-    def isDesignable(*args, **kwargs):
-        pass
-    
-    
-    def isEditable(*args, **kwargs):
-        pass
-    
-    
-    def isEnumType(*args, **kwargs):
-        pass
-    
-    
-    def isFinal(*args, **kwargs):
-        pass
-    
-    
-    def isFlagType(*args, **kwargs):
-        pass
-    
-    
-    def isReadable(*args, **kwargs):
-        pass
-    
-    
-    def isResettable(*args, **kwargs):
-        pass
-    
-    
-    def isScriptable(*args, **kwargs):
-        pass
-    
-    
-    def isStored(*args, **kwargs):
-        pass
-    
-    
-    def isUser(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def isWritable(*args, **kwargs):
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def notifySignal(*args, **kwargs):
-        pass
-    
-    
-    def notifySignalIndex(*args, **kwargs):
-        pass
-    
-    
-    def propertyIndex(*args, **kwargs):
-        pass
-    
-    
-    def read(*args, **kwargs):
-        pass
-    
-    
-    def readOnGadget(*args, **kwargs):
-        pass
-    
-    
-    def reset(*args, **kwargs):
-        pass
-    
-    
-    def resetOnGadget(*args, **kwargs):
-        pass
-    
-    
-    def revision(*args, **kwargs):
-        pass
-    
-    
-    def type(*args, **kwargs):
-        pass
-    
-    
-    def typeName(*args, **kwargs):
-        pass
-    
-    
-    def userType(*args, **kwargs):
-        pass
-    
-    
-    def write(*args, **kwargs):
-        pass
-    
-    
-    def writeOnGadget(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QResource(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def absoluteFilePath(*args, **kwargs):
-        pass
-    
-    
-    def children(*args, **kwargs):
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def isCompressed(*args, **kwargs):
-        pass
-    
-    
-    def isDir(*args, **kwargs):
-        pass
-    
-    
-    def isFile(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def locale(*args, **kwargs):
-        pass
-    
-    
-    def setFileName(*args, **kwargs):
-        pass
-    
-    
-    def setLocale(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def addSearchPath(*args, **kwargs):
-        pass
-    
-    
-    def registerResource(*args, **kwargs):
-        pass
-    
-    
-    def registerResourceData(*args, **kwargs):
-        pass
-    
-    
-    def searchPaths(*args, **kwargs):
-        pass
-    
-    
-    def unregisterResource(*args, **kwargs):
-        pass
-    
-    
-    def unregisterResourceData(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QJsonValue(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def isArray(*args, **kwargs):
-        pass
-    
-    
-    def isBool(*args, **kwargs):
-        pass
-    
-    
-    def isDouble(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def isObject(*args, **kwargs):
-        pass
-    
-    
-    def isString(*args, **kwargs):
-        pass
-    
-    
-    def isUndefined(*args, **kwargs):
-        pass
-    
-    
-    def toArray(*args, **kwargs):
-        pass
-    
-    
-    def toBool(*args, **kwargs):
-        pass
-    
-    
-    def toDouble(*args, **kwargs):
-        pass
-    
-    
-    def toInt(*args, **kwargs):
-        pass
-    
-    
-    def toObject(*args, **kwargs):
-        pass
-    
-    
-    def toString(*args, **kwargs):
-        pass
-    
-    
-    def toVariant(*args, **kwargs):
-        pass
-    
-    
-    def type(*args, **kwargs):
-        pass
-    
-    
-    def fromVariant(*args, **kwargs):
-        pass
-    
-    
-    Array = None
-    
-    
-    Bool = None
-    
-    
-    Double = None
-    
-    
-    Null = None
-    
-    
-    Object = None
-    
-    
-    String = None
-    
-    
-    Type = None
-    
-    
-    Undefined = None
-    
-    
-    __new__ = None
-
-
-class QStandardPaths(_Object):
-    def displayName(*args, **kwargs):
-        pass
-    
-    
-    def enableTestMode(*args, **kwargs):
-        pass
-    
-    
-    def findExecutable(*args, **kwargs):
-        pass
-    
-    
-    def isTestModeEnabled(*args, **kwargs):
-        pass
-    
-    
-    def locate(*args, **kwargs):
-        pass
-    
-    
-    def locateAll(*args, **kwargs):
-        pass
-    
-    
-    def setTestModeEnabled(*args, **kwargs):
-        pass
-    
-    
-    def standardLocations(*args, **kwargs):
-        pass
-    
-    
-    def writableLocation(*args, **kwargs):
-        pass
-    
-    
-    AppConfigLocation = None
-    
-    
-    AppDataLocation = None
-    
-    
-    AppLocalDataLocation = None
-    
-    
-    ApplicationsLocation = None
-    
-    
-    CacheLocation = None
-    
-    
-    ConfigLocation = None
-    
-    
-    DataLocation = None
-    
-    
-    DesktopLocation = None
-    
-    
-    DocumentsLocation = None
-    
-    
-    DownloadLocation = None
-    
-    
-    FontsLocation = None
-    
-    
-    GenericCacheLocation = None
-    
-    
-    GenericConfigLocation = None
-    
-    
-    GenericDataLocation = None
-    
-    
-    HomeLocation = None
-    
-    
-    LocateDirectory = None
-    
-    
-    LocateFile = None
-    
-    
-    LocateOption = None
-    
-    
-    LocateOptions = None
-    
-    
-    MoviesLocation = None
-    
-    
-    MusicLocation = None
-    
-    
-    PicturesLocation = None
-    
-    
-    RuntimeLocation = None
-    
-    
-    StandardLocation = None
-    
-    
-    TempLocation = None
-
-
-class QXmlStreamNotationDeclaration(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def publicId(*args, **kwargs):
-        pass
-    
-    
-    def systemId(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QSize(_Object):
-    def __add__(*args, **kwargs):
-        """
-        x.__add__(y) <==> x+y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __div__(*args, **kwargs):
-        """
-        x.__div__(y) <==> x/y
-        """
-    
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __hash__(*args, **kwargs):
-        """
-        x.__hash__() <==> hash(x)
-        """
-    
-        pass
-    
-    
-    def __iadd__(*args, **kwargs):
-        """
-        x.__iadd__(y) <==> x+=y
-        """
-    
-        pass
-    
-    
-    def __idiv__(*args, **kwargs):
-        """
-        x.__idiv__(y) <==> x/=y
-        """
-    
-        pass
-    
-    
-    def __imul__(*args, **kwargs):
-        """
-        x.__imul__(y) <==> x*=y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __isub__(*args, **kwargs):
-        """
-        x.__isub__(y) <==> x-=y
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __mul__(*args, **kwargs):
-        """
-        x.__mul__(y) <==> x*y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __radd__(*args, **kwargs):
-        """
-        x.__radd__(y) <==> y+x
-        """
-    
-        pass
-    
-    
-    def __rdiv__(*args, **kwargs):
-        """
-        x.__rdiv__(y) <==> y/x
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def __rmul__(*args, **kwargs):
-        """
-        x.__rmul__(y) <==> y*x
-        """
-    
-        pass
-    
-    
-    def __rsub__(*args, **kwargs):
-        """
-        x.__rsub__(y) <==> y-x
-        """
-    
-        pass
-    
-    
-    def __rtruediv__(*args, **kwargs):
-        """
-        x.__rtruediv__(y) <==> y/x
-        """
-    
-        pass
-    
-    
-    def __sub__(*args, **kwargs):
-        """
-        x.__sub__(y) <==> x-y
-        """
-    
-        pass
-    
-    
-    def __truediv__(*args, **kwargs):
-        """
-        x.__truediv__(y) <==> x/y
-        """
-    
-        pass
-    
-    
-    def boundedTo(*args, **kwargs):
-        pass
-    
-    
-    def expandedTo(*args, **kwargs):
-        pass
-    
-    
-    def height(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def scale(*args, **kwargs):
-        pass
-    
-    
-    def scaled(*args, **kwargs):
-        pass
-    
-    
-    def setHeight(*args, **kwargs):
-        pass
-    
-    
-    def setWidth(*args, **kwargs):
-        pass
-    
-    
-    def toTuple(*args, **kwargs):
-        pass
-    
-    
-    def transpose(*args, **kwargs):
-        pass
-    
-    
-    def transposed(*args, **kwargs):
-        pass
-    
-    
-    def width(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QPointF(_Object):
-    def __add__(*args, **kwargs):
-        """
-        x.__add__(y) <==> x+y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __div__(*args, **kwargs):
-        """
-        x.__div__(y) <==> x/y
-        """
-    
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __iadd__(*args, **kwargs):
-        """
-        x.__iadd__(y) <==> x+=y
-        """
-    
-        pass
-    
-    
-    def __idiv__(*args, **kwargs):
-        """
-        x.__idiv__(y) <==> x/=y
-        """
-    
-        pass
-    
-    
-    def __imul__(*args, **kwargs):
-        """
-        x.__imul__(y) <==> x*=y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __isub__(*args, **kwargs):
-        """
-        x.__isub__(y) <==> x-=y
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __mul__(*args, **kwargs):
-        """
-        x.__mul__(y) <==> x*y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __neg__(*args, **kwargs):
-        """
-        x.__neg__() <==> -x
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __pos__(*args, **kwargs):
-        """
-        x.__pos__() <==> +x
-        """
-    
-        pass
-    
-    
-    def __radd__(*args, **kwargs):
-        """
-        x.__radd__(y) <==> y+x
-        """
-    
-        pass
-    
-    
-    def __rdiv__(*args, **kwargs):
-        """
-        x.__rdiv__(y) <==> y/x
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def __rmul__(*args, **kwargs):
-        """
-        x.__rmul__(y) <==> y*x
-        """
-    
-        pass
-    
-    
-    def __rsub__(*args, **kwargs):
-        """
-        x.__rsub__(y) <==> y-x
-        """
-    
-        pass
-    
-    
-    def __rtruediv__(*args, **kwargs):
-        """
-        x.__rtruediv__(y) <==> y/x
-        """
-    
-        pass
-    
-    
-    def __sub__(*args, **kwargs):
-        """
-        x.__sub__(y) <==> x-y
-        """
-    
-        pass
-    
-    
-    def __truediv__(*args, **kwargs):
-        """
-        x.__truediv__(y) <==> x/y
-        """
-    
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def manhattanLength(*args, **kwargs):
-        pass
-    
-    
-    def setX(*args, **kwargs):
-        pass
-    
-    
-    def setY(*args, **kwargs):
-        pass
-    
-    
-    def toPoint(*args, **kwargs):
-        pass
-    
-    
-    def toTuple(*args, **kwargs):
-        pass
-    
-    
-    def x(*args, **kwargs):
-        pass
-    
-    
-    def y(*args, **kwargs):
-        pass
-    
-    
-    def dotProduct(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QMetaClassInfo(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def value(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QTextStreamManipulator(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def exec_(*args, **kwargs):
-        pass
-
-
-class QEvent(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def accept(*args, **kwargs):
-        pass
-    
-    
-    def ignore(*args, **kwargs):
-        pass
-    
-    
-    def isAccepted(*args, **kwargs):
-        pass
-    
-    
-    def setAccepted(*args, **kwargs):
-        pass
-    
-    
-    def spontaneous(*args, **kwargs):
-        pass
-    
-    
-    def type(*args, **kwargs):
-        pass
-    
-    
-    def registerEventType(*args, **kwargs):
-        pass
-    
-    
-    AcceptDropsChange = None
-    
-    
-    ActionAdded = None
-    
-    
-    ActionChanged = None
-    
-    
-    ActionRemoved = None
-    
-    
-    ActivateControl = None
-    
-    
-    ActivationChange = None
-    
-    
-    ApplicationActivate = None
-    
-    
-    ApplicationActivated = None
-    
-    
-    ApplicationDeactivate = None
-    
-    
-    ApplicationDeactivated = None
-    
-    
-    ApplicationFontChange = None
-    
-    
-    ApplicationLayoutDirectionChange = None
-    
-    
-    ApplicationPaletteChange = None
-    
-    
-    ApplicationStateChange = None
-    
-    
-    ApplicationWindowIconChange = None
-    
-    
-    ChildAdded = None
-    
-    
-    ChildPolished = None
-    
-    
-    ChildRemoved = None
-    
-    
-    Clipboard = None
-    
-    
-    Close = None
-    
-    
-    CloseSoftwareInputPanel = None
-    
-    
-    ContentsRectChange = None
-    
-    
-    ContextMenu = None
-    
-    
-    Create = None
-    
-    
-    CursorChange = None
-    
-    
-    DeactivateControl = None
-    
-    
-    DeferredDelete = None
-    
-    
-    Destroy = None
-    
-    
-    DragEnter = None
-    
-    
-    DragLeave = None
-    
-    
-    DragMove = None
-    
-    
-    DragResponse = None
-    
-    
-    Drop = None
-    
-    
-    DynamicPropertyChange = None
-    
-    
-    EmbeddingControl = None
-    
-    
-    EnabledChange = None
-    
-    
-    Enter = None
-    
-    
-    EnterWhatsThisMode = None
-    
-    
-    Expose = None
-    
-    
-    FileOpen = None
-    
-    
-    FocusAboutToChange = None
-    
-    
-    FocusIn = None
-    
-    
-    FocusOut = None
-    
-    
-    FontChange = None
-    
-    
-    FutureCallOut = None
-    
-    
-    Gesture = None
-    
-    
-    GestureOverride = None
-    
-    
-    GrabKeyboard = None
-    
-    
-    GrabMouse = None
-    
-    
-    GraphicsSceneContextMenu = None
-    
-    
-    GraphicsSceneDragEnter = None
-    
-    
-    GraphicsSceneDragLeave = None
-    
-    
-    GraphicsSceneDragMove = None
-    
-    
-    GraphicsSceneDrop = None
-    
-    
-    GraphicsSceneHelp = None
-    
-    
-    GraphicsSceneHoverEnter = None
-    
-    
-    GraphicsSceneHoverLeave = None
-    
-    
-    GraphicsSceneHoverMove = None
-    
-    
-    GraphicsSceneMouseDoubleClick = None
-    
-    
-    GraphicsSceneMouseMove = None
-    
-    
-    GraphicsSceneMousePress = None
-    
-    
-    GraphicsSceneMouseRelease = None
-    
-    
-    GraphicsSceneMove = None
-    
-    
-    GraphicsSceneResize = None
-    
-    
-    GraphicsSceneWheel = None
-    
-    
-    HelpRequest = None
-    
-    
-    Hide = None
-    
-    
-    HideToParent = None
-    
-    
-    HoverEnter = None
-    
-    
-    HoverLeave = None
-    
-    
-    HoverMove = None
-    
-    
-    IconDrag = None
-    
-    
-    IconTextChange = None
-    
-    
-    InputMethod = None
-    
-    
-    InputMethodQuery = None
-    
-    
-    KeyPress = None
-    
-    
-    KeyRelease = None
-    
-    
-    KeyboardLayoutChange = None
-    
-    
-    LanguageChange = None
-    
-    
-    LayoutDirectionChange = None
-    
-    
-    LayoutRequest = None
-    
-    
-    Leave = None
-    
-    
-    LeaveWhatsThisMode = None
-    
-    
-    LocaleChange = None
-    
-    
-    MacGLClearDrawable = None
-    
-    
-    MacGLWindowChange = None
-    
-    
-    MacSizeChange = None
-    
-    
-    MaxUser = None
-    
-    
-    MetaCall = None
-    
-    
-    ModifiedChange = None
-    
-    
-    MouseButtonDblClick = None
-    
-    
-    MouseButtonPress = None
-    
-    
-    MouseButtonRelease = None
-    
-    
-    MouseMove = None
-    
-    
-    MouseTrackingChange = None
-    
-    
-    Move = None
-    
-    
-    NativeGesture = None
-    
-    
-    NetworkReplyUpdated = None
-    
-    
-    NonClientAreaMouseButtonDblClick = None
-    
-    
-    NonClientAreaMouseButtonPress = None
-    
-    
-    NonClientAreaMouseButtonRelease = None
-    
-    
-    NonClientAreaMouseMove = None
-    
-    
-    locals()['None'] = None
-    
-    
-    OkRequest = None
-    
-    
-    OrientationChange = None
-    
-    
-    Paint = None
-    
-    
-    PaletteChange = None
-    
-    
-    ParentAboutToChange = None
-    
-    
-    ParentChange = None
-    
-    
-    PlatformPanel = None
-    
-    
-    PlatformSurface = None
-    
-    
-    Polish = None
-    
-    
-    PolishRequest = None
-    
-    
-    QueryWhatsThis = None
-    
-    
-    Quit = None
-    
-    
-    ReadOnlyChange = None
-    
-    
-    RequestSoftwareInputPanel = None
-    
-    
-    Resize = None
-    
-    
-    ScreenChangeInternal = None
-    
-    
-    Scroll = None
-    
-    
-    ScrollPrepare = None
-    
-    
-    Shortcut = None
-    
-    
-    ShortcutOverride = None
-    
-    
-    Show = None
-    
-    
-    ShowToParent = None
-    
-    
-    ShowWindowRequest = None
-    
-    
-    SockAct = None
-    
-    
-    SockClose = None
-    
-    
-    Speech = None
-    
-    
-    StateMachineSignal = None
-    
-    
-    StateMachineWrapped = None
-    
-    
-    StatusTip = None
-    
-    
-    Style = None
-    
-    
-    StyleAnimationUpdate = None
-    
-    
-    StyleChange = None
-    
-    
-    TabletEnterProximity = None
-    
-    
-    TabletLeaveProximity = None
-    
-    
-    TabletMove = None
-    
-    
-    TabletPress = None
-    
-    
-    TabletRelease = None
-    
-    
-    ThemeChange = None
-    
-    
-    ThreadChange = None
-    
-    
-    Timer = None
-    
-    
-    ToolBarChange = None
-    
-    
-    ToolTip = None
-    
-    
-    ToolTipChange = None
-    
-    
-    TouchBegin = None
-    
-    
-    TouchCancel = None
-    
-    
-    TouchEnd = None
-    
-    
-    TouchUpdate = None
-    
-    
-    Type = None
-    
-    
-    UngrabKeyboard = None
-    
-    
-    UngrabMouse = None
-    
-    
-    UpdateLater = None
-    
-    
-    UpdateRequest = None
-    
-    
-    User = None
-    
-    
-    WhatsThis = None
-    
-    
-    WhatsThisClicked = None
-    
-    
-    Wheel = None
-    
-    
-    WinEventAct = None
-    
-    
-    WinIdChange = None
-    
-    
-    WindowActivate = None
-    
-    
-    WindowBlocked = None
-    
-    
-    WindowChangeInternal = None
-    
-    
-    WindowDeactivate = None
-    
-    
-    WindowIconChange = None
-    
-    
-    WindowStateChange = None
-    
-    
-    WindowTitleChange = None
-    
-    
-    WindowUnblocked = None
-    
-    
-    ZOrderChange = None
-    
-    
-    ZeroTimerEvent = None
-    
-    
-    __new__ = None
-
-
-class QTextBoundaryFinder(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def boundaryReasons(*args, **kwargs):
-        pass
-    
-    
-    def isAtBoundary(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def position(*args, **kwargs):
-        pass
-    
-    
-    def setPosition(*args, **kwargs):
-        pass
-    
-    
-    def string(*args, **kwargs):
-        pass
-    
-    
-    def toEnd(*args, **kwargs):
-        pass
-    
-    
-    def toNextBoundary(*args, **kwargs):
-        pass
-    
-    
-    def toPreviousBoundary(*args, **kwargs):
-        pass
-    
-    
-    def toStart(*args, **kwargs):
-        pass
-    
-    
-    def type(*args, **kwargs):
-        pass
-    
-    
-    BoundaryReason = None
-    
-    
-    BoundaryReasons = None
-    
-    
-    BoundaryType = None
-    
-    
-    BreakOpportunity = None
-    
-    
-    EndOfItem = None
-    
-    
-    Grapheme = None
-    
-    
-    Line = None
-    
-    
-    MandatoryBreak = None
-    
-    
-    NotAtBoundary = None
-    
-    
-    Sentence = None
-    
-    
-    SoftHyphen = None
-    
-    
-    StartOfItem = None
-    
-    
-    Word = None
-    
-    
-    __new__ = None
-
-
-class QCryptographicHash(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def addData(*args, **kwargs):
-        pass
-    
-    
-    def reset(*args, **kwargs):
-        pass
-    
-    
-    def result(*args, **kwargs):
-        pass
-    
-    
-    def hash(*args, **kwargs):
-        pass
-    
-    
-    Algorithm = None
-    
-    
-    Md4 = None
-    
-    
-    Md5 = None
-    
-    
-    Sha1 = None
-    
-    
-    Sha224 = None
-    
-    
-    Sha256 = None
-    
-    
-    Sha384 = None
-    
-    
-    Sha3_224 = None
-    
-    
-    Sha3_256 = None
-    
-    
-    Sha3_384 = None
-    
-    
-    Sha3_512 = None
-    
-    
-    Sha512 = None
-    
-    
-    __new__ = None
-
-
-class QRunnable(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def autoDelete(*args, **kwargs):
-        pass
-    
-    
-    def run(*args, **kwargs):
-        pass
-    
-    
-    def setAutoDelete(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QWriteLocker(_Object):
-    def __enter__(*args, **kwargs):
-        pass
-    
-    
-    def __exit__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def readWriteLock(*args, **kwargs):
-        pass
-    
-    
-    def relock(*args, **kwargs):
-        pass
-    
-    
-    def unlock(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QObject(_Object):
-    def __delattr__(*args, **kwargs):
-        """
-        x.__delattr__('name') <==> del x.name
-        """
-    
-        pass
-    
-    
     def __getattribute__(*args, **kwargs):
         """
         x.__getattribute__('name') <==> x.name
         """
-    
         pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __setattr__(*args, **kwargs):
-        """
-        x.__setattr__('name', value) <==> x.name = value
-        """
-    
-        pass
-    
-    
-    def blockSignals(*args, **kwargs):
-        pass
-    
-    
-    def childEvent(*args, **kwargs):
-        pass
-    
-    
-    def children(*args, **kwargs):
-        pass
-    
-    
-    def connectNotify(*args, **kwargs):
-        pass
-    
-    
-    def customEvent(*args, **kwargs):
-        pass
-    
-    
-    def deleteLater(*args, **kwargs):
-        pass
-    
-    
-    def disconnectNotify(*args, **kwargs):
-        pass
-    
-    
-    def dumpObjectInfo(*args, **kwargs):
-        pass
-    
-    
-    def dumpObjectTree(*args, **kwargs):
-        pass
-    
-    
-    def dynamicPropertyNames(*args, **kwargs):
-        pass
-    
-    
-    def emit(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def eventFilter(*args, **kwargs):
-        pass
-    
-    
-    def findChild(*args, **kwargs):
-        pass
-    
-    
-    def findChildren(*args, **kwargs):
-        pass
-    
-    
-    def inherits(*args, **kwargs):
-        pass
-    
-    
-    def installEventFilter(*args, **kwargs):
-        pass
-    
-    
-    def isSignalConnected(*args, **kwargs):
-        pass
-    
-    
-    def isWidgetType(*args, **kwargs):
-        pass
-    
-    
-    def isWindowType(*args, **kwargs):
-        pass
-    
-    
-    def killTimer(*args, **kwargs):
-        pass
-    
-    
-    def metaObject(*args, **kwargs):
-        pass
-    
-    
-    def moveToThread(*args, **kwargs):
-        pass
-    
-    
-    def objectName(*args, **kwargs):
-        pass
-    
-    
-    def parent(*args, **kwargs):
-        pass
-    
-    
-    def property(*args, **kwargs):
-        pass
-    
-    
-    def receivers(*args, **kwargs):
-        pass
-    
-    
-    def removeEventFilter(*args, **kwargs):
-        pass
-    
-    
-    def sender(*args, **kwargs):
-        pass
-    
-    
-    def senderSignalIndex(*args, **kwargs):
-        pass
-    
-    
-    def setObjectName(*args, **kwargs):
-        pass
-    
-    
-    def setParent(*args, **kwargs):
-        pass
-    
-    
-    def setProperty(*args, **kwargs):
-        pass
-    
-    
-    def signalsBlocked(*args, **kwargs):
-        pass
-    
-    
-    def startTimer(*args, **kwargs):
-        pass
-    
-    
-    def thread(*args, **kwargs):
-        pass
-    
-    
-    def timerEvent(*args, **kwargs):
-        pass
-    
-    
-    def tr(*args, **kwargs):
-        pass
-    
-    
-    def connect(*args, **kwargs):
-        pass
-    
-    
-    def disconnect(*args, **kwargs):
-        pass
-    
-    
-    def registerUserData(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    destroyed = None
-    
-    
-    objectNameChanged = None
-    
-    
-    staticMetaObject = None
-
-
-class QMetaEnum(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def isFlag(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def key(*args, **kwargs):
-        pass
-    
-    
-    def keyCount(*args, **kwargs):
-        pass
-    
-    
-    def keyToValue(*args, **kwargs):
-        pass
-    
-    
-    def keysToValue(*args, **kwargs):
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def scope(*args, **kwargs):
-        pass
-    
-    
-    def value(*args, **kwargs):
-        pass
-    
-    
-    def valueToKey(*args, **kwargs):
-        pass
-    
-    
-    def valueToKeys(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QSizeF(_Object):
-    def __add__(*args, **kwargs):
-        """
-        x.__add__(y) <==> x+y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __div__(*args, **kwargs):
-        """
-        x.__div__(y) <==> x/y
-        """
-    
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
     def __gt__(*args, **kwargs):
         """
         x.__gt__(y) <==> x>y
         """
-    
         pass
-    
-    
-    def __iadd__(*args, **kwargs):
-        """
-        x.__iadd__(y) <==> x+=y
-        """
-    
-        pass
-    
-    
-    def __idiv__(*args, **kwargs):
-        """
-        x.__idiv__(y) <==> x/=y
-        """
-    
-        pass
-    
-    
-    def __imul__(*args, **kwargs):
-        """
-        x.__imul__(y) <==> x*=y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __isub__(*args, **kwargs):
-        """
-        x.__isub__(y) <==> x-=y
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __mul__(*args, **kwargs):
-        """
-        x.__mul__(y) <==> x*y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __radd__(*args, **kwargs):
-        """
-        x.__radd__(y) <==> y+x
-        """
-    
-        pass
-    
-    
-    def __rdiv__(*args, **kwargs):
-        """
-        x.__rdiv__(y) <==> y/x
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def __rmul__(*args, **kwargs):
-        """
-        x.__rmul__(y) <==> y*x
-        """
-    
-        pass
-    
-    
-    def __rsub__(*args, **kwargs):
-        """
-        x.__rsub__(y) <==> y-x
-        """
-    
-        pass
-    
-    
-    def __rtruediv__(*args, **kwargs):
-        """
-        x.__rtruediv__(y) <==> y/x
-        """
-    
-        pass
-    
-    
-    def __sub__(*args, **kwargs):
-        """
-        x.__sub__(y) <==> x-y
-        """
-    
-        pass
-    
-    
-    def __truediv__(*args, **kwargs):
-        """
-        x.__truediv__(y) <==> x/y
-        """
-    
-        pass
-    
-    
-    def boundedTo(*args, **kwargs):
-        pass
-    
-    
-    def expandedTo(*args, **kwargs):
-        pass
-    
-    
-    def height(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def scale(*args, **kwargs):
-        pass
-    
-    
-    def scaled(*args, **kwargs):
-        pass
-    
-    
-    def setHeight(*args, **kwargs):
-        pass
-    
-    
-    def setWidth(*args, **kwargs):
-        pass
-    
-    
-    def toSize(*args, **kwargs):
-        pass
-    
-    
-    def toTuple(*args, **kwargs):
-        pass
-    
-    
-    def transpose(*args, **kwargs):
-        pass
-    
-    
-    def transposed(*args, **kwargs):
-        pass
-    
-    
-    def width(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QSemaphore(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def acquire(*args, **kwargs):
-        pass
-    
-    
-    def available(*args, **kwargs):
-        pass
-    
-    
-    def release(*args, **kwargs):
-        pass
-    
-    
-    def tryAcquire(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QXmlStreamAttribute(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def isDefault(*args, **kwargs):
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def namespaceUri(*args, **kwargs):
-        pass
-    
-    
-    def prefix(*args, **kwargs):
-        pass
-    
-    
-    def qualifiedName(*args, **kwargs):
-        pass
-    
-    
-    def value(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QRect(_Object):
-    def __add__(*args, **kwargs):
-        """
-        x.__add__(y) <==> x+y
-        """
-    
-        pass
-    
-    
-    def __and__(*args, **kwargs):
-        """
-        x.__and__(y) <==> x&y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
     def __hash__(*args, **kwargs):
         """
         x.__hash__() <==> hash(x)
         """
-    
         pass
-    
-    
-    def __iadd__(*args, **kwargs):
-        """
-        x.__iadd__(y) <==> x+=y
-        """
-    
-        pass
-    
-    
-    def __iand__(*args, **kwargs):
-        """
-        x.__iand__(y) <==> x&=y
-        """
-    
-        pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def __ior__(*args, **kwargs):
-        """
-        x.__ior__(y) <==> x|=y
-        """
-    
-        pass
-    
-    
-    def __isub__(*args, **kwargs):
-        """
-        x.__isub__(y) <==> x-=y
-        """
-    
-        pass
-    
-    
     def __le__(*args, **kwargs):
         """
         x.__le__(y) <==> x<=y
         """
-    
         pass
-    
-    
     def __lt__(*args, **kwargs):
         """
         x.__lt__(y) <==> x<y
         """
-    
         pass
-    
-    
     def __ne__(*args, **kwargs):
         """
         x.__ne__(y) <==> x!=y
         """
-    
         pass
-    
-    
     def __nonzero__(*args, **kwargs):
         """
         x.__nonzero__() <==> x != 0
         """
-    
         pass
-    
-    
-    def __or__(*args, **kwargs):
-        """
-        x.__or__(y) <==> x|y
-        """
-    
-        pass
-    
-    
-    def __radd__(*args, **kwargs):
-        """
-        x.__radd__(y) <==> y+x
-        """
-    
-        pass
-    
-    
-    def __rand__(*args, **kwargs):
-        """
-        x.__rand__(y) <==> y&x
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
+    def __reduce__(*args, **kwargs): pass
     def __repr__(*args, **kwargs):
         """
         x.__repr__() <==> repr(x)
         """
-    
         pass
-    
-    
-    def __ror__(*args, **kwargs):
-        """
-        x.__ror__(y) <==> y|x
-        """
-    
-        pass
-    
-    
-    def __rsub__(*args, **kwargs):
-        """
-        x.__rsub__(y) <==> y-x
-        """
-    
-        pass
-    
-    
-    def __sub__(*args, **kwargs):
-        """
-        x.__sub__(y) <==> x-y
-        """
-    
-        pass
-    
-    
-    def adjust(*args, **kwargs):
-        pass
-    
-    
-    def adjusted(*args, **kwargs):
-        pass
-    
-    
-    def bottom(*args, **kwargs):
-        pass
-    
-    
-    def bottomLeft(*args, **kwargs):
-        pass
-    
-    
-    def bottomRight(*args, **kwargs):
-        pass
-    
-    
-    def center(*args, **kwargs):
-        pass
-    
-    
-    def contains(*args, **kwargs):
-        pass
-    
-    
-    def getCoords(*args, **kwargs):
-        pass
-    
-    
-    def getRect(*args, **kwargs):
-        pass
-    
-    
-    def height(*args, **kwargs):
-        pass
-    
-    
-    def intersected(*args, **kwargs):
-        pass
-    
-    
-    def intersects(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def left(*args, **kwargs):
-        pass
-    
-    
-    def marginsAdded(*args, **kwargs):
-        pass
-    
-    
-    def marginsRemoved(*args, **kwargs):
-        pass
-    
-    
-    def moveBottom(*args, **kwargs):
-        pass
-    
-    
-    def moveBottomLeft(*args, **kwargs):
-        pass
-    
-    
-    def moveBottomRight(*args, **kwargs):
-        pass
-    
-    
-    def moveCenter(*args, **kwargs):
-        pass
-    
-    
-    def moveLeft(*args, **kwargs):
-        pass
-    
-    
-    def moveRight(*args, **kwargs):
-        pass
-    
-    
-    def moveTo(*args, **kwargs):
-        pass
-    
-    
-    def moveTop(*args, **kwargs):
-        pass
-    
-    
-    def moveTopLeft(*args, **kwargs):
-        pass
-    
-    
-    def moveTopRight(*args, **kwargs):
-        pass
-    
-    
-    def normalized(*args, **kwargs):
-        pass
-    
-    
-    def right(*args, **kwargs):
-        pass
-    
-    
-    def setBottom(*args, **kwargs):
-        pass
-    
-    
-    def setBottomLeft(*args, **kwargs):
-        pass
-    
-    
-    def setBottomRight(*args, **kwargs):
-        pass
-    
-    
-    def setCoords(*args, **kwargs):
-        pass
-    
-    
-    def setHeight(*args, **kwargs):
-        pass
-    
-    
-    def setLeft(*args, **kwargs):
-        pass
-    
-    
-    def setRect(*args, **kwargs):
-        pass
-    
-    
-    def setRight(*args, **kwargs):
-        pass
-    
-    
-    def setSize(*args, **kwargs):
-        pass
-    
-    
-    def setTop(*args, **kwargs):
-        pass
-    
-    
-    def setTopLeft(*args, **kwargs):
-        pass
-    
-    
-    def setTopRight(*args, **kwargs):
-        pass
-    
-    
-    def setWidth(*args, **kwargs):
-        pass
-    
-    
-    def setX(*args, **kwargs):
-        pass
-    
-    
-    def setY(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def top(*args, **kwargs):
-        pass
-    
-    
-    def topLeft(*args, **kwargs):
-        pass
-    
-    
-    def topRight(*args, **kwargs):
-        pass
-    
-    
-    def translate(*args, **kwargs):
-        pass
-    
-    
-    def translated(*args, **kwargs):
-        pass
-    
-    
-    def united(*args, **kwargs):
-        pass
-    
-    
-    def width(*args, **kwargs):
-        pass
-    
-    
-    def x(*args, **kwargs):
-        pass
-    
-    
-    def y(*args, **kwargs):
-        pass
-    
-    
+    def addMSecs(*args, **kwargs): pass
+    def addSecs(*args, **kwargs): pass
+    def elapsed(*args, **kwargs): pass
+    def hour(*args, **kwargs): pass
+    def isNull(*args, **kwargs): pass
+    def minute(*args, **kwargs): pass
+    def msec(*args, **kwargs): pass
+    def msecsSinceStartOfDay(*args, **kwargs): pass
+    def msecsTo(*args, **kwargs): pass
+    def restart(*args, **kwargs): pass
+    def second(*args, **kwargs): pass
+    def secsTo(*args, **kwargs): pass
+    def setHMS(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def toPython(*args, **kwargs): pass
+    def toString(*args, **kwargs): pass
+    @staticmethod
+    def currentTime(*args, **kwargs): pass
+    @staticmethod
+    def fromMSecsSinceStartOfDay(*args, **kwargs): pass
+    @staticmethod
+    def fromString(*args, **kwargs): pass
+    @staticmethod
+    def isValid(*args, **kwargs): pass
     __new__ = None
 
 
-class QLineF(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
+class QChildEvent(QEvent):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __nonzero__(*args, **kwargs):
-        """
-        x.__nonzero__() <==> x != 0
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def angle(*args, **kwargs):
-        pass
-    
-    
-    def angleTo(*args, **kwargs):
-        pass
-    
-    
-    def dx(*args, **kwargs):
-        pass
-    
-    
-    def dy(*args, **kwargs):
-        pass
-    
-    
-    def intersect(*args, **kwargs):
-        pass
-    
-    
-    def isNull(*args, **kwargs):
-        pass
-    
-    
-    def length(*args, **kwargs):
-        pass
-    
-    
-    def normalVector(*args, **kwargs):
-        pass
-    
-    
-    def p1(*args, **kwargs):
-        pass
-    
-    
-    def p2(*args, **kwargs):
-        pass
-    
-    
-    def pointAt(*args, **kwargs):
-        pass
-    
-    
-    def setAngle(*args, **kwargs):
-        pass
-    
-    
-    def setLength(*args, **kwargs):
-        pass
-    
-    
-    def setLine(*args, **kwargs):
-        pass
-    
-    
-    def setP1(*args, **kwargs):
-        pass
-    
-    
-    def setP2(*args, **kwargs):
-        pass
-    
-    
-    def setPoints(*args, **kwargs):
-        pass
-    
-    
-    def toLine(*args, **kwargs):
-        pass
-    
-    
-    def toTuple(*args, **kwargs):
-        pass
-    
-    
-    def translate(*args, **kwargs):
-        pass
-    
-    
-    def translated(*args, **kwargs):
-        pass
-    
-    
-    def unitVector(*args, **kwargs):
-        pass
-    
-    
-    def x1(*args, **kwargs):
-        pass
-    
-    
-    def x2(*args, **kwargs):
-        pass
-    
-    
-    def y1(*args, **kwargs):
-        pass
-    
-    
-    def y2(*args, **kwargs):
-        pass
-    
-    
-    def fromPolar(*args, **kwargs):
-        pass
-    
-    
-    BoundedIntersection = None
-    
-    
-    IntersectType = None
-    
-    
-    NoIntersection = None
-    
-    
-    UnboundedIntersection = None
-    
-    
+    def added(*args, **kwargs): pass
+    def child(*args, **kwargs): pass
+    def polished(*args, **kwargs): pass
+    def removed(*args, **kwargs): pass
     __new__ = None
-
-
-class QBasicMutex(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def isRecursive(*args, **kwargs):
-        pass
-    
-    
-    def lock(*args, **kwargs):
-        pass
-    
-    
-    def tryLock(*args, **kwargs):
-        pass
-    
-    
-    def unlock(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QGenericArgument(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QDir(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def __repr__(*args, **kwargs):
-        """
-        x.__repr__() <==> repr(x)
-        """
-    
-        pass
-    
-    
-    def absoluteFilePath(*args, **kwargs):
-        pass
-    
-    
-    def absolutePath(*args, **kwargs):
-        pass
-    
-    
-    def canonicalPath(*args, **kwargs):
-        pass
-    
-    
-    def cd(*args, **kwargs):
-        pass
-    
-    
-    def cdUp(*args, **kwargs):
-        pass
-    
-    
-    def count(*args, **kwargs):
-        pass
-    
-    
-    def dirName(*args, **kwargs):
-        pass
-    
-    
-    def entryInfoList(*args, **kwargs):
-        pass
-    
-    
-    def entryList(*args, **kwargs):
-        pass
-    
-    
-    def exists(*args, **kwargs):
-        pass
-    
-    
-    def filePath(*args, **kwargs):
-        pass
-    
-    
-    def filter(*args, **kwargs):
-        pass
-    
-    
-    def isAbsolute(*args, **kwargs):
-        pass
-    
-    
-    def isReadable(*args, **kwargs):
-        pass
-    
-    
-    def isRelative(*args, **kwargs):
-        pass
-    
-    
-    def isRoot(*args, **kwargs):
-        pass
-    
-    
-    def makeAbsolute(*args, **kwargs):
-        pass
-    
-    
-    def mkdir(*args, **kwargs):
-        pass
-    
-    
-    def mkpath(*args, **kwargs):
-        pass
-    
-    
-    def nameFilters(*args, **kwargs):
-        pass
-    
-    
-    def path(*args, **kwargs):
-        pass
-    
-    
-    def refresh(*args, **kwargs):
-        pass
-    
-    
-    def relativeFilePath(*args, **kwargs):
-        pass
-    
-    
-    def remove(*args, **kwargs):
-        pass
-    
-    
-    def removeRecursively(*args, **kwargs):
-        pass
-    
-    
-    def rename(*args, **kwargs):
-        pass
-    
-    
-    def rmdir(*args, **kwargs):
-        pass
-    
-    
-    def rmpath(*args, **kwargs):
-        pass
-    
-    
-    def setFilter(*args, **kwargs):
-        pass
-    
-    
-    def setNameFilters(*args, **kwargs):
-        pass
-    
-    
-    def setPath(*args, **kwargs):
-        pass
-    
-    
-    def setSorting(*args, **kwargs):
-        pass
-    
-    
-    def sorting(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def addResourceSearchPath(*args, **kwargs):
-        pass
-    
-    
-    def addSearchPath(*args, **kwargs):
-        pass
-    
-    
-    def cleanPath(*args, **kwargs):
-        pass
-    
-    
-    def current(*args, **kwargs):
-        pass
-    
-    
-    def currentPath(*args, **kwargs):
-        pass
-    
-    
-    def drives(*args, **kwargs):
-        pass
-    
-    
-    def fromNativeSeparators(*args, **kwargs):
-        pass
-    
-    
-    def home(*args, **kwargs):
-        pass
-    
-    
-    def homePath(*args, **kwargs):
-        pass
-    
-    
-    def isAbsolutePath(*args, **kwargs):
-        pass
-    
-    
-    def isRelativePath(*args, **kwargs):
-        pass
-    
-    
-    def listSeparator(*args, **kwargs):
-        pass
-    
-    
-    def match(*args, **kwargs):
-        pass
-    
-    
-    def nameFiltersFromString(*args, **kwargs):
-        pass
-    
-    
-    def root(*args, **kwargs):
-        pass
-    
-    
-    def rootPath(*args, **kwargs):
-        pass
-    
-    
-    def searchPaths(*args, **kwargs):
-        pass
-    
-    
-    def separator(*args, **kwargs):
-        pass
-    
-    
-    def setCurrent(*args, **kwargs):
-        pass
-    
-    
-    def setSearchPaths(*args, **kwargs):
-        pass
-    
-    
-    def temp(*args, **kwargs):
-        pass
-    
-    
-    def tempPath(*args, **kwargs):
-        pass
-    
-    
-    def toNativeSeparators(*args, **kwargs):
-        pass
-    
-    
-    AccessMask = None
-    
-    
-    AllDirs = None
-    
-    
-    AllEntries = None
-    
-    
-    CaseSensitive = None
-    
-    
-    Dirs = None
-    
-    
-    DirsFirst = None
-    
-    
-    DirsLast = None
-    
-    
-    Drives = None
-    
-    
-    Executable = None
-    
-    
-    Files = None
-    
-    
-    Filter = None
-    
-    
-    Filters = None
-    
-    
-    Hidden = None
-    
-    
-    IgnoreCase = None
-    
-    
-    LocaleAware = None
-    
-    
-    Modified = None
-    
-    
-    Name = None
-    
-    
-    NoDot = None
-    
-    
-    NoDotAndDotDot = None
-    
-    
-    NoDotDot = None
-    
-    
-    NoFilter = None
-    
-    
-    NoSort = None
-    
-    
-    NoSymLinks = None
-    
-    
-    PermissionMask = None
-    
-    
-    Readable = None
-    
-    
-    Reversed = None
-    
-    
-    Size = None
-    
-    
-    SortByMask = None
-    
-    
-    SortFlag = None
-    
-    
-    SortFlags = None
-    
-    
-    System = None
-    
-    
-    Time = None
-    
-    
-    Type = None
-    
-    
-    TypeMask = None
-    
-    
-    Unsorted = None
-    
-    
-    Writable = None
-    
-    
-    __new__ = None
-
-
-class QMimeDatabase(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def allMimeTypes(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypeForData(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypeForFile(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypeForFileNameAndData(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypeForName(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypeForUrl(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypesForFileName(*args, **kwargs):
-        pass
-    
-    
-    def suffixForFileName(*args, **kwargs):
-        pass
-    
-    
-    MatchContent = None
-    
-    
-    MatchDefault = None
-    
-    
-    MatchExtension = None
-    
-    
-    MatchMode = None
-    
-    
-    __new__ = None
-
-
-class QItemSelection(_Object):
-    def __add__(*args, **kwargs):
-        """
-        x.__add__(y) <==> x+y
-        """
-    
-        pass
-    
-    
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __delitem__(*args, **kwargs):
-        """
-        x.__delitem__(y) <==> del x[y]
-        """
-    
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __getitem__(*args, **kwargs):
-        """
-        x.__getitem__(y) <==> x[y]
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __iadd__(*args, **kwargs):
-        """
-        x.__iadd__(y) <==> x+=y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __len__(*args, **kwargs):
-        """
-        x.__len__() <==> len(x)
-        """
-    
-        pass
-    
-    
-    def __lshift__(*args, **kwargs):
-        """
-        x.__lshift__(y) <==> x<<y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __radd__(*args, **kwargs):
-        """
-        x.__radd__(y) <==> y+x
-        """
-    
-        pass
-    
-    
-    def __rlshift__(*args, **kwargs):
-        """
-        x.__rlshift__(y) <==> y<<x
-        """
-    
-        pass
-    
-    
-    def __setitem__(*args, **kwargs):
-        """
-        x.__setitem__(i, y) <==> x[i]=y
-        """
-    
-        pass
-    
-    
-    def append(*args, **kwargs):
-        pass
-    
-    
-    def at(*args, **kwargs):
-        pass
-    
-    
-    def back(*args, **kwargs):
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def constFirst(*args, **kwargs):
-        pass
-    
-    
-    def constLast(*args, **kwargs):
-        pass
-    
-    
-    def contains(*args, **kwargs):
-        pass
-    
-    
-    def count(*args, **kwargs):
-        pass
-    
-    
-    def detachShared(*args, **kwargs):
-        pass
-    
-    
-    def empty(*args, **kwargs):
-        pass
-    
-    
-    def endsWith(*args, **kwargs):
-        pass
-    
-    
-    def first(*args, **kwargs):
-        pass
-    
-    
-    def front(*args, **kwargs):
-        pass
-    
-    
-    def indexOf(*args, **kwargs):
-        pass
-    
-    
-    def indexes(*args, **kwargs):
-        pass
-    
-    
-    def insert(*args, **kwargs):
-        pass
-    
-    
-    def isEmpty(*args, **kwargs):
-        pass
-    
-    
-    def isSharedWith(*args, **kwargs):
-        pass
-    
-    
-    def last(*args, **kwargs):
-        pass
-    
-    
-    def lastIndexOf(*args, **kwargs):
-        pass
-    
-    
-    def length(*args, **kwargs):
-        pass
-    
-    
-    def merge(*args, **kwargs):
-        pass
-    
-    
-    def mid(*args, **kwargs):
-        pass
-    
-    
-    def move(*args, **kwargs):
-        pass
-    
-    
-    def pop_back(*args, **kwargs):
-        pass
-    
-    
-    def pop_front(*args, **kwargs):
-        pass
-    
-    
-    def prepend(*args, **kwargs):
-        pass
-    
-    
-    def push_back(*args, **kwargs):
-        pass
-    
-    
-    def push_front(*args, **kwargs):
-        pass
-    
-    
-    def removeAll(*args, **kwargs):
-        pass
-    
-    
-    def removeAt(*args, **kwargs):
-        pass
-    
-    
-    def removeFirst(*args, **kwargs):
-        pass
-    
-    
-    def removeLast(*args, **kwargs):
-        pass
-    
-    
-    def removeOne(*args, **kwargs):
-        pass
-    
-    
-    def replace(*args, **kwargs):
-        pass
-    
-    
-    def reserve(*args, **kwargs):
-        pass
-    
-    
-    def select(*args, **kwargs):
-        pass
-    
-    
-    def setSharable(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def startsWith(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def takeAt(*args, **kwargs):
-        pass
-    
-    
-    def takeFirst(*args, **kwargs):
-        pass
-    
-    
-    def takeLast(*args, **kwargs):
-        pass
-    
-    
-    def toSet(*args, **kwargs):
-        pass
-    
-    
-    def toVector(*args, **kwargs):
-        pass
-    
-    
-    def value(*args, **kwargs):
-        pass
-    
-    
-    def fromSet(*args, **kwargs):
-        pass
-    
-    
-    def fromVector(*args, **kwargs):
-        pass
-    
-    
-    def split(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QByteArrayMatcher(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def indexIn(*args, **kwargs):
-        pass
-    
-    
-    def pattern(*args, **kwargs):
-        pass
-    
-    
-    def setPattern(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QXmlStreamReader(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def addData(*args, **kwargs):
-        pass
-    
-    
-    def addExtraNamespaceDeclaration(*args, **kwargs):
-        pass
-    
-    
-    def addExtraNamespaceDeclarations(*args, **kwargs):
-        pass
-    
-    
-    def atEnd(*args, **kwargs):
-        pass
-    
-    
-    def attributes(*args, **kwargs):
-        pass
-    
-    
-    def characterOffset(*args, **kwargs):
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def columnNumber(*args, **kwargs):
-        pass
-    
-    
-    def device(*args, **kwargs):
-        pass
-    
-    
-    def documentEncoding(*args, **kwargs):
-        pass
-    
-    
-    def documentVersion(*args, **kwargs):
-        pass
-    
-    
-    def dtdName(*args, **kwargs):
-        pass
-    
-    
-    def dtdPublicId(*args, **kwargs):
-        pass
-    
-    
-    def dtdSystemId(*args, **kwargs):
-        pass
-    
-    
-    def entityDeclarations(*args, **kwargs):
-        pass
-    
-    
-    def entityResolver(*args, **kwargs):
-        pass
-    
-    
-    def error(*args, **kwargs):
-        pass
-    
-    
-    def errorString(*args, **kwargs):
-        pass
-    
-    
-    def hasError(*args, **kwargs):
-        pass
-    
-    
-    def isCDATA(*args, **kwargs):
-        pass
-    
-    
-    def isCharacters(*args, **kwargs):
-        pass
-    
-    
-    def isComment(*args, **kwargs):
-        pass
-    
-    
-    def isDTD(*args, **kwargs):
-        pass
-    
-    
-    def isEndDocument(*args, **kwargs):
-        pass
-    
-    
-    def isEndElement(*args, **kwargs):
-        pass
-    
-    
-    def isEntityReference(*args, **kwargs):
-        pass
-    
-    
-    def isProcessingInstruction(*args, **kwargs):
-        pass
-    
-    
-    def isStandaloneDocument(*args, **kwargs):
-        pass
-    
-    
-    def isStartDocument(*args, **kwargs):
-        pass
-    
-    
-    def isStartElement(*args, **kwargs):
-        pass
-    
-    
-    def isWhitespace(*args, **kwargs):
-        pass
-    
-    
-    def lineNumber(*args, **kwargs):
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def namespaceDeclarations(*args, **kwargs):
-        pass
-    
-    
-    def namespaceProcessing(*args, **kwargs):
-        pass
-    
-    
-    def namespaceUri(*args, **kwargs):
-        pass
-    
-    
-    def notationDeclarations(*args, **kwargs):
-        pass
-    
-    
-    def prefix(*args, **kwargs):
-        pass
-    
-    
-    def processingInstructionData(*args, **kwargs):
-        pass
-    
-    
-    def processingInstructionTarget(*args, **kwargs):
-        pass
-    
-    
-    def qualifiedName(*args, **kwargs):
-        pass
-    
-    
-    def raiseError(*args, **kwargs):
-        pass
-    
-    
-    def readElementText(*args, **kwargs):
-        pass
-    
-    
-    def readNext(*args, **kwargs):
-        pass
-    
-    
-    def readNextStartElement(*args, **kwargs):
-        pass
-    
-    
-    def setDevice(*args, **kwargs):
-        pass
-    
-    
-    def setEntityResolver(*args, **kwargs):
-        pass
-    
-    
-    def setNamespaceProcessing(*args, **kwargs):
-        pass
-    
-    
-    def skipCurrentElement(*args, **kwargs):
-        pass
-    
-    
-    def text(*args, **kwargs):
-        pass
-    
-    
-    def tokenString(*args, **kwargs):
-        pass
-    
-    
-    def tokenType(*args, **kwargs):
-        pass
-    
-    
-    Characters = None
-    
-    
-    Comment = None
-    
-    
-    CustomError = None
-    
-    
-    DTD = None
-    
-    
-    EndDocument = None
-    
-    
-    EndElement = None
-    
-    
-    EntityReference = None
-    
-    
-    Error = None
-    
-    
-    ErrorOnUnexpectedElement = None
-    
-    
-    IncludeChildElements = None
-    
-    
-    Invalid = None
-    
-    
-    NoError = None
-    
-    
-    NoToken = None
-    
-    
-    NotWellFormedError = None
-    
-    
-    PrematureEndOfDocumentError = None
-    
-    
-    ProcessingInstruction = None
-    
-    
-    ReadElementTextBehaviour = None
-    
-    
-    SkipChildElements = None
-    
-    
-    StartDocument = None
-    
-    
-    StartElement = None
-    
-    
-    TokenType = None
-    
-    
-    UnexpectedElementError = None
-    
-    
-    __new__ = None
-
-
-class QFileInfo(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __getattribute__(*args, **kwargs):
-        """
-        x.__getattribute__('name') <==> x.name
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def __reduce__(*args, **kwargs):
-        pass
-    
-    
-    def absoluteDir(*args, **kwargs):
-        pass
-    
-    
-    def absoluteFilePath(*args, **kwargs):
-        pass
-    
-    
-    def absolutePath(*args, **kwargs):
-        pass
-    
-    
-    def baseName(*args, **kwargs):
-        pass
-    
-    
-    def bundleName(*args, **kwargs):
-        pass
-    
-    
-    def caching(*args, **kwargs):
-        pass
-    
-    
-    def canonicalFilePath(*args, **kwargs):
-        pass
-    
-    
-    def canonicalPath(*args, **kwargs):
-        pass
-    
-    
-    def completeBaseName(*args, **kwargs):
-        pass
-    
-    
-    def completeSuffix(*args, **kwargs):
-        pass
-    
-    
-    def created(*args, **kwargs):
-        pass
-    
-    
-    def dir(*args, **kwargs):
-        pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def filePath(*args, **kwargs):
-        pass
-    
-    
-    def group(*args, **kwargs):
-        pass
-    
-    
-    def groupId(*args, **kwargs):
-        pass
-    
-    
-    def isAbsolute(*args, **kwargs):
-        pass
-    
-    
-    def isBundle(*args, **kwargs):
-        pass
-    
-    
-    def isDir(*args, **kwargs):
-        pass
-    
-    
-    def isExecutable(*args, **kwargs):
-        pass
-    
-    
-    def isFile(*args, **kwargs):
-        pass
-    
-    
-    def isHidden(*args, **kwargs):
-        pass
-    
-    
-    def isNativePath(*args, **kwargs):
-        pass
-    
-    
-    def isReadable(*args, **kwargs):
-        pass
-    
-    
-    def isRelative(*args, **kwargs):
-        pass
-    
-    
-    def isRoot(*args, **kwargs):
-        pass
-    
-    
-    def isSymLink(*args, **kwargs):
-        pass
-    
-    
-    def isWritable(*args, **kwargs):
-        pass
-    
-    
-    def lastModified(*args, **kwargs):
-        pass
-    
-    
-    def lastRead(*args, **kwargs):
-        pass
-    
-    
-    def makeAbsolute(*args, **kwargs):
-        pass
-    
-    
-    def owner(*args, **kwargs):
-        pass
-    
-    
-    def ownerId(*args, **kwargs):
-        pass
-    
-    
-    def path(*args, **kwargs):
-        pass
-    
-    
-    def readLink(*args, **kwargs):
-        pass
-    
-    
-    def refresh(*args, **kwargs):
-        pass
-    
-    
-    def setCaching(*args, **kwargs):
-        pass
-    
-    
-    def setFile(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def suffix(*args, **kwargs):
-        pass
-    
-    
-    def swap(*args, **kwargs):
-        pass
-    
-    
-    def symLinkTarget(*args, **kwargs):
-        pass
-    
-    
-    def exists(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QMetaMethod(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __eq__(*args, **kwargs):
-        """
-        x.__eq__(y) <==> x==y
-        """
-    
-        pass
-    
-    
-    def __ge__(*args, **kwargs):
-        """
-        x.__ge__(y) <==> x>=y
-        """
-    
-        pass
-    
-    
-    def __gt__(*args, **kwargs):
-        """
-        x.__gt__(y) <==> x>y
-        """
-    
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def __le__(*args, **kwargs):
-        """
-        x.__le__(y) <==> x<=y
-        """
-    
-        pass
-    
-    
-    def __lt__(*args, **kwargs):
-        """
-        x.__lt__(y) <==> x<y
-        """
-    
-        pass
-    
-    
-    def __ne__(*args, **kwargs):
-        """
-        x.__ne__(y) <==> x!=y
-        """
-    
-        pass
-    
-    
-    def access(*args, **kwargs):
-        pass
-    
-    
-    def enclosingMetaObject(*args, **kwargs):
-        pass
-    
-    
-    def invoke(*args, **kwargs):
-        pass
-    
-    
-    def invokeOnGadget(*args, **kwargs):
-        pass
-    
-    
-    def isValid(*args, **kwargs):
-        pass
-    
-    
-    def methodIndex(*args, **kwargs):
-        pass
-    
-    
-    def methodSignature(*args, **kwargs):
-        pass
-    
-    
-    def methodType(*args, **kwargs):
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def parameterCount(*args, **kwargs):
-        pass
-    
-    
-    def parameterNames(*args, **kwargs):
-        pass
-    
-    
-    def parameterType(*args, **kwargs):
-        pass
-    
-    
-    def parameterTypes(*args, **kwargs):
-        pass
-    
-    
-    def returnType(*args, **kwargs):
-        pass
-    
-    
-    def revision(*args, **kwargs):
-        pass
-    
-    
-    def tag(*args, **kwargs):
-        pass
-    
-    
-    def typeName(*args, **kwargs):
-        pass
-    
-    
-    Access = None
-    
-    
-    Constructor = None
-    
-    
-    Method = None
-    
-    
-    MethodType = None
-    
-    
-    Private = None
-    
-    
-    Protected = None
-    
-    
-    Public = None
-    
-    
-    Signal = None
-    
-    
-    Slot = None
-    
-    
-    __new__ = None
-
-
-class QTextCodec(_Object):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def aliases(*args, **kwargs):
-        pass
-    
-    
-    def canEncode(*args, **kwargs):
-        pass
-    
-    
-    def convertToUnicode(*args, **kwargs):
-        pass
-    
-    
-    def fromUnicode(*args, **kwargs):
-        pass
-    
-    
-    def makeDecoder(*args, **kwargs):
-        pass
-    
-    
-    def makeEncoder(*args, **kwargs):
-        pass
-    
-    
-    def mibEnum(*args, **kwargs):
-        pass
-    
-    
-    def name(*args, **kwargs):
-        pass
-    
-    
-    def toUnicode(*args, **kwargs):
-        pass
-    
-    
-    def availableCodecs(*args, **kwargs):
-        pass
-    
-    
-    def availableMibs(*args, **kwargs):
-        pass
-    
-    
-    def codecForHtml(*args, **kwargs):
-        pass
-    
-    
-    def codecForLocale(*args, **kwargs):
-        pass
-    
-    
-    def codecForMib(*args, **kwargs):
-        pass
-    
-    
-    def codecForName(*args, **kwargs):
-        pass
-    
-    
-    def codecForUtfText(*args, **kwargs):
-        pass
-    
-    
-    def setCodecForLocale(*args, **kwargs):
-        pass
-    
-    
-    ConversionFlag = None
-    
-    
-    ConversionFlags = None
-    
-    
-    ConvertInvalidToNull = None
-    
-    
-    ConverterState = None
-    
-    
-    DefaultConversion = None
-    
-    
-    FreeFunction = None
-    
-    
-    IgnoreHeader = None
-    
-    
-    __new__ = None
-
-
-class QBasicTimer(_Object):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def isActive(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def stop(*args, **kwargs):
-        pass
-    
-    
-    def timerId(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QIODevice(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def atEnd(*args, **kwargs):
-        pass
-    
-    
-    def bytesAvailable(*args, **kwargs):
-        pass
-    
-    
-    def bytesToWrite(*args, **kwargs):
-        pass
-    
-    
-    def canReadLine(*args, **kwargs):
-        pass
-    
-    
-    def close(*args, **kwargs):
-        pass
-    
-    
-    def errorString(*args, **kwargs):
-        pass
-    
-    
-    def getChar(*args, **kwargs):
-        pass
-    
-    
-    def isOpen(*args, **kwargs):
-        pass
-    
-    
-    def isReadable(*args, **kwargs):
-        pass
-    
-    
-    def isSequential(*args, **kwargs):
-        pass
-    
-    
-    def isTextModeEnabled(*args, **kwargs):
-        pass
-    
-    
-    def isWritable(*args, **kwargs):
-        pass
-    
-    
-    def open(*args, **kwargs):
-        pass
-    
-    
-    def openMode(*args, **kwargs):
-        pass
-    
-    
-    def peek(*args, **kwargs):
-        pass
-    
-    
-    def pos(*args, **kwargs):
-        pass
-    
-    
-    def putChar(*args, **kwargs):
-        pass
-    
-    
-    def read(*args, **kwargs):
-        pass
-    
-    
-    def readAll(*args, **kwargs):
-        pass
-    
-    
-    def readData(*args, **kwargs):
-        pass
-    
-    
-    def readLine(*args, **kwargs):
-        pass
-    
-    
-    def readLineData(*args, **kwargs):
-        pass
-    
-    
-    def reset(*args, **kwargs):
-        pass
-    
-    
-    def seek(*args, **kwargs):
-        pass
-    
-    
-    def setErrorString(*args, **kwargs):
-        pass
-    
-    
-    def setOpenMode(*args, **kwargs):
-        pass
-    
-    
-    def setTextModeEnabled(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def ungetChar(*args, **kwargs):
-        pass
-    
-    
-    def waitForBytesWritten(*args, **kwargs):
-        pass
-    
-    
-    def waitForReadyRead(*args, **kwargs):
-        pass
-    
-    
-    def write(*args, **kwargs):
-        pass
-    
-    
-    def writeData(*args, **kwargs):
-        pass
-    
-    
-    Append = None
-    
-    
-    NotOpen = None
-    
-    
-    OpenMode = None
-    
-    
-    OpenModeFlag = None
-    
-    
-    ReadOnly = None
-    
-    
-    ReadWrite = None
-    
-    
-    Text = None
-    
-    
-    Truncate = None
-    
-    
-    Unbuffered = None
-    
-    
-    WriteOnly = None
-    
-    
-    __new__ = None
-    
-    
-    aboutToClose = None
-    
-    
-    bytesWritten = None
-    
-    
-    readChannelFinished = None
-    
-    
-    readyRead = None
-    
-    
-    staticMetaObject = None
-
-
-class QItemSelectionModel(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def clearCurrentIndex(*args, **kwargs):
-        pass
-    
-    
-    def clearSelection(*args, **kwargs):
-        pass
-    
-    
-    def columnIntersectsSelection(*args, **kwargs):
-        pass
-    
-    
-    def currentIndex(*args, **kwargs):
-        pass
-    
-    
-    def emitSelectionChanged(*args, **kwargs):
-        pass
-    
-    
-    def hasSelection(*args, **kwargs):
-        pass
-    
-    
-    def isColumnSelected(*args, **kwargs):
-        pass
-    
-    
-    def isRowSelected(*args, **kwargs):
-        pass
-    
-    
-    def isSelected(*args, **kwargs):
-        pass
-    
-    
-    def model(*args, **kwargs):
-        pass
-    
-    
-    def reset(*args, **kwargs):
-        pass
-    
-    
-    def rowIntersectsSelection(*args, **kwargs):
-        pass
-    
-    
-    def select(*args, **kwargs):
-        pass
-    
-    
-    def selectedColumns(*args, **kwargs):
-        pass
-    
-    
-    def selectedIndexes(*args, **kwargs):
-        pass
-    
-    
-    def selectedRows(*args, **kwargs):
-        pass
-    
-    
-    def selection(*args, **kwargs):
-        pass
-    
-    
-    def setCurrentIndex(*args, **kwargs):
-        pass
-    
-    
-    def setModel(*args, **kwargs):
-        pass
-    
-    
-    Clear = None
-    
-    
-    ClearAndSelect = None
-    
-    
-    Columns = None
-    
-    
-    Current = None
-    
-    
-    Deselect = None
-    
-    
-    NoUpdate = None
-    
-    
-    Rows = None
-    
-    
-    Select = None
-    
-    
-    SelectCurrent = None
-    
-    
-    SelectionFlag = None
-    
-    
-    SelectionFlags = None
-    
-    
-    Toggle = None
-    
-    
-    ToggleCurrent = None
-    
-    
-    __new__ = None
-    
-    
-    currentChanged = None
-    
-    
-    currentColumnChanged = None
-    
-    
-    currentRowChanged = None
-    
-    
-    modelChanged = None
-    
-    
-    selectionChanged = None
-    
-    
-    staticMetaObject = None
-
-
-class QAbstractAnimation(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def currentLoop(*args, **kwargs):
-        pass
-    
-    
-    def currentLoopTime(*args, **kwargs):
-        pass
-    
-    
-    def currentTime(*args, **kwargs):
-        pass
-    
-    
-    def direction(*args, **kwargs):
-        pass
-    
-    
-    def duration(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def group(*args, **kwargs):
-        pass
-    
-    
-    def loopCount(*args, **kwargs):
-        pass
-    
-    
-    def pause(*args, **kwargs):
-        pass
-    
-    
-    def resume(*args, **kwargs):
-        pass
-    
-    
-    def setCurrentTime(*args, **kwargs):
-        pass
-    
-    
-    def setDirection(*args, **kwargs):
-        pass
-    
-    
-    def setLoopCount(*args, **kwargs):
-        pass
-    
-    
-    def setPaused(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def state(*args, **kwargs):
-        pass
-    
-    
-    def stop(*args, **kwargs):
-        pass
-    
-    
-    def totalDuration(*args, **kwargs):
-        pass
-    
-    
-    def updateCurrentTime(*args, **kwargs):
-        pass
-    
-    
-    def updateDirection(*args, **kwargs):
-        pass
-    
-    
-    def updateState(*args, **kwargs):
-        pass
-    
-    
-    Backward = None
-    
-    
-    DeleteWhenStopped = None
-    
-    
-    DeletionPolicy = None
-    
-    
-    Direction = None
-    
-    
-    Forward = None
-    
-    
-    KeepWhenStopped = None
-    
-    
-    Paused = None
-    
-    
-    Running = None
-    
-    
-    State = None
-    
-    
-    Stopped = None
-    
-    
-    __new__ = None
-    
-    
-    currentLoopChanged = None
-    
-    
-    directionChanged = None
-    
-    
-    finished = None
-    
-    
-    stateChanged = None
-    
-    
-    staticMetaObject = None
-
-
-class QDynamicPropertyChangeEvent(QEvent):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def propertyName(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QWinEventNotifier(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def handle(*args, **kwargs):
-        pass
-    
-    
-    def isEnabled(*args, **kwargs):
-        pass
-    
-    
-    def setEnabled(*args, **kwargs):
-        pass
-    
-    
-    def setHandle(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    activated = None
-    
-    
-    staticMetaObject = None
-
-
-class QAbstractState(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def active(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def machine(*args, **kwargs):
-        pass
-    
-    
-    def onEntry(*args, **kwargs):
-        pass
-    
-    
-    def onExit(*args, **kwargs):
-        pass
-    
-    
-    def parentState(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    activeChanged = None
-    
-    
-    entered = None
-    
-    
-    exited = None
-    
-    
-    staticMetaObject = None
-
-
-class QSignalMapper(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def map(*args, **kwargs):
-        pass
-    
-    
-    def mapping(*args, **kwargs):
-        pass
-    
-    
-    def removeMappings(*args, **kwargs):
-        pass
-    
-    
-    def setMapping(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    mapped = None
-    
-    
-    staticMetaObject = None
-
-
-class QPluginLoader(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def errorString(*args, **kwargs):
-        pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def instance(*args, **kwargs):
-        pass
-    
-    
-    def isLoaded(*args, **kwargs):
-        pass
-    
-    
-    def load(*args, **kwargs):
-        pass
-    
-    
-    def metaData(*args, **kwargs):
-        pass
-    
-    
-    def setFileName(*args, **kwargs):
-        pass
-    
-    
-    def unload(*args, **kwargs):
-        pass
-    
-    
-    def staticInstances(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    staticMetaObject = None
-
-
-class QMutex(QBasicMutex):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def lock(*args, **kwargs):
-        pass
-    
-    
-    def tryLock(*args, **kwargs):
-        pass
-    
-    
-    def unlock(*args, **kwargs):
-        pass
-    
-    
-    NonRecursive = None
-    
-    
-    RecursionMode = None
-    
-    
-    Recursive = None
-    
-    
-    __new__ = None
-
-
-class QAbstractEventDispatcher(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def closingDown(*args, **kwargs):
-        pass
-    
-    
-    def flush(*args, **kwargs):
-        pass
-    
-    
-    def hasPendingEvents(*args, **kwargs):
-        pass
-    
-    
-    def interrupt(*args, **kwargs):
-        pass
-    
-    
-    def processEvents(*args, **kwargs):
-        pass
-    
-    
-    def registerEventNotifier(*args, **kwargs):
-        pass
-    
-    
-    def registerSocketNotifier(*args, **kwargs):
-        pass
-    
-    
-    def registerTimer(*args, **kwargs):
-        pass
-    
-    
-    def registeredTimers(*args, **kwargs):
-        pass
-    
-    
-    def remainingTime(*args, **kwargs):
-        pass
-    
-    
-    def startingUp(*args, **kwargs):
-        pass
-    
-    
-    def unregisterEventNotifier(*args, **kwargs):
-        pass
-    
-    
-    def unregisterSocketNotifier(*args, **kwargs):
-        pass
-    
-    
-    def unregisterTimer(*args, **kwargs):
-        pass
-    
-    
-    def unregisterTimers(*args, **kwargs):
-        pass
-    
-    
-    def wakeUp(*args, **kwargs):
-        pass
-    
-    
-    def instance(*args, **kwargs):
-        pass
-    
-    
-    TimerInfo = None
-    
-    
-    __new__ = None
-    
-    
-    aboutToBlock = None
-    
-    
-    awake = None
-    
-    
-    staticMetaObject = None
-
-
-class QFileSystemWatcher(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def addPath(*args, **kwargs):
-        pass
-    
-    
-    def addPaths(*args, **kwargs):
-        pass
-    
-    
-    def directories(*args, **kwargs):
-        pass
-    
-    
-    def files(*args, **kwargs):
-        pass
-    
-    
-    def removePath(*args, **kwargs):
-        pass
-    
-    
-    def removePaths(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    directoryChanged = None
-    
-    
-    fileChanged = None
-    
-    
-    staticMetaObject = None
-
-
-class QFileSelector(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def allSelectors(*args, **kwargs):
-        pass
-    
-    
-    def extraSelectors(*args, **kwargs):
-        pass
-    
-    
-    def select(*args, **kwargs):
-        pass
-    
-    
-    def setExtraSelectors(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    staticMetaObject = None
 
 
 class QTimeLine(QObject):
@@ -18989,130 +12491,37 @@ class QTimeLine(QObject):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def currentFrame(*args, **kwargs):
-        pass
-    
-    
-    def currentTime(*args, **kwargs):
-        pass
-    
-    
-    def currentValue(*args, **kwargs):
-        pass
-    
-    
-    def curveShape(*args, **kwargs):
-        pass
-    
-    
-    def direction(*args, **kwargs):
-        pass
-    
-    
-    def duration(*args, **kwargs):
-        pass
-    
-    
-    def easingCurve(*args, **kwargs):
-        pass
-    
-    
-    def endFrame(*args, **kwargs):
-        pass
-    
-    
-    def frameForTime(*args, **kwargs):
-        pass
-    
-    
-    def loopCount(*args, **kwargs):
-        pass
-    
-    
-    def resume(*args, **kwargs):
-        pass
-    
-    
-    def setCurrentTime(*args, **kwargs):
-        pass
-    
-    
-    def setCurveShape(*args, **kwargs):
-        pass
-    
-    
-    def setDirection(*args, **kwargs):
-        pass
-    
-    
-    def setDuration(*args, **kwargs):
-        pass
-    
-    
-    def setEasingCurve(*args, **kwargs):
-        pass
-    
-    
-    def setEndFrame(*args, **kwargs):
-        pass
-    
-    
-    def setFrameRange(*args, **kwargs):
-        pass
-    
-    
-    def setLoopCount(*args, **kwargs):
-        pass
-    
-    
-    def setPaused(*args, **kwargs):
-        pass
-    
-    
-    def setStartFrame(*args, **kwargs):
-        pass
-    
-    
-    def setUpdateInterval(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def startFrame(*args, **kwargs):
-        pass
-    
-    
-    def state(*args, **kwargs):
-        pass
-    
-    
-    def stop(*args, **kwargs):
-        pass
-    
-    
-    def timerEvent(*args, **kwargs):
-        pass
-    
-    
-    def toggleDirection(*args, **kwargs):
-        pass
-    
-    
-    def updateInterval(*args, **kwargs):
-        pass
-    
-    
-    def valueForTime(*args, **kwargs):
-        pass
-    
-    
+    def currentFrame(*args, **kwargs): pass
+    def currentTime(*args, **kwargs): pass
+    def currentValue(*args, **kwargs): pass
+    def curveShape(*args, **kwargs): pass
+    def direction(*args, **kwargs): pass
+    def duration(*args, **kwargs): pass
+    def easingCurve(*args, **kwargs): pass
+    def endFrame(*args, **kwargs): pass
+    def frameForTime(*args, **kwargs): pass
+    def loopCount(*args, **kwargs): pass
+    def resume(*args, **kwargs): pass
+    def setCurrentTime(*args, **kwargs): pass
+    def setCurveShape(*args, **kwargs): pass
+    def setDirection(*args, **kwargs): pass
+    def setDuration(*args, **kwargs): pass
+    def setEasingCurve(*args, **kwargs): pass
+    def setEndFrame(*args, **kwargs): pass
+    def setFrameRange(*args, **kwargs): pass
+    def setLoopCount(*args, **kwargs): pass
+    def setPaused(*args, **kwargs): pass
+    def setStartFrame(*args, **kwargs): pass
+    def setUpdateInterval(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def startFrame(*args, **kwargs): pass
+    def state(*args, **kwargs): pass
+    def stop(*args, **kwargs): pass
+    def timerEvent(*args, **kwargs): pass
+    def toggleDirection(*args, **kwargs): pass
+    def updateInterval(*args, **kwargs): pass
+    def valueForTime(*args, **kwargs): pass
     Backward = None
     
     
@@ -19173,762 +12582,74 @@ class QTimeLine(QObject):
     valueChanged = None
 
 
-class QGenericReturnArgument(QGenericArgument):
-    def __copy__(*args, **kwargs):
-        pass
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    __new__ = None
-
-
-class QCoreApplication(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def notify(*args, **kwargs):
-        pass
-    
-    
-    def addLibraryPath(*args, **kwargs):
-        pass
-    
-    
-    def applicationDirPath(*args, **kwargs):
-        pass
-    
-    
-    def applicationFilePath(*args, **kwargs):
-        pass
-    
-    
-    def applicationName(*args, **kwargs):
-        pass
-    
-    
-    def applicationPid(*args, **kwargs):
-        pass
-    
-    
-    def applicationVersion(*args, **kwargs):
-        pass
-    
-    
-    def arguments(*args, **kwargs):
-        pass
-    
-    
-    def closingDown(*args, **kwargs):
-        pass
-    
-    
-    def eventDispatcher(*args, **kwargs):
-        pass
-    
-    
-    def exec_(*args, **kwargs):
-        pass
-    
-    
-    def exit(*args, **kwargs):
-        pass
-    
-    
-    def flush(*args, **kwargs):
-        pass
-    
-    
-    def hasPendingEvents(*args, **kwargs):
-        pass
-    
-    
-    def installTranslator(*args, **kwargs):
-        pass
-    
-    
-    def instance(*args, **kwargs):
-        pass
-    
-    
-    def isQuitLockEnabled(*args, **kwargs):
-        pass
-    
-    
-    def isSetuidAllowed(*args, **kwargs):
-        pass
-    
-    
-    def libraryPaths(*args, **kwargs):
-        pass
-    
-    
-    def organizationDomain(*args, **kwargs):
-        pass
-    
-    
-    def organizationName(*args, **kwargs):
-        pass
-    
-    
-    def postEvent(*args, **kwargs):
-        pass
-    
-    
-    def processEvents(*args, **kwargs):
-        pass
-    
-    
-    def quit(*args, **kwargs):
-        pass
-    
-    
-    def removeLibraryPath(*args, **kwargs):
-        pass
-    
-    
-    def removePostedEvents(*args, **kwargs):
-        pass
-    
-    
-    def removeTranslator(*args, **kwargs):
-        pass
-    
-    
-    def sendEvent(*args, **kwargs):
-        pass
-    
-    
-    def sendPostedEvents(*args, **kwargs):
-        pass
-    
-    
-    def setApplicationName(*args, **kwargs):
-        pass
-    
-    
-    def setApplicationVersion(*args, **kwargs):
-        pass
-    
-    
-    def setAttribute(*args, **kwargs):
-        pass
-    
-    
-    def setEventDispatcher(*args, **kwargs):
-        pass
-    
-    
-    def setLibraryPaths(*args, **kwargs):
-        pass
-    
-    
-    def setOrganizationDomain(*args, **kwargs):
-        pass
-    
-    
-    def setOrganizationName(*args, **kwargs):
-        pass
-    
-    
-    def setQuitLockEnabled(*args, **kwargs):
-        pass
-    
-    
-    def setSetuidAllowed(*args, **kwargs):
-        pass
-    
-    
-    def startingUp(*args, **kwargs):
-        pass
-    
-    
-    def testAttribute(*args, **kwargs):
-        pass
-    
-    
-    def translate(*args, **kwargs):
-        pass
-    
-    
-    ApplicationFlags = 329217
-    
-    
-    __new__ = None
-    
-    
-    aboutToQuit = None
-    
-    
-    applicationNameChanged = None
-    
-    
-    applicationVersionChanged = None
-    
-    
-    organizationDomainChanged = None
-    
-    
-    organizationNameChanged = None
-    
-    
-    staticMetaObject = None
-
-
-class QAbstractTransition(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def addAnimation(*args, **kwargs):
-        pass
-    
-    
-    def animations(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def eventTest(*args, **kwargs):
-        pass
-    
-    
-    def machine(*args, **kwargs):
-        pass
-    
-    
-    def onTransition(*args, **kwargs):
-        pass
-    
-    
-    def removeAnimation(*args, **kwargs):
-        pass
-    
-    
-    def setTargetState(*args, **kwargs):
-        pass
-    
-    
-    def setTargetStates(*args, **kwargs):
-        pass
-    
-    
-    def setTransitionType(*args, **kwargs):
-        pass
-    
-    
-    def sourceState(*args, **kwargs):
-        pass
-    
-    
-    def targetState(*args, **kwargs):
-        pass
-    
-    
-    def targetStates(*args, **kwargs):
-        pass
-    
-    
-    def transitionType(*args, **kwargs):
-        pass
-    
-    
-    ExternalTransition = None
-    
-    
-    InternalTransition = None
-    
-    
-    TransitionType = None
-    
-    
-    __new__ = None
-    
-    
-    staticMetaObject = None
-    
-    
-    targetStateChanged = None
-    
-    
-    targetStatesChanged = None
-    
-    
-    triggered = None
-
-
-class QTimer(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def interval(*args, **kwargs):
-        pass
-    
-    
-    def isActive(*args, **kwargs):
-        pass
-    
-    
-    def isSingleShot(*args, **kwargs):
-        pass
-    
-    
-    def killTimer(*args, **kwargs):
-        pass
-    
-    
-    def remainingTime(*args, **kwargs):
-        pass
-    
-    
-    def setInterval(*args, **kwargs):
-        pass
-    
-    
-    def setSingleShot(*args, **kwargs):
-        pass
-    
-    
-    def setTimerType(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def stop(*args, **kwargs):
-        pass
-    
-    
-    def timerEvent(*args, **kwargs):
-        pass
-    
-    
-    def timerId(*args, **kwargs):
-        pass
-    
-    
-    def timerType(*args, **kwargs):
-        pass
-    
-    
-    def singleShot(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    staticMetaObject = None
-    
-    
-    timeout = None
-
-
-class QTimerEvent(QEvent):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def timerId(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-
-
-class QMimeData(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def colorData(*args, **kwargs):
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def formats(*args, **kwargs):
-        pass
-    
-    
-    def hasColor(*args, **kwargs):
-        pass
-    
-    
-    def hasFormat(*args, **kwargs):
-        pass
-    
-    
-    def hasHtml(*args, **kwargs):
-        pass
-    
-    
-    def hasImage(*args, **kwargs):
-        pass
-    
-    
-    def hasText(*args, **kwargs):
-        pass
-    
-    
-    def hasUrls(*args, **kwargs):
-        pass
-    
-    
-    def html(*args, **kwargs):
-        pass
-    
-    
-    def imageData(*args, **kwargs):
-        pass
-    
-    
-    def removeFormat(*args, **kwargs):
-        pass
-    
-    
-    def retrieveData(*args, **kwargs):
-        pass
-    
-    
-    def setColorData(*args, **kwargs):
-        pass
-    
-    
-    def setData(*args, **kwargs):
-        pass
-    
-    
-    def setHtml(*args, **kwargs):
-        pass
-    
-    
-    def setImageData(*args, **kwargs):
-        pass
-    
-    
-    def setText(*args, **kwargs):
-        pass
-    
-    
-    def setUrls(*args, **kwargs):
-        pass
-    
-    
-    def text(*args, **kwargs):
-        pass
-    
-    
-    def urls(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    staticMetaObject = None
-
-
 class QAbstractItemModel(QObject):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def beginInsertColumns(*args, **kwargs):
-        pass
-    
-    
-    def beginInsertRows(*args, **kwargs):
-        pass
-    
-    
-    def beginMoveColumns(*args, **kwargs):
-        pass
-    
-    
-    def beginMoveRows(*args, **kwargs):
-        pass
-    
-    
-    def beginRemoveColumns(*args, **kwargs):
-        pass
-    
-    
-    def beginRemoveRows(*args, **kwargs):
-        pass
-    
-    
-    def beginResetModel(*args, **kwargs):
-        pass
-    
-    
-    def buddy(*args, **kwargs):
-        pass
-    
-    
-    def canDropMimeData(*args, **kwargs):
-        pass
-    
-    
-    def canFetchMore(*args, **kwargs):
-        pass
-    
-    
-    def changePersistentIndex(*args, **kwargs):
-        pass
-    
-    
-    def changePersistentIndexList(*args, **kwargs):
-        pass
-    
-    
-    def columnCount(*args, **kwargs):
-        pass
-    
-    
-    def createIndex(*args, **kwargs):
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def decodeData(*args, **kwargs):
-        pass
-    
-    
-    def dropMimeData(*args, **kwargs):
-        pass
-    
-    
-    def encodeData(*args, **kwargs):
-        pass
-    
-    
-    def endInsertColumns(*args, **kwargs):
-        pass
-    
-    
-    def endInsertRows(*args, **kwargs):
-        pass
-    
-    
-    def endMoveColumns(*args, **kwargs):
-        pass
-    
-    
-    def endMoveRows(*args, **kwargs):
-        pass
-    
-    
-    def endRemoveColumns(*args, **kwargs):
-        pass
-    
-    
-    def endRemoveRows(*args, **kwargs):
-        pass
-    
-    
-    def endResetModel(*args, **kwargs):
-        pass
-    
-    
-    def fetchMore(*args, **kwargs):
-        pass
-    
-    
-    def flags(*args, **kwargs):
-        pass
-    
-    
-    def hasChildren(*args, **kwargs):
-        pass
-    
-    
-    def hasIndex(*args, **kwargs):
-        pass
-    
-    
-    def headerData(*args, **kwargs):
-        pass
-    
-    
-    def index(*args, **kwargs):
-        pass
-    
-    
-    def insertColumn(*args, **kwargs):
-        pass
-    
-    
-    def insertColumns(*args, **kwargs):
-        pass
-    
-    
-    def insertRow(*args, **kwargs):
-        pass
-    
-    
-    def insertRows(*args, **kwargs):
-        pass
-    
-    
-    def itemData(*args, **kwargs):
-        pass
-    
-    
-    def match(*args, **kwargs):
-        pass
-    
-    
-    def mimeData(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypes(*args, **kwargs):
-        pass
-    
-    
-    def moveColumn(*args, **kwargs):
-        pass
-    
-    
-    def moveColumns(*args, **kwargs):
-        pass
-    
-    
-    def moveRow(*args, **kwargs):
-        pass
-    
-    
-    def moveRows(*args, **kwargs):
-        pass
-    
-    
-    def parent(*args, **kwargs):
-        pass
-    
-    
-    def persistentIndexList(*args, **kwargs):
-        pass
-    
-    
-    def removeColumn(*args, **kwargs):
-        pass
-    
-    
-    def removeColumns(*args, **kwargs):
-        pass
-    
-    
-    def removeRow(*args, **kwargs):
-        pass
-    
-    
-    def removeRows(*args, **kwargs):
-        pass
-    
-    
-    def resetInternalData(*args, **kwargs):
-        pass
-    
-    
-    def revert(*args, **kwargs):
-        pass
-    
-    
-    def roleNames(*args, **kwargs):
-        pass
-    
-    
-    def rowCount(*args, **kwargs):
-        pass
-    
-    
-    def setData(*args, **kwargs):
-        pass
-    
-    
-    def setHeaderData(*args, **kwargs):
-        pass
-    
-    
-    def setItemData(*args, **kwargs):
-        pass
-    
-    
-    def sibling(*args, **kwargs):
-        pass
-    
-    
-    def sort(*args, **kwargs):
-        pass
-    
-    
-    def span(*args, **kwargs):
-        pass
-    
-    
-    def submit(*args, **kwargs):
-        pass
-    
-    
-    def supportedDragActions(*args, **kwargs):
-        pass
-    
-    
-    def supportedDropActions(*args, **kwargs):
-        pass
-    
-    
+    def beginInsertColumns(*args, **kwargs): pass
+    def beginInsertRows(*args, **kwargs): pass
+    def beginMoveColumns(*args, **kwargs): pass
+    def beginMoveRows(*args, **kwargs): pass
+    def beginRemoveColumns(*args, **kwargs): pass
+    def beginRemoveRows(*args, **kwargs): pass
+    def beginResetModel(*args, **kwargs): pass
+    def buddy(*args, **kwargs): pass
+    def canDropMimeData(*args, **kwargs): pass
+    def canFetchMore(*args, **kwargs): pass
+    def changePersistentIndex(*args, **kwargs): pass
+    def changePersistentIndexList(*args, **kwargs): pass
+    def columnCount(*args, **kwargs): pass
+    def createIndex(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def decodeData(*args, **kwargs): pass
+    def dropMimeData(*args, **kwargs): pass
+    def encodeData(*args, **kwargs): pass
+    def endInsertColumns(*args, **kwargs): pass
+    def endInsertRows(*args, **kwargs): pass
+    def endMoveColumns(*args, **kwargs): pass
+    def endMoveRows(*args, **kwargs): pass
+    def endRemoveColumns(*args, **kwargs): pass
+    def endRemoveRows(*args, **kwargs): pass
+    def endResetModel(*args, **kwargs): pass
+    def fetchMore(*args, **kwargs): pass
+    def flags(*args, **kwargs): pass
+    def hasChildren(*args, **kwargs): pass
+    def hasIndex(*args, **kwargs): pass
+    def headerData(*args, **kwargs): pass
+    def index(*args, **kwargs): pass
+    def insertColumn(*args, **kwargs): pass
+    def insertColumns(*args, **kwargs): pass
+    def insertRow(*args, **kwargs): pass
+    def insertRows(*args, **kwargs): pass
+    def itemData(*args, **kwargs): pass
+    def match(*args, **kwargs): pass
+    def mimeData(*args, **kwargs): pass
+    def mimeTypes(*args, **kwargs): pass
+    def moveColumn(*args, **kwargs): pass
+    def moveColumns(*args, **kwargs): pass
+    def moveRow(*args, **kwargs): pass
+    def moveRows(*args, **kwargs): pass
+    def parent(*args, **kwargs): pass
+    def persistentIndexList(*args, **kwargs): pass
+    def removeColumn(*args, **kwargs): pass
+    def removeColumns(*args, **kwargs): pass
+    def removeRow(*args, **kwargs): pass
+    def removeRows(*args, **kwargs): pass
+    def resetInternalData(*args, **kwargs): pass
+    def revert(*args, **kwargs): pass
+    def roleNames(*args, **kwargs): pass
+    def rowCount(*args, **kwargs): pass
+    def setData(*args, **kwargs): pass
+    def setHeaderData(*args, **kwargs): pass
+    def setItemData(*args, **kwargs): pass
+    def sibling(*args, **kwargs): pass
+    def sort(*args, **kwargs): pass
+    def span(*args, **kwargs): pass
+    def submit(*args, **kwargs): pass
+    def supportedDragActions(*args, **kwargs): pass
+    def supportedDropActions(*args, **kwargs): pass
     HorizontalSortHint = None
     
     
@@ -20001,43 +12722,215 @@ class QAbstractItemModel(QObject):
     staticMetaObject = None
 
 
+class QSignalMapper(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def map(*args, **kwargs): pass
+    def mapping(*args, **kwargs): pass
+    def removeMappings(*args, **kwargs): pass
+    def setMapping(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    mapped = None
+    
+    
+    staticMetaObject = None
+
+
+class QFileSelector(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def allSelectors(*args, **kwargs): pass
+    def extraSelectors(*args, **kwargs): pass
+    def select(*args, **kwargs): pass
+    def setExtraSelectors(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    staticMetaObject = None
+
+
+class QMutex(QBasicMutex):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def lock(*args, **kwargs): pass
+    def tryLock(*args, **kwargs): pass
+    def unlock(*args, **kwargs): pass
+    NonRecursive = None
+    
+    
+    RecursionMode = None
+    
+    
+    Recursive = None
+    
+    
+    __new__ = None
+
+
+class QAbstractTransition(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def addAnimation(*args, **kwargs): pass
+    def animations(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def eventTest(*args, **kwargs): pass
+    def machine(*args, **kwargs): pass
+    def onTransition(*args, **kwargs): pass
+    def removeAnimation(*args, **kwargs): pass
+    def setTargetState(*args, **kwargs): pass
+    def setTargetStates(*args, **kwargs): pass
+    def setTransitionType(*args, **kwargs): pass
+    def sourceState(*args, **kwargs): pass
+    def targetState(*args, **kwargs): pass
+    def targetStates(*args, **kwargs): pass
+    def transitionType(*args, **kwargs): pass
+    ExternalTransition = None
+    
+    
+    InternalTransition = None
+    
+    
+    TransitionType = None
+    
+    
+    __new__ = None
+    
+    
+    staticMetaObject = None
+    
+    
+    targetStateChanged = None
+    
+    
+    targetStatesChanged = None
+    
+    
+    triggered = None
+
+
+class QItemSelectionModel(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def clear(*args, **kwargs): pass
+    def clearCurrentIndex(*args, **kwargs): pass
+    def clearSelection(*args, **kwargs): pass
+    def columnIntersectsSelection(*args, **kwargs): pass
+    def currentIndex(*args, **kwargs): pass
+    def emitSelectionChanged(*args, **kwargs): pass
+    def hasSelection(*args, **kwargs): pass
+    def isColumnSelected(*args, **kwargs): pass
+    def isRowSelected(*args, **kwargs): pass
+    def isSelected(*args, **kwargs): pass
+    def model(*args, **kwargs): pass
+    def reset(*args, **kwargs): pass
+    def rowIntersectsSelection(*args, **kwargs): pass
+    def select(*args, **kwargs): pass
+    def selectedColumns(*args, **kwargs): pass
+    def selectedIndexes(*args, **kwargs): pass
+    def selectedRows(*args, **kwargs): pass
+    def selection(*args, **kwargs): pass
+    def setCurrentIndex(*args, **kwargs): pass
+    def setModel(*args, **kwargs): pass
+    Clear = None
+    
+    
+    ClearAndSelect = None
+    
+    
+    Columns = None
+    
+    
+    Current = None
+    
+    
+    Deselect = None
+    
+    
+    NoUpdate = None
+    
+    
+    Rows = None
+    
+    
+    Select = None
+    
+    
+    SelectCurrent = None
+    
+    
+    SelectionFlag = None
+    
+    
+    SelectionFlags = None
+    
+    
+    Toggle = None
+    
+    
+    ToggleCurrent = None
+    
+    
+    __new__ = None
+    
+    
+    currentChanged = None
+    
+    
+    currentColumnChanged = None
+    
+    
+    currentRowChanged = None
+    
+    
+    modelChanged = None
+    
+    
+    selectionChanged = None
+    
+    
+    staticMetaObject = None
+
+
+class QGenericReturnArgument(QGenericArgument):
+    def __copy__(*args, **kwargs): pass
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    __new__ = None
+
+
 class QEventLoop(QObject):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def exec_(*args, **kwargs):
-        pass
-    
-    
-    def exit(*args, **kwargs):
-        pass
-    
-    
-    def isRunning(*args, **kwargs):
-        pass
-    
-    
-    def processEvents(*args, **kwargs):
-        pass
-    
-    
-    def quit(*args, **kwargs):
-        pass
-    
-    
-    def wakeUp(*args, **kwargs):
-        pass
-    
-    
+    def event(*args, **kwargs): pass
+    def exec_(*args, **kwargs): pass
+    def exit(*args, **kwargs): pass
+    def isRunning(*args, **kwargs): pass
+    def processEvents(*args, **kwargs): pass
+    def quit(*args, **kwargs): pass
+    def wakeUp(*args, **kwargs): pass
     AllEvents = None
     
     
@@ -20071,27 +12964,139 @@ class QEventLoop(QObject):
     staticMetaObject = None
 
 
-class QTranslator(QObject):
+class QTimer(QObject):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
+    def interval(*args, **kwargs): pass
+    def isActive(*args, **kwargs): pass
+    def isSingleShot(*args, **kwargs): pass
+    def killTimer(*args, **kwargs): pass
+    def remainingTime(*args, **kwargs): pass
+    def setInterval(*args, **kwargs): pass
+    def setSingleShot(*args, **kwargs): pass
+    def setTimerType(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def stop(*args, **kwargs): pass
+    def timerEvent(*args, **kwargs): pass
+    def timerId(*args, **kwargs): pass
+    def timerType(*args, **kwargs): pass
+    @staticmethod
+    def singleShot(*args, **kwargs): pass
+    __new__ = None
     
     
-    def isEmpty(*args, **kwargs):
+    staticMetaObject = None
+    
+    
+    timeout = None
+
+
+class QIODevice(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
         pass
+    def atEnd(*args, **kwargs): pass
+    def bytesAvailable(*args, **kwargs): pass
+    def bytesToWrite(*args, **kwargs): pass
+    def canReadLine(*args, **kwargs): pass
+    def close(*args, **kwargs): pass
+    def errorString(*args, **kwargs): pass
+    def getChar(*args, **kwargs): pass
+    def isOpen(*args, **kwargs): pass
+    def isReadable(*args, **kwargs): pass
+    def isSequential(*args, **kwargs): pass
+    def isTextModeEnabled(*args, **kwargs): pass
+    def isWritable(*args, **kwargs): pass
+    def open(*args, **kwargs): pass
+    def openMode(*args, **kwargs): pass
+    def peek(*args, **kwargs): pass
+    def pos(*args, **kwargs): pass
+    def putChar(*args, **kwargs): pass
+    def read(*args, **kwargs): pass
+    def readAll(*args, **kwargs): pass
+    def readData(*args, **kwargs): pass
+    def readLine(*args, **kwargs): pass
+    def readLineData(*args, **kwargs): pass
+    def reset(*args, **kwargs): pass
+    def seek(*args, **kwargs): pass
+    def setErrorString(*args, **kwargs): pass
+    def setOpenMode(*args, **kwargs): pass
+    def setTextModeEnabled(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def ungetChar(*args, **kwargs): pass
+    def waitForBytesWritten(*args, **kwargs): pass
+    def waitForReadyRead(*args, **kwargs): pass
+    def write(*args, **kwargs): pass
+    def writeData(*args, **kwargs): pass
+    Append = None
     
     
-    def load(*args, **kwargs):
+    NotOpen = None
+    
+    
+    OpenMode = None
+    
+    
+    OpenModeFlag = None
+    
+    
+    ReadOnly = None
+    
+    
+    ReadWrite = None
+    
+    
+    Text = None
+    
+    
+    Truncate = None
+    
+    
+    Unbuffered = None
+    
+    
+    WriteOnly = None
+    
+    
+    __new__ = None
+    
+    
+    aboutToClose = None
+    
+    
+    bytesWritten = None
+    
+    
+    readChannelFinished = None
+    
+    
+    readyRead = None
+    
+    
+    staticMetaObject = None
+
+
+class QPluginLoader(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
         pass
-    
-    
-    def translate(*args, **kwargs):
-        pass
-    
-    
+    def errorString(*args, **kwargs): pass
+    def fileName(*args, **kwargs): pass
+    def instance(*args, **kwargs): pass
+    def isLoaded(*args, **kwargs): pass
+    def load(*args, **kwargs): pass
+    def metaData(*args, **kwargs): pass
+    def setFileName(*args, **kwargs): pass
+    def unload(*args, **kwargs): pass
+    @staticmethod
+    def staticInstances(*args, **kwargs): pass
     __new__ = None
     
     
@@ -20103,118 +13108,42 @@ class QThread(QObject):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def eventDispatcher(*args, **kwargs):
-        pass
-    
-    
-    def exec_(*args, **kwargs):
-        pass
-    
-    
-    def exit(*args, **kwargs):
-        pass
-    
-    
-    def isFinished(*args, **kwargs):
-        pass
-    
-    
-    def isInterruptionRequested(*args, **kwargs):
-        pass
-    
-    
-    def isRunning(*args, **kwargs):
-        pass
-    
-    
-    def loopLevel(*args, **kwargs):
-        pass
-    
-    
-    def priority(*args, **kwargs):
-        pass
-    
-    
-    def quit(*args, **kwargs):
-        pass
-    
-    
-    def requestInterruption(*args, **kwargs):
-        pass
-    
-    
-    def run(*args, **kwargs):
-        pass
-    
-    
-    def setEventDispatcher(*args, **kwargs):
-        pass
-    
-    
-    def setPriority(*args, **kwargs):
-        pass
-    
-    
-    def setStackSize(*args, **kwargs):
-        pass
-    
-    
-    def stackSize(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def terminate(*args, **kwargs):
-        pass
-    
-    
-    def wait(*args, **kwargs):
-        pass
-    
-    
-    def currentThread(*args, **kwargs):
-        pass
-    
-    
-    def currentThreadId(*args, **kwargs):
-        pass
-    
-    
-    def idealThreadCount(*args, **kwargs):
-        pass
-    
-    
-    def msleep(*args, **kwargs):
-        pass
-    
-    
-    def setTerminationEnabled(*args, **kwargs):
-        pass
-    
-    
-    def sleep(*args, **kwargs):
-        pass
-    
-    
-    def usleep(*args, **kwargs):
-        pass
-    
-    
-    def yieldCurrentThread(*args, **kwargs):
-        pass
-    
-    
+    def event(*args, **kwargs): pass
+    def eventDispatcher(*args, **kwargs): pass
+    def exec_(*args, **kwargs): pass
+    def exit(*args, **kwargs): pass
+    def isFinished(*args, **kwargs): pass
+    def isInterruptionRequested(*args, **kwargs): pass
+    def isRunning(*args, **kwargs): pass
+    def loopLevel(*args, **kwargs): pass
+    def priority(*args, **kwargs): pass
+    def quit(*args, **kwargs): pass
+    def requestInterruption(*args, **kwargs): pass
+    def run(*args, **kwargs): pass
+    def setEventDispatcher(*args, **kwargs): pass
+    def setPriority(*args, **kwargs): pass
+    def setStackSize(*args, **kwargs): pass
+    def stackSize(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def terminate(*args, **kwargs): pass
+    def wait(*args, **kwargs): pass
+    @staticmethod
+    def currentThread(*args, **kwargs): pass
+    @staticmethod
+    def currentThreadId(*args, **kwargs): pass
+    @staticmethod
+    def idealThreadCount(*args, **kwargs): pass
+    @staticmethod
+    def msleep(*args, **kwargs): pass
+    @staticmethod
+    def setTerminationEnabled(*args, **kwargs): pass
+    @staticmethod
+    def sleep(*args, **kwargs): pass
+    @staticmethod
+    def usleep(*args, **kwargs): pass
+    @staticmethod
+    def yieldCurrentThread(*args, **kwargs): pass
     HighPriority = None
     
     
@@ -20254,139 +13183,380 @@ class QThread(QObject):
     staticMetaObject = None
 
 
+class QMimeData(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def clear(*args, **kwargs): pass
+    def colorData(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def formats(*args, **kwargs): pass
+    def hasColor(*args, **kwargs): pass
+    def hasFormat(*args, **kwargs): pass
+    def hasHtml(*args, **kwargs): pass
+    def hasImage(*args, **kwargs): pass
+    def hasText(*args, **kwargs): pass
+    def hasUrls(*args, **kwargs): pass
+    def html(*args, **kwargs): pass
+    def imageData(*args, **kwargs): pass
+    def removeFormat(*args, **kwargs): pass
+    def retrieveData(*args, **kwargs): pass
+    def setColorData(*args, **kwargs): pass
+    def setData(*args, **kwargs): pass
+    def setHtml(*args, **kwargs): pass
+    def setImageData(*args, **kwargs): pass
+    def setText(*args, **kwargs): pass
+    def setUrls(*args, **kwargs): pass
+    def text(*args, **kwargs): pass
+    def urls(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    staticMetaObject = None
+
+
+class QAbstractAnimation(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def currentLoop(*args, **kwargs): pass
+    def currentLoopTime(*args, **kwargs): pass
+    def currentTime(*args, **kwargs): pass
+    def direction(*args, **kwargs): pass
+    def duration(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def group(*args, **kwargs): pass
+    def loopCount(*args, **kwargs): pass
+    def pause(*args, **kwargs): pass
+    def resume(*args, **kwargs): pass
+    def setCurrentTime(*args, **kwargs): pass
+    def setDirection(*args, **kwargs): pass
+    def setLoopCount(*args, **kwargs): pass
+    def setPaused(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def state(*args, **kwargs): pass
+    def stop(*args, **kwargs): pass
+    def totalDuration(*args, **kwargs): pass
+    def updateCurrentTime(*args, **kwargs): pass
+    def updateDirection(*args, **kwargs): pass
+    def updateState(*args, **kwargs): pass
+    Backward = None
+    
+    
+    DeleteWhenStopped = None
+    
+    
+    DeletionPolicy = None
+    
+    
+    Direction = None
+    
+    
+    Forward = None
+    
+    
+    KeepWhenStopped = None
+    
+    
+    Paused = None
+    
+    
+    Running = None
+    
+    
+    State = None
+    
+    
+    Stopped = None
+    
+    
+    __new__ = None
+    
+    
+    currentLoopChanged = None
+    
+    
+    directionChanged = None
+    
+    
+    finished = None
+    
+    
+    stateChanged = None
+    
+    
+    staticMetaObject = None
+
+
+class QTimerEvent(QEvent):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def timerId(*args, **kwargs): pass
+    __new__ = None
+
+
+class QDynamicPropertyChangeEvent(QEvent):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def propertyName(*args, **kwargs): pass
+    __new__ = None
+
+
+class QCoreApplication(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def event(*args, **kwargs): pass
+    def notify(*args, **kwargs): pass
+    @staticmethod
+    def addLibraryPath(*args, **kwargs): pass
+    @staticmethod
+    def applicationDirPath(*args, **kwargs): pass
+    @staticmethod
+    def applicationFilePath(*args, **kwargs): pass
+    @staticmethod
+    def applicationName(*args, **kwargs): pass
+    @staticmethod
+    def applicationPid(*args, **kwargs): pass
+    @staticmethod
+    def applicationVersion(*args, **kwargs): pass
+    @staticmethod
+    def arguments(*args, **kwargs): pass
+    @staticmethod
+    def closingDown(*args, **kwargs): pass
+    @staticmethod
+    def eventDispatcher(*args, **kwargs): pass
+    @staticmethod
+    def exec_(*args, **kwargs): pass
+    @staticmethod
+    def exit(*args, **kwargs): pass
+    @staticmethod
+    def flush(*args, **kwargs): pass
+    @staticmethod
+    def hasPendingEvents(*args, **kwargs): pass
+    @staticmethod
+    def installTranslator(*args, **kwargs): pass
+    @staticmethod
+    def instance(*args, **kwargs): pass
+    @staticmethod
+    def isQuitLockEnabled(*args, **kwargs): pass
+    @staticmethod
+    def isSetuidAllowed(*args, **kwargs): pass
+    @staticmethod
+    def libraryPaths(*args, **kwargs): pass
+    @staticmethod
+    def organizationDomain(*args, **kwargs): pass
+    @staticmethod
+    def organizationName(*args, **kwargs): pass
+    @staticmethod
+    def postEvent(*args, **kwargs): pass
+    @staticmethod
+    def processEvents(*args, **kwargs): pass
+    @staticmethod
+    def quit(*args, **kwargs): pass
+    @staticmethod
+    def removeLibraryPath(*args, **kwargs): pass
+    @staticmethod
+    def removePostedEvents(*args, **kwargs): pass
+    @staticmethod
+    def removeTranslator(*args, **kwargs): pass
+    @staticmethod
+    def sendEvent(*args, **kwargs): pass
+    @staticmethod
+    def sendPostedEvents(*args, **kwargs): pass
+    @staticmethod
+    def setApplicationName(*args, **kwargs): pass
+    @staticmethod
+    def setApplicationVersion(*args, **kwargs): pass
+    @staticmethod
+    def setAttribute(*args, **kwargs): pass
+    @staticmethod
+    def setEventDispatcher(*args, **kwargs): pass
+    @staticmethod
+    def setLibraryPaths(*args, **kwargs): pass
+    @staticmethod
+    def setOrganizationDomain(*args, **kwargs): pass
+    @staticmethod
+    def setOrganizationName(*args, **kwargs): pass
+    @staticmethod
+    def setQuitLockEnabled(*args, **kwargs): pass
+    @staticmethod
+    def setSetuidAllowed(*args, **kwargs): pass
+    @staticmethod
+    def startingUp(*args, **kwargs): pass
+    @staticmethod
+    def testAttribute(*args, **kwargs): pass
+    @staticmethod
+    def translate(*args, **kwargs): pass
+    ApplicationFlags = 329217
+    
+    
+    __new__ = None
+    
+    
+    aboutToQuit = None
+    
+    
+    applicationNameChanged = None
+    
+    
+    applicationVersionChanged = None
+    
+    
+    organizationDomainChanged = None
+    
+    
+    organizationNameChanged = None
+    
+    
+    staticMetaObject = None
+
+
+class QWinEventNotifier(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def event(*args, **kwargs): pass
+    def handle(*args, **kwargs): pass
+    def isEnabled(*args, **kwargs): pass
+    def setEnabled(*args, **kwargs): pass
+    def setHandle(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    activated = None
+    
+    
+    staticMetaObject = None
+
+
+class QThreadPool(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def activeThreadCount(*args, **kwargs): pass
+    def cancel(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def expiryTimeout(*args, **kwargs): pass
+    def maxThreadCount(*args, **kwargs): pass
+    def releaseThread(*args, **kwargs): pass
+    def reserveThread(*args, **kwargs): pass
+    def setExpiryTimeout(*args, **kwargs): pass
+    def setMaxThreadCount(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def tryStart(*args, **kwargs): pass
+    def waitForDone(*args, **kwargs): pass
+    @staticmethod
+    def globalInstance(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    staticMetaObject = None
+
+
+class QTranslator(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def isEmpty(*args, **kwargs): pass
+    def load(*args, **kwargs): pass
+    def translate(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    staticMetaObject = None
+
+
+class QSocketNotifier(QObject):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def event(*args, **kwargs): pass
+    def isEnabled(*args, **kwargs): pass
+    def setEnabled(*args, **kwargs): pass
+    def socket(*args, **kwargs): pass
+    def type(*args, **kwargs): pass
+    Exception = None
+    
+    
+    Read = None
+    
+    
+    Type = None
+    
+    
+    Write = None
+    
+    
+    __new__ = None
+    
+    
+    activated = None
+    
+    
+    staticMetaObject = None
+
+
 class QSettings(QObject):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def allKeys(*args, **kwargs):
-        pass
-    
-    
-    def applicationName(*args, **kwargs):
-        pass
-    
-    
-    def beginGroup(*args, **kwargs):
-        pass
-    
-    
-    def beginReadArray(*args, **kwargs):
-        pass
-    
-    
-    def beginWriteArray(*args, **kwargs):
-        pass
-    
-    
-    def childGroups(*args, **kwargs):
-        pass
-    
-    
-    def childKeys(*args, **kwargs):
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def contains(*args, **kwargs):
-        pass
-    
-    
-    def endArray(*args, **kwargs):
-        pass
-    
-    
-    def endGroup(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def fallbacksEnabled(*args, **kwargs):
-        pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def format(*args, **kwargs):
-        pass
-    
-    
-    def group(*args, **kwargs):
-        pass
-    
-    
-    def iniCodec(*args, **kwargs):
-        pass
-    
-    
-    def isWritable(*args, **kwargs):
-        pass
-    
-    
-    def organizationName(*args, **kwargs):
-        pass
-    
-    
-    def remove(*args, **kwargs):
-        pass
-    
-    
-    def scope(*args, **kwargs):
-        pass
-    
-    
-    def setArrayIndex(*args, **kwargs):
-        pass
-    
-    
-    def setFallbacksEnabled(*args, **kwargs):
-        pass
-    
-    
-    def setIniCodec(*args, **kwargs):
-        pass
-    
-    
-    def setValue(*args, **kwargs):
-        pass
-    
-    
-    def status(*args, **kwargs):
-        pass
-    
-    
-    def sync(*args, **kwargs):
-        pass
-    
-    
-    def value(*args, **kwargs):
-        pass
-    
-    
-    def defaultFormat(*args, **kwargs):
-        pass
-    
-    
-    def setDefaultFormat(*args, **kwargs):
-        pass
-    
-    
-    def setPath(*args, **kwargs):
-        pass
-    
-    
+    def allKeys(*args, **kwargs): pass
+    def applicationName(*args, **kwargs): pass
+    def beginGroup(*args, **kwargs): pass
+    def beginReadArray(*args, **kwargs): pass
+    def beginWriteArray(*args, **kwargs): pass
+    def childGroups(*args, **kwargs): pass
+    def childKeys(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def contains(*args, **kwargs): pass
+    def endArray(*args, **kwargs): pass
+    def endGroup(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def fallbacksEnabled(*args, **kwargs): pass
+    def fileName(*args, **kwargs): pass
+    def format(*args, **kwargs): pass
+    def group(*args, **kwargs): pass
+    def iniCodec(*args, **kwargs): pass
+    def isWritable(*args, **kwargs): pass
+    def organizationName(*args, **kwargs): pass
+    def remove(*args, **kwargs): pass
+    def scope(*args, **kwargs): pass
+    def setArrayIndex(*args, **kwargs): pass
+    def setFallbacksEnabled(*args, **kwargs): pass
+    def setIniCodec(*args, **kwargs): pass
+    def setValue(*args, **kwargs): pass
+    def status(*args, **kwargs): pass
+    def sync(*args, **kwargs): pass
+    def value(*args, **kwargs): pass
+    @staticmethod
+    def defaultFormat(*args, **kwargs): pass
+    @staticmethod
+    def setDefaultFormat(*args, **kwargs): pass
+    @staticmethod
+    def setPath(*args, **kwargs): pass
     AccessError = None
     
     
@@ -20474,220 +13644,136 @@ class QSettings(QObject):
     staticMetaObject = None
 
 
-class QSocketNotifier(QObject):
+class QAbstractEventDispatcher(QObject):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def isEnabled(*args, **kwargs):
-        pass
-    
-    
-    def setEnabled(*args, **kwargs):
-        pass
-    
-    
-    def socket(*args, **kwargs):
-        pass
-    
-    
-    def type(*args, **kwargs):
-        pass
-    
-    
-    Exception = None
-    
-    
-    Read = None
-    
-    
-    Type = None
-    
-    
-    Write = None
+    def closingDown(*args, **kwargs): pass
+    def flush(*args, **kwargs): pass
+    def hasPendingEvents(*args, **kwargs): pass
+    def interrupt(*args, **kwargs): pass
+    def processEvents(*args, **kwargs): pass
+    def registerEventNotifier(*args, **kwargs): pass
+    def registerSocketNotifier(*args, **kwargs): pass
+    def registerTimer(*args, **kwargs): pass
+    def registeredTimers(*args, **kwargs): pass
+    def remainingTime(*args, **kwargs): pass
+    def startingUp(*args, **kwargs): pass
+    def unregisterEventNotifier(*args, **kwargs): pass
+    def unregisterSocketNotifier(*args, **kwargs): pass
+    def unregisterTimer(*args, **kwargs): pass
+    def unregisterTimers(*args, **kwargs): pass
+    def wakeUp(*args, **kwargs): pass
+    @staticmethod
+    def instance(*args, **kwargs): pass
+    TimerInfo = None
     
     
     __new__ = None
     
     
-    activated = None
+    aboutToBlock = None
+    
+    
+    awake = None
     
     
     staticMetaObject = None
 
 
-class QChildEvent(QEvent):
+class QAbstractState(QObject):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def added(*args, **kwargs):
-        pass
-    
-    
-    def child(*args, **kwargs):
-        pass
-    
-    
-    def polished(*args, **kwargs):
-        pass
-    
-    
-    def removed(*args, **kwargs):
-        pass
-    
-    
+    def active(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def machine(*args, **kwargs): pass
+    def onEntry(*args, **kwargs): pass
+    def onExit(*args, **kwargs): pass
+    def parentState(*args, **kwargs): pass
     __new__ = None
-
-
-class QThreadPool(QObject):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
     
     
-    def activeThreadCount(*args, **kwargs):
-        pass
+    activeChanged = None
     
     
-    def cancel(*args, **kwargs):
-        pass
+    entered = None
     
     
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def expiryTimeout(*args, **kwargs):
-        pass
-    
-    
-    def maxThreadCount(*args, **kwargs):
-        pass
-    
-    
-    def releaseThread(*args, **kwargs):
-        pass
-    
-    
-    def reserveThread(*args, **kwargs):
-        pass
-    
-    
-    def setExpiryTimeout(*args, **kwargs):
-        pass
-    
-    
-    def setMaxThreadCount(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def tryStart(*args, **kwargs):
-        pass
-    
-    
-    def waitForDone(*args, **kwargs):
-        pass
-    
-    
-    def globalInstance(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
+    exited = None
     
     
     staticMetaObject = None
 
 
-class QBuffer(QIODevice):
+class QFileSystemWatcher(QObject):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
+    def addPath(*args, **kwargs): pass
+    def addPaths(*args, **kwargs): pass
+    def directories(*args, **kwargs): pass
+    def files(*args, **kwargs): pass
+    def removePath(*args, **kwargs): pass
+    def removePaths(*args, **kwargs): pass
+    __new__ = None
     
     
-    def atEnd(*args, **kwargs):
+    directoryChanged = None
+    
+    
+    fileChanged = None
+    
+    
+    staticMetaObject = None
+
+
+class QSignalTransition(QAbstractTransition):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
         pass
+    def event(*args, **kwargs): pass
+    def eventTest(*args, **kwargs): pass
+    def onTransition(*args, **kwargs): pass
+    def senderObject(*args, **kwargs): pass
+    def setSenderObject(*args, **kwargs): pass
+    def setSignal(*args, **kwargs): pass
+    def signal(*args, **kwargs): pass
+    __new__ = None
     
     
-    def buffer(*args, **kwargs):
+    senderObjectChanged = None
+    
+    
+    signalChanged = None
+    
+    
+    staticMetaObject = None
+
+
+class QAnimationGroup(QAbstractAnimation):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
         pass
-    
-    
-    def canReadLine(*args, **kwargs):
-        pass
-    
-    
-    def close(*args, **kwargs):
-        pass
-    
-    
-    def connectNotify(*args, **kwargs):
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def disconnectNotify(*args, **kwargs):
-        pass
-    
-    
-    def open(*args, **kwargs):
-        pass
-    
-    
-    def pos(*args, **kwargs):
-        pass
-    
-    
-    def readData(*args, **kwargs):
-        pass
-    
-    
-    def seek(*args, **kwargs):
-        pass
-    
-    
-    def setBuffer(*args, **kwargs):
-        pass
-    
-    
-    def setData(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def writeData(*args, **kwargs):
-        pass
-    
-    
+    def addAnimation(*args, **kwargs): pass
+    def animationAt(*args, **kwargs): pass
+    def animationCount(*args, **kwargs): pass
+    def clear(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def indexOfAnimation(*args, **kwargs): pass
+    def insertAnimation(*args, **kwargs): pass
+    def removeAnimation(*args, **kwargs): pass
+    def takeAnimation(*args, **kwargs): pass
     __new__ = None
     
     
@@ -20699,39 +13785,59 @@ class QAbstractListModel(QAbstractItemModel):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def columnCount(*args, **kwargs):
-        pass
-    
-    
-    def dropMimeData(*args, **kwargs):
-        pass
-    
-    
-    def flags(*args, **kwargs):
-        pass
-    
-    
-    def hasChildren(*args, **kwargs):
-        pass
-    
-    
-    def index(*args, **kwargs):
-        pass
-    
-    
-    def parent(*args, **kwargs):
-        pass
-    
-    
-    def sibling(*args, **kwargs):
-        pass
-    
-    
+    def columnCount(*args, **kwargs): pass
+    def dropMimeData(*args, **kwargs): pass
+    def flags(*args, **kwargs): pass
+    def hasChildren(*args, **kwargs): pass
+    def index(*args, **kwargs): pass
+    def parent(*args, **kwargs): pass
+    def sibling(*args, **kwargs): pass
     __new__ = None
+    
+    
+    staticMetaObject = None
+
+
+class QAbstractProxyModel(QAbstractItemModel):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def buddy(*args, **kwargs): pass
+    def canDropMimeData(*args, **kwargs): pass
+    def canFetchMore(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def dropMimeData(*args, **kwargs): pass
+    def fetchMore(*args, **kwargs): pass
+    def flags(*args, **kwargs): pass
+    def hasChildren(*args, **kwargs): pass
+    def headerData(*args, **kwargs): pass
+    def itemData(*args, **kwargs): pass
+    def mapFromSource(*args, **kwargs): pass
+    def mapSelectionFromSource(*args, **kwargs): pass
+    def mapSelectionToSource(*args, **kwargs): pass
+    def mapToSource(*args, **kwargs): pass
+    def mimeData(*args, **kwargs): pass
+    def mimeTypes(*args, **kwargs): pass
+    def resetInternalData(*args, **kwargs): pass
+    def revert(*args, **kwargs): pass
+    def setData(*args, **kwargs): pass
+    def setHeaderData(*args, **kwargs): pass
+    def setItemData(*args, **kwargs): pass
+    def setSourceModel(*args, **kwargs): pass
+    def sibling(*args, **kwargs): pass
+    def sort(*args, **kwargs): pass
+    def sourceModel(*args, **kwargs): pass
+    def span(*args, **kwargs): pass
+    def submit(*args, **kwargs): pass
+    def supportedDragActions(*args, **kwargs): pass
+    def supportedDropActions(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    sourceModelChanged = None
     
     
     staticMetaObject = None
@@ -20742,46 +13848,16 @@ class QHistoryState(QAbstractState):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def defaultState(*args, **kwargs):
-        pass
-    
-    
-    def defaultTransition(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def historyType(*args, **kwargs):
-        pass
-    
-    
-    def onEntry(*args, **kwargs):
-        pass
-    
-    
-    def onExit(*args, **kwargs):
-        pass
-    
-    
-    def setDefaultState(*args, **kwargs):
-        pass
-    
-    
-    def setDefaultTransition(*args, **kwargs):
-        pass
-    
-    
-    def setHistoryType(*args, **kwargs):
-        pass
-    
-    
+    def defaultState(*args, **kwargs): pass
+    def defaultTransition(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def historyType(*args, **kwargs): pass
+    def onEntry(*args, **kwargs): pass
+    def onExit(*args, **kwargs): pass
+    def setDefaultState(*args, **kwargs): pass
+    def setDefaultTransition(*args, **kwargs): pass
+    def setHistoryType(*args, **kwargs): pass
     DeepHistory = None
     
     
@@ -20806,135 +13882,51 @@ class QHistoryState(QAbstractState):
     staticMetaObject = None
 
 
-class QAbstractProxyModel(QAbstractItemModel):
+class QEventTransition(QAbstractTransition):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def buddy(*args, **kwargs):
-        pass
-    
-    
-    def canDropMimeData(*args, **kwargs):
-        pass
-    
-    
-    def canFetchMore(*args, **kwargs):
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def dropMimeData(*args, **kwargs):
-        pass
-    
-    
-    def fetchMore(*args, **kwargs):
-        pass
-    
-    
-    def flags(*args, **kwargs):
-        pass
-    
-    
-    def hasChildren(*args, **kwargs):
-        pass
-    
-    
-    def headerData(*args, **kwargs):
-        pass
-    
-    
-    def itemData(*args, **kwargs):
-        pass
-    
-    
-    def mapFromSource(*args, **kwargs):
-        pass
-    
-    
-    def mapSelectionFromSource(*args, **kwargs):
-        pass
-    
-    
-    def mapSelectionToSource(*args, **kwargs):
-        pass
-    
-    
-    def mapToSource(*args, **kwargs):
-        pass
-    
-    
-    def mimeData(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypes(*args, **kwargs):
-        pass
-    
-    
-    def resetInternalData(*args, **kwargs):
-        pass
-    
-    
-    def revert(*args, **kwargs):
-        pass
-    
-    
-    def setData(*args, **kwargs):
-        pass
-    
-    
-    def setHeaderData(*args, **kwargs):
-        pass
-    
-    
-    def setItemData(*args, **kwargs):
-        pass
-    
-    
-    def setSourceModel(*args, **kwargs):
-        pass
-    
-    
-    def sibling(*args, **kwargs):
-        pass
-    
-    
-    def sort(*args, **kwargs):
-        pass
-    
-    
-    def sourceModel(*args, **kwargs):
-        pass
-    
-    
-    def span(*args, **kwargs):
-        pass
-    
-    
-    def submit(*args, **kwargs):
-        pass
-    
-    
-    def supportedDragActions(*args, **kwargs):
-        pass
-    
-    
-    def supportedDropActions(*args, **kwargs):
-        pass
-    
-    
+    def event(*args, **kwargs): pass
+    def eventSource(*args, **kwargs): pass
+    def eventTest(*args, **kwargs): pass
+    def eventType(*args, **kwargs): pass
+    def onTransition(*args, **kwargs): pass
+    def setEventSource(*args, **kwargs): pass
+    def setEventType(*args, **kwargs): pass
     __new__ = None
     
     
-    sourceModelChanged = None
+    staticMetaObject = None
+
+
+class QPauseAnimation(QAbstractAnimation):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def duration(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def setDuration(*args, **kwargs): pass
+    def updateCurrentTime(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    staticMetaObject = None
+
+
+class QFinalState(QAbstractState):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def event(*args, **kwargs): pass
+    def onEntry(*args, **kwargs): pass
+    def onExit(*args, **kwargs): pass
+    __new__ = None
     
     
     staticMetaObject = None
@@ -20945,34 +13937,13 @@ class QAbstractTableModel(QAbstractItemModel):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def dropMimeData(*args, **kwargs):
-        pass
-    
-    
-    def flags(*args, **kwargs):
-        pass
-    
-    
-    def hasChildren(*args, **kwargs):
-        pass
-    
-    
-    def index(*args, **kwargs):
-        pass
-    
-    
-    def parent(*args, **kwargs):
-        pass
-    
-    
-    def sibling(*args, **kwargs):
-        pass
-    
-    
+    def dropMimeData(*args, **kwargs): pass
+    def flags(*args, **kwargs): pass
+    def hasChildren(*args, **kwargs): pass
+    def index(*args, **kwargs): pass
+    def parent(*args, **kwargs): pass
+    def sibling(*args, **kwargs): pass
     __new__ = None
     
     
@@ -20984,62 +13955,20 @@ class QState(QAbstractState):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def addTransition(*args, **kwargs):
-        pass
-    
-    
-    def assignProperty(*args, **kwargs):
-        pass
-    
-    
-    def childMode(*args, **kwargs):
-        pass
-    
-    
-    def errorState(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def initialState(*args, **kwargs):
-        pass
-    
-    
-    def onEntry(*args, **kwargs):
-        pass
-    
-    
-    def onExit(*args, **kwargs):
-        pass
-    
-    
-    def removeTransition(*args, **kwargs):
-        pass
-    
-    
-    def setChildMode(*args, **kwargs):
-        pass
-    
-    
-    def setErrorState(*args, **kwargs):
-        pass
-    
-    
-    def setInitialState(*args, **kwargs):
-        pass
-    
-    
-    def transitions(*args, **kwargs):
-        pass
-    
-    
+    def addTransition(*args, **kwargs): pass
+    def assignProperty(*args, **kwargs): pass
+    def childMode(*args, **kwargs): pass
+    def errorState(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def initialState(*args, **kwargs): pass
+    def onEntry(*args, **kwargs): pass
+    def onExit(*args, **kwargs): pass
+    def removeTransition(*args, **kwargs): pass
+    def setChildMode(*args, **kwargs): pass
+    def setErrorState(*args, **kwargs): pass
+    def setInitialState(*args, **kwargs): pass
+    def transitions(*args, **kwargs): pass
     ChildMode = None
     
     
@@ -21079,91 +14008,64 @@ class QState(QAbstractState):
     staticMetaObject = None
 
 
+class QVariantAnimation(QAbstractAnimation):
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def currentValue(*args, **kwargs): pass
+    def duration(*args, **kwargs): pass
+    def easingCurve(*args, **kwargs): pass
+    def endValue(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def interpolated(*args, **kwargs): pass
+    def keyValueAt(*args, **kwargs): pass
+    def keyValues(*args, **kwargs): pass
+    def setDuration(*args, **kwargs): pass
+    def setEasingCurve(*args, **kwargs): pass
+    def setEndValue(*args, **kwargs): pass
+    def setKeyValueAt(*args, **kwargs): pass
+    def setKeyValues(*args, **kwargs): pass
+    def setStartValue(*args, **kwargs): pass
+    def startValue(*args, **kwargs): pass
+    def updateCurrentTime(*args, **kwargs): pass
+    def updateCurrentValue(*args, **kwargs): pass
+    def updateState(*args, **kwargs): pass
+    __new__ = None
+    
+    
+    staticMetaObject = None
+    
+    
+    valueChanged = None
+
+
 class QFileDevice(QIODevice):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def atEnd(*args, **kwargs):
-        pass
-    
-    
-    def close(*args, **kwargs):
-        pass
-    
-    
-    def error(*args, **kwargs):
-        pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def flush(*args, **kwargs):
-        pass
-    
-    
-    def handle(*args, **kwargs):
-        pass
-    
-    
-    def isSequential(*args, **kwargs):
-        pass
-    
-    
-    def map(*args, **kwargs):
-        pass
-    
-    
-    def permissions(*args, **kwargs):
-        pass
-    
-    
-    def pos(*args, **kwargs):
-        pass
-    
-    
-    def readData(*args, **kwargs):
-        pass
-    
-    
-    def readLineData(*args, **kwargs):
-        pass
-    
-    
-    def resize(*args, **kwargs):
-        pass
-    
-    
-    def seek(*args, **kwargs):
-        pass
-    
-    
-    def setPermissions(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def unmap(*args, **kwargs):
-        pass
-    
-    
-    def unsetError(*args, **kwargs):
-        pass
-    
-    
-    def writeData(*args, **kwargs):
-        pass
-    
-    
+    def atEnd(*args, **kwargs): pass
+    def close(*args, **kwargs): pass
+    def error(*args, **kwargs): pass
+    def fileName(*args, **kwargs): pass
+    def flush(*args, **kwargs): pass
+    def handle(*args, **kwargs): pass
+    def isSequential(*args, **kwargs): pass
+    def map(*args, **kwargs): pass
+    def permissions(*args, **kwargs): pass
+    def pos(*args, **kwargs): pass
+    def readData(*args, **kwargs): pass
+    def readLineData(*args, **kwargs): pass
+    def resize(*args, **kwargs): pass
+    def seek(*args, **kwargs): pass
+    def setPermissions(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def unmap(*args, **kwargs): pass
+    def unsetError(*args, **kwargs): pass
+    def writeData(*args, **kwargs): pass
     AbortError = None
     
     
@@ -21281,366 +14183,69 @@ class QFileDevice(QIODevice):
     staticMetaObject = None
 
 
-class QVariantAnimation(QAbstractAnimation):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def currentValue(*args, **kwargs):
-        pass
-    
-    
-    def duration(*args, **kwargs):
-        pass
-    
-    
-    def easingCurve(*args, **kwargs):
-        pass
-    
-    
-    def endValue(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def interpolated(*args, **kwargs):
-        pass
-    
-    
-    def keyValueAt(*args, **kwargs):
-        pass
-    
-    
-    def keyValues(*args, **kwargs):
-        pass
-    
-    
-    def setDuration(*args, **kwargs):
-        pass
-    
-    
-    def setEasingCurve(*args, **kwargs):
-        pass
-    
-    
-    def setEndValue(*args, **kwargs):
-        pass
-    
-    
-    def setKeyValueAt(*args, **kwargs):
-        pass
-    
-    
-    def setKeyValues(*args, **kwargs):
-        pass
-    
-    
-    def setStartValue(*args, **kwargs):
-        pass
-    
-    
-    def startValue(*args, **kwargs):
-        pass
-    
-    
-    def updateCurrentTime(*args, **kwargs):
-        pass
-    
-    
-    def updateCurrentValue(*args, **kwargs):
-        pass
-    
-    
-    def updateState(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    staticMetaObject = None
-    
-    
-    valueChanged = None
-
-
-class QSignalTransition(QAbstractTransition):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def eventTest(*args, **kwargs):
-        pass
-    
-    
-    def onTransition(*args, **kwargs):
-        pass
-    
-    
-    def senderObject(*args, **kwargs):
-        pass
-    
-    
-    def setSenderObject(*args, **kwargs):
-        pass
-    
-    
-    def setSignal(*args, **kwargs):
-        pass
-    
-    
-    def signal(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    senderObjectChanged = None
-    
-    
-    signalChanged = None
-    
-    
-    staticMetaObject = None
-
-
 class QProcess(QIODevice):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def arguments(*args, **kwargs):
-        pass
-    
-    
-    def atEnd(*args, **kwargs):
-        pass
-    
-    
-    def bytesAvailable(*args, **kwargs):
-        pass
-    
-    
-    def bytesToWrite(*args, **kwargs):
-        pass
-    
-    
-    def canReadLine(*args, **kwargs):
-        pass
-    
-    
-    def close(*args, **kwargs):
-        pass
-    
-    
-    def closeReadChannel(*args, **kwargs):
-        pass
-    
-    
-    def closeWriteChannel(*args, **kwargs):
-        pass
-    
-    
-    def environment(*args, **kwargs):
-        pass
-    
-    
-    def exitCode(*args, **kwargs):
-        pass
-    
-    
-    def exitStatus(*args, **kwargs):
-        pass
-    
-    
-    def inputChannelMode(*args, **kwargs):
-        pass
-    
-    
-    def isSequential(*args, **kwargs):
-        pass
-    
-    
-    def kill(*args, **kwargs):
-        pass
-    
-    
-    def nativeArguments(*args, **kwargs):
-        pass
-    
-    
-    def open(*args, **kwargs):
-        pass
-    
-    
-    def pid(*args, **kwargs):
-        pass
-    
-    
-    def processChannelMode(*args, **kwargs):
-        pass
-    
-    
-    def processEnvironment(*args, **kwargs):
-        pass
-    
-    
-    def processId(*args, **kwargs):
-        pass
-    
-    
-    def program(*args, **kwargs):
-        pass
-    
-    
-    def readAllStandardError(*args, **kwargs):
-        pass
-    
-    
-    def readAllStandardOutput(*args, **kwargs):
-        pass
-    
-    
-    def readChannel(*args, **kwargs):
-        pass
-    
-    
-    def readData(*args, **kwargs):
-        pass
-    
-    
-    def setArguments(*args, **kwargs):
-        pass
-    
-    
-    def setEnvironment(*args, **kwargs):
-        pass
-    
-    
-    def setInputChannelMode(*args, **kwargs):
-        pass
-    
-    
-    def setNativeArguments(*args, **kwargs):
-        pass
-    
-    
-    def setProcessChannelMode(*args, **kwargs):
-        pass
-    
-    
-    def setProcessEnvironment(*args, **kwargs):
-        pass
-    
-    
-    def setProcessState(*args, **kwargs):
-        pass
-    
-    
-    def setProgram(*args, **kwargs):
-        pass
-    
-    
-    def setReadChannel(*args, **kwargs):
-        pass
-    
-    
-    def setStandardErrorFile(*args, **kwargs):
-        pass
-    
-    
-    def setStandardInputFile(*args, **kwargs):
-        pass
-    
-    
-    def setStandardOutputFile(*args, **kwargs):
-        pass
-    
-    
-    def setStandardOutputProcess(*args, **kwargs):
-        pass
-    
-    
-    def setWorkingDirectory(*args, **kwargs):
-        pass
-    
-    
-    def setupChildProcess(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def state(*args, **kwargs):
-        pass
-    
-    
-    def terminate(*args, **kwargs):
-        pass
-    
-    
-    def waitForBytesWritten(*args, **kwargs):
-        pass
-    
-    
-    def waitForFinished(*args, **kwargs):
-        pass
-    
-    
-    def waitForReadyRead(*args, **kwargs):
-        pass
-    
-    
-    def waitForStarted(*args, **kwargs):
-        pass
-    
-    
-    def workingDirectory(*args, **kwargs):
-        pass
-    
-    
-    def writeData(*args, **kwargs):
-        pass
-    
-    
-    def execute(*args, **kwargs):
-        pass
-    
-    
-    def nullDevice(*args, **kwargs):
-        pass
-    
-    
-    def startDetached(*args, **kwargs):
-        pass
-    
-    
-    def systemEnvironment(*args, **kwargs):
-        pass
-    
-    
+    def arguments(*args, **kwargs): pass
+    def atEnd(*args, **kwargs): pass
+    def bytesAvailable(*args, **kwargs): pass
+    def bytesToWrite(*args, **kwargs): pass
+    def canReadLine(*args, **kwargs): pass
+    def close(*args, **kwargs): pass
+    def closeReadChannel(*args, **kwargs): pass
+    def closeWriteChannel(*args, **kwargs): pass
+    def environment(*args, **kwargs): pass
+    def exitCode(*args, **kwargs): pass
+    def exitStatus(*args, **kwargs): pass
+    def inputChannelMode(*args, **kwargs): pass
+    def isSequential(*args, **kwargs): pass
+    def kill(*args, **kwargs): pass
+    def nativeArguments(*args, **kwargs): pass
+    def open(*args, **kwargs): pass
+    def pid(*args, **kwargs): pass
+    def processChannelMode(*args, **kwargs): pass
+    def processEnvironment(*args, **kwargs): pass
+    def processId(*args, **kwargs): pass
+    def program(*args, **kwargs): pass
+    def readAllStandardError(*args, **kwargs): pass
+    def readAllStandardOutput(*args, **kwargs): pass
+    def readChannel(*args, **kwargs): pass
+    def readData(*args, **kwargs): pass
+    def setArguments(*args, **kwargs): pass
+    def setEnvironment(*args, **kwargs): pass
+    def setInputChannelMode(*args, **kwargs): pass
+    def setNativeArguments(*args, **kwargs): pass
+    def setProcessChannelMode(*args, **kwargs): pass
+    def setProcessEnvironment(*args, **kwargs): pass
+    def setProcessState(*args, **kwargs): pass
+    def setProgram(*args, **kwargs): pass
+    def setReadChannel(*args, **kwargs): pass
+    def setStandardErrorFile(*args, **kwargs): pass
+    def setStandardInputFile(*args, **kwargs): pass
+    def setStandardOutputFile(*args, **kwargs): pass
+    def setStandardOutputProcess(*args, **kwargs): pass
+    def setWorkingDirectory(*args, **kwargs): pass
+    def setupChildProcess(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def state(*args, **kwargs): pass
+    def terminate(*args, **kwargs): pass
+    def waitForBytesWritten(*args, **kwargs): pass
+    def waitForFinished(*args, **kwargs): pass
+    def waitForReadyRead(*args, **kwargs): pass
+    def waitForStarted(*args, **kwargs): pass
+    def workingDirectory(*args, **kwargs): pass
+    def writeData(*args, **kwargs): pass
+    @staticmethod
+    def execute(*args, **kwargs): pass
+    @staticmethod
+    def nullDevice(*args, **kwargs): pass
+    @staticmethod
+    def startDetached(*args, **kwargs): pass
+    @staticmethod
+    def systemEnvironment(*args, **kwargs): pass
     CrashExit = None
     
     
@@ -21746,152 +14351,136 @@ class QProcess(QIODevice):
     staticMetaObject = None
 
 
-class QEventTransition(QAbstractTransition):
+class QBuffer(QIODevice):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def eventSource(*args, **kwargs):
-        pass
-    
-    
-    def eventTest(*args, **kwargs):
-        pass
-    
-    
-    def eventType(*args, **kwargs):
-        pass
-    
-    
-    def onTransition(*args, **kwargs):
-        pass
-    
-    
-    def setEventSource(*args, **kwargs):
-        pass
-    
-    
-    def setEventType(*args, **kwargs):
-        pass
-    
-    
+    def atEnd(*args, **kwargs): pass
+    def buffer(*args, **kwargs): pass
+    def canReadLine(*args, **kwargs): pass
+    def close(*args, **kwargs): pass
+    def connectNotify(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def disconnectNotify(*args, **kwargs): pass
+    def open(*args, **kwargs): pass
+    def pos(*args, **kwargs): pass
+    def readData(*args, **kwargs): pass
+    def seek(*args, **kwargs): pass
+    def setBuffer(*args, **kwargs): pass
+    def setData(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    def writeData(*args, **kwargs): pass
     __new__ = None
     
     
     staticMetaObject = None
 
 
-class QFinalState(QAbstractState):
+class QPropertyAnimation(QVariantAnimation):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def onEntry(*args, **kwargs):
-        pass
-    
-    
-    def onExit(*args, **kwargs):
-        pass
-    
-    
+    def event(*args, **kwargs): pass
+    def propertyName(*args, **kwargs): pass
+    def setPropertyName(*args, **kwargs): pass
+    def setTargetObject(*args, **kwargs): pass
+    def targetObject(*args, **kwargs): pass
+    def updateCurrentValue(*args, **kwargs): pass
+    def updateState(*args, **kwargs): pass
     __new__ = None
     
     
     staticMetaObject = None
 
 
-class QAnimationGroup(QAbstractAnimation):
+class QSequentialAnimationGroup(QAnimationGroup):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def addAnimation(*args, **kwargs):
-        pass
-    
-    
-    def animationAt(*args, **kwargs):
-        pass
-    
-    
-    def animationCount(*args, **kwargs):
-        pass
-    
-    
-    def clear(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def indexOfAnimation(*args, **kwargs):
-        pass
-    
-    
-    def insertAnimation(*args, **kwargs):
-        pass
-    
-    
-    def removeAnimation(*args, **kwargs):
-        pass
-    
-    
-    def takeAnimation(*args, **kwargs):
-        pass
-    
-    
+    def addPause(*args, **kwargs): pass
+    def currentAnimation(*args, **kwargs): pass
+    def duration(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def insertPause(*args, **kwargs): pass
+    def updateCurrentTime(*args, **kwargs): pass
+    def updateDirection(*args, **kwargs): pass
+    def updateState(*args, **kwargs): pass
     __new__ = None
+    
+    
+    currentAnimationChanged = None
     
     
     staticMetaObject = None
 
 
-class QPauseAnimation(QAbstractAnimation):
+class QSortFilterProxyModel(QAbstractProxyModel):
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def duration(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def setDuration(*args, **kwargs):
-        pass
-    
-    
-    def updateCurrentTime(*args, **kwargs):
-        pass
-    
-    
+    def buddy(*args, **kwargs): pass
+    def canFetchMore(*args, **kwargs): pass
+    def columnCount(*args, **kwargs): pass
+    def data(*args, **kwargs): pass
+    def dropMimeData(*args, **kwargs): pass
+    def dynamicSortFilter(*args, **kwargs): pass
+    def fetchMore(*args, **kwargs): pass
+    def filterAcceptsColumn(*args, **kwargs): pass
+    def filterAcceptsRow(*args, **kwargs): pass
+    def filterCaseSensitivity(*args, **kwargs): pass
+    def filterKeyColumn(*args, **kwargs): pass
+    def filterRegExp(*args, **kwargs): pass
+    def filterRole(*args, **kwargs): pass
+    def flags(*args, **kwargs): pass
+    def hasChildren(*args, **kwargs): pass
+    def headerData(*args, **kwargs): pass
+    def index(*args, **kwargs): pass
+    def insertColumns(*args, **kwargs): pass
+    def insertRows(*args, **kwargs): pass
+    def invalidate(*args, **kwargs): pass
+    def invalidateFilter(*args, **kwargs): pass
+    def isSortLocaleAware(*args, **kwargs): pass
+    def lessThan(*args, **kwargs): pass
+    def mapFromSource(*args, **kwargs): pass
+    def mapSelectionFromSource(*args, **kwargs): pass
+    def mapSelectionToSource(*args, **kwargs): pass
+    def mapToSource(*args, **kwargs): pass
+    def match(*args, **kwargs): pass
+    def mimeData(*args, **kwargs): pass
+    def mimeTypes(*args, **kwargs): pass
+    def parent(*args, **kwargs): pass
+    def removeColumns(*args, **kwargs): pass
+    def removeRows(*args, **kwargs): pass
+    def rowCount(*args, **kwargs): pass
+    def setData(*args, **kwargs): pass
+    def setDynamicSortFilter(*args, **kwargs): pass
+    def setFilterCaseSensitivity(*args, **kwargs): pass
+    def setFilterFixedString(*args, **kwargs): pass
+    def setFilterKeyColumn(*args, **kwargs): pass
+    def setFilterRegExp(*args, **kwargs): pass
+    def setFilterRole(*args, **kwargs): pass
+    def setFilterWildcard(*args, **kwargs): pass
+    def setHeaderData(*args, **kwargs): pass
+    def setSortCaseSensitivity(*args, **kwargs): pass
+    def setSortLocaleAware(*args, **kwargs): pass
+    def setSortRole(*args, **kwargs): pass
+    def setSourceModel(*args, **kwargs): pass
+    def sibling(*args, **kwargs): pass
+    def sort(*args, **kwargs): pass
+    def sortCaseSensitivity(*args, **kwargs): pass
+    def sortColumn(*args, **kwargs): pass
+    def sortOrder(*args, **kwargs): pass
+    def sortRole(*args, **kwargs): pass
+    def span(*args, **kwargs): pass
+    def supportedDropActions(*args, **kwargs): pass
     __new__ = None
     
     
@@ -21903,122 +14492,35 @@ class QStateMachine(QState):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def addDefaultAnimation(*args, **kwargs):
-        pass
-    
-    
-    def addState(*args, **kwargs):
-        pass
-    
-    
-    def beginMicrostep(*args, **kwargs):
-        pass
-    
-    
-    def beginSelectTransitions(*args, **kwargs):
-        pass
-    
-    
-    def cancelDelayedEvent(*args, **kwargs):
-        pass
-    
-    
-    def clearError(*args, **kwargs):
-        pass
-    
-    
-    def configuration(*args, **kwargs):
-        pass
-    
-    
-    def defaultAnimations(*args, **kwargs):
-        pass
-    
-    
-    def endMicrostep(*args, **kwargs):
-        pass
-    
-    
-    def endSelectTransitions(*args, **kwargs):
-        pass
-    
-    
-    def error(*args, **kwargs):
-        pass
-    
-    
-    def errorString(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def eventFilter(*args, **kwargs):
-        pass
-    
-    
-    def globalRestorePolicy(*args, **kwargs):
-        pass
-    
-    
-    def isAnimated(*args, **kwargs):
-        pass
-    
-    
-    def isRunning(*args, **kwargs):
-        pass
-    
-    
-    def onEntry(*args, **kwargs):
-        pass
-    
-    
-    def onExit(*args, **kwargs):
-        pass
-    
-    
-    def postDelayedEvent(*args, **kwargs):
-        pass
-    
-    
-    def postEvent(*args, **kwargs):
-        pass
-    
-    
-    def removeDefaultAnimation(*args, **kwargs):
-        pass
-    
-    
-    def removeState(*args, **kwargs):
-        pass
-    
-    
-    def setAnimated(*args, **kwargs):
-        pass
-    
-    
-    def setGlobalRestorePolicy(*args, **kwargs):
-        pass
-    
-    
-    def setRunning(*args, **kwargs):
-        pass
-    
-    
-    def start(*args, **kwargs):
-        pass
-    
-    
-    def stop(*args, **kwargs):
-        pass
-    
-    
+    def addDefaultAnimation(*args, **kwargs): pass
+    def addState(*args, **kwargs): pass
+    def beginMicrostep(*args, **kwargs): pass
+    def beginSelectTransitions(*args, **kwargs): pass
+    def cancelDelayedEvent(*args, **kwargs): pass
+    def clearError(*args, **kwargs): pass
+    def configuration(*args, **kwargs): pass
+    def defaultAnimations(*args, **kwargs): pass
+    def endMicrostep(*args, **kwargs): pass
+    def endSelectTransitions(*args, **kwargs): pass
+    def error(*args, **kwargs): pass
+    def errorString(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def eventFilter(*args, **kwargs): pass
+    def globalRestorePolicy(*args, **kwargs): pass
+    def isAnimated(*args, **kwargs): pass
+    def isRunning(*args, **kwargs): pass
+    def onEntry(*args, **kwargs): pass
+    def onExit(*args, **kwargs): pass
+    def postDelayedEvent(*args, **kwargs): pass
+    def postEvent(*args, **kwargs): pass
+    def removeDefaultAnimation(*args, **kwargs): pass
+    def removeState(*args, **kwargs): pass
+    def setAnimated(*args, **kwargs): pass
+    def setGlobalRestorePolicy(*args, **kwargs): pass
+    def setRunning(*args, **kwargs): pass
+    def start(*args, **kwargs): pass
+    def stop(*args, **kwargs): pass
     Error = None
     
     
@@ -22069,358 +14571,12 @@ class QParallelAnimationGroup(QAnimationGroup):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def duration(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def updateCurrentTime(*args, **kwargs):
-        pass
-    
-    
-    def updateDirection(*args, **kwargs):
-        pass
-    
-    
-    def updateState(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    staticMetaObject = None
-
-
-class QPropertyAnimation(QVariantAnimation):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def propertyName(*args, **kwargs):
-        pass
-    
-    
-    def setPropertyName(*args, **kwargs):
-        pass
-    
-    
-    def setTargetObject(*args, **kwargs):
-        pass
-    
-    
-    def targetObject(*args, **kwargs):
-        pass
-    
-    
-    def updateCurrentValue(*args, **kwargs):
-        pass
-    
-    
-    def updateState(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    staticMetaObject = None
-
-
-class QSequentialAnimationGroup(QAnimationGroup):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def addPause(*args, **kwargs):
-        pass
-    
-    
-    def currentAnimation(*args, **kwargs):
-        pass
-    
-    
-    def duration(*args, **kwargs):
-        pass
-    
-    
-    def event(*args, **kwargs):
-        pass
-    
-    
-    def insertPause(*args, **kwargs):
-        pass
-    
-    
-    def updateCurrentTime(*args, **kwargs):
-        pass
-    
-    
-    def updateDirection(*args, **kwargs):
-        pass
-    
-    
-    def updateState(*args, **kwargs):
-        pass
-    
-    
-    __new__ = None
-    
-    
-    currentAnimationChanged = None
-    
-    
-    staticMetaObject = None
-
-
-class QSortFilterProxyModel(QAbstractProxyModel):
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def buddy(*args, **kwargs):
-        pass
-    
-    
-    def canFetchMore(*args, **kwargs):
-        pass
-    
-    
-    def columnCount(*args, **kwargs):
-        pass
-    
-    
-    def data(*args, **kwargs):
-        pass
-    
-    
-    def dropMimeData(*args, **kwargs):
-        pass
-    
-    
-    def dynamicSortFilter(*args, **kwargs):
-        pass
-    
-    
-    def fetchMore(*args, **kwargs):
-        pass
-    
-    
-    def filterAcceptsColumn(*args, **kwargs):
-        pass
-    
-    
-    def filterAcceptsRow(*args, **kwargs):
-        pass
-    
-    
-    def filterCaseSensitivity(*args, **kwargs):
-        pass
-    
-    
-    def filterKeyColumn(*args, **kwargs):
-        pass
-    
-    
-    def filterRegExp(*args, **kwargs):
-        pass
-    
-    
-    def filterRole(*args, **kwargs):
-        pass
-    
-    
-    def flags(*args, **kwargs):
-        pass
-    
-    
-    def hasChildren(*args, **kwargs):
-        pass
-    
-    
-    def headerData(*args, **kwargs):
-        pass
-    
-    
-    def index(*args, **kwargs):
-        pass
-    
-    
-    def insertColumns(*args, **kwargs):
-        pass
-    
-    
-    def insertRows(*args, **kwargs):
-        pass
-    
-    
-    def invalidate(*args, **kwargs):
-        pass
-    
-    
-    def invalidateFilter(*args, **kwargs):
-        pass
-    
-    
-    def isSortLocaleAware(*args, **kwargs):
-        pass
-    
-    
-    def lessThan(*args, **kwargs):
-        pass
-    
-    
-    def mapFromSource(*args, **kwargs):
-        pass
-    
-    
-    def mapSelectionFromSource(*args, **kwargs):
-        pass
-    
-    
-    def mapSelectionToSource(*args, **kwargs):
-        pass
-    
-    
-    def mapToSource(*args, **kwargs):
-        pass
-    
-    
-    def match(*args, **kwargs):
-        pass
-    
-    
-    def mimeData(*args, **kwargs):
-        pass
-    
-    
-    def mimeTypes(*args, **kwargs):
-        pass
-    
-    
-    def parent(*args, **kwargs):
-        pass
-    
-    
-    def removeColumns(*args, **kwargs):
-        pass
-    
-    
-    def removeRows(*args, **kwargs):
-        pass
-    
-    
-    def rowCount(*args, **kwargs):
-        pass
-    
-    
-    def setData(*args, **kwargs):
-        pass
-    
-    
-    def setDynamicSortFilter(*args, **kwargs):
-        pass
-    
-    
-    def setFilterCaseSensitivity(*args, **kwargs):
-        pass
-    
-    
-    def setFilterFixedString(*args, **kwargs):
-        pass
-    
-    
-    def setFilterKeyColumn(*args, **kwargs):
-        pass
-    
-    
-    def setFilterRegExp(*args, **kwargs):
-        pass
-    
-    
-    def setFilterRole(*args, **kwargs):
-        pass
-    
-    
-    def setFilterWildcard(*args, **kwargs):
-        pass
-    
-    
-    def setHeaderData(*args, **kwargs):
-        pass
-    
-    
-    def setSortCaseSensitivity(*args, **kwargs):
-        pass
-    
-    
-    def setSortLocaleAware(*args, **kwargs):
-        pass
-    
-    
-    def setSortRole(*args, **kwargs):
-        pass
-    
-    
-    def setSourceModel(*args, **kwargs):
-        pass
-    
-    
-    def sibling(*args, **kwargs):
-        pass
-    
-    
-    def sort(*args, **kwargs):
-        pass
-    
-    
-    def sortCaseSensitivity(*args, **kwargs):
-        pass
-    
-    
-    def sortColumn(*args, **kwargs):
-        pass
-    
-    
-    def sortOrder(*args, **kwargs):
-        pass
-    
-    
-    def sortRole(*args, **kwargs):
-        pass
-    
-    
-    def span(*args, **kwargs):
-        pass
-    
-    
-    def supportedDropActions(*args, **kwargs):
-        pass
-    
-    
+    def duration(*args, **kwargs): pass
+    def event(*args, **kwargs): pass
+    def updateCurrentTime(*args, **kwargs): pass
+    def updateDirection(*args, **kwargs): pass
+    def updateState(*args, **kwargs): pass
     __new__ = None
     
     
@@ -22432,82 +14588,40 @@ class QFile(QFileDevice):
         """
         x.__getattribute__('name') <==> x.name
         """
-    
         pass
-    
-    
     def __init__(*args, **kwargs):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def open(*args, **kwargs):
-        pass
-    
-    
-    def setFileName(*args, **kwargs):
-        pass
-    
-    
-    def size(*args, **kwargs):
-        pass
-    
-    
-    def copy(*args, **kwargs):
-        pass
-    
-    
-    def decodeName(*args, **kwargs):
-        pass
-    
-    
-    def encodeName(*args, **kwargs):
-        pass
-    
-    
-    def exists(*args, **kwargs):
-        pass
-    
-    
-    def link(*args, **kwargs):
-        pass
-    
-    
-    def permissions(*args, **kwargs):
-        pass
-    
-    
-    def readLink(*args, **kwargs):
-        pass
-    
-    
-    def remove(*args, **kwargs):
-        pass
-    
-    
-    def rename(*args, **kwargs):
-        pass
-    
-    
-    def resize(*args, **kwargs):
-        pass
-    
-    
-    def setPermissions(*args, **kwargs):
-        pass
-    
-    
-    def symLinkTarget(*args, **kwargs):
-        pass
-    
-    
+    def fileName(*args, **kwargs): pass
+    def open(*args, **kwargs): pass
+    def setFileName(*args, **kwargs): pass
+    def size(*args, **kwargs): pass
+    @staticmethod
+    def copy(*args, **kwargs): pass
+    @staticmethod
+    def decodeName(*args, **kwargs): pass
+    @staticmethod
+    def encodeName(*args, **kwargs): pass
+    @staticmethod
+    def exists(*args, **kwargs): pass
+    @staticmethod
+    def link(*args, **kwargs): pass
+    @staticmethod
+    def permissions(*args, **kwargs): pass
+    @staticmethod
+    def readLink(*args, **kwargs): pass
+    @staticmethod
+    def remove(*args, **kwargs): pass
+    @staticmethod
+    def rename(*args, **kwargs): pass
+    @staticmethod
+    def resize(*args, **kwargs): pass
+    @staticmethod
+    def setPermissions(*args, **kwargs): pass
+    @staticmethod
+    def symLinkTarget(*args, **kwargs): pass
     __new__ = None
     
     
@@ -22519,42 +14633,17 @@ class QTemporaryFile(QFile):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
-    def autoRemove(*args, **kwargs):
-        pass
-    
-    
-    def fileName(*args, **kwargs):
-        pass
-    
-    
-    def fileTemplate(*args, **kwargs):
-        pass
-    
-    
-    def open(*args, **kwargs):
-        pass
-    
-    
-    def setAutoRemove(*args, **kwargs):
-        pass
-    
-    
-    def setFileTemplate(*args, **kwargs):
-        pass
-    
-    
-    def createLocalFile(*args, **kwargs):
-        pass
-    
-    
-    def createNativeFile(*args, **kwargs):
-        pass
-    
-    
+    def autoRemove(*args, **kwargs): pass
+    def fileName(*args, **kwargs): pass
+    def fileTemplate(*args, **kwargs): pass
+    def open(*args, **kwargs): pass
+    def setAutoRemove(*args, **kwargs): pass
+    def setFileTemplate(*args, **kwargs): pass
+    @staticmethod
+    def createLocalFile(*args, **kwargs): pass
+    @staticmethod
+    def createNativeFile(*args, **kwargs): pass
     __new__ = None
     
     
@@ -22562,167 +14651,58 @@ class QTemporaryFile(QFile):
 
 
 
-def qIsInf(*args, **kwargs):
-    pass
 
+def QT_TRANSLATE_NOOP3(*args, **kwargs): pass
+def qFatal(*args, **kwargs): pass
+def qAbs(*args, **kwargs): pass
+def qAtan(*args, **kwargs): pass
+def qAcos(*args, **kwargs): pass
+def QT_TRANSLATE_NOOP_UTF8(*args, **kwargs): pass
+def qRegisterResourceData(*args, **kwargs): pass
+def qDebug(*args, **kwargs): pass
+def qWarning(*args, **kwargs): pass
+def QT_TR_NOOP(*args, **kwargs): pass
+def QT_TR_NOOP_UTF8(*args, **kwargs): pass
+def qCritical(*args, **kwargs): pass
+def qInstallMessageHandler(*args, **kwargs): pass
+def qIsNull(*args, **kwargs): pass
+def qtTrId(*args, **kwargs): pass
+def qIsFinite(*args, **kwargs): pass
+def SIGNAL(*args, **kwargs): pass
+def qFastSin(*args, **kwargs): pass
+def qAddPostRoutine(*args, **kwargs): pass
+def qChecksum(*args, **kwargs): pass
+def qAsin(*args, **kwargs): pass
+def qFastCos(*args, **kwargs): pass
+def SLOT(*args, **kwargs): pass
+def qFuzzyIsNull(*args, **kwargs): pass
+def qIsNaN(*args, **kwargs): pass
+def qUnregisterResourceData(*args, **kwargs): pass
+def __moduleShutdown(*args, **kwargs): pass
+def qVersion(*args, **kwargs): pass
+def qAtan2(*args, **kwargs): pass
+def qFabs(*args, **kwargs): pass
+def QT_TRANSLATE_NOOP(*args, **kwargs): pass
+def qFuzzyCompare(*args, **kwargs): pass
+def qIsInf(*args, **kwargs): pass
+def qTan(*args, **kwargs): pass
+def qrand(*args, **kwargs): pass
+def qsrand(*args, **kwargs): pass
+def qExp(*args, **kwargs): pass
 
-def SIGNAL(*args, **kwargs):
-    pass
-
-
-def qAcos(*args, **kwargs):
-    pass
-
-
-def qAtan2(*args, **kwargs):
-    pass
-
-
-def qExp(*args, **kwargs):
-    pass
-
-
-def qFatal(*args, **kwargs):
-    pass
-
-
-def qIsFinite(*args, **kwargs):
-    pass
-
-
-def QT_TRANSLATE_NOOP(*args, **kwargs):
-    pass
-
-
-def qRegisterResourceData(*args, **kwargs):
-    pass
-
-
-def QT_TRANSLATE_NOOP3(*args, **kwargs):
-    pass
-
-
-def qAbs(*args, **kwargs):
-    pass
-
-
-def qAtan(*args, **kwargs):
-    pass
-
-
-def qDebug(*args, **kwargs):
-    pass
-
-
-def qFastSin(*args, **kwargs):
-    pass
-
-
-def qInstallMessageHandler(*args, **kwargs):
-    pass
-
-
-def QT_TRANSLATE_NOOP_UTF8(*args, **kwargs):
-    pass
-
-
-def qIsNull(*args, **kwargs):
-    pass
-
-
-def qAddPostRoutine(*args, **kwargs):
-    pass
-
-
-def qVersion(*args, **kwargs):
-    pass
-
-
-def __moduleShutdown(*args, **kwargs):
-    pass
-
-
-def qWarning(*args, **kwargs):
-    pass
-
-
-def QT_TR_NOOP(*args, **kwargs):
-    pass
-
-
-def qAsin(*args, **kwargs):
-    pass
-
-
-def qCritical(*args, **kwargs):
-    pass
-
-
-def qFuzzyIsNull(*args, **kwargs):
-    pass
-
-
-def QT_TR_NOOP_UTF8(*args, **kwargs):
-    pass
-
-
-def qIsNaN(*args, **kwargs):
-    pass
-
-
-def qUnregisterResourceData(*args, **kwargs):
-    pass
-
-
-def qFastCos(*args, **kwargs):
-    pass
-
-
-def qsrand(*args, **kwargs):
-    pass
-
-
-def qtTrId(*args, **kwargs):
-    pass
-
-
-def qChecksum(*args, **kwargs):
-    pass
-
-
-def qFuzzyCompare(*args, **kwargs):
-    pass
-
-
-def SLOT(*args, **kwargs):
-    pass
-
-
-def qFabs(*args, **kwargs):
-    pass
-
-
-def qTan(*args, **kwargs):
-    pass
-
-
-def qrand(*args, **kwargs):
-    pass
-
-
-
-QtDebugMsg = None
-
-QtWarningMsg = None
 
 QtCriticalMsg = None
+
+QtSystemMsg = None
 
 QtFatalMsg = None
 
 QtInfoMsg = None
 
-QtSystemMsg = None
+QtDebugMsg = None
 
 __version__ = '5.6.1'
+
+QtWarningMsg = None
 
 

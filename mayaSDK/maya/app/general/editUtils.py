@@ -1,6 +1,10 @@
 from maya.maya_to_py_itr import PyEditItr
 from collections import deque
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class SelectionModel(object):
     """
     Encapsulate the lists edits window (mel UI) 
@@ -11,25 +15,15 @@ class SelectionModel(object):
     
     
     
-    def __init__(self, text_scroll_list='None', indexes='None', edit_strings='None', edit_count='None'):
-        pass
-    
-    
-    def edit_count(self):
-        pass
-    
-    
-    def has_edit(self, edit_string):
-        pass
-    
-    
-    def has_index(self, index):
-        pass
-    
-    
+    def __init__(self, text_scroll_list='None', indexes='None', edit_strings='None', edit_count='None'): pass
+    def edit_count(self): pass
+    def has_edit(self, edit_string): pass
+    def has_index(self, index): pass
     __dict__ = None
     
+    
     __weakref__ = None
+
 
 
 
@@ -46,10 +40,7 @@ def displayUnappliedEdits(unappliedEdits, textScrollList, index):
     
     Returns the next unoccupied index in the textScrollList
     """
-
     pass
-
-
 def getEditsThatAffect(target):
     """
     Query edits that affect nodes contained in the specified
@@ -58,10 +49,9 @@ def getEditsThatAffect(target):
     This will include edits made to nodes in the from any other
     assembly in the hierarchy above it
     """
-
     pass
-
-
+def makeDependNode(name): pass
+def printDivider(title, textScrollList, index): pass
 def displayEditsOn(owner, textScrollList, filterWidget, failedEditsMenuItem, unappliedEditsMenuItem, nonRemovableEditsMenuItem):
     """
     Query edits that are stored on the owner node and add
@@ -76,14 +66,7 @@ def displayEditsOn(owner, textScrollList, filterWidget, failedEditsMenuItem, una
     unappliedEditsMenuItem = 'List Assembly Edits' show unapplied edit menu item
     nonRemovableEditsMenuItem = 'List Assembly Edits' show non-removable edit menu item
     """
-
     pass
-
-
-def printDivider(title, textScrollList, index):
-    pass
-
-
 def removeSelectedEdits(assembly, textScrollList, listEditsOnSelectedAssemblyMenuItem):
     """
     Try to remove the edits that are selected in 'List Assembly Edits' window.
@@ -96,10 +79,13 @@ def removeSelectedEdits(assembly, textScrollList, listEditsOnSelectedAssemblyMen
     Returns true if all the selected edits were removable.
     Returns false if any of the selected edits live on a nested assembly and can't be removed
     """
-
     pass
-
-
+def doRemoveSelectedEdits(assemblyName, selection_model, listEditsOnSelectedAssembly):
+    """
+    This function does the work described for the "removeSelectedEdits"
+    method below.
+    """
+    pass
 def displayEditsWithIter(it, textScrollList, filterWidget, index, unappliedEdits, failedEditsMenuItem, unappliedEditsMenuItem, nonRemovableEditsMenuItem):
     """
     Iterate over edits using given iterator, and add them to the
@@ -120,14 +106,24 @@ def displayEditsWithIter(it, textScrollList, filterWidget, index, unappliedEdits
     
     Returns the next unoccupied index in the textScrollList
     """
-
     pass
-
-
-def makeDependNode(name):
+def getEdits(owner, target):
+    """
+    Query edits that are stored on the given owner node.
+    
+    If target is not empty, we will only list
+    edits that affect nodes in this assembly.
+    
+    If target is empty, we will list all edits
+    stored on the given node
+    """
     pass
-
-
+def canActiveRepApplyEdits(assembly):
+    """
+    Is the active representation for this assembly one that can
+    have edits applied to it?
+    """
+    pass
 def displayEditsThatAffect(target, textScrollList, filterWidget, failedEditsMenuItem, unappliedEditsMenuItem, nonRemovableEditsMenuItem):
     """
     Query edits that affect nodes in the target assembly and
@@ -153,40 +149,5 @@ def displayEditsThatAffect(target, textScrollList, filterWidget, failedEditsMenu
     unappliedEditsMenuItem = 'List Assembly Edits' show unapplied edit menu item
     nonRemovableEditsMenuItem = 'List Assembly Edits' show non-removable edit menu item
     """
-
     pass
-
-
-def getEdits(owner, target):
-    """
-    Query edits that are stored on the given owner node.
-    
-    If target is not empty, we will only list
-    edits that affect nodes in this assembly.
-    
-    If target is empty, we will list all edits
-    stored on the given node
-    """
-
-    pass
-
-
-def canActiveRepApplyEdits(assembly):
-    """
-    Is the active representation for this assembly one that can
-    have edits applied to it?
-    """
-
-    pass
-
-
-def doRemoveSelectedEdits(assemblyName, selection_model, listEditsOnSelectedAssembly):
-    """
-    This function does the work described for the "removeSelectedEdits"
-    method below.
-    """
-
-    pass
-
-
 

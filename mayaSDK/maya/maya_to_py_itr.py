@@ -1,3 +1,6 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class MayaToPyItr(object):
     """
     This class turns a non pythonic maya iterator into a standard
@@ -12,23 +15,12 @@ class MayaToPyItr(object):
         """
         # delegate all unknown methods and attr accesses to the maya iterator
         """
-    
         pass
-    
-    
-    def __init__(self, maya_iterator):
-        pass
-    
-    
-    def __iter__(self):
-        pass
-    
-    
-    def __len__(self):
-        pass
-    
-    
+    def __init__(self, maya_iterator): pass
+    def __iter__(self): pass
+    def __len__(self): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
@@ -48,8 +40,7 @@ class PyDagItr(MayaToPyItr):
     
     
     
-    def __init__(self, mit_dag='"<maya.OpenMaya.MItDag; proxy of <Swig Object of type \'MItDag *\' at 0x000002074AC93750> >"'):
-        pass
+    def __init__(self, mit_dag='"<maya.OpenMaya.MItDag; proxy of <Swig Object of type \'MItDag *\' at 0x000002422C126B70> >"'): pass
 
 
 class PyEditItr(MayaToPyItr):
@@ -80,10 +71,7 @@ class PyEditItr(MayaToPyItr):
         mit_edits om.MItEdits the 
         ar_mobj assembly reference MObject
         """
-    
         pass
-    
-    
     edit_factories = {}
 
 
@@ -97,25 +85,6 @@ class PyDepGraphItr(MayaToPyItr):
     pass
 
 
-class PyDepNodesItr(PyDepGraphItr):
-    """
-    This wraps MItDependencyNodes iterator turning it into a python iterator.
-    A default MItDependencyNodes iterator will be constructed if none is 
-    specified.
-    """
-    
-    
-    
-    def __init__(self, mit_dependency_nodes='"<maya.OpenMaya.MItDependencyNodes; proxy of <Swig Object of type \'MItDependencyNodes *\' at 0x000002074AC93780> >"', filter='0', miterator_type='None'):
-        """
-        filter and miterator_type are used to determine how to properly reset the
-        mit_dependency_nodes iterator they should be the same values used to 
-        construct mit_dependency_nodes iterator
-        """
-    
-        pass
-
-
 class PyAssemblyItr(PyDagItr):
     """
     This iterates over all the scene assembly nodes in the scene
@@ -126,7 +95,24 @@ class PyAssemblyItr(PyDagItr):
     
     
     
-    def __init__(self):
+    def __init__(self): pass
+
+
+class PyDepNodesItr(PyDepGraphItr):
+    """
+    This wraps MItDependencyNodes iterator turning it into a python iterator.
+    A default MItDependencyNodes iterator will be constructed if none is 
+    specified.
+    """
+    
+    
+    
+    def __init__(self, mit_dependency_nodes='"<maya.OpenMaya.MItDependencyNodes; proxy of <Swig Object of type \'MItDependencyNodes *\' at 0x000002422C126D20> >"', filter='0', miterator_type='None'):
+        """
+        filter and miterator_type are used to determine how to properly reset the
+        mit_dependency_nodes iterator they should be the same values used to 
+        construct mit_dependency_nodes iterator
+        """
         pass
 
 

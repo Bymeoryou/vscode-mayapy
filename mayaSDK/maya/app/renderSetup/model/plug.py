@@ -1,179 +1,5 @@
-class _MPxCommand(object):
-    """
-    Base class for custom commands.
-    """
-    
-    
-    
-    def __init__(*args, **kwargs):
-        """
-        x.__init__(...) initializes x; see help(type(x)) for signature
-        """
-    
-        pass
-    
-    
-    def doIt(*args, **kwargs):
-        """
-        Called by Maya to execute the command.
-        """
-    
-        pass
-    
-    
-    def hasSyntax(*args, **kwargs):
-        """
-        Called by Maya to determine if the command provides an MSyntax object describing its syntax.
-        """
-    
-        pass
-    
-    
-    def isUndoable(*args, **kwargs):
-        """
-        Called by Maya to determine if the command supports undo.
-        """
-    
-        pass
-    
-    
-    def redoIt(*args, **kwargs):
-        """
-        Called by Maya to redo a previously undone command.
-        """
-    
-        pass
-    
-    
-    def syntax(*args, **kwargs):
-        """
-        Returns the command's MSyntax object, if it has one.
-        """
-    
-        pass
-    
-    
-    def undoIt(*args, **kwargs):
-        """
-        Called by Maya to undo a previously executed command.
-        """
-    
-        pass
-    
-    
-    def appendToResult(*args, **kwargs):
-        """
-        Append a value to the result to be returned by the command.
-        """
-    
-        pass
-    
-    
-    def clearResult(*args, **kwargs):
-        """
-        Clears the command's result.
-        """
-    
-        pass
-    
-    
-    def currentResult(*args, **kwargs):
-        """
-        Returns the command's current result.
-        """
-    
-        pass
-    
-    
-    def currentResultType(*args, **kwargs):
-        """
-        Returns the type of the current result.
-        """
-    
-        pass
-    
-    
-    def displayError(*args, **kwargs):
-        """
-        Display an error message.
-        """
-    
-        pass
-    
-    
-    def displayInfo(*args, **kwargs):
-        """
-        Display an informational message.
-        """
-    
-        pass
-    
-    
-    def displayWarning(*args, **kwargs):
-        """
-        Display a warning message.
-        """
-    
-        pass
-    
-    
-    def isCurrentResultArray(*args, **kwargs):
-        """
-        Returns true if the command's current result is an array of values.
-        """
-    
-        pass
-    
-    
-    def setResult(*args, **kwargs):
-        """
-        Set the value of the result to be returned by the command.
-        """
-    
-        pass
-    
-    
-    commandString = None
-    
-    historyOn = None
-    
-    __new__ = None
-    
-    
-    kDouble = 1
-    
-    
-    kLong = 0
-    
-    
-    kNoArg = 3
-    
-    
-    kString = 2
-
-
-class UnlockedGuard:
-    """
-    Safe way to unlock a plug in a block. 
-    Lock state will be recovered back on exit of the block (for ancestors and children plugs).
-    Example:
-        with UnlockedGuard(aLockedPlug):
-            someActionsOnThePlug()
-    """
-    
-    
-    
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, type, value, traceback):
-        pass
-    
-    
-    def __init__(self, plg):
-        pass
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class Plug(object):
     """
@@ -200,65 +26,35 @@ class Plug(object):
         Plug(MObject, string (attribute name))
         Plug(string (node name), string (attribute name))
         """
-    
         pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
+    def __str__(self): pass
     def accepts(self, other):
         """
         Returns true if plug would accept a connection with other plug
         i.e. plug and other plug are type compatible for connection.
         """
-    
         pass
-    
-    
-    def acceptsOverrideType(self, typeId):
-        pass
-    
-    
-    def applyOverrideType(self, overType):
-        pass
-    
-    
+    def acceptsOverrideType(self, typeId): pass
+    def applyOverrideType(self, overType): pass
     def attribute(self):
         """
         Returns the attribute (MFnAttribute) of the plug
         """
-    
         pass
-    
-    
-    def availableOverrides(self):
-        pass
-    
-    
-    def children(self):
-        pass
-    
-    
+    def availableOverrides(self): pass
+    def children(self): pass
     def cloneAttribute(self, nodeObj, longName, shortName, undoable='1'):
         """
         Creates a new attribute on a node by cloning this plug's attribute.
         Undoable by default
         """
-    
         pass
-    
-    
     def copyValue(self, other):
         """
         Sets the value of plug 'self' to the value contained in plug 'other' 
         The 'other' plug can be either a Plug or a MPlug.
         """
-    
         pass
-    
-    
     def createAttributeFrom(self, nodeObj, longName, shortName, limits='None'):
         """
         Creates a new attribute on a node by cloning this plug's attribute. 
@@ -266,42 +62,19 @@ class Plug(object):
         Note: None for a limit value means that there is no limit. For example,
               if min is None, it means that there is no minimum limit.
         """
-    
         pass
-    
-    
     def getAttributeLimits(self):
         """
         Get the limits of the plug
         """
-    
         pass
-    
-    
-    def isOvrSupported(self):
-        pass
-    
-    
-    def localizedTypeString(self):
-        pass
-    
-    
-    def node(self):
-        pass
-    
-    
-    def overrideType(self, overType):
-        pass
-    
-    
-    def parent(self):
-        pass
-    
-    
-    def setAttributeLimits(self, limits):
-        pass
-    
-    
+    def isOvrSupported(self): pass
+    def localizedTypeString(self): pass
+    def node(self): pass
+    def overrideType(self, overType): pass
+    def parent(self): pass
+    def setAttributeLimits(self, limits): pass
+    @staticmethod
     def createAttribute(nodeObj, longName, shortName, dict, undoable='1'):
         """
         Create a new attribute on a node using the given names and properties dictionary. 
@@ -309,47 +82,74 @@ class Plug(object):
         addDynamicAttribute (if it's not undoable, use MFnDependencyNode.addAttribute()) 
         to add the returned object as a new dynamic attribute on a node.
         """
-    
         pass
-    
-    
-    def getNames(plugName):
+    @staticmethod
+    def getNames(plugName): pass
+    @property
+    def attributeName(self): pass
+    @property
+    def hasLimits(self):
+        """
+        Returns true if the type supports min/max limits.
+        """
         pass
-    
-    
+    @property
+    def isConnectable(self):
+        """
+        Returns true if plug's input can be connected.
+        """
+        pass
+    @property
+    def isKeyable(self):
+        """
+        Returns true if the plug has the keyable property.
+        
+        Note that a plug that does not have this property can still have
+        key frames set on it.  As per Maya documentation, a keyable
+        attribute means that 'if any of the animation commands (setKeyframe,
+        cutKey, copyKey,..) are issued without explicitly specifying any
+        attributes with the -at/attribute flag, then the command will
+        operate on all keyable attributes of the specified objects'.
+        
+        The autoKeyframe functionality also uses the keyable property to
+        determine if key frames should be set.
+        """
+        pass
+    @property
+    def isLocked(self):
+        """
+        Returns true is plug or plug's children (compound) are locked.
+        """
+        pass
+    @property
+    def isNumeric(self): pass
+    @property
+    def isUnit(self): pass
+    @property
+    def isValid(self): pass
+    @property
+    def isVector(self):
+        """
+        Returns true if the type is a vector type.
+        """
+        pass
+    @property
+    def name(self): pass
+    @property
+    def nodeName(self): pass
+    @property
+    def plug(self): pass
+    @property
+    def type(self): pass
+    @property
+    def uiUnitValue(self): pass
+    @property
+    def value(self): pass
     __dict__ = None
+    
     
     __weakref__ = None
     
-    attributeName = None
-    
-    hasLimits = None
-    
-    isConnectable = None
-    
-    isKeyable = None
-    
-    isLocked = None
-    
-    isNumeric = None
-    
-    isUnit = None
-    
-    isValid = None
-    
-    isVector = None
-    
-    name = None
-    
-    nodeName = None
-    
-    plug = None
-    
-    type = None
-    
-    uiUnitValue = None
-    
-    value = None
     
     kAngle = 12
     
@@ -402,6 +202,139 @@ class Plug(object):
     kTime = 11
 
 
+class UnlockedGuard:
+    """
+    Safe way to unlock a plug in a block. 
+    Lock state will be recovered back on exit of the block (for ancestors and children plugs).
+    Example:
+        with UnlockedGuard(aLockedPlug):
+            someActionsOnThePlug()
+    """
+    
+    
+    
+    def __enter__(self): pass
+    def __exit__(self, type, value, traceback): pass
+    def __init__(self, plg): pass
+
+
+class _MPxCommand(object):
+    """
+    Base class for custom commands.
+    """
+    
+    
+    
+    def __init__(*args, **kwargs):
+        """
+        x.__init__(...) initializes x; see help(type(x)) for signature
+        """
+        pass
+    def doIt(*args, **kwargs):
+        """
+        Called by Maya to execute the command.
+        """
+        pass
+    def hasSyntax(*args, **kwargs):
+        """
+        Called by Maya to determine if the command provides an MSyntax object describing its syntax.
+        """
+        pass
+    def isUndoable(*args, **kwargs):
+        """
+        Called by Maya to determine if the command supports undo.
+        """
+        pass
+    def redoIt(*args, **kwargs):
+        """
+        Called by Maya to redo a previously undone command.
+        """
+        pass
+    def syntax(*args, **kwargs):
+        """
+        Returns the command's MSyntax object, if it has one.
+        """
+        pass
+    def undoIt(*args, **kwargs):
+        """
+        Called by Maya to undo a previously executed command.
+        """
+        pass
+    @staticmethod
+    def appendToResult(*args, **kwargs):
+        """
+        Append a value to the result to be returned by the command.
+        """
+        pass
+    @staticmethod
+    def clearResult(*args, **kwargs):
+        """
+        Clears the command's result.
+        """
+        pass
+    @staticmethod
+    def currentResult(*args, **kwargs):
+        """
+        Returns the command's current result.
+        """
+        pass
+    @staticmethod
+    def currentResultType(*args, **kwargs):
+        """
+        Returns the type of the current result.
+        """
+        pass
+    @staticmethod
+    def displayError(*args, **kwargs):
+        """
+        Display an error message.
+        """
+        pass
+    @staticmethod
+    def displayInfo(*args, **kwargs):
+        """
+        Display an informational message.
+        """
+        pass
+    @staticmethod
+    def displayWarning(*args, **kwargs):
+        """
+        Display a warning message.
+        """
+        pass
+    @staticmethod
+    def isCurrentResultArray(*args, **kwargs):
+        """
+        Returns true if the command's current result is an array of values.
+        """
+        pass
+    @staticmethod
+    def setResult(*args, **kwargs):
+        """
+        Set the value of the result to be returned by the command.
+        """
+        pass
+    __new__ = None
+    
+    
+    commandString = None
+    
+    
+    historyOn = None
+    
+    
+    kDouble = 1
+    
+    
+    kLong = 0
+    
+    
+    kNoArg = 3
+    
+    
+    kString = 2
+
+
 class AddDynamicAttribute(_MPxCommand):
     """
     Undoable command to add an attribute to a node
@@ -412,37 +345,20 @@ class AddDynamicAttribute(_MPxCommand):
     
     
     
-    def __init__(self, node, attribute, mdgModifier):
-        pass
-    
-    
-    def doIt(self, args):
-        pass
-    
-    
-    def isUndoable(self):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def execute(node, attribute):
-        pass
-    
-    
+    def __init__(self, node, attribute, mdgModifier): pass
+    def doIt(self, args): pass
+    def isUndoable(self): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def execute(node, attribute): pass
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     attribute = None
     
@@ -457,74 +373,55 @@ class AddDynamicAttribute(_MPxCommand):
 
 
 
-def _createFilenameAttr(longName, shortName):
-    pass
-
-
-def relatives(plg):
-    """
-    Returns relatives (ancestors, plug itself and descendant) of the given plug in deterministic order.
-    Parents are guaranteed to come before children in generator.
-    """
-
-    pass
-
-
-def toUiUnits(type, value):
-    pass
-
 
 def findPlug(node, attr='None'):
     """
     Return a Plug instance if the MPlug was found, None otherwise.
     """
-
     pass
-
-
-def isSettable(plug):
+def relatives(plg):
     """
-    Predicate that returns whether the MPlug argument can be set.
+    Returns relatives (ancestors, plug itself and descendant) of the given plug in deterministic order.
+    Parents are guaranteed to come before children in generator.
     """
-
     pass
-
-
-def toInternalUnits(type, value):
-    pass
-
-
+def toUiUnits(type, value): pass
+def _createFilenameAttr(longName, shortName): pass
 def value(mPlug):
     """
     Convenience function to retrieve the value of an MPlug.
     """
-
     pass
+def isSettable(plug):
+    """
+    Predicate that returns whether the MPlug argument can be set.
+    """
+    pass
+def toInternalUnits(type, value): pass
 
-
-
-kNotOverridablePlug = []
-
-kPlugHasConnectedParent = []
-
-kVectorTypeStr = []
-
-kUndoable = 1
 
 kAddAttributePrivate = []
 
+kArityMismatch = []
+
 kNotUndoable = 0
 
-kUnsupportedAttribute = []
-
 kPlugWithoutLimits = []
-
-kArityMismatch = []
 
 kPlugHasNotSettableChild = []
 
 kUnknownType = []
 
+kUndoable = 1
+
 kCompoundTypeStr = []
+
+kPlugHasConnectedParent = []
+
+kVectorTypeStr = []
+
+kUnsupportedAttribute = []
+
+kNotOverridablePlug = []
 
 

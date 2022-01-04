@@ -8,7 +8,12 @@ In this way, no time is spent processing Maya notifications when no
 observers are listening.
 """
 
+
 from maya.app.renderSetup.model.observable import Observable
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class ObservableProxy(Observable):
     """
@@ -19,16 +24,9 @@ class ObservableProxy(Observable):
     
     
     
-    def __del__(self):
-        pass
-    
-    
-    def activate(self):
-        pass
-    
-    
-    def deactivate(self):
-        pass
+    def __del__(self): pass
+    def activate(self): pass
+    def deactivate(self): pass
 
 
 class ObservableDGProxy(ObservableProxy):
@@ -38,24 +36,11 @@ class ObservableDGProxy(ObservableProxy):
     
     
     
-    def __init__(self, cbName, cb='None', cbArgs='None'):
-        pass
-    
-    
-    def activate(self):
-        pass
-    
-    
-    def addItemObserver(self, obs):
-        pass
-    
-    
-    def deactivate(self):
-        pass
-    
-    
-    def removeItemObserver(self, obs):
-        pass
+    def __init__(self, cbName, cb='None', cbArgs='None'): pass
+    def activate(self): pass
+    def addItemObserver(self, obs): pass
+    def deactivate(self): pass
+    def removeItemObserver(self, obs): pass
 
 
 class ObservableDagProxy(ObservableDGProxy):
@@ -65,16 +50,10 @@ class ObservableDagProxy(ObservableDGProxy):
     
     
     
-    def __init__(self, cbName, dagCbTypes, cb):
-        pass
-    
-    
-    def activate(self):
-        pass
-    
-    
-    def deactivate(self):
-        pass
+    def __init__(self, cbName, dagCbTypes, cb): pass
+    def activate(self): pass
+    def deactivate(self): pass
+
 
 
 

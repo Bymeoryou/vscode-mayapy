@@ -24,9 +24,14 @@ Note:
     No updates are performed on the not visible ones.
 """
 
+
+from maya.app.renderSetup.model.renderSetupPrivate import PostApplyCmd
 from functools import partial
 from maya.app.renderSetup.model.observable import Observable
-from maya.app.renderSetup.model.renderSetupPrivate import PostApplyCmd
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class RenderLayerBase(object):
     """
@@ -34,6 +39,7 @@ class RenderLayerBase(object):
     Defines functions for toggling visibility and renderability.
     Children must implement:
       - _getLegacyNodeName()
+      - getLegacyNode()
       - _updateLegacyRenderLayerVisibility()
       - apply()
       - unapply()
@@ -41,27 +47,14 @@ class RenderLayerBase(object):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def isRenderable(self):
-        pass
-    
-    
-    def isVisible(self):
-        pass
-    
-    
-    def makeVisible(self):
-        pass
-    
-    
-    def setRenderable(self, value):
-        pass
-    
-    
+    def __init__(self): pass
+    def isRenderable(self): pass
+    def isVisible(self): pass
+    def makeVisible(self): pass
+    def setObjectDeleted(self): pass
+    def setRenderable(self, value): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
@@ -78,44 +71,21 @@ class DefaultRenderLayer(RenderLayerBase, Observable):
     
     
     
-    def __init__(self):
+    def __init__(self): pass
+    def apply(*args, **kwargs): pass
+    def clearMemberNodesCache(self): pass
+    def getChildren(self): pass
+    def getLegacyNode(self):
+        """
+        Return the legacy render layer MObject.
+        """
         pass
-    
-    
-    def apply(self):
-        pass
-    
-    
-    def clearMemberNodesCache(self):
-        pass
-    
-    
-    def getChildren(self):
-        pass
-    
-    
-    def getMemberNodesCache(self):
-        pass
-    
-    
-    def hasLightsCollectionInstance(self):
-        pass
-    
-    
-    def name(self):
-        pass
-    
-    
-    def needsRefresh(self):
-        pass
-    
-    
-    def setMemberNodesCache(self, cache):
-        pass
-    
-    
-    def unapply(self):
-        pass
+    def getMemberNodesCache(self): pass
+    def hasLightsCollectionInstance(self): pass
+    def name(self): pass
+    def needsRefresh(self): pass
+    def setMemberNodesCache(self, cache): pass
+    def unapply(*args, **kwargs): pass
 
 
 from . import nodeList
@@ -131,102 +101,46 @@ class RenderLayer(RenderLayerBase, nodeList.ListBase, childNode.ChildNode):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def acceptImport(self):
-        pass
-    
-    
-    def addDefaultMembers(*args, **kwargs):
-        pass
-    
-    
+    def __init__(self): pass
+    def acceptImport(self): pass
+    def addDefaultMembers(self, objs): pass
+    def addMembers(*args, **kwargs): pass
     def aovCollectionInstance(self):
         """
         Get the AOV collection instance for this render layer,
         creating it if it doesn't exists as long as renderer 
         callbacks are registered for the current renderer.
         """
-    
         pass
-    
-    
-    def appendChild(*args, **kwargs):
-        pass
-    
-    
-    def appendCollection(*args, **kwargs):
-        pass
-    
-    
-    def apply(*args, **kwargs):
-        pass
-    
-    
+    def appendChild(*args, **kwargs): pass
+    def appendCollection(*args, **kwargs): pass
+    def apply(*args, **kwargs): pass
     def attachChild(self, pos, child):
         """
         Attach a collection at a specific position
         """
-    
         pass
-    
-    
     def attachCollection(self, pos, child):
         """
         Attach a collection at a specific position
         """
-    
         pass
-    
-    
-    def attachOverride(self, overrideName):
-        pass
-    
-    
-    def clearMemberNodesCache(self):
-        pass
-    
-    
+    def attachOverride(self, overrideName): pass
+    def clearMemberNodesCache(self): pass
     def copyForClipboard(self):
         """
         # Pasting a render layer that's visible will trigger a layer
         # switch, which can be expensive, and changes the user's currently
         # visible render layer.  Prevent this on copy for clipboard.
         """
-    
         pass
-    
-    
-    def createAbsoluteOverride(*args, **kwargs):
-        pass
-    
-    
-    def createCollection(*args, **kwargs):
-        pass
-    
-    
-    def createConnectionOverride(*args, **kwargs):
-        pass
-    
-    
-    def createRelativeOverride(*args, **kwargs):
-        pass
-    
-    
-    def descendantAdded(*args, **kwargs):
-        pass
-    
-    
-    def detachChild(*args, **kwargs):
-        pass
-    
-    
-    def detachCollection(*args, **kwargs):
-        pass
-    
-    
+    def createAbsoluteOverride(*args, **kwargs): pass
+    def createCollection(*args, **kwargs): pass
+    def createConnectionOverride(*args, **kwargs): pass
+    def createRelativeOverride(*args, **kwargs): pass
+    def descendantAdded(*args, **kwargs): pass
+    def detachChild(*args, **kwargs): pass
+    def detachCollection(*args, **kwargs): pass
     def findCollection(self, predicate, creator='None'):
         """
         Find the collection of this layer satisfying the predicate function or creates it
@@ -235,61 +149,40 @@ class RenderLayer(RenderLayerBase, nodeList.ListBase, childNode.ChildNode):
           predicate(collection): returns boolean.
           creator(void) : returns the created node.
         """
-    
         pass
-    
-    
     def findIn(self, nodeNames, includeSelf='True'):
         """
         Generator that returns all the collections in that layer that contain at least on of the 
         object in nodeNames. Optionally also returns self (with includeSelf=True) if the object is in the layer.
         """
-    
         pass
-    
-    
     def getChildren(self):
         """
         Get list of all existing Collections
         """
-    
         pass
-    
-    
     def getCollectionByName(self, collectionName, nested='False'):
         """
         Look for an existing collection by name
         """
-    
         pass
-    
-    
     def getCollections(self):
         """
         Get list of all existing Collections
         """
-    
         pass
-    
-    
     def getCorrespondingCollection(self, nodeName, selectedCollectionName):
         """
         The behavior is to look for Render Settings attribute to add the override
         in the Render Settings collection if it exists, then to use the selected
         collection; otherwise, to create a new collection containing the override.
         """
-    
         pass
-    
-    
     def getDefaultCollection(self):
         """
         Get the default collection where newly created nodes are placed
         """
-    
         pass
-    
-    
     def getEnabledSelectedNodeNames(self):
         """
         Get the names of the layer's DAG node members.
@@ -300,18 +193,14 @@ class RenderLayer(RenderLayerBase, nodeList.ListBase, childNode.ChildNode):
         @rtype: set
         @return: set of node names. Empty if none found.
         """
-    
         pass
-    
-    
-    def getFirstCollectionIndex(self):
+    def getFirstCollectionIndex(self): pass
+    def getLegacyNode(self):
+        """
+        Return the legacy render layer MObject.
+        """
         pass
-    
-    
-    def getMemberNodesCache(self):
-        pass
-    
-    
+    def getMemberNodesCache(self): pass
     def getMembers(self):
         """
         Get the names of the layer's DAG node members.
@@ -322,132 +211,73 @@ class RenderLayer(RenderLayerBase, nodeList.ListBase, childNode.ChildNode):
         @rtype: set
         @return: set of node names. Empty if none found.
         """
-    
         pass
-    
-    
-    def getNumIsolatedChildren(self):
-        pass
-    
-    
-    def getOverrides(self):
-        pass
-    
-    
+    def getNumIsolatedChildren(self): pass
+    def getOverrides(self): pass
     def getRenderSettingsChildCollectionByName(self, renderSettingsChildCollectionName, nested='False'):
         """
         Look for an existing render settings collection by name
         """
-    
         pass
-    
-    
     def hasAOVCollectionInstance(self):
         """
         Returns True if this layer has the AOV collection instance created.
         """
-    
         pass
-    
-    
-    def hasCollection(self, collectionName):
-        pass
-    
-    
+    def hasApplyOverridesRecursive(self): pass
+    def hasCollection(self, collectionName): pass
     def hasDefaultCollection(self):
         """
         Get the default collection where newly created nodes are placed
         """
-    
         pass
-    
-    
     def hasLightsCollectionInstance(self):
         """
         Returns True if this layer has the lights collection instance created.
         """
-    
         pass
-    
-    
     def hasRenderSettingsCollectionInstance(self):
         """
         Returns True if this layer has the render settings collection instance created.
         """
-    
         pass
-    
-    
-    def isAbstractClass(self):
-        pass
-    
-    
+    def isAbstractClass(self): pass
     def isAcceptableChild(self, modelOrData):
         """
         Check if the model could be a child of the render layer model
         """
-    
         pass
-    
-    
+    def itemChangedRecursive(self): pass
     def lightsCollectionInstance(self):
         """
         Get the lights collection instance for this render layer,
         creating it if it doesn't exists.
         """
-    
         pass
-    
-    
     def needsRefresh(self):
         """
         Following some changes the instance must be updated.
         """
-    
         pass
-    
-    
-    def postConstructor(self):
-        pass
-    
-    
+    def overridesConnections(self): pass
+    def postConstructor(self): pass
     def renderSettingsCollectionInstance(self):
         """
         Get the render settings collection instance for this render layer,
         creating it if it doesn't exists.
         """
-    
         pass
-    
-    
-    def setMemberNodesCache(self, cache):
-        pass
-    
-    
-    def setName(*args, **kwargs):
-        pass
-    
-    
-    def typeId(self):
-        pass
-    
-    
-    def typeName(self):
-        pass
-    
-    
-    def unapply(*args, **kwargs):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
+    def setMemberNodesCache(self, cache): pass
+    def setName(*args, **kwargs): pass
+    def setObjectDeleted(self): pass
+    def typeId(self): pass
+    def typeName(self): pass
+    def unapply(*args, **kwargs): pass
+    def update(*args, **kwargs): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def initializer(): pass
     collectionHighest = None
     
     
@@ -470,18 +300,10 @@ class RenderLayer(RenderLayerBase, nodeList.ListBase, childNode.ChildNode):
 
 
 
-def create(*args, **kwargs):
-    pass
 
-
-def _syncLegacyRenderLayers(layerName):
-    pass
-
-
-def delete(*args, **kwargs):
-    pass
-
-
+def create(*args, **kwargs): pass
+def delete(*args, **kwargs): pass
+def _syncLegacyRenderLayers(layerName): pass
 def memberTraversal(node):
     """
     Traverse render setup node children to determine layer membership.
@@ -492,33 +314,33 @@ def memberTraversal(node):
     
     If the node has no children, an empty list is returned.
     """
-
     pass
 
 
-
-kCollectionUnicity = []
-
-kCreateAOVCollection = []
-
-kCollectionAttached = []
-
-kSetRenderability = []
+kCreateLightsChildCollection = []
 
 kCreateAOVChildCollection = []
 
-kCreateLightsChildCollection = []
-
-kCreateLightsCollection = []
-
-kInvalidCollectionName = []
-
-kCollectionDetached = []
+kAOVCollectionNodeCreationFailed = []
 
 kUnknownCollection = []
 
+kCreateRenderSettingsCollection = []
+
+kInvalidCollectionName = []
+
+kSetRenderability = []
+
+kCollectionAttached = []
+
+kCollectionUnicity = []
+
 kAttachCollection = []
 
-kCreateRenderSettingsCollection = []
+kCreateAOVCollection = []
+
+kCreateLightsCollection = []
+
+kCollectionDetached = []
 
 

@@ -10,7 +10,12 @@ all three so that your decorators become easily self-documented.
         ...
 """
 
+
 from maya.analytics.utilities import add_analytic
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class makeAnalytic:
     """
@@ -33,46 +38,11 @@ class makeAnalytic:
     
     
     
-    def __call__(self, cls):
-        pass
-    
-    
-    def __init__(self, is_static):
-        pass
-    
-    
+    def __call__(self, cls): pass
+    def __init__(self, is_static): pass
     kReportMissingAttributes = False
 
 
-
-def __removeIndentation(theString, number='1'):
-    """
-    Utility function to remove the leading documentation indentation in a documentation string.
-    Presumes that the leading two tabs or 8 spaces are not part of the formatted documentation
-    but leaves all other leading spaces. That's why a simple lstrip() couldn't be used.
-    
-    'number' is the number of indentation levels to remove. An indentation level is presumed
-    to be either a single tab or 4 spaces. Normally you'd have number=2 for class methods and
-    number=1 for regular methods.
-    
-    Returns a list of lines so that the caller can indent them the way they want.
-    """
-
-    pass
-
-
-def addHelp(cls):
-    """
-    Class decorator to add a static method addHelp() to a class that prints
-    out the class.__fulldocs__ string. Use it in conjunction with @addMethodDocs
-    to provide a static help method that prints out documentation for all
-    exposed methods.
-        @addHelp
-        class MYCLASS:
-            ...
-    """
-
-    pass
 
 
 def __removeIndentationFromLine(theString, number='1'):
@@ -85,10 +55,7 @@ def __removeIndentationFromLine(theString, number='1'):
     'number' is the number of indentation levels to remove. An indentation level is presumed
     to be either a single tab or 4 spaces.
     """
-
     pass
-
-
 def addMethodDocs(cls):
     """
     Class decorator to add method docs to the class.__doc__.
@@ -98,8 +65,29 @@ def addMethodDocs(cls):
     This won't report methods with a leading underscore so
     use that naming convention to prevent them from being shown.
     """
-
     pass
-
-
+def addHelp(cls):
+    """
+    Class decorator to add a static method addHelp() to a class that prints
+    out the class.__fulldocs__ string. Use it in conjunction with @addMethodDocs
+    to provide a static help method that prints out documentation for all
+    exposed methods.
+        @addHelp
+        class MYCLASS:
+            ...
+    """
+    pass
+def __removeIndentation(theString, number='1'):
+    """
+    Utility function to remove the leading documentation indentation in a documentation string.
+    Presumes that the leading two tabs or 8 spaces are not part of the formatted documentation
+    but leaves all other leading spaces. That's why a simple lstrip() couldn't be used.
+    
+    'number' is the number of indentation levels to remove. An indentation level is presumed
+    to be either a single tab or 4 spaces. Normally you'd have number=2 for class methods and
+    number=1 for regular methods.
+    
+    Returns a list of lines so that the caller can indent them the way they want.
+    """
+    pass
 

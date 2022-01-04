@@ -17,10 +17,36 @@ will have a different set of stereo parameters and will only draw the
 background element.
 """
 
-def makeLinks():
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def breakLinks(): pass
+def notifyCameraSetCreateFinished(cameraSet, rigType="'StereoCamera'"):
+    """
+    Developers who need to customize camera sets have requested the ability to
+    receive nofications when we have finished created a camera set. This
+    is the function that kick-starts that notification.
+    """
     pass
-
-
+def makeLinks(): pass
+def isCameraSet(cameraSet):
+    """
+    Returns true if the object is a camera set.  This is simply
+    a wrapper objectType -isa
+    """
+    pass
+def __attachToCameraSet(rigRoot, cameraSet, objectSet='None'):
+    """
+    Attach the rigRoot to the cameraSet and assign it to the camera
+    set.  If an objectSet is provided then also attach it to the same layer
+    """
+    pass
+def _callFromDefinition(definitions, rigType, keywords, args):
+    """
+    Call the custom callback for this object.
+    """
+    pass
 def parentToLayer0Rig(rigRoot, cameraSet='None'):
     """
     When adding a new layer to a camera set, the most common desired
@@ -29,50 +55,8 @@ def parentToLayer0Rig(rigRoot, cameraSet='None'):
     transform at layer 0 and parenting the new rig under its
     transform.
     """
-
     pass
-
-
-def breakLinks():
-    pass
-
-
-def __attachToCameraSet(rigRoot, cameraSet, objectSet='None'):
-    """
-    Attach the rigRoot to the cameraSet and assign it to the camera
-    set.  If an objectSet is provided then also attach it to the same layer
-    """
-
-    pass
-
-
-def _callFromDefinition(definitions, rigType, keywords, args):
-    """
-    Call the custom callback for this object.
-    """
-
-    pass
-
-
-def notifyCameraSetCreateFinished(cameraSet, rigType="'StereoCamera'"):
-    """
-    Developers who need to customize camera sets have requested the ability to
-    receive nofications when we have finished created a camera set. This
-    is the function that kick-starts that notification.
-    """
-
-    pass
-
-
-def isCameraSet(cameraSet):
-    """
-    Returns true if the object is a camera set.  This is simply
-    a wrapper objectType -isa
-    """
-
-    pass
-
-
+def _makeOrSet(cameraSet, layerId, objectSet, setObj, add='True'): pass
 def addNewRigToSet(newRigRoot, currentRigRootOrCameraSet, objectSet='None'):
     """
     This is the main function for adding cameras/rigs to a camera
@@ -87,22 +71,7 @@ def addNewRigToSet(newRigRoot, currentRigRootOrCameraSet, objectSet='None'):
     
     We return the camera set on exit.
     """
-
     pass
-
-
-def _getDefinition(rigType):
-    """
-    Get the definition for this object.
-    """
-
-    pass
-
-
-def _makeOrSet(cameraSet, layerId, objectSet, setObj, add='True'):
-    pass
-
-
 def _gatherSelObjects():
     """
     Private method that gets the active selection list, finds all selected
@@ -111,8 +80,10 @@ def _gatherSelObjects():
        form  (cameraSet, cameraSet layerId, cameraName, objectSet)
     2) a list of objects to attach to the items found in 1)
     """
-
     pass
-
-
+def _getDefinition(rigType):
+    """
+    Get the definition for this object.
+    """
+    pass
 

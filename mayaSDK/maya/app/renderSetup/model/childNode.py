@@ -1,8 +1,14 @@
-from maya.app.renderSetup.model.serializableNode import *
+from maya.app.renderSetup.model.labelColor import *
 
-from maya.app.renderSetup.model.nodeNotes import NodeNotes
+
 from itertools import izip
 from maya.app.renderSetup.model.observable import Observable
+from maya.app.renderSetup.model.serializableNode import SerializableNode
+from maya.app.renderSetup.model.nodeNotes import NodeNotes
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class _MPxCommand(object):
     """
@@ -15,135 +21,98 @@ class _MPxCommand(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def doIt(*args, **kwargs):
         """
         Called by Maya to execute the command.
         """
-    
         pass
-    
-    
     def hasSyntax(*args, **kwargs):
         """
         Called by Maya to determine if the command provides an MSyntax object describing its syntax.
         """
-    
         pass
-    
-    
     def isUndoable(*args, **kwargs):
         """
         Called by Maya to determine if the command supports undo.
         """
-    
         pass
-    
-    
     def redoIt(*args, **kwargs):
         """
         Called by Maya to redo a previously undone command.
         """
-    
         pass
-    
-    
     def syntax(*args, **kwargs):
         """
         Returns the command's MSyntax object, if it has one.
         """
-    
         pass
-    
-    
     def undoIt(*args, **kwargs):
         """
         Called by Maya to undo a previously executed command.
         """
-    
         pass
-    
-    
+    @staticmethod
     def appendToResult(*args, **kwargs):
         """
         Append a value to the result to be returned by the command.
         """
-    
         pass
-    
-    
+    @staticmethod
     def clearResult(*args, **kwargs):
         """
         Clears the command's result.
         """
-    
         pass
-    
-    
+    @staticmethod
     def currentResult(*args, **kwargs):
         """
         Returns the command's current result.
         """
-    
         pass
-    
-    
+    @staticmethod
     def currentResultType(*args, **kwargs):
         """
         Returns the type of the current result.
         """
-    
         pass
-    
-    
+    @staticmethod
     def displayError(*args, **kwargs):
         """
         Display an error message.
         """
-    
         pass
-    
-    
+    @staticmethod
     def displayInfo(*args, **kwargs):
         """
         Display an informational message.
         """
-    
         pass
-    
-    
+    @staticmethod
     def displayWarning(*args, **kwargs):
         """
         Display a warning message.
         """
-    
         pass
-    
-    
+    @staticmethod
     def isCurrentResultArray(*args, **kwargs):
         """
         Returns true if the command's current result is an array of values.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setResult(*args, **kwargs):
         """
         Set the value of the result to be returned by the command.
         """
-    
         pass
+    __new__ = None
     
     
     commandString = None
     
-    historyOn = None
     
-    __new__ = None
+    historyOn = None
     
     
     kDouble = 1
@@ -156,77 +125,6 @@ class _MPxCommand(object):
     
     
     kString = 2
-
-
-from . import nodeList
-
-class ChildNode(Observable, NodeNotes, SerializableNode, nodeList.ListItem):
-    """
-    The class provides the basic functionality for any child nodes
-    """
-    
-    
-    
-    def __init__(self):
-        pass
-    
-    
-    def acceptImport(self):
-        pass
-    
-    
-    def addOpaqueData(self, key, data):
-        pass
-    
-    
-    def getImportedStatus(self):
-        pass
-    
-    
-    def getOpaqueData(self, key):
-        pass
-    
-    
-    def hasOpaqueData(self, key):
-        pass
-    
-    
-    def isCopyable(self):
-        pass
-    
-    
-    def removeOpaqueData(self, key):
-        pass
-    
-    
-    def setImportedStatus(self, value):
-        pass
-    
-    
-    def setName(self, newName):
-        """
-        Rename render setup node.
-        """
-    
-        pass
-    
-    
-    def creator():
-        """
-        # Awkwardly, abstract base classes seem to need a creator method.
-        """
-    
-        pass
-    
-    
-    def initializer():
-        pass
-    
-    
-    kTypeId = None
-    
-    
-    kTypeName = 'childNode'
 
 
 class TreeOrderedItem(object):
@@ -262,13 +160,48 @@ class TreeOrderedItem(object):
         or n overrides in a collection strung out in a linear list) will
         cause O(n) time complexity.
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+
+
+from . import nodeList
+
+class ChildNode(Observable, NodeNotes, SerializableNode, LabelColor, nodeList.ListItem):
+    """
+    The class provides the basic functionality for any child nodes
+    """
+    
+    
+    
+    def __init__(self): pass
+    def acceptImport(self): pass
+    def addOpaqueData(self, key, data): pass
+    def getImportedStatus(self): pass
+    def getOpaqueData(self, key): pass
+    def hasOpaqueData(self, key): pass
+    def isCopyable(self): pass
+    def removeOpaqueData(self, key): pass
+    def setImportedStatus(self, value): pass
+    def setName(self, newName):
+        """
+        Rename render setup node.
+        """
+        pass
+    @staticmethod
+    def creator():
+        """
+        # Awkwardly, abstract base classes seem to need a creator method.
+        """
+        pass
+    @staticmethod
+    def initializer(): pass
+    kTypeId = None
+    
+    
+    kTypeName = 'childNode'
 
 
 class EditImportedStatusCmd(_MPxCommand):
@@ -281,41 +214,24 @@ class EditImportedStatusCmd(_MPxCommand):
     
     
     
-    def __init__(self, node, imported):
-        pass
-    
-    
-    def doIt(self, args):
-        pass
-    
-    
-    def isUndoable(self):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
+    def __init__(self, node, imported): pass
+    def doIt(self, args): pass
+    def isUndoable(self): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
     def execute(node, imported):
         """
         Unapply the change of the imported status flag.
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     imported = None
     
@@ -327,12 +243,13 @@ class EditImportedStatusCmd(_MPxCommand):
 
 
 
-kOrderingFailure = "Nodes '%s' and '%s' cannot be ordered."
+
+kRename = []
 
 kCmdPrivate = []
 
 _IMPORTED_ATTRIBUTE_SHORT_NAME = 'imp'
 
-kRename = []
+kOrderingFailure = "Nodes '%s' and '%s' cannot be ordered."
 
 

@@ -1,17 +1,22 @@
+from maya.app.renderSetup.lightEditor.model.group import LightGroup
+from maya.app.renderSetup.lightEditor.model.item import LightItemBase
+from maya.app.renderSetup.lightEditor.model.light import LightItem
 from maya.app.renderSetup.lightEditor.model.editor import LightEditor
-from maya.app.renderSetup.lightEditor.model.light import LightEditorLight
-from maya.app.renderSetup.lightEditor.model.group import LightEditorGroup
-from maya.app.renderSetup.lightEditor.model.item import LightEditorItem
-
-def uninitialize(mplugin):
-    pass
 
 
-def initialize(mplugin):
-    pass
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def initialize(mplugin): pass
+def uninitialize(mplugin): pass
 
 
+invisibleNodeTypes = []
 
 nodeTypes = []
+
+kUnregisterFailed = []
+
+kRegisterFailed = []
 
 

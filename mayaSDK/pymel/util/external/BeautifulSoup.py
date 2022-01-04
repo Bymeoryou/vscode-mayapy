@@ -1,5 +1,6 @@
 import exceptions
 
+
 """
 Beautiful Soup
 Elixir and Tonic
@@ -79,8 +80,34 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE, DAMMIT.
 """
 
-from sgmllib import SGMLParser
+
 from sgmllib import SGMLParseError
+from sgmllib import SGMLParser
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class UnicodeDammit:
+    """
+    A class for detecting the encoding of a *ML document and
+    converting it to a Unicode string. If the source encoding is
+    windows-1252, can replace MS smart quotes with their HTML or XML
+    equivalents.
+    """
+    
+    
+    
+    def __init__(self, markup, overrideEncodings='[]', smartQuotesTo="'xml'", isHTML='False'): pass
+    def find_codec(self, charset): pass
+    CHARSET_ALIASES = {}
+    
+    
+    EBCDIC_TO_ASCII_MAP = None
+    
+    
+    MS_CHARS = {}
+
 
 class PageElement:
     """
@@ -94,200 +121,124 @@ class PageElement:
         """
         Appends the given tag to the contents of this tag.
         """
-    
         pass
-    
-    
     def extract(self):
         """
         Destructively rips this element out of the tree.
         """
-    
         pass
-    
-    
     def fetchNextSiblings(self, name='None', attrs='{}', text='None', limit='None', **kwargs):
         """
         Returns the siblings of this Tag that match the given
         criteria and appear after this Tag in the document.
         """
-    
         pass
-    
-    
     def fetchParents(self, name='None', attrs='{}', limit='None', **kwargs):
         """
         Returns the parents of this Tag that match the given
         criteria.
         """
-    
         pass
-    
-    
     def fetchPrevious(self, name='None', attrs='{}', text='None', limit='None', **kwargs):
         """
         Returns all items that match the given criteria and appear
         before this Tag in the document.
         """
-    
         pass
-    
-    
     def fetchPreviousSiblings(self, name='None', attrs='{}', text='None', limit='None', **kwargs):
         """
         Returns the siblings of this Tag that match the given
         criteria and appear before this Tag in the document.
         """
-    
         pass
-    
-    
     def findAllNext(self, name='None', attrs='{}', text='None', limit='None', **kwargs):
         """
         Returns all items that match the given criteria and appear
         after this Tag in the document.
         """
-    
         pass
-    
-    
     def findAllPrevious(self, name='None', attrs='{}', text='None', limit='None', **kwargs):
         """
         Returns all items that match the given criteria and appear
         before this Tag in the document.
         """
-    
         pass
-    
-    
     def findNext(self, name='None', attrs='{}', text='None', **kwargs):
         """
         Returns the first item that matches the given criteria and
         appears after this Tag in the document.
         """
-    
         pass
-    
-    
     def findNextSibling(self, name='None', attrs='{}', text='None', **kwargs):
         """
         Returns the closest sibling to this Tag that matches the
         given criteria and appears after this Tag in the document.
         """
-    
         pass
-    
-    
     def findNextSiblings(self, name='None', attrs='{}', text='None', limit='None', **kwargs):
         """
         Returns the siblings of this Tag that match the given
         criteria and appear after this Tag in the document.
         """
-    
         pass
-    
-    
     def findParent(self, name='None', attrs='{}', **kwargs):
         """
         Returns the closest parent of this Tag that matches the given
         criteria.
         """
-    
         pass
-    
-    
     def findParents(self, name='None', attrs='{}', limit='None', **kwargs):
         """
         Returns the parents of this Tag that match the given
         criteria.
         """
-    
         pass
-    
-    
     def findPrevious(self, name='None', attrs='{}', text='None', **kwargs):
         """
         Returns the first item that matches the given criteria and
         appears before this Tag in the document.
         """
-    
         pass
-    
-    
     def findPreviousSibling(self, name='None', attrs='{}', text='None', **kwargs):
         """
         Returns the closest sibling to this Tag that matches the
         given criteria and appears before this Tag in the document.
         """
-    
         pass
-    
-    
     def findPreviousSiblings(self, name='None', attrs='{}', text='None', limit='None', **kwargs):
         """
         Returns the siblings of this Tag that match the given
         criteria and appear before this Tag in the document.
         """
-    
         pass
-    
-    
-    def insert(self, position, newChild):
-        pass
-    
-    
+    def insert(self, position, newChild): pass
     def nextGenerator(self):
         """
         #These Generators can be used to navigate starting from both
         #NavigableStrings and Tags.
         """
-    
         pass
-    
-    
-    def nextSiblingGenerator(self):
-        pass
-    
-    
-    def parentGenerator(self):
-        pass
-    
-    
-    def previousGenerator(self):
-        pass
-    
-    
-    def previousSiblingGenerator(self):
-        pass
-    
-    
-    def replaceWith(self, replaceWith):
-        pass
-    
-    
+    def nextSiblingGenerator(self): pass
+    def parentGenerator(self): pass
+    def previousGenerator(self): pass
+    def previousSiblingGenerator(self): pass
+    def replaceWith(self, replaceWith): pass
     def setup(self, parent='None', previous='None'):
         """
         Sets up the initial relations between this element and
         other elements.
         """
-    
         pass
-    
-    
     def substituteEncoding(self, str, encoding='None'):
         """
         # Utility methods
         """
-    
         pass
-    
-    
     def toEncoding(self, s, encoding='None'):
         """
         Encodes an object to a string in some encoding, or to Unicode.
         .
         """
-    
         pass
 
 
@@ -299,51 +250,10 @@ class SoupStrainer:
     
     
     
-    def __init__(self, name='None', attrs='{}', text='None', **kwargs):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
-    def search(self, markup):
-        pass
-    
-    
-    def searchTag(self, markupName='None', markupAttrs='{}'):
-        pass
-
-
-class StopParsing(exceptions.Exception):
-    __weakref__ = None
-
-
-class UnicodeDammit:
-    """
-    A class for detecting the encoding of a *ML document and
-    converting it to a Unicode string. If the source encoding is
-    windows-1252, can replace MS smart quotes with their HTML or XML
-    equivalents.
-    """
-    
-    
-    
-    def __init__(self, markup, overrideEncodings='[]', smartQuotesTo="'xml'", isHTML='False'):
-        pass
-    
-    
-    def find_codec(self, charset):
-        pass
-    
-    
-    CHARSET_ALIASES = {}
-    
-    
-    EBCDIC_TO_ASCII_MAP = None
-    
-    
-    MS_CHARS = {}
+    def __init__(self, name='None', attrs='{}', text='None', **kwargs): pass
+    def __str__(self): pass
+    def search(self, markup): pass
+    def searchTag(self, markupName='None', markupAttrs='{}'): pass
 
 
 class ResultSet(list):
@@ -354,53 +264,14 @@ class ResultSet(list):
     
     
     
-    def __init__(self, source):
-        pass
-    
-    
+    def __init__(self, source): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
 
-class NavigableString(unicode, PageElement):
-    def __getattr__(self, attr):
-        """
-        text.string gives you text. This is for backwards
-        compatibility for Navigable*String, but for CData* it lets you
-        get the string without the CData wrapper.
-        """
-    
-        pass
-    
-    
-    def __getnewargs__(self):
-        pass
-    
-    
-    def __str__(self, encoding="'utf-8'"):
-        pass
-    
-    
-    def __unicode__(self):
-        pass
-    
-    
-    def __new__(cls, value):
-        """
-        Create a new NavigableString.
-        
-        When unpickling a NavigableString, this method is called with
-        the string in DEFAULT_OUTPUT_ENCODING. That encoding needs to be
-        passed in to the superclass's __new__ or the superclass won't know
-        how to handle non-ASCII characters.
-        """
-    
-        pass
-    
-    
-    __dict__ = None
-    
+class StopParsing(exceptions.Exception):
     __weakref__ = None
 
 
@@ -417,22 +288,13 @@ class Tag(PageElement):
         findAll() method. Eg. tag('a') returns a list of all the A tags
         found within this tag.
         """
-    
         pass
-    
-    
-    def __contains__(self, x):
-        pass
-    
-    
+    def __contains__(self, x): pass
     def __delitem__(self, key):
         """
         Deleting tag[key] deletes all 'key' attributes for the tag.
         """
-    
         pass
-    
-    
     def __eq__(self, other):
         """
         Returns true iff this tag has the same name, the same attributes,
@@ -441,81 +303,51 @@ class Tag(PageElement):
         NOTE: right now this will return false if two tags have the
         same attributes in a different order. Should this be fixed?
         """
-    
         pass
-    
-    
-    def __getattr__(self, tag):
-        pass
-    
-    
+    def __getattr__(self, tag): pass
     def __getitem__(self, key):
         """
         tag[key] returns the value of the 'key' attribute for the tag,
         and throws an exception if it's not there.
         """
-    
         pass
-    
-    
     def __init__(self, parser, name, attrs='None', parent='None', previous='None'):
         """
         Basic constructor.
         """
-    
         pass
-    
-    
     def __iter__(self):
         """
         Iterating over a tag iterates over its contents.
         """
-    
         pass
-    
-    
     def __len__(self):
         """
         The length of a tag is the length of its list of contents.
         """
-    
         pass
-    
-    
     def __ne__(self, other):
         """
         Returns true iff this tag is not identical to the other tag,
         as defined in __eq__.
         """
-    
         pass
-    
-    
     def __nonzero__(self):
         """
         A tag is non-None even if it has no contents.
         """
-    
         pass
-    
-    
     def __repr__(self, encoding="'utf-8'"):
         """
         Renders this tag as a string.
         """
-    
         pass
-    
-    
     def __setitem__(self, key, value):
         """
         Setting tag[key] sets the value of the 'key' attribute for the
         tag.
         """
-    
         pass
-    
-    
     def __str__(self, encoding="'utf-8'", prettyPrint='False', indentLevel='0'):
         """
         Returns a string or Unicode representation of this tag and
@@ -525,30 +357,18 @@ class Tag(PageElement):
         method is not certain to reproduce the whitespace present in
         the original string.
         """
-    
         pass
-    
-    
-    def __unicode__(self):
-        pass
-    
-    
+    def __unicode__(self): pass
     def childGenerator(self):
         """
         #Generator methods
         """
-    
         pass
-    
-    
     def decompose(self):
         """
         Recursively destroys the contents of this tree.
         """
-    
         pass
-    
-    
     def fetch(self, name='None', attrs='{}', recursive='True', text='None', limit='None', **kwargs):
         """
         Extracts a list of Tag objects that match the given
@@ -561,23 +381,14 @@ class Tag(PageElement):
         string matches for some custom definition of 'matches'. The
         same is true of the tag name.
         """
-    
         pass
-    
-    
-    def fetchText(self, text='None', recursive='True', limit='None'):
-        pass
-    
-    
+    def fetchText(self, text='None', recursive='True', limit='None'): pass
     def find(self, name='None', attrs='{}', recursive='True', text='None', **kwargs):
         """
         Return only the first child of this Tag matching the given
         criteria.
         """
-    
         pass
-    
-    
     def findAll(self, name='None', attrs='{}', recursive='True', text='None', limit='None', **kwargs):
         """
         Extracts a list of Tag objects that match the given
@@ -590,19 +401,13 @@ class Tag(PageElement):
         string matches for some custom definition of 'matches'. The
         same is true of the tag name.
         """
-    
         pass
-    
-    
     def findChild(self, name='None', attrs='{}', recursive='True', text='None', **kwargs):
         """
         Return only the first child of this Tag matching the given
         criteria.
         """
-    
         pass
-    
-    
     def findChildren(self, name='None', attrs='{}', recursive='True', text='None', limit='None', **kwargs):
         """
         Extracts a list of Tag objects that match the given
@@ -615,54 +420,30 @@ class Tag(PageElement):
         string matches for some custom definition of 'matches'. The
         same is true of the tag name.
         """
-    
         pass
-    
-    
     def first(self, name='None', attrs='{}', recursive='True', text='None', **kwargs):
         """
         Return only the first child of this Tag matching the given
         criteria.
         """
-    
         pass
-    
-    
-    def firstText(self, text='None', recursive='True'):
-        pass
-    
-    
+    def firstText(self, text='None', recursive='True'): pass
     def get(self, key, default='None'):
         """
         Returns the value of the 'key' attribute for the tag, or
         the value given for 'default' if it doesn't have that
         attribute.
         """
-    
         pass
-    
-    
-    def has_key(self, key):
-        pass
-    
-    
-    def prettify(self, encoding="'utf-8'"):
-        pass
-    
-    
-    def recursiveChildGenerator(self):
-        pass
-    
-    
+    def has_key(self, key): pass
+    def prettify(self, encoding="'utf-8'"): pass
+    def recursiveChildGenerator(self): pass
     def renderContents(self, encoding="'utf-8'", prettyPrint='False', indentLevel='0'):
         """
         Renders the contents of this tag as a string in the given
         encoding. If encoding is None, returns a Unicode string..
         """
-    
         pass
-    
-    
     BARE_AMPERSAND_OR_BRACKET = None
     
     
@@ -672,9 +453,48 @@ class Tag(PageElement):
     XML_SPECIAL_CHARS_TO_ENTITIES = {}
 
 
-class Declaration(NavigableString):
-    def __str__(self, encoding="'utf-8'"):
+class NavigableString(unicode, PageElement):
+    def __getattr__(self, attr):
+        """
+        text.string gives you text. This is for backwards
+        compatibility for Navigable*String, but for CData* it lets you
+        get the string without the CData wrapper.
+        """
         pass
+    def __getnewargs__(self): pass
+    def __str__(self, encoding="'utf-8'"): pass
+    def __unicode__(self): pass
+    @staticmethod
+    def __new__(cls, value):
+        """
+        Create a new NavigableString.
+        
+        When unpickling a NavigableString, this method is called with
+        the string in DEFAULT_OUTPUT_ENCODING. That encoding needs to be
+        passed in to the superclass's __new__ or the superclass won't know
+        how to handle non-ASCII characters.
+        """
+        pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
+
+class CData(NavigableString):
+    def __str__(self, encoding="'utf-8'"): pass
+
+
+class ProcessingInstruction(NavigableString):
+    def __str__(self, encoding="'utf-8'"): pass
+
+
+class Declaration(NavigableString):
+    def __str__(self, encoding="'utf-8'"): pass
+
+
+class Comment(NavigableString):
+    def __str__(self, encoding="'utf-8'"): pass
 
 
 class BeautifulStoneSoup(Tag, SGMLParser):
@@ -703,10 +523,7 @@ class BeautifulStoneSoup(Tag, SGMLParser):
         This method routes method call requests to either the SGMLParser
         superclass or the Tag superclass, depending on the method name.
         """
-    
         pass
-    
-    
     def __init__(self, markup="''", parseOnlyThese='None', fromEncoding='None', markupMassage='True', smartQuotesTo="'xml'", convertEntities='None', selfClosingTags='None', isHTML='False'):
         """
         The Soup object is initialized as the 'root tag', and the
@@ -734,108 +551,60 @@ class BeautifulStoneSoup(Tag, SGMLParser):
         tuples to get Beautiful Soup to scrub your input the way you
         want.
         """
-    
         pass
-    
-    
     def convert_charref(self, name):
         """
         This method fixes a bug in Python's SGMLParser.
         """
-    
         pass
-    
-    
-    def endData(self, containerClass='"<class \'pymel.util.external.BeautifulSoup.NavigableString\'>"'):
-        pass
-    
-    
+    def endData(self, containerClass='"<class \'pymel.util.external.BeautifulSoup.NavigableString\'>"'): pass
     def handle_charref(self, ref):
         """
         Handle character references as data.
         """
-    
         pass
-    
-    
     def handle_comment(self, text):
         """
         Handle comments as Comment objects.
         """
-    
         pass
-    
-    
-    def handle_data(self, data):
-        pass
-    
-    
+    def handle_data(self, data): pass
     def handle_decl(self, data):
         """
         Handle DOCTYPEs and the like as Declaration objects.
         """
-    
         pass
-    
-    
     def handle_entityref(self, ref):
         """
         Handle entity references as data, possibly converting known
         HTML and/or XML entity references to the corresponding Unicode
         characters.
         """
-    
         pass
-    
-    
     def handle_pi(self, text):
         """
         Handle a processing instruction as a ProcessingInstruction
         object, possibly one with a %SOUP-ENCODING% slot into which an
         encoding will be plugged later.
         """
-    
         pass
-    
-    
     def isSelfClosingTag(self, name):
         """
         Returns true iff the given string is the name of a
         self-closing tag according to this parser.
         """
-    
         pass
-    
-    
     def parse_declaration(self, i):
         """
         Treat a bogus SGML declaration as raw data. Treat a CDATA
         declaration as a CData object.
         """
-    
         pass
-    
-    
-    def popTag(self):
-        pass
-    
-    
-    def pushTag(self, tag):
-        pass
-    
-    
-    def reset(self):
-        pass
-    
-    
-    def unknown_endtag(self, name):
-        pass
-    
-    
-    def unknown_starttag(self, name, attrs, selfClosing='0'):
-        pass
-    
-    
+    def popTag(self): pass
+    def pushTag(self, tag): pass
+    def reset(self): pass
+    def unknown_endtag(self, name): pass
+    def unknown_starttag(self, name, attrs, selfClosing='0'): pass
     ALL_ENTITIES = 'xhtml'
     
     
@@ -870,66 +639,6 @@ class BeautifulStoneSoup(Tag, SGMLParser):
     
     
     XML_ENTITIES = 'xml'
-
-
-class Comment(NavigableString):
-    def __str__(self, encoding="'utf-8'"):
-        pass
-
-
-class CData(NavigableString):
-    def __str__(self, encoding="'utf-8'"):
-        pass
-
-
-class ProcessingInstruction(NavigableString):
-    def __str__(self, encoding="'utf-8'"):
-        pass
-
-
-class BeautifulSOAP(BeautifulStoneSoup):
-    """
-    This class will push a tag with only a single string child into
-    the tag's parent as an attribute. The attribute's name is the tag
-    name, and the value is the string child. An example should give
-    the flavor of the change:
-    
-    <foo><bar>baz</bar></foo>
-     =>
-    <foo bar="baz"><bar>baz</bar></foo>
-    
-    You can then access fooTag['bar'] instead of fooTag.barTag.string.
-    
-    This is, of course, useful for scraping structures that tend to
-    use subelements instead of attributes, such as SOAP messages. Note
-    that it modifies its input, so don't print the modified version
-    out.
-    
-    I'm not sure how many people really want to use this class; let me
-    know if you do. Mainly I like the name.
-    """
-    
-    
-    
-    def popTag(self):
-        pass
-
-
-class RobustXMLParser(BeautifulStoneSoup):
-    """
-    #Enterprise class names! It has come to our attention that some people
-    #think the names of the Beautiful Soup parser classes are too silly
-    #and "unprofessional" for use in enterprise screen-scraping. We feel
-    #your pain! For such-minded folk, the Beautiful Soup Consortium And
-    #All-Night Kosher Bakery recommends renaming this file to
-    #"RobustParser.py" (or, in cases of extreme enterprisiness,
-    #"RobustParserBeanInterface.class") and using the following
-    #enterprise-friendly class aliases:
-    """
-    
-    
-    
-    pass
 
 
 class BeautifulSoup(BeautifulStoneSoup):
@@ -983,20 +692,14 @@ class BeautifulSoup(BeautifulStoneSoup):
     
     
     
-    def __init__(self, *args, **kwargs):
-        pass
-    
-    
+    def __init__(self, *args, **kwargs): pass
     def start_meta(self, attrs):
         """
         Beautiful Soup can detect a charset included in a META tag,
         try to convert the document to that charset, and re-parse the
         document from the beginning.
         """
-    
         pass
-    
-    
     CHARSET_RE = None
     
     
@@ -1028,6 +731,78 @@ class BeautifulSoup(BeautifulStoneSoup):
     
     
     SELF_CLOSING_TAGS = {}
+
+
+class RobustXMLParser(BeautifulStoneSoup):
+    """
+    #Enterprise class names! It has come to our attention that some people
+    #think the names of the Beautiful Soup parser classes are too silly
+    #and "unprofessional" for use in enterprise screen-scraping. We feel
+    #your pain! For such-minded folk, the Beautiful Soup Consortium And
+    #All-Night Kosher Bakery recommends renaming this file to
+    #"RobustParser.py" (or, in cases of extreme enterprisiness,
+    #"RobustParserBeanInterface.class") and using the following
+    #enterprise-friendly class aliases:
+    """
+    
+    
+    
+    pass
+
+
+class BeautifulSOAP(BeautifulStoneSoup):
+    """
+    This class will push a tag with only a single string child into
+    the tag's parent as an attribute. The attribute's name is the tag
+    name, and the value is the string child. An example should give
+    the flavor of the change:
+    
+    <foo><bar>baz</bar></foo>
+     =>
+    <foo bar="baz"><bar>baz</bar></foo>
+    
+    You can then access fooTag['bar'] instead of fooTag.barTag.string.
+    
+    This is, of course, useful for scraping structures that tend to
+    use subelements instead of attributes, such as SOAP messages. Note
+    that it modifies its input, so don't print the modified version
+    out.
+    
+    I'm not sure how many people really want to use this class; let me
+    know if you do. Mainly I like the name.
+    """
+    
+    
+    
+    def popTag(self): pass
+
+
+class SimplifyingSOAPParser(BeautifulSOAP):
+    pass
+
+
+class MinimalSoup(BeautifulSoup):
+    """
+    The MinimalSoup class is for parsing HTML that contains
+    pathologically bad markup. It makes no assumptions about tag
+    nesting, but it does know which tags are self-closing, that
+    <script> tags contain Javascript and should not be parsed, that
+    META tags may contain encoding information, and so on.
+    
+    This also makes it better for subclassing than BeautifulStoneSoup
+    or BeautifulSoup.
+    """
+    
+    
+    
+    NESTABLE_TAGS = {}
+    
+    
+    RESET_NESTING_TAGS = {}
+
+
+class RobustHTMLParser(BeautifulSoup):
+    pass
 
 
 class ICantBelieveItsBeautifulSoup(BeautifulSoup):
@@ -1067,31 +842,7 @@ class ICantBelieveItsBeautifulSoup(BeautifulSoup):
     NESTABLE_TAGS = {}
 
 
-class MinimalSoup(BeautifulSoup):
-    """
-    The MinimalSoup class is for parsing HTML that contains
-    pathologically bad markup. It makes no assumptions about tag
-    nesting, but it does know which tags are self-closing, that
-    <script> tags contain Javascript and should not be parsed, that
-    META tags may contain encoding information, and so on.
-    
-    This also makes it better for subclassing than BeautifulStoneSoup
-    or BeautifulSoup.
-    """
-    
-    
-    
-    NESTABLE_TAGS = {}
-    
-    
-    RESET_NESTING_TAGS = {}
-
-
-class SimplifyingSOAPParser(BeautifulSOAP):
-    pass
-
-
-class RobustHTMLParser(BeautifulSoup):
+class RobustWackAssHTMLParser(ICantBelieveItsBeautifulSoup):
     pass
 
 
@@ -1099,19 +850,6 @@ class RobustInsanelyWackAssHTMLParser(MinimalSoup):
     pass
 
 
-class RobustWackAssHTMLParser(ICantBelieveItsBeautifulSoup):
-    pass
-
-
-
-def buildTagMap(default, *args):
-    """
-    Turns a list of maps, lists, or scalars into a single map.
-    Used to build the SELF_CLOSING_TAGS, NESTABLE_TAGS, and
-    NESTING_RESET_TAGS maps out of lists and partial maps.
-    """
-
-    pass
 
 
 def isList(l):
@@ -1119,30 +857,32 @@ def isList(l):
     Convenience method that works with all 2.x versions of Python
     to determine whether or not something is listlike.
     """
-
     pass
-
-
 def isString(s):
     """
     Convenience method that works with all 2.x versions of Python
     to determine whether or not something is stringlike.
     """
-
     pass
-
+def buildTagMap(default, *args):
+    """
+    Turns a list of maps, lists, or scalars into a single map.
+    Used to build the SELF_CLOSING_TAGS, NESTABLE_TAGS, and
+    NESTING_RESET_TAGS maps out of lists and partial maps.
+    """
+    pass
 
 
 __author__ = 'Leonard Richardson (leonardr@segfault.org)'
 
-__version__ = '3.0.7a'
-
-chardet = None
-
-name2codepoint = {}
+generators = None
 
 DEFAULT_OUTPUT_ENCODING = 'utf-8'
 
-generators = None
+chardet = None
+
+__version__ = '3.0.7a'
+
+name2codepoint = {}
 
 

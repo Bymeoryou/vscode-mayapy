@@ -51,6 +51,10 @@ Example:
   -----------      ---------------      --------------         ----------------
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class _MPxShadingNodeOverride(object):
     """
     Base class for user defined shading node overrides.
@@ -62,10 +66,7 @@ class _MPxShadingNodeOverride(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def allowConnections(*args, **kwargs):
         """
         allowConnections() -> bool
@@ -82,10 +83,7 @@ class _MPxShadingNodeOverride(object):
         
         This method is called once only, just after creation of the override.
         """
-    
         pass
-    
-    
     def fragmentName(*args, **kwargs):
         """
         fragmentName() -> string
@@ -100,10 +98,7 @@ class _MPxShadingNodeOverride(object):
         
         Returns the name of the fragment to use
         """
-    
         pass
-    
-    
     def getCustomMappings(*args, **kwargs):
         """
         getCustomMappings(mappings) -> self
@@ -125,10 +120,7 @@ class _MPxShadingNodeOverride(object):
         
         * mappings [OUT] (MAttributeParameterMappingList) - An attribute parameter mapping list; fill with any desired custom mappings.
         """
-    
         pass
-    
-    
     def outputForConnection(*args, **kwargs):
         """
         outputForConnection(sourcePlug, destinationPlug) -> string
@@ -152,20 +144,14 @@ class _MPxShadingNodeOverride(object):
                                By default the name of the attribute for this plug is returned.
         * destinationPlug (MPlug) - The plug on the node which is the destination of the connection.
         """
-    
         pass
-    
-    
     def supportedDrawAPIs(*args, **kwargs):
         """
         supportedDrawAPIs() -> DrawAPI
         
         Returns the draw API supported by this override.
         """
-    
         pass
-    
-    
     def updateDG(*args, **kwargs):
         """
         updateDG() -> self
@@ -174,10 +160,7 @@ class _MPxShadingNodeOverride(object):
         produced by this override is a part. In this method implementations should query and cache any values needed for setting
         parameters on the final shading effect in updateShader().
         """
-    
         pass
-    
-    
     def updateShader(*args, **kwargs):
         """
         updateShader(shader, mappings) -> self
@@ -203,10 +186,7 @@ class _MPxShadingNodeOverride(object):
         * shader (MShaderInstance) - The shader instance.
         * mappings (MAttributeParameterMappingList) - The attribute parameter mappings for this override.
         """
-    
         pass
-    
-    
     def valueChangeRequiresFragmentRebuild(*args, **kwargs):
         """
         valueChangeRequiresFragmentRebuild(plug) -> bool
@@ -228,10 +208,7 @@ class _MPxShadingNodeOverride(object):
         
         * plug (MPlug) - The plug that changed, may be None.
         """
-    
         pass
-    
-    
     __new__ = None
 
 
@@ -243,23 +220,13 @@ class ApplyOverrideShadingNodeOverride(_MPxShadingNodeOverride):
     
     
     
-    def __init__(self, obj):
-        pass
-    
-    
-    def fragmentName(self):
-        pass
-    
-    
-    def supportedDrawAPIs(self):
-        pass
-    
-    
-    def creator(cls, obj):
-        pass
-    
-    
+    def __init__(self, obj): pass
+    def fragmentName(self): pass
+    def supportedDrawAPIs(self): pass
+    @classmethod
+    def creator(cls, obj): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
@@ -273,21 +240,14 @@ class ApplyRelOverrideShadingNodeOverride(ApplyOverrideShadingNodeOverride):
 
 
 
-def initialize():
-    pass
 
+def uninitialize(): pass
+def initialize(): pass
+def getDrawdbClassification(typeid): pass
 
-def getDrawdbClassification(typeid):
-    pass
-
-
-def uninitialize():
-    pass
-
-
-
-_classifToCreator = {}
 
 _classifToTypeIds = {}
+
+_classifToCreator = {}
 
 

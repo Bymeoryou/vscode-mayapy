@@ -1,13 +1,7 @@
-def findNodeFromMaya(nodeName):
-    pass
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-
-def findSelectedNodeFromMaya():
-    pass
-
-
-def createDynamicAttribute(nodeName, attrName, attrType, value):
-    pass
-
-
+def findSelectedNodeFromMaya(): pass
+def findNodeFromMaya(nodeName): pass
+def createDynamicAttribute(nodeName, attrName, attrType, value): pass
 

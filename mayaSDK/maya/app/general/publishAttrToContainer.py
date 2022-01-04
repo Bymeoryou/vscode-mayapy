@@ -1,23 +1,7 @@
-def addAndConnectObjAttrsToContainer(obj, inAttrs):
-    pass
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-
-def removePublishedAttrsFromContainer(obj, inAttrs):
-    pass
-
-
-def pyError(errorString):
-    """
-    print an error message
-    """
-
-    pass
-
-
-def unpublishAttrFromContainer():
-    pass
-
-
+def removePublishedAttrsFromContainer(obj, inAttrs): pass
 def collectTripleAttrs(obj, attrs):
     """
     # Take a list of attrs and convert any contained triple children into
@@ -26,12 +10,13 @@ def collectTripleAttrs(obj, attrs):
     # the return would be:
     #   diffuse, color
     """
-
     pass
-
-
-def publishAttrToContainer():
+def publishAttrToContainer(): pass
+def pyError(errorString):
+    """
+    print an error message
+    """
     pass
-
-
+def unpublishAttrFromContainer(): pass
+def addAndConnectObjAttrsToContainer(obj, inAttrs): pass
 

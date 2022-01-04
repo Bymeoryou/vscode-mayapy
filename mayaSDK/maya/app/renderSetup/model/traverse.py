@@ -1,12 +1,5 @@
-def nodeListChildren(node):
-    """
-    Utility function to iterate on children of a data model node.
-    
-    If the node has no children, an empty list is returned.
-    """
-
-    pass
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 def depthFirst(node, children):
     """
@@ -18,8 +11,12 @@ def depthFirst(node, children):
     the node's children.  This is used by the traversal to iterate on the
     node's children and thus recurse.
     """
-
     pass
-
-
+def nodeListChildren(node):
+    """
+    Utility function to iterate on children of a data model node.
+    
+    If the node has no children, an empty list is returned.
+    """
+    pass
 

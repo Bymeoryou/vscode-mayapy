@@ -1,5 +1,6 @@
 import exceptions
 
+
 """
 Original author:
  Jason Orendorff <jason.orendorff@gmail.com>
@@ -24,6 +25,14 @@ Example::
 path.py requires Python 2.5 or later.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class TreeWalkWarning(exceptions.Warning):
+    __weakref__ = None
+
+
 class path(unicode):
     """
     Represents a filesystem path.
@@ -38,10 +47,7 @@ class path(unicode):
         """
         # Adding a path and a string yields a path.
         """
-    
         pass
-    
-    
     def __div__(self, rel):
         """
         fp.__div__(rel) == fp / rel == fp.joinpath(rel)
@@ -51,30 +57,12 @@ class path(unicode):
         
         .. seealso:: :func:`os.path.join`
         """
-    
         pass
-    
-    
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, *_):
-        pass
-    
-    
-    def __init__(self, other="''"):
-        pass
-    
-    
-    def __radd__(self, other):
-        pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
+    def __enter__(self): pass
+    def __exit__(self, *_): pass
+    def __init__(self, other="''"): pass
+    def __radd__(self, other): pass
+    def __repr__(self): pass
     def __truediv__(self, rel):
         """
         fp.__div__(rel) == fp / rel == fp.joinpath(rel)
@@ -84,18 +72,12 @@ class path(unicode):
         
         .. seealso:: :func:`os.path.join`
         """
-    
         pass
-    
-    
     def abspath(self):
         """
         .. seealso:: :func:`os.path.abspath`
         """
-    
         pass
-    
-    
     def access(self, mode):
         """
         Return true if current user has access to this path.
@@ -105,26 +87,17 @@ class path(unicode):
         
         .. seealso:: :func:`os.access`
         """
-    
         pass
-    
-    
     def basename(self):
         """
         .. seealso:: :attr:`name`, :func:`os.path.basename`
         """
-    
         pass
-    
-    
     def bytes(self):
         """
         Open this file, read all bytes, return them as a string.
         """
-    
         pass
-    
-    
     def canonicalpath(self):
         """
         Attempt to return a 'canonical' version of the path
@@ -136,34 +109,22 @@ class path(unicode):
         The intention is that string comparison of canonical paths will yield
         a reasonable guess as to whether two paths represent the same file.
         """
-    
         pass
-    
-    
     def cd(self):
         """
         .. seealso:: :func:`os.chdir`
         """
-    
         pass
-    
-    
     def chdir(self):
         """
         .. seealso:: :func:`os.chdir`
         """
-    
         pass
-    
-    
     def chmod(self, mode):
         """
         .. seealso:: :func:`os.chmod`
         """
-    
         pass
-    
-    
     def chunks(self, size, *args, **kwargs):
         """
         Returns a generator yielding chunks of the file, so it can
@@ -178,54 +139,36 @@ class path(unicode):
         
          This will read the file by chunks of 8192 bytes.
         """
-    
         pass
-    
-    
     def copy(src, dst):
         """
         Copy data and mode bits ("cp src dst").
         
         The destination may be a directory.
         """
-    
         pass
-    
-    
     def copy2(src, dst):
         """
         Copy data and all stat info ("cp -p src dst").
         
         The destination may be a directory.
         """
-    
         pass
-    
-    
     def copyfile(src, dst):
         """
         Copy data from src to dst
         """
-    
         pass
-    
-    
     def copymode(src, dst):
         """
         Copy mode bits from src to dst
         """
-    
         pass
-    
-    
     def copystat(src, dst):
         """
         Copy all stat info (mode bits, atime, mtime, flags) from src to dst
         """
-    
         pass
-    
-    
     def copytree(src, dst, symlinks='False', ignore='None'):
         """
         Recursively copy a directory tree using copy2().
@@ -252,18 +195,12 @@ class path(unicode):
         
         XXX Consider this example code rather than the ultimate tool.
         """
-    
         pass
-    
-    
     def dirname(self):
         """
         .. seealso:: :attr:`parent`, :func:`os.path.dirname`
         """
-    
         pass
-    
-    
     def dirs(self, pattern='None', realpath='False'):
         """
         D.dirs() -> List of this directory's subdirectories.
@@ -276,18 +213,12 @@ class path(unicode):
         directories whose names match the given pattern.  For
         example, ``d.dirs('build-*')``.
         """
-    
         pass
-    
-    
     def exists(self):
         """
         .. seealso:: :func:`os.path.exists`
         """
-    
         pass
-    
-    
     def expand(self):
         """
         Clean up a filename by calling :meth:`expandvars()`,
@@ -296,26 +227,17 @@ class path(unicode):
         This is commonly everything needed to clean up a filename
         read from a configuration file, for example.
         """
-    
         pass
-    
-    
     def expanduser(self):
         """
         .. seealso:: :func:`os.path.expanduser`
         """
-    
         pass
-    
-    
     def expandvars(self):
         """
         .. seealso:: :func:`os.path.expandvars`
         """
-    
         pass
-    
-    
     def files(self, pattern='None', realpath='False'):
         """
         D.files() -> List of the files in this directory.
@@ -327,10 +249,7 @@ class path(unicode):
         whose names match the given pattern.  For example,
         ``d.files('*.pyc')``.
         """
-    
         pass
-    
-    
     def fnmatch(self, pattern, normcase='None'):
         """
         Return ``True`` if `self.name` matches the given pattern.
@@ -345,46 +264,28 @@ class path(unicode):
         
         .. seealso:: :func:`fnmatch.fnmatch`
         """
-    
         pass
-    
-    
-    def get_owner(self):
-        pass
-    
-    
+    def get_owner(self): pass
     def getatime(self):
         """
         .. seealso:: :attr:`atime`, :func:`os.path.getatime`
         """
-    
         pass
-    
-    
     def getctime(self):
         """
         .. seealso:: :attr:`ctime`, :func:`os.path.getctime`
         """
-    
         pass
-    
-    
     def getmtime(self):
         """
         .. seealso:: :attr:`mtime`, :func:`os.path.getmtime`
         """
-    
         pass
-    
-    
     def getsize(self):
         """
         .. seealso:: :attr:`size`, :func:`os.path.getsize`
         """
-    
         pass
-    
-    
     def glob(self, pattern):
         """
         Return a list of path objects that match the pattern.
@@ -396,50 +297,32 @@ class path(unicode):
         
         .. seealso:: :func:`glob.glob`
         """
-    
         pass
-    
-    
     def isabs(self):
         """
         .. seealso:: :func:`os.path.isabs`
         """
-    
         pass
-    
-    
     def isdir(self):
         """
         .. seealso:: :func:`os.path.isdir`
         """
-    
         pass
-    
-    
     def isfile(self):
         """
         .. seealso:: :func:`os.path.isfile`
         """
-    
         pass
-    
-    
     def islink(self):
         """
         .. seealso:: :func:`os.path.islink`
         """
-    
         pass
-    
-    
     def ismount(self):
         """
         .. seealso:: :func:`os.path.ismount`
         """
-    
         pass
-    
-    
     joinpath = None
     
     def lines(self, encoding='None', errors="'strict'", retain='True'):
@@ -462,10 +345,7 @@ class path(unicode):
         
         .. seealso:: :meth:`text`
         """
-    
         pass
-    
-    
     def listdir(self, pattern='None', realpath='False'):
         """
         D.listdir() -> List of items in this directory.
@@ -481,37 +361,25 @@ class path(unicode):
         
         .. seealso:: :meth:`files`, :meth:`dirs`, :meth:`match`
         """
-    
         pass
-    
-    
     def lstat(self):
         """
         Like :meth:`stat`, but do not follow symbolic links.
         
         .. seealso:: :meth:`stat`, :func:`os.lstat`
         """
-    
         pass
-    
-    
     def makedirs(self, mode='511'):
         """
         .. seealso:: :func:`os.makedirs`
         """
-    
         pass
-    
-    
     def makedirs_p(self, mode='511'):
         """
         Like :meth:`makedirs`, but does not raise an exception if the
         directory already exists.
         """
-    
         pass
-    
-    
     def match(self, pattern, normcase='None'):
         """
         Return ``True`` if `self.name` matches the given pattern. Supports
@@ -528,27 +396,18 @@ class path(unicode):
         
         .. seealso:: :meth:`fnmatch` and :meth:`regmatch`
         """
-    
         pass
-    
-    
     def mkdir(self, mode='511'):
         """
         .. seealso:: :func:`os.mkdir`
         """
-    
         pass
-    
-    
     def mkdir_p(self, mode='511'):
         """
         Like :meth:`mkdir`, but does not raise an exception if the
         directory already exists.
         """
-    
         pass
-    
-    
     def move(src, dst):
         """
         Recursively move a file or directory to another location. This is
@@ -566,36 +425,24 @@ class path(unicode):
         A lot more could be done here...  A look at a mv.c shows a lot of
         the issues this implementation glosses over.
         """
-    
         pass
-    
-    
     def normcase(self):
         """
         .. seealso:: :func:`os.path.normcase`
         """
-    
         pass
-    
-    
     def normpath(self):
         """
         .. seealso:: :func:`os.path.normpath`
         """
-    
         pass
-    
-    
     def open(self, *args, **kwargs):
         """
         Open this file.  Return a file object.
         
         .. seealso:: :func:`python:open`
         """
-    
         pass
-    
-    
     def read_hash(self, hash_name):
         """
         Calculate given hash for this file.
@@ -605,10 +452,7 @@ class path(unicode):
         
         .. seealso:: :meth:`hashlib.hash.digest`
         """
-    
         pass
-    
-    
     def read_hexhash(self, hash_name):
         """
         Calculate given hash for this file, returning hexdigest.
@@ -618,10 +462,7 @@ class path(unicode):
         
         .. seealso:: :meth:`hashlib.hash.hexdigest`
         """
-    
         pass
-    
-    
     def read_md5(self):
         """
         Calculate the md5 hash for this file.
@@ -630,18 +471,12 @@ class path(unicode):
         
         .. seealso:: :meth:`read_hash`
         """
-    
         pass
-    
-    
     def realpath(self):
         """
         .. seealso:: :func:`os.path.realpath`
         """
-    
         pass
-    
-    
     def regmatch(self, pattern, normcase='None'):
         """
         Return ``True`` if `self.name` matches the given pattern.
@@ -656,19 +491,13 @@ class path(unicode):
         
         .. seealso:: :module:`re`
         """
-    
         pass
-    
-    
     def relpath(self, start="'.'"):
         """
         Return this path as a relative path,
         based from `start`, which defaults to the current working directory.
         """
-    
         pass
-    
-    
     def relpathto(self, dest):
         """
         Return a relative path from `self` to `dest`.
@@ -677,77 +506,50 @@ class path(unicode):
         they reside on different drives in Windows, then this returns
         ``dest.abspath()``.
         """
-    
         pass
-    
-    
     def remove(self):
         """
         .. seealso:: :func:`os.remove`
         """
-    
         pass
-    
-    
     def remove_p(self):
         """
         Like :meth:`remove`, but does not raise an exception if the
         file does not exist.
         """
-    
         pass
-    
-    
     def removedirs(self):
         """
         .. seealso:: :func:`os.removedirs`
         """
-    
         pass
-    
-    
     def removedirs_p(self):
         """
         Like :meth:`removedirs`, but does not raise an exception if the
         directory is not empty or does not exist.
         """
-    
         pass
-    
-    
     def rename(self, new):
         """
         .. seealso:: :func:`os.rename`
         """
-    
         pass
-    
-    
     def renames(self, new):
         """
         .. seealso:: :func:`os.renames`
         """
-    
         pass
-    
-    
     def rmdir(self):
         """
         .. seealso:: :func:`os.rmdir`
         """
-    
         pass
-    
-    
     def rmdir_p(self):
         """
         Like :meth:`rmdir`, but does not raise an exception if the
         directory is not empty or does not exist.
         """
-    
         pass
-    
-    
     def rmtree(path, ignore_errors='False', onerror='None'):
         """
         Recursively delete a directory tree.
@@ -759,27 +561,18 @@ class path(unicode):
         exc_info is a tuple returned by sys.exc_info().  If ignore_errors
         is false and onerror is None, an exception is raised.
         """
-    
         pass
-    
-    
     def rmtree_p(self):
         """
         Like :meth:`rmtree`, but does not raise an exception if the
         directory does not exist.
         """
-    
         pass
-    
-    
     def samefile(self, other):
         """
         .. seealso:: :func:`os.path.samefile`
         """
-    
         pass
-    
-    
     def samepath(self, other):
         """
         Whether the other path represents the same path as this one.
@@ -793,10 +586,7 @@ class path(unicode):
         
         Essentially just compares the `self.canonicalpath()` to `other.canonicalpath()`
         """
-    
         pass
-    
-    
     def splitall(self):
         """
         Return a list of the path components in this path.
@@ -808,10 +598,7 @@ class path(unicode):
         
         ``path.path.joinpath(*result)`` will yield the original path.
         """
-    
         pass
-    
-    
     def splitdrive(self):
         """
         p.splitdrive() -> Return ``(p.drive, <the rest of p>)``.
@@ -822,10 +609,7 @@ class path(unicode):
         
         .. seealso:: :func:`os.path.splitdrive`
         """
-    
         pass
-    
-    
     def splitext(self):
         """
         p.splitext() -> Return ``(p.stripext(), p.ext)``.
@@ -839,46 +623,31 @@ class path(unicode):
         
         .. seealso:: :func:`os.path.splitext`
         """
-    
         pass
-    
-    
     def splitpath(self):
         """
         p.splitpath() -> Return ``(p.parent, p.name)``.
         
         .. seealso:: :attr:`parent`, :attr:`name`, :func:`os.path.split`
         """
-    
         pass
-    
-    
     def splitunc(self):
         """
         .. seealso:: :func:`os.path.splitunc`
         """
-    
         pass
-    
-    
     def startfile(self):
         """
         .. seealso:: :func:`os.startfile`
         """
-    
         pass
-    
-    
     def stat(self):
         """
         Perform a ``stat()`` system call on this path.
         
         .. seealso:: :meth:`lstat`, :func:`os.stat`
         """
-    
         pass
-    
-    
     def stripext(self):
         """
         p.stripext() -> Remove one file extension from the path.
@@ -886,10 +655,7 @@ class path(unicode):
         For example, ``path('/home/guido/python.tar.gz').stripext()``
         returns ``path('/home/guido/python.tar')``.
         """
-    
         pass
-    
-    
     def text(self, encoding='None', errors="'strict'"):
         """
         Open this file, read it in, return the content as a string.
@@ -907,19 +673,13 @@ class path(unicode):
         
         .. seealso:: :meth:`lines`
         """
-    
         pass
-    
-    
     def touch(self):
         """
         Set the access/modified times of this file to the current time.
         Create the file if it does not exist.
         """
-    
         pass
-    
-    
     def truepath(self):
         """
         The absolute, real, normalized path.
@@ -932,37 +692,25 @@ class path(unicode):
         situations where comparison is desired, :meth:`canonicalpath` (or
         :meth:`samepath`) should be used.
         """
-    
         pass
-    
-    
     def unlink(self):
         """
         .. seealso:: :func:`os.unlink`
         """
-    
         pass
-    
-    
     def unlink_p(self):
         """
         Like :meth:`unlink`, but does not raise an exception if the
         file does not exist.
         """
-    
         pass
-    
-    
     def utime(self, times):
         """
         Set the access and modified times of this file.
         
         .. seealso:: :func:`os.utime`
         """
-    
         pass
-    
-    
     def walk(self, pattern='None', errors="'strict'", realpath='False', regex='None'):
         """
         D.walk() -> iterator over files and subdirs, recursively.
@@ -979,10 +727,7 @@ class path(unicode):
         exception.  The other allowed values are 'warn', which
         reports the error via ``warnings.warn()``, and 'ignore'.
         """
-    
         pass
-    
-    
     def walkdirs(self, pattern='None', errors="'strict'", realpath='False', regex='None'):
         """
         D.walkdirs() -> iterator over subdirs, recursively.
@@ -997,10 +742,7 @@ class path(unicode):
         exception.  The other allowed values are 'warn', which
         reports the error via ``warnings.warn()``, and 'ignore'.
         """
-    
         pass
-    
-    
     def walkfiles(self, pattern='None', errors="'strict'", realpath='False', regex='None'):
         """
         D.walkfiles() -> iterator over files in D, recursively.
@@ -1010,10 +752,7 @@ class path(unicode):
         ``mydir.walkfiles('*.tmp')`` yields only files with the .tmp
         extension.
         """
-    
         pass
-    
-    
     def write_bytes(self, bytes, append='False'):
         """
         Open this file and write the given bytes to it.
@@ -1021,10 +760,7 @@ class path(unicode):
         Default behavior is to overwrite any existing file.
         Call ``p.write_bytes(bytes, append=True)`` to append instead.
         """
-    
         pass
-    
-    
     def write_lines(self, lines, encoding='None', errors="'strict'", linesep="'\\r\\n'", append='False'):
         """
         Write the given lines of text to this file.
@@ -1060,10 +796,7 @@ class path(unicode):
         mixed-encoding data, which can really confuse someone trying
         to read the file later.
         """
-    
         pass
-    
-    
     def write_text(self, text, encoding='None', errors="'strict'", linesep="'\\r\\n'", append='False'):
         """
         Write the given text to this file.
@@ -1128,60 +861,134 @@ class path(unicode):
         isn't specified).  The `errors` argument applies only to this
         conversion.
         """
-    
         pass
-    
-    
+    @classmethod
     def getcwd(cls):
         """
         Return the current working directory as a path object.
         
         .. seealso:: :func:`os.getcwdu`
         """
-    
         pass
-    
-    
-    def using_module(cls, module):
+    @classmethod
+    def using_module(cls, module): pass
+    @property
+    def atime(self):
+        """
+        Last access time of the file.
+        
+        .. seealso:: :meth:`getatime`, :func:`os.path.getatime`
+        """
         pass
-    
-    
+    @property
+    def ctime(self):
+        """
+        Creation time of the file.
+        
+        .. seealso:: :meth:`getctime`, :func:`os.path.getctime`
+        """
+        pass
+    @property
+    def drive(self):
+        """
+        The drive specifier, for example ``'C:'``.
+        
+        This is always empty on systems that don't use drive specifiers.
+        """
+        pass
+    @property
+    def ext(self):
+        """
+        The file extension, for example ``'.py'``.
+        """
+        pass
+    @property
+    def mtime(self):
+        """
+        Last-modified time of the file.
+        
+        .. seealso:: :meth:`getmtime`, :func:`os.path.getmtime`
+        """
+        pass
+    @property
+    def name(self):
+        """
+        The name of this file or directory without the full path.
+        
+        For example,
+        ``path('/usr/local/lib/libpython.so').name == 'libpython.so'``
+        
+        .. seealso:: :meth:`basename`, :func:`os.path.basename`
+        """
+        pass
+    @property
+    def namebase(self):
+        """
+        The same as :meth:`name`, but with one file extension stripped off.
+        
+        For example,
+        ``path('/home/guido/python.tar.gz').name == 'python.tar.gz'``,
+        but
+        ``path('/home/guido/python.tar.gz').namebase == 'python.tar'``.
+        """
+        pass
+    @property
+    def owner(self):
+        """
+        Name of the owner of this file or directory.
+        
+        .. seealso:: :meth:`get_owner`
+        """
+        pass
+    @property
+    def parent(self):
+        """
+        This path's parent directory, as a new path object.
+        
+        For example,
+        ``path('/usr/local/lib/libpython.so').parent ==
+        path('/usr/local/lib')``
+        
+        .. seealso:: :meth:`dirname`, :func:`os.path.dirname`
+        """
+        pass
+    @property
+    def size(self):
+        """
+        Size of the file, in bytes.
+        
+        .. seealso:: :meth:`getsize`, :func:`os.path.getsize`
+        """
+        pass
+    @property
+    def uncshare(self):
+        """
+        The UNC mount point for this path.
+        This is empty for paths on local drives.
+        """
+        pass
     __dict__ = None
+    
     
     __weakref__ = None
     
-    atime = None
-    
-    ctime = None
-    
-    drive = None
-    
-    ext = None
-    
-    mtime = None
-    
-    name = None
-    
-    namebase = None
-    
-    owner = None
-    
-    parent = None
-    
-    size = None
-    
-    uncshare = None
     
     module = None
 
 
 Path = path
-class ClassProperty(property):
-    def __get__(self, cls, owner):
-        pass
+class multimethod(object):
+    """
+    Acts like a classmethod when invoked from the class and like an
+    instancemethod when invoked from the instance.
+    """
     
     
+    
+    def __get__(self, instance, owner): pass
+    def __init__(self, func): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
@@ -1201,34 +1008,18 @@ class CaseInsensitivePattern(unicode):
     
     
     
+    @property
+    def normcase(self): pass
     __dict__ = None
     
-    __weakref__ = None
     
-    normcase = None
-
-
-class TreeWalkWarning(exceptions.Warning):
     __weakref__ = None
 
 
-class multimethod(object):
-    """
-    Acts like a classmethod when invoked from the class and like an
-    instancemethod when invoked from the instance.
-    """
-    
-    
-    
-    def __get__(self, instance, owner):
-        pass
-    
-    
-    def __init__(self, func):
-        pass
-    
-    
+class ClassProperty(property):
+    def __get__(self, cls, owner): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
@@ -1250,32 +1041,29 @@ class tempdir(path):
     
     
     
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, exc_type, exc_value, traceback):
-        pass
-    
-    
-    def __init__(self, *args, **kwargs):
-        pass
-    
-    
-    def __new__(cls, *args, **kwargs):
-        pass
+    def __enter__(self): pass
+    def __exit__(self, exc_type, exc_value, traceback): pass
+    def __init__(self, *args, **kwargs): pass
+    @staticmethod
+    def __new__(cls, *args, **kwargs): pass
 
 
 
+
+def getcwdu(*args, **kwargs):
+    """
+    getcwdu() -> path
+    
+    Return a unicode string representing the current working directory.
+    """
+    pass
+def u(x): pass
 def simple_cache(func):
     """
     Save results for the 'using_module' classmethod.
     When Python 3.2 is available, use functools.lru_cache instead.
     """
-
     pass
-
-
 def _permission_mask(mode):
     """
     Convert a Unix chmod symbolic mode like 'ugo+rwx' to a function
@@ -1288,32 +1076,14 @@ def _permission_mask(mode):
     >>> oct(_permission_mask('go-x')(0777))
     '0766'
     """
-
     pass
 
 
-def getcwdu(*args, **kwargs):
-    """
-    getcwdu() -> path
-    
-    Return a unicode string representing the current working directory.
-    """
-
-    pass
-
-
-def u(x):
-    pass
-
-
-
-o666 = 438
-
-with_statement = None
+o777 = 511
 
 __version__ = '5.0'
 
-o777 = 511
+o666 = 438
 
 o766 = 502
 

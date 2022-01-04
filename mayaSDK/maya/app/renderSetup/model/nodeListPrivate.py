@@ -1,3 +1,6 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class _MPxCommand(object):
     """
     Base class for custom commands.
@@ -9,135 +12,98 @@ class _MPxCommand(object):
         """
         x.__init__(...) initializes x; see help(type(x)) for signature
         """
-    
         pass
-    
-    
     def doIt(*args, **kwargs):
         """
         Called by Maya to execute the command.
         """
-    
         pass
-    
-    
     def hasSyntax(*args, **kwargs):
         """
         Called by Maya to determine if the command provides an MSyntax object describing its syntax.
         """
-    
         pass
-    
-    
     def isUndoable(*args, **kwargs):
         """
         Called by Maya to determine if the command supports undo.
         """
-    
         pass
-    
-    
     def redoIt(*args, **kwargs):
         """
         Called by Maya to redo a previously undone command.
         """
-    
         pass
-    
-    
     def syntax(*args, **kwargs):
         """
         Returns the command's MSyntax object, if it has one.
         """
-    
         pass
-    
-    
     def undoIt(*args, **kwargs):
         """
         Called by Maya to undo a previously executed command.
         """
-    
         pass
-    
-    
+    @staticmethod
     def appendToResult(*args, **kwargs):
         """
         Append a value to the result to be returned by the command.
         """
-    
         pass
-    
-    
+    @staticmethod
     def clearResult(*args, **kwargs):
         """
         Clears the command's result.
         """
-    
         pass
-    
-    
+    @staticmethod
     def currentResult(*args, **kwargs):
         """
         Returns the command's current result.
         """
-    
         pass
-    
-    
+    @staticmethod
     def currentResultType(*args, **kwargs):
         """
         Returns the type of the current result.
         """
-    
         pass
-    
-    
+    @staticmethod
     def displayError(*args, **kwargs):
         """
         Display an error message.
         """
-    
         pass
-    
-    
+    @staticmethod
     def displayInfo(*args, **kwargs):
         """
         Display an informational message.
         """
-    
         pass
-    
-    
+    @staticmethod
     def displayWarning(*args, **kwargs):
         """
         Display a warning message.
         """
-    
         pass
-    
-    
+    @staticmethod
     def isCurrentResultArray(*args, **kwargs):
         """
         Returns true if the command's current result is an array of values.
         """
-    
         pass
-    
-    
+    @staticmethod
     def setResult(*args, **kwargs):
         """
         Set the value of the result to be returned by the command.
         """
-    
         pass
+    __new__ = None
     
     
     commandString = None
     
-    historyOn = None
     
-    __new__ = None
+    historyOn = None
     
     
     kDouble = 1
@@ -161,19 +127,71 @@ class ListCmdBase(_MPxCommand):
     
     
     
-    def doIt(self, args):
-        pass
-    
-    
-    def isUndoable(self):
-        pass
-    
-    
+    def doIt(self, args): pass
+    def isUndoable(self): pass
     __dict__ = None
+    
     
     __weakref__ = None
     
+    
     nodeList = None
+
+
+class PopCmd(ListCmdBase):
+    """
+    Remove and return the last item from a list.
+    
+    This command is a private implementation detail of this module and should
+    not be called otherwise.
+    """
+    
+    
+    
+    def __init__(self, nodeList): pass
+    def doIt(self, args): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def execute(nodeList):
+        """
+        Remove and return the last list item from the node list, and add an
+        entry to the undo queue.
+        """
+        pass
+    kCmdName = 'popListItem'
+    
+    
+    listItem = None
+
+
+class PrependCmd(ListCmdBase):
+    """
+    Add an item to the head of the list.
+    
+    This command is a private implementation detail of this module and should
+    not be called otherwise.
+    """
+    
+    
+    
+    def __init__(self, nodeList, listItem): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
+    def execute(nodeList, listItem):
+        """
+        Prepend the item to the list, and add an entry to the undo queue.
+        """
+        pass
+    kCmdName = 'prependListItem'
+    
+    
+    listItem = None
 
 
 class InsertBeforeCmd(ListCmdBase):
@@ -186,31 +204,18 @@ class InsertBeforeCmd(ListCmdBase):
     
     
     
-    def __init__(self, nodeList, nextItem, listItem):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
+    def __init__(self, nodeList, nextItem, listItem): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
     def execute(nodeList, nextItem, listItem):
         """
         Insert the list item into the node list before nextItem, and add an
         entry to the undo queue.
         """
-    
         pass
-    
-    
     kCmdName = 'insertListItemBefore'
     
     
@@ -220,9 +225,9 @@ class InsertBeforeCmd(ListCmdBase):
     nextItem = None
 
 
-class RemoveCmd(ListCmdBase):
+class AppendCmd(ListCmdBase):
     """
-    Remove an item from a list.
+    Append an item to a list.
     
     This command is a private implementation detail of this module and should
     not be called otherwise.
@@ -230,32 +235,18 @@ class RemoveCmd(ListCmdBase):
     
     
     
-    def __init__(self, nodeList, listItem):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
+    def __init__(self, nodeList, listItem): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
     def execute(nodeList, listItem):
         """
-        Remove the list item from the node list, and add an entry to the
-        undo queue.
+        Append the item to the list, and add an entry to the undo queue.
         """
-    
         pass
-    
-    
-    kCmdName = 'removeListItem'
+    kCmdName = 'appendListItem'
     
     
     listItem = None
@@ -271,31 +262,18 @@ class InsertCmd(ListCmdBase):
     
     
     
-    def __init__(self, nodeList, ndx, listItem):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
+    def __init__(self, nodeList, ndx, listItem): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
     def execute(nodeList, ndx, listItem):
         """
         Insert the list item into the node list before position ndx, and
         add an entry to the undo queue.
         """
-    
         pass
-    
-    
     kCmdName = 'insertListItem'
     
     
@@ -305,9 +283,9 @@ class InsertCmd(ListCmdBase):
     ndx = None
 
 
-class PrependCmd(ListCmdBase):
+class RemoveCmd(ListCmdBase):
     """
-    Add an item to the head of the list.
+    Remove an item from a list.
     
     This command is a private implementation detail of this module and should
     not be called otherwise.
@@ -315,166 +293,24 @@ class PrependCmd(ListCmdBase):
     
     
     
-    def __init__(self, nodeList, listItem):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
+    def __init__(self, nodeList, listItem): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+    @staticmethod
+    def creator(): pass
+    @staticmethod
     def execute(nodeList, listItem):
         """
-        Prepend the item to the list, and add an entry to the undo queue.
+        Remove the list item from the node list, and add an entry to the
+        undo queue.
         """
-    
         pass
-    
-    
-    kCmdName = 'prependListItem'
+    kCmdName = 'removeListItem'
     
     
     listItem = None
 
 
-class PopCmd(ListCmdBase):
-    """
-    Remove and return the last item from a list.
-    
-    This command is a private implementation detail of this module and should
-    not be called otherwise.
-    """
-    
-    
-    
-    def __init__(self, nodeList):
-        pass
-    
-    
-    def doIt(self, args):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def execute(nodeList):
-        """
-        Remove and return the last list item from the node list, and add an
-        entry to the undo queue.
-        """
-    
-        pass
-    
-    
-    kCmdName = 'popListItem'
-    
-    
-    listItem = None
-
-
-class AppendCmd(ListCmdBase):
-    """
-    Append an item to a list.
-    
-    This command is a private implementation detail of this module and should
-    not be called otherwise.
-    """
-    
-    
-    
-    def __init__(self, nodeList, listItem):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-    
-    
-    def creator():
-        pass
-    
-    
-    def execute(nodeList, listItem):
-        """
-        Append the item to the list, and add an entry to the undo queue.
-        """
-    
-        pass
-    
-    
-    kCmdName = 'appendListItem'
-    
-    
-    listItem = None
-
-
-
-def append(list, x):
-    """
-    Append node x to the list.
-    
-    This function has O(1) time complexity.
-    """
-
-    pass
-
-
-def prepend(list, x):
-    """
-    Add x to the head of the list.
-    
-    This function is a convenience for insert(list, 0, x).  It has O(1) time
-    complexity.
-    """
-
-    pass
-
-
-def pop(list):
-    """
-    Pop the last node from the list.
-    
-    The method disconnects the last node from list and returns it.  It has
-    O(1) time complexity.
-    """
-
-    pass
-
-
-def insert(list, ndx, x):
-    """
-    Insert node x before position ndx in list.
-    
-    Positions run from 0 to n-1, for a list of length n.  Inserting at
-    position 0 calls prepend(), and thus has O(1) time complexity.
-    Inserting mid-list has O(n) time complexity.  Inserting at position n
-    or beyond appends to the list, with O(n) time complexity.  To append to
-    the list use append() directly, as it has O(1) time complexity.
-    """
-
-    pass
 
 
 def remove(list, x):
@@ -486,18 +322,28 @@ def remove(list, x):
     
     It has O(1) time complexity.
     """
-
     pass
-
-
 def forwardListGenerator(list):
     """
     # Not a write operation, but needed by the implementation of insert().
     """
-
     pass
-
-
+def pop(list):
+    """
+    Pop the last node from the list.
+    
+    The method disconnects the last node from list and returns it.  It has
+    O(1) time complexity.
+    """
+    pass
+def prepend(list, x):
+    """
+    Add x to the head of the list.
+    
+    This function is a convenience for insert(list, 0, x).  It has O(1) time
+    complexity.
+    """
+    pass
 def insertBefore(list, nextItem, x):
     """
     Insert node x before item nextItem in list.
@@ -505,9 +351,25 @@ def insertBefore(list, nextItem, x):
     If nextItem is None, element x will be appended to the list.  This function
     has O(1) time complexity.
     """
-
     pass
-
+def insert(list, ndx, x):
+    """
+    Insert node x before position ndx in list.
+    
+    Positions run from 0 to n-1, for a list of length n.  Inserting at
+    position 0 calls prepend(), and thus has O(1) time complexity.
+    Inserting mid-list has O(n) time complexity.  Inserting at position n
+    or beyond appends to the list, with O(n) time complexity.  To append to
+    the list use append() directly, as it has O(1) time complexity.
+    """
+    pass
+def append(list, x):
+    """
+    Append node x to the list.
+    
+    This function has O(1) time complexity.
+    """
+    pass
 
 
 kListCmdPrivate = []

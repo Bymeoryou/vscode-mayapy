@@ -1,5 +1,9 @@
 from maya.app.mayabullet.Trace import Trace
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class CommandWithOptionVars(object):
     """
     Base class that handles Maya Commands.  Tailored for MenuItems.
@@ -20,83 +24,33 @@ class CommandWithOptionVars(object):
     
     
     
-    def __init__(*args, **kw):
-        pass
-    
-    
-    def addOptionDialogWidgets(*args, **kw):
-        pass
-    
-    
-    def createOptionDialog(*args, **kw):
-        pass
-    
-    
-    def executeCommandAndHideOptionBoxCB(*args, **kw):
-        pass
-    
-    
-    def executeCommandAndSaveCB(*args, **kw):
-        pass
-    
-    
-    def executeCommandCB(*args, **kw):
-        pass
-    
-    
-    def getOptionVars(*args, **kw):
-        pass
-    
-    
-    def getWidgetValues(*args, **kw):
-        pass
-    
-    
-    def hideOptionBoxCB(*args, **kw):
-        pass
-    
-    
-    def optionBoxClosing(*args, **kw):
-        pass
-    
-    
-    def resetOptionBoxToDefaultsCB(*args, **kw):
-        pass
-    
-    
-    def saveOptionBoxPreferencesCB(*args, **kw):
-        pass
-    
-    
-    def setOptionVars(*args, **kw):
-        pass
-    
-    
-    def setWidgetValues(*args, **kw):
-        pass
-    
-    
-    def updateOptionBox(*args, **kw):
-        pass
-    
-    
-    def visibilityChangedCB(*args, **kw):
-        pass
-    
-    
-    def command(*args, **kw):
-        pass
-    
-    
+    def __init__(*args, **kw): pass
+    def addOptionDialogWidgets(*args, **kw): pass
+    def createOptionDialog(*args, **kw): pass
+    def executeCommandAndHideOptionBoxCB(*args, **kw): pass
+    def executeCommandAndSaveCB(*args, **kw): pass
+    def executeCommandCB(*args, **kw): pass
+    def getOptionVars(*args, **kw): pass
+    def getWidgetValues(*args, **kw): pass
+    def hideOptionBoxCB(*args, **kw): pass
+    def optionBoxClosing(*args, **kw): pass
+    def resetOptionBoxToDefaultsCB(*args, **kw): pass
+    def saveOptionBoxPreferencesCB(*args, **kw): pass
+    def setOptionVars(*args, **kw): pass
+    def setWidgetValues(*args, **kw): pass
+    def updateOptionBox(*args, **kw): pass
+    def visibilityChangedCB(*args, **kw): pass
+    @staticmethod
+    def command(*args, **kw): pass
     __dict__ = None
+    
     
     __weakref__ = None
 
 
 
-def retrieveOptionVars(*args, **kw):
-    pass
 
+def retrieveOptionVars(*args, **kw): pass
 
 
 logger = None

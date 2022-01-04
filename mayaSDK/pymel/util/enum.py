@@ -1,5 +1,6 @@
 import exceptions
 
+
 """
 This package provides a module for robust enumerations in Python.
 
@@ -38,178 +39,12 @@ original arguments used to create the enumeration:
     2
 """
 
-class Enum(object):
-    """
-    Enumerated type
-    """
-    
-    
-    
-    def __contains__(self, value):
-        pass
-    
-    
-    def __delattr__(self, name):
-        pass
-    
-    
-    def __delitem__(self, index):
-        pass
-    
-    
-    def __eq__(self, other):
-        pass
-    
-    
-    def __getitem__(self, index):
-        pass
-    
-    
-    def __init__(self, name, keys, **kwargs):
-        """
-        Create an enumeration instance
-        
-        :Parameters:
-        name : `str`
-            The name of this enumeration
-        keys : `dict` from `str` to `int`, or iterable of keys
-            The keys for the enumeration; if this is a dict, it should map
-            from key to it's value (ie, from string to int)
-            Otherwise, it should be an iterable of keys, where their index
-            within the iterable is their value -ie, passing either of these
-            would give the same result:
-                {'Red':0,'Green':1,'Blue':2}
-                ('Red', 'Green', 'Blue')
-        multiKeys : `bool`
-            Defaults to False
-            If True, allows multiple keys per value - ie,
-                Enum('Names', {'Bob':0,'Charles':1,'Chuck':1}, multiKeys=True)
-            When looking up a key from a value, a single key is always returned
-            - see defaultKeys for a discussion of which key this is.
-            When multiKeys is enabled, the length of keys and values may not be
-            equal.
-            If False (default), then the end result enum will always have a
-            one-to-one key / value mapping; if multiple keys are supplied for a
-            a single value, then which key is used is indeterminate (an error
-            will not be raised).
-        defaultKeys : `dict` from `int` to `string`
-            If given, should be a map from values to the 'default' key to
-            return for that value when using methods like getKey(index)
-            This will only be used if the value actually has multiple keys
-            mapping to it, and in this case, the specified default key must be
-            present within keys (if not, a EnumBadDefaultKeyError is raised).
-            If there are multiple keys for a given value, and no defaultKey is
-            provided, which one is used is undefined.
-        docs : `dict` from `str` to `int, or None
-            if given, should provide a map from keys to an associated docstring
-            for that key; the dict need not provide an entry for every key
-        """
-    
-        pass
-    
-    
-    def __iter__(self):
-        pass
-    
-    
-    def __len__(self):
-        pass
-    
-    
-    def __ne__(self, other):
-        pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
-    def __setattr__(self, name, value):
-        pass
-    
-    
-    def __setitem__(self, index, value):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
-    def getIndex(self, key):
-        """
-        Get an index value from a key
-        This method always returns an index. If a valid index is passed instead
-        of a key, the index will be returned unchanged.  This is useful when you
-        need an index, but are not certain whether you are starting with a key
-        or an index.
-        
-            >>> units = Enum('units', ['invalid', 'inches', 'feet', 'yards', 'miles', 'millimeters', 'centimeters', 'kilometers', 'meters'])
-            >>> units.getIndex('inches')
-            1
-            >>> units.getIndex(3)
-            3
-            >>> units.getIndex('hectares')
-            Traceback (most recent call last):
-              ...
-            ValueError: invalid enumerator key: 'hectares'
-            >>> units.getIndex(10)
-            Traceback (most recent call last):
-              ...
-            ValueError: invalid enumerator index: 10
-        """
-    
-        pass
-    
-    
-    def getKey(self, index):
-        """
-        Get a key value from an index
-        This method always returns a key. If a valid key is passed instead of an
-        index, the key will be returned unchanged.  This is useful when you need
-        a key, but are not certain whether you are starting with a key or an
-        index.
-        
-            >>> units = Enum('units', ['invalid', 'inches', 'feet', 'yards', 'miles', 'millimeters', 'centimeters', 'kilometers', 'meters'])
-            >>> units.getKey(2)
-            'feet'
-            >>> units.getKey('inches')
-            'inches'
-            >>> units.getKey(10)
-            Traceback (most recent call last):
-              ...
-            ValueError: invalid enumerator index: 10
-            >>> units.getKey('hectares')
-            Traceback (most recent call last):
-              ...
-            ValueError: invalid enumerator key: 'hectares'
-        """
-    
-        pass
-    
-    
-    def keys(self):
-        """
-        return a list of keys as strings
-        """
-    
-        pass
-    
-    
-    def values(self):
-        """
-        return a list of `EnumValue`s
-        """
-    
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-    
-    name = None
 
+from collections import OrderedDict
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class EnumValue(object):
     """
@@ -218,54 +53,23 @@ class EnumValue(object):
     
     
     
-    def __cmp__(self, other):
-        pass
-    
-    
-    def __hash__(self):
-        pass
-    
-    
+    def __cmp__(self, other): pass
+    def __hash__(self): pass
     def __init__(self, enumtype, index, key, doc='None'):
         """
         Set up a new instance
         """
-    
         pass
-    
-    
-    def __int__(self):
-        pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
+    def __int__(self): pass
+    def __repr__(self): pass
+    def __str__(self): pass
+    @property
+    def enumtype(self): pass
+    @property
+    def index(self): pass
+    @property
+    def key(self): pass
     __dict__ = None
-    
-    __weakref__ = None
-    
-    enumtype = None
-    
-    index = None
-    
-    key = None
-
-
-class EnumException(exceptions.Exception):
-    """
-    Base class for all exceptions in this module
-    """
-    
-    
-    
-    def __init__(self):
-        pass
     
     
     __weakref__ = None
@@ -318,14 +122,8 @@ class EnumDict(utilitytypes.EquivalencePairs):
         """
         Create an enumeration instance
         """
-    
         pass
-    
-    
-    def __repr__(self):
-        pass
-    
-    
+    def __repr__(self): pass
     def key(self, index):
         """
         get a key value from an index. this method always returns a key. if a valid key is passed instead of an index, the key will
@@ -345,18 +143,12 @@ class EnumDict(utilitytypes.EquivalencePairs):
               ...
             ValueError: invalid enumerator key: 'hectares'
         """
-    
         pass
-    
-    
     def keys(self):
         """
         return a list of keys as strings ordered by their enumerator value
         """
-    
         pass
-    
-    
     def value(self, key):
         """
         get an index value from a key. this method always returns an index. if a valid index is passed instead of a key, the index will
@@ -376,36 +168,160 @@ class EnumDict(utilitytypes.EquivalencePairs):
               ...
             ValueError: invalid enumerator value: 10
         """
-    
         pass
-    
-    
     def values(self):
         """
         return a list of ordered integer values
         """
-    
         pass
 
 
-class EnumBadKeyError(exceptions.TypeError, EnumException):
+class EnumException(exceptions.Exception):
     """
-    Raised when creating an Enum with non-string keys
+    Base class for all exceptions in this module
     """
     
     
     
-    def __init__(self, key):
-        pass
+    def __init__(self): pass
+    __weakref__ = None
+
+
+class Enum(object):
+    """
+    Enumerated type
+    """
     
     
-    def __str__(self):
+    
+    def __contains__(self, value): pass
+    def __delattr__(self, name): pass
+    def __delitem__(self, index): pass
+    def __eq__(self, other): pass
+    def __getitem__(self, index): pass
+    def __hash__(self): pass
+    def __init__(self, name, keys, **kwargs):
+        """
+        Create an enumeration instance
+        
+        Parameters
+        ----------
+        name : str
+            The name of this enumeration
+        keys : Union[Dict[str, int], Iterable[str], Iterable[Tuple[str, int]]]
+            The keys for the enumeration; if this is a dict, it should map
+            from key to it's value (ie, from string to int)
+            Otherwise, it should be an iterable of keys, where their index
+            within the iterable is their value, or an iterable of key/value
+            pairs - ie, passing any of these would give the same result:
+                {'Red':0,'Green':1,'Blue':2}
+                ('Red', 'Green', 'Blue')
+                [('Green', 1), ('Blue', 2), ('Red', 0)]
+        multiKeys : bool
+            Defaults to False
+            If True, allows multiple keys per value - ie,
+                Enum('Names', {'Bob':0,'Charles':1,'Chuck':1}, multiKeys=True)
+            When looking up a key from a value, a single key is always returned
+            - see defaultKeys for a discussion of which key this is.
+            When multiKeys is enabled, the length of keys and values may not be
+            equal.
+            If False (default), then the end result enum will always have a
+            one-to-one key / value mapping; if multiple keys are supplied for a
+            a single value, then which key is used is indeterminate (an error
+            will not be raised).
+        defaultKeys : Dict[int, str]
+            If given, should be a map from values to the 'default' key to
+            return for that value when using methods like getKey(index)
+            This will only be used if the value actually has multiple keys
+            mapping to it, and in this case, the specified default key must be
+            present within keys (if not, a EnumBadDefaultKeyError is raised).
+            If there are multiple keys for a given value, and no defaultKey is
+            provided, the default key is whichever one is encountered first
+            when iterating through the `key` parameter (which is well-defined
+            for a list of pairs or an OrderedDict, and effectively random for
+            a normal dict)
+        docs : Optional[Dict[int, str]]
+            if given, should provide a map from keys to an associated docstring
+            for that key; the dict need not provide an entry for every key
+        """
         pass
+    def __iter__(self): pass
+    def __len__(self): pass
+    def __ne__(self, other): pass
+    def __repr__(self): pass
+    def __setattr__(self, name, value): pass
+    def __setitem__(self, index, value): pass
+    def __str__(self): pass
+    def getIndex(self, key):
+        """
+        Get an index value from a key
+        This method always returns an index. If a valid index is passed instead
+        of a key, the index will be returned unchanged.  This is useful when you
+        need an index, but are not certain whether you are starting with a key
+        or an index.
+        
+            >>> units = Enum('units', ['invalid', 'inches', 'feet', 'yards', 'miles', 'millimeters', 'centimeters', 'kilometers', 'meters'])
+            >>> units.getIndex('inches')
+            1
+            >>> units.getIndex(3)
+            3
+            >>> units.getIndex('hectares')
+            Traceback (most recent call last):
+              ...
+            ValueError: invalid enumerator key: 'hectares'
+            >>> units.getIndex(10)
+            Traceback (most recent call last):
+              ...
+            ValueError: invalid enumerator index: 10
+        """
+        pass
+    def getKey(self, index):
+        """
+        Get a key value from an index
+        This method always returns a key. If a valid key is passed instead of an
+        index, the key will be returned unchanged.  This is useful when you need
+        a key, but are not certain whether you are starting with a key or an
+        index.
+        
+            >>> units = Enum('units', ['invalid', 'inches', 'feet', 'yards', 'miles', 'millimeters', 'centimeters', 'kilometers', 'meters'])
+            >>> units.getKey(2)
+            'feet'
+            >>> units.getKey('inches')
+            'inches'
+            >>> units.getKey(10)
+            Traceback (most recent call last):
+              ...
+            ValueError: invalid enumerator index: 10
+            >>> units.getKey('hectares')
+            Traceback (most recent call last):
+              ...
+            ValueError: invalid enumerator key: 'hectares'
+        """
+        pass
+    def itervalues(self):
+        """
+        iterator over EnumValue objects
+        """
+        pass
+    def keys(self):
+        """
+        return a list of keys as strings
+        """
+        pass
+    def values(self):
+        """
+        return a list of `EnumValue`s
+        """
+        pass
+    @property
+    def name(self): pass
+    __dict__ = None
     
     
     __weakref__ = None
 
 
+EnumType = Enum
 class EnumBadDefaultKeyError(exceptions.ValueError, EnumException):
     """
     Raised when a supplied default key for a value was not present
@@ -413,14 +329,8 @@ class EnumBadDefaultKeyError(exceptions.ValueError, EnumException):
     
     
     
-    def __init__(self, val, key):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
+    def __init__(self, val, key): pass
+    def __str__(self): pass
     __weakref__ = None
 
 
@@ -431,14 +341,20 @@ class EnumImmutableError(exceptions.TypeError, EnumException):
     
     
     
-    def __init__(self, *args):
-        pass
+    def __init__(self, *args): pass
+    def __str__(self): pass
+    __weakref__ = None
+
+
+class EnumBadKeyError(exceptions.TypeError, EnumException):
+    """
+    Raised when creating an Enum with non-string keys
+    """
     
     
-    def __str__(self):
-        pass
     
-    
+    def __init__(self, key): pass
+    def __str__(self): pass
     __weakref__ = None
 
 
@@ -449,16 +365,14 @@ class EnumEmptyError(exceptions.AssertionError, EnumException):
     
     
     
-    def __str__(self):
-        pass
-    
-    
+    def __str__(self): pass
     __weakref__ = None
 
 
 
-__date__ = '2007-01-24'
 
 __version__ = '0.4.3'
+
+__date__ = '2007-01-24'
 
 

@@ -5,6 +5,10 @@ a custom subclass, and adding it to commandHandlersMap, with a string key
 which will be passed to openCommandPort as the 'lang' parameter.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 import threading
 
 class TcommandServer(threading.Thread):
@@ -16,27 +20,17 @@ class TcommandServer(threading.Thread):
     
     
     
-    def __del__(self):
-        pass
-    
-    
-    def __init__(self, socketServer):
-        pass
-    
-    
+    def __del__(self): pass
+    def __init__(self, socketServer): pass
     def run(self):
         """
         called by Thread.start
         """
-    
         pass
-    
-    
     def shutdown(self):
         """
         tell the server to shutdown
         """
-    
         pass
 
 
@@ -50,29 +44,10 @@ class TcommandHandler(SocketServer.StreamRequestHandler):
     
     
     
-    def handle(self):
-        pass
-    
-    
-    def postSecurityWarning(self):
-        pass
-    
-    
-    def receiveData(self):
-        pass
-    
-    
+    def handle(self): pass
+    def postSecurityWarning(self): pass
+    def receiveData(self): pass
     resp_term = '\n\x00'
-
-
-class TMELCommandHandler(TcommandHandler):
-    """
-    The StreamRequestHandler for deferred MEL execution
-    """
-    
-    
-    
-    pass
 
 
 class TpythonCommandHandler(TcommandHandler):
@@ -85,16 +60,24 @@ class TpythonCommandHandler(TcommandHandler):
     pass
 
 
+class TMELCommandHandler(TcommandHandler):
+    """
+    The StreamRequestHandler for deferred MEL execution
+    """
+    
+    
+    
+    pass
+
+
+
 
 def closeCommandPort(portName):
     """
     Close the specified command port  
     Returns error string on failure, None on success
     """
-
     pass
-
-
 def openCommandPort(portName, lang, prefix, sendResults, returnNbCommands, echoOutput, bufferSize, securityWarning, pickleOutput='False'):
     """
     Open a command port with the given name
@@ -121,31 +104,23 @@ def openCommandPort(portName, lang, prefix, sendResults, returnNbCommands, echoO
                        pickled, default is false
     Returns error string on failure, None on success
     """
-
     pass
-
-
+def commandOutputCallback(message, msgType, qu): pass
 def listCommandPorts():
     """
     Returns the list of command port names, in the format used by openCommandPort
     """
-
     pass
 
-
-def commandOutputCallback(message, msgType, qu):
-    pass
-
-
-
-commandHandlersMap = {}
-
-EINTR = 4
-
-transformEncoding = 'utf8'
 
 mayaEncoding = []
 
+commandHandlersMap = {}
+
 __commandPorts = {}
+
+transformEncoding = 'utf8'
+
+EINTR = 4
 
 

@@ -3,14 +3,19 @@ File containing class that handles the process of running analytics,
 including management of the options for running.
 """
 
-from maya.analytics.Logger import Logger
+
+from maya.analytics.maya_file_generator import get_maya_files
 from maya.analytics.ObjectNamer import ObjectNamer
 from maya.analytics.utilities import analytic_by_name
+from maya.analytics.Logger import Logger
 from maya.analytics.utilities import list_analytics
 from maya.analytics.maya_file_generator import maya_file_generator
 from maya.analytics.ProgressMatrix import ProgressMatrix
-from maya.analytics.maya_file_generator import get_maya_files
 from maya.debug.TODO import TODO
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class Runner(object):
     """
@@ -57,7 +62,7 @@ class Runner(object):
                          if "paths" are specified a ValueError exception is
                          raised.
                          Default: False
-        logger       : Message output destination.
+        logger         : Message output destination.
                          Default: message object pointing to stdout
     }
     
@@ -96,18 +101,12 @@ class Runner(object):
         """
         Start out the analytic options with all defaults
         """
-    
         pass
-    
-    
     def __str__(self):
         """
         Pretty-print the current options
         """
-    
         pass
-    
-    
     def run(self):
         """
         Run analytics as appropriate based on the options present.
@@ -119,10 +118,7 @@ class Runner(object):
         Timing information for running the analytic and, if required, loading
         the file are appended to the JSON output data.
         """
-    
         pass
-    
-    
     def set_option(self, option_name, option_value):
         """
         Define a new option for analytics to use. All analytics being run
@@ -141,11 +137,9 @@ class Runner(object):
         option_name:  Name of option to pass along
         option_value: Current value of the option
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 

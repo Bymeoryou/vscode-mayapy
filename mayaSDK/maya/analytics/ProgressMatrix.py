@@ -14,30 +14,9 @@ Example for progress walking along a 4x4 matrix:
     progress_object.end()
 """
 
-import unittest
 
-class TestProgressMatrix(unittest.TestCase):
-    """
-    Unit tests for the ProgressMatrix object
-    """
-    
-    
-    
-    def test_1_dimension(self):
-        """
-        Test the ProgressMatrix object using one dimensional steps
-        """
-    
-        pass
-    
-    
-    def test_2_dimensions(self):
-        """
-        Test the ProgressMatrix object using two-dimensional steps
-        """
-    
-        pass
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class ProgressMatrix(object):
     """
@@ -65,18 +44,12 @@ class ProgressMatrix(object):
         title:        Title of the progress window
         progress_fmt: Progress message format
         """
-    
         pass
-    
-    
     def end(self):
         """
         If the window is enabled close it.
         """
-    
         pass
-    
-    
     def report(self, step_counts):
         """
         If the window is enabled put progress information consisting of the
@@ -84,10 +57,7 @@ class ProgressMatrix(object):
         
         step_counts: List of counts for each dimension being stepped
         """
-    
         pass
-    
-    
     def start(self):
         """
         Define whether the analytics should put up a progress report window
@@ -100,13 +70,33 @@ class ProgressMatrix(object):
         load, and analytics will take varying amounts of time to run, but
         it's as good an estimate of progress as any.
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+
+
+import unittest
+
+class TestProgressMatrix(unittest.TestCase):
+    """
+    Unit tests for the ProgressMatrix object
+    """
+    
+    
+    
+    def test_1_dimension(self):
+        """
+        Test the ProgressMatrix object using one dimensional steps
+        """
+        pass
+    def test_2_dimensions(self):
+        """
+        Test the ProgressMatrix object using two-dimensional steps
+        """
+        pass
+
 
 
 

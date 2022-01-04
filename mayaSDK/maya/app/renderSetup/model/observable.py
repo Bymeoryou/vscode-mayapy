@@ -1,3 +1,6 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class Observable(object):
     """
     Observable class (subjects in the Observer Pattern:
@@ -22,43 +25,28 @@ class Observable(object):
     
     
     
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def addItemObserver(self, obs):
         """
-        Add an observers to this item.
+        Add an observer to this item.
         
         Observers must be bound methods (e.g. given an instance c of class
         C, c.methodName), and are kept as weak references.
         """
-    
         pass
-    
-    
     def hasItemObserver(self, obs):
         """
         Query whether this item has the argument observer.
         """
-    
         pass
-    
-    
     def itemChanged(self, *posArgs, **kwArgs):
         """
         Call item changed callbacks.
         
         The order in which observers are called is not specified.
         """
-    
         pass
-    
-    
-    def nbObservers(self):
-        pass
-    
-    
+    def nbObservers(self): pass
     def removeItemObserver(self, obs):
         """
         Remove an observer from this item.
@@ -66,13 +54,18 @@ class Observable(object):
         ValueError is raised by the remove item observer method if the
         argument observer is not found.
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+
+
+class SingletonObservable(Observable):
+    """
+    Singleton Observable class ensuring that there is always at most one
+    instance of a given type of subject.
+    """
 
 
 

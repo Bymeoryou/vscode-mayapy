@@ -1,14 +1,19 @@
-from PySide2.QtGui import QPen
-from PySide2.QtGui import QBrush
-from PySide2.QtWidgets import QLineEdit
-from PySide2.QtGui import QIcon
-from PySide2.QtGui import QColor
 from copy import deepcopy
+from PySide2.QtGui import QColor
 from PySide2.QtCore import Qt
-from PySide2.QtGui import QPainter
-from PySide2.QtGui import QFontMetrics
-from PySide2.QtGui import QCursor
-from PySide2.QtCore import QRect
+from PySide2.QtGui import QPen
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class DataDelegate(object):
+    def draw(self, painter, rect, data, mapped): pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+
 
 import maya.app.renderSetup.views.renderSetupDelegate as renderSetupDelegate
 
@@ -19,22 +24,13 @@ class LightEditorDelegate(renderSetupDelegate.RenderSetupDelegate):
     
     
     
-    def __init__(self, treeView):
-        pass
-    
-    
-    def getTextRect(self, rect, item):
-        pass
-    
-    
+    def __init__(self, treeView): pass
+    def getTextRect(self, rect, item): pass
     def updateEditorGeometry(self, editor, option, index):
         """
         Sets the location for the double-click editor for renaming light editor entries.
         """
-    
         pass
-    
-    
     LIGHT_ATTR_WIDTH = 180.0
     
     
@@ -62,36 +58,20 @@ class LightEditorDelegate(renderSetupDelegate.RenderSetupDelegate):
     staticMetaObject = None
 
 
-class DataDelegate(object):
-    def draw(self, painter, rect, data, mapped):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
-class BoolDelegate(DataDelegate):
-    def draw(self, painter, rect, data, mapped):
-        pass
+class IntDelegate(DataDelegate):
+    def draw(self, painter, rect, data, mapped): pass
 
 
 class FloatDelegate(DataDelegate):
-    def draw(self, painter, rect, data, mapped):
-        pass
+    def draw(self, painter, rect, data, mapped): pass
 
 
-class IntDelegate(DataDelegate):
-    def draw(self, painter, rect, data, mapped):
-        pass
+class BoolDelegate(DataDelegate):
+    def draw(self, painter, rect, data, mapped): pass
 
 
 class ColorDelegate(DataDelegate):
-    def draw(self, painter, rect, data, mapped):
-        pass
-    
-    
+    def draw(self, painter, rect, data, mapped): pass
     COLOR_SWATCH_WIDTH = 50.0
 
 

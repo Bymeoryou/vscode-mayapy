@@ -39,53 +39,28 @@
 #############################################################################
 """
 
+
 from ctypes import c_ulong as DWORD
 from ctypes import create_unicode_buffer
 from ctypes import c_wchar_p as LPCWSTR
 from ctypes import c_wchar_p as LPWSTR
 
-def sizeof(*args, **kwargs):
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def _get_win32_long_name(s):
     """
-    sizeof(C type) -> integer
-    sizeof(C instance) -> integer
-    Return the size in bytes of a C instance
+    Returns long name
     """
-
     pass
-
-
-def get_pyside_dir():
-    pass
-
-
-def _filter_match(name, patterns):
-    pass
-
-
+def _dir_contains(dir, filter): pass
 def _get_win32_short_name(s):
     """
     Returns short name
     """
-
     pass
-
-
-def _dir_contains(dir, filter):
-    pass
-
-
-def _get_win32_case_sensitive_name(s):
-    """
-    Returns long name in case sensitive format
-    """
-
-    pass
-
-
-def u(x):
-    pass
-
-
+def u(x): pass
 def register_qt_conf(prefix, binaries, plugins, imports, translations, force='False'):
     """
     Register qt.conf in Qt resource system to override the built-in
@@ -93,51 +68,37 @@ def register_qt_conf(prefix, binaries, plugins, imports, translations, force='Fa
     executable folder and another qt.conf is not already registered in
     Qt resource system.
     """
-
     pass
-
-
-def POINTER(*args, **kwargs):
-    pass
-
-
-def _get_win32_long_name(s):
+def _get_win32_case_sensitive_name(s):
     """
-    Returns long name
+    Returns long name in case sensitive format
     """
-
     pass
-
-
 def byref(*args, **kwargs):
     """
     byref(C instance[, offset=0]) -> byref-object
     Return a pointer lookalike to a C instance, only usable
     as function argument
     """
-
     pass
-
-
+def u_fs(x): pass
+def POINTER(*args, **kwargs): pass
+def get_pyside_dir(): pass
 def _get_qt_conf_resource(prefix, binaries, plugins, imports, translations):
     """
     Generate Qt resource with embedded qt.conf
     """
-
     pass
-
-
-def u_fs(x):
+def sizeof(*args, **kwargs):
+    """
+    sizeof(C type) -> integer
+    sizeof(C instance) -> integer
+    Return the size in bytes of a C instance
+    """
     pass
-
-
-def _rcc_write_data(out, data):
-    pass
-
-
-def _rcc_write_number(out, number, width):
-    pass
-
+def _rcc_write_data(out, data): pass
+def _filter_match(name, patterns): pass
+def _rcc_write_number(out, number, width): pass
 
 
 GetShortPathNameW = None

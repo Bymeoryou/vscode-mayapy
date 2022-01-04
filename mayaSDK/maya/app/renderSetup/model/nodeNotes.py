@@ -1,3 +1,6 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class NodeNotes(object):
     """
     The class adds the support to the notes dynamic attribute.
@@ -5,21 +8,14 @@ class NodeNotes(object):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def getNotes(self):
-        pass
-    
-    
-    def setNotes(self, string):
-        pass
-    
-    
+    def __init__(self): pass
+    def getNotes(self): pass
+    def setNotes(self, string): pass
     __dict__ = None
     
+    
     __weakref__ = None
+
 
 
 

@@ -1,3 +1,6 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 def executeDroppedPythonFile(droppedFile, obj):
     """
     Called by Maya when you Drag and Drop a Python (.py) file onto the viewport.
@@ -34,9 +37,7 @@ def executeDroppedPythonFile(droppedFile, obj):
         MayaDropPythonTest.py is being imported into another module
         onMayaDroppedPythonFile(pSphere1)
     """
-
     pass
-
 
 
 MY_DROP_FUNC = 'onMayaDroppedPythonFile'

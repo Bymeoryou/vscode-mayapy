@@ -11,15 +11,9 @@ class derived from ModelProxyItem.
 The proxy factory is a singleton.
 """
 
-def create(node):
-    """
-    Create a Qt proxy item for data model node.
-    
-    Raises a KeyError if a creator had not already been registered.
-    """
 
-    pass
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 def register(typeName, creator):
     """
@@ -27,23 +21,25 @@ def register(typeName, creator):
     
     Raises a RuntimeError if a creator had already been registered.
     """
-
     pass
-
-
 def unregister(typeName):
     """
     Unregister a Qt proxy item creator for data model type.
     
     Raises a KeyError if a creator had not already been registered.
     """
-
+    pass
+def create(node):
+    """
+    Create a Qt proxy item for data model node.
+    
+    Raises a KeyError if a creator had not already been registered.
+    """
     pass
 
 
+kAlreadyRegistered = []
 
 _creators = {}
-
-kAlreadyRegistered = []
 
 

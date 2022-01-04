@@ -5,6 +5,10 @@ It must decorate every function that involves render setup
 nodes creation and renaming.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class NamespaceGuard:
     """
     Safe way to set namespace using the 'with' statement.
@@ -19,30 +23,16 @@ class NamespaceGuard:
     
     
     
-    def __enter__(self):
-        pass
-    
-    
-    def __exit__(self, type, value, traceback):
-        pass
-    
-    
-    def __init__(self, namespace):
-        pass
+    def __enter__(self): pass
+    def __exit__(self, type, value, traceback): pass
+    def __init__(self, namespace): pass
 
 
 
-def RootNamespaceGuard():
-    pass
 
-
-def root(f):
-    pass
-
-
-def guard(name):
-    pass
-
+def RootNamespaceGuard(): pass
+def guard(name): pass
+def root(f): pass
 
 
 ROOT_NAMESPACE = ':'

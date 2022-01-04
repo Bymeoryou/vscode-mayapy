@@ -1,10 +1,5 @@
-def registerThisRig():
-    """
-    Registers the rig in Maya's database
-    """
-
-    pass
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 def createRig(basename="'stereoCameraHier'"):
     """
@@ -13,8 +8,10 @@ def createRig(basename="'stereoCameraHier'"):
     The optionnal argument basename defines the base name for each DAG
     object that will be created.
     """
-
     pass
-
-
+def registerThisRig():
+    """
+    Registers the rig in Maya's database
+    """
+    pass
 

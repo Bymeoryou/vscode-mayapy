@@ -1,13 +1,16 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def unloadPlugin(*args): pass
+def reloadScripts(): pass
+def runCallbackChecks(): pass
 def __call(language, method, rigName, kwords='{}', cmd_args='[]'):
     """
     Private method to call a MEL or Python callback. Return 'Error' in
     case of error. We avoid None, [], '' because those are more likely
     to be returned by the command we call
     """
-
     pass
-
-
 def performReloadChk():
     """
     Scans the current module database and looks for any modules that we
@@ -17,24 +20,6 @@ def performReloadChk():
     is being executed. If you change this module, you must invoke a
     reload in the python shell prior to calling this script.
     """
-
     pass
-
-
-def unloadPlugin(*args):
-    pass
-
-
-def reloadScripts():
-    pass
-
-
-def runCallbackChecks():
-    pass
-
-
-def loadPlugin():
-    pass
-
-
+def loadPlugin(): pass
 

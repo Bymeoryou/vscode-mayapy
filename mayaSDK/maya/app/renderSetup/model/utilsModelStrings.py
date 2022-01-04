@@ -4,8 +4,12 @@
 # strings have unique names.
 """
 
-kPlugTypeMismatch = []
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 kNoSuchNode = []
+
+kPlugTypeMismatch = []
 
 

@@ -1,6 +1,6 @@
 def attrCompatibility(a=1,clr=1,dmp=1,enable=1,nr="string",pn="string",rm=1,r="string",typ="string",v="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attrCompatibility.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attrCompatibility.html
 
 
 
@@ -95,7 +95,7 @@ v     : version         [string]
 
 def autoSave(q=1,dst="int",df=1,en=1,fol="string",int="float",lim=1,max="int",p=1,prm=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/autoSave.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/autoSave.html
 
 
 
@@ -170,7 +170,7 @@ prm   : prompt          [boolean]
 
 def cmdFileOutput(q=1,c="uint",ca=1,o="string",s="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cmdFileOutput.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cmdFileOutput.html
 
 
 
@@ -230,7 +230,7 @@ s     : status          [uint]
 
 def dirmap(q=1,cd="string",en=1,gam=1,gmd="string",m="[string, string]",um="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dirmap.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dirmap.html
 
 
 
@@ -311,7 +311,7 @@ um    : unmapDirectory  [string]
 
 def exportEdits(q=1,ehr=1,en="string",exs=1,f=1,ian=1,ic=1,idf=1,inw=1,includeNode="string",isa=1,sdk=1,ish=1,sel=1,typ="string",ec="string",orn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/exportEdits.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/exportEdits.html
 
 
 
@@ -433,7 +433,7 @@ orn   : onReferenceNode [string]
 
 def file(q=1,e=1,an=1,a=1,ap=1,add=1,amf=1,at="string",bls=1,chn=1,cr="string",c="[string, string]",cmp=1,con=1,ch=1,cnl=1,de=1,dns=1,dr=1,ec="string",err=1,esn=1,ex=1,exn=1,ea=1,ean=1,ear=1,er=1,exs=1,es=1,eas=1,esa=1,esr=1,ess=1,esc="[script, string]",eur=1,exp=1,fmd=1,fr="string",f=1,gl=1,gn="string",gr=1,iv=1,i=1,ifr=1,ir=1,itr="string",lfo=1,ltf=1,l=1,lad=1,lar=1,lnr=1,lr="string",lrd="string",lrp="string",ls="string",loc=1,lcu=1,lf=1,lck=1,mns="[string, string]",mnp=1,mnr=1,mnc=1,mf=1,ms=1,ns="string",new=1,o=1,op="string",pns=1,pos="string",prs="string",pn=1,pr=1,pv=1,pmt=1,pm="string",pt="string",r=1,rdi="uint",rfn="string",rns="string",rdn=1,rr=1,rn="string",ra=1,rts=1,rpr="string",rpl=1,rep="[string, string]",rer=1,rnn=1,s=1,sdc="string",sr=1,sru=1,stx="string",sn=1,seg="string",sa=1,sh=1,shd="string",srf=1,shn=1,str=1,sns="[string, string]",typ="string",uc=1,ur="string",un=1,uns=1,wcn=1,w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/file.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/file.html
 
 
 
@@ -1140,7 +1140,7 @@ w     : writable        [boolean]
 
 def fileBrowserDialog(an="string",ds="int",fc="script",ft="string",fl="string",includeName="string",m="int",om="string",tm="string",wt="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fileBrowserDialog.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fileBrowserDialog.html
 
 
 
@@ -1227,7 +1227,7 @@ wt    : windowTitle     [string]
 
 def fileDialog(app=1,dfn="string",dm="string",m="int",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fileDialog.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fileDialog.html
 
 
 
@@ -1289,7 +1289,7 @@ t     : title           [string]
 
 def fileDialog2(bbo="int",cc="string",cap="string",ds="int",ff="string",fm="int",ftc="script",hne=1,okc="string",oca="script",ocm="script",oc2="script",ocr="script",oin="script",rf=1,sff="string",sc="script",spe=1,dir="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fileDialog2.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fileDialog2.html
 
 
 
@@ -1413,7 +1413,7 @@ dir   : startingDirectory [string]
 
 def fileInfo(q=1,rfn="string",rm="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fileInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fileInfo.html
 
 
 
@@ -1463,7 +1463,7 @@ rm    : remove          [string]
 
 def filePathEditor(q=1,ao=1,at="string",bt="string",cr="[string, string]",dt="string",f=1,ld="string",lf="string",lrt=1,p=1,rc=1,rf=1,rt="string",rel=1,r="string",ra=1,rfd="string",rs="[string, string]",s=1,tmp=1,tl="string",u=1,wa=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/filePathEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/filePathEditor.html
 
 
 
@@ -1643,7 +1643,7 @@ wa    : withAttribute   [boolean]
 
 def filterStudioImport(sp=1,ic=1,il=1,td="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/filterStudioImport.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/filterStudioImport.html
 
 
 
@@ -1692,7 +1692,7 @@ td    : transferDirectoryName [string]
 
 def getFileList(fs="string",fld="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getFileList.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getFileList.html
 
 
 
@@ -1732,7 +1732,7 @@ fld   : folder          [string]
 
 def imfPlugins(q=1,ext="string",key="string",mfs="string",pn="string",rs="string",ws="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/imfPlugins.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/imfPlugins.html
 
 
 
@@ -1795,7 +1795,7 @@ ws    : writeSupport    [string]
 
 def internalVar(uad=1,ubd=1,uhk=1,umm=1,upd=1,ups=1,usd=1,ush=1,utd=1,uwd=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/internalVar.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/internalVar.html
 
 
 
@@ -1874,7 +1874,7 @@ uwd   : userWorkspaceDir [boolean]
 
 def launch(dir="string",mov="string",pdf="string",web="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/launch.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/launch.html
 
 
 
@@ -1923,7 +1923,7 @@ web   : webPage         [string]
 
 def launchImageEditor(eif="string",vif="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/launchImageEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/launchImageEditor.html
 
 
 
@@ -1962,7 +1962,7 @@ vif   : viewImageFile   [string]
 
 def melInfo():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/melInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/melInfo.html
 
 
 
@@ -1985,7 +1985,7 @@ string[]  procedure names
 
 def namespace(q=1,an=1,add="string",ch="string",dnc=1,ex="string",f=1,ir="string",mno="string",mnp=1,mnr=1,mv="[string, string]",p="string",r=1,rel=1,rm="string",ren="[string, string]",set="string",vn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/namespace.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/namespace.html
 
 
 
@@ -2201,7 +2201,7 @@ vn    : validateName    [string]
 
 def namespaceInfo(an=1,bn=1,cur=1,dp=1,fn=1,int=1,ir=1,ls=1,lod=1,lon=1,p=1,r=1,sn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/namespaceInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/namespaceInfo.html
 
 
 
@@ -2316,7 +2316,7 @@ sn    : shortName       [boolean]
 
 def preloadRefEd(q=1,e=1,ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",lck=1,mlc="string",pnl="string",p="string",sc="script",sf=1,slc="string",sts=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/preloadRefEd.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/preloadRefEd.html
 
 
 
@@ -2442,7 +2442,7 @@ ut    : useTemplate     [string]
 
 def referenceEdit(afe=1,cet="[string, string]",fld=1,r=1,scs=1,ec="string",orn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/referenceEdit.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/referenceEdit.html
 
 
 
@@ -2530,7 +2530,7 @@ orn   : onReferenceNode [string]
 
 def referenceQuery(ch=1,iee=1,il=1,le=1,dp=1,ea=1,en=1,es=1,fld=1,f=1,inr=1,ipo=1,ns=1,n=1,p=1,pns=1,rfn=1,shn=1,sdp=1,sns=1,scs=1,tr=1,un=1,wcn=1,ec="string",orn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/referenceQuery.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/referenceQuery.html
 
 
 
@@ -2715,7 +2715,7 @@ orn   : onReferenceNode [string]
 
 def reloadImage():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/reloadImage.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/reloadImage.html
 
 
 
@@ -2740,7 +2740,7 @@ boolean  True if image is successfully loaded, false otherwise.
 
 def requires(dt="string",nt="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/requires.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/requires.html
 
 
 
@@ -2799,7 +2799,7 @@ nt    : nodeType        [string]
 
 def saveImage(q=1,e=1,ann="string",bgc="[float, float, float]",cv=1,dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",i="string",io=1,m=1,nbg=1,npm=1,ot="string",p="string",pma=1,po=1,sf="string",sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/saveImage.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/saveImage.html
 
 
 
@@ -2979,7 +2979,7 @@ w     : width           [int]
 
 def sceneEditor(q=1,e=1,ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",lck=1,mlc="string",op=1,pnl="string",p="string",rr=1,sc="script",si="int",sr="string",slc="string",shn=1,sts=1,up=1,ulk=1,un=1,upd=1,ut="string",wcn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sceneEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sceneEditor.html
 
 
 
@@ -3134,7 +3134,7 @@ wcn   : withoutCopyNumber [boolean]
 
 def sceneUIReplacement(cl=1,dr=1,gf="[string, string]",gp="[string, string]",gsp="[string, string]",u="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sceneUIReplacement.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sceneUIReplacement.html
 
 
 
@@ -3194,7 +3194,7 @@ u     : update          [string]
 
 def scriptNode(q=1,e=1,afterScript="string",bs="string",ea=1,eb=1,ire=1,n="string",st="int",stp="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scriptNode.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scriptNode.html
 
 
 
@@ -3268,7 +3268,7 @@ stp   : sourceType      [string]
 
 def selLoadSettings(q=1,e=1,ap="string",dr=1,fn="string",ns="uint",pm="string",psf="string",pst="string",pt="string",rfn="string",shn=1,un=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/selLoadSettings.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/selLoadSettings.html
 
 
 
@@ -3398,7 +3398,7 @@ un    : unresolvedName  [boolean]
 
 def sysFile(cp="string",delete=1,md=1,mov="string",red=1,ren="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sysFile.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sysFile.html
 
 
 
@@ -3457,7 +3457,7 @@ ren   : rename          [string]
 
 def translator(q=1,dfr=1,do="string",ext=1,cmp="string",f=1,l=1,ld=1,ot=1,os=1,rs=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/translator.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/translator.html
 
 
 
@@ -3543,7 +3543,7 @@ ws    : writeSupport    [boolean]
 
 def unknownNode(q=1,p=1,rcn=1,rct=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/unknownNode.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/unknownNode.html
 
 
 
@@ -3589,7 +3589,7 @@ rct   : realClassTag    [boolean]
 
 def unknownPlugin(q=1,dt=1,l=1,nt=1,r=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/unknownPlugin.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/unknownPlugin.html
 
 
 
@@ -3645,7 +3645,7 @@ v     : version         [boolean]
 
 def workspace(q=1,act=1,bw="string",cr="string",dir="string",en="string",fr="[string, string]",fre="string",frl=1,f=1,fn=1,l=1,lfw=1,lw=1,n=1,ot="[string, string]",ote="string",otl=1,o=1,pp="string",rfr="string",rve="string",rt="[string, string]",rte="string",rtl=1,rd=1,s=1,sn=1,u=1,ua=1,v="[string, string]",ve="string",vl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/workspace.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/workspace.html
 
 
 
@@ -3877,7 +3877,7 @@ vl    : variableList    [boolean]
 
 def assignInputDevice(q=1,c="string",ct=1,d="string",im=1,m=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/assignInputDevice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/assignInputDevice.html
 
 
 
@@ -3941,7 +3941,7 @@ m     : multiple        [boolean]
 
 def attachDeviceAttr(q=1,at="string",ax="string",cam=1,cr=1,ct=1,c="string",d="string",sl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/attachDeviceAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/attachDeviceAttr.html
 
 
 
@@ -4013,7 +4013,7 @@ sl    : selection       [boolean]
 
 def detachDeviceAttr(q=1,all=1,at="string",ax="string",d="string",sl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/detachDeviceAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/detachDeviceAttr.html
 
 
 
@@ -4070,7 +4070,7 @@ sl    : selection       [boolean]
 
 def deviceEditor(q=1,e=1,ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",lck=1,mlc="string",pnl="string",p="string",slc="string",sts=1,tp="string",up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/deviceEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/deviceEditor.html
 
 
 
@@ -4190,7 +4190,7 @@ ut    : useTemplate     [string]
 
 def devicePanel(q=1,e=1,ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,p="string",pmp="script",rp="string",to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/devicePanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/devicePanel.html
 
 
 
@@ -4326,7 +4326,7 @@ ut    : useTemplate     [string]
 
 def getInputDeviceRange(max=1,min=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getInputDeviceRange.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getInputDeviceRange.html
 
 
 
@@ -4366,7 +4366,7 @@ min   : minValue        [boolean]
 
 def getModifiers():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getModifiers.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getModifiers.html
 
 
 
@@ -4392,7 +4392,7 @@ int  indicating which modifier keys are pressed.
 
 def listDeviceAttachments(at="string",ax="string",c="string",d="string",f="string",sl=1,w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/listDeviceAttachments.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/listDeviceAttachments.html
 
 
 
@@ -4457,7 +4457,7 @@ w     : write           [boolean]
 
 def listInputDeviceAxes():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/listInputDeviceAxes.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/listInputDeviceAxes.html
 
 
 
@@ -4478,7 +4478,7 @@ string[]  Command result
 
 def listInputDeviceButtons():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/listInputDeviceButtons.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/listInputDeviceButtons.html
 
 
 
@@ -4500,7 +4500,7 @@ string[]  Command result
 
 def listInputDevices(f=1,p=1,s=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/listInputDevices.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/listInputDevices.html
 
 
 
@@ -4543,7 +4543,7 @@ s     : secondary       [boolean]
 
 def mouse(esw=1,mbt="int",mbs=1,sws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/mouse.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/mouse.html
 
 
 
@@ -4594,7 +4594,7 @@ sws   : scrollWheelStatus [boolean]
 
 def recordAttr(q=1,at="string",d=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/recordAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/recordAttr.html
 
 
 
@@ -4641,7 +4641,7 @@ d     : delete          [boolean]
 
 def setAttrMapping(q=1,a=1,at="string",ax="string",c="string",d="string",o="float",r=1,s="float",sl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setAttrMapping.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setAttrMapping.html
 
 
 
@@ -4735,7 +4735,7 @@ sl    : selection       [boolean]
 
 def setInputDeviceMapping(a=1,ax="string",d="string",o="float",r=1,s="float",v=1,w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setInputDeviceMapping.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setInputDeviceMapping.html
 
 
 
@@ -4828,7 +4828,7 @@ w     : world           [boolean]
 
 def unassignInputDevice(q=1,c="string",d="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/unassignInputDevice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/unassignInputDevice.html
 
 
 
@@ -4868,7 +4868,7 @@ d     : device          [string]
 
 def getModulePath(mn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/getModulePath.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/getModulePath.html
 
 
 
@@ -4901,7 +4901,7 @@ mn    : moduleName      [string]
 
 def loadModule(a=1,ld="string",sc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/loadModule.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/loadModule.html
 
 
 
@@ -4953,7 +4953,7 @@ sc    : scan            [boolean]
 
 def loadPlugin(ac="script",a=1,n="string",qt=1,rc="script"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/loadPlugin.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/loadPlugin.html
 
 
 
@@ -5023,7 +5023,7 @@ rc    : removeCallback  [script]
 
 def moduleInfo(d=1,lm=1,mn="string",p=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/moduleInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/moduleInfo.html
 
 
 
@@ -5076,7 +5076,7 @@ v     : version         [boolean]
 
 def openMayaPref(q=1,e=1,el=1,lz=1,ow=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/openMayaPref.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/openMayaPref.html
 
 
 
@@ -5121,7 +5121,7 @@ ow    : oldPluginWarning [boolean]
 
 def pluginDisplayFilter(q=1,cls="string",dr=1,ex=1,l="string",lf=1,r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pluginDisplayFilter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pluginDisplayFilter.html
 
 
 
@@ -5183,7 +5183,7 @@ r     : register        [boolean]
 
 def pluginInfo(q=1,e=1,af=1,aci="string",av=1,a=1,cf=1,cc="script",c="string",cnc=1,ctc=1,d="[string, string]",dn=1,dnt="string",dni="string",dv=1,ddb=1,ik=1,ls=1,lsp=1,lpp=1,l=1,mec=1,n="string",p="string",pu=1,rtr=1,r=1,rm=1,rdr=1,spp=1,sd=1,set=1,t="string",tr=1,uo=1,u=1,vd="string",v=1,wr=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pluginInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pluginInfo.html
 
 
 
@@ -5408,7 +5408,7 @@ wr    : writeRequires   [boolean]
 
 def unloadPlugin(ac="script",f=1,rc="script"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/unloadPlugin.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/unloadPlugin.html
 
 
 
@@ -5452,7 +5452,7 @@ rc    : removeCallback  [script]
 
 def displayString(q=1,d=1,ex=1,k=1,r=1,v="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/displayString.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/displayString.html
 
 
 
@@ -5515,7 +5515,7 @@ v     : value           [string]
 
 def format(s="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/format.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/format.html
 
 
 
@@ -5551,7 +5551,7 @@ s     : stringArg       [string]
 
 def aaf2fcp(df=1,dst="string",gfn="int",pr="int",src="string",t="int",wc="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/aaf2fcp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/aaf2fcp.html
 
 
 
@@ -5616,7 +5616,7 @@ wc    : waitCompletion  [int]
 
 def allNodeTypes(ia=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/allNodeTypes.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/allNodeTypes.html
 
 
 
@@ -5653,7 +5653,7 @@ ia    : includeAbstract [boolean]
 
 def audioTrack(q=1,e=1,it="uint",l=1,m=1,nt="uint",ret=1,rt="uint",so=1,st="[uint, uint]",t="string",tr="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/audioTrack.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/audioTrack.html
 
 
 
@@ -5735,7 +5735,7 @@ tr    : track           [uint]
 
 def cacheFile(q=1,e=1,apf=1,af=1,cfn="string",cf="string",ci="string",cat="string",cnd="string",chi=1,cnm="string",pc2=1,ccn=1,cch="string",dsz=1,dcf=1,dfn=1,dir="string",dtf=1,et="time",f="string",fm="string",gm=1,ia="string",it="string",iet="time",ist="time",nb=1,oa="string",ot="string",pcf="string",pc=1,pts="string",pan="string",p=1,r=1,rcf=1,rws=1,rf="int",spm="int",smr="time",sch=1,st="time",sc=1,ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cacheFile.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cacheFile.html
 
 
 
@@ -5998,7 +5998,7 @@ ws    : worldSpace      [boolean]
 
 def cacheFileCombine(q=1,e=1,ci=1,cnm="string",cc="string",kw=1,ln=1,na=1,obj="string",oi="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cacheFileCombine.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cacheFileCombine.html
 
 
 
@@ -6069,7 +6069,7 @@ oi    : objectIndex     [int]
 
 def cacheFileMerge(q=1,e=1,et="time",g=1,st="time"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cacheFileMerge.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cacheFileMerge.html
 
 
 
@@ -6120,7 +6120,7 @@ st    : startTime       [time]
 
 def cacheFileTrack(q=1,e=1,it="uint",l=1,m=1,ret=1,rt="uint",so=1,t="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cacheFileTrack.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cacheFileTrack.html
 
 
 
@@ -6187,7 +6187,7 @@ t     : track           [uint]
 
 def clearCache(all=1,c=1,d=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/clearCache.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/clearCache.html
 
 
 
@@ -6233,7 +6233,7 @@ d     : dirty           [boolean]
 
 def convertUnit(f="string",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/convertUnit.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/convertUnit.html
 
 
 
@@ -6273,7 +6273,7 @@ t     : toUnit          [string]
 
 def crashInfo(q=1,cf=1,sbc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/crashInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/crashInfo.html
 
 
 
@@ -6313,7 +6313,7 @@ sbc   : savedBeforeCrash [boolean]
 
 def dagObjectCompare(a=1,b="string",c=1,n="string",r=1,s=1,t=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dagObjectCompare.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dagObjectCompare.html
 
 
 
@@ -6381,7 +6381,7 @@ t     : type            [boolean]
 
 def date(d=1,f="string",sd=1,st=1,t=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/date.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/date.html
 
 
 
@@ -6435,7 +6435,7 @@ t     : time            [boolean]
 
 def dbcount(enabled=1,f="string",k="string",l=1,md="uint",quick=1,r=1,s=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dbcount.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dbcount.html
 
 
 
@@ -6507,7 +6507,7 @@ s     : spreadsheet     [boolean]
 
 def dbfootprint(q=1,all=1,of="string",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dbfootprint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dbfootprint.html
 
 
 
@@ -6560,7 +6560,7 @@ t     : type            [string]
 
 def dbmessage(f="string",l=1,m=1,t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dbmessage.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dbmessage.html
 
 
 
@@ -6610,7 +6610,7 @@ t     : type            [string]
 
 def dbpeek(q=1,all=1,a="string",c="uint",eg=1,op="string",of="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dbpeek.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dbpeek.html
 
 
 
@@ -6679,7 +6679,7 @@ of    : outputFile      [string]
 
 def dbtrace(q=1,f="string",i=1,k="string",m=1,off=1,o="string",tm=1,t="string",v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dbtrace.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dbtrace.html
 
 
 
@@ -6766,7 +6766,7 @@ v     : verbose         [boolean]
 
 def dgdirty(q=1,a=1,c=1,i=1,l="string",p=1,st=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dgdirty.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dgdirty.html
 
 
 
@@ -6841,7 +6841,7 @@ v     : verbose         [boolean]
 
 def dgeval(src=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dgeval.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dgeval.html
 
 
 
@@ -6884,7 +6884,7 @@ v     : verbose         [boolean]
 
 def dgfilter(atr="string",l=1,logicalAnd="[string, string]",logicalNot="string",logicalOr="[string, string]",n="string",nd="string",nt="string",p="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dgfilter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dgfilter.html
 
 
 
@@ -6966,7 +6966,7 @@ p     : plug            [string]
 
 def dgInfo(all=1,c=1,d=1,n=1,nd=1,of="string",p=1,s=1,sz=1,sub=1,nt="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dgInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dgInfo.html
 
 
 
@@ -7097,7 +7097,7 @@ nt    : type            [string]
 
 def dgmodified():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dgmodified.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dgmodified.html
 
 
 
@@ -7120,7 +7120,7 @@ string[]  list of all nodes that have been modified
 
 def dgtimer(q=1,ct=1,hi="string",h=1,m="int",n="string",nh=1,o="string",oh=1,rgl="float",rgu="float",r=1,rc="string",rt="string",sh="string",sm="string",st="string",th="float",off=1,on=1,tr=1,t="string",un=1,uhm="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dgtimer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dgtimer.html
 
 
 
@@ -7399,7 +7399,7 @@ uhm   : updateHeatMap   [int]
 
 def dgValidateCurve(a=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dgValidateCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dgValidateCurve.html
 
 
 
@@ -7444,7 +7444,7 @@ v     : verbose         [boolean]
 
 def diskCache(q=1,a=1,ct="string",c="string",ca=1,d="string",da=1,empty="string",ea=1,eco=1,et="time",frt="string",os=1,sr="int",st="time",tmp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/diskCache.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/diskCache.html
 
 
 
@@ -7549,7 +7549,7 @@ tmp   : tempDir         [boolean]
 
 def dynamicLoad(q=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dynamicLoad.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dynamicLoad.html
 
 
 
@@ -7572,7 +7572,7 @@ In query mode, return type is based on queried flag.
 
 def error(n=1,sl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/error.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/error.html
 
 
 
@@ -7621,7 +7621,7 @@ sl    : showLineNumber  [boolean]
 
 def fcheck():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/fcheck.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/fcheck.html
 
 
 
@@ -7642,7 +7642,7 @@ None
 
 def findType(d=1,exact=1,f=1,t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/findType.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/findType.html
 
 
 
@@ -7695,7 +7695,7 @@ t     : type            [string]
 
 def flushUndo():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/flushUndo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/flushUndo.html
 
 
 
@@ -7716,7 +7716,7 @@ None
 
 def hardware(brd=1,cpu=1,gfx=1,mhz=1,npr=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hardware.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hardware.html
 
 
 
@@ -7769,7 +7769,7 @@ npr   : numProcessors   [boolean]
 
 def help(q=1,doc=1,lng="string",l=1,pdt="uint",pm=1,ppt="uint",psm=1,rm=1,so=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/help.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/help.html
 
 
 
@@ -7861,7 +7861,7 @@ so    : syntaxOnly      [boolean]
 
 def hitTest():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hitTest.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hitTest.html
 
 
 
@@ -7887,7 +7887,7 @@ string[]  items underneath the hit-point
 
 def memory(av=1,af=1,dbg=1,fr=1,gb=1,he=1,kb=1,mb=1,pf=1,pr=1,phy=1,pv=1,sum=1,swf=1,swl=1,swm=1,swp=1,swr=1,swv=1,sw=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/memory.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/memory.html
 
 
 
@@ -8022,7 +8022,7 @@ sw    : swaps           [boolean]
 
 def ogs(q=1,di=1,drt=1,dt="string",hwi=1,fe="string",xml="string",gmt="int",gpu=1,lve=1,irs=1,p=1,rbt=1,rup="string",rlt=1,r=1,ss="string",ttp=1,trp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ogs.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ogs.html
 
 
 
@@ -8146,7 +8146,7 @@ trp   : traceRenderPipeline [boolean]
 
 def openGLExtension(ext="string",rnd=1,vnd=1,ver=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/openGLExtension.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/openGLExtension.html
 
 
 
@@ -8201,7 +8201,7 @@ ver   : version         [boolean]
 
 def profiler(q=1,a="string",ac=1,b="int",ci="int",cin="int",cf="string",cn="string",cni="string",cr=1,cam=1,coi="int",eci=1,eca=1,eco=1,ec=1,ed=1,edu=1,ei="int",en=1,et=1,eti=1,instrumentMel=1,l="string",o="string",pd="string",pn="string",rc="string",r=1,s=1,sig=1,sim=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/profiler.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/profiler.html
 
 
 
@@ -8400,7 +8400,7 @@ sim   : signalMelEvent  [boolean]
 
 def profilerTool(q=1,e=1,cat=1,cs=1,csr=1,cpu=1,dtr=1,et=1,ex=1,es=1,esr=1,fn=1,fp=1,fa=1,fs=1,isolateSegment="int",mk=1,mww=1,se="string",sc=1,sa=1,scp=1,ss=1,ssr=1,thd=1,uis=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/profilerTool.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/profilerTool.html
 
 
 
@@ -8552,7 +8552,7 @@ uis   : unisolateSegment [boolean]
 
 def redo():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/redo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/redo.html
 
 
 
@@ -8573,7 +8573,7 @@ None
 
 def shotTrack(q=1,e=1,it="uint",l=1,m=1,nt="uint",ret=1,rt="uint",sm=1,so=1,st="[uint, uint]",t="string",tr="uint",uso=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shotTrack.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shotTrack.html
 
 
 
@@ -8665,7 +8665,7 @@ uso   : unsolo          [boolean]
 
 def showHelp(q=1,a=1,d=1,ht=1,v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/showHelp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/showHelp.html
 
 
 
@@ -8717,7 +8717,7 @@ v     : version         [boolean]
 
 def timer(endTimer=1,lap=1,n="string",s=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timer.html
 
 
 
@@ -8790,7 +8790,7 @@ s     : startTimer      [boolean]
 
 def timerX(st="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timerX.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timerX.html
 
 
 
@@ -8830,7 +8830,7 @@ st    : startTime       [float]
 
 def undo():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/undo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/undo.html
 
 
 
@@ -8851,7 +8851,7 @@ None
 
 def undoInfo(q=1,cn="string",cck=1,infinity=1,l="uint",ock=1,pq=1,prq=1,rn="string",rqe=1,st=1,swf=1,un="string",uqe=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/undoInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/undoInfo.html
 
 
 
@@ -8950,7 +8950,7 @@ uqe   : undoQueueEmpty  [boolean]
 
 def warning(n=1,sl=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/warning.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/warning.html
 
 
 
@@ -8992,7 +8992,7 @@ sl    : showLineNumber  [boolean]
 
 def whatsNewHighlight(q=1,hc="[float, float, float]",ho=1,ssd=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/whatsNewHighlight.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/whatsNewHighlight.html
 
 
 
@@ -9038,7 +9038,7 @@ ssd   : showStartupDialog [boolean]
 
 def xpmPicker(fn="string",p="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/xpmPicker.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/xpmPicker.html
 
 
 

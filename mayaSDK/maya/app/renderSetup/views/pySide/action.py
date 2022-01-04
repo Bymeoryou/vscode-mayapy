@@ -1,19 +1,17 @@
-from contextlib import contextmanager
 from PySide2.QtWidgets import QAction
+from contextlib import contextmanager
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class Action(QAction):
-    def excepthook(self, type, value, traceback):
-        pass
-    
-    
+    def excepthook(self, type, value, traceback): pass
     def trigger(self):
         """
         The only method Render Setup is currently using from the QAction interface
         """
-    
         pass
-    
-    
     exceptionRaised = None
     
     
@@ -21,8 +19,6 @@ class Action(QAction):
 
 
 
-def excepthookGuard(*args, **kwds):
-    pass
 
-
+def excepthookGuard(*args, **kwds): pass
 

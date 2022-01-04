@@ -1,6 +1,5 @@
-def __makeStubFunc(command, library):
-    pass
-
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 def processCommandList():
     """
@@ -9,9 +8,8 @@ def processCommandList():
     for all commands that are not yet loaded.  The stub functions will load the required library
     and then execute the command.
     """
-
     pass
-
+def __makeStubFunc(command, library): pass
 
 
 commandListLocations = {}

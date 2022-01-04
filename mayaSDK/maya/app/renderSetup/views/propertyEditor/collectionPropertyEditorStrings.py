@@ -1,12 +1,7 @@
-kAddOverride = []
-
-kDragAttributesFromAE = []
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 kNbObjects = []
-
-kAddOverrideTooltipStr = []
-
-kSelectAll = []
 
 kSelectAllTooltip = []
 
@@ -14,10 +9,18 @@ kViewAll = []
 
 kViewAllTooltip = []
 
+kSelectAll = []
+
 kViewCollectionObjects = []
+
+kDragAttributesFromAE = []
+
+kOK = []
+
+kAddOverride = []
 
 kRelativeWarning = []
 
-kOK = []
+kAddOverrideTooltipStr = []
 
 

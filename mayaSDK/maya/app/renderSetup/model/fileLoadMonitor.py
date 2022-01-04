@@ -10,47 +10,53 @@ This module monitors file loads (including imports and reference load) and
     are identified
 """
 
-def onReadEnd(data):
-    pass
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-def finalize():
-    pass
-
-
-def initialize():
-    pass
-
-
-def preLoadInventory():
-    pass
-
-
-def onReadStart(data):
-    pass
-
-
-def getLayerInventory():
-    pass
-
-
-def _getErrorSwitchToRenderLayerIfNeeded():
-    pass
+class _FileLoadMonitor(object):
+    """
+    Class that counts the types of nodes that are to be watched and/or cleaned
+    up as they are added in the scene.
+    """
+    
+    
+    
+    def __init__(self): pass
+    def reset(self): pass
+    def start(self): pass
+    def stop(self): pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
+    
+    
+    watchedNodeTypes = []
 
 
 
-kErrorSwitchToRenderLayer = []
 
-kErrorCombiningLegacyToNew = []
+def finalize(): pass
+def onReadStart(_): pass
+def _getErrorSwitchToRenderLayerIfNeeded(): pass
+def onReadEnd(_): pass
+def initialize(): pass
+def onImportOrReferenceEnd(data): pass
 
-kErrorSwitchToRenderSetup = []
+
+_nodeCounter = _FileLoadMonitor()
 
 kErrorCombiningNewToLegacy = []
 
-afterCallback = None
+kWarningVisibleRenderLayer = []
 
-kWarningInactiveRenderSetup = []
+callbacks = []
 
-beforeCallback = None
+kErrorSwitchToRenderLayer = []
+
+kErrorSwitchToRenderSetup = []
+
+kErrorCombiningLegacyToNew = []
 
 

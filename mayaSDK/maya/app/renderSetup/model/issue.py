@@ -1,3 +1,6 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class Issue(object):
     """
     Class representing an issue that contains 
@@ -8,33 +11,19 @@ class Issue(object):
     
     
     
-    def __eq__(self, o):
-        pass
-    
-    
-    def __hash__(self):
-        pass
-    
-    
-    def __init__(self, description, type="'warning'", resolveCallback='None'):
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
-    def resolve(self):
-        pass
-    
-    
+    def __eq__(self, o): pass
+    def __hash__(self): pass
+    def __init__(self, description, type="'warning'", resolveCallback='None'): pass
+    def __str__(self): pass
+    def resolve(self): pass
+    @property
+    def description(self): pass
+    @property
+    def type(self): pass
     __dict__ = None
     
+    
     __weakref__ = None
-    
-    description = None
-    
-    type = None
 
 
 

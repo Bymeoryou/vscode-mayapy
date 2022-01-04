@@ -29,6 +29,10 @@ reload(maya.app.mayabullet.SoftBody)
 reload(maya.app.mayabullet.SoftBodyConstraint)
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 logger = None
 
 

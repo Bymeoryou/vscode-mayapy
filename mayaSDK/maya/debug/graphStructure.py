@@ -23,6 +23,10 @@ text comparision of two graphs, or a merged comparison of two graphs.
         graph1.compare_as_dot(graph2, structure_file_name='GraphCompare.dot', show_only_differences=True)
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class graphStructure(object):
     """
     Provides access and manipulation on graph structure data that has been
@@ -67,10 +71,7 @@ class graphStructure(object):
         about performance. For simple graph structure verification a good
         minimal set is just the connection values.
         """
-    
         pass
-    
-    
     def compare(self, other):
         """
         Compare this graph structure against another one and generate a
@@ -112,10 +113,7 @@ class graphStructure(object):
         
         All of the 'plugs' lists are for evaluation graph mode only.
         """
-    
         pass
-    
-    
     def compare_after_operation(self, operation, operation_arguments='None'):
         """
         Compare a graph before and after an operation (Python function).
@@ -133,10 +131,7 @@ class graphStructure(object):
             g = graphStructure()
             g.compare_after_operation( my_operation, operation_arguments={ 'arg1' : 6, 'arg2' : 4 } )
         """
-    
         pass
-    
-    
     def compare_as_dot(self, other, fileName='None', show_only_differences='False'):
         """
         Compare this graph structure against another one and print out a
@@ -158,20 +153,14 @@ class graphStructure(object):
         
         Plugs have no dot format as yet.
         """
-    
         pass
-    
-    
     def current_graph(self):
         """
         Returns a new graphStructure object with all of the same options as
         this one, except that it will always use the current scene even if
         the original came from a file.
         """
-    
         pass
-    
-    
     def write(self, fileName='None'):
         """
         Dump the graph in the .dg format it uses for reading. Useful for
@@ -179,10 +168,7 @@ class graphStructure(object):
         graph generated from the current scene. If the fileName is specified
         then the output is sent to that file, otherwise it goes to stdout.
         """
-    
         pass
-    
-    
     def write_as_dot(self, fileName='None'):
         """
         Dump the graph in .dot format for visualization in an application
@@ -191,11 +177,9 @@ class graphStructure(object):
         
         Plugs have no dot format as yet.
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 
@@ -213,18 +197,12 @@ class DotFormatting(object):
         If long_names is True then don't attempt to shorten the node names by
         removing namespaces and DAG path elements.
         """
-    
         pass
-    
-    
     def node(self, node):
         """
         Print out a graph node with a simplified label.
         """
-    
         pass
-    
-    
     def nodeLabel(self, node):
         """
         Provide a label for a node. Uses the basename if use_long_names is not
@@ -233,93 +211,74 @@ class DotFormatting(object):
         e.g.  Original:   grandparent|parent:ns1|:child
               Label:      child
         """
-    
         pass
-    
-    
+    @staticmethod
     def altered_connection(src, dst, inOriginal):
         """
         Print out code for a connection that was in one graph but not the other.
         If inOriginal is True the connection was in the original graph but not
         the secondary one, otherwise vice versa.
         """
-    
         pass
-    
-    
+    @staticmethod
     def altered_node_format(inOriginal):
         """
         Print out formatting instruction for nodes that were in one graph
         but not the other. If inOriginal is True the nodes were in the
         original graph but not the secondary one, otherwise vice versa.
         """
-    
         pass
-    
-    
+    @staticmethod
     def context_node_format():
         """
         Print out the formatting instruction to make nodes visible in the
         comparison graph but faded to indicate that they are actually the
         same and only present for context.
         """
-    
         pass
-    
-    
+    @staticmethod
     def footer():
         """
         Print this only once, at the end of the .dot file
         """
-    
         pass
-    
-    
+    @staticmethod
     def header():
         """
         Print this only once, at the beginning of the .dot file
         """
-    
         pass
-    
-    
+    @staticmethod
     def legend(dot_file):
         """
         Print out a legend node. In the case of a graph dump this is only
         the title, containing the name of the file analyzed.
         """
-    
         pass
-    
-    
+    @staticmethod
     def legend_for_compare(file1, file2, show_only_differences):
         """
         Print out a legend node showing the formatting information for a
         comparison of two graphs.
         """
-    
         pass
-    
-    
+    @staticmethod
     def simple_connection(src, dst):
         """
         Print out a simple connection
         """
-    
         pass
-    
-    
+    @staticmethod
     def simple_node_format():
         """
         Print out the formatting instruction to make nodes the default format.
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     label = '__context [label="In both graphs, shown for context", penwidth="1.0", style="solid", color="#CCCCCC", fontcolor="#CCCCCC"] ;'
     
@@ -346,39 +305,35 @@ class DotFormatting(object):
 
 
 
-def split_connection(connection):
-    """
-    Extract the name of a node and its attribute specification from
-    one side of a connection.
-    """
-
-    pass
-
 
 def checkMaya():
     """
     Check to see if Maya Python libraries are available
     """
-
     pass
-
+def split_connection(connection):
+    """
+    Extract the name of a node and its attribute specification from
+    one side of a connection.
+    """
+    pass
 
 
 MAYA_IS_AVAILABLE = True
 
 KEY_PLUGS_WORLD = 'affectsWorld'
 
+KEY_REMOVED = 'removed'
+
+KEY_NODES = 'nodes'
+
 KEY_PLUGS = 'plugs'
 
 KEY_CONNECTIONS = 'connections'
 
-KEY_REMOVED = 'removed'
-
 KEY_ADDED = 'added'
 
 KEY_PLUGS_INPUT = 'input'
-
-KEY_NODES = 'nodes'
 
 KEY_PLUGS_OUTPUT = 'output'
 

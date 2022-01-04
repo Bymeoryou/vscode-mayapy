@@ -1,10 +1,8 @@
-def uninitialize():
-    pass
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-
-def initialize():
-    pass
-
+def uninitialize(): pass
+def initialize(): pass
 
 
 _entries = {}

@@ -1,12 +1,17 @@
 from PySide2.QtCore import *
 
-from PySide2.QtGui import QColor
+
 from PySide2.QtGui import QGuiApplication
-from PySide2.QtGui import QFontMetrics
-from PySide2.QtGui import QFont
-from PySide2.QtGui import QStandardItem
-from PySide2.QtWidgets import QApplication
 from PySide2.QtGui import QStandardItemModel
+from PySide2.QtGui import QColor
+from PySide2.QtGui import QFontMetrics
+from PySide2.QtGui import QStandardItem
+from PySide2.QtGui import QFont
+from PySide2.QtWidgets import QApplication
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 import maya.app.renderSetup.views.proxy.renderSetup as rsProxy
 
@@ -17,170 +22,89 @@ class LightEditorProxy(rsProxy.DataModelListObserver, QStandardItemModel):
     
     
     
-    def __eq__(self, o):
-        pass
-    
-    
-    def __init__(self, parent='None'):
-        pass
-    
-    
-    def __ne__(self, o):
-        pass
-    
-    
+    def __eq__(self, o): pass
+    def __init__(self, parent='None'): pass
+    def __ne__(self, o): pass
     def aboutToDelete(self):
         """
         Cleanup method to be called immediately before the object is deleted.
         """
-    
         pass
-    
-    
-    def attachChild(self, child, pos):
-        pass
-    
-    
-    def child(self, row, column='0'):
-        pass
-    
-    
-    def createListItemProxy(self, listItem):
-        pass
-    
-    
+    def attachChild(self, child, pos): pass
+    def child(self, row, column='0'): pass
+    def createListItemProxy(self, listItem): pass
     def dispose(self):
         """
         Cleanup method to be called immediately before the object is deleted.
         """
-    
         pass
-    
-    
-    def dropMimeData(self, mimeData, action, row, column, parentIndex):
-        pass
-    
-    
-    def findProxyItem(self, name):
-        pass
-    
-    
-    def flags(self, index):
-        pass
-    
-    
+    def dropMimeData(self, mimeData, action, row, column, parentIndex): pass
+    def findProxyItem(self, name): pass
+    def flags(self, index): pass
     def mimeData(self, indices):
         """
         This method builds the mimeData if the selection is correct
         """
-    
         pass
-    
-    
-    def mimeTypes(self):
+    def mimeTypes(self): pass
+    def refreshModel(self): pass
+    def resetModel(self): pass
+    def supportedDropActions(self): pass
+    def type(self): pass
+    def typeIdx(self): pass
+    @property
+    def model(self):
+        """
+        Get the data model object for this proxy item.
+        If the data model object does not exist, None is returned.
+        """
         pass
-    
-    
-    def refreshModel(self):
-        pass
-    
-    
-    def resetModel(self):
-        pass
-    
-    
-    def supportedDropActions(self):
-        pass
-    
-    
-    def type(self):
-        pass
-    
-    
-    def typeIdx(self):
-        pass
-    
-    
-    model = None
-    
     staticMetaObject = None
+
+
+class LabelColor(object):
+    """
+    Base class for all the proxy classes to offer the label color option
+    """
+    
+    
+    
+    def getLabelColor(self): pass
+    def setLabelColor(self, label): pass
+    __dict__ = None
+    
+    
+    __weakref__ = None
 
 
 import maya.app.renderSetup.views.pySide.standardItem as standardItem
 
-class LightEditorItemProxy(standardItem.StandardItem):
-    def __init__(self, model):
-        pass
-    
-    
+class LightItemProxyBase(LabelColor, standardItem.StandardItem):
+    def __init__(self, model): pass
     def aboutToDelete(self):
         """
         Cleanup method to be called immediately before the object is deleted.
         """
-    
         pass
-    
-    
-    def data(self, role):
-        pass
-    
-    
-    def delete(self):
-        pass
-    
-    
+    def data(self, role): pass
+    def delete(self): pass
     def dispose(self):
         """
         Cleanup method to be called immediately before the object is deleted.
         """
-    
         pass
-    
-    
-    def equalsDragType(self, dragType):
-        pass
-    
-    
-    def findProxyItem(self, name):
-        pass
-    
-    
-    def genericTypeIdx(self):
-        pass
-    
-    
-    def getActionButton(self, column):
-        pass
-    
-    
-    def getActionButtonCount(self):
-        pass
-    
-    
-    def handleDragMoveEvent(self, event):
-        pass
-    
-    
-    def handleDropEvent(self, event, sceneView):
-        pass
-    
-    
-    def headingWidth(self, heading):
-        pass
-    
-    
-    def isActive(self):
-        pass
-    
-    
-    def isCopyable(self):
-        pass
-    
-    
-    def isDropAllowed(self, destinationModel):
-        pass
-    
-    
+    def equalsDragType(self, dragType): pass
+    def findProxyItem(self, name): pass
+    def genericTypeIdx(self): pass
+    def getActionButton(self, column): pass
+    def getActionButtonCount(self): pass
+    def getDefaultColor(self): pass
+    def handleDragMoveEvent(self, event): pass
+    def handleDropEvent(self, event, sceneView): pass
+    def headingWidth(self, heading): pass
+    def isActive(self): pass
+    def isCopyable(self): pass
+    def isDropAllowed(self, destinationModel): pass
     def isModelDirty(self):
         """
         # The next function (isModelDirty) is a workaround.
@@ -190,235 +114,192 @@ class LightEditorItemProxy(standardItem.StandardItem):
         # and the tooltips should no longer be dynamically set by the delegate (views/renderSetupDelegate.py)
         # depending on the lastHitAction
         """
-    
         pass
-    
-    
-    def modelChanged(*args, **kwargs):
+    def modelChanged(*args, **kwargs): pass
+    def onClick(self, view): pass
+    def onDoubleClick(self, view): pass
+    def setData(self, value, role): pass
+    def supportsAction(self, action, numIndexes): pass
+    @property
+    def model(self):
+        """
+        Get the data model object for this proxy item.
+        """
         pass
-    
-    
-    def onClick(self, view):
-        pass
-    
-    
-    def onDoubleClick(self, view):
-        pass
-    
-    
-    def setData(self, value, role):
-        pass
-    
-    
-    def supportsAction(self, action, numIndexes):
-        pass
-    
-    
-    model = None
 
 
-class LightEditorGroupProxy(rsProxy.DataModelListObserver, LightEditorItemProxy):
+class LightItemProxy(LightItemProxyBase):
     """
-    The class provides the Qt model counterpart for the LightEditorGroup
+    The class provides the Qt model counterpart for the LightItem
     """
     
     
     
-    def __init__(self, model):
-        pass
+    def __init__(self, model): pass
+    def acceptsDrops(self, attribute): pass
+    def columnData(self, role, column): pass
+    def data(self, role): pass
+    def delete(self): pass
+    def type(self): pass
+    def typeIdx(self): pass
+
+
+class LightGroupProxy(rsProxy.DataModelListObserver, LightItemProxyBase):
+    """
+    The class provides the Qt model counterpart for the LightGroup
+    """
     
     
+    
+    def __init__(self, model): pass
     def aboutToDelete(self):
         """
         Cleanup method to be called immediately before the object is deleted.
         """
-    
         pass
-    
-    
-    def acceptsDrops(self, attribute):
-        pass
-    
-    
-    def attachChild(self, override, pos):
-        pass
-    
-    
-    def createListItemProxy(self, listItem):
-        pass
-    
-    
-    def data(self, role):
-        pass
-    
-    
+    def acceptsDrops(self, attribute): pass
+    def attachChild(self, override, pos): pass
+    def createListItemProxy(self, listItem): pass
+    def data(self, role): pass
     def dispose(self):
         """
         Cleanup method to be called immediately before the object is deleted.
         """
-    
         pass
-    
-    
-    def type(self):
-        pass
-    
-    
-    def typeIdx(self):
-        pass
-
-
-class LightEditorLightProxy(LightEditorItemProxy):
-    """
-    The class provides the Qt model counterpart for the LightEditorLight
-    """
-    
-    
-    
-    def __init__(self, model):
-        pass
-    
-    
-    def acceptsDrops(self, attribute):
-        pass
-    
-    
-    def columnData(self, role, column):
-        pass
-    
-    
-    def data(self, role):
-        pass
-    
-    
-    def type(self):
-        pass
-    
-    
-    def typeIdx(self):
-        pass
+    def getDefaultColor(self): pass
+    def type(self): pass
+    def typeIdx(self): pass
 
 
 
-def getProxy(dataModel):
-    pass
+
+def getProxy(dataModel): pass
 
 
+LIGHT_ITEM_TYPE_IDX = 14
 
-LIGHT_EDITOR_MIME_TYPE = 'application/lightEditor'
+kSetLocalRender = []
 
-kCollectionWarningStr = []
+LIGHT_ITEM_BASE_TYPE_IDX = 13
 
-LIGHT_TEXT_COLOR_LOCKED = None
+LIGHT_ITEM_TYPE = 1014
 
-kFiltersMenu = []
+kFilterCustom = []
 
-kRelativeType = []
+LIGHT_EDITOR_TYPE_IDX = 12
+
+DEFAULT_LIGHT_GROUP_COLOR = None
+
+kFilterAll = []
+
+kNoOverride = []
+
+DEFAULT_LIGHT_ITEM_COLOR = None
+
+kCreateShaderOverrideAction = []
+
+kDragAndDropFailed = []
 
 kFilterTransformsShapesShaders = []
 
 kCreateRelativeOverrideAction = []
 
-kFilterAll = []
-
-kDragAndDrop = []
-
-LIGHT_TEXT_COLOR_ANIMATED = None
-
-kDragAndDropFailed = []
-
 kAbsolute = []
 
-kCreateConnectionOverrideAction = []
+kFiltersMenu = []
 
-kSetLocalRender = []
-
-LIGHT_EDITOR_ITEM_TYPE = 1013
-
-kCameras = []
-
-kSetVisibilityAction = []
-
-kCreateCollectionAction = []
-
-LIGHT_EDITOR_TYPE = 1012
-
-kOverrideWarningStr = []
-
-kFilterCameras = []
-
-kRenderLayerWarningStr = []
-
-LIGHT_EDITOR_LIGHT_TYPE = 1014
-
-kRenameAction = []
-
-kCreateMaterialOverrideAction = []
-
-kLights = []
-
-LIGHT_EDITOR_ITEM_TYPE_IDX = 13
-
-kAOVs = []
-
-LIGHT_EDITOR_GROUP_TYPE = 1015
-
-kFilterGeometry = []
-
-kRenderSettings = []
-
-kFilterShaders = []
-
-kFilterLights = []
-
-kFilterTransforms = []
-
-kSetIsolateSelectedAction = []
-
-kExpandCollapseAction = []
-
-kRelative = []
-
-kSelectionTypeError = []
-
-kConnectionType = []
-
-kFilterCustom = []
-
-LIGHT_TEXT_COLOR_OVERRIDEN_BY_US = None
-
-kAbsoluteType = []
-
-kNewFilter = []
-
-kMaterialType = []
-
-kCreateShaderOverrideAction = []
-
-LIGHT_EDITOR_GROUP_TYPE_IDX = 15
-
-kShaderType = []
-
-kSetRenderableAction = []
-
-kCreateRenderSettingsChildCollectionAction = []
-
-LIGHT_EDITOR_LIGHT_TYPE_IDX = 14
-
-kFilterSets = []
+kRelativeType = []
 
 kSetEnabledAction = []
 
+kCollectionWarningStr = []
+
+kFilterGeometry = []
+
+kFilterTransformsAndShapes = []
+
+LIGHT_TEXT_COLOR_ANIMATED = None
+
+kRenderLayerWarningStr = []
+
+LIGHT_GROUP_TYPE = 1015
+
+DISABLED_LIGHT_TEXT_COLOR = None
+
+kCameras = []
+
+kFilterLights = []
+
+LIGHT_EDITOR_MIME_TYPE = 'application/lightEditor'
+
+kOverrideWarningStr = []
+
+kFilterShaders = []
+
+kCreateCollectionAction = []
+
 LIGHT_TEXT_COLOR = None
+
+kAOVs = []
+
+kCreateRenderSettingsChildCollectionAction = []
+
+colors = {}
+
+kRenameAction = []
+
+kRenderSettings = []
+
+kCreateConnectionOverrideAction = []
+
+kDragAndDrop = []
+
+LIGHT_EDITOR_TYPE = 1012
+
+kFilterCameras = []
+
+LIGHT_ITEM_BASE_TYPE = 1013
+
+kAbsoluteType = []
+
+kFullyExpandCollapseAction = []
+
+kShaderType = []
+
+kNewFilter = []
+
+kCreateMaterialOverrideAction = []
+
+kFilterTransforms = []
+
+kMaterialType = []
+
+kSetIsolateSelectedAction = []
+
+kRelative = []
+
+LIGHT_TEXT_COLOR_LOCKED = None
+
+kConnectionType = []
+
+kSelectionTypeError = []
+
+kExpandCollapseAction = []
+
+kFilterSets = []
 
 kCreateAbsoluteOverrideAction = []
 
-LIGHT_EDITOR_TYPE_IDX = 12
-
-kNoOverride = []
-
 kDeleteAction = []
 
-kFilterTransformsAndShapes = []
+kSetRenderableAction = []
+
+LIGHT_GROUP_TYPE_IDX = 15
+
+kSetVisibilityAction = []
+
+kLights = []
+
+LIGHT_TEXT_COLOR_OVERRIDEN_BY_US = None
 
 

@@ -1,13 +1,17 @@
-from copy import deepcopy
+from PySide2.QtGui import QPalette
+from PySide2.QtGui import QCursor
+from PySide2.QtCore import QRect
 from PySide2.QtGui import QColor
 from PySide2.QtCore import Qt
-from PySide2.QtWidgets import QStyle
-from PySide2.QtGui import QPen
-from PySide2.QtCore import QPointF
 from PySide2.QtWidgets import QStyledItemDelegate
-from PySide2.QtCore import QRect
-from PySide2.QtGui import QCursor
-from PySide2.QtGui import QPalette
+from PySide2.QtCore import QPointF
+from PySide2.QtGui import QPen
+from copy import deepcopy
+from PySide2.QtWidgets import QStyle
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class BaseDelegate(QStyledItemDelegate):
     """
@@ -16,34 +20,16 @@ class BaseDelegate(QStyledItemDelegate):
     
     
     
-    def __init__(self, treeView):
-        pass
-    
-    
-    def drawAction(self, painter, actionName, pixmap, left, top, highlightedColor, drawDisclosure, borderColor):
-        pass
-    
-    
-    def drawPixmap(self, painter, pixmap, left, top):
-        pass
-    
-    
-    def drawToolbarFrame(self, painter, rect, toolbarCount):
-        pass
-    
-    
-    def getTextRect(self, rect, item):
-        pass
-    
-    
+    def __init__(self, treeView): pass
+    def drawAction(self, painter, actionName, pixmap, left, top, highlightedColor, drawDisclosure, borderColor): pass
+    def drawPixmap(self, painter, pixmap, left, top): pass
+    def drawToolbarFrame(self, painter, rect, toolbarCount): pass
+    def getTextRect(self, rect, item): pass
     def paint(self, painter, option, index):
         """
         Renders the delegate using the given painter and style option for the item specified by index.
         """
-    
         pass
-    
-    
     ACTION_BORDER = 4.0
     
     
@@ -51,6 +37,12 @@ class BaseDelegate(QStyledItemDelegate):
     
     
     ARROW_COLOR = None
+    
+    
+    BACKGROUND_RECT_LEFT_OFFSET = 8.0
+    
+    
+    BACKGROUND_RECT_LENGTH = 56.0
     
     
     BOTTOM_GAP_OFFSET = 4.0
@@ -114,8 +106,6 @@ class BaseDelegate(QStyledItemDelegate):
 
 
 
-def createPixmap(fileName):
-    pass
 
-
+def createPixmap(fileName): pass
 

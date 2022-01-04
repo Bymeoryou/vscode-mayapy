@@ -160,20 +160,33 @@ over non-sequence'. just email me with commands that are giving you problems and
 quickly as i can.
 """
 
+
 from pymel.util.external.ply.lex import LexError
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def resolvePath(melobj, recurse='False', exclude='()', melPathOnly='False', basePackage="''"):
+    """
+    if passed a directory, get all mel files in the directory
+    if passed a file, ensure it is a mel file
+    if passed a procedure name, find its file
+    
+    Returns tuples of the form (moduleName, melfile).
+    """
+    pass
 def fileOnMelPath(file):
     """
     Return True if this file is on the mel path.
     """
-
     pass
-
-
-def _updateCurrentModules(newResults):
+def _updateCurrentModules(newResults): pass
+def _getInputFiles(input, recurse='False', exclude='()', melPathOnly='False', basePackage="''"):
+    """
+    Returns tuples of the form (packageName, melfile)
+    """
     pass
-
-
 def melInfo(input):
     """
     Get information about procedures in a mel file.
@@ -184,12 +197,12 @@ def melInfo(input):
     
     Parameters
     ----------
-    input
+    input : str
         can be a mel file or a sourced mel procedure
     
     Returns
     -------
-    allProcs : list of str
+    allProcs : Iterable[str]
         The list of procedures in the order the are defined
     globalProcs : dict
         A dictionary of global procedures, with the following entries:
@@ -198,48 +211,7 @@ def melInfo(input):
     localProcs : dict
         A dictionary of local procedures, formatted the same as with globals
     """
-
     pass
-
-
-def mel2pyStr(data, currentModule='None', pymelNamespace="''", forceCompatibility='False', verbosity='0', basePackage='None'):
-    """
-    convert a string representing mel code into a string representing python code
-    
-        >>> import pymel.tools.mel2py as mel2py
-        >>> print mel2py.mel2pyStr('paneLayout -e -configuration "top3" test;')
-        from pymel.all import *
-        paneLayout('test',configuration="top3",e=1)
-        <BLANKLINE>
-    
-    Note that when converting single lines, the lines must end in a semi-colon, otherwise it is technically
-    invalid syntax.
-    
-    Parameters
-    ----------
-    data : `str`
-        string representing coe to convert
-    
-    currentModule : `str`
-        the name of the module that the hypothetical code is executing in. In most cases you will
-        leave it at its default, the __main__ namespace.
-    
-    pymelNamespace : `str`
-        the namespace into which pymel will be imported.  the default is '', which means ``from pymel.all import *``
-    
-    forceCompatibility : `bool`
-        If True, the translator will attempt to use non-standard python types in order to produce
-        python code which more exactly reproduces the behavior of the original mel file, but which
-        will produce "uglier" code.  Use this option if you wish to produce the most reliable code
-        without any manual cleanup.
-    
-    verbosity : `int`
-        Set to non-zero for a *lot* of feedback
-    """
-
-    pass
-
-
 def mel2py(input, outputDir='None', pymelNamespace="''", forceCompatibility='False', verbosity='0', test='False', recurse='False', exclude='()', melPathOnly='False', basePackage='None'):
     """
     Batch convert an entire directory
@@ -284,41 +256,43 @@ def mel2py(input, outputDir='None', pymelNamespace="''", forceCompatibility='Fal
         Gives the package that all translated modules will be a part of; if None or an empty string, all
         translated modules are assumed to have no base package.
     """
-
     pass
-
-
-def findMelOnlyCommands():
+def _makePackages(): pass
+def mel2pyStr(data, currentModule='None', pymelNamespace="''", forceCompatibility='False', verbosity='0', basePackage='None'):
     """
-    Using maya's documentation, find commands which were not ported to python.
-    """
-
-    pass
-
-
-def _getInputFiles(input, recurse='False', exclude='()', melPathOnly='False', basePackage="''"):
-    """
-    Returns tuples of the form (packageName, melfile)
-    """
-
-    pass
-
-
-def resolvePath(melobj, recurse='False', exclude='()', melPathOnly='False', basePackage="''"):
-    """
-    if passed a directory, get all mel files in the directory
-    if passed a file, ensure it is a mel file
-    if passed a procedure name, find its file
+    convert a string representing mel code into a string representing python code
     
-    Returns tuples of the form (moduleName, melfile).
+        >>> import pymel.tools.mel2py as mel2py
+        >>> print mel2py.mel2pyStr('paneLayout -e -configuration "top3" test;')
+        from pymel.all import *
+        paneLayout('test',configuration="top3",e=1)
+        <BLANKLINE>
+    
+    Note that when converting single lines, the lines must end in a semi-colon, otherwise it is technically
+    invalid syntax.
+    
+    Parameters
+    ----------
+    data : `str`
+        string representing coe to convert
+    
+    currentModule : `str`
+        the name of the module that the hypothetical code is executing in. In most cases you will
+        leave it at its default, the __main__ namespace.
+    
+    pymelNamespace : `str`
+        the namespace into which pymel will be imported.  the default is '', which means ``from pymel.all import *``
+    
+    forceCompatibility : `bool`
+        If True, the translator will attempt to use non-standard python types in order to produce
+        python code which more exactly reproduces the behavior of the original mel file, but which
+        will produce "uglier" code.  Use this option if you wish to produce the most reliable code
+        without any manual cleanup.
+    
+    verbosity : `int`
+        Set to non-zero for a *lot* of feedback
     """
-
     pass
-
-
-def _makePackages():
-    pass
-
 
 
 custom_proc_remap = {}

@@ -1,51 +1,77 @@
 import exceptions
 
+
+from pymel.internal.docstrings import PyDocstringBuilder as docBuilderCls
 from collections import namedtuple as _namedtuple
-from pymel.util.conditions import Condition
+from pymel.internal.pwarnings import maya_deprecated
 from operator import itemgetter
+from pymel.internal.pwarnings import deprecated
+from pymel.util.conditions import Condition
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+class Flag(Condition):
+    def __init__(self, longName, shortName, truthValue='True'):
+        """
+        Conditional for evaluating if a given flag is present.
+        
+        Will also check that the given flag has the required
+        truthValue (True, by default). If you don't care
+        about the truthValue (ie, you want to have the condition
+        evaluate to true as long as the flag is present),
+        set truthValue to None.
+        """
+        pass
+    def __str__(self): pass
+    def eval(self, kwargs): pass
+
+
+class ApiUndoItem(object):
+    """
+    A simple class that reprsents an undo item to be undone or redone.
+    """
+    
+    
+    
+    def __init__(self, setter, redoArgs, undoArgs, redoKwargs='None', undoKwargs='None'): pass
+    def __repr__(self): pass
+    def doIt(self): pass
+    def redoIt(self): pass
+    def undoIt(self): pass
+
 
 import pymel.util as util
 
-class MetaMayaTypeWrapper(util.metaReadOnlyAttr):
+class MetaMayaTypeRegistry(util.metaReadOnlyAttr):
     """
-    A metaclass to wrap Maya api types, with support for class constants
+    A metaclass for tracking pymel types.
     """
     
     
     
-    def __new__(cls, classname, bases, classdict):
-        """
-        Create a new class of metaClassConstants type
-        """
-    
-        pass
-    
-    
-    ClassConstant = None
+    @staticmethod
+    def __new__(cls, classname, bases, classdict): pass
+
+
+class MissingInCacheError(exceptions.Exception):
+    __weakref__ = None
 
 
 class VirtualClassManager(object):
-    def __init__(self):
-        pass
-    
-    
+    def __init__(self): pass
     def getVirtualClass(self, baseClass, obj, name='None', fnDepend='None'):
         """
         Returns the virtual class to use for the given baseClass + obj, or
         the original baseClass if no virtual class matches.
         """
-    
         pass
-    
-    
     def getVirtualClassInfo(self, vclass):
         """
         Given a virtual class, returns it's registered VirtualClassInfo
         """
-    
         pass
-    
-    
     def register(self, vclass, nameRequired='False', isVirtual="'_isVirtual'", preCreate="'_preCreateVirtual'", create="'_createVirtual'", postCreate="'_postCreateVirtual'"):
         """
         Register a new virtual class
@@ -134,7 +160,8 @@ class VirtualClassManager(object):
         
         For a usage example, see examples/customClasses.py
         
-        :parameters:
+        Parameters
+        ----------
         nameRequired : `bool`
             True if the _isVirtual callback requires the string name to operate
             on. The object's name is not always immediately avaiable and may
@@ -151,19 +178,19 @@ class VirtualClassManager(object):
         postCreate: `str` or callable
             the function used to modify the PyNode after it is created.
         """
-    
         pass
-    
-    
-    def unregister(self, vcls):
-        pass
+    def unregister(self, vcls): pass
+    INVALID_ATTRS = set()
     
     
     __dict__ = None
     
-    __weakref__ = None
     
-    INVALID_ATTRS = set()
+    __weakref__ = None
+
+
+class VirtualClassError(exceptions.Exception):
+    __weakref__ = None
 
 
 class ApiUndo(object):
@@ -187,39 +214,97 @@ class ApiUndo(object):
     
     
     
-    def __init__(self):
-        pass
-    
-    
-    def append(self, cmdObj):
-        pass
-    
-    
-    def execute(self, cmdObj, *args):
-        pass
-    
-    
-    def flushCallback(self, undoOrRedoAvailable, *args):
-        pass
-    
-    
-    def flushUndo(self, *args):
-        pass
-    
-    
-    def installUndoStateCallbacks(self):
-        pass
-    
-    
+    def __init__(self): pass
+    def append(self, cmdObj, undoName='None'): pass
+    def execute(self, cmdObj, *args): pass
+    def flushCallback(self, undoOrRedoAvailable, *args): pass
+    def flushUndo(self, *args): pass
+    def installUndoStateCallbacks(self): pass
+    @staticmethod
     def __new__(cls, *p, **k):
         """
         # redefine __new__
         """
-    
         pass
-    
-    
     __dict__ = None
+    
+    
+    
+    
+    __weakref__ = None
+
+
+class ApiArgUtil(object):
+    def __init__(self, apiClassName, methodName, methodIndex='0'):
+        """
+        If methodInfo is None, then the methodIndex will be used to lookup
+        the methodInfo from apiClassInfo
+        
+        Parameters
+        ----------
+        apiClassName : str
+        methodName : str
+        methodIndex : int
+        """
+        pass
+    def argInfo(self): pass
+    def argList(self): pass
+    def canBeWrapped(self): pass
+    def castInput(self, argName, input):
+        """
+        Parameters
+        ----------
+        argName : str
+        input : Any
+        
+        Returns
+        -------
+        Any
+        """
+        pass
+    def castResult(self, pynodeInstance, result): pass
+    def getDefaults(self):
+        """
+        get a list of defaults
+        """
+        pass
+    def getGetterInfo(self):
+        """
+        Return an ApiArgUtil for the getter method
+        (assumes the current instance is the setter)
+        
+        Returns
+        -------
+        Optional[ApiArgUtil]
+        """
+        pass
+    def getInputTypes(self): pass
+    def getMethodDocs(self): pass
+    def getOutputTypes(self): pass
+    def getPrototype(self, className='True', methodName='True', outputs='False', defaults='False'): pass
+    def getPymelName(self): pass
+    def getReturnType(self): pass
+    def getTypeComment(self): pass
+    def hasOutput(self): pass
+    def inArgs(self): pass
+    def isDeprecated(self): pass
+    def isStatic(self): pass
+    def iterArgs(self, inputs='True', outputs='True', infoKeys='[]'): pass
+    def outArgs(self): pass
+    @classmethod
+    def castInputEnum(cls, apiClassName, enumName, input): pass
+    @classmethod
+    def castReferenceResult(cls, argtype, outArg): pass
+    @staticmethod
+    def fromInternalUnits(result, returnType, unit='None'): pass
+    @staticmethod
+    def initReference(argtype): pass
+    @staticmethod
+    def isValidEnum(enumTuple): pass
+    @staticmethod
+    def toInternalUnits(input, unit): pass
+    __dict__ = None
+    
     
     __weakref__ = None
 
@@ -227,30 +312,22 @@ class ApiUndo(object):
 VirtualClassInfo = _namedtuple('VirtualClassInfo', ('vclass', 'parent', 'nameRequired', 'isVirtual', 'preCreate', 'create', 'postCreate'))
 
 
-class ApiUndoItem(object):
+class ClassConstant(object):
     """
-    A simple class that reprsents an undo item to be undone or redone.
+    Class constant descriptor
     """
     
     
     
-    def __init__(self, setter, redoArgs, undoArgs, redoKwargs='None', undoKwargs='None'):
-        pass
+    def __delete__(self, instance): pass
+    def __get__(self, instance, owner): pass
+    def __init__(self, value): pass
+    def __repr__(self): pass
+    def __set__(self, instance, value): pass
+    def __str__(self): pass
+    __dict__ = None
     
     
-    def doIt(self):
-        pass
-    
-    
-    def redoIt(self):
-        pass
-    
-    
-    def undoIt(self):
-        pass
-
-
-class VirtualClassError(exceptions.Exception):
     __weakref__ = None
 
 
@@ -276,34 +353,24 @@ class Callback(object):
     
     
     
-    def __call__(self, *args):
-        pass
-    
-    
-    def __init__(self, func, *args, **kwargs):
-        pass
-    
-    
-    def formatRecentError(cls, index='0'):
-        pass
-    
-    
-    def logCallbackError(cls, callback, exception='None', trace='None', creationTrace='None'):
-        pass
-    
-    
-    def printRecentError(cls, index='0'):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-    
+    def __call__(self, *args): pass
+    def __init__(self, func, *args, **kwargs): pass
+    @classmethod
+    def formatRecentError(cls, index='0'): pass
+    @classmethod
+    def logCallbackError(cls, callback, exception='None', trace='None', creationTrace='None'): pass
+    @classmethod
+    def printRecentError(cls, index='0'): pass
     CallbackErrorLog = None
     
     
     MAX_RECENT_ERRORS = 10
+    
+    
+    __dict__ = None
+    
+    
+    __weakref__ = None
     
     
     recentErrors = []
@@ -325,34 +392,45 @@ class ApiTypeRegister(object):
     
     
     
-    def getPymelType(cls, apiType):
+    @classmethod
+    def getPymelType(cls, apiType, allowGuess='True'):
         """
-        We need a way to map from api name to pymelName.  we start by looking up types which are registered
-        and then fall back to naming convention for types that haven't been registered yet. Perhaps pre-register
-        the names?
+        Map from api name to pymelName.
+        
+        we start by looking up types which are registered and then fall back
+        to naming convention for types that haven't been registered yet.
+        Perhaps pre-register the names?
+        
+        Returns
+        -------
+        Optional[str]
         """
-    
         pass
-    
-    
-    def isRegistered(cls, apiTypeName):
-        pass
-    
-    
+    @classmethod
+    def isRegistered(cls, apiTypeName): pass
+    @classmethod
     def register(cls, apiTypeName, pymelType, inCast='None', outCast='None', apiArrayItemType='None'):
         """
-        pymelType is the type to be used internally by pymel.  apiType will be hidden from the user
-        and converted to the pymel type.
-        apiTypeName is the name of an apiType as a string
-        if apiArrayItemType is set, it should be the api type that represents each item in the array
+        pymelType is the type to be used internally by pymel.
+        apiType will be hidden from the user and converted to the pymel type,
+        possibly via inCast.
+        
+        Parameters
+        ----------
+        apiTypeName : str
+            the name of an apiType
+        pymelType : Type
+        inCast : Optional[Callable[[Any], Any]]
+        outCast : Optional[Callable[[Any], Any]]
+        apiArrayItemType : Optional[Type]
+            if set, it should be the api type that represents each item in the array
         """
-    
         pass
-    
-    
     __dict__ = None
     
+    
     __weakref__ = None
+    
     
     arrayItemTypes = {}
     
@@ -375,147 +453,6 @@ class ApiTypeRegister(object):
     types = {}
 
 
-class ApiArgUtil(object):
-    def __init__(self, apiClassName, methodName, methodIndex='0'):
-        """
-        If methodInfo is None, then the methodIndex will be used to lookup the methodInfo from apiClassInfo
-        """
-    
-        pass
-    
-    
-    def argInfo(self):
-        pass
-    
-    
-    def argList(self):
-        pass
-    
-    
-    def canBeWrapped(self):
-        pass
-    
-    
-    def castInput(self, argName, input, cls):
-        pass
-    
-    
-    def castReferenceResult(self, argtype, outArg):
-        pass
-    
-    
-    def castResult(self, instance, result):
-        pass
-    
-    
-    def fromInternalUnits(self, result, instance='None'):
-        pass
-    
-    
-    def getDefaults(self):
-        """
-        get a list of defaults
-        """
-    
-        pass
-    
-    
-    def getGetterInfo(self):
-        pass
-    
-    
-    def getInputTypes(self):
-        pass
-    
-    
-    def getMethodDocs(self):
-        pass
-    
-    
-    def getOutputTypes(self):
-        pass
-    
-    
-    def getPrototype(self, className='True', methodName='True', outputs='False', defaults='False'):
-        pass
-    
-    
-    def getPymelName(self):
-        pass
-    
-    
-    def getReturnType(self):
-        pass
-    
-    
-    def hasOutput(self):
-        pass
-    
-    
-    def inArgs(self):
-        pass
-    
-    
-    def initReference(self, argtype):
-        pass
-    
-    
-    def isDeprecated(self):
-        pass
-    
-    
-    def isStatic(self):
-        pass
-    
-    
-    def iterArgs(self, inputs='True', outputs='True', infoKeys='[]'):
-        pass
-    
-    
-    def outArgs(self):
-        pass
-    
-    
-    def toInternalUnits(self, arg, input):
-        pass
-    
-    
-    def castInputEnum(cls, apiClassName, enumName, input):
-        pass
-    
-    
-    def isValidEnum(enumTuple):
-        pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-
-
-class Flag(Condition):
-    def __init__(self, longName, shortName, truthValue='True'):
-        """
-        Conditional for evaluating if a given flag is present.
-        
-        Will also check that the given flag has the required
-        truthValue (True, by default). If you don't care
-        about the truthValue (ie, you want to have the condition
-        evaluate to true as long as the flag is present),
-        set truthValue to None.
-        """
-    
-        pass
-    
-    
-    def __str__(self):
-        pass
-    
-    
-    def eval(self, kwargs):
-        pass
-
-
 class ApiRedoUndoItem(ApiUndoItem):
     """
     Similar to the base ApiUndoItem, but allows specifying a separate
@@ -524,28 +461,62 @@ class ApiRedoUndoItem(ApiUndoItem):
     
     
     
-    def __init__(self, redoer, redoArgs, undoer, undoArgs, redoKwargs='None', undoKwargs='None'):
-        pass
-    
-    
-    def undoIt(self):
-        pass
+    def __init__(self, redoer, redoArgs, undoer, undoArgs, redoKwargs='None', undoKwargs='None'): pass
+    def __repr__(self): pass
+    def undoIt(self): pass
+
+
+class MelCommandMissingError(MissingInCacheError):
+    def __init__(self, cmdName): pass
+    def str(self): pass
+
+
+class ApiMethodMissingError(MissingInCacheError):
+    def __init__(self, apiClassName, methodName): pass
+    def str(self): pass
 
 
 class CallbackWithArgs(Callback):
-    def __call__(self, *args, **kwargs):
-        pass
+    def __call__(self, *args, **kwargs): pass
 
 
-class MetaMayaComponentWrapper(MetaMayaTypeWrapper):
+class MetaMayaTypeWrapper(MetaMayaTypeRegistry):
     """
-    A metaclass for creating components.
+    A metaclass to wrap Maya api types, with support for class constants
     """
     
     
     
+    @staticmethod
     def __new__(cls, classname, bases, classdict):
+        """
+        Create a new class of metaClassConstants type
+        """
         pass
+    @staticmethod
+    def setattr_fixed_forDataDescriptorBug(self, name, value):
+        """
+        Fixes __setattr__ to work properly with properties
+        
+        Maya has a bug on windows where some api objects have a __setattr__
+        that bypasses properties (and other data descriptors).
+        """
+        pass
+    ClassConstant = None
+
+
+class MAnimCurveChangeUndoItem(ApiRedoUndoItem):
+    """
+    Specialization of ApiRedoUndoItem for MAnimCurveChange objects.
+    
+    Basically just removes some boilerplate for construction of an
+    ApiRedoUndoItem from an MAnimCurveChange object
+    """
+    
+    
+    
+    def __init__(self, curveChangeObj): pass
+    def __repr__(self): pass
 
 
 class _MetaMayaCommandWrapper(MetaMayaTypeWrapper):
@@ -557,30 +528,18 @@ class _MetaMayaCommandWrapper(MetaMayaTypeWrapper):
     
     
     
-    def docstring(cls, melCmdName):
-        pass
-    
-    
+    @classmethod
+    def docstring(cls, melCmdName): pass
+    @classmethod
     def getMelCmd(cls, classdict):
         """
         Retrieves the name of the mel command the generated class wraps, and whether it is an info command.
         
         Intended to be overridden in derived metaclasses.
         """
-    
         pass
-    
-    
-    def isMelMethod(cls, methodName, parentClassList):
-        """
-        Deteremine if the passed method name exists on a parent class as a mel method
-        """
-    
-        pass
-    
-    
-    def __new__(cls, classname, bases, classdict):
-        pass
+    @staticmethod
+    def __new__(cls, classname, bases, classdict): pass
 
 
 class MetaMayaUIWrapper(_MetaMayaCommandWrapper):
@@ -590,12 +549,10 @@ class MetaMayaUIWrapper(_MetaMayaCommandWrapper):
     
     
     
-    def getMelCmd(cls, classdict):
-        pass
-    
-    
-    def __new__(cls, classname, bases, classdict):
-        pass
+    @classmethod
+    def getMelCmd(cls, classdict): pass
+    @staticmethod
+    def __new__(cls, classname, bases, classdict): pass
 
 
 class MetaMayaNodeWrapper(_MetaMayaCommandWrapper):
@@ -606,6 +563,7 @@ class MetaMayaNodeWrapper(_MetaMayaCommandWrapper):
     
     
     
+    @classmethod
     def getMelCmd(cls, classdict):
         """
         Retrieves the name of the mel command for the node that the generated class wraps,
@@ -614,23 +572,175 @@ class MetaMayaNodeWrapper(_MetaMayaCommandWrapper):
         Derives the command name from the mel node name - so '__melnode__' must already be set
         in classdict.
         """
-    
         pass
-    
-    
-    def __new__(cls, classname, bases, classdict):
-        pass
+    @staticmethod
+    def __new__(cls, classname, bases, classdict): pass
 
 
 
-def removePyNodeType(pyNodeTypeName):
+
+def mergeApiClassOverrides(): pass
+def queryflag(cmdName, flag):
+    """
+    query flag decorator
+    """
     pass
-
-
-def createFunctions(moduleName, returnFunc='None'):
+def getDoArgs(args, argList):
+    """
+    Parameters
+    ----------
+    args : List[Any]
+        argument values
+    argList : List[Tuple[str, Union[str, Tuple[str, str]], str, Optional[str]]]
+    
+    Returns
+    -------
+    do_args : List[Any]
+    final_do_args : List[Any]
+        Arguments prepped to be passed to the API method.
+        Same as above but with SafeApiPtr converted
+    out_type_list : List[Tuple[str, int]]
+        list of (argument type, index)
+    """
     pass
-
-
+def _guessCmdName(func): pass
+def toApiTypeEnum(obj, default='None'):
+    """
+    Parameters
+    ----------
+    obj : Union[str, util.ProxyUnicode]
+    default : Optional[int]
+    
+    Returns
+    -------
+    int
+    """
+    pass
+def makeEditFlagMethod(inFunc, flag, newMethodName='None', docstring="''", cmdName='None'): pass
+def saveApiMelBridgeCache(): pass
+def toPyTypeList(moduleName, objectName):
+    """
+    Returns a function which casts the members of it's iterable
+    argument to the given class.
+    
+    Parameters
+    ----------
+    moduleName : str
+    objectName : str
+    
+    Returns
+    -------
+    Callable[[Any], List[Any]]
+    """
+    pass
+def _setApiCacheGlobals(): pass
+def editflag(cmdName, flag):
+    """
+    edit flag decorator
+    """
+    pass
+def loadCmdDocCache(): pass
+def _createPyNode(module, mayaType, pyNodeTypeName, parentPyNodeTypeName, extraAttrs='None'):
+    """
+    Parameters
+    ----------
+    module
+    mayaType : str
+    pyNodeTypeName : str
+    parentPyNodeTypeName : str
+    extraAttrs
+    
+    Returns
+    -------
+    Optional[type]
+    """
+    pass
+def _addFlagCmdDocs(func, cmdName, flag, docstring="''"): pass
+def maybeConvert(val, castFunc): pass
+def handleCallbacks(args, kwargs, callbackFlags): pass
+def toPyType(moduleName, objectName):
+    """
+    Returns a function which casts it's single argument to
+    an object with the given name in the given module (name).
+    
+    The module / object are given as strings, so that the module
+    may be imported when the function is called, to avoid
+    making factories dependent on, say, pymel.core.general or
+    pymel.core.uitypes
+    
+    Parameters
+    ----------
+    moduleName : str
+    objectName : str
+    
+    Returns
+    -------
+    Callable[[Any], Any]
+    """
+    pass
+def splitToPyNodeList(res):
+    """
+    converts a whitespace-separated string of names to a list of PyNode objects
+    
+    Parameters
+    ----------
+    res : str
+    
+    Returns
+    -------
+    List[pymel.core.general.PyNode]
+    """
+    pass
+def clearPyNodeTypes(): pass
+def saveApiCache(): pass
+def removeMayaType(mayaType):
+    """
+    Remove a type from the MayaTypes lists.
+    
+    - mayaTypesToApiTypes
+    - mayaTypesToApiEnums
+    """
+    pass
+def loadApiCache(): pass
+def toPyUI(res):
+    """
+    returns a PyUI object
+    
+    Parameters
+    ----------
+    res : Optional[str]
+    
+    Returns
+    -------
+    Optional[pymel.core.uitypes.PyUI]
+    """
+    pass
+def getDoArgsGetterUndo(args, argList, getter, setter, getterInArgs):
+    """
+    Parameters
+    ----------
+    args : List[Any]
+        argument values
+    argList : List[Tuple[str, Union[str, Tuple[str, str]], str, Optional[str]]]
+    getter : Callable
+        get function
+    setter : Callable
+        set function
+    getterInArgs : List[str]
+        list of argument names that are used to get the initial state when
+        a method is undoable.
+    
+    Returns
+    -------
+    do_args : List[Any]
+    final_do_args : List[Any]
+        Same as above but with SafeApiPtr converted
+    outTypeList : List[Tuple[str, int]]
+        list of (argument type, index), used by processApiResult to retrieve
+        output values from do_args
+    undoItem : ApiUndoItem
+    """
+    pass
 def fixCallbacks(inFunc, commandFlags, funcName='None'):
     """
     Prior to maya 2011, when a user provides a custom callback functions for a
@@ -645,170 +755,196 @@ def fixCallbacks(inFunc, commandFlags, funcName='None'):
     
     if inFunc has been renamed, pass a funcName to lookup command info in apicache.cmdlist
     """
-
     pass
-
-
-def apiClassNameToPymelClassName(apiName, allowGuess='True'):
-    """
-    Given the name of an api class, such as MFnTransform, MSpace, MAngle,
-    returns the name of the corresponding pymel class.
-    
-    If allowGuessing, and we cannot find a registered type that matches, will
-    try to do string parsing to guess the pymel name.
-    
-    Returns None if it was unable to determine the name.
-    """
-
-    pass
-
-
-def toPyNode(res):
-    """
-    returns a PyNode object
-    """
-
-    pass
-
-
-def getComponentTypes():
-    """
-    # Keep around for debugging/info gathering...
-    """
-
-    pass
-
-
-def raiseError(typ, *args):
-    pass
-
-
-def _setApiCacheGlobals():
-    pass
-
-
-def unwrapToPyNode(res):
-    """
-    unwraps a 1-item list, and returns a PyNode object
-    """
-
-    pass
-
-
-def saveApiCache():
-    pass
-
-
-def _setCmdCacheGlobals():
-    pass
-
-
-def listForNoneQuery(res, kwargs, flags):
-    """
-    convert a None to an empty list on the given query flags
-    """
-
-    pass
-
-
+def getProxyResult(self, apiClass, method, final_do='()'): pass
 def makeCreateFlagMethod(inFunc, flag, newMethodName='None', docstring="''", cmdName='None', returnFunc='None'):
-    pass
-
-
-def _addCmdDocs(func, cmdName):
-    pass
-
-
-def wrapApiMethod(apiClass, methodName, newName='None', proxy='True', overloadIndex='None'):
     """
-    create a wrapped, user-friendly API method that works the way a python method should: no MScriptUtil and
-    no special API classes required.  Inputs go in the front door, and outputs come out the back door.
-    
-    
-    Regarding Undo
-    --------------
-    
-    The API provides many methods which are pairs -- one sets a value
-    while the other one gets the value.  the naming convention of these
-    methods follows a fairly consistent pattern.  so what I did was
-    determine all the get and set pairs, which I can use to automatically
-    register api undo items:  prior to setting something, we first *get*
-    it's existing value, which we can later use to reset when undo is
-    triggered.
-    
-    This API undo is only for PyMEL methods which are derived from API
-    methods.  it's not meant to be used with plugins.  and since it just
-    piggybacks maya's MEL undo system, it won't get cross-mojonated.
-    
-    Take `MFnTransform.setTranslation`, for example. PyMEL provides a wrapped copy of this as
-    `Transform.setTranslation`.   when pymel.Transform.setTranslation is
-    called, here's what happens in relation to undo:
-    
-        #. process input args, if any
-        #. call MFnTransform.getTranslation() to get the current translation.
-        #. append to the api undo queue, with necessary info to undo/redo
-           later (the current method, the current args, and the current
-           translation)
-        #. call MFnTransform.setTranslation() with the passed args
-        #. process result and return it
-    
-    
-    :Parameters:
-    
-        apiClass : class
-            the api class
-        methodName : string
-            the name of the api method
-        newName : string
-            optionally provided if a name other than that of api method is desired
-        proxy : bool
-            If True, then __apimfn__ function used to retrieve the proxy class. If False,
-            then we assume that the class being wrapped inherits from the underlying api class.
-        overloadIndex : None or int
-            which of the overloaded C++ signatures to use as the basis of our wrapped function.
+    Add documentation to a method that corresponds to a single command flag
     """
-
     pass
-
-
-def toApiTypeEnum(obj, default='None'):
-    pass
-
-
-def toPyType(moduleName, objectName):
+def addMelDocs(cmdName, flag='None'):
     """
-    Returns a function which casts it's single argument to
-    an object with the given name in the given module (name).
+    decorator for adding docs
+    """
+    pass
+def getUndoArgs(args, argList, getter, getterInArgs):
+    """
+    Parameters
+    ----------
+    args : List[Any]
+        argument values
+    argList : List[Tuple[str, Union[str, Tuple[str, str]], str, Optional[str]]]
+    getter : Callable
+        get function
+    getterInArgs : List[str]
     
-    The module / object are given as strings, so that the module
-    may be imported when the function is called, to avoid
-    making factories dependent on, say, pymel.core.general or
-    pymel.core.uitypes
+    Returns
+    -------
+    List[Any]
     """
-
     pass
-
-
-def makeQueryFlagMethod(inFunc, flag, newMethodName='None', docstring="''", cmdName='None', returnFunc='None'):
-    pass
-
-
-def addFlagCmdDocsCallback(cmdName, flag, docstring):
-    pass
-
-
-def addCustomPyNode(dynModule, mayaType, extraAttrs='None'):
+def raiseError(typ, *args): pass
+def addCustomPyNode(module, mayaType, extraAttrs='None'):
     """
     create a PyNode, also adding each member in the given maya node's inheritance if it does not exist.
     
     This function is used for creating PyNodes via plugins, where the nodes parent's might be abstract
     types not yet created by pymel.  also, this function ensures that the newly created node types are
     added to pymel.all, if that module has been imported.
+    
+    Returns
+    -------
+    Optional[str]
     """
-
     pass
-
-
+def asQuery(self, func, kwargs, flag): pass
+def apiClassNameToPymelClassName(apiName, allowGuess='True'):
+    """
+    Given the name of an api class, such as MFnTransform, MSpace, MAngle,
+    returns the name of the corresponding pymel class.
+    
+    Parameters
+    ----------
+    apiName : str
+    allowGuess : bool
+        If enabled, and we cannot find a registered type that matches, will
+        try to do string parsing to guess the pymel name.
+    
+    Returns
+    -------
+    Optional[str]
+        Returns None if it was unable to determine the name.
+    """
+    pass
+def addCmdDocs(func, cmdName='None'):
+    """
+    Parameters
+    ----------
+    func : C
+    cmdName : Optional[str]
+    
+    Returns
+    -------
+    C
+    """
+    pass
+def toPyNodeList(res):
+    """
+    returns a list of PyNode objects
+    
+    Parameters
+    ----------
+    res : Optional[List[str]]
+    
+    Returns
+    -------
+    List[pymel.core.general.PyNode]
+    """
+    pass
+def _getApiOverrideData(classname, pymelName): pass
+def addApiDocs(apiClass, methodName, overloadIndex='None', undoable='True'):
+    """
+    decorator for adding API docs
+    """
+    pass
+def getDoArgsAnimCurveUndo(args, argList):
+    """
+    Parameters
+    ----------
+    args : List[Any]
+        argument values
+    argList : List[Tuple[str, Union[str, Tuple[str, str]], str, Optional[str]]]
+    
+    Returns
+    -------
+    do_args : List[Any]
+    final_do_args : List[Any]
+        Arguments prepped to be passed to the API method.
+        Same as above but with SafeApiPtr converted
+    out_type_list : List[Tuple[str, int]]
+        list of (argument type, index)
+    undoItem : ApiUndoItem
+    """
+    pass
+def getComponentTypes(): pass
+def toApiTypeStr(obj, default='None'):
+    """
+    Parameters
+    ----------
+    obj : Union[int, str, util.ProxyUnicode]
+    default : Optional[str]
+    
+    Returns
+    -------
+    Optional[str]
+    """
+    pass
+def convertTimeValues(rawVal): pass
+def makeQueryFlagMethod(inFunc, flag, newMethodName='None', docstring="''", cmdName='None', returnFunc='None'): pass
+def removePyNode(module, mayaType): pass
+def functionFactory(funcNameOrObject, returnFunc='None', module='None', rename='None', uiWidget='False'):
+    """
+    create a new function, apply the given returnFunc to the results (if any)
+    Use pre-parsed command documentation to add to __doc__ strings for the
+    command.
+    """
+    pass
+def addApiDocsCallback(apiClass, methodName, overloadIndex='None', undoable='True', origDocstring="''"): pass
+def addFlagCmdDocsCallback(cmdName, flag, docstring):
+    """
+    Add documentation to a method that corresponds to a single command flag
+    """
+    pass
+def getUncachedCmds(): pass
+def unwrapToPyNode(res):
+    """
+    unwraps a 1-item list, and returns a PyNode object
+    
+    Parameters
+    ----------
+    res : List[str]
+    
+    Returns
+    -------
+    Optional[pymel.core.general.PyNode]
+    """
+    pass
+def getPymelTypeName(mayaTypeName, create='True'): pass
+def addPyNodeType(pyNodeType, parentPyNode): pass
+def isValidPyNodeName(arg): pass
+def toApiFunctionSet(obj):
+    """
+    Parameters
+    ----------
+    obj : Union[str, int]
+    
+    Returns
+    -------
+    Optional[Type]
+    """
+    pass
+def _getApiOverrideNameAndData(classname, pymelName): pass
+def makeUICallback(origCallback, args, doPassSelf):
+    """
+    this function is used to make the callback, so that we can ensure the origCallback gets
+    "pinned" down
+    """
+    pass
+def loadCmdCache(): pass
+def removePyNodeType(pyNodeTypeName): pass
+def _getSourceFunction(funcNameOrObject, module='None'): pass
+def _addApiDocs(wrappedApiFunc, apiClass, methodName, overloadIndex='None', undoable='True'): pass
+def getCmdFunc(cmdName):
+    """
+    Parameters
+    ----------
+    cmdName : str
+    
+    Returns
+    -------
+    Callable
+    """
+    pass
 def registerVirtualClass(self, vclass, nameRequired='False', isVirtual="'_isVirtual'", preCreate="'_preCreateVirtual'", create="'_createVirtual'", postCreate="'_postCreateVirtual'"):
     """
     Register a new virtual class
@@ -897,7 +1033,8 @@ def registerVirtualClass(self, vclass, nameRequired='False', isVirtual="'_isVirt
     
     For a usage example, see examples/customClasses.py
     
-    :parameters:
+    Parameters
+    ----------
     nameRequired : `bool`
         True if the _isVirtual callback requires the string name to operate
         on. The object's name is not always immediately avaiable and may
@@ -914,129 +1051,21 @@ def registerVirtualClass(self, vclass, nameRequired='False', isVirtual="'_isVirt
     postCreate: `str` or callable
         the function used to modify the PyNode after it is created.
     """
-
     pass
-
-
-def _addApiDocs(wrappedApiFunc, apiClass, methodName, overloadIndex='None', undoable='True'):
-    pass
-
-
-def saveApiMelBridgeCache():
-    pass
-
-
-def editflag(cmdName, flag):
-    """
-    edit flag decorator
-    """
-
-    pass
-
-
-def splitToPyNodeList(res):
-    """
-    converts a whitespace-separated string of names to a list of PyNode objects
-    """
-
-    pass
-
-
-def makeEditFlagMethod(inFunc, flag, newMethodName='None', docstring="''", cmdName='None'):
-    pass
-
-
-def addPyNodeType(pyNodeType, parentPyNode):
-    pass
-
-
-def _getTimeRangeFlags(cmdName):
-    """
-    used parsed data and naming convention to determine which flags are callbacks
-    """
-
-    pass
-
-
-def _getApiOverrideNameAndData(classname, pymelName):
-    pass
-
-
-def addPyNodeCallback(dynModule, mayaType, pyNodeTypeName, parentPyNodeTypeName, extraAttrs='None'):
-    pass
-
-
-def isValidPyNode(arg):
-    pass
-
-
-def isMayaType(mayaType):
-    """
-    Whether the given type is a currently-defined maya node name
-    """
-
-    pass
-
-
-def addPyNode(dynModule, mayaType, parentMayaType, extraAttrs='None'):
-    """
-    create a PyNode type for a maya node.
-    """
-
-    pass
-
-
-def toPyTypeList(moduleName, objectName):
-    """
-    Returns a function which casts the members of it's iterable
-    argument to the given class.
-    """
-
-    pass
-
-
-def addApiDocs(apiClass, methodName, overloadIndex='None', undoable='True'):
-    """
-    decorator for adding API docs
-    """
-
-    pass
-
-
 def mayaTypeToApiType(mayaType):
     """
     Get the Maya API type from the name of a Maya type
+    
+    Parameters
+    ----------
+    mayaType : str
+    
+    Returns
+    -------
+    str
     """
-
     pass
-
-
-def addMelDocs(cmdName, flag='None'):
-    """
-    decorator for adding docs
-    """
-
-    pass
-
-
-def clearPyNodeTypes():
-    pass
-
-
-def functionFactory(funcNameOrObject, returnFunc='None', module='None', rename='None', uiWidget='False'):
-    """
-    create a new function, apply the given returnFunc to the results (if any)
-    Use pre-parsed command documentation to add to __doc__ strings for the
-    command.
-    """
-
-    pass
-
-
-def loadCmdDocCache():
-    pass
-
-
+def asEdit(self, func, kwargs, flag, val): pass
 def addMayaType(mayaType, apiType='None'):
     """
     Add a type to the MayaTypes lists. Fill as many dictionary caches as we have info for.
@@ -1044,167 +1073,203 @@ def addMayaType(mayaType, apiType='None'):
     - mayaTypesToApiTypes
     - mayaTypesToApiEnums
     """
-
     pass
-
-
-def toApiTypeStr(obj, default='None'):
+def _addPyNode(module, mayaType, parentMayaType, extraAttrs='None'):
+    """
+    create a PyNode type for a maya node.
+    
+    Returns
+    -------
+    name : str
+    class : type
+    """
     pass
-
-
-def mergeApiClassOverrides():
+def toPyNode(res):
+    """
+    returns a PyNode object
+    
+    Parameters
+    ----------
+    res : Optional[str]
+    
+    Returns
+    -------
+    Optional[pymel.core.general.PyNode]
+    """
     pass
-
-
 def createflag(cmdName, flag):
     """
     create flag decorator
     """
-
     pass
-
-
-def removeMayaType(mayaType):
-    """
-    Remove a type from the MayaTypes lists.
-    
-    - mayaTypesToApiTypes
-    - mayaTypesToApiEnums
-    """
-
-    pass
-
-
-def getUncachedCmds():
-    pass
-
-
-def toPyUI(res):
-    """
-    returns a PyUI object
-    """
-
-    pass
-
-
-def addCmdDocsCallback(cmdName, docstring="''"):
-    pass
-
-
-def toApiFunctionSet(obj):
-    pass
-
-
-def isValidPyNodeName(arg):
-    pass
-
-
-def toPyNodeList(res):
-    """
-    returns a list of PyNode objects
-    """
-
-    pass
-
-
-def loadApiCache():
-    pass
-
-
-def queryflag(cmdName, flag):
-    """
-    query flag decorator
-    """
-
-    pass
-
-
-def removePyNode(dynModule, mayaType):
-    pass
-
-
-def loadCmdCache():
-    pass
-
-
-def addApiDocsCallback(apiClass, methodName, overloadIndex='None', undoable='True', origDocstring="''"):
-    pass
-
-
 def toPyUIList(res):
     """
     returns a list of PyUI objects
+    
+    Parameters
+    ----------
+    res : str
+    
+    Returns
+    -------
+    List[pymel.core.uitypes.PyUI]
     """
-
+    pass
+def wrapApiMethod(apiClass, methodName, newName='None', proxy='True', overloadIndex='None'):
+    """
+    create a wrapped, user-friendly API method that works the way a python method should: no MScriptUtil and
+    no special API classes required.  Inputs go in the front door, and outputs come out the back door.
+    
+    
+    Regarding Undo
+    --------------
+    
+    The API provides many methods which are pairs -- one sets a value
+    while the other one gets the value.  the naming convention of these
+    methods follows a fairly consistent pattern.  so what I did was
+    determine all the get and set pairs, which I can use to automatically
+    register api undo items:  prior to setting something, we first *get*
+    it's existing value, which we can later use to reset when undo is
+    triggered.
+    
+    This API undo is only for PyMEL methods which are derived from API
+    methods.  it's not meant to be used with plugins.  and since it just
+    piggybacks maya's MEL undo system, it won't get cross-mojonated.
+    
+    Take `MFnTransform.setTranslation`, for example. PyMEL provides a wrapped copy of this as
+    `Transform.setTranslation`.   when pymel.Transform.setTranslation is
+    called, here's what happens in relation to undo:
+    
+        #. process input args, if any
+        #. call MFnTransform.getTranslation() to get the current translation.
+        #. append to the api undo queue, with necessary info to undo/redo
+           later (the current method, the current args, and the current
+           translation)
+        #. call MFnTransform.setTranslation() with the passed args
+        #. process result and return it
+    
+    
+    Parameters
+    ----------
+    apiClass : Type
+        the api class
+    methodName : str
+        the name of the api method
+    newName : str
+        optionally provided if a name other than that of api method is desired
+    proxy : bool
+        If True, then __apimfn__ function used to retrieve the proxy class. If False,
+        then we assume that the class being wrapped inherits from the underlying api class.
+    overloadIndex : Optional[int]
+        which of the overloaded C++ signatures to use as the basis of our wrapped function.
+    """
+    pass
+def listForNoneQuery(res, kwargs, flags):
+    """
+    convert a None to an empty list on the given query flags
+    """
+    pass
+def _getTimeRangeFlags(cmdName):
+    """
+    used parsed data and naming convention to determine which flags are
+    callbacks
+    """
+    pass
+def processApiResult(result, outTypeList, do_args):
+    """
+    Parameters
+    ----------
+    result : Any
+        Result returned from the API method
+    outTypeList : List[Tuple[str, int]]
+        output argument types and their indices.  should be same len as outArgs
+    do_args : List[Any]
+    
+    Returns
+    -------
+    Any
+    """
+    pass
+def isValidPyNode(arg): pass
+def addCmdDocsCallback(cmdName, docstring="''"): pass
+def isMayaType(mayaType):
+    """
+    Whether the given type is a currently-defined maya node name
+    
+    Parameters
+    ----------
+    str
+    
+    Returns
+    -------
+    bool
+    """
     pass
 
-
-def _addFlagCmdDocs(func, cmdName, flag, docstring="''"):
-    pass
-
-
-
-_logger = None
-
-apiToMelData = {}
-
-cmdlist = {}
-
-apiEnumsToPyComponents = {}
-
-virtualClasses = VirtualClassManager()
-
-apiUndo = ApiUndo()
-
-uiClassList = []
-
-_apiMelBridgeCacheInst = None
-
-simpleCommandWraps = {}
-
-moduleCmds = {}
-
-Always = None
-
-_apiCacheInst = None
-
-pyNodeNamesToPyNodes = {}
-
-nodeHierarchy = []
-
-mayaTypesToApiTypes = {}
-
-docCacheLoaded = True
-
-nodeCommandList = []
-
-_DEBUG_API_WRAPS = False
-
-pyNodeTypesHierarchy = {}
-
-apiTypesToApiEnums = {}
-
-nodeTypeToInfoCommand = {}
-
-apiTypesToApiClasses = {}
-
-mayaTypesToApiEnums = {}
-
-classToMelMap = {}
-
-EXCLUDE_METHODS = []
-
-DOC_WIDTH = 120
 
 apiClassNamesToPyNodeNames = {}
 
+apiTypesToApiClasses = {}
+
+moduleCmds = {}
+
 apiEnumsToApiTypes = {}
+
+Always = None
+
+pymelTypeNameToMayaTypeName = {}
+
+apiEnumsToPyComponents = {}
+
+_apiMelBridgeCacheInst = None
+
+apiTypesToApiEnums = {}
+
+apiToMelData = {}
+
+simpleCommandWraps = {}
+
+apiClassNamesToPymelTypes = {}
+
+_logger = None
+
+nodeHierarchy = []
+
+apiUndo = ApiUndo()
+
+nodeCommandList = []
+
+EXCLUDE_METHODS = []
+
+pyNodeTypesHierarchy = {}
+
+docCacheLoaded = True
+
+nodeTypeToInfoCommand = {}
+
+_DEBUG_API_WRAPS = False
+
+pyNodeNamesToPyNodes = {}
+
+mayaTypesToApiTypes = {}
+
+uiClassList = []
+
+_apiCacheInst = None
 
 _cmdCacheInst = None
 
-overrideMethods = {}
+mayaTypesToApiEnums = {}
+
+cmdlist = {}
 
 apiClassInfo = {}
+
+virtualClasses = VirtualClassManager()
+
+mayaTypeNameToPymelTypeName = {}
+
+docstringMode = 'pydoc'
 
 apiClassOverrides = {}
 

@@ -2,53 +2,69 @@
 This module exists to avoid cyclic dependencies between modules.
 """
 
-def computeValidObjectName(dict, mergeType, prependToName, objectTypeName):
-    pass
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
+def copyPasteLabelColorEnabled(): pass
+def computeValidObjectName(dict, mergeType, prependToName, objectTypeName): pass
+def importLabelColorEnabled(): pass
+def enableImportLabelColor(value): pass
+def exportLabelColorEnabled(): pass
+def enableCopyPasteLabelColor(value): pass
+def enableExportLabelColor(value): pass
 
-DECODE_AND_ADD = 0
-
-CHILDREN_ATTRIBUTE_NAME = 'children'
-
-kObjectAlreadyExists = []
-
-VISIBILITY_ATTRIBUTE_NAME = 'isVisible'
-
-SCENE_SETTINGS_ATTRIBUTE_NAME = 'sceneSettings'
-
-kTypeNodeCreationFailed = []
-
-kMissingProperty = []
-
-NOTES_ATTRIBUTE_NAME = 'notes'
-
-kMissingTypeName = []
 
 SCENE_AOVS_ATTRIBUTE_NAME = 'sceneAOVs'
 
-kWrongMergeType = []
+kMissingTypeName = []
 
-SELECTOR_ATTRIBUTE_NAME = 'selector'
+CHILDREN_ATTRIBUTE_NAME = 'children'
 
-LAYERS_ATTRIBUTE_NAME = 'renderLayers'
-
-kFaultyTypeName = []
+RENDERABLE_ATTRIBUTE_NAME = 'renderable'
 
 kUnknownData = []
 
-DECODE_AND_RENAME = 2
+kWrongMergeType = []
 
-DECODE_AND_MERGE = 1
+DECODE_AND_ADD = 0
+
+_enableExportLabelColor = True
+
+NOTES_ATTRIBUTE_NAME = 'notes'
+
+kUnknownKeys = []
+
+kMissingProperty = []
 
 kUnknownTypeNode = []
 
-COLLECTIONS_ATTRIBUTE_NAME = 'collections'
+SELECTOR_ATTRIBUTE_NAME = 'selector'
+
+kTypeNodeCreationFailed = []
+
+ACCEPT_COLOR = 1
+
+VISIBILITY_ATTRIBUTE_NAME = 'isVisible'
+
+_copyPasteColor = False
+
+LAYERS_ATTRIBUTE_NAME = 'renderLayers'
+
+LABEL_COLOR_ATTRIBUTE_NAME = 'labelColor'
+
+SCENE_SETTINGS_ATTRIBUTE_NAME = 'sceneSettings'
 
 NAME_ATTRIBUTE_NAME = 'name'
 
 IMPORTED_ATTRIBUTE_NAME = 'imported'
 
-kUnknownKeys = []
+COLLECTIONS_ATTRIBUTE_NAME = 'collections'
+
+kObjectAlreadyExists = []
+
+kFaultyTypeName = []
+
+DECODE_AND_RENAME = 2
 
 

@@ -3,6 +3,10 @@ Module containing the class responsible for getting names of plugs, nodes,
 and DAG paths in a potentially unique and anonymous way.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class ObjectNamer(object):
     """
     Utility object to remap object names onto something appropriate.
@@ -79,29 +83,20 @@ class ObjectNamer(object):
             name_type:  NODE_{NAME,PLUG,NODE,PATH}
             anonymous: True means don't use the original names, anonymize them
         """
-    
         pass
-    
-    
     def clear(self):
         """
         Erase all of the currently remembered names. Resets the unique IDs
         back to the original. Names generated after a clear() may not be
         unique compared to names generated before the clear().
         """
-    
         pass
-    
-    
     def name(self, original_name):
         """
         Get the name which corresponds to "original_name". In the case of
         non-anonymized names that will just be the original name.
         """
-    
         pass
-    
-    
     def set_max_objects(self, max_objects):
         """
         Set the maximum number of objects expected to be named with this
@@ -110,14 +105,7 @@ class ObjectNamer(object):
         
         If max_objects is 0 then use the %d format with no leading zeroes.
         """
-    
         pass
-    
-    
-    __dict__ = None
-    
-    __weakref__ = None
-    
     MODE_NAME = 0
     
     
@@ -164,6 +152,12 @@ class ObjectNamer(object):
     
     
     SEP_UNDERWORLD = '->'
+    
+    
+    __dict__ = None
+    
+    
+    __weakref__ = None
 
 
 

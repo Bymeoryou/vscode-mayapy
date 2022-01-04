@@ -1,6 +1,6 @@
 def animCurveEditor(q=1,e=1,acs=1,af="string",aft="string",cm=1,ct="string",cd="uint",ctl=1,cs=1,csf=1,dt="string",dcc="string",dat="string",dak="string",di="string",dk="string",dn=1,dtn="string",dv="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",kt="string",lck=1,la="string",mlc="string",m="script",ncc="string",o="string",pnl="string",p="string",psh=1,rnc=1,rs="time",rss="int",ru="string",slc="string",acn=1,sb="string",scn=1,sr="string",suc=1,s="string",st="string",sv="string",sc=1,scx="float",scm="float",scs="float",sts=1,up=1,ulk=1,upd=1,ut="string",vlt="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/animCurveEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/animCurveEditor.html
 
 
 
@@ -310,7 +310,7 @@ vlt   : valueLinesToggle [string]
 
 def animDisplay(q=1,e=1,upd="string",rae=1,tc="string",tco="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/animDisplay.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/animDisplay.html
 
 
 
@@ -360,7 +360,7 @@ tco   : timeCodeOffset  [string]
 
 def animLayer(q=1,e=1,akg=1,aso=1,afl=1,anc=1,at="string",bac=1,blr=1,bl=1,bld=1,c="string",col=1,cp="string",ca="string",cna="string",ebl=1,edn=1,een=1,ert=1,esc=1,etr=1,evs=1,ex=1,ea="string",fcv="string",fur=1,uir=1,lp="string",l=1,ml=1,mva="string",mvb="string",m=1,o=1,p="string",pth=1,prf=1,raa=1,ra="string",r="string",sel=1,s=1,w="float",wbd=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/animLayer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/animLayer.html
 
 
 
@@ -605,7 +605,7 @@ wbd   : writeBlendnodeDestinations [boolean]
 
 def animView(q=1,e=1,et="time",max="float",min="float",nv=1,pv=1,st="time"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/animView.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/animView.html
 
 
 
@@ -666,7 +666,7 @@ st    : startTime       [time]
 
 def autoKeyframe(q=1,e=1,aa="name",co="string",lsa=1,nr=1,st=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/autoKeyframe.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/autoKeyframe.html
 
 
 
@@ -730,7 +730,7 @@ st    : state           [boolean]
 
 def backgroundEvaluationManager(q=1,i=1,m="string",p=1,r=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/backgroundEvaluationManager.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/backgroundEvaluationManager.html
 
 
 
@@ -780,7 +780,7 @@ r     : resume          [boolean]
 
 def bakeClip(b="[uint, uint]",ci="uint",k=1,n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bakeClip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bakeClip.html
 
 
 
@@ -828,7 +828,7 @@ n     : name            [string]
 
 def bakeResults(q=1,e=1,an="string",at="string",bol=1,cp=1,dl="string",dic=1,f="floatrange",hi="string",iub=1,index="uint",mr=1,osr="uint",pok=1,rba=1,ral=1,rwl="string",sb="time",s=1,sm=1,sr="[[, boolean, float, ]]",sac=1,t="timerange"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bakeResults.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bakeResults.html
 
 
 
@@ -995,7 +995,7 @@ t     : time            [timerange]
 
 def bakeSimulation(q=1,e=1,an="string",at="string",bol=1,cp=1,dl="string",dic=1,f="floatrange",hi="string",iub=1,index="uint",mr=1,pok=1,rba=1,ral=1,rwl="string",sb="time",s=1,sm=1,sr="[[, boolean, float, ]]",sac=1,t="timerange"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bakeSimulation.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bakeSimulation.html
 
 
 
@@ -1164,7 +1164,7 @@ t     : time            [timerange]
 
 def blendTwoAttr(q=1,e=1,at="string",at0="name",at1="name",bl="name",cp=1,d="int",n="string",s=1,t="timerange"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/blendTwoAttr.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/blendTwoAttr.html
 
 
 
@@ -1257,7 +1257,7 @@ t     : time            [timerange]
 
 def bufferCurve(q=1,an="string",at="string",cp=1,ex=1,f="floatrange",hi="string",iub=1,index="uint",ov=1,s=1,sw=1,t="timerange",urc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bufferCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bufferCurve.html
 
 
 
@@ -1375,7 +1375,7 @@ urc   : useReferencedCurve [boolean]
 
 def buildBookmarkMenu(ed="string",typ="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/buildBookmarkMenu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/buildBookmarkMenu.html
 
 
 
@@ -1416,7 +1416,7 @@ typ   : type            [string]
 
 def buildKeyframeMenu():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/buildKeyframeMenu.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/buildKeyframeMenu.html
 
 
 
@@ -1442,7 +1442,7 @@ None
 
 def cacheEvaluator(q=1,e=1,cfm="string",cfo="string",ci="timerange",cn="string",cps=1,cp=1,fc="string",fcr="[timerange, boolean]",fcs=1,fcw=1,lcn=1,lcd=1,lvn=1,na="string",nap="string",nf="string",nfp="string",nr="string",nrp="string",pi=1,pfs=1,rr=1,ru=1,ri=1,sf=1,sfm=1,sft=1,vn="string",wfc="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cacheEvaluator.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cacheEvaluator.html
 
 
 
@@ -1709,7 +1709,7 @@ wfc   : waitForCache    [float]
 
 def character(q=1,e=1,add="name",aoo="string",cp=1,cl="name",em=1,ed=1,er=1,es=1,et=1,ev=1,fl="name",fe="name",include="name",int="name",ii="name",im="name",lib=1,mi="uint",n="string",nw=1,no=1,ofs=1,rm="name",roo="string",rt="string",sc=1,sp="name",sub="name",t="string",un="name",ua="name"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/character.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/character.html
 
 
 
@@ -1899,7 +1899,7 @@ ua    : userAlias       [name]
 
 def characterMap(q=1,e=1,ma="[string, string]",mm="string",mn="[string, string]",m="string",pm=1,ua="[string, string]",umn="[string, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/characterMap.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/characterMap.html
 
 
 
@@ -1965,7 +1965,7 @@ umn   : unmapNode       [[string, string]]
 
 def choice(q=1,e=1,at="string",cp=1,index="uint",n="string",sl="name",s=1,sa="name",t="time"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/choice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/choice.html
 
 
 
@@ -2061,7 +2061,7 @@ t     : time            [time]
 
 def clip(q=1,e=1,abs=1,abr=1,a="string",at=1,aa=1,ac=1,ar=1,asc=1,acr=1,ch=1,cn=1,c=1,da=1,d=1,end="time",ex=1,ignoreSubcharacters=1,i=1,lo=1,mm="string",n="string",nn="string",p=1,pi=1,rm=1,rt=1,rof="[float, float, float]",ra=1,sc=1,scn=1,sp="time",s="time",tof="[float, float, float]",uc="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/clip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/clip.html
 
 
 
@@ -2261,7 +2261,7 @@ uc    : useChannel      [string]
 
 def clipEditor(q=1,e=1,th="int",af="string",aft="string",cd="string",cs="int",ctl=1,dt="string",dc="string",da=1,dat="string",dak="string",di="string",dk="string",dtn="string",dv="string",dtg="string",ex=1,f="string",fmc="string",fa=1,fr="[float, float]",hlc="string",hb="[string, string]",hc="[string, string]",it=1,lac=1,lc=1,lck=1,la="string",mlc="string",ms=1,mc="string",pnl="string",p="string",sb="[string, string, string]",sc="[string, string]",slc="string",st="string",sv="string",sts=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/clipEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/clipEditor.html
 
 
 
@@ -2511,7 +2511,7 @@ ut    : useTemplate     [string]
 
 def clipMatching(cd="[string, float]",cs="[string, float]",mr="uint",mt="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/clipMatching.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/clipMatching.html
 
 
 
@@ -2561,7 +2561,7 @@ mt    : matchTranslation [uint]
 
 def clipSchedule(q=1,e=1,aa=1,ar=1,b="[uint, uint]",bn="[uint, uint]",bun="string",ch=1,ci="uint",c="float",da=1,en=1,grp=1,gri="uint",gn="string",ph="time",it="uint",instance="string",lc=1,lp=1,l=1,m=1,n="string",poc="float",prc="float",rm=1,rb="[uint, uint]",ret=1,rt="uint",ra=1,sc="float",sh="int",shi="uint",so=1,scn=1,se="time",ss="time",s="time",t="uint",w="float",ws="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/clipSchedule.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/clipSchedule.html
 
 
 
@@ -2790,7 +2790,7 @@ ws    : weightStyle     [uint]
 
 def clipSchedulerOutliner(q=1,e=1,ann="string",bgc="[float, float, float]",cs="string",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/clipSchedulerOutliner.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/clipSchedulerOutliner.html
 
 
 
@@ -2950,7 +2950,7 @@ w     : width           [int]
 
 def controller(q=1,e=1,ac=1,cld=1,g=1,idx="int",ic="string",p=1,pwd=1,pwl=1,pwr=1,pwu=1,unp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/controller.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/controller.html
 
 
 
@@ -3035,7 +3035,7 @@ unp   : unparent        [boolean]
 
 def copyKey(al="string",an="string",at="string",cb="string",cp=1,f="floatrange",fea=1,hi="string",iub=1,index="uint",o="string",s=1,t="timerange"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/copyKey.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/copyKey.html
 
 
 
@@ -3166,7 +3166,7 @@ t     : time            [timerange]
 
 def currentTime(q=1,e=1,u=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/currentTime.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/currentTime.html
 
 
 
@@ -3203,7 +3203,7 @@ u     : update          [boolean]
 
 def curveRGBColor(q=1,hsv=1,l=1,ln=1,r=1,rf=1,rs=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/curveRGBColor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/curveRGBColor.html
 
 
 
@@ -3267,7 +3267,7 @@ rs    : resetToSaved    [boolean]
 
 def cutKey(an="string",at="string",cl=1,cp=1,f="floatrange",hi="string",iub=1,index="uint",o="string",sl=1,s=1,t="timerange"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cutKey.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cutKey.html
 
 
 
@@ -3410,7 +3410,7 @@ t     : time            [timerange]
 
 def deformerEvaluator(q=1,c=1,m=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/deformerEvaluator.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/deformerEvaluator.html
 
 
 
@@ -3452,7 +3452,7 @@ m     : meshes          [boolean]
 
 def dopeSheetEditor(q=1,e=1,af="string",aft="string",ctl=1,dt="string",dat="string",dak="string",di="string",dk="string",dtn="string",dv="string",dtg="string",ex=1,f="string",fmc="string",hb=1,hlc="string",lck=1,la="string",mlc="string",o="string",pnl="string",p="string",slc="string",sel="[float, float, float, float]",sc=1,ss=1,stk=1,st="string",sv="string",sts=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dopeSheetEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dopeSheetEditor.html
 
 
 
@@ -3652,7 +3652,7 @@ ut    : useTemplate     [string]
 
 def evaluationManager(q=1,ccl="string",di="string",mt=1,enabled=1,ia="int",ib=1,inv=1,man=1,mr=1,m="string",dst="string",ntg=1,ntp=1,nts=1,ntu=1,ust="string",sfm=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/evaluationManager.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/evaluationManager.html
 
 
 
@@ -3830,7 +3830,7 @@ sfm   : safeMode        [boolean]
 
 def evaluator(q=1,cl=1,c="string",en=1,i=1,n="string",nt="string",ntc=1,p="int",vn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/evaluator.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/evaluator.html
 
 
 
@@ -3929,7 +3929,7 @@ vn    : valueName       [string]
 
 def filterCurve(cof="float",endTime="time",f="string",kof=1,ker="string",ks=1,mxs="float",mns="float",per="float",pre="float",pm="int",pkt="string",sr="float",sk=1,s="time",tto="float",tol="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/filterCurve.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/filterCurve.html
 
 
 
@@ -4044,7 +4044,7 @@ tol   : tolerance       [float]
 
 def findKeyframe(an="string",at="string",cp=1,c=1,f="floatrange",hi="string",iub=1,index="uint",s=1,t="timerange",ts=1,w="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/findKeyframe.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/findKeyframe.html
 
 
 
@@ -4158,7 +4158,7 @@ w     : which           [string]
 
 def flow(q=1,e=1,dv="[uint, uint, uint]",lc=1,ld="[uint, uint, uint]",oc=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/flow.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/flow.html
 
 
 
@@ -4210,7 +4210,7 @@ oc    : objectCentered  [boolean]
 
 def freeze(q=1,all=1,dl=1,dn=1,fd=1,f=1,i=1,n=1,uf=1,up=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/freeze.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/freeze.html
 
 
 
@@ -4304,7 +4304,7 @@ up    : upstream        [boolean]
 
 def freezeOptions(q=1,dl=1,dn="string",ep=1,inv=1,rn=1,rt=1,up="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/freezeOptions.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/freezeOptions.html
 
 
 
@@ -4376,7 +4376,7 @@ up    : upstream        [string]
 
 def hikGlobals(q=1,e=1,rap=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/hikGlobals.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/hikGlobals.html
 
 
 
@@ -4411,7 +4411,7 @@ rap   : releaseAllPinning [boolean]
 
 def keyframe(q=1,e=1,a=1,abd=1,an="string",at="string",bd=1,ct="[time, time, float]",cp=1,ev=1,f="floatrange",fc="float",hi="string",iub=1,index="uint",iv=1,kc=1,lsl=1,n=1,o="string",r=1,sl=1,s=1,tds=1,t="timerange",tc="time",vc="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/keyframe.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/keyframe.html
 
 
 
@@ -4595,7 +4595,7 @@ vc    : valueChange     [float]
 
 def keyframeOutliner(q=1,e=1,ac="string",ann="string",bgc="[float, float, float]",dt="string",dsp="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,po=1,sbm="string",ut="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/keyframeOutliner.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/keyframeOutliner.html
 
 
 
@@ -4760,7 +4760,7 @@ w     : width           [int]
 
 def keyframeStats(q=1,e=1,adj="int",ad2="int",ad3="int",ad4="int",ad5="int",ad6="int",ae="string",ann="string",bgc="[float, float, float]",cm=1,cal="[int, string]",cl2="[string, string]",cl3="[string, string, string]",cl4="[string, string, string, string]",cl5="[string, string, string, string, string]",cl6="[string, string, string, string, string, string]",cat="[int, string, int]",ct2="[string, string]",ct3="[string, string, string]",ct4="[string, string, string, string]",ct5="[string, string, string, string, string]",ct6="[string, string, string, string, string, string]",co2="[int, int]",co3="[int, int, int]",co4="[int, int, int, int]",co5="[int, int, int, int, int]",co6="[int, int, int, int, int, int]",cw="[int, int]",cw1="int",cw2="[int, int]",cw3="[int, int, int]",cw4="[int, int, int, int]",cw5="[int, int, int, int, int]",cw6="[int, int, int, int, int, int]",dt="string",dtg="string",dgc="script",dpc="script",en=1,ebg=1,ekf=1,ex=1,fpn=1,h="int",hlc="[float, float, float]",io=1,m=1,nbg=1,npm=1,p="string",pma=1,pre="int",po=1,rat="[int, string, int]",sbm="string",tan="string",ut="string",van="string",vis=1,vcc="script",w="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/keyframeStats.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/keyframeStats.html
 
 
 
@@ -5102,7 +5102,7 @@ w     : width           [int]
 
 def keyingGroup(q=1,e=1,act="name",add="name",af=1,cat="string",cl="name",co="int",cp="name",eg=1,ep=1,em=1,ed=1,er=1,es=1,et=1,ev=1,fc=1,fl="name",fe="name",include="name",int="name",ii="name",im="name",l=1,mr=1,n="string",nss=1,nw=1,no=1,rm="name",rac="name",r=1,fil="string",s=1,sp="name",sub="name",t="string",un="name",v=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/keyingGroup.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/keyingGroup.html
 
 
 
@@ -5327,7 +5327,7 @@ v     : vertices        [boolean]
 
 def keyTangent(q=1,e=1,a=1,an="string",at="string",cp=1,f="floatrange",g=1,hi="string",ia="angle",itt="string",iw="float",iub=1,index="uint",ix="float",iy="float",l=1,oa="angle",ott="string",ow="float",ox="float",oy="float",ptt="string",r=1,s=1,sa=1,t="timerange",uni=1,wl=1,wt=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/keyTangent.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/keyTangent.html
 
 
 
@@ -5533,7 +5533,7 @@ wt    : weightedTangents [boolean]
 
 def listAnimatable(act=1,m=1,mh=1,s=1,typ=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/listAnimatable.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/listAnimatable.html
 
 
 
@@ -5587,7 +5587,7 @@ typ   : type            [boolean]
 
 def marker(q=1,e=1,a=1,d=1,ft="angle",om=1,pm=1,st="angle",t="time",ut="angle",u="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/marker.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/marker.html
 
 
 
@@ -5673,7 +5673,7 @@ u     : valueU          [float]
 
 def movieInfo(cn=1,df=1,f=1,fd=1,h=1,mt=1,nt=1,nf=1,qt=1,tc=1,tt=1,ts=1,tf=1,w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/movieInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/movieInfo.html
 
 
 
@@ -5771,7 +5771,7 @@ w     : width           [boolean]
 
 def mute(q=1,d=1,f=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/mute.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/mute.html
 
 
 
@@ -5812,7 +5812,7 @@ f     : force           [boolean]
 
 def pairBlend(q=1,e=1,at="string",i1=1,i2=1,nd="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pairBlend.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pairBlend.html
 
 
 
@@ -5872,7 +5872,7 @@ nd    : node            [string]
 
 def pasteKey(q=1,e=1,al="string",an="string",at="string",cb="string",c=1,cp="uint",f="floatrange",fo="float",iub=1,index="uint",mn=1,o="string",t="timerange",to="time",vo="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pasteKey.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pasteKey.html
 
 
 
@@ -6063,7 +6063,7 @@ vo    : valueOffset     [float]
 
 def pathAnimation(q=1,e=1,b=1,bs="float",bt="angle",c="string",etu="time",eu="float",f=1,fa="string",fm=1,inverseFront=1,iu=1,n="string",stu="time",su="float",ua="string",un=1,wuo="name",wut="string",wu="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pathAnimation.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pathAnimation.html
 
 
 
@@ -6204,7 +6204,7 @@ wu    : worldUpVector   [[float, float, float]]
 
 def play(q=1,f=1,ps=1,rec=1,s="string",st=1,w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/play.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/play.html
 
 
 
@@ -6265,7 +6265,7 @@ w     : wait            [boolean]
 
 def playbackOptions(q=1,e=1,aet="time",ast="time",ba=1,by="float",fps=1,l="string",mps="float",max="time",min="time",ps="float",v="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/playbackOptions.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/playbackOptions.html
 
 
 
@@ -6352,7 +6352,7 @@ v     : view            [string]
 
 def playblast(ae=1,cs="[string, string]",cc=1,co=1,csd=1,cf="string",c="string",epn="string",et="time",f="string",fo=1,fmt="string",fr="time",fp="int",h="int",ifz=1,os=1,osv=1,o=1,p="int",qlt="int",rfn=1,rao=1,ret="time",rf="string",rst="time",sqt=1,orn=1,s="string",st="time",toe=1,uts=1,v=1,w="int",wh="[int, int]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/playblast.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/playblast.html
 
 
 
@@ -6560,7 +6560,7 @@ wh    : widthHeight     [[int, int]]
 
 def pose(q=1,e=1,ap=1,a=1,n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pose.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pose.html
 
 
 
@@ -6605,7 +6605,7 @@ n     : name            [string]
 
 def rotationInterpolation(q=1,c="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/rotationInterpolation.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/rotationInterpolation.html
 
 
 
@@ -6642,7 +6642,7 @@ c     : convert         [string]
 
 def scaleKey(an="string",at="string",cp=1,f="floatrange",fp="float",fs="float",hi="string",iub=1,index="uint",nef="float",net="time",nsf="float",nst="time",ssk=1,s=1,t="timerange",tp="time",ts="float",vp="float",vs="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scaleKey.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scaleKey.html
 
 
 
@@ -6795,7 +6795,7 @@ vs    : valueScale      [float]
 
 def sequenceManager(q=1,e=1,asa="string",ata="string",cs="string",ct="time",lsa="string",lsh=1,mp="string",nd="string",ws="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sequenceManager.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sequenceManager.html
 
 
 
@@ -6871,7 +6871,7 @@ ws    : writableSequencer [string]
 
 def setDrivenKeyframe(q=1,e=1,at="string",cp=1,cd="string",dn=1,dr=1,dv="float",hi="string",itt="string",i=1,ib=1,ott="string",s=1,v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setDrivenKeyframe.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setDrivenKeyframe.html
 
 
 
@@ -6985,7 +6985,7 @@ v     : value           [float]
 
 def setInfinity(q=1,e=1,at="string",cp=1,hi="string",poi="string",pri="string",s=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setInfinity.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setInfinity.html
 
 
 
@@ -7045,7 +7045,7 @@ s     : shape           [boolean]
 
 def setKeyframe(q=1,e=1,al="string",an=1,at="string",bd=1,c="string",cp=1,dd=1,f="float",hi="string",id=1,itt="string",i=1,ib=1,mr=1,nr=1,ott="string",rk=1,s=1,t="time",lw=1,v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setKeyframe.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setKeyframe.html
 
 
 
@@ -7197,7 +7197,7 @@ v     : value           [float]
 
 def setKeyframeBlendshapeTargetWts():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setKeyframeBlendshapeTargetWts.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setKeyframeBlendshapeTargetWts.html
 
 
 
@@ -7221,7 +7221,7 @@ int  number of vertices for which the targets weights are keyed
 
 def setKeyPath():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/setKeyPath.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/setKeyPath.html
 
 
 
@@ -7243,7 +7243,7 @@ string[]  (Names of the created curve node and motionPath node)
 
 def shot(q=1,e=1,aud="string",cl="string",cd="time",co="float",css=1,czo="time",c=1,cca=1,cc="string",ca=1,dca=1,dt=1,et="time",fav=1,f1=1,f10=1,f11=1,f12=1,f2=1,f3=1,f4=1,f5=1,f6=1,f7=1,f8=1,f9=1,hcs=1,hsc=1,ipv=1,la="string",lck=1,m=1,p=1,pi=1,pst="time",prt="time",s="float",sm=1,sqd="time",set="time",sst="time",sn="string",sd="time",st="time",trk="int",til="time",tit="int",tol="time",tot="int",ula=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shot.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shot.html
 
 
 
@@ -7523,7 +7523,7 @@ ula   : unlinkAudio     [boolean]
 
 def shotRipple(q=1,e=1,d=1,ed="time",et="time",sd="time",st="time"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shotRipple.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shotRipple.html
 
 
 
@@ -7583,7 +7583,7 @@ st    : startTime       [time]
 
 def simplify(an="string",at="string",cp=1,f="floatrange",ft="float",hi="string",iub=1,index="uint",s=1,t="timerange",tt="time",vt="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/simplify.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/simplify.html
 
 
 
@@ -7695,7 +7695,7 @@ vt    : valueTolerance  [float]
 
 def snapKey(an="string",at="string",cp=1,f="floatrange",hi="string",iub=1,index="uint",s=1,t="timerange",tm="float",vm="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/snapKey.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/snapKey.html
 
 
 
@@ -7808,7 +7808,7 @@ vm    : valueMultiple   [float]
 
 def snapshot(q=1,e=1,ch=1,et="time",i="time",mt=1,n="string",st="time",u="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/snapshot.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/snapshot.html
 
 
 
@@ -7882,7 +7882,7 @@ u     : update          [string]
 
 def snapshotBeadCtx(q=1,e=1,ex=1,ch=1,i1="string",i2="string",i3="string",i=1,n="string",o=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/snapshotBeadCtx.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/snapshotBeadCtx.html
 
 
 
@@ -7953,7 +7953,7 @@ o     : outTangent      [boolean]
 
 def snapshotModifyKeyCtx(q=1,e=1,ex=1,ch=1,i1="string",i2="string",i3="string",n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/snapshotModifyKeyCtx.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/snapshotModifyKeyCtx.html
 
 
 
@@ -8013,7 +8013,7 @@ n     : name            [string]
 
 def sound(q=1,e=1,et="time",f="string",l=1,m=1,n="string",o="time",se="time",ss="time"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sound.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sound.html
 
 
 
@@ -8084,7 +8084,7 @@ ss    : sourceStart     [time]
 
 def timeEditor(q=1,alc="string",id="int",cpt=1,cp="string",dca="string",dco="[string, int]",ip=1,m=1,sc="string",tlc="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditor.html
 
 
 
@@ -8164,7 +8164,7 @@ tlc   : topLevelClips   [string]
 
 def timeEditorAnimSource(q=1,e=1,asc="string",ap=1,bas="string",ct=1,cp=1,dc=1,ex="string",iu=1,rs="string",ti="string",trg=1,ao="string",akg=1,aso=1,at="string",exc=1,aft=1,fbx="string",ft="string",mf="string",io="string",ipo="string",icn="string",irt=1,pia="string",poc=1,rec=1,rsa=1,sar=1,tl="string",toi="string",typ="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditorAnimSource.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditorAnimSource.html
 
 
 
@@ -8354,7 +8354,7 @@ typ   : type            [string]
 
 def timeEditorBakeClips(q=1,e=1,bas="string",btc="string",id="int",cl=1,fs=1,koc=1,pt="string",sb="time",tti="int",ttn="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditorBakeClips.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditorBakeClips.html
 
 
 
@@ -8435,7 +8435,7 @@ ttn   : targetTracksNode [string]
 
 def timeEditorClip(q=1,e=1,abs=1,aa="string",eas=1,asr="string",au="string",chl="int",ca=1,cb=1,cdt=1,id="int",idn="int",idp=1,cln=1,clp=1,ccl=1,cfm="int",cfp=1,cvt="time",dgr=1,dat=1,dcs="string",dos=1,dro=1,dsc="string",dcl=1,d="time",ems=1,et="time",exo=1,exs=1,epl="int",eac=1,ef="string",ex=1,exp=1,gh=1,gra="string",grr="string",grp=1,he="time",hs="time",itd="int",ict=1,lug=1,le="time",ls="time",mcd=1,mas=1,mcl="time",m=1,n="string",p="int",pid="int",pgd=1,pcl="time",pt="string",pat=1,rcl="time",rmp="[string, string]",rs="[string, string]",rms=1,rmt=1,ra="string",rmc=1,rcf=1,rwc=1,rt=1,rtr=1,rpl=1,rti="int",rpt="string",sce="time",scp="time",scs="time",k="string",src="int",s="time",tw=1,twc=1,twt="int",trk="string",trn=1,tra=1,tre="time",trs="time",trc=1,uas=1,ugr=1,wc=1,zk=1,ao="string",akg=1,aso=1,at="string",exc=1,aft=1,fbx="string",ft="string",mf="string",io="string",ipo="string",icn="string",irt=1,pia="string",poc=1,rec=1,rsa=1,sar=1,tl="string",toi="string",typ="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditorClip.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditorClip.html
 
 
 
@@ -9020,7 +9020,7 @@ typ   : type            [string]
 
 def timeEditorClipLayer(q=1,e=1,aa="string",al="string",ao="string",all=1,a="string",ak="string",cid="int",idx="int",ks=1,lid="int",ln="string",m="int",mu=1,n=1,pt="string",ra="string",rl=1,ro="string",rs=1,k=1,sl=1,zk=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditorClipLayer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditorClipLayer.html
 
 
 
@@ -9160,7 +9160,7 @@ zk    : zeroKeying      [boolean]
 
 def timeEditorClipOffset(q=1,e=1,atr=1,id="int",mci="int",mdt="time",mob="name",mor=1,mot=1,mpt="string",mro="int",mst="time",mto="int",oft=1,pt="string",rsm="int",rmp="string",rob="string",upx="float",upy="float",upz="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditorClipOffset.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditorClipOffset.html
 
 
 
@@ -9287,7 +9287,7 @@ upz   : upVectorZ       [float]
 
 def timeEditorComposition(q=1,e=1,act=1,acp=1,ct=1,delete=1,df="string",ren="[string, string]",tn=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditorComposition.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditorComposition.html
 
 
 
@@ -9352,7 +9352,7 @@ tn    : tracksNode      [boolean]
 
 def timeEditorPanel(q=1,e=1,ace="int",atr=1,att=1,atv="int",af="string",aft="string",ctl=1,dt="string",dat="string",dak="string",di="string",dk="string",dtn="string",dv="string",dtg="string",ex=1,f="string",fmc="string",gtv="int",hlc="string",kt="int",l="int",lck=1,la="string",mlc="string",m="script",mcw="int",pnl="string",p="string",slc="string",spe=1,st="string",stc=1,stf=1,sto="int",sv="string",sts=1,tv="int",tc=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditorPanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditorPanel.html
 
 
 
@@ -9597,7 +9597,7 @@ ut    : useTemplate     [string]
 
 def timeEditorTracks(q=1,e=1,acw="time",aci="time",at="int",ac=1,atc=1,atr=1,cp=1,pt="string",pi="int",rt="int",rtp="string",rot="[int, int]",rm=1,rs=1,st=1,tgh=1,ti="int",tm=1,tn="string",ts=1,tt="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeEditorTracks.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeEditorTracks.html
 
 
 
@@ -9732,7 +9732,7 @@ tt    : trackType       [int]
 
 def timeWarp(q=1,e=1,df="int",f="float",g=1,it="[int, string]",mf="[int, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/timeWarp.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/timeWarp.html
 
 
 
@@ -9787,7 +9787,7 @@ mf    : moveFrame       [[int, float]]
 
 def ubercam():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ubercam.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ubercam.html
 
 
 
@@ -9809,7 +9809,7 @@ string  Ubercam name
 
 def bakeDeformer(cs=1,rom="timerange",dm="string",ds="string",hi=1,i="string[]",mi="int",pw="float",sw="int",sm="string",ss="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bakeDeformer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bakeDeformer.html
 
 
 
@@ -9900,7 +9900,7 @@ ss    : srcSkeletonName [string]
 
 def blendShape(q=1,e=1,af=1,ar=1,at=1,bf=1,cd="[uint, uint, uint]",cid="[uint, uint, uint, uint]",dt=1,en="float",ex="string",ep="string",et="[int, int]",ft="[uint, uint]",foc=1,g="string",gi=1,ignoreSelected=1,ip="string",ib=1,ibi="uint",ibt="string",ihs=1,mgs="int",mgt="uint",md="uint",mt="[uint, uint]",n="string",ng=1,o="string",par=1,pr=1,rm=1,rtd="[uint, uint]",sp=1,sd=1,sa="string",se="string",ss="uint",ts=1,t="[string, uint, string, float]",tc=1,tr="string",w="[uint, float]",wc="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/blendShape.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/blendShape.html
 
 
 
@@ -10154,7 +10154,7 @@ wc    : weightCount     [uint]
 
 def blendShapeEditor(q=1,e=1,ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",lck=1,mlc="string",pnl="string",p="string",slc="string",sts=1,tcl=1,tl=1,up=1,ulk=1,upd=1,ut="string",vs=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/blendShapeEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/blendShapeEditor.html
 
 
 
@@ -10285,7 +10285,7 @@ vs    : verticalSliders [boolean]
 
 def blendShapePanel(q=1,e=1,be=1,ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,p="string",pmp="script",rp="string",to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/blendShapePanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/blendShapePanel.html
 
 
 
@@ -10426,7 +10426,7 @@ ut    : useTemplate     [string]
 
 def cluster(q=1,e=1,af=1,ar=1,bf=1,bs=1,dt=1,en="float",ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,n="string",par=1,pr=1,rel=1,rm=1,rg=1,sp=1,wn="[string, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/cluster.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/cluster.html
 
 
 
@@ -10561,7 +10561,7 @@ wn    : weightedNode    [[string, string]]
 
 def combinationShape(q=1,e=1,add=1,ald=1,bs="string",cti="int",ctn="string",cm="int",dti="int",dtn="string",ex=1,rmd=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/combinationShape.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/combinationShape.html
 
 
 
@@ -10641,7 +10641,7 @@ rmd   : removeDriver    [boolean]
 
 def copyDeformerWeights(q=1,e=1,dd="string",ds="string",mi=1,mm="string",nm=1,sm=1,sd="string",ss="string",sa="string",uv="[string, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/copyDeformerWeights.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/copyDeformerWeights.html
 
 
 
@@ -10723,7 +10723,7 @@ uv    : uvSpace         [[string, string]]
 
 def deformer(q=1,e=1,af=1,ar=1,bf=1,dt=1,ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,n="string",par=1,pr=1,rm=1,sp=1,typ="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/deformer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/deformer.html
 
 
 
@@ -10834,7 +10834,7 @@ typ   : type            [string]
 
 def deformerWeights(q=1,e=1,at="string",dv="float",df="string",ex=1,fm="string",ig=1,im=1,m="string",p="string",pt="float",r="string",sh="string",sk="string",vc=1,wp="uint",wt="float",ws=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/deformerWeights.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/deformerWeights.html
 
 
 
@@ -10957,7 +10957,7 @@ ws    : worldSpace      [boolean]
 
 def deltaMush(q=1,e=1,af=1,ar=1,bf=1,dt=1,en="float",ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,iwc="float",n="string",owc="float",par=1,pbv=1,pr=1,rm=1,si="uint",ss="float",sp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/deltaMush.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/deltaMush.html
 
 
 
@@ -11092,7 +11092,7 @@ sp    : split           [boolean]
 
 def dropoffLocator():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dropoffLocator.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dropoffLocator.html
 
 
 
@@ -11118,7 +11118,7 @@ string[]  Locator name(s)
 
 def findDeformers():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/findDeformers.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/findDeformers.html
 
 
 
@@ -11142,7 +11142,7 @@ None
 
 def lattice(q=1,e=1,af=1,ar=1,bf=1,cp=1,dt=1,dv="[uint, uint, uint]",db=1,ex="string",fm=1,foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,lr=1,ldv="[uint, uint, uint]",n="string",oc=1,ofd="float",ol="uint",par=1,pos="[linear, linear, linear]",pr=1,rm=1,rt=1,ro="[angle, angle, angle]",s="[linear, linear, linear]",sp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/lattice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/lattice.html
 
 
 
@@ -11316,7 +11316,7 @@ sp    : split           [boolean]
 
 def nonLinear(q=1,e=1,af=1,ar=1,ap=1,bf=1,cp=1,ds=1,dt=1,ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,n="string",par=1,pr=1,rm=1,sp=1,typ="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/nonLinear.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/nonLinear.html
 
 
 
@@ -11457,7 +11457,7 @@ typ   : type            [string]
 
 def percent(q=1,ap=1,dax="[linear, linear, linear]",dc="string",dds="linear",dp="[linear, linear, linear]",dt="string",mp=1,v="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/percent.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/percent.html
 
 
 
@@ -11533,7 +11533,7 @@ v     : value           [float]
 
 def poseEditor(q=1,e=1,ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",lck=1,mlc="string",pnl="string",p="string",slc="string",sts=1,up=1,ulk=1,upd=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/poseEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/poseEditor.html
 
 
 
@@ -11649,7 +11649,7 @@ ut    : useTemplate     [string]
 
 def posePanel(q=1,e=1,ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,p="string",pmp="script",pe=1,rp="string",to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/posePanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/posePanel.html
 
 
 
@@ -11790,7 +11790,7 @@ ut    : useTemplate     [string]
 
 def reorderDeformers(n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/reorderDeformers.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/reorderDeformers.html
 
 
 
@@ -11829,7 +11829,7 @@ n     : name            [string]
 
 def sculpt(q=1,e=1,af=1,ar=1,bf=1,dt=1,dds="linear",drt="string",ex="string",foc=1,g="string",gi=1,gwl=1,ignoreSelected=1,ihs=1,im="string",mxd="linear",m="string",n="string",oc=1,par=1,pr=1,rm=1,st="string",sp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sculpt.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sculpt.html
 
 
 
@@ -11977,7 +11977,7 @@ sp    : split           [boolean]
 
 def sculptTarget(e=1,af=1,ar=1,bf=1,dt=1,ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ibw="float",ihs=1,n="string",par=1,pr=1,r=1,rm=1,s="int",sp=1,t="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/sculptTarget.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/sculptTarget.html
 
 
 
@@ -12101,7 +12101,7 @@ t     : target          [int]
 
 def shapeEditor(q=1,e=1,cs=1,ctl=1,dt="string",dtg="string",ex=1,f="string",fmc="string",hlc="string",lck=1,ls=1,mlc="string",pnl="string",p="string",slc="string",sts=1,tcl=1,tl=1,up=1,ulk=1,upd=1,ut="string",vs=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shapeEditor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shapeEditor.html
 
 
 
@@ -12242,7 +12242,7 @@ vs    : verticalSliders [boolean]
 
 def shapePanel(q=1,e=1,ctl=1,cp="string",cs=1,dt="string",dtg="string",es=1,ex=1,init=1,iu=1,l="string",mrl=1,mbv=1,ni=1,p="string",pmp="script",rp="string",se=1,to=1,toc="string",tor=1,up=1,ut="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/shapePanel.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/shapePanel.html
 
 
 
@@ -12383,7 +12383,7 @@ ut    : useTemplate     [string]
 
 def softMod(q=1,e=1,af=1,ar=1,bf=1,bs=1,ci="int",cp="float",cv="float",dt=1,en="float",ex="string",fas=1,fbx=1,fby=1,fbz=1,fc="[float, float, float]",fm=1,fom="int",fr="float",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,n="string",par=1,pr=1,rel=1,rm=1,rg=1,sp=1,wn="[string, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/softMod.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/softMod.html
 
 
 
@@ -12570,7 +12570,7 @@ wn    : weightedNode    [[string, string]]
 
 def substituteGeometry(dnd=1,ngl=1,ogl=1,wdt="float",rog=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/substituteGeometry.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/substituteGeometry.html
 
 
 
@@ -12625,7 +12625,7 @@ rog   : retainOldGeometry [boolean]
 
 def tension(q=1,e=1,af=1,ar=1,bf=1,dt=1,en="float",ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,iwc="float",n="string",owc="float",par=1,pbv=1,pr=1,rm=1,si="uint",ss="float",sp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/tension.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/tension.html
 
 
 
@@ -12760,7 +12760,7 @@ sp    : split           [boolean]
 
 def textureDeformer(q=1,e=1,af=1,ar=1,bf=1,dt=1,d="string",en="float",ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,n="string",o="float",par=1,ps="string",pr=1,rm=1,sp=1,s="float",vo="[float, float, float]",vsp="string",vs="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/textureDeformer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/textureDeformer.html
 
 
 
@@ -12906,7 +12906,7 @@ vs    : vectorStrength  [[float, float, float]]
 
 def wire(q=1,e=1,af=1,ar=1,bf=1,ce="float",dt=1,dds="[uint, linear]",en="float",ex="string",foc=1,g="string",gi=1,gw=1,ho="[uint, string]",ignoreSelected=1,ihs=1,li="float",n="string",par=1,pr=1,rm=1,sp=1,w="string",wc="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/wire.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/wire.html
 
 
 
@@ -13055,7 +13055,7 @@ wc    : wireCount       [uint]
 
 def wrinkle(ax="[linear, linear, linear]",brc="uint",bd="uint",ct="[linear, linear, linear]",cr="string",dds="linear",en="linear",rnd="linear",st="string",th="linear",uv="[linear, linear, linear, linear, linear]",wc="uint",wi="linear"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/wrinkle.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/wrinkle.html
 
 
 
@@ -13150,7 +13150,7 @@ wi    : wrinkleIntensity [linear]
 
 def bindSkin(q=1,e=1,bcp=1,bp=1,cj=1,d=1,dnd=1,en=1,n="string",p="string",ta=1,tsb=1,ts=1,ub=1,ubk=1,ul=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/bindSkin.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/bindSkin.html
 
 
 
@@ -13272,7 +13272,7 @@ ul    : unlock          [boolean]
 
 def boneLattice(q=1,e=1,af=1,ar=1,bf=1,bi="float",dt=1,ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,j="string",li="float",lo="float",n="string",par=1,pr=1,rm=1,sp=1,t="string",tr="float",wl="float",wr="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/boneLattice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/boneLattice.html
 
 
 
@@ -13419,7 +13419,7 @@ wr    : widthRight      [float]
 
 def copyFlexor():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/copyFlexor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/copyFlexor.html
 
 
 
@@ -13448,7 +13448,7 @@ string  The name of the new flexor node
 
 def copySkinWeights(q=1,e=1,ds="string",ia="string",mi=1,mm="string",nbw=1,nm=1,nr=1,spa="uint",sm=1,ss="string",sa="string",uv="[string, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/copySkinWeights.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/copySkinWeights.html
 
 
 
@@ -13540,7 +13540,7 @@ uv    : uvSpace         [[string, string]]
 
 def dagPose(q=1,e=1,a=1,ap=1,bp=1,g=1,m=1,n="string",rm=1,rs=1,r=1,s=1,sl=1,wp=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/dagPose.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/dagPose.html
 
 
 
@@ -13637,7 +13637,7 @@ wp    : worldParent     [boolean]
 
 def flexor(q=1,e=1,ab=1,aj=1,dc="string",l=1,n="string",ns=1,ts=1,typ="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/flexor.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/flexor.html
 
 
 
@@ -13709,7 +13709,7 @@ typ   : type            [string]
 
 def geomBind(q=1,e=1,bm="uint",fo="float",gvp="[uint, boolean]",mi="int"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/geomBind.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/geomBind.html
 
 
 
@@ -13761,7 +13761,7 @@ mi    : maxInfluences   [int]
 
 def jointLattice(q=1,e=1,af=1,ar=1,bf=1,cr="float",dt=1,ex="string",foc=1,g="string",gi=1,ignoreSelected=1,ihs=1,j="string",li="float",lo="float",lb="string",lt="string",n="string",par=1,pr=1,rm=1,ro="float",sp=1,ub="string",ut="string",wl="float",wr="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/jointLattice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/jointLattice.html
 
 
 
@@ -13923,7 +13923,7 @@ wr    : widthRight      [float]
 
 def polyUniteSkinned(q=1,e=1,cp=1,ch=1,muv="int",op=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/polyUniteSkinned.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/polyUniteSkinned.html
 
 
 
@@ -13974,7 +13974,7 @@ op    : objectPivot     [boolean]
 
 def skeletonEmbed(q=1,mm=1,sm="uint",sr="uint"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/skeletonEmbed.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/skeletonEmbed.html
 
 
 
@@ -14019,7 +14019,7 @@ sr    : segmentationResolution [uint]
 
 def skinCluster(q=1,e=1,ai="string",ats=1,af=1,ar=1,bsh="string",bf=1,bm="int",dt=1,dr="float",ex="string",fnw=1,foc=1,g="string",gi=1,hmf="float",ibp=1,ih=1,ignoreSelected=1,ihs=1,inf="string",lw=1,mi="int",mjm=1,n="string",nw="int",ns="int",omi=1,par=1,ps="float",pr=1,rbm=1,rm=1,rfs=1,ri="string",rui=1,siv="string",sm="int",sw="float",swi="int",sp=1,tsb=1,tst=1,ub=1,ubk=1,ug=1,vb="float",vt="int",wt="float",wd="int",wi=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/skinCluster.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/skinCluster.html
 
 
 
@@ -14317,7 +14317,7 @@ wi    : weightedInfluence [boolean]
 
 def skinPercent(q=1,ib="float",nrm=1,prw="float",r=1,rtd=1,t="string",tmw="string",tv="[string, float]",v=1,zri=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/skinPercent.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/skinPercent.html
 
 
 
@@ -14402,7 +14402,7 @@ zri   : zeroRemainingInfluences [boolean]
 
 def substituteGeometry(dnd=1,ngl=1,ogl=1,wdt="float",rog=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/substituteGeometry.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/substituteGeometry.html
 
 
 
@@ -14457,7 +14457,7 @@ rog   : retainOldGeometry [boolean]
 
 def volumeBind(q=1,e=1,inf="string",n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/volumeBind.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/volumeBind.html
 
 
 
@@ -14498,7 +14498,7 @@ n     : name            [string]
 
 def aimConstraint(q=1,e=1,aim="[float, float, float]",l="string",mo=1,n="string",o="[float, float, float]",rm=1,sk="string",tl=1,u="[float, float, float]",w="float",wal=1,wuo="name",wut="string",wu="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/aimConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/aimConstraint.html
 
 
 
@@ -14606,7 +14606,7 @@ wu    : worldUpVector   [[float, float, float]]
 
 def geometryConstraint(q=1,e=1,l="string",n="string",rm=1,tl=1,w="float",wal=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/geometryConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/geometryConstraint.html
 
 
 
@@ -14673,7 +14673,7 @@ wal   : weightAliasList [boolean]
 
 def normalConstraint(q=1,e=1,aim="[float, float, float]",l="string",n="string",rm=1,tl=1,u="[float, float, float]",w="float",wal=1,wuo="name",wut="string",wu="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/normalConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/normalConstraint.html
 
 
 
@@ -14767,7 +14767,7 @@ wu    : worldUpVector   [[float, float, float]]
 
 def orientConstraint(q=1,e=1,cc="[float, float]",dc=1,l="string",mo=1,n="string",o="[float, float, float]",rm=1,sk="string",tl=1,w="float",wal=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/orientConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/orientConstraint.html
 
 
 
@@ -14858,7 +14858,7 @@ wal   : weightAliasList [boolean]
 
 def parentConstraint(q=1,e=1,cc="[float, float]",dr=1,dc=1,l="string",mo=1,n="string",rm=1,sr="string",st="string",tl=1,w="float",wal=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/parentConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/parentConstraint.html
 
 
 
@@ -14957,7 +14957,7 @@ wal   : weightAliasList [boolean]
 
 def pointConstraint(q=1,e=1,l="string",mo=1,n="string",o="[float, float, float]",rm=1,sk="string",tl=1,w="float",wal=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pointConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pointConstraint.html
 
 
 
@@ -15038,7 +15038,7 @@ wal   : weightAliasList [boolean]
 
 def pointOnPolyConstraint(q=1,e=1,l="string",mo=1,n="string",o="[float, float, float]",rm=1,sk="string",tl=1,w="float",wal=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/pointOnPolyConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/pointOnPolyConstraint.html
 
 
 
@@ -15119,7 +15119,7 @@ wal   : weightAliasList [boolean]
 
 def scaleConstraint(q=1,e=1,l="string",mo=1,n="string",o="[float, float, float]",rm=1,sc=1,sk="string",tl=1,w="float",wal=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/scaleConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/scaleConstraint.html
 
 
 
@@ -15205,7 +15205,7 @@ wal   : weightAliasList [boolean]
 
 def tangentConstraint(q=1,e=1,aim="[float, float, float]",l="string",n="string",rm=1,tl=1,u="[float, float, float]",w="float",wal=1,wuo="name",wut="string",wu="[float, float, float]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/tangentConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/tangentConstraint.html
 
 
 
@@ -15300,7 +15300,7 @@ wu    : worldUpVector   [[float, float, float]]
 
 def characterize(q=1,e=1,apv=1,aae=1,afp=1,ame=1,ahk="string",mhk="string",aab=1,cpp=1,ef="string",fk="string",nm="string",phf=1,pnp=1,pos="string",sk="string",sp="string",typ="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/characterize.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/characterize.html
 
 
 
@@ -15429,7 +15429,7 @@ typ   : type            [string]
 
 def connectJoint(cm=1,pm=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/connectJoint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/connectJoint.html
 
 
 
@@ -15476,7 +15476,7 @@ pm    : parentMode      [boolean]
 
 def disconnectJoint(ahm=1,dhm=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/disconnectJoint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/disconnectJoint.html
 
 
 
@@ -15516,7 +15516,7 @@ dhm   : deleteHandleMode [boolean]
 
 def effector(q=1,e=1,hi=1,n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/effector.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/effector.html
 
 
 
@@ -15558,7 +15558,7 @@ n     : name            [string]
 
 def ikfkDisplayMethod(q=1,d="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ikfkDisplayMethod.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ikfkDisplayMethod.html
 
 
 
@@ -15594,7 +15594,7 @@ d     : display         [string]
 
 def ikHandle(q=1,e=1,ap=1,ce=1,ccv=1,cra=1,c="name",dh=1,eh=1,ee="string",ex="string",fs=1,fj=1,jl=1,n="string",ns="int",pcv=1,pw="float",p="int",roc=1,rtm=1,srp=1,scv=1,snc=1,shf=1,see=1,sol="string",sj="string",s="string",tws="string",w="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ikHandle.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ikHandle.html
 
 
 
@@ -15802,7 +15802,7 @@ w     : weight          [float]
 
 def ikHandleDisplayScale(q=1,e=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ikHandleDisplayScale.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ikHandleDisplayScale.html
 
 
 
@@ -15826,7 +15826,7 @@ In query mode, return type is based on queried flag.
 
 def ikSolver(q=1,e=1,ep="float",mxi="int",n="string",st="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ikSolver.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ikSolver.html
 
 
 
@@ -15878,7 +15878,7 @@ st    : solverType      [string]
 
 def ikSystem(q=1,e=1,ar=1,ap=1,apm=1,aps=1,ls="[int, int]",sn=1,sol=1,st=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ikSystem.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ikSystem.html
 
 
 
@@ -15950,7 +15950,7 @@ st    : solverTypes     [boolean]
 
 def ikSystemInfo(q=1,gsh=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/ikSystemInfo.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/ikSystemInfo.html
 
 
 
@@ -15985,7 +15985,7 @@ gsh   : globalSnapHandle [boolean]
 
 def insertJoint():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/insertJoint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/insertJoint.html
 
 
 
@@ -16011,7 +16011,7 @@ string  The name of the new inserted joint
 
 def joint(q=1,e=1,a=1,ax="angle",ay="angle",az="angle",apa=1,al=1,ch=1,co=1,dof="string",ex="string",lsx=1,lsy=1,lsz=1,lx="[angle, angle]",ly="[angle, angle]",lz="[angle, angle]",n="string",oj="string",o="[angle, angle, angle]",p="[linear, linear, linear]",rad="float",r=1,roo="string",s="[float, float, float]",sc=1,so="[angle, angle, angle]",sao="string",spa=1,stx="float",sty="float",stz="float",sym=1,sa="string",zso=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/joint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/joint.html
 
 
 
@@ -16274,7 +16274,7 @@ zso   : zeroScaleOrient [boolean]
 
 def jointCluster(q=1,e=1,ab="float",ac=1,adt="string",av="float",bb="float",bc=1,bdt="string",bv="float",dt=1,j="string",n="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/jointCluster.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/jointCluster.html
 
 
 
@@ -16388,7 +16388,7 @@ n     : name            [string]
 
 def jointDisplayScale(q=1,e=1,a=1,ik="float"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/jointDisplayScale.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/jointDisplayScale.html
 
 
 
@@ -16433,7 +16433,7 @@ ik    : ikfk            [float]
 
 def mirrorJoint(mb=1,mxy=1,mxz=1,myz=1,sr="[string, string]"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/mirrorJoint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/mirrorJoint.html
 
 
 
@@ -16488,7 +16488,7 @@ sr    : searchReplace   [[string, string]]
 
 def poleVectorConstraint(q=1,e=1,l="string",n="string",rm=1,tl=1,w="float",wal=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/poleVectorConstraint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/poleVectorConstraint.html
 
 
 
@@ -16554,7 +16554,7 @@ wal   : weightAliasList [boolean]
 
 def removeJoint():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/removeJoint.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/removeJoint.html
 
 
 
@@ -16580,7 +16580,7 @@ None
 
 def reroot():
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/reroot.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/reroot.html
 
 
 
@@ -16606,7 +16606,7 @@ None
 
 def applyTake(c="string",d="string",f="string",p=1,rc=1,r=1,sc=1,st="time"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/applyTake.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/applyTake.html
 
 
 
@@ -16687,7 +16687,7 @@ st    : startTime       [time]
 
 def defineDataServer(d="string",s="string",u=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/defineDataServer.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/defineDataServer.html
 
 
 
@@ -16758,7 +16758,7 @@ u     : undefine        [boolean]
 
 def defineVirtualDevice(q=1,ax="int",c="string",cl=1,cr=1,d="string",p="string",u=1,use="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/defineVirtualDevice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/defineVirtualDevice.html
 
 
 
@@ -16830,7 +16830,7 @@ use   : usage           [string]
 
 def deviceManager(q=1,e=1,att=1,acc=1,axi="int",axn=1,axo=1,axs=1,dvi="int",dni="int",nax=1,ndv=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/deviceManager.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/deviceManager.html
 
 
 
@@ -16911,7 +16911,7 @@ ndv   : numDevices      [boolean]
 
 def enableDevice(q=1,a=1,d="string",en=1,m=1,rec=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/enableDevice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/enableDevice.html
 
 
 
@@ -16976,7 +16976,7 @@ rec   : record          [boolean]
 
 def filter(q=1,e=1,n="string",t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/filter.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/filter.html
 
 
 
@@ -17018,7 +17018,7 @@ t     : type            [string]
 
 def movIn(f="string",st="time"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/movIn.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/movIn.html
 
 
 
@@ -17072,7 +17072,7 @@ st    : startTime       [time]
 
 def movOut(c=1,f="string",pre="uint",t="timerange"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/movOut.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/movOut.html
 
 
 
@@ -17128,7 +17128,7 @@ t     : time            [timerange]
 
 def readTake(a="string",d="string",f="float",l="string",nt=1,t="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/readTake.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/readTake.html
 
 
 
@@ -17188,7 +17188,7 @@ t     : take            [string]
 
 def recordDevice(q=1,c=1,da=1,d="string",dr="int",p=1,st=1,w=1):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/recordDevice.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/recordDevice.html
 
 
 
@@ -17257,7 +17257,7 @@ w     : wait            [boolean]
 
 def writeTake(a="string",d="string",l="string",nt=1,pre="int",t="string",vd="string"):
     """
-http://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/CommandsPython/writeTake.html
+http://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/CommandsPython/writeTake.html
 
 
 

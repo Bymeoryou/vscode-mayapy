@@ -1,17 +1,16 @@
 from maya.app.renderSetup.views.propertyEditor.basicCollection import BasicCollection
 from maya.app.renderSetup.views.propertyEditor.staticCollection import StaticCollection
 
-def initialize():
-    pass
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
-def uninitialize():
-    pass
+def initialize(): pass
+def uninitialize(): pass
 
-
-
-_selectorEntries = {}
 
 _collectionEntries = {}
+
+_selectorEntries = {}
 
 

@@ -10,6 +10,10 @@ This module supports the intent, namely a bound method that can only be called
 while its object is alive, and keeps its object by weak reference.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class Method(object):
     """
     Wraps a method such that the bound method's object is held only by
@@ -18,35 +22,22 @@ class Method(object):
     
     
     
-    def __call__(self, *posArgs, **kwArgs):
-        pass
-    
-    
+    def __call__(self, *posArgs, **kwArgs): pass
     def __eq__(self, other):
         """
         # As per recommendations
         # https://docs.python.org/2/reference/datamodel.html#object.__eq__
         # implement both __eq__ and __ne__
         """
-    
         pass
-    
-    
-    def __init__(self, method):
-        pass
-    
-    
-    def __ne__(self, other):
-        pass
-    
-    
-    def isAlive(self):
-        pass
-    
-    
+    def __init__(self, method): pass
+    def __ne__(self, other): pass
+    def isAlive(self): pass
     __dict__ = None
     
+    
     __weakref__ = None
+
 
 
 
@@ -54,8 +45,5 @@ def create(method):
     """
     # Convenience function.
     """
-
     pass
-
-
 

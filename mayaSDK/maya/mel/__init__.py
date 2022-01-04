@@ -4,7 +4,12 @@
 #
 """
 
+
 from maya.mel.melutils import *
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 def eval(*args, **kwargs):
     """
@@ -17,8 +22,5 @@ def eval(*args, **kwargs):
     If an error occurs during the execution of the MEL script, a Python exception
     is raised with the appropriate error message.
     """
-
     pass
-
-
 

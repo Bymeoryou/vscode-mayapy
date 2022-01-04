@@ -3,6 +3,10 @@ Contains the Logger class. Creates an interface to log errors, warnings,
 debugging, and log messages that allows for indented nesting.
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class Logger(object):
     """
     Utility class to allow printing of errors, warnings, and logger with the
@@ -20,51 +24,34 @@ class Logger(object):
         debugging: If True then output debugging and log messages.
                    Default is just to print errors and warnings.
         """
-    
         pass
-    
-    
     def debug(self, message):
         """
         Print out a message flagged as debugging information
         """
-    
         pass
-    
-    
     def error(self, message):
         """
         Print out a message as an error
         """
-    
         pass
-    
-    
     def indent(self, indent_change='1'):
         """
         Change the indentation level for the output
         """
-    
         pass
-    
-    
     def log(self, message):
         """
         Print out a message as information
         """
-    
         pass
-    
-    
     def warning(self, message):
         """
         Print out a message as a warning
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 

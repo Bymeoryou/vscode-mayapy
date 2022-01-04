@@ -1,31 +1,24 @@
-from maya.app.renderSetup.views.propertyEditor.override import Override
 from PySide2.QtWidgets import QWidgetItem
-from PySide2.QtGui import QStandardItem
-from PySide2.QtWidgets import QWidget
+from maya.app.renderSetup.lightEditor.views.properties import GroupProperties
 from PySide2.QtCore import QSize
+from PySide2.QtWidgets import QVBoxLayout
+from PySide2.QtGui import QStandardItem
+from maya.app.general.mayaMixin import MayaQWidgetDockableMixin
+from PySide2.QtWidgets import QScrollArea
+from maya.app.renderSetup.views.frameLayout import FrameLayout
+from PySide2.QtWidgets import QWidget
+from PySide2.QtCore import QItemSelection
+from PySide2.QtCore import QPersistentModelIndex
+from maya.app.renderSetup.views.propertyEditor.override import Override
+from maya.app.renderSetup.lightEditor.views.properties import LightProperties
 from PySide2.QtCore import QTimer
 from maya.app.renderSetup.views.propertyEditor.renderLayer import RenderLayer
-from maya.app.renderSetup.views.frameLayout import FrameLayout
-from PySide2.QtCore import QPersistentModelIndex
-from maya.app.general.mayaMixin import MayaQWidgetDockableMixin
-from PySide2.QtCore import Slot
 from functools import partial
-from PySide2.QtWidgets import QScrollArea
-from PySide2.QtCore import QItemSelection
-from maya.app.renderSetup.lightEditor.views.properties import LightProperties
-from PySide2.QtWidgets import QVBoxLayout
-from maya.app.renderSetup.lightEditor.views.properties import GroupProperties
+from PySide2.QtCore import Slot
 
-class PropertyEditorScrollArea(QScrollArea):
-    def sizeHint(self):
-        pass
-    
-    
-    STARTING_SIZE = None
-    
-    
-    staticMetaObject = None
 
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class PropertyEditor(MayaQWidgetDockableMixin, QWidget):
     """
@@ -50,100 +43,52 @@ class PropertyEditor(MayaQWidgetDockableMixin, QWidget):
         'Internal C++ object (PropertyEditor) already deleted.
         See MAYA-82966 for details.
         """
-    
         pass
-    
-    
-    def __init__(self, treeView, parent):
-        pass
-    
-    
+    def __init__(self, treeView, parent, observeRenderSetup='True'): pass
     def aboutToDelete(self):
         """
         Cleanup method to be called immediately before the object is deleted.
         """
-    
         pass
-    
-    
     def dispose(self):
         """
         Cleanup method to be called immediately before the object is deleted.
         """
-    
         pass
-    
-    
-    def highlight(self, names):
-        pass
-    
-    
+    def highlight(self, names): pass
     def itemChanged(self, item):
         """
         When an item in the model changes, update the control and 
         frameLayout that make use of that item (if one exists).
         """
-    
         pass
-    
-    
-    def minimumSizeHint(self):
-        pass
-    
-    
-    def populateFields(self, item):
-        pass
-    
-    
+    def minimumSizeHint(self): pass
+    def populateFields(self, item): pass
     def rebuild(self):
         """
         regenerate our collection/override/layer controls.
         """
-    
         pass
-    
-    
     def renderSetupAdded(self):
         """
         RenderSetup node was created
         """
-    
         pass
-    
-    
     def renderSetupPreDelete(self):
         """
         RenderSetup node is about to be deleted
         """
-    
         pass
-    
-    
     def selectionChanged(self, selected, deselected):
         """
         On selection changed we lazily regenerate our collection/override/layer 
         controls.
         """
-    
         pass
-    
-    
-    def setSizeHint(self, size):
-        pass
-    
-    
-    def sizeHint(self):
-        pass
-    
-    
-    def triggerRebuild(self):
-        pass
-    
-    
-    def triggerRepopulate(self, item):
-        pass
-    
-    
+    def setSizeHint(self, size): pass
+    def sizeHint(self): pass
+    def triggerRebuild(self): pass
+    def triggerRepopulate(self, item): pass
     MINIMUM_SIZE = None
     
     
@@ -154,6 +99,14 @@ class PropertyEditor(MayaQWidgetDockableMixin, QWidget):
     
     
     width = 460
+
+
+class PropertyEditorScrollArea(QScrollArea):
+    def sizeHint(self): pass
+    STARTING_SIZE = None
+    
+    
+    staticMetaObject = None
 
 
 

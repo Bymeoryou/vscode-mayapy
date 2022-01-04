@@ -1,24 +1,28 @@
-from unittest.loader import makeSuite
-from unittest.runner import TextTestRunner
-from unittest.suite import TestSuite
-from unittest.loader import TestLoader
-from unittest.signals import installHandler
-from unittest.case import skipUnless
-from unittest.loader import findTestCases
-from unittest.case import TestCase
 from unittest.case import skipIf
-from unittest.case import skip
-from unittest.loader import getTestCaseNames
 from unittest.runner import TextTestResult
-from unittest.signals import removeHandler
-from unittest.case import expectedFailure
-from unittest.result import TestResult
-from unittest.signals import registerResult
+from unittest.runner import TextTestRunner
 from unittest.case import FunctionTestCase
+from unittest.loader import getTestCaseNames
+from unittest.signals import registerResult
+from unittest.loader import makeSuite
+from unittest.case import TestCase
+from unittest.signals import removeHandler
+from unittest.case import skipUnless
+from unittest.result import TestResult
+from StringIO import StringIO
+from unittest.case import expectedFailure
 from unittest.signals import removeResult
 from unittest.main import TestProgram as main
-from StringIO import StringIO
 from unittest.case import SkipTest
+from unittest.case import skip
+from unittest.loader import findTestCases
+from unittest.suite import TestSuite
+from unittest.signals import installHandler
+from unittest.loader import TestLoader
+
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
 
 class SuiteFromModule(TestSuite):
     def __init__(self, module, testImport='True'):
@@ -26,8 +30,12 @@ class SuiteFromModule(TestSuite):
         Set testImport to True to have the suite automatically contain a test case that
         checks if we were able to find any tests in the given module.
         """
-    
         pass
+
+
+class MayaTestRunner(TextTestRunner):
+    def __init__(self, stream="'<maya.Output object>'", descriptions='True', verbosity='2'): pass
+    def run(*args, **kwargs): pass
 
 
 class TestCaseExtended(TestCase):
@@ -116,123 +124,24 @@ class TestCaseExtended(TestCase):
         assertIteration( "foo", ['o', 'f', 'o'], orderMatters=False)
         #################################################
         """
-    
         pass
-    
-    
     def assertNoError(self, function, *args, **kwargs):
         """
         # def addTestFunc(self, function):
         """
-    
         pass
-    
-    
-    def assertVectorsEqual(self, v1, v2, places='5'):
-        pass
-    
-    
+    def assertVectorsEqual(self, v1, v2, places='5'): pass
     DO_NOT_LOAD = False
 
 
-class MayaTestRunner(TextTestRunner):
-    def __init__(self, stream="'<maya.Output object>'", descriptions='True', verbosity='2'):
-        pass
-    
-    
-    def run(*args, **kwargs):
-        pass
-
-
 class UnittestSuiteFromModule(SuiteFromModule):
-    def __init__(self, moduleName, suiteFuncName="'suite'", **kwargs):
-        pass
+    def __init__(self, moduleName, suiteFuncName="'suite'", **kwargs): pass
 
 
 class DoctestSuiteFromModule(SuiteFromModule):
-    def __init__(self, moduleName, packageRecurse='False', alreadyRecursed='None', **kwargs):
-        pass
+    def __init__(self, moduleName, packageRecurse='False', alreadyRecursed='None', **kwargs): pass
 
 
-
-def permutations(sequence, length='None'):
-    """
-    Given a sequence, will return an iterator over the possible permutations.
-    
-    If length is 'None', the permutations will default to having the same length
-    as the sequence; otherwise, the returned permtuations will have the given length.
-    
-    Note that every element in the sequence is considered unique, so that there may be
-    'duplicate' permutations if there are duplicate elements in seq, ie:
-    
-    perumutations("aa") -> ['a', 'a'] and ['a', 'a']
-    """
-
-    pass
-
-
-def doctestmod(*args, **kwargs):
-    pass
-
-
-def doctestFriendly(func):
-    """
-    Decorator which prepares maya to run doctests.
-    """
-
-    pass
-
-
-def addFuncToModule(func, module):
-    pass
-
-
-def isOneToOne(dict):
-    """
-    Tests if the given dictionary is one to one (if dict[x]==dict[y], x==y)
-    """
-
-    pass
-
-
-def isEquivalenceRelation(inputs, outputs, dict):
-    """
-    Tests if the given dictionary defines an equivalence relation from between inputs and outputs.
-    
-    Technically, tests if the dict is bijective: ie, one-to-one (if dict[x]==dict[y], x==y) and
-    onto (for every y in outputs, exists an x such that dict[x] == y)
-    """
-
-    pass
-
-
-def startsWithDoubleUnderscore(testcase):
-    pass
-
-
-def doctestobj(*args, **kwargs):
-    pass
-
-
-def suite():
-    pass
-
-
-def warn(*args, **kwargs):
-    """
-    Issue a warning, or maybe ignore it or raise an exception.
-    """
-
-    pass
-
-
-def setCompare(iter1, iter2):
-    """
-    Compares two groups of objects, returning the sets:
-        onlyIn1, inBoth, onlyIn2
-    """
-
-    pass
 
 
 def setupUnittestModule(moduleName, suiteFuncName="'suite'", testMainName="'test_main'", filterTestCases="'<function startsWithDoubleUnderscore>'"):
@@ -251,15 +160,60 @@ def setupUnittestModule(moduleName, suiteFuncName="'suite'", testMainName="'test
     
     Will then call 'test_main' if moduleName == '__main__'
     """
-
     pass
+def warn(*args, **kwargs):
+    """
+    Issue a warning, or maybe ignore it or raise an exception.
+    """
+    pass
+def addFuncToModule(func, module): pass
+def isEquivalenceRelation(inputs, outputs, dict):
+    """
+    Tests if the given dictionary defines an equivalence relation from between inputs and outputs.
+    
+    Technically, tests if the dict is bijective: ie, one-to-one (if dict[x]==dict[y], x==y) and
+    onto (for every y in outputs, exists an x such that dict[x] == y)
+    """
+    pass
+def permutations(sequence, length='None'):
+    """
+    Given a sequence, will return an iterator over the possible permutations.
+    
+    If length is 'None', the permutations will default to having the same length
+    as the sequence; otherwise, the returned permtuations will have the given length.
+    
+    Note that every element in the sequence is considered unique, so that there may be
+    'duplicate' permutations if there are duplicate elements in seq, ie:
+    
+    perumutations("aa") -> ['a', 'a'] and ['a', 'a']
+    """
+    pass
+def doctestFriendly(func):
+    """
+    Decorator which prepares maya to run doctests.
+    """
+    pass
+def doctestmod(*args, **kwargs): pass
+def suite(): pass
+def isOneToOne(dict):
+    """
+    Tests if the given dictionary is one to one (if dict[x]==dict[y], x==y)
+    """
+    pass
+def setCompare(iter1, iter2):
+    """
+    Compares two groups of objects, returning the sets:
+        onlyIn1, inBoth, onlyIn2
+    """
+    pass
+def startsWithDoubleUnderscore(testcase): pass
+def doctestobj(*args, **kwargs): pass
 
-
-
-SUITE_FUNC_NAME = 'suite'
 
 TEST_MAIN_FUNC_NAME = 'test_main'
 
 defaultTestLoader = None
+
+SUITE_FUNC_NAME = 'suite'
 
 

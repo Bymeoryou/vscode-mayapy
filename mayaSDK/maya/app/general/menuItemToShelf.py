@@ -1,5 +1,9 @@
 from functools import partial
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 def menuItemToShelf(shelf, item):
     """
     Create a shelfButton on a shelf which acts like a menuItem.
@@ -16,8 +20,5 @@ def menuItemToShelf(shelf, item):
     
     eturn the path of the created shelfButton
     """
-
     pass
-
-
 

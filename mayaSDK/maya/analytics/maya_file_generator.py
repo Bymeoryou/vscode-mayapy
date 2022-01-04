@@ -1,3 +1,23 @@
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
+def get_maya_files(generator):
+    """
+    Help function for the MayaFileGenerator class that runs the generator
+    and then packages up the results in a directory-centric format.
+    
+    generator : A MayaFileGenerator function call, already constructed but not used
+    
+    returns a list of ( DIRECTORY, [FILES] ) pairs consisting of
+        all matching files from generation using the passed-in generator.
+    
+    theGen = MayaFileGenerator("Maya/projects", skipFiles=['temp\w'])
+    for (the_dir,files_in_dir) in get_maya_files(theGen):
+        print the_dir
+        for the_file in files_in_dir:
+            print ' -- ',the_file
+    """
+    pass
 def maya_file_generator(root_path, skip='None', descend='True'):
     """
     Generator to walk all Maya files in or below a specific directory.
@@ -27,28 +47,5 @@ def maya_file_generator(root_path, skip='None', descend='True'):
         for path in maya_file_generator(['Maya/projects/default','Maya/projects/zombie']):
             print path
     """
-
     pass
-
-
-def get_maya_files(generator):
-    """
-    Help function for the MayaFileGenerator class that runs the generator
-    and then packages up the results in a directory-centric format.
-    
-    generator : A MayaFileGenerator function call, already constructed but not used
-    
-    returns a list of ( DIRECTORY, [FILES] ) pairs consisting of
-        all matching files from generation using the passed-in generator.
-    
-    theGen = MayaFileGenerator("Maya/projects", skipFiles=['temp\w'])
-    for (the_dir,files_in_dir) in get_maya_files(theGen):
-        print the_dir
-        for the_file in files_in_dir:
-            print ' -- ',the_file
-    """
-
-    pass
-
-
 

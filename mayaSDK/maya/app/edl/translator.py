@@ -6,6 +6,10 @@ Should log errors of the following types:
 error = something we cannot recover from
 """
 
+
+if False:
+    from typing import Dict, List, Tuple, Union, Optional
+
 class Translator(object):
     def __init__(self, fileName):
         """
@@ -14,10 +18,7 @@ class Translator(object):
                                           that use Translator should register their handlers
                                           with this logger.
         """
-    
         pass
-    
-    
     def getClip(self, clip_elem):
         """
         Given a clip element (which is returned b getTrack), return a dictionary
@@ -30,10 +31,7 @@ class Translator(object):
         in/out          = define start/end frames of the clip in source media
         file            = file sub element. Use getFile method to read contents
         """
-    
         pass
-    
-    
     def getFile(self, file_elem):
         """
         Given a file element (returned by getClip), return a dictionary with the 
@@ -44,10 +42,7 @@ class Translator(object):
         name            = name of file
         pathurl         = path to file (i.e. file:///)
         """
-    
         pass
-    
-    
     def getSequence():
         """
         Read the sequence information from an EDL file.
@@ -63,10 +58,7 @@ class Translator(object):
         audio_tracks    = list of audio track SubElements. use getTrack to
                                           read the contents
         """
-    
         pass
-    
-    
     def getTimecode(self, timecode_elem):
         """
         Given a timecode sub element (which is returned by getSequence or getClip or getFile),
@@ -75,10 +67,7 @@ class Translator(object):
         framerate       = in frames per second
         format          = type of timecode. ex: "smpte"
         """
-    
         pass
-    
-    
     def getTrack(self, track_elem):
         """
         Given a track element (which is returned by getSequence), read the
@@ -94,27 +83,19 @@ class Translator(object):
         clip_list       = list of clipitem sub elements that are a part of this track.
                                   To read data from the clips, use getClip
         """
-    
         pass
-    
-    
     def readFromFile(self):
         """
         Read the EDL file from disk into memory.
         """
-    
         pass
-    
-    
     def writeToFile(self):
         """
         Write the in-memory EDL to disk
         """
-    
         pass
-    
-    
     __dict__ = None
+    
     
     __weakref__ = None
 
